@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "What Fin & Stem is, how it's sourced, and who runs it. A planted-aquarium reference written for the person stocking the tank, not the person selling the fish.",
+    "What Fin & Stem is, how it's sourced, and who runs it. A working planted-aquarium reference, built to help aquascapers anywhere in the world stock and care for the tank they imagined.",
 };
 
 export default function AboutPage() {

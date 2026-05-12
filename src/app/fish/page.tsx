@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Fish",
   description:
-    "Freshwater fish for the planted tank — schoolers, micropredators, dwarf cichlids and centrepiece species. Filter by tank size, temperament, water column, parameters and more.",
+    "Freshwater fish for the planted tank — schoolers, micropredators, dwarf cichlids, surface specialists, and algae crew. Filter by tank size, temperament, water column, parameters, plant- and shrimp-safety, and more. Built to help aquascapers anywhere stock the right fish for their water.",
 };
 
 interface PageProps {
@@ -34,7 +34,7 @@ export default async function FishIndexPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Fish"
         title="Fish for the planted tank."
-        subtitle={`${fishNorm.length} species profiled — schoolers, micropredators, algae crew and centrepieces. Parameters, group sizes, plant and shrimp safety, and the catch in plain English.`}
+        subtitle={`${fishNorm.length} species profiled — schoolers, micropredators, algae crew, surface specialists and centrepieces. Parameters, group sizes, water column, plant and shrimp safety. Filter by what your water can hold; the catalogue tells you what fits.`}
         backgroundImage={atmosphere.angelfish}
       />
       <SectionShell>

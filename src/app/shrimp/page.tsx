@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Shrimp",
   description:
-    "Freshwater shrimp — Neocaridina, Caridina, Amano and bamboo. Filter by lineage, breeding difficulty, TDS, parameters, and algae-eater rating.",
+    "Freshwater shrimp for the planted tank — Neocaridina colour morphs, Caridina specialists, Amano algae crew, and filter-feeding bamboo shrimp. Filter by lineage, breeding difficulty, TDS, parameters, and algae-eating capability. Helping aquascapers everywhere build healthy shrimp colonies.",
 };
 
 interface PageProps {
@@ -34,7 +34,7 @@ export default async function ShrimpIndexPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Shrimp"
         title="Shrimp for the planted tank."
-        subtitle={`${shrimpNorm.length} species profiled — Neocaridina colour morphs through Caridina specialists like Crystal Red and Blue Bolt. Colony minimums, TDS targets, and tank-mate safety.`}
+        subtitle={`${shrimpNorm.length} species profiled — Neocaridina colour morphs through Caridina specialists like Crystal Red and Blue Bolt, plus filter-feeding bamboo shrimp and the legendary Amano algae crew. Colony minimums, TDS targets, lineage, and which fish they survive alongside.`}
         backgroundImage={atmosphere.amanoMacro}
       />
       <SectionShell>

@@ -2,9 +2,9 @@ export const site = {
   name: "Fin & Stem",
   shortName: "Fin & Stem",
   wordmark: ["Fin", "&", "Stem"],
-  tagline: "A planted-aquarium reference.",
+  tagline: "Helping aquascapers everywhere build the planted tank they imagined.",
   description:
-    "Care profiles for the freshwater planted tank — fish, plants, shrimp and mosses. Parameters, group sizes, light and CO₂ demand, tank-mate safety, and the catch in plain English.",
+    "Fin & Stem is a planted-aquarium reference for aquascapers worldwide. 80+ profiled species — fish, plants, shrimp, and mosses — cross-referenced for compatibility, photographed from Wikimedia and iNaturalist, and written by tank-keepers in plain English.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://finandstem.example.com",
   owner: {
@@ -54,7 +54,7 @@ export const site = {
       },
     ],
     note:
-      "Care numbers are starting points. Observe your tank, check several sources, and consult a vet for anything medical. Photography sourced from Wikimedia Commons under CC licenses where attribution allows.",
+      "Built in South Africa, written for aquascapers everywhere. Care numbers are working ranges — observe your tank, cross-check several sources, and consult a vet for anything medical. Photography sourced from Wikimedia Commons, iNaturalist, and retailer catalogues with attribution and source links on every image.",
   },
 } as const;
 

@@ -1,34 +1,38 @@
 export const about = {
   hero: {
     eyebrow: "About",
-    title: "A reference site, written by someone who keeps tanks.",
+    title: "A working reference, built by an aquascaper, for aquascapers.",
     subtitle:
-      "Fin & Stem started as a frustration. Care numbers were scattered, contradictions were common, and nothing connected fish to plants to shrimp to the gear that made them work. So I started writing them down — and connecting them.",
+      "Fin & Stem started as a frustration. Care numbers were scattered across forums and product pages. Species were profiled in isolation. Nothing connected the fish to the plants to the shrimp to the gear that made them work. So we started writing it down — and connecting it. Today it's a living reference for aquascapers anywhere in the world.",
   },
   ethos: {
     eyebrow: "Ethos",
     title: "What this site is, and isn't.",
-    body: "Fin & Stem is a planted-aquarium reference. Care numbers, group sizes, light and CO₂ demand, tank-mate compatibility — written for the person stocking the tank, not the person selling the fish.",
+    body: "Fin & Stem is a planted-aquarium reference. Care numbers, group sizes, light and CO₂ demand, tank-mate compatibility — written for the person stocking the tank, not the person selling the fish. Free to read, no paywall, no shop. Built to help.",
     points: [
       {
         title: "Original writing, sourced data.",
-        body: "Care ranges cross-reference FishBase, the IUCN Red List, original species descriptions, and hands-on experience. Common-name and origin data tracks Wikipedia and Wikidata. We don't paraphrase competitor sites — if a number is from someone else, it's cited.",
+        body: "Care ranges cross-reference FishBase, the IUCN Red List, Tropica's plant database, original species descriptions, and hands-on tank experience. Common-name and origin data tracks Wikipedia and Wikidata. We don't paraphrase competitor sites — if a number is from someone else, it's cited.",
       },
       {
         title: "Connections matter.",
-        body: "Every species exists inside a system. Fish profiles flag plant and shrimp safety. Shrimp profiles list which fish they survive with. Plant profiles list their real light and CO₂ demand. The connections are first-class data, not footnotes.",
+        body: "Every species exists inside a system. Fish profiles flag plant and shrimp safety. Shrimp profiles list which fish they actually survive with. Plant profiles list their real light and CO₂ demand. The Compatibility page lets you anchor on any species and find what fits in your water. Cross-references are first-class data, not footnotes.",
       },
       {
-        title: "Imagery, properly licensed.",
-        body: "Photos come from Wikimedia Commons under their original CC-BY, CC-BY-SA or CC0 licenses, with author and source recorded next to every file. Where no freely-licensed photo exists, the slot stays empty — we don't ship stock images to fill space.",
+        title: "Imagery, properly attributed.",
+        body: "Photos come from Wikimedia Commons (CC-BY, CC-BY-SA, CC0), iNaturalist (CC-BY and CC0 only — never the default CC-BY-NC), and retailer catalogues for species without freely-licensed coverage. Author and source are recorded on every file, with a back-link on every gallery thumbnail.",
       },
       {
         title: "Honest about uncertainty.",
-        body: "Where authoritative sources disagree, we say so and pick a position with reasoning. When we don't know something, we say so. Care numbers are ranges, not promises.",
+        body: "Where authoritative sources disagree, we say so and pick a position with reasoning. When we don't know something, we say so. Care numbers are working ranges, not promises. If you find a species in your tank that contradicts what we wrote, tell us — we'd rather be corrected than wrong.",
       },
       {
-        title: "No shop. No paywall. No ads (yet).",
-        body: "Reading is free. If we ever add affiliate links to equipment pages, they'll be inline-flagged and disclosed on every page they appear. Reading the site has to be useful before any of that.",
+        title: "Written for everywhere.",
+        body: "The catalogue is built for aquascapers from Tokyo to Toronto to Cape Town. Care numbers are species-specific, not regional. We name brands as examples (ADA, Tropica, Seachem) but the guidance translates to whatever local substrate, fertiliser, and lighting you can source.",
+      },
+      {
+        title: "No paywall. No shop. No ads (yet).",
+        body: "Reading is free and will stay free. If we ever add affiliate links to equipment pages, they'll be inline-flagged and disclosed on every page they appear. The site has to be useful before any of that.",
       },
     ],
   },
@@ -45,7 +49,12 @@ export const about = {
       {
         name: "Wikimedia Commons",
         role: "Open-license imagery",
-        note: "Where most of our launch imagery comes from, with full attribution stored alongside every file.",
+        note: "Primary photo source for the catalogue. Every Wikimedia image renders with author, license, and a link back to the Commons file page.",
+      },
+      {
+        name: "iNaturalist",
+        role: "Open-license imagery (fallback)",
+        note: "CC-BY and CC0 photos only — never the default CC-BY-NC. Fills gaps where Wikimedia has no coverage, especially for aquarium-trade plants.",
       },
       {
         name: "Wikipedia / Wikidata",
@@ -53,9 +62,14 @@ export const about = {
         note: "Structured species facts and the first-pass reference for taxonomy cross-checks.",
       },
       {
+        name: "Tropica Plant Database",
+        role: "Plant photography & care basics",
+        note: "Reference standard for the plants Tropica sells. Worth checking, then verifying against community experience.",
+      },
+      {
         name: "2HR Aquarist",
         role: "Planted-tank methodology",
-        note: "The standard for dosing, CO₂, algae diagnosis and high-tech planted-tank technique. Cited, not paraphrased.",
+        note: "The standard for dosing, CO₂, algae diagnosis, and high-tech planted-tank technique. Cited, not paraphrased.",
       },
       {
         name: "Seriously Fish",
@@ -63,16 +77,16 @@ export const about = {
         note: "The depth-of-detail benchmark for fish profiles. Useful for cross-checking parameter ranges.",
       },
       {
-        name: "Tropica Plant Database",
-        role: "Plant photography & care basics",
-        note: "Useful baseline for the plants Tropica sells. Worth checking, then verifying against community experience.",
+        name: "IUCN Red List",
+        role: "Conservation status",
+        note: "Cited on every species where conservation status matters — particularly for wild-caught fish from Southeast Asia and Amazonia.",
       },
     ],
   },
   founder: {
     eyebrow: "Author",
-    title: "Run by one person.",
-    body: "Fin & Stem is written and maintained by the same person who scapes the reference tanks. No content farm, no rotating writer pool. Every entry is signed off by someone who has actually put the species in water.",
-    location: "Based in South Africa, writing for a global audience.",
+    title: "Run by one person — corrected by many.",
+    body: "Fin & Stem is written and maintained by the same person who scapes the reference tanks. No content farm, no rotating writer pool. Every entry is signed off by someone who has actually put the species in water. Errors are inevitable; if you spot one, the contact page is open and we read everything.",
+    location: "Based in South Africa, writing for aquascapers everywhere.",
   },
 } as const;

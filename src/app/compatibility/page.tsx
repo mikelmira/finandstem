@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Compatibility",
   description:
-    "Cross-reference fish, plants, shrimp and mosses by overlapping water parameters and tank-mate safety. Pick an anchor and see what else fits the tank.",
+    "The aquascaper's compatibility tool — cross-reference fish, plants, shrimp, and mosses by overlapping water parameters and tank-mate safety. Pick any anchor species and see what else fits in the same tank.",
 };
 
 const ANCHOR_OPTIONS = allNorm
@@ -45,7 +45,7 @@ export default async function CompatibilityPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Compatibility"
         title="What else fits this tank?"
-        subtitle="Pick a fish, plant, shrimp or moss. We'll cross-reference temperature, pH, hardness, and tank-mate safety to show what works alongside it."
+        subtitle="Pick any fish, plant, shrimp, or moss. We cross-reference temperature, pH, hardness, and tank-mate safety to show what works alongside it. Built to help aquascapers anywhere plan a tank that actually holds together."
       />
       <SectionShell>
         <Suspense fallback={<PickerFallback />}>

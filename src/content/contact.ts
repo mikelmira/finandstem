@@ -1,14 +1,14 @@
 export const contact = {
   hero: {
     eyebrow: "Contact",
-    title: "Get in touch.",
+    title: "Help make Fin & Stem better.",
     subtitle:
-      "Spotted a wrong number? Have a species we should add? Run a shop or brand and want to talk? Three ways below.",
+      "Spotted a wrong number? Have a species we should add? Run a shop or a community and want to collaborate? The catalogue gets stronger every time an aquascaper writes in — three ways below.",
   },
   feedback: {
     eyebrow: "Catalogue feedback",
     title: "Found an error or a gap.",
-    body: "Care numbers are working ranges based on the sources we cite — but real tanks beat documentation. If something here doesn't match your experience, or there's a species you'd like profiled, tell us. We'd rather be corrected than wrong.",
+    body: "Care numbers are working ranges based on the sources we cite — but real tanks beat documentation. If something here doesn't match what you see in your own tank, or there's a species we should profile, tell us. Corrections from aquascapers anywhere in the world are how this reference improves.",
     fields: {
       name: { label: "Name", placeholder: "Your name" },
       email: { label: "Email", placeholder: "you@email.com" },
@@ -50,7 +50,7 @@ export const contact = {
   direct: {
     eyebrow: "Direct",
     title: "Or just email.",
-    body: "If forms aren't your thing, write directly. We read everything.",
+    body: "If forms aren't your thing, write directly. Every email gets read, and corrections from real tanks always win against documentation.",
     email: "mikee@dsg.co.za",
   },
 } as const;

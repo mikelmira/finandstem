@@ -42,10 +42,10 @@ export function Hero({
               className="object-cover"
             />
           </div>
-          {/* Dark/teal tint to seat the photo into the theme */}
+          {/* Deep-green tint to seat the photo into the theme */}
           <div
             aria-hidden
-            className="absolute inset-0 -z-20 bg-[oklch(0.14_0.025_195/0.78)]"
+            className="absolute inset-0 -z-20 bg-[oklch(0.16_0.045_152/0.80)]"
           />
           {/* Bottom fade so the next section transitions cleanly */}
           <div
