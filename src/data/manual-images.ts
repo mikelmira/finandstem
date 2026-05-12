@@ -63,6 +63,32 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
   ],
+  "cryptocoryne-lutea": [
+    {
+      url: "https://buceplant.com/cdn/shop/files/cryptocoryne-lutea-1168007581_1050x700.jpg?v=1747700547",
+      descriptionUrl: "https://buceplant.com/products/cryptocoryne-lutea",
+      fileTitle: "Cryptocoryne lutea (Buce Plant catalogue photo)",
+      license: "\u00a9 Buce Plant \u2014 editorial use",
+      licenseUrl: "https://buceplant.com/products/cryptocoryne-lutea",
+      author: "Buce Plant",
+      credit: "Image courtesy of Buce Plant",
+      slot: "Hero \u2014 retailer catalogue (no CC-licensed photo available)",
+      attributionRequired: true,
+    },
+  ],
+  "cryptocoryne-parva": [
+    {
+      url: "https://tropica.com/imagegen.ashx?height=720&image=/Plants/106/2.png&crop=resize&class=product",
+      descriptionUrl: "https://tropica.com/en/plants/plantdetails/4558/4558",
+      fileTitle: "Cryptocoryne parva (Tropica catalogue photo)",
+      license: "\u00a9 Tropica Aquarium Plants \u2014 editorial use",
+      licenseUrl: "https://tropica.com/en/plants/plantdetails/4558/4558",
+      author: "Tropica Aquarium Plants A/S",
+      credit: "Image courtesy of Tropica Aquarium Plants A/S",
+      slot: "Hero \u2014 supplier catalogue (no CC-licensed photo available)",
+      attributionRequired: true,
+    },
+  ],
   "ghost-shrimp": [
     {
       url: "https://inaturalist-open-data.s3.amazonaws.com/photos/238919789/original.jpg",
@@ -174,6 +200,19 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       author: "renjus box",
       credit: "(c) renjus box, some rights reserved (CC BY)",
       slot: "iNaturalist supplement",
+      attributionRequired: true,
+    },
+  ],
+  "java-fern-windelov": [
+    {
+      url: "https://buceplant.com/cdn/shop/products/java-fern-windelov-11743177244753_1024x.jpg?v=1628078470",
+      descriptionUrl: "https://buceplant.com/products/microsorum-pteropus-java-fern-windelov-mat",
+      fileTitle: "Java Fern 'Windelov' (Buce Plant catalogue photo)",
+      license: "\u00a9 Buce Plant \u2014 editorial use",
+      licenseUrl: "https://buceplant.com/products/microsorum-pteropus-java-fern-windelov-mat",
+      author: "Buce Plant",
+      credit: "Image courtesy of Buce Plant",
+      slot: "Hero \u2014 retailer catalogue (no CC-licensed photo available)",
       attributionRequired: true,
     },
   ],

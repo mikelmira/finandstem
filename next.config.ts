@@ -18,6 +18,31 @@ const nextConfig: NextConfig = {
         hostname: "static.inaturalist.org",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "tropica.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.aquasabi.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "buceplant.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.shopify.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "live.staticflickr.com",
+        pathname: "/**",
+      },
     ],
   },
 };
