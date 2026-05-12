@@ -46,7 +46,7 @@ export default async function FishDetailPage({ params }: RouteParams) {
     { heading: "Schooling", body: entry.schooling },
     { heading: "Diet", body: entry.diet },
     { heading: "Feeding", body: entry.feedingNotes },
-    { heading: "Breeding", body: entry.breedingDifficulty },
+    { heading: "Breeding difficulty", body: entry.breedingDifficulty },
   ];
 
   const pairings = [

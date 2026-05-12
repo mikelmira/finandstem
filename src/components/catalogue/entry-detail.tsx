@@ -10,7 +10,12 @@ import { StatGrid, type Stat } from "@/components/catalogue/stat-grid";
 import { Eyebrow, SectionShell } from "@/components/sections/section-shell";
 import { EntryCard } from "@/components/catalogue/entry-card";
 import { EntryImage } from "@/components/catalogue/entry-image";
+import { ImageGallery } from "@/components/catalogue/image-gallery";
+import { ReferenceSections } from "@/components/catalogue/reference-sections";
 import { allEntries, getCategoryEntries, getImage } from "@/data";
+import { getGallery } from "@/data/image-gallery";
+import { getDetailSections } from "@/data/species-detail";
+import { prepareImage } from "@/lib/wikimedia";
 
 interface DetailSection {
   heading: string;
@@ -32,6 +37,11 @@ export function EntryDetail({
 }: EntryDetailProps) {
   const meta = CATEGORY_META[entry.category];
   const image = getImage(entry.slug);
+  const galleryRaw = getGallery(entry.slug);
+  const gallery = galleryRaw.map((g) =>
+    prepareImage(g, entry.commonName, entry.scientificName),
+  );
+  const referenceSections = getDetailSections(entry.category, entry.slug);
 
   // Pick 3 related entries from the same category
   const peers = getCategoryEntries(entry.category).filter(
@@ -126,6 +136,38 @@ export function EntryDetail({
               </article>
             ))}
           </div>
+        </SectionShell>
+      )}
+
+      {/* Reference (deep detail) ─────────────────────────────────── */}
+      {referenceSections.length > 0 && (
+        <SectionShell className="!pt-0">
+          <div className="mb-6 flex items-baseline justify-between gap-4">
+            <h2 className="text-display-tight text-2xl sm:text-3xl">
+              Reference
+            </h2>
+            <span className="text-xs text-muted-foreground">
+              From {entry.commonName.toLowerCase()} field notes
+            </span>
+          </div>
+          <ReferenceSections sections={referenceSections} />
+        </SectionShell>
+      )}
+
+      {/* Gallery ─────────────────────────────────────────────────── */}
+      {gallery.length > 1 && (
+        <SectionShell className="!pt-0">
+          <div className="mb-6 flex items-baseline justify-between gap-4">
+            <h2 className="text-display-tight text-2xl sm:text-3xl">Gallery</h2>
+            <span className="text-xs text-muted-foreground">
+              {gallery.length} Wikimedia Commons photos
+            </span>
+          </div>
+          <ImageGallery images={gallery} />
+          <p className="mt-4 text-xs text-muted-foreground">
+            All images sourced from Wikimedia Commons. Click any photo to view
+            its file page, author, and full licensing terms.
+          </p>
         </SectionShell>
       )}
 
