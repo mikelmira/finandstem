@@ -12,6 +12,7 @@ import { EntryCard } from "@/components/catalogue/entry-card";
 import { EntryImage } from "@/components/catalogue/entry-image";
 import { ImageGallery } from "@/components/catalogue/image-gallery";
 import { ReferenceSections } from "@/components/catalogue/reference-sections";
+import { AtAGlance } from "@/components/catalogue/at-a-glance";
 import { allEntries, getCategoryEntries, getImage } from "@/data";
 import { getGallery } from "@/data/image-gallery";
 import { getDetailSections } from "@/data/species-detail";
@@ -112,9 +113,22 @@ export function EntryDetail({
         </div>
       </section>
 
-      {/* Stats grid ──────────────────────────────────────────────── */}
+      {/* At a glance — visual parameter charts ──────────────────── */}
       <SectionShell className="!pt-12 sm:!pt-16">
-        <h2 className="sr-only">Parameters</h2>
+        <div className="mb-6 flex items-baseline justify-between gap-4">
+          <h2 className="text-display-tight text-2xl sm:text-3xl">
+            At a glance
+          </h2>
+          <span className="text-xs text-muted-foreground">
+            Parameters visualised
+          </span>
+        </div>
+        <AtAGlance entry={entry} />
+      </SectionShell>
+
+      {/* Stats grid — full numbers ──────────────────────────────── */}
+      <SectionShell className="!pt-0">
+        <h2 className="sr-only">All parameters</h2>
         <StatGrid stats={stats} />
       </SectionShell>
 
