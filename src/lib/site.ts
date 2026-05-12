@@ -23,6 +23,7 @@ export const site = {
     { label: "Plants", href: "/plants" },
     { label: "Shrimp", href: "/shrimp" },
     { label: "Mosses", href: "/mosses" },
+    { label: "Compatibility", href: "/compatibility" },
     { label: "About", href: "/about" },
   ],
   footer: {
