@@ -1,0 +1,48 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { site } from "@/lib/site";
+import { WaveMark } from "@/components/wave-mark";
+
+export function SiteHeader() {
+  return (
+    <header className="sticky top-0 z-40 px-4 pt-4 sm:px-6">
+      <div className="glass glass-edge mx-auto flex h-14 w-full max-w-6xl items-center justify-between rounded-full px-3 pl-4 pr-3 sm:h-16 sm:pl-6 sm:pr-3">
+        <Link
+          href="/"
+          className="group flex items-center gap-2.5"
+          aria-label={`${site.name} home`}
+        >
+          <span className="inline-flex size-7 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)] transition-colors group-hover:bg-[var(--brand)]/15 dark:bg-[var(--brand-soft)] dark:text-[var(--brand)]">
+            <WaveMark className="size-4" />
+          </span>
+          <span className="text-base font-semibold tracking-tight">
+            {site.name}
+          </span>
+        </Link>
+
+        <nav aria-label="Primary" className="hidden md:block">
+          <ul className="flex items-center gap-1 text-sm">
+            {site.nav.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center rounded-full px-3 py-1.5 text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <Link
+          href="/fish"
+          className="glass-pill inline-flex h-9 items-center gap-1.5 rounded-full px-4 text-xs font-medium transition-transform hover:-translate-y-0.5 sm:text-sm"
+        >
+          Browse catalogue
+          <ArrowUpRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+    </header>
+  );
+}

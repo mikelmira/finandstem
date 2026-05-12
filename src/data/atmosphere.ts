@@ -1,0 +1,71 @@
+/**
+ * Atmosphere photography — used as hero backgrounds across the site.
+ * Each photo credits its Unsplash photographer per the Unsplash License
+ * (https://unsplash.com/license).
+ */
+
+export interface AtmosphereImage {
+  src: string;
+  alt: string;
+  photographer: string;
+  source: string;
+}
+
+export const atmosphere = {
+  aquascapeWide: {
+    src: "/images/atmosphere/aquascape-wide.jpg",
+    alt: "A long planted aquascape with dense aquatic plants and driftwood",
+    photographer: "Simon Infanger",
+    source: "https://unsplash.com/photos/DKtJILopN8c",
+  },
+  angelfish: {
+    src: "/images/atmosphere/angelfish.jpg",
+    alt: "Angelfish swimming over sand in a planted aquarium",
+    photographer: "Simon Infanger",
+    source: "https://unsplash.com/photos/mK5mMFo4jcA",
+  },
+  carpetSchool: {
+    src: "/images/atmosphere/carpet-school.jpg",
+    alt: "Small fish swimming above a green carpet of aquatic plants",
+    photographer: "Simon Infanger",
+    source: "https://unsplash.com/photos/yHupbfucTvs",
+  },
+  nanoTank: {
+    src: "/images/atmosphere/nano-tank.jpg",
+    alt: "A small planted nano aquarium glowing in a dark room",
+    photographer: "Szabo Gedeon",
+    source: "https://unsplash.com/photos/vfEVeNMq2hA",
+  },
+  driftwoodMoss: {
+    src: "/images/atmosphere/driftwood-moss.jpg",
+    alt: "Driftwood covered in moss with glowing tetras swimming nearby",
+    photographer: "Tran Mau Tri Tam",
+    source: "https://unsplash.com/photos/HMTLGBtb6Jc",
+  },
+  amanoMacro: {
+    src: "/images/atmosphere/amano-macro.jpg",
+    alt: "Close-up of an Amano shrimp on driftwood",
+    photographer: "Mate Molnar",
+    source: "https://unsplash.com/photos/Nti1SPucduY",
+  },
+  dwarfGourami: {
+    src: "/images/atmosphere/dwarf-gourami.jpg",
+    alt: "A blue dwarf gourami in a dark planted tank",
+    photographer: "Denis Bayer",
+    source: "https://unsplash.com/photos/-trfIiFltKg",
+  },
+  plantMacro: {
+    src: "/images/atmosphere/plant-macro.jpg",
+    alt: "Close-up of aquatic plant foliage on a mossy stone",
+    photographer: "Jerry Wang",
+    source: "https://unsplash.com/photos/A1yjAj4AriA",
+  },
+  loachesCave: {
+    src: "/images/atmosphere/loaches-cave.jpg",
+    alt: "Botia loaches gathered in a rocky cave on a gravel substrate",
+    photographer: "Aquarium Products India",
+    source: "https://unsplash.com/photos/Z6yUFdhuz-s",
+  },
+} as const satisfies Record<string, AtmosphereImage>;
+
+export type AtmosphereKey = keyof typeof atmosphere;

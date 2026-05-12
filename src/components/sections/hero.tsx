@@ -1,0 +1,157 @@
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Eyebrow } from "@/components/sections/section-shell";
+import { PhotoCredit } from "@/components/sections/photo-credit";
+import { WaveMark } from "@/components/wave-mark";
+import type { AtmosphereImage } from "@/data/atmosphere";
+
+interface HeroProps {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+  stats?: ReadonlyArray<{ value: string; label: string }>;
+  backgroundImage?: AtmosphereImage;
+}
+
+export function Hero({
+  eyebrow,
+  title,
+  subtitle,
+  primaryCta,
+  secondaryCta,
+  stats,
+  backgroundImage,
+}: HeroProps) {
+  return (
+    <section className="relative isolate overflow-hidden">
+      {/* Photographic background — fades into theme below */}
+      {backgroundImage && (
+        <>
+          <div className="absolute inset-0 -z-30">
+            <Image
+              src={backgroundImage.src}
+              alt={backgroundImage.alt}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+          {/* Dark/teal tint to seat the photo into the theme */}
+          <div
+            aria-hidden
+            className="absolute inset-0 -z-20 bg-[oklch(0.14_0.025_195/0.78)]"
+          />
+          {/* Bottom fade so the next section transitions cleanly */}
+          <div
+            aria-hidden
+            className="absolute inset-x-0 bottom-0 -z-20 h-72 bg-gradient-to-b from-transparent to-background"
+          />
+        </>
+      )}
+
+      {/* Atmospheric overlays */}
+      <div
+        className={cn(
+          "brand-aurora absolute inset-0 -z-10",
+          backgroundImage && "opacity-50 mix-blend-overlay",
+        )}
+        aria-hidden
+      />
+      {!backgroundImage && (
+        <div className="bg-grid absolute inset-0 -z-10 opacity-60" aria-hidden />
+      )}
+      <div
+        className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+        aria-hidden
+      />
+
+      {/* Oversized wordmark bleed */}
+      {!backgroundImage && (
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-[-2vw] -z-10 flex justify-center overflow-hidden"
+          aria-hidden
+        >
+          <span className="wordmark-bleed text-[28vw] leading-none whitespace-nowrap sm:text-[26vw] md:text-[22vw] lg:text-[18vw] xl:text-[16rem]">
+            Fin & Stem
+          </span>
+        </div>
+      )}
+
+      <div className="relative mx-auto w-full max-w-6xl px-6 pt-20 pb-32 sm:px-8 sm:pt-28 sm:pb-40 md:pt-32 md:pb-48">
+        {/* Glass content card */}
+        <div
+          className={cn(
+            "glass glass-edge glass-strong relative animate-rise rounded-3xl p-8 sm:p-10 md:p-14 lg:max-w-3xl bg-grain",
+            backgroundImage && "dark",
+          )}
+        >
+          <div className="flex items-center gap-3">
+            <span className="inline-flex size-9 items-center justify-center rounded-full border border-border/70 bg-background/70 text-[var(--brand)] backdrop-blur">
+              <WaveMark className="size-5" />
+            </span>
+            <Eyebrow className="!text-foreground/70">{eyebrow}</Eyebrow>
+          </div>
+
+          <h1 className="mt-6 text-display-tight text-balance text-[2.5rem] sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem]">
+            {title}
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
+            {subtitle}
+          </p>
+
+          <div className="mt-9 flex flex-wrap items-center gap-3">
+            <Link
+              href={primaryCta.href}
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "h-12 rounded-full px-6 text-sm font-medium shadow-[0_8px_24px_-8px_color-mix(in_oklab,var(--brand)_60%,transparent)] transition-transform hover:-translate-y-0.5",
+              )}
+            >
+              {primaryCta.label}
+              <ArrowRight className="ml-1 size-4" aria-hidden />
+            </Link>
+            {secondaryCta && (
+              <Link
+                href={secondaryCta.href}
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background/70 px-5 text-sm font-medium backdrop-blur transition-colors hover:bg-background"
+              >
+                {secondaryCta.label}
+                <span
+                  aria-hidden
+                  className="inline-block size-1.5 rounded-full bg-[var(--brand)]"
+                />
+              </Link>
+            )}
+          </div>
+        </div>
+
+        {stats && stats.length > 0 && (
+          <dl className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border/70 sm:mt-20 sm:grid-cols-3 bg-border/60">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="glass flex flex-col gap-1 p-6 sm:p-7"
+              >
+                <dd className="text-display text-3xl sm:text-4xl text-foreground">
+                  {stat.value}
+                </dd>
+                <dt className="text-sm leading-relaxed text-muted-foreground">
+                  {stat.label}
+                </dt>
+              </div>
+            ))}
+          </dl>
+        )}
+      </div>
+
+      {backgroundImage && <PhotoCredit image={backgroundImage} />}
+    </section>
+  );
+}
