@@ -20,6 +20,11 @@ import { QuickFacts, type QuickFact } from "@/components/catalogue/quick-facts";
 import { TankMatesPanel } from "@/components/catalogue/tank-mates-panel";
 import { GroupedSection } from "@/components/catalogue/grouped-section";
 import { ProTipsCallout } from "@/components/catalogue/pro-tips-callout";
+import { CareSteps } from "@/components/catalogue/sections/care-steps";
+import { WildSplit } from "@/components/catalogue/sections/wild-split";
+import { BehaviorTimeline } from "@/components/catalogue/sections/behavior-timeline";
+import { VariantsBoard } from "@/components/catalogue/sections/variants-board";
+import { WatchOutCards } from "@/components/catalogue/sections/watch-out-cards";
 import { allEntries, getCategoryEntries, getImage } from "@/data";
 import { getGallery } from "@/data/image-gallery";
 import { getDetailSections } from "@/data/species-detail";
@@ -177,10 +182,22 @@ export function EntryDetail({
         />
       </SectionShell>
 
-      {/* 4. GROUPED THEMED SECTIONS ──────────────────────────────── */}
+      {/* 4. THEMED SECTIONS — each rendered with its own distinct UI ─ */}
       {grouped.groups.map((g) => (
         <SectionShell key={g.key} className="!pt-0">
-          <GroupedSection group={g} />
+          {g.key === "care" ? (
+            <CareSteps sections={g.sections} />
+          ) : g.key === "wild" ? (
+            <WildSplit entry={entry} sections={g.sections} />
+          ) : g.key === "behavior" ? (
+            <BehaviorTimeline sections={g.sections} />
+          ) : g.key === "variants" ? (
+            <VariantsBoard sections={g.sections} />
+          ) : g.key === "watch" ? (
+            <WatchOutCards sections={g.sections} />
+          ) : (
+            <GroupedSection group={g} />
+          )}
         </SectionShell>
       ))}
 
