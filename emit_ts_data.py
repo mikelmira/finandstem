@@ -38,7 +38,6 @@ FISH_KEYS = [
     ("badTankMates", "Bad tank mates"),
     ("quarantine", "Quarantine"),
     ("conservation", "Conservation status"),
-    ("priceRange", "Price range (USD)"),
     ("etymology", "Etymology"),
     ("misconceptions", "Misconceptions"),
     ("proTips", "Pro tips"),
@@ -54,7 +53,6 @@ PLANT_KEYS = [
     ("deficiencies", "Common deficiencies"),
     ("algaeIssues", "Algae issues"),
     ("misidentification", "Misidentification"),
-    ("priceRange", "Price range (USD)"),
     ("proTips", "Pro tips"),
 ]
 
@@ -68,7 +66,6 @@ SHRIMP_KEYS = [
     ("tankSetup", "Tank setup"),
     ("goodTankMates", "Good tank mates"),
     ("badTankMates", "Bad tank mates"),
-    ("priceRange", "Price range (USD)"),
     ("proTips", "Pro tips"),
     ("commonMistakes", "Common mistakes"),
 ]
@@ -82,7 +79,6 @@ MOSS_KEYS = [
     ("algaeIssues", "Algae issues"),
     ("sisterSpecies", "Sister species"),
     ("variants", "Variants"),
-    ("priceRange", "Price range (USD)"),
     ("proTips", "Pro tips"),
     ("commonMistakes", "Common mistakes"),
 ]
