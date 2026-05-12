@@ -27,14 +27,14 @@ export function ImageGallery({ images }: ImageGalleryProps) {
             />
             <div
               aria-hidden
-              className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/55 to-transparent transition-opacity duration-300 group-hover:from-black/80"
+              className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[var(--abyss)]/70 to-transparent transition-opacity duration-300 group-hover:from-[var(--abyss)]/90"
             />
           </div>
-          <figcaption className="caption-reveal absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-3 text-[10px] leading-snug text-white/95">
+          <figcaption className="caption-reveal absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-3 text-[10px] leading-snug text-foreground/95">
             <span className="max-w-[70%] truncate">
               {img.author !== "Unknown" ? img.author : "Wikimedia"}
               {img.license && (
-                <span className="text-white/75">{" · " + img.license}</span>
+                <span className="text-foreground/75">{" · " + img.license}</span>
               )}
             </span>
             {img.descriptionUrl && (
@@ -42,7 +42,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
                 href={img.descriptionUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="press inline-flex items-center gap-0.5 rounded-full bg-black/65 px-2 py-0.5 font-medium text-white backdrop-blur transition-all duration-200 hover:bg-[var(--brand)]/90 hover:text-[var(--brand-foreground)]"
+                className="press inline-flex items-center gap-0.5 rounded-full bg-[var(--abyss)]/70 px-2 py-0.5 font-medium text-foreground backdrop-blur transition-all duration-200 hover:bg-[var(--brand)]/90 hover:text-[var(--brand-foreground)]"
                 aria-label="View image source"
               >
                 Source

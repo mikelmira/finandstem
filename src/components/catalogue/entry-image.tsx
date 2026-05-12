@@ -43,16 +43,16 @@ export function EntryImage({
         />
         <div
           aria-hidden
-          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/55 to-transparent"
+          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[var(--abyss)]/75 to-transparent"
         />
       </div>
       {showAttribution && (
-        <figcaption className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-2 p-4 text-[11px] leading-snug text-white sm:p-5">
-          <span className="max-w-[70%] text-white/85">
+        <figcaption className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-2 p-4 text-[11px] leading-snug text-foreground sm:p-5">
+          <span className="max-w-[70%] text-foreground/85">
             {image.author && image.author !== "Unknown" ? (
               <>
                 Photo by{" "}
-                <span className="font-medium text-white">{image.author}</span>
+                <span className="font-medium text-foreground">{image.author}</span>
               </>
             ) : (
               "Wikimedia Commons"
@@ -80,7 +80,7 @@ export function EntryImage({
               href={image.descriptionUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 rounded-full bg-black/55 px-2.5 py-1 font-medium text-white backdrop-blur transition-colors hover:bg-black/70"
+              className="inline-flex items-center gap-1 rounded-full bg-[var(--abyss)]/70 px-2.5 py-1 font-medium text-foreground backdrop-blur transition-colors hover:bg-[var(--abyss)]/85"
             >
               Commons
               <ExternalLink className="size-3" aria-hidden />

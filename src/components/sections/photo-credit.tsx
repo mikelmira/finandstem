@@ -9,7 +9,7 @@ export function PhotoCredit({ image, className }: PhotoCreditProps) {
   return (
     <p
       className={[
-        "absolute bottom-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-black/40 px-2.5 py-1 text-[10px] font-medium text-white/85 backdrop-blur",
+        "absolute bottom-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-[var(--abyss)]/65 px-2.5 py-1 text-[10px] font-medium text-foreground/90 backdrop-blur",
         className,
       ]
         .filter(Boolean)
@@ -24,7 +24,7 @@ export function PhotoCredit({ image, className }: PhotoCreditProps) {
       >
         {image.photographer}
       </a>
-      <span className="text-white/55">· Unsplash</span>
+      <span className="text-foreground/55">· Unsplash</span>
     </p>
   );
 }

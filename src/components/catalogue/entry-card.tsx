@@ -38,11 +38,11 @@ export function EntryCard({ entry }: EntryCardProps) {
         )}
         <div
           aria-hidden
-          className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-black/35 to-transparent"
+          className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[var(--abyss)]/55 to-transparent"
         />
         <div
           aria-hidden
-          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/45 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[var(--abyss)]/65 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         />
         <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-background/85 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground backdrop-blur transition-transform duration-300 group-hover:-translate-y-0.5">
           {meta.singular}
