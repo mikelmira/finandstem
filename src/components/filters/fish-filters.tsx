@@ -44,10 +44,17 @@ interface Props {
   filters: FishFilterState;
   chips: ActiveChip[];
   resultCount: number;
+  totalCount: number;
   children: React.ReactNode;
 }
 
-export function FishFilters({ filters, chips, resultCount, children }: Props) {
+export function FishFilters({
+  filters,
+  chips,
+  resultCount,
+  totalCount,
+  children,
+}: Props) {
   const { setParams } = useFilterUrl();
   const formatRange = (v: { min: number; max: number } | null) =>
     v ? `${v.min}-${v.max}` : null;
@@ -199,6 +206,7 @@ export function FishFilters({ filters, chips, resultCount, children }: Props) {
       chips={chips}
       onClearChip={removeChip}
       resultCount={resultCount}
+      totalCount={totalCount}
       category="fish"
     >
       {resultCount === 0 ? (

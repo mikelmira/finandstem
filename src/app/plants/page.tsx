@@ -43,6 +43,7 @@ export default async function PlantsIndexPage({ searchParams }: PageProps) {
             filters={filters}
             chips={chips}
             resultCount={entries.length}
+            totalCount={plantNorm.length}
           >
             <EntryGrid entries={entries} />
           </PlantFilters>

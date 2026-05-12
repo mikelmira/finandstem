@@ -10,6 +10,8 @@ import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { DetailSection } from "@/data/species-detail";
 import type { CatalogueEntry } from "@/types/catalogue";
+import { OriginMap } from "@/components/charts/origin-map";
+import { regionsFromOrigin } from "@/lib/catalogue/origin-regions";
 
 interface WildSplitProps {
   entry: CatalogueEntry;
@@ -35,6 +37,7 @@ export function WildSplit({ entry, sections, className }: WildSplitProps) {
   const side = sections.filter(
     (s) => s.key !== "habitat" && s.key !== "habitatNatural",
   );
+  const mappableRegions = regionsFromOrigin(entry.origin);
 
   return (
     <section
@@ -52,6 +55,11 @@ export function WildSplit({ entry, sections, className }: WildSplitProps) {
           Where it lived before it came home.
         </p>
       </header>
+
+      {/* World map — only shown when we can geo-locate the origin */}
+      {mappableRegions.length > 0 && (
+        <OriginMap origin={entry.origin} className="animate-fade-up" />
+      )}
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.45fr_1fr] lg:gap-6">
         {/* Habitat pull-quote */}

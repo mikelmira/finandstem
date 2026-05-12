@@ -13,6 +13,7 @@ interface FilterRailProps {
   chips: ActiveChip[];
   onClearChip: (key: string) => void;
   resultCount: number;
+  totalCount: number;
   category: "fish" | "plants" | "shrimp" | "mosses";
   children: React.ReactNode;
 }
@@ -22,6 +23,7 @@ export function FilterRail({
   chips,
   onClearChip,
   resultCount,
+  totalCount,
   category,
   children,
 }: FilterRailProps) {
@@ -129,6 +131,30 @@ export function FilterRail({
 
       {/* Right column */}
       <div className="order-1 flex flex-col gap-5 lg:order-2">
+        {/* Always-visible result count + filter summary */}
+        <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-border/50 pb-4">
+          <div className="flex items-baseline gap-2">
+            <span className="text-display-tight text-3xl text-foreground sm:text-4xl">
+              {resultCount}
+            </span>
+            <span className="text-sm text-muted-foreground">
+              of {totalCount} {noun}
+              {activeCount > 0 ? (
+                <span>
+                  {" "}
+                  match
+                  <span className="text-foreground"> {activeCount} filter{activeCount === 1 ? "" : "s"}</span>
+                </span>
+              ) : null}
+            </span>
+          </div>
+          <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/85">
+            {activeCount === 0
+              ? "Use the filters to narrow the list"
+              : "Adjust filters to widen or narrow"}
+          </span>
+        </div>
+
         {chips.length > 0 && (
           <div className="stagger flex flex-wrap items-center gap-2">
             {chips.map((c, i) => (
@@ -157,10 +183,6 @@ export function FilterRail({
             </button>
           </div>
         )}
-
-        <div className="hidden text-xs text-muted-foreground lg:block">
-          {resultCount} {noun}
-        </div>
 
         {children}
       </div>

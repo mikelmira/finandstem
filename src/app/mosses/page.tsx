@@ -43,6 +43,7 @@ export default async function MossesIndexPage({ searchParams }: PageProps) {
             filters={filters}
             chips={chips}
             resultCount={entries.length}
+            totalCount={mossNorm.length}
           >
             <EntryGrid entries={entries} />
           </MossFilters>

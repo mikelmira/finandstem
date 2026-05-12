@@ -64,6 +64,7 @@ interface Props {
   filters: PlantFilterState;
   chips: ActiveChip[];
   resultCount: number;
+  totalCount: number;
   children: React.ReactNode;
 }
 
@@ -71,6 +72,7 @@ export function PlantFilters({
   filters,
   chips,
   resultCount,
+  totalCount,
   children,
 }: Props) {
   const { setParams } = useFilterUrl();
@@ -194,6 +196,7 @@ export function PlantFilters({
       chips={chips}
       onClearChip={removeChip}
       resultCount={resultCount}
+      totalCount={totalCount}
       category="plants"
     >
       {resultCount === 0 ? (

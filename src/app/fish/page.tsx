@@ -43,6 +43,7 @@ export default async function FishIndexPage({ searchParams }: PageProps) {
             filters={filters}
             chips={chips}
             resultCount={entries.length}
+            totalCount={fishNorm.length}
           >
             <EntryGrid entries={entries} />
           </FishFilters>

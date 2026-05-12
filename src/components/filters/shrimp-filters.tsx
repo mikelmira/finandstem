@@ -44,6 +44,7 @@ interface Props {
   filters: ShrimpFilterState;
   chips: ActiveChip[];
   resultCount: number;
+  totalCount: number;
   children: React.ReactNode;
 }
 
@@ -51,6 +52,7 @@ export function ShrimpFilters({
   filters,
   chips,
   resultCount,
+  totalCount,
   children,
 }: Props) {
   const { setParams } = useFilterUrl();
@@ -168,6 +170,7 @@ export function ShrimpFilters({
       chips={chips}
       onClearChip={removeChip}
       resultCount={resultCount}
+      totalCount={totalCount}
       category="shrimp"
     >
       {resultCount === 0 ? (

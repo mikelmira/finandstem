@@ -43,6 +43,7 @@ export default async function ShrimpIndexPage({ searchParams }: PageProps) {
             filters={filters}
             chips={chips}
             resultCount={entries.length}
+            totalCount={shrimpNorm.length}
           >
             <EntryGrid entries={entries} />
           </ShrimpFilters>
