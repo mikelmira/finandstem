@@ -59,15 +59,21 @@ export function FilterRail({
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-10">
       {/* Mobile filter toggle */}
-      <div className="flex flex-wrap items-center justify-between gap-3 lg:hidden">
+      <div className="order-1 flex flex-wrap items-center justify-between gap-3 lg:hidden">
         <button
           type="button"
           onClick={() => setMobileOpen((v) => !v)}
-          className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2 text-sm font-medium"
           aria-expanded={mobileOpen}
+          aria-controls="filter-rail"
+          className={cn(
+            "press inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+            mobileOpen
+              ? "border-[var(--brand)]/55 bg-[var(--brand)]/15 text-foreground"
+              : "border-border bg-background/70 text-foreground",
+          )}
         >
           <SlidersHorizontal className="size-4" aria-hidden />
-          Filters
+          {mobileOpen ? "Hide filters" : "Filters"}
           {activeCount > 0 && (
             <span className="rounded-full bg-[var(--brand)]/15 px-2 py-0.5 text-xs text-foreground">
               {activeCount}
@@ -75,14 +81,16 @@ export function FilterRail({
           )}
         </button>
         <span className="text-xs text-muted-foreground">
-          {resultCount} {noun}
+          {resultCount} of {totalCount} {noun}
         </span>
       </div>
 
-      {/* Left rail */}
+      {/* Filter rail — appears as the second item on mobile (right after
+          the toggle button), and as the left column on desktop. */}
       <aside
+        id="filter-rail"
         className={cn(
-          "glass glass-edge order-2 rounded-2xl p-5 lg:order-1 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto",
+          "glass glass-edge order-2 animate-fade-up rounded-2xl p-5 lg:order-1 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto",
           !mobileOpen && "hidden lg:block",
         )}
         aria-label="Filters"
@@ -110,16 +118,26 @@ export function FilterRail({
             />
           </button>
           <span className="text-sm font-medium lg:hidden">Filters</span>
-          {activeCount > 0 && (
+          <div className="flex items-center gap-2">
+            {activeCount > 0 && (
+              <button
+                type="button"
+                onClick={clearAll}
+                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+                disabled={isPending}
+              >
+                Clear all
+              </button>
+            )}
             <button
               type="button"
-              onClick={clearAll}
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-              disabled={isPending}
+              onClick={() => setMobileOpen(false)}
+              className="press inline-flex size-7 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground lg:hidden"
+              aria-label="Close filters"
             >
-              Clear all
+              <X className="size-4" aria-hidden />
             </button>
-          )}
+          </div>
         </div>
 
         <div
@@ -129,8 +147,10 @@ export function FilterRail({
         </div>
       </aside>
 
-      {/* Right column */}
-      <div className="order-1 flex flex-col gap-5 lg:order-2">
+      {/* Right column — content area. On mobile sits AFTER the rail
+          (when open) so tapping "Filters" reveals the rail immediately
+          above the result list rather than way below it. */}
+      <div className="order-3 flex flex-col gap-5 lg:order-2">
         {/* Always-visible result count + filter summary */}
         <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-border/50 pb-4">
           <div className="flex items-baseline gap-2">
