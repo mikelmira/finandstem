@@ -3,6 +3,8 @@ import { plants } from "./plants";
 import { shrimp } from "./shrimp";
 import { mosses } from "./mosses";
 import { IMAGE_ATTRIBUTION } from "./image-attribution";
+import { IMAGE_GALLERY } from "./image-gallery";
+import { cleanAuthor } from "@/lib/wikimedia";
 import type {
   CatalogueCategory,
   CatalogueEntry,
@@ -15,8 +17,55 @@ import type {
 
 export { fish, plants, shrimp, mosses };
 
+function categoryForSlug(slug: string): CatalogueCategory | undefined {
+  if (fish.some((f) => f.slug === slug)) return "fish";
+  if (plants.some((p) => p.slug === slug)) return "plants";
+  if (shrimp.some((s) => s.slug === slug)) return "shrimp";
+  if (mosses.some((m) => m.slug === slug)) return "mosses";
+  return undefined;
+}
+
+function entryName(
+  slug: string,
+): { commonName: string; scientificName: string } | undefined {
+  const all: ReadonlyArray<CatalogueEntry> = [
+    ...fish,
+    ...plants,
+    ...shrimp,
+    ...mosses,
+  ];
+  const hit = all.find((e) => e.slug === slug);
+  if (!hit) return undefined;
+  return {
+    commonName: hit.commonName,
+    scientificName: hit.scientificName,
+  };
+}
+
 export function getImage(slug: string): ImageAttribution | undefined {
-  return IMAGE_ATTRIBUTION[slug];
+  const legacy = IMAGE_ATTRIBUTION[slug];
+  if (legacy) return legacy;
+
+  // Fallback: synthesize an ImageAttribution from the first gallery image.
+  const gallery = IMAGE_GALLERY[slug];
+  if (!gallery || gallery.length === 0) return undefined;
+  const lead = gallery[0];
+  const names = entryName(slug);
+  const category = categoryForSlug(slug);
+  if (!names || !category) return undefined;
+
+  return {
+    slug,
+    category,
+    src: lead.url,
+    alt: `${names.commonName} (${names.scientificName})`,
+    license: lead.license || undefined,
+    licenseUrl: lead.licenseUrl || undefined,
+    author: cleanAuthor(lead.author),
+    credit: lead.credit || undefined,
+    fileTitle: lead.fileTitle || undefined,
+    descriptionUrl: lead.descriptionUrl || undefined,
+  };
 }
 
 export const allEntries: ReadonlyArray<CatalogueEntry> = [
