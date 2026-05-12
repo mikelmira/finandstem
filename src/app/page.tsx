@@ -6,6 +6,7 @@ import { Pillars } from "@/components/sections/pillars";
 import { FeaturedEntries } from "@/components/sections/featured-entries";
 import { Ethos } from "@/components/sections/ethos";
 import { Faq } from "@/components/sections/faq";
+import { ToolsBand } from "@/components/sections/tools-band";
 
 export default function Page() {
   const total = fish.length + plants.length + shrimp.length + mosses.length;
@@ -15,8 +16,8 @@ export default function Page() {
         eyebrow={home.hero.eyebrow}
         title={home.hero.title}
         subtitle={home.hero.subtitle}
-        primaryCta={home.hero.primaryCta}
-        secondaryCta={home.hero.secondaryCta}
+        primaryCta={{ label: "Plan a tank", href: "/planner" }}
+        secondaryCta={{ label: "Browse catalogue", href: "/fish" }}
         backgroundImage={atmosphere.aquascapeWide}
         stats={[
           {
@@ -24,8 +25,8 @@ export default function Page() {
             label: "Species profiled across four pillars",
           },
           {
-            value: "4",
-            label: "Pillars — fish · plants · shrimp · mosses",
+            value: "3",
+            label: "Planning tools — Planner · Compare · Compatibility",
           },
           {
             value: "Free",
@@ -34,6 +35,7 @@ export default function Page() {
         ]}
       />
       <Pillars {...home.pillars} />
+      <ToolsBand />
       <FeaturedEntries />
       <Ethos {...home.ethos} />
       <Faq {...home.faq} />

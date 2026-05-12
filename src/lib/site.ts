@@ -23,6 +23,8 @@ export const site = {
     { label: "Plants", href: "/plants" },
     { label: "Shrimp", href: "/shrimp" },
     { label: "Mosses", href: "/mosses" },
+    { label: "Planner", href: "/planner" },
+    { label: "Compare", href: "/compare" },
     { label: "Compatibility", href: "/compatibility" },
     { label: "About", href: "/about" },
   ],
@@ -35,6 +37,14 @@ export const site = {
           { label: "Plants", href: "/plants" },
           { label: "Shrimp", href: "/shrimp" },
           { label: "Mosses", href: "/mosses" },
+        ],
+      },
+      {
+        title: "Tools",
+        links: [
+          { label: "Tank Planner", href: "/planner" },
+          { label: "Compare species", href: "/compare" },
+          { label: "Compatibility", href: "/compatibility" },
         ],
       },
       {
