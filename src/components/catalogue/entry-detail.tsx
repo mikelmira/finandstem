@@ -160,13 +160,15 @@ export function EntryDetail({
           <div className="mb-6 flex items-baseline justify-between gap-4">
             <h2 className="text-display-tight text-2xl sm:text-3xl">Gallery</h2>
             <span className="text-xs text-muted-foreground">
-              {gallery.length} Wikimedia Commons photos
+              {gallery.length} photos
             </span>
           </div>
           <ImageGallery images={gallery} />
           <p className="mt-4 text-xs text-muted-foreground">
-            All images sourced from Wikimedia Commons. Click any photo to view
-            its file page, author, and full licensing terms.
+            Images sourced from Wikimedia Commons and iNaturalist under
+            commercial-use Creative Commons licenses (CC BY, CC BY-SA, CC0).
+            Click any photo to view its source page, author, and full
+            licensing terms.
           </p>
         </SectionShell>
       )}

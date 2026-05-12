@@ -3,7 +3,7 @@ import { plants } from "./plants";
 import { shrimp } from "./shrimp";
 import { mosses } from "./mosses";
 import { IMAGE_ATTRIBUTION } from "./image-attribution";
-import { IMAGE_GALLERY } from "./image-gallery";
+import { getGallery } from "./image-gallery";
 import { cleanAuthor } from "@/lib/wikimedia";
 import type {
   CatalogueCategory,
@@ -46,9 +46,10 @@ export function getImage(slug: string): ImageAttribution | undefined {
   const legacy = IMAGE_ATTRIBUTION[slug];
   if (legacy) return legacy;
 
-  // Fallback: synthesize an ImageAttribution from the first gallery image.
-  const gallery = IMAGE_GALLERY[slug];
-  if (!gallery || gallery.length === 0) return undefined;
+  // Fallback: synthesize an ImageAttribution from the first gallery image
+  // (auto-fetched + manual merged).
+  const gallery = getGallery(slug);
+  if (gallery.length === 0) return undefined;
   const lead = gallery[0];
   const names = entryName(slug);
   const category = categoryForSlug(slug);

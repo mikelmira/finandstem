@@ -42,7 +42,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-0.5 rounded-full bg-black/60 px-2 py-0.5 font-medium text-white backdrop-blur transition-colors hover:bg-black/80"
-                aria-label="View on Wikimedia Commons"
+                aria-label="View image source"
               >
                 Source
                 <ExternalLink className="size-2.5" aria-hidden />
