@@ -12,10 +12,10 @@ export function SiteHeader() {
           className="group flex items-center gap-2.5"
           aria-label={`${site.name} home`}
         >
-          <span className="inline-flex size-7 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)] transition-colors group-hover:bg-[var(--brand)]/15 dark:bg-[var(--brand-soft)] dark:text-[var(--brand)]">
+          <span className="inline-flex size-7 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:rotate-[14deg] group-hover:scale-110 group-hover:bg-[var(--brand)]/25">
             <WaveMark className="size-4" />
           </span>
-          <span className="text-base font-semibold tracking-tight">
+          <span className="text-base font-semibold tracking-tight transition-colors duration-300 group-hover:text-[var(--brand)]">
             {site.name}
           </span>
         </Link>
@@ -26,7 +26,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex items-center rounded-full px-3 py-1.5 text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
+                  className="nav-pill inline-flex items-center px-3 py-1.5 text-muted-foreground transition-colors duration-200 hover:text-foreground"
                 >
                   {item.label}
                 </Link>
@@ -37,10 +37,13 @@ export function SiteHeader() {
 
         <Link
           href="/fish"
-          className="glass-pill inline-flex h-9 items-center gap-1.5 rounded-full px-4 text-xs font-medium transition-transform hover:-translate-y-0.5 sm:text-sm"
+          className="glass-pill press group inline-flex h-9 items-center gap-1.5 rounded-full px-4 text-xs font-medium transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-10px_color-mix(in_oklab,var(--brand)_45%,transparent)] sm:text-sm"
         >
           Browse catalogue
-          <ArrowUpRight className="size-3.5" aria-hidden />
+          <ArrowUpRight
+            className="size-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            aria-hidden
+          />
         </Link>
       </div>
     </header>

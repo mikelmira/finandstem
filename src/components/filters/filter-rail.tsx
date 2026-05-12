@@ -130,24 +130,28 @@ export function FilterRail({
       {/* Right column */}
       <div className="order-1 flex flex-col gap-5 lg:order-2">
         {chips.length > 0 && (
-          <div className="flex flex-wrap items-center gap-2">
-            {chips.map((c) => (
+          <div className="stagger flex flex-wrap items-center gap-2">
+            {chips.map((c, i) => (
               <button
                 key={c.key}
                 type="button"
                 onClick={() => onClearChip(c.key)}
-                className="inline-flex items-center gap-1 rounded-full border border-[var(--brand)]/40 bg-[var(--brand)]/10 px-2.5 py-1 text-xs text-foreground transition-colors hover:bg-[var(--brand)]/15"
+                style={{ ["--i" as string]: Math.min(i, 8) }}
+                className="animate-fade-up press group inline-flex items-center gap-1 rounded-full border border-[var(--brand)]/40 bg-[var(--brand)]/10 px-2.5 py-1 text-xs text-foreground transition-all duration-200 hover:border-[var(--brand)]/65 hover:bg-[var(--brand)]/20"
                 aria-label={`Remove filter ${c.label}`}
               >
                 {c.label}
-                <X className="size-3" aria-hidden />
+                <X
+                  className="size-3 transition-transform duration-200 group-hover:rotate-90"
+                  aria-hidden
+                />
               </button>
             ))}
             <button
               type="button"
               onClick={clearAll}
               disabled={isPending}
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+              className="link-underline press text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
               Clear all
             </button>

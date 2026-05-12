@@ -169,12 +169,13 @@ function CompatibilityResults({ anchor }: { anchor: NormalizedEntry }) {
                   parameters yet.
                 </p>
               ) : (
-                <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {section.matches.map((m) => (
+                <div className="stagger mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {section.matches.map((m, i) => (
                     <MatchCard
                       key={`${section.key}-${m.entry.slug}`}
                       entry={m.entry}
                       reasons={m.reasons}
+                      index={i}
                     />
                   ))}
                 </div>

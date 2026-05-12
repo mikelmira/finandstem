@@ -39,20 +39,35 @@ export function ChipToggle({
   children,
   className,
 }: ChipToggleProps) {
+  const [popKey, setPopKey] = React.useState(0);
+  const prevSelected = React.useRef(selected);
+
+  React.useEffect(() => {
+    if (selected && !prevSelected.current) {
+      setPopKey((n) => n + 1);
+    }
+    prevSelected.current = selected;
+  }, [selected]);
+
   return (
     <button
       type="button"
       onClick={() => onSelect(!selected)}
       aria-pressed={selected}
       className={cn(
-        "inline-flex items-center rounded-full border px-2.5 py-1 text-xs transition-colors",
+        "press inline-flex items-center rounded-full border px-2.5 py-1 text-xs transition-[background-color,border-color,color,box-shadow] duration-200 ease-out",
         selected
-          ? "border-[var(--brand)]/60 bg-[var(--brand)]/15 text-foreground"
-          : "border-border bg-background/60 text-muted-foreground hover:border-[var(--brand)]/40 hover:text-foreground",
+          ? "border-[var(--brand)]/60 bg-[var(--brand)]/15 text-foreground shadow-[0_0_0_2px_color-mix(in_oklab,var(--brand)_18%,transparent)]"
+          : "border-border bg-background/60 text-muted-foreground hover:border-[var(--brand)]/40 hover:text-foreground hover:bg-foreground/5",
         className,
       )}
     >
-      {children}
+      <span
+        key={popKey}
+        className={cn("inline-flex", selected && popKey > 0 && "animate-pop")}
+      >
+        {children}
+      </span>
     </button>
   );
 }
@@ -124,22 +139,26 @@ interface ToggleSwitchProps {
 
 export function ToggleSwitch({ label, selected, onChange }: ToggleSwitchProps) {
   return (
-    <label className="flex cursor-pointer items-center justify-between gap-3 text-sm">
-      <span className="text-foreground/90">{label}</span>
+    <label className="group flex cursor-pointer items-center justify-between gap-3 text-sm">
+      <span className="text-foreground/90 transition-colors group-hover:text-foreground">
+        {label}
+      </span>
       <button
         type="button"
         role="switch"
         aria-checked={selected}
         onClick={() => onChange(!selected)}
         className={cn(
-          "relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors",
-          selected ? "bg-[var(--brand)]/80" : "bg-border/70",
+          "press relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors duration-200",
+          selected
+            ? "bg-[var(--brand)]/85 shadow-[0_0_0_3px_color-mix(in_oklab,var(--brand)_15%,transparent)]"
+            : "bg-border/70 group-hover:bg-border",
         )}
       >
         <span
           aria-hidden
           className={cn(
-            "inline-block size-4 rounded-full bg-background shadow-sm transition-transform",
+            "inline-block size-4 rounded-full bg-background shadow-sm transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]",
             selected ? "translate-x-[18px]" : "translate-x-0.5",
           )}
         />
@@ -281,10 +300,10 @@ export function TriSelect({ options, value, onChange }: TriSelectProps) {
             type="button"
             onClick={() => onChange(o.value)}
             className={cn(
-              "rounded-full px-2.5 py-1 transition-colors",
+              "press rounded-full px-2.5 py-1 transition-all duration-200",
               selected
-                ? "bg-[var(--brand)]/15 text-foreground"
-                : "text-muted-foreground hover:text-foreground",
+                ? "bg-[var(--brand)]/15 text-foreground shadow-[inset_0_0_0_1px_color-mix(in_oklab,var(--brand)_28%,transparent)]"
+                : "text-muted-foreground hover:bg-foreground/5 hover:text-foreground",
             )}
           >
             {o.label}

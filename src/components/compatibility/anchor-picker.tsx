@@ -87,7 +87,7 @@ export function AnchorPicker({
           <button
             type="button"
             onClick={clear}
-            className="absolute right-2 top-1/2 inline-flex size-7 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
+            className="press absolute right-2 top-1/2 inline-flex size-7 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition-all duration-200 hover:rotate-90 hover:bg-foreground/5 hover:text-foreground"
             aria-label="Clear anchor"
           >
             <X className="size-4" aria-hidden />
@@ -98,20 +98,22 @@ export function AnchorPicker({
       {focused && filtered.length > 0 && (
         <ul
           role="listbox"
-          className="absolute z-30 mt-2 max-h-80 w-full overflow-auto rounded-xl border border-border bg-background/95 p-1 shadow-lg backdrop-blur"
+          className="animate-drop-in absolute z-30 mt-2 max-h-80 w-full overflow-auto rounded-xl border border-border bg-background/95 p-1 shadow-lg backdrop-blur"
         >
-          {filtered.slice(0, 30).map((o) => (
-            <li key={o.value}>
+          {filtered.slice(0, 30).map((o, i) => (
+            <li key={o.value} style={{ ["--i" as string]: Math.min(i, 8) }}>
               <button
                 type="button"
                 onClick={() => pick(o.value)}
                 className={cn(
-                  "flex w-full flex-col items-start gap-0.5 rounded-lg px-3 py-2 text-left text-sm transition-colors hover:bg-foreground/5",
+                  "press group flex w-full flex-col items-start gap-0.5 rounded-lg px-3 py-2 text-left text-sm transition-all duration-200 hover:translate-x-0.5 hover:bg-foreground/5",
                   o.value === current && "bg-[var(--brand)]/10",
                 )}
               >
                 <span className="flex w-full items-center justify-between gap-3">
-                  <span className="font-medium">{o.label}</span>
+                  <span className="font-medium transition-colors group-hover:text-[var(--brand)]">
+                    {o.label}
+                  </span>
                   <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
                     {CATEGORY_META[o.category].singular}
                   </span>

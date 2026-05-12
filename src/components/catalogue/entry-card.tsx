@@ -16,7 +16,7 @@ export function EntryCard({ entry }: EntryCardProps) {
   return (
     <Link
       href={`${meta.path}/${entry.slug}`}
-      className="glass glass-edge lift group relative flex flex-col overflow-hidden rounded-2xl"
+      className="glass glass-edge lift group relative flex flex-col overflow-hidden rounded-2xl transition-colors duration-300 hover:border-[var(--brand)]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       {/* Cover image */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
@@ -26,7 +26,7 @@ export function EntryCard({ entry }: EntryCardProps) {
             alt={image.alt}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+            className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
           />
         ) : (
           <div className="flex h-full items-center justify-center">
@@ -40,11 +40,15 @@ export function EntryCard({ entry }: EntryCardProps) {
           aria-hidden
           className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-black/35 to-transparent"
         />
-        <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-background/85 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground backdrop-blur">
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/45 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        />
+        <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-background/85 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground backdrop-blur transition-transform duration-300 group-hover:-translate-y-0.5">
           {meta.singular}
         </span>
         <ArrowUpRight
-          className="absolute right-3 top-3 size-6 rounded-full bg-background/85 p-1 text-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--brand)]"
+          className="absolute right-3 top-3 size-6 rounded-full bg-background/85 p-1 text-foreground transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:rotate-[8deg] group-hover:bg-[var(--brand)]/95 group-hover:text-[var(--brand-foreground)]"
           aria-hidden
         />
       </div>
