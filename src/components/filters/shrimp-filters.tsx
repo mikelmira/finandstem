@@ -18,6 +18,7 @@ import {
 import type {
   ShrimpLineage,
   ShrimpBreeding,
+  FlowRate,
 } from "@/lib/catalogue/normalize";
 
 const LINEAGE_OPTIONS: ReadonlyArray<{
@@ -38,6 +39,14 @@ const BREEDING_OPTIONS: ReadonlyArray<{
   { value: "Medium", label: "Medium" },
   { value: "Hard", label: "Hard" },
   { value: "Larvae need brackish", label: "Brackish larvae" },
+];
+
+const FLOW_OPTIONS: ReadonlyArray<{ value: FlowRate; label: string }> = [
+  { value: "Still", label: "Still" },
+  { value: "Low", label: "Low" },
+  { value: "Medium", label: "Medium" },
+  { value: "High", label: "High" },
+  { value: "Very High", label: "Very high" },
 ];
 
 interface Props {
@@ -73,6 +82,8 @@ export function ShrimpFilters({
       setParams({
         breeding: filters.breeding.filter((v) => v !== value),
       });
+    else if (field === "flow")
+      setParams({ flow: filters.flow.filter((v) => v !== value) });
     else if (field === "difficulty")
       setParams({
         difficulty: filters.difficulty
@@ -159,6 +170,14 @@ export function ShrimpFilters({
           onChange={(v) => setParams({ tds: formatRange(v) })}
           bounds={RANGE_BOUNDS.tds}
           unit="ppm"
+        />
+      </FilterGroup>
+
+      <FilterGroup label="Preferred flow">
+        <MultiChips
+          options={FLOW_OPTIONS}
+          values={filters.flow}
+          onChange={(v) => setParams({ flow: v })}
         />
       </FilterGroup>
     </>

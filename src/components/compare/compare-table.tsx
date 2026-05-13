@@ -54,6 +54,10 @@ const ROWS: Row[] = [
         : null,
   },
   {
+    label: "Flow rate",
+    value: (e) => ("flowRate" in e && e.flowRate ? (e.flowRate as string) : "—"),
+  },
+  {
     label: "Min tank",
     value: (e) =>
       "minTankSize" in e ? (e.minTankSize as string) : "—",

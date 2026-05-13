@@ -37,6 +37,7 @@ export type PlantTypeNorm =
 export type Light = "Low" | "Medium" | "High";
 export type CO2 = "None" | "Optional" | "Recommended" | "Required";
 export type GrowthRate = "Slow" | "Medium" | "Fast" | "Very Fast";
+export type FlowRate = "Still" | "Low" | "Medium" | "High" | "Very High";
 
 export type ShrimpLineage = "Neocaridina" | "Caridina" | "Other";
 export type ShrimpBreeding =
@@ -69,6 +70,14 @@ const GROWTH_ORDINAL: Record<GrowthRate, number> = {
   Fast: 3,
   "Very Fast": 4,
 };
+const FLOW_ORDINAL: Record<FlowRate, number> = {
+  Still: 0,
+  Low: 1,
+  Medium: 2,
+  High: 3,
+  "Very High": 4,
+};
+export const FLOW_RANK = FLOW_ORDINAL;
 
 function stripParens(s: string): string {
   return s.replace(/\([^)]*\)/g, " ").trim();
@@ -127,6 +136,14 @@ function parseGrowth(raw: string): GrowthRate[] {
     raw,
     ["Slow", "Medium", "Fast", "Very Fast"],
     GROWTH_ORDINAL,
+  );
+}
+
+function parseFlow(raw: string): FlowRate[] {
+  return expandRange<FlowRate>(
+    raw,
+    ["Still", "Low", "Medium", "High", "Very High"],
+    FLOW_ORDINAL,
   );
 }
 
@@ -287,6 +304,7 @@ export interface BaseNorm {
   tempRange: NumericRange | null;
   phRange: NumericRange | null;
   dghRange: NumericRange | null;
+  flow: FlowRate[];
   raw: CatalogueEntry;
 }
 
@@ -353,6 +371,7 @@ function base(entry: CatalogueEntry): BaseNorm {
       "dghRange" in entry && entry.dghRange
         ? parseRange(entry.dghRange as string)
         : null,
+    flow: "flowRate" in entry ? parseFlow(entry.flowRate as string) : [],
     raw: entry,
   };
 }

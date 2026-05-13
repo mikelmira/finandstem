@@ -11,6 +11,7 @@ import type {
   Light,
   CO2,
   GrowthRate,
+  FlowRate,
   PlantPosition,
   PlantTypeNorm,
   ShrimpLineage,
@@ -84,6 +85,7 @@ export interface FishFilterState {
   temp: NumericRange | null;
   ph: NumericRange | null;
   dgh: NumericRange | null;
+  flow: FlowRate[];
   difficulty: number[];
   plantSafe: boolean;
   shrimpSafe: "any" | "yes" | "adults-only";
@@ -102,6 +104,7 @@ export function parseFishFilters(sp: SearchParamsLike): FishFilterState {
     temp: readRange(sp.temp),
     ph: readRange(sp.ph),
     dgh: readRange(sp.dgh),
+    flow: readCSV(sp.flow) as FlowRate[],
     difficulty: readCSV(sp.difficulty)
       .map((d) => Number(d))
       .filter((n) => !Number.isNaN(n)),
@@ -131,6 +134,7 @@ export function applyFishFilters(
     if (f.temp && !overlaps(e.tempRange, f.temp)) return false;
     if (f.ph && !overlaps(e.phRange, f.ph)) return false;
     if (f.dgh && !overlaps(e.dghRange, f.dgh)) return false;
+    if (f.flow.length && !f.flow.some((v) => e.flow.includes(v))) return false;
     if (f.difficulty.length && !f.difficulty.includes(e.difficulty))
       return false;
     if (f.plantSafe && !e.plantSafe) return false;
@@ -162,6 +166,7 @@ export function fishChips(f: FishFilterState): ActiveChip[] {
     out.push({ key: "temp", label: `${f.temp.min}–${f.temp.max} °C` });
   if (f.ph) out.push({ key: "ph", label: `pH ${f.ph.min}–${f.ph.max}` });
   if (f.dgh) out.push({ key: "dgh", label: `${f.dgh.min}–${f.dgh.max} dGH` });
+  for (const v of f.flow) out.push({ key: `flow:${v}`, label: `${v} flow` });
   for (const d of f.difficulty)
     out.push({ key: `difficulty:${d}`, label: `Difficulty ${d}` });
   if (f.plantSafe) out.push({ key: "plantSafe", label: "Plant-safe" });
@@ -183,6 +188,7 @@ export interface PlantFilterState {
   light: Light[];
   co2: CO2[];
   growth: GrowthRate[];
+  flow: FlowRate[];
   heightMax: number | null;
   temp: NumericRange | null;
   ph: NumericRange | null;
@@ -197,6 +203,7 @@ export function parsePlantFilters(sp: SearchParamsLike): PlantFilterState {
     light: readCSV(sp.light) as Light[],
     co2: readCSV(sp.co2) as CO2[],
     growth: readCSV(sp.growth) as GrowthRate[],
+    flow: readCSV(sp.flow) as FlowRate[],
     heightMax: readNumber(sp.heightMax),
     temp: readRange(sp.temp),
     ph: readRange(sp.ph),
@@ -221,6 +228,7 @@ export function applyPlantFilters(
     if (f.co2.length && !f.co2.some((p) => e.co2.includes(p))) return false;
     if (f.growth.length && !f.growth.some((p) => e.growthRate.includes(p)))
       return false;
+    if (f.flow.length && !f.flow.some((v) => e.flow.includes(v))) return false;
     if (
       f.heightMax !== null &&
       e.maxHeightCm !== null &&
@@ -243,6 +251,7 @@ export function plantChips(f: PlantFilterState): ActiveChip[] {
   for (const l of f.light) out.push({ key: `light:${l}`, label: `${l} light` });
   for (const c of f.co2) out.push({ key: `co2:${c}`, label: `CO₂: ${c}` });
   for (const g of f.growth) out.push({ key: `growth:${g}`, label: g });
+  for (const v of f.flow) out.push({ key: `flow:${v}`, label: `${v} flow` });
   if (f.heightMax !== null)
     out.push({ key: "heightMax", label: `Height ≤ ${f.heightMax} cm` });
   if (f.temp)
@@ -266,6 +275,7 @@ export interface ShrimpFilterState {
   ph: NumericRange | null;
   dgh: NumericRange | null;
   tds: NumericRange | null;
+  flow: FlowRate[];
 }
 
 export function parseShrimpFilters(sp: SearchParamsLike): ShrimpFilterState {
@@ -281,6 +291,7 @@ export function parseShrimpFilters(sp: SearchParamsLike): ShrimpFilterState {
     ph: readRange(sp.ph),
     dgh: readRange(sp.dgh),
     tds: readRange(sp.tds),
+    flow: readCSV(sp.flow) as FlowRate[],
   };
 }
 
@@ -300,6 +311,7 @@ export function applyShrimpFilters(
     if (f.ph && !overlaps(e.phRange, f.ph)) return false;
     if (f.dgh && !overlaps(e.dghRange, f.dgh)) return false;
     if (f.tds && !overlaps(e.tdsRange, f.tds)) return false;
+    if (f.flow.length && !f.flow.some((v) => e.flow.includes(v))) return false;
     return true;
   });
 }
@@ -319,6 +331,7 @@ export function shrimpChips(f: ShrimpFilterState): ActiveChip[] {
   if (f.dgh) out.push({ key: "dgh", label: `${f.dgh.min}–${f.dgh.max} dGH` });
   if (f.tds)
     out.push({ key: "tds", label: `TDS ${f.tds.min}–${f.tds.max}` });
+  for (const v of f.flow) out.push({ key: `flow:${v}`, label: `${v} flow` });
   return out;
 }
 
@@ -330,6 +343,7 @@ export interface MossFilterState {
   light: Light[];
   co2: CO2[];
   growth: GrowthRate[];
+  flow: FlowRate[];
   difficulty: number[];
   temp: NumericRange | null;
   ph: NumericRange | null;
@@ -342,6 +356,7 @@ export function parseMossFilters(sp: SearchParamsLike): MossFilterState {
     light: readCSV(sp.light) as Light[],
     co2: readCSV(sp.co2) as CO2[],
     growth: readCSV(sp.growth) as GrowthRate[],
+    flow: readCSV(sp.flow) as FlowRate[],
     difficulty: readCSV(sp.difficulty)
       .map((d) => Number(d))
       .filter((n) => !Number.isNaN(n)),
@@ -364,6 +379,7 @@ export function applyMossFilters(
     if (f.co2.length && !f.co2.some((p) => e.co2.includes(p))) return false;
     if (f.growth.length && !f.growth.some((p) => e.growthRate.includes(p)))
       return false;
+    if (f.flow.length && !f.flow.some((v) => e.flow.includes(v))) return false;
     if (f.difficulty.length && !f.difficulty.includes(e.difficulty))
       return false;
     if (f.temp && !overlaps(e.tempRange, f.temp)) return false;
@@ -379,6 +395,7 @@ export function mossChips(f: MossFilterState): ActiveChip[] {
   for (const l of f.light) out.push({ key: `light:${l}`, label: `${l} light` });
   for (const c of f.co2) out.push({ key: `co2:${c}`, label: `CO₂: ${c}` });
   for (const g of f.growth) out.push({ key: `growth:${g}`, label: g });
+  for (const v of f.flow) out.push({ key: `flow:${v}`, label: `${v} flow` });
   for (const d of f.difficulty)
     out.push({ key: `difficulty:${d}`, label: `Difficulty ${d}` });
   if (f.temp)

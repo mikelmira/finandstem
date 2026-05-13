@@ -7,6 +7,7 @@ import {
   LightLevel,
   CO2Demand,
   GrowthRateBadge,
+  FlowDemand,
 } from "@/components/charts/demand-badges";
 import type {
   CatalogueEntry,
@@ -103,6 +104,14 @@ function FishExtras({ entry }: { entry: FishEntry }) {
           <TankSizeBadge litres={tankL} />
         </div>
       )}
+      {entry.flowRate && (
+        <div
+          className="animate-fade-up md:col-span-2"
+          style={{ ["--i" as string]: 5 }}
+        >
+          <FlowDemand raw={entry.flowRate} />
+        </div>
+      )}
     </>
   );
 }
@@ -144,6 +153,14 @@ function ShrimpExtras({ entry }: { entry: ShrimpEntry }) {
           />
         </div>
       )}
+      {entry.flowRate && (
+        <div
+          className="animate-fade-up md:col-span-2"
+          style={{ ["--i" as string]: 6 }}
+        >
+          <FlowDemand raw={entry.flowRate} />
+        </div>
+      )}
     </>
   );
 }
@@ -171,6 +188,14 @@ function PlantExtras({ entry }: { entry: PlantEntry }) {
       <div className="animate-fade-up" style={{ ["--i" as string]: 6 }}>
         <GrowthRateBadge raw={entry.growthRate} />
       </div>
+      {entry.flowRate && (
+        <div
+          className="animate-fade-up md:col-span-2"
+          style={{ ["--i" as string]: 7 }}
+        >
+          <FlowDemand raw={entry.flowRate} />
+        </div>
+      )}
     </>
   );
 }
@@ -187,6 +212,14 @@ function MossExtras({ entry }: { entry: MossEntry }) {
       <div className="animate-fade-up" style={{ ["--i" as string]: 5 }}>
         <GrowthRateBadge raw={entry.growthRate} />
       </div>
+      {entry.flowRate && (
+        <div
+          className="animate-fade-up md:col-span-2"
+          style={{ ["--i" as string]: 6 }}
+        >
+          <FlowDemand raw={entry.flowRate} />
+        </div>
+      )}
     </>
   );
 }

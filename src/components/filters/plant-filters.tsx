@@ -21,6 +21,7 @@ import type {
   Light,
   CO2,
   GrowthRate,
+  FlowRate,
 } from "@/lib/catalogue/normalize";
 
 const POSITION_OPTIONS: ReadonlyArray<{ value: PlantPosition; label: string }> =
@@ -60,6 +61,14 @@ const GROWTH_OPTIONS: ReadonlyArray<{ value: GrowthRate; label: string }> = [
   { value: "Very Fast", label: "Very fast" },
 ];
 
+const FLOW_OPTIONS: ReadonlyArray<{ value: FlowRate; label: string }> = [
+  { value: "Still", label: "Still" },
+  { value: "Low", label: "Low" },
+  { value: "Medium", label: "Medium" },
+  { value: "High", label: "High" },
+  { value: "Very High", label: "Very high" },
+];
+
 interface Props {
   filters: PlantFilterState;
   chips: ActiveChip[];
@@ -95,6 +104,8 @@ export function PlantFilters({
       setParams({ co2: filters.co2.filter((v) => v !== value) });
     else if (field === "growth")
       setParams({ growth: filters.growth.filter((v) => v !== value) });
+    else if (field === "flow")
+      setParams({ flow: filters.flow.filter((v) => v !== value) });
     else if (field === "difficulty")
       setParams({
         difficulty: filters.difficulty
@@ -142,6 +153,14 @@ export function PlantFilters({
           options={GROWTH_OPTIONS}
           values={filters.growth}
           onChange={(v) => setParams({ growth: v })}
+        />
+      </FilterGroup>
+
+      <FilterGroup label="Preferred flow">
+        <MultiChips
+          options={FLOW_OPTIONS}
+          values={filters.flow}
+          onChange={(v) => setParams({ flow: v })}
         />
       </FilterGroup>
 

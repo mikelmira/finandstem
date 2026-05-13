@@ -17,7 +17,12 @@ import {
   type FishFilterState,
   type ActiveChip,
 } from "@/lib/catalogue/filters";
-import type { WaterColumn, Temperament, Diet } from "@/lib/catalogue/normalize";
+import type {
+  WaterColumn,
+  Temperament,
+  Diet,
+  FlowRate,
+} from "@/lib/catalogue/normalize";
 
 const COLUMN_OPTIONS: ReadonlyArray<{ value: WaterColumn; label: string }> = [
   { value: "Top", label: "Top" },
@@ -38,6 +43,14 @@ const DIET_OPTIONS: ReadonlyArray<{ value: Diet; label: string }> = [
   { value: "Micropredator", label: "Micropredator" },
   { value: "Herbivore", label: "Herbivore" },
   { value: "Filter feeder", label: "Filter feeder" },
+];
+
+const FLOW_OPTIONS: ReadonlyArray<{ value: FlowRate; label: string }> = [
+  { value: "Still", label: "Still" },
+  { value: "Low", label: "Low" },
+  { value: "Medium", label: "Medium" },
+  { value: "High", label: "High" },
+  { value: "Very High", label: "Very high" },
 ];
 
 interface Props {
@@ -78,6 +91,8 @@ export function FishFilters({
       });
     } else if (field === "diet") {
       setParams({ diet: filters.diet.filter((v) => v !== value) });
+    } else if (field === "flow") {
+      setParams({ flow: filters.flow.filter((v) => v !== value) });
     } else if (field === "difficulty") {
       setParams({
         difficulty: filters.difficulty
@@ -160,6 +175,14 @@ export function FishFilters({
           value={filters.dgh}
           onChange={(v) => setParams({ dgh: formatRange(v) })}
           bounds={RANGE_BOUNDS.dgh}
+        />
+      </FilterGroup>
+
+      <FilterGroup label="Preferred flow">
+        <MultiChips
+          options={FLOW_OPTIONS}
+          values={filters.flow}
+          onChange={(v) => setParams({ flow: v })}
         />
       </FilterGroup>
 

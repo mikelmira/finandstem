@@ -43,6 +43,7 @@ export interface FishEntry extends CatalogueEntryBase {
   tempRange: string;
   phRange: string;
   dghRange: string;
+  flowRate: string;
   lifespan: string;
   plantSafe: string;
   shrimpSafe: string;
@@ -61,6 +62,7 @@ export interface PlantEntry extends CatalogueEntryBase {
   tempRange: string;
   phRange: string;
   dghRange: string;
+  flowRate: string;
   substrate: string;
   propagation: string;
 }
@@ -75,6 +77,7 @@ export interface ShrimpEntry extends CatalogueEntryBase {
   tempRange: string;
   phRange: string;
   dghRange: string;
+  flowRate: string;
   tdsRange: string;
   lifespan: string;
   breeding: string;
@@ -94,6 +97,7 @@ export interface MossEntry extends CatalogueEntryBase {
   growthRate: string;
   tempRange: string;
   phRange: string;
+  flowRate: string;
   trimming: string;
 }
 
