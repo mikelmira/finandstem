@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Fraunces } from "next/font/google";
+import {
+  Inter,
+  JetBrains_Mono,
+  Bricolage_Grotesque,
+} from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { SiteHeader } from "@/components/sections/site-header";
@@ -17,10 +21,16 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const display = Fraunces({
+/**
+ * Display family — Bricolage Grotesque. A modern variable sans
+ * with a slight architectural edge, tunable from light through
+ * extra-bold across the page. Replaces Fraunces (serif) for the
+ * more contemporary headline voice the reference set asked for.
+ */
+const display = Bricolage_Grotesque({
   variable: "--font-display",
   subsets: ["latin"],
-  axes: ["opsz"],
+  axes: ["opsz", "wdth"],
   display: "swap",
 });
 

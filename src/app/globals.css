@@ -141,7 +141,6 @@
   h3,
   h4 {
     @apply font-display tracking-tight text-foreground;
-    font-feature-settings: "ss01" on;
     font-optical-sizing: auto;
   }
   ::selection {
@@ -300,66 +299,68 @@
 
 /* ─── Display type utilities ───────────────────────────────────────────── */
 
+/* Bricolage Grotesque exposes two variation axes: `opsz` (optical size,
+   8–96) and `wdth` (width, 75–125). For display sizes we max opsz and
+   keep wdth at 100 so glyphs feel architectural without going condensed.
+   Heavier weights (700–800) carry the editorial punch of the reference
+   set without going generic-bold. */
+
 .text-display {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.045em;
-  font-feature-settings: "ss01" on;
-  font-variation-settings: "opsz" 144;
-  line-height: 0.92;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  font-variation-settings: "opsz" 96, "wdth" 100;
+  line-height: 0.96;
 }
 
 .text-display-tight {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  font-variation-settings: "opsz" 144;
-  line-height: 0.86;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-variation-settings: "opsz" 96, "wdth" 100;
+  line-height: 0.92;
 }
 
-/* Mega wordmark used in hero/footer (Terrava / Botany ref).
-   On the cream ground, this reads as a ghosted brand-coloured
-   imprint — like a watermark pressed into the page. */
+/* Mega wordmark used in hero/footer. On the cream ground this
+   reads as a ghosted brand-coloured imprint pressed into the page. */
 .wordmark-bleed {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.06em;
-  font-variation-settings: "opsz" 144;
-  line-height: 0.78;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  font-variation-settings: "opsz" 96, "wdth" 100;
+  line-height: 0.85;
   color: color-mix(in oklab, var(--brand) 14%, transparent);
   user-select: none;
 }
 
-/* Drop cap — used on the opening paragraph of a long body block
-   (careSummary, in-the-wild prose). Pulls the first letter into a
-   large serif glyph that sits flush with three lines of body text,
-   mirroring the field-guide / encyclopedia plate aesthetic. */
+/* Drop cap — pulls the first letter into a large display glyph that
+   sits flush with three lines of body text, mirroring the
+   field-guide / encyclopedia plate aesthetic. */
 .drop-cap::first-letter {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 800;
   font-size: 3.5em;
   line-height: 0.85;
   float: left;
   margin: 0.05em 0.1em 0 0;
   color: var(--brand);
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 96, "wdth" 100;
 }
 
-/* Editorial all-caps display variant — mirrors "WARDEN OF THE WILD" /
-   "GROWN FROM THE LAND, MADE FOR THE TABLE" in the reference set.
-   Use for hero subheads and announcement copy. */
+/* Editorial all-caps display variant — for "WARDEN OF THE WILD"-style
+   subheads and announcement copy. */
 .text-display-caps {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  line-height: 0.95;
-  font-variation-settings: "opsz" 144;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  font-variation-settings: "opsz" 96, "wdth" 100;
 }
 
 /* Postage-stamp card chrome — used by section headers and entry
    cards to add the field-guide top-row: brand-mark left, big
-   numeric right. Adopted from set-2 image-1 (the 01/02/03 cards). */
+   numeric right. */
 .stamp-row {
   display: flex;
   align-items: center;
@@ -377,13 +378,13 @@
 }
 .stamp-numeral {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--brand);
   font-variant-numeric: tabular-nums;
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 96, "wdth" 100;
 }
 
 /* ─── Animations & micro-interactions ─────────────────────────────────── */

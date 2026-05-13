@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { ArrowLeft, ChevronDown, ExternalLink, MapPin } from "lucide-react";
+import Image from "next/image";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  ChevronDown,
+  ExternalLink,
+  MapPin,
+} from "lucide-react";
 import { WaveMark } from "@/components/wave-mark";
 import { PillButton } from "@/components/ui/pill-button";
 import {
@@ -329,47 +336,195 @@ export function EntryDetail({
         </div>
       </div>
 
-      {/* ─── More in this category (full-bleed footer block) ─────── */}
+      {/* ─── More in this category — featured + sidebar bento ───── */}
       {related.length > 0 && (
         <SectionShell className="border-t border-border/60 !pt-16 sm:!pt-20">
-          <h2 className="text-display-tight text-2xl sm:text-3xl">
-            More {meta.label.toLowerCase()}
-          </h2>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {related.map((e) => (
-              <EntryCard key={e.slug} entry={e} />
-            ))}
-          </div>
-          <div className="mt-8">
-            <Link
-              href={meta.path}
-              className="press inline-flex items-center gap-1.5 rounded-full border border-border bg-background/60 px-4 py-2 text-sm font-medium backdrop-blur transition-colors hover:border-[var(--brand)]/50"
-            >
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+                More {meta.label.toLowerCase()}
+              </span>
+              <h2 className="text-display-tight mt-3 text-3xl sm:text-4xl">
+                Adjacent specimens in the catalogue.
+              </h2>
+            </div>
+            <PillButton href={meta.path} variant="ghost" size="sm">
               See all {meta.label.toLowerCase()}
-              <ArrowLeft className="size-4 -scale-x-100" aria-hidden />
-            </Link>
+            </PillButton>
+          </div>
+
+          {/* Asymmetric bento — one large featured card, two compact rows */}
+          <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-6">
+            {related[0] && (
+              <div className="lg:col-span-7">
+                <EntryCard entry={related[0]} />
+              </div>
+            )}
+            {related.length > 1 && (
+              <ul className="flex flex-col gap-4 lg:col-span-5">
+                {related.slice(1, 3).map((e) => (
+                  <li key={e.slug} className="h-full">
+                    <CompactEntryRow entry={e} />
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </SectionShell>
       )}
 
-      {/* ─── Companions — cross-category ─────────────────────────── */}
+      {/* ─── Companions — editorial cross-category strip ─────────── */}
       {companions.length > 0 && (
         <SectionShell className="border-t border-border/60">
-          <h2 className="text-display-tight text-2xl sm:text-3xl">
-            Build the rest of the tank
-          </h2>
-          <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            A planted tank is a system. Pair this {meta.singular.toLowerCase()}{" "}
-            with entries from the other pillars to plan the whole scape.
-          </p>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {companions.map((e) => (
-              <EntryCard key={`${e.category}-${e.slug}`} entry={e} />
-            ))}
+          <div className="max-w-2xl">
+            <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+              Cross-references
+            </span>
+            <h2 className="text-display-tight mt-3 text-3xl sm:text-4xl">
+              Build the rest of the tank.
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+              A planted tank is a system. Pair this {meta.singular.toLowerCase()}{" "}
+              with one entry from each other pillar to plan the whole scape.
+            </p>
           </div>
+          <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            {companions.map((e) => (
+              <li key={`${e.category}-${e.slug}`}>
+                <CompanionTile entry={e} />
+              </li>
+            ))}
+          </ul>
         </SectionShell>
       )}
     </>
+  );
+}
+
+/**
+ * Compact horizontal entry row — square specimen image left, name +
+ * scientific name + difficulty right. Used by "More in this category"
+ * to provide visual variety against the featured EntryCard.
+ */
+function CompactEntryRow({ entry }: { entry: CatalogueEntry }) {
+  const meta = CATEGORY_META[entry.category];
+  const image = getImage(entry.slug);
+  return (
+    <Link
+      href={`${meta.path}/${entry.slug}`}
+      className="glass glass-edge lift group relative flex h-full items-stretch overflow-hidden rounded-2xl"
+    >
+      <div className="relative aspect-square w-32 shrink-0 overflow-hidden sm:w-40">
+        {image && (
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            sizes="160px"
+            className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+          />
+        )}
+      </div>
+      <div className="flex flex-1 flex-col justify-between gap-3 p-4 sm:p-5">
+        <div>
+          <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+            {meta.singular}
+          </span>
+          <h3 className="text-display-tight mt-1.5 text-lg leading-tight sm:text-xl">
+            {entry.commonName}
+          </h3>
+          <p className="mt-0.5 text-xs italic text-muted-foreground sm:text-sm">
+            {entry.scientificName}
+          </p>
+        </div>
+        <div className="flex items-center justify-between">
+          <Difficulty level={entry.difficulty} />
+          <ArrowUpRight
+            className="size-4 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--brand)]"
+            aria-hidden
+          />
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+/**
+ * Companion tile — vertical specimen plate used in the cross-category
+ * "Build the rest of the tank" strip. Smaller and more uniform than
+ * the main EntryCard so the three category callouts read as a set.
+ */
+function CompanionTile({ entry }: { entry: CatalogueEntry }) {
+  const meta = CATEGORY_META[entry.category];
+  const image = getImage(entry.slug);
+  return (
+    <Link
+      href={`${meta.path}/${entry.slug}`}
+      className="glass glass-edge lift group relative flex h-full flex-col overflow-hidden rounded-2xl"
+    >
+      <div className="flex items-center justify-between gap-2 px-5 pt-5">
+        <span className="inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--brand)]">
+          <WaveMarkInline />
+          {meta.singular}
+        </span>
+        <ArrowUpRight
+          className="size-4 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--brand)]"
+          aria-hidden
+        />
+      </div>
+      <div className="px-5 pt-3 pb-4">
+        <h3 className="text-display-tight text-xl leading-tight sm:text-[1.4rem]">
+          {entry.commonName}
+        </h3>
+        <p className="mt-0.5 text-sm italic text-muted-foreground">
+          {entry.scientificName}
+        </p>
+      </div>
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
+        {image && (
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            sizes="(max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+          />
+        )}
+      </div>
+    </Link>
+  );
+}
+
+/**
+ * Tiny inline brand mark — used by sub-components that don't want
+ * to pull in the full <WaveMark /> ceremony.
+ */
+function WaveMarkInline() {
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      fill="none"
+      aria-hidden
+      className="size-3.5 text-[var(--brand)]"
+    >
+      <path
+        d="M3 9c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        opacity="0.55"
+      />
+      <path d="M16 28V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M16 18c-3.4 0-5.4-2-5.4-5 2.6 0 5.4 1.8 5.4 5z"
+        fill="currentColor"
+        opacity="0.85"
+      />
+      <path
+        d="M16 15c3 0 5-1.8 5-4.5-2.4 0-5 1.6-5 4.5z"
+        fill="currentColor"
+      />
+    </svg>
   );
 }
 
