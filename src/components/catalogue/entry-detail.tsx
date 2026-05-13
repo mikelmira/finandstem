@@ -8,7 +8,10 @@ import {
   MapPin,
 } from "lucide-react";
 import { WaveMark } from "@/components/wave-mark";
-import { getSpeciesPlate } from "@/components/icons/species-icons";
+import {
+  CATEGORY_MARK,
+  getSpeciesPlate,
+} from "@/components/icons/species-icons";
 import { PillButton } from "@/components/ui/pill-button";
 import {
   CATEGORY_META,
@@ -411,6 +414,7 @@ export function EntryDetail({
 function CompactEntryRow({ entry }: { entry: CatalogueEntry }) {
   const meta = CATEGORY_META[entry.category];
   const image = getImage(entry.slug);
+  const CategoryMark = CATEGORY_MARK[entry.category];
   return (
     <Link
       href={`${meta.path}/${entry.slug}`}
@@ -429,7 +433,8 @@ function CompactEntryRow({ entry }: { entry: CatalogueEntry }) {
       </div>
       <div className="flex flex-1 flex-col justify-between gap-3 p-4 sm:p-5">
         <div>
-          <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+          <span className="inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+            <CategoryMark className="size-3.5 text-[var(--brand)]" />
             {meta.singular}
           </span>
           <h3 className="text-display-tight mt-1.5 text-lg leading-tight sm:text-xl">
@@ -459,6 +464,7 @@ function CompactEntryRow({ entry }: { entry: CatalogueEntry }) {
 function CompanionTile({ entry }: { entry: CatalogueEntry }) {
   const meta = CATEGORY_META[entry.category];
   const image = getImage(entry.slug);
+  const CategoryMark = CATEGORY_MARK[entry.category];
   return (
     <Link
       href={`${meta.path}/${entry.slug}`}
@@ -466,7 +472,7 @@ function CompanionTile({ entry }: { entry: CatalogueEntry }) {
     >
       <div className="flex items-center justify-between gap-2 px-5 pt-5">
         <span className="inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--brand)]">
-          <WaveMarkInline />
+          <CategoryMark className="size-3.5 text-[var(--brand)]" />
           {meta.singular}
         </span>
         <ArrowUpRight
@@ -494,39 +500,6 @@ function CompanionTile({ entry }: { entry: CatalogueEntry }) {
         )}
       </div>
     </Link>
-  );
-}
-
-/**
- * Tiny inline brand mark — used by sub-components that don't want
- * to pull in the full <WaveMark /> ceremony.
- */
-function WaveMarkInline() {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="none"
-      aria-hidden
-      className="size-3.5 text-[var(--brand)]"
-    >
-      <path
-        d="M3 9c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.55"
-      />
-      <path d="M16 28V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path
-        d="M16 18c-3.4 0-5.4-2-5.4-5 2.6 0 5.4 1.8 5.4 5z"
-        fill="currentColor"
-        opacity="0.85"
-      />
-      <path
-        d="M16 15c3 0 5-1.8 5-4.5-2.4 0-5 1.6-5 4.5z"
-        fill="currentColor"
-      />
-    </svg>
   );
 }
 
@@ -676,16 +649,16 @@ function SciencePlateAnnotation({ entry }: { entry: CatalogueEntry }) {
   return (
     <figure
       aria-label={`Scientific plate of ${entry.commonName}`}
-      className="glass glass-edge pointer-events-none absolute -bottom-6 -left-6 hidden w-44 rotate-[-3deg] rounded-2xl p-3 sm:block lg:-bottom-10 lg:-left-10 lg:w-52 lg:p-4"
+      className="glass glass-edge animate-rise pointer-events-none absolute -bottom-8 -left-4 w-52 rotate-[-3deg] rounded-2xl p-4 sm:-bottom-10 sm:-left-8 sm:w-60 sm:p-5 lg:-bottom-14 lg:-left-14 lg:w-72 lg:p-6"
     >
-      <figcaption className="mb-1 flex items-center justify-between text-[9px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+      <figcaption className="mb-2 flex items-center justify-between text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
         <span>Plate</span>
-        <span className="text-[var(--brand)]">01</span>
+        <span className="stamp-numeral text-base text-[var(--brand)]">01</span>
       </figcaption>
-      <div className="flex h-24 items-center justify-center text-[var(--brand)] lg:h-28">
+      <div className="flex h-32 items-center justify-center text-[var(--brand)] sm:h-36 lg:h-44">
         <Plate className="h-full w-full" />
       </div>
-      <p className="mt-1 text-center text-[10px] italic text-muted-foreground">
+      <p className="mt-2 text-center text-[11px] italic text-muted-foreground">
         {label}
       </p>
     </figure>

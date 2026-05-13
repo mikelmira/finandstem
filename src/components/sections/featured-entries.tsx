@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { SectionShell, SectionHeading } from "@/components/sections/section-shell";
 import { EntryCard } from "@/components/catalogue/entry-card";
 import { Difficulty } from "@/components/catalogue/difficulty";
+import { CATEGORY_MARK } from "@/components/icons/species-icons";
 import { PillButton } from "@/components/ui/pill-button";
 import { fish, plants, shrimp, mosses, getImage } from "@/data";
 import { CATEGORY_META, type CatalogueEntry } from "@/types/catalogue";
@@ -62,6 +63,7 @@ export function FeaturedEntries() {
 function FieldNoteRow({ entry }: { entry: CatalogueEntry }) {
   const meta = CATEGORY_META[entry.category];
   const image = getImage(entry.slug);
+  const CategoryMark = CATEGORY_MARK[entry.category];
   return (
     <Link
       href={`${meta.path}/${entry.slug}`}
@@ -80,7 +82,8 @@ function FieldNoteRow({ entry }: { entry: CatalogueEntry }) {
       </div>
       <div className="flex flex-1 flex-col gap-2 p-4 sm:p-5">
         <div className="flex items-start justify-between gap-2">
-          <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+          <span className="inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+            <CategoryMark className="size-3.5 text-[var(--brand)]" />
             {meta.singular}
           </span>
           <ArrowUpRight

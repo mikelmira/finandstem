@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowUpRight, ImageOff } from "lucide-react";
 import { CATEGORY_META, type CatalogueEntry } from "@/types/catalogue";
 import { Difficulty } from "@/components/catalogue/difficulty";
-import { WaveMark } from "@/components/wave-mark";
+import { CATEGORY_MARK } from "@/components/icons/species-icons";
 import { getImage } from "@/data";
 import { allEntries } from "@/data";
 
@@ -27,19 +27,17 @@ export function EntryCard({ entry }: EntryCardProps) {
   const meta = CATEGORY_META[entry.category];
   const image = getImage(entry.slug);
   const index = computeIndex(entry);
+  const CategoryMark = CATEGORY_MARK[entry.category];
 
   return (
     <Link
       href={`${meta.path}/${entry.slug}`}
       className="glass glass-edge lift group relative flex flex-col overflow-hidden rounded-2xl transition-colors duration-300 hover:border-[var(--brand)]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
-      {/* Stamp row — brand mark + category eyebrow + numeral */}
+      {/* Stamp row — category mark + category eyebrow + numeral */}
       <div className="flex items-center justify-between gap-3 px-5 pt-5 sm:px-6 sm:pt-6">
         <span className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          <WaveMark
-            className="size-5 text-[var(--brand)]"
-            aria-hidden
-          />
+          <CategoryMark className="size-5 text-[var(--brand)]" />
           {meta.singular}
         </span>
         <span

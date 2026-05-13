@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { SectionShell, SectionHeading } from "@/components/sections/section-shell";
 import { PillButton } from "@/components/ui/pill-button";
-import { WaveMark } from "@/components/wave-mark";
+import { CATEGORY_MARK } from "@/components/icons/species-icons";
 import { fish, plants, shrimp, mosses, getImage } from "@/data";
+import type { CatalogueCategory } from "@/types/catalogue";
 
 interface PillarsProps {
   eyebrow: string;
@@ -82,6 +83,7 @@ export function Pillars({ eyebrow, title, items }: PillarsProps) {
         {items.map((p) => {
           const m = PILLAR_META[p.slug] ?? PILLAR_META.fish;
           const image = getImage(m.featuredSlug);
+          const CategoryMark = CATEGORY_MARK[p.slug as CatalogueCategory] ?? CATEGORY_MARK.fish;
           return (
             <Link
               key={p.slug}
@@ -98,10 +100,7 @@ export function Pillars({ eyebrow, title, items }: PillarsProps) {
                     {m.audience}
                   </span>
                 </div>
-                <WaveMark
-                  className="size-5 shrink-0 text-[var(--brand)] transition-transform duration-300 group-hover:rotate-[8deg]"
-                  aria-hidden
-                />
+                <CategoryMark className="size-6 shrink-0 text-[var(--brand)] transition-transform duration-300 group-hover:rotate-[8deg]" />
               </div>
 
               {/* Title + body */}
