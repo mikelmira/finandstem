@@ -645,3 +645,71 @@
     )
     1;
 }
+
+/* Dual-thumb range slider — two stacked <input type="range"> with only
+   the thumbs picking up pointer events so both can be grabbed. */
+.range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+  height: 100%;
+}
+.range-thumb:focus {
+  outline: none;
+}
+.range-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: var(--brand);
+  border: 2px solid var(--background);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--brand) 50%, transparent),
+    0 2px 6px -1px color-mix(in oklab, var(--abyss) 60%, transparent);
+  cursor: grab;
+  transition:
+    transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 200ms ease;
+}
+.range-thumb::-webkit-slider-thumb:hover,
+.range-thumb:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 0 4px color-mix(in oklab, var(--brand) 22%, transparent),
+    0 4px 10px -2px color-mix(in oklab, var(--abyss) 60%, transparent);
+}
+.range-thumb::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+.range-thumb::-moz-range-thumb {
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: var(--brand);
+  border: 2px solid var(--background);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--brand) 50%, transparent),
+    0 2px 6px -1px color-mix(in oklab, var(--abyss) 60%, transparent);
+  cursor: grab;
+  transition:
+    transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 200ms ease;
+}
+.range-thumb::-moz-range-thumb:hover,
+.range-thumb:focus-visible::-moz-range-thumb {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 0 4px color-mix(in oklab, var(--brand) 22%, transparent),
+    0 4px 10px -2px color-mix(in oklab, var(--abyss) 60%, transparent);
+}
+.range-thumb::-moz-range-track {
+  background: transparent;
+}
+.range-thumb::-webkit-slider-runnable-track {
+  background: transparent;
+}

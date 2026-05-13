@@ -146,11 +146,17 @@ function CompatibilityResults({ anchor }: { anchor: NormalizedEntry }) {
     },
   ];
 
+  // Surface the anchor's own category first (e.g. fish-to-fish for a fish
+  // anchor) so the most-requested cross-reference is right at the top, then
+  // the other three categories in catalogue order.
+  const ordered = [
+    sections.find((s) => s.key === anchor.category),
+    ...sections.filter((s) => s.key !== anchor.category),
+  ].filter((s): s is (typeof sections)[number] => s !== undefined);
+
   return (
     <div className="flex flex-col gap-10">
-      {sections
-        .filter((s) => s.key !== anchor.category)
-        .map((section) => {
+      {ordered.map((section) => {
           const meta = CATEGORY_META[section.key];
           return (
             <section key={section.key}>

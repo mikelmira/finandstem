@@ -226,59 +226,103 @@ export function RangePair({
   onChange,
   bounds,
   unit,
-  precision = 1,
+  precision = 0,
 }: RangePairProps) {
-  const lo = value?.min ?? "";
-  const hi = value?.max ?? "";
-  const update = (which: "min" | "max", raw: string) => {
-    const otherKey = which === "min" ? "max" : "min";
-    if (raw === "") {
-      const other = value?.[otherKey];
-      if (other === undefined) {
-        onChange(null);
-      } else {
-        onChange({
-          min: which === "min" ? bounds.min : other,
-          max: which === "max" ? bounds.max : other,
-        });
-      }
-      return;
-    }
-    const n = Number(raw);
-    if (Number.isNaN(n)) return;
-    const base = value ?? { min: bounds.min, max: bounds.max };
-    onChange({ ...base, [which]: n });
-  };
+  const step = bounds.step ?? 1;
+  const lo = value?.min ?? bounds.min;
+  const hi = value?.max ?? bounds.max;
+  const active = value !== null;
+  const span = bounds.max - bounds.min;
+  const loPct = span > 0 ? ((lo - bounds.min) / span) * 100 : 0;
+  const hiPct = span > 0 ? ((hi - bounds.min) / span) * 100 : 100;
+
+  const fmt = (n: number) =>
+    precision === 0
+      ? Math.round(n).toString()
+      : n.toFixed(precision).replace(/\.0+$/, "");
+
+  function setMin(next: number) {
+    const clamped = Math.max(bounds.min, Math.min(next, hi - step));
+    onChange({ min: clamped, max: hi });
+  }
+  function setMax(next: number) {
+    const clamped = Math.min(bounds.max, Math.max(next, lo + step));
+    onChange({ min: lo, max: clamped });
+  }
 
   return (
-    <div className="flex items-center gap-2">
-      <input
-        type="number"
-        inputMode="decimal"
-        min={bounds.min}
-        max={bounds.max}
-        step={bounds.step ?? 1}
-        value={lo}
-        placeholder={`${bounds.min}`}
-        onChange={(e) => update("min", e.target.value)}
-        className="w-full rounded-lg border border-border bg-background/70 px-3 py-1.5 text-sm placeholder:text-muted-foreground/60 focus:border-[var(--brand)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]/25"
-      />
-      <span className="text-xs text-muted-foreground" aria-hidden>
-        –
-      </span>
-      <input
-        type="number"
-        inputMode="decimal"
-        min={bounds.min}
-        max={bounds.max}
-        step={bounds.step ?? 1}
-        value={hi}
-        placeholder={`${bounds.max}`}
-        onChange={(e) => update("max", e.target.value)}
-        className="w-full rounded-lg border border-border bg-background/70 px-3 py-1.5 text-sm placeholder:text-muted-foreground/60 focus:border-[var(--brand)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]/25"
-      />
-      {unit && <span className="text-xs text-muted-foreground">{unit}</span>}
-      <span className="sr-only">precision {precision}</span>
+    <div className="flex flex-col gap-2">
+      <div className="flex items-baseline justify-between gap-2 text-xs">
+        <span
+          className={cn(
+            "tabular-nums font-medium transition-colors",
+            active ? "text-foreground" : "text-muted-foreground/80",
+          )}
+        >
+          {fmt(lo)}
+          {unit ? ` ${unit}` : ""}
+        </span>
+        {active ? (
+          <button
+            type="button"
+            onClick={() => onChange(null)}
+            className="press inline-flex items-center rounded-full border border-border bg-background/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:border-[var(--brand)]/40 hover:text-foreground"
+          >
+            Reset
+          </button>
+        ) : (
+          <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground/70">
+            Any
+          </span>
+        )}
+        <span
+          className={cn(
+            "tabular-nums font-medium transition-colors",
+            active ? "text-foreground" : "text-muted-foreground/80",
+          )}
+        >
+          {fmt(hi)}
+          {unit ? ` ${unit}` : ""}
+        </span>
+      </div>
+      <div className="relative flex h-6 items-center px-[9px]">
+        <div className="absolute inset-x-0 mx-[9px] h-1.5 rounded-full bg-foreground/10" />
+        <div
+          className={cn(
+            "absolute h-1.5 rounded-full transition-colors",
+            active
+              ? "bg-gradient-to-r from-[var(--brand)]/85 to-[var(--leaf)]/90 shadow-[0_0_10px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
+              : "bg-foreground/15",
+          )}
+          style={{
+            left: `calc(${loPct}% + ${(1 - loPct / 100) * 18 - 9}px)`,
+            width: `calc(${Math.max(0, hiPct - loPct)}% + ${
+              (loPct / 100 - hiPct / 100) * 18
+            }px)`,
+          }}
+          aria-hidden
+        />
+        <input
+          type="range"
+          aria-label={`Minimum${unit ? ` ${unit}` : ""}`}
+          min={bounds.min}
+          max={bounds.max}
+          step={step}
+          value={lo}
+          onChange={(e) => setMin(Number(e.target.value))}
+          className="range-thumb absolute inset-x-0 z-10"
+        />
+        <input
+          type="range"
+          aria-label={`Maximum${unit ? ` ${unit}` : ""}`}
+          min={bounds.min}
+          max={bounds.max}
+          step={step}
+          value={hi}
+          onChange={(e) => setMax(Number(e.target.value))}
+          className="range-thumb absolute inset-x-0 z-10"
+        />
+      </div>
     </div>
   );
 }

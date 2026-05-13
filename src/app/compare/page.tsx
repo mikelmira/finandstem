@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { ComparePicker, type CompareOption } from "@/components/compare/compare-picker";
+import { CompareOverview } from "@/components/compare/compare-overview";
 import { CompareTable } from "@/components/compare/compare-table";
 import { allNorm } from "@/lib/catalogue/normalize";
 import type { CatalogueEntry } from "@/types/catalogue";
@@ -67,7 +68,20 @@ export default async function ComparePage({ searchParams }: PageProps) {
         ) : entries.length === 1 ? (
           <OnlyOneState />
         ) : (
-          <CompareTable entries={entries} />
+          <div className="flex flex-col gap-12">
+            <CompareOverview entries={entries} />
+            <section className="flex flex-col gap-4">
+              <header className="flex items-baseline justify-between gap-3">
+                <h2 className="text-display-tight text-2xl sm:text-3xl">
+                  Full attributes
+                </h2>
+                <span className="text-xs text-muted-foreground">
+                  Every parameter, side by side
+                </span>
+              </header>
+              <CompareTable entries={entries} />
+            </section>
+          </div>
         )}
       </SectionShell>
     </>

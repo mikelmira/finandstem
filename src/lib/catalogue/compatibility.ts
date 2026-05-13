@@ -89,6 +89,25 @@ function matchFish(
       badge: "Shrimp-safe ✓",
       description: "Listed as fully shrimp-safe.",
     });
+
+  // Fish-to-fish: filter on temperament pairing.
+  if (anchor.category === "fish") {
+    const a = anchor.temperament;
+    const c = candidate.temperament;
+    const peaceful = (t: typeof a) =>
+      t === "Peaceful" || t === "Territorial when breeding";
+    const aggressive = (t: typeof a) => t === "Aggressive";
+    // Aggressive + Peaceful pairing is a no-go.
+    if ((aggressive(a) && peaceful(c)) || (aggressive(c) && peaceful(a)))
+      return null;
+    base.push({
+      badge: "Temperament ✓",
+      description:
+        a === c
+          ? `Both species are ${a.toLowerCase()}.`
+          : `${a} and ${c.toLowerCase()} can share a tank without bullying.`,
+    });
+  }
   return { entry: candidate, reasons: base };
 }
 
