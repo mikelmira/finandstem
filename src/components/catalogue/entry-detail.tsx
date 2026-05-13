@@ -10,6 +10,7 @@ import {
   type MossEntry,
 } from "@/types/catalogue";
 import { Difficulty } from "@/components/catalogue/difficulty";
+import { CompareButton } from "@/components/catalogue/compare-button";
 import type { Stat } from "@/components/catalogue/stat-grid";
 import { Eyebrow, SectionShell } from "@/components/sections/section-shell";
 import { EntryCard } from "@/components/catalogue/entry-card";
@@ -111,6 +112,11 @@ export function EntryDetail({
                   {entry.origin}
                 </span>
                 <Difficulty level={entry.difficulty} />
+                <CompareButton
+                  category={entry.category}
+                  slug={entry.slug}
+                  commonName={entry.commonName}
+                />
               </div>
 
               {/* Care summary, sits with the title block */}

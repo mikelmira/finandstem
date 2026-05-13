@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Plus, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CATEGORY_META, type CatalogueCategory } from "@/types/catalogue";
+import { writeCompareIds } from "@/lib/compare-storage";
 
 export interface CompareOption {
   value: string;
@@ -39,6 +40,12 @@ export function ComparePicker({
     document.addEventListener("mousedown", onClick);
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
+
+  // Mirror the URL-driven selection to localStorage so the per-species
+  // "Add to compare" buttons can pick up the current set.
+  React.useEffect(() => {
+    writeCompareIds(selected);
+  }, [selected]);
 
   const selectedSet = new Set(selected);
 
