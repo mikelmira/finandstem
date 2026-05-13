@@ -250,10 +250,15 @@
 }
 
 /* Brand-tinted border highlight along the top edge of a glass card, fading
-   into a moss-tinted shadow at the bottom. No white anywhere. */
-.glass-edge {
-  position: relative;
-  isolation: isolate;
+   into a moss-tinted shadow at the bottom. No white anywhere.
+
+   In @layer components so Tailwind utility classes (sticky / absolute /
+   fixed) can override the default `position: relative` when needed. */
+@layer components {
+  .glass-edge {
+    position: relative;
+    isolation: isolate;
+  }
 }
 .glass-edge::before {
   content: "";
