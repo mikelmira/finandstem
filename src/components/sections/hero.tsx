@@ -29,7 +29,9 @@ export function Hero({
 }: HeroProps) {
   return (
     <section className="relative isolate overflow-hidden">
-      {/* Photographic background — fades into theme below */}
+      {/* Photographic background — desaturated and warmly tinted so the
+          image sits behind the page like a vintage botanical plate
+          rather than competing with the cream paper foreground. */}
       {backgroundImage && (
         <>
           <div className="absolute inset-0 -z-30">
@@ -39,13 +41,13 @@ export function Hero({
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover [filter:saturate(0.7)_sepia(0.18)]"
             />
           </div>
-          {/* Deep-green tint to seat the photo into the theme */}
+          {/* Warm cream wash — softens the photo into the page. */}
           <div
             aria-hidden
-            className="absolute inset-0 -z-20 bg-[oklch(0.16_0.045_152/0.80)]"
+            className="absolute inset-0 -z-20 bg-background/55"
           />
           {/* Bottom fade so the next section transitions cleanly */}
           <div
@@ -84,13 +86,9 @@ export function Hero({
       )}
 
       <div className="relative mx-auto w-full max-w-6xl px-6 pt-20 pb-32 sm:px-8 sm:pt-28 sm:pb-40 md:pt-32 md:pb-48">
-        {/* Glass content card */}
-        <div
-          className={cn(
-            "glass glass-edge glass-strong relative animate-rise rounded-3xl p-8 sm:p-10 md:p-14 lg:max-w-3xl bg-grain",
-            backgroundImage && "dark",
-          )}
-        >
+        {/* Paper content card — sits as a herbarium plate on the cream
+            page, or as a label card over a desaturated photo. */}
+        <div className="glass glass-edge glass-strong relative animate-rise rounded-3xl p-8 sm:p-10 md:p-14 lg:max-w-3xl bg-grain">
           <div className="flex items-center gap-3">
             <span className="inline-flex size-9 items-center justify-center rounded-full border border-border/70 bg-background/70 text-[var(--brand)] backdrop-blur">
               <WaveMark className="size-5" />

@@ -37,8 +37,8 @@ You are picking up a project that has been planned but not yet scaffolded. Befor
 | Domain (local) | **finandstem.co.za** — register via Truehost (R89) or HostAfrica (R49 promo). 301 → .com. |
 | Positioning | "The cross-referenced reference book for aquascapers — plants, fish, hardscape, and equipment with real compatibility data." |
 | Tone | Practical, confident, friendly. Like a knowledgeable mate explaining things at his tank, not a textbook. |
-| Visual direction | The name pairs animal + plant. Logo concept: ampersand wordmark with a fish silhouette and a frond/leaf motif. Greens + warm neutrals; dark substrate-coloured backgrounds for catalogue cards. |
-| Anti-pattern | Forum-style. Cluttered ad-stuffed layouts. AI-generated stock fish art. |
+| Visual direction | **Field-guide / herbarium aesthetic.** Warm cream parchment page background; deep forest-green text and CTAs; specimen photos sit on cream paper cards with subtle borders and soft shadows. Bold editorial serif (Fraunces) for headlines, sans for body. Numbered section eyebrows (`01·02·03 — DECISION`). Drop cap on long body prose. Pill-shaped CTAs in deep green. The whole thing should feel like a modern reprint of a 1920s botanical reference. |
+| Anti-pattern | Forum-style. Cluttered ad-stuffed layouts. AI-generated stock fish art. Pure white backgrounds (too sterile — needs warmth). Dark mode as the default (rejected May 2026 in favour of the field-guide light theme). |
 
 ---
 

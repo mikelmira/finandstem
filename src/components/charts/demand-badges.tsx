@@ -186,41 +186,25 @@ export function FlowDemand({ raw, className }: FlowDemandProps) {
       <div className="flex items-end gap-1">
         {FLOW_LEVELS.map((level, i) => {
           const active = i >= min && i <= max;
-          // Increasingly long stacked current-lines: lower level = single short line,
-          // higher level = three progressively longer parallel lines.
-          const lineCount = Math.max(1, Math.min(3, Math.floor(i / 1.5) + 1));
-          const lengths = [60, 80, 100].slice(0, lineCount).map((p) => {
-            // scale the bars within a level by the level's intensity
-            const intensity = 0.55 + (i / (FLOW_LEVELS.length - 1)) * 0.45;
-            return Math.round(p * intensity);
-          });
           return (
             <div
               key={level}
               className={cn(
-                "flex flex-1 flex-col items-center gap-1 rounded-lg px-1.5 py-2 transition-colors",
+                "flex flex-1 flex-col items-center gap-1.5 rounded-lg px-1.5 py-2 transition-colors",
                 active
                   ? "bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
                   : "",
               )}
             >
-              <span
-                aria-hidden
-                className="flex h-7 w-full flex-col items-start justify-center gap-1"
-              >
-                {lengths.map((pct, idx) => (
-                  <span
-                    key={idx}
-                    style={{ width: `${pct}%` }}
-                    className={cn(
-                      "h-[2px] rounded-full transition-colors",
-                      active
-                        ? "bg-[var(--brand)]/85"
-                        : "bg-foreground/15",
-                    )}
-                  />
-                ))}
-              </span>
+              <FlowIcon
+                level={i as 0 | 1 | 2 | 3 | 4}
+                className={cn(
+                  "h-6 w-full",
+                  active
+                    ? "text-[var(--brand)]"
+                    : "text-foreground/25",
+                )}
+              />
               <span
                 className={cn(
                   "text-[9px] font-medium uppercase tracking-[0.14em] text-center",
@@ -234,6 +218,84 @@ export function FlowDemand({ raw, className }: FlowDemandProps) {
         })}
       </div>
     </figure>
+  );
+}
+
+/**
+ * Custom flow-rate icons — five distinct silhouettes that read at a
+ * glance as a progression from calm to turbulent.
+ *
+ *   0 Still     — three flat layers of motionless water
+ *   1 Low       — a single gentle ripple over a calm layer
+ *   2 Medium    — two stacked sine waves
+ *   3 High      — three taller stacked waves
+ *   4 V. high   — three tight, high-frequency waves
+ *
+ * Drawn with currentColor so the parent controls active/inactive
+ * tinting; aria-hidden because the textual label sits beside them.
+ */
+function FlowIcon({
+  level,
+  className,
+}: {
+  level: 0 | 1 | 2 | 3 | 4;
+  className?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 28 18"
+      preserveAspectRatio="xMidYMid meet"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      {level === 0 && (
+        <>
+          <line x1="4" y1="5" x2="24" y2="5" opacity="0.55" />
+          <line x1="4" y1="9" x2="24" y2="9" />
+          <line x1="4" y1="13" x2="24" y2="13" opacity="0.55" />
+        </>
+      )}
+      {level === 1 && (
+        <>
+          <path d="M 3 6 Q 8 3.5 13 6 T 25 6" />
+          <line x1="3" y1="12" x2="25" y2="12" opacity="0.45" />
+        </>
+      )}
+      {level === 2 && (
+        <>
+          <path
+            d="M 2 5 Q 6 2 10 5 T 18 5 T 26 5"
+            opacity="0.55"
+          />
+          <path d="M 2 12 Q 6 9 10 12 T 18 12 T 26 12" />
+        </>
+      )}
+      {level === 3 && (
+        <>
+          <path d="M 2 4 Q 5 0.5 8 4 T 14 4 T 20 4 T 26 4" opacity="0.5" />
+          <path d="M 2 9 Q 5 5.5 8 9 T 14 9 T 20 9 T 26 9" />
+          <path d="M 2 14 Q 5 10.5 8 14 T 14 14 T 20 14 T 26 14" opacity="0.65" />
+        </>
+      )}
+      {level === 4 && (
+        <>
+          <path
+            d="M 1 4 Q 3 0 5 4 T 9 4 T 13 4 T 17 4 T 21 4 T 25 4 T 27 4"
+            opacity="0.5"
+          />
+          <path d="M 1 10 Q 3 5 5 10 T 9 10 T 13 10 T 17 10 T 21 10 T 25 10 T 27 10" />
+          <path
+            d="M 1 16 Q 3 11 5 16 T 9 16 T 13 16 T 17 16 T 21 16 T 25 16 T 27 16"
+            opacity="0.65"
+          />
+        </>
+      )}
+    </svg>
   );
 }
 

@@ -4,10 +4,6 @@ import {
   CATEGORY_META,
   type CatalogueEntry,
   type CatalogueCategory,
-  type FishEntry,
-  type PlantEntry,
-  type ShrimpEntry,
-  type MossEntry,
 } from "@/types/catalogue";
 import { Difficulty } from "@/components/catalogue/difficulty";
 import { CompareButton } from "@/components/catalogue/compare-button";
@@ -19,7 +15,6 @@ import { ImageGallery } from "@/components/catalogue/image-gallery";
 import { HeroKeyFacts } from "@/components/catalogue/hero-key-facts";
 import { TankFitPanel } from "@/components/catalogue/tank-fit-panel";
 import { StickyToc, type StickyTocItem } from "@/components/catalogue/sticky-toc";
-import { type QuickFact } from "@/components/catalogue/quick-facts";
 import { TankMatesPanel } from "@/components/catalogue/tank-mates-panel";
 import { GroupedSection } from "@/components/catalogue/grouped-section";
 import { ProTipsCallout } from "@/components/catalogue/pro-tips-callout";
@@ -66,7 +61,6 @@ export function EntryDetail({
   );
   const sections = getDetailSections(entry.category, entry.slug);
   const grouped = groupDetailSections(sections, entry.category);
-  const facts = deriveQuickFacts(entry);
 
   // Pluck the themed groups by key so we can render them in the new
   // priority order (tank mates → pro tips → watch → care → background).
@@ -125,14 +119,14 @@ export function EntryDetail({
             {/* Left — name + meta */}
             <div className="flex flex-col justify-end">
               <Eyebrow>{meta.singular}</Eyebrow>
-              <h1 className="text-display-tight animate-rise mt-4 text-balance text-4xl sm:text-5xl md:text-6xl">
+              <h1 className="text-display-tight animate-rise mt-4 text-balance text-5xl sm:text-6xl md:text-7xl">
                 {entry.commonName}
               </h1>
-              <p className="mt-3 text-pretty text-lg italic text-muted-foreground sm:text-xl">
+              <p className="mt-4 text-pretty text-xl italic text-muted-foreground sm:text-2xl">
                 {entry.scientificName}
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-background/70 px-3 py-1 backdrop-blur">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-card/70 px-3 py-1">
                   <MapPin className="size-3.5" aria-hidden />
                   {entry.origin}
                 </span>
@@ -147,12 +141,13 @@ export function EntryDetail({
               {/* Key-fact pills — the 3 most decision-critical numbers */}
               <HeroKeyFacts entry={entry} />
 
-              {/* Care summary, sits with the title block */}
-              <div className="glass glass-edge animate-rise mt-7 rounded-2xl p-6 sm:p-7">
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
+              {/* Care summary — opens with a drop cap, like a field-guide
+                  monograph. */}
+              <div className="glass glass-edge animate-rise mt-7 rounded-2xl p-7 sm:p-8">
+                <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
                   Care at a glance
                 </p>
-                <p className="mt-3 text-base leading-relaxed text-foreground/90">
+                <p className="drop-cap mt-4 text-base leading-[1.65] text-foreground/90 sm:text-[17px]">
                   {entry.careSummary}
                 </p>
               </div>
@@ -180,7 +175,7 @@ export function EntryDetail({
               title="Tank fit"
               subtitle={`The parameters that decide whether ${entry.commonName.toLowerCase()} fits in your tank.`}
             >
-              <TankFitPanel entry={entry} facts={facts} />
+              <TankFitPanel entry={entry} />
             </DetailSection>
 
             {/* 2. WHO IT LIVES WITH */}
@@ -401,23 +396,25 @@ function DetailSection({
   return (
     <section id={id} className="scroll-mt-28">
       {!hideHeader && (
-        <header className="mb-6 flex flex-col gap-2">
-          <span className="inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+        <header className="mb-7 flex flex-col gap-3 sm:mb-8">
+          <span className="inline-flex items-center gap-2.5 text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
             <span
               aria-hidden
-              className="text-[var(--brand)] tabular-nums"
+              className="font-semibold text-[var(--brand)] tabular-nums"
             >
               {String(number).padStart(2, "0")}
             </span>
             <span
               aria-hidden
-              className="h-px w-6 bg-[var(--brand)]/30"
+              className="h-px w-8 bg-[var(--brand)]/40"
             />
             {eyebrow}
           </span>
-          <h2 className="text-display-tight text-2xl sm:text-3xl">{title}</h2>
+          <h2 className="text-display-tight text-3xl sm:text-4xl md:text-[2.75rem]">
+            {title}
+          </h2>
           {subtitle && (
-            <p className="text-pretty text-sm text-muted-foreground sm:text-base">
+            <p className="max-w-2xl text-pretty text-base text-muted-foreground sm:text-lg">
               {subtitle}
             </p>
           )}
@@ -498,58 +495,3 @@ function HeroImageAttribution({
   );
 }
 
-function deriveQuickFacts(entry: CatalogueEntry): QuickFact[] {
-  if (entry.category === "fish") return fishFacts(entry as FishEntry);
-  if (entry.category === "plants") return plantFacts(entry as PlantEntry);
-  if (entry.category === "shrimp") return shrimpFacts(entry as ShrimpEntry);
-  return mossFacts(entry as MossEntry);
-}
-
-function fishFacts(f: FishEntry): QuickFact[] {
-  return [
-    { label: "Family", value: f.family },
-    { label: "Water column", value: f.waterColumn },
-    {
-      label: "Schooling",
-      value: f.schooling,
-      helper: `Group of ${f.minGroupSize}+`,
-    },
-    { label: "Temperament", value: f.temperament },
-    { label: "Diet", value: f.diet, helper: f.feedingNotes },
-    { label: "Lifespan", value: `${f.lifespan} yrs` },
-    { label: "Breeding", value: f.breedingDifficulty },
-  ];
-}
-
-function plantFacts(p: PlantEntry): QuickFact[] {
-  return [
-    { label: "Family", value: p.family },
-    { label: "Type", value: p.plantType },
-    { label: "Position", value: p.position },
-    { label: "Substrate", value: p.substrate },
-    { label: "Propagation", value: p.propagation },
-  ];
-}
-
-function shrimpFacts(s: ShrimpEntry): QuickFact[] {
-  return [
-    { label: "Colony min", value: `${s.colonyMin}+` },
-    { label: "Diet", value: s.diet, helper: s.feedingNotes },
-    { label: "Breeding", value: s.breeding },
-    {
-      label: "Algae grazing",
-      value: `${s.algaeEaterRating}/5`,
-    },
-    { label: "Lifespan", value: `${s.lifespan} yrs` },
-  ];
-}
-
-function mossFacts(m: MossEntry): QuickFact[] {
-  return [
-    { label: "Family", value: m.family },
-    { label: "Type", value: m.type },
-    { label: "Attachment", value: m.attachment },
-    { label: "Typical use", value: m.typicalUse },
-    { label: "Trimming", value: m.trimming },
-  ];
-}

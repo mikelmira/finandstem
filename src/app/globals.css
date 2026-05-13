@@ -56,96 +56,55 @@
 }
 
 :root {
-  /* Surfaces — deep forest green planted-tank ambience */
-  --background: oklch(0.19 0.045 152);
-  --foreground: oklch(0.96 0.012 100);
-  --card: oklch(0.23 0.045 152);
-  --card-foreground: oklch(0.96 0.012 100);
-  --popover: oklch(0.23 0.045 152);
-  --popover-foreground: oklch(0.96 0.012 100);
+  /* Surfaces — warm cream parchment, field-guide ground.
+     Slight chroma in the green direction so the cream isn't sterile
+     — feels like aged herbarium paper, not printer paper. */
+  --background: oklch(0.945 0.022 90);
+  --foreground: oklch(0.22 0.035 150);
+  --card: oklch(0.975 0.012 88);
+  --card-foreground: oklch(0.22 0.035 150);
+  --popover: oklch(0.975 0.012 88);
+  --popover-foreground: oklch(0.22 0.035 150);
 
-  /* Primary — bright leaf for CTAs against the dark green ground */
-  --primary: oklch(0.78 0.14 145);
-  --primary-foreground: oklch(0.14 0.04 150);
+  /* Primary — deep forest green for CTAs and buttons. */
+  --primary: oklch(0.34 0.07 150);
+  --primary-foreground: oklch(0.97 0.012 90);
 
-  --secondary: oklch(0.27 0.045 152);
-  --secondary-foreground: oklch(0.96 0.012 100);
-  --muted: oklch(0.27 0.04 152);
-  --muted-foreground: oklch(0.76 0.028 130);
-  --accent: oklch(0.32 0.055 150);
-  --accent-foreground: oklch(0.96 0.012 100);
-  --destructive: oklch(0.65 0.20 27);
-  --border: oklch(1 0 0 / 11%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.65 0.12 150);
+  --secondary: oklch(0.91 0.025 88);
+  --secondary-foreground: oklch(0.28 0.04 150);
+  --muted: oklch(0.91 0.022 88);
+  --muted-foreground: oklch(0.48 0.025 110);
+  --accent: oklch(0.88 0.04 132);
+  --accent-foreground: oklch(0.26 0.04 150);
+  --destructive: oklch(0.50 0.18 27);
+  --border: oklch(0.22 0.035 150 / 14%);
+  --input: oklch(0.22 0.035 150 / 18%);
+  --ring: oklch(0.42 0.10 145);
 
-  /* Brand — leafy aquatic accent set, tuned for dark green backgrounds */
-  --brand: oklch(0.78 0.14 150);
-  --brand-soft: oklch(0.30 0.06 152);
-  --brand-foreground: oklch(0.14 0.04 150);
-  --leaf: oklch(0.72 0.14 142);    /* leaf green — atmospheric gradients */
-  --moss: oklch(0.46 0.10 150);    /* moss — accents */
-  --abyss: oklch(0.10 0.04 200);   /* deep water — CTA sections */
+  /* Brand — deep leaf green, tuned to read against cream.
+     Higher chroma than the dark-theme version since it's now
+     sitting on a light ground and needs to come forward. */
+  --brand: oklch(0.42 0.12 145);
+  --brand-soft: oklch(0.88 0.04 132);
+  --brand-foreground: oklch(0.97 0.012 90);
+  --leaf: oklch(0.55 0.14 142);    /* leaf green — atmospheric washes */
+  --moss: oklch(0.50 0.07 100);    /* moss — warm green-brown accents */
+  --abyss: oklch(0.16 0.035 150);  /* deep ink — for dark accent sections */
 
-  --chart-1: oklch(0.78 0.14 150);
-  --chart-2: oklch(0.72 0.14 142);
-  --chart-3: oklch(0.62 0.10 200);
-  --chart-4: oklch(0.80 0.10 130);
-  --chart-5: oklch(0.55 0.08 175);
+  --chart-1: oklch(0.42 0.12 145);
+  --chart-2: oklch(0.55 0.14 142);
+  --chart-3: oklch(0.46 0.10 200);
+  --chart-4: oklch(0.60 0.10 75);
+  --chart-5: oklch(0.50 0.07 100);
   --radius: 0.875rem;
-  --sidebar: oklch(0.23 0.045 152);
-  --sidebar-foreground: oklch(0.96 0.012 100);
-  --sidebar-primary: oklch(0.78 0.14 145);
-  --sidebar-primary-foreground: oklch(0.14 0.04 150);
-  --sidebar-accent: oklch(0.32 0.055 150);
-  --sidebar-accent-foreground: oklch(0.96 0.012 100);
-  --sidebar-border: oklch(1 0 0 / 11%);
-  --sidebar-ring: oklch(0.65 0.12 150);
-}
-
-.dark {
-  /* Deeper still — for the user who toggles into night mode */
-  --background: oklch(0.13 0.04 152);
-  --foreground: oklch(0.97 0.012 100);
-  --card: oklch(0.17 0.04 152);
-  --card-foreground: oklch(0.97 0.012 100);
-  --popover: oklch(0.17 0.04 152);
-  --popover-foreground: oklch(0.97 0.012 100);
-
-  --primary: oklch(0.82 0.14 145);
-  --primary-foreground: oklch(0.12 0.04 150);
-
-  --secondary: oklch(0.22 0.04 152);
-  --secondary-foreground: oklch(0.97 0.012 100);
-  --muted: oklch(0.22 0.04 152);
-  --muted-foreground: oklch(0.72 0.025 130);
-  --accent: oklch(0.26 0.05 150);
-  --accent-foreground: oklch(0.97 0.012 100);
-  --destructive: oklch(0.70 0.19 22);
-  --border: oklch(1 0 0 / 9%);
-  --input: oklch(1 0 0 / 13%);
-  --ring: oklch(0.68 0.12 150);
-
-  --brand: oklch(0.82 0.14 150);
-  --brand-soft: oklch(0.24 0.06 152);
-  --brand-foreground: oklch(0.12 0.04 150);
-  --leaf: oklch(0.78 0.14 142);
-  --moss: oklch(0.58 0.10 150);
-  --abyss: oklch(0.08 0.04 200);
-
-  --chart-1: oklch(0.82 0.14 150);
-  --chart-2: oklch(0.78 0.14 142);
-  --chart-3: oklch(0.66 0.10 200);
-  --chart-4: oklch(0.80 0.10 130);
-  --chart-5: oklch(0.55 0.07 175);
-  --sidebar: oklch(0.17 0.04 152);
-  --sidebar-foreground: oklch(0.97 0.012 100);
-  --sidebar-primary: oklch(0.82 0.14 145);
-  --sidebar-primary-foreground: oklch(0.12 0.04 150);
-  --sidebar-accent: oklch(0.26 0.05 150);
-  --sidebar-accent-foreground: oklch(0.97 0.012 100);
-  --sidebar-border: oklch(1 0 0 / 9%);
-  --sidebar-ring: oklch(0.68 0.12 150);
+  --sidebar: oklch(0.975 0.012 88);
+  --sidebar-foreground: oklch(0.22 0.035 150);
+  --sidebar-primary: oklch(0.34 0.07 150);
+  --sidebar-primary-foreground: oklch(0.97 0.012 90);
+  --sidebar-accent: oklch(0.88 0.04 132);
+  --sidebar-accent-foreground: oklch(0.26 0.04 150);
+  --sidebar-border: oklch(0.22 0.035 150 / 14%);
+  --sidebar-ring: oklch(0.42 0.10 145);
 }
 
 @layer base {
@@ -154,22 +113,25 @@
   }
   html {
     @apply font-sans antialiased;
-    color-scheme: light dark;
+    color-scheme: light;
   }
   body {
     @apply bg-background text-foreground;
     font-feature-settings:
       "ss01" on,
       "cv11" on;
+    /* Two gentle radial washes — like the warm cast of an old book
+       page under a desk lamp. Top edge faintly leaf, bottom edge
+       faintly moss. Subtle enough to read as "paper", not "gradient". */
     background-image:
       radial-gradient(
         ellipse 90% 60% at 50% -10%,
-        color-mix(in oklab, var(--leaf) 14%, transparent) 0%,
+        color-mix(in oklab, var(--leaf) 8%, transparent) 0%,
         transparent 60%
       ),
       radial-gradient(
         ellipse 80% 60% at 50% 110%,
-        color-mix(in oklab, var(--brand) 10%, transparent) 0%,
+        color-mix(in oklab, var(--moss) 7%, transparent) 0%,
         transparent 60%
       );
     background-attachment: fixed;
@@ -183,77 +145,52 @@
     font-optical-sizing: auto;
   }
   ::selection {
-    background-color: color-mix(in oklab, var(--leaf) 40%, transparent);
+    background-color: color-mix(in oklab, var(--leaf) 30%, transparent);
     color: var(--foreground);
   }
 }
 
-/* ─── Liquid-glass surfaces ─────────────────────────────────────────────── */
+/* ─── Paper surfaces ───────────────────────────────────────────────────── */
 
-/* Soft, frosted (default card surface — sits on coloured background).
-   All highlights and depth tints are drawn from the green palette
-   (--brand / --leaf / --moss / --abyss) — never white. */
+/* Default card — a sheet of slightly-warmer paper sitting on the cream
+   ground. Subtle dark border + soft shadow, like a herbarium specimen
+   card pinned to a board.
+
+   Class name kept as `.glass` so existing markup keeps working — it
+   used to be liquid glass on a dark green ground, now it's paper on
+   a cream ground. Same role, different material. */
 .glass {
-  background: color-mix(in oklab, var(--card) 70%, transparent);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+  background: var(--card);
+  border: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
   box-shadow:
-    inset 0 1px 0 0 color-mix(in oklab, var(--brand) 22%, transparent),
-    0 1px 0 0 color-mix(in oklab, var(--border) 60%, transparent),
-    0 20px 60px -20px color-mix(in oklab, var(--moss) 25%, transparent);
+    0 1px 0 0 color-mix(in oklab, var(--foreground) 4%, transparent),
+    0 12px 28px -16px color-mix(in oklab, var(--moss) 22%, transparent);
 }
 
-.dark .glass {
-  background: color-mix(in oklab, var(--card) 55%, transparent);
-  border: 1px solid color-mix(in oklab, var(--brand) 12%, transparent);
-  box-shadow:
-    inset 0 1px 0 0 color-mix(in oklab, var(--brand) 12%, transparent),
-    0 1px 0 0 color-mix(in oklab, var(--abyss) 50%, transparent),
-    0 30px 80px -20px color-mix(in oklab, var(--abyss) 60%, transparent);
-}
-
-/* Stronger, more opaque (for hero and CTA — primary content card) */
+/* Stronger paper — for hero / primary content. A touch whiter and a
+   little more lifted than `.glass`. */
 .glass-strong {
-  background: color-mix(in oklab, var(--card) 86%, transparent);
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-  border: 1px solid color-mix(in oklab, var(--border) 90%, transparent);
+  background: color-mix(in oklab, var(--card) 100%, white 4%);
+  border: 1px solid color-mix(in oklab, var(--foreground) 11%, transparent);
   box-shadow:
-    inset 0 1px 0 0 color-mix(in oklab, var(--brand) 30%, transparent),
-    0 1px 0 0 color-mix(in oklab, var(--border) 60%, transparent),
-    0 30px 80px -25px color-mix(in oklab, var(--moss) 30%, transparent),
-    0 8px 24px -8px color-mix(in oklab, var(--moss) 18%, transparent);
+    0 1px 0 0 color-mix(in oklab, var(--foreground) 5%, transparent),
+    0 24px 60px -28px color-mix(in oklab, var(--moss) 28%, transparent),
+    0 6px 16px -8px color-mix(in oklab, var(--moss) 14%, transparent);
 }
 
-.dark .glass-strong {
-  background: color-mix(in oklab, var(--card) 70%, transparent);
-  border: 1px solid color-mix(in oklab, var(--brand) 15%, transparent);
-  box-shadow:
-    inset 0 1px 0 0 color-mix(in oklab, var(--brand) 15%, transparent),
-    0 1px 0 0 color-mix(in oklab, var(--abyss) 50%, transparent),
-    0 40px 100px -25px color-mix(in oklab, var(--abyss) 70%, transparent);
-}
-
-/* Inverted glass — for dark glass-on-light scenarios (chips, nav pills).
-   The "light" sheen at the top is a brand-tinted leaf glow rather than
-   a white shine. */
+/* Inverted pill — dark-on-light chips for emphasis (nav pills,
+   small CTAs). Now genuinely dark forest green, not "inverted glass". */
 .glass-pill {
-  background: color-mix(in oklab, var(--foreground) 88%, transparent);
+  background: var(--foreground);
   color: var(--background);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid color-mix(in oklab, var(--foreground) 60%, transparent);
+  border: 1px solid color-mix(in oklab, var(--foreground) 90%, transparent);
   box-shadow:
-    inset 0 1px 0 0 color-mix(in oklab, var(--brand) 18%, transparent),
-    0 8px 24px -8px color-mix(in oklab, var(--moss) 45%, transparent);
+    0 8px 20px -10px color-mix(in oklab, var(--abyss) 35%, transparent);
 }
 
-/* Brand-tinted border highlight along the top edge of a glass card, fading
-   into a moss-tinted shadow at the bottom. No white anywhere.
-
-   In @layer components so Tailwind utility classes (sticky / absolute /
-   fixed) can override the default `position: relative` when needed. */
+/* Top-edge highlight on a paper card — a thin brand-coloured rule
+   along the top, like the printed bar at the top of a field-guide
+   page. */
 @layer components {
   .glass-edge {
     position: relative;
@@ -267,7 +204,7 @@
   border-radius: inherit;
   padding: 1px;
   pointer-events: none;
-  background: color-mix(in oklab, var(--brand) 28%, transparent);
+  background: color-mix(in oklab, var(--brand) 22%, transparent);
   mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -277,43 +214,43 @@
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
 }
-.dark .glass-edge::before {
-  background: color-mix(in oklab, var(--brand) 18%, transparent);
-}
 
 /* ─── Atmospheric backgrounds ──────────────────────────────────────────── */
 
-/* Aquatic aurora — used on hero & CTA */
+/* Botanical wash — light cream with the faintest leaf-green tint
+   blooming in from the corners. Sits behind hero sections. */
 .brand-aurora {
   background:
     radial-gradient(
       55% 60% at 18% 22%,
-      color-mix(in oklab, var(--leaf) 22%, transparent) 0%,
+      color-mix(in oklab, var(--leaf) 10%, transparent) 0%,
       transparent 70%
     ),
     radial-gradient(
       55% 55% at 82% 28%,
-      color-mix(in oklab, var(--brand) 18%, transparent) 0%,
+      color-mix(in oklab, var(--brand) 8%, transparent) 0%,
       transparent 65%
     ),
     radial-gradient(
       70% 70% at 50% 105%,
-      color-mix(in oklab, var(--abyss) 26%, transparent) 0%,
+      color-mix(in oklab, var(--moss) 12%, transparent) 0%,
       transparent 75%
     );
 }
 
-/* Deep biotope — darker, for CTA / contrast sections */
+/* Deep biotope — for inverted dark sections that need contrast
+   (CTA banners, footers). Forest-ink ground with two atmospheric
+   washes. */
 .bg-biotope {
   background:
     radial-gradient(
       80% 60% at 20% 0%,
-      color-mix(in oklab, var(--leaf) 14%, transparent) 0%,
+      color-mix(in oklab, var(--leaf) 18%, transparent) 0%,
       transparent 70%
     ),
     radial-gradient(
       80% 80% at 90% 100%,
-      color-mix(in oklab, var(--brand) 18%, transparent) 0%,
+      color-mix(in oklab, var(--brand) 22%, transparent) 0%,
       transparent 75%
     ),
     linear-gradient(
@@ -321,20 +258,22 @@
       var(--abyss) 0%,
       color-mix(in oklab, var(--abyss) 70%, var(--moss)) 100%
     );
-  color: oklch(0.97 0.012 130);
+  color: oklch(0.97 0.012 90);
 }
 
-/* Subtle hand-drawn grid (for catalogue / data sections) */
+/* Hand-drawn grid — for catalogue / data sections. On the cream
+   ground, the grid uses a much darker ink so the lines remain
+   visible without dominating. */
 .bg-grid {
   background-image:
     linear-gradient(
       to right,
-      color-mix(in oklab, var(--border) 70%, transparent) 1px,
+      color-mix(in oklab, var(--foreground) 8%, transparent) 1px,
       transparent 1px
     ),
     linear-gradient(
       to bottom,
-      color-mix(in oklab, var(--border) 70%, transparent) 1px,
+      color-mix(in oklab, var(--foreground) 8%, transparent) 1px,
       transparent 1px
     );
   background-size: 64px 64px;
@@ -379,16 +318,31 @@
 }
 
 /* Mega wordmark used in hero/footer (Terrava / Botany ref).
-   Tinted with --brand → --moss so the ghosted typography sits inside
-   the green palette rather than reading as off-white. */
+   On the cream ground, this reads as a ghosted brand-coloured
+   imprint — like a watermark pressed into the page. */
 .wordmark-bleed {
   font-family: var(--font-display);
   font-weight: 500;
   letter-spacing: -0.06em;
   font-variation-settings: "opsz" 144;
   line-height: 0.78;
-  color: color-mix(in oklab, var(--brand) 18%, transparent);
+  color: color-mix(in oklab, var(--brand) 14%, transparent);
   user-select: none;
+}
+
+/* Drop cap — used on the opening paragraph of a long body block
+   (careSummary, in-the-wild prose). Pulls the first letter into a
+   large serif glyph that sits flush with three lines of body text,
+   mirroring the field-guide / encyclopedia plate aesthetic. */
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 3.5em;
+  line-height: 0.85;
+  float: left;
+  margin: 0.05em 0.1em 0 0;
+  color: var(--brand);
+  font-variation-settings: "opsz" 144;
 }
 
 /* ─── Animations & micro-interactions ─────────────────────────────────── */
