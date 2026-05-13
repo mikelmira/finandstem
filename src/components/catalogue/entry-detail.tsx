@@ -8,7 +8,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { WaveMark } from "@/components/wave-mark";
-import { CATEGORY_PLATE } from "@/components/icons/species-icons";
+import { getSpeciesPlate } from "@/components/icons/species-icons";
 import { PillButton } from "@/components/ui/pill-button";
 import {
   CATEGORY_META,
@@ -167,10 +167,7 @@ export function EntryDetail({
             {image && (
               <div className="relative lg:pt-8">
                 <EntryImage image={image} ratio="tall" priority />
-                <SciencePlateAnnotation
-                  category={entry.category}
-                  commonName={entry.commonName}
-                />
+                <SciencePlateAnnotation entry={entry} />
               </div>
             )}
           </div>
@@ -667,26 +664,18 @@ function HeroImageAttribution({
 }
 
 /**
- * Margin annotation that overlaps the bottom-left corner of the
- * hero photo. Renders the scientific-plate silhouette for the
- * species' category on a small paper card, labelled "Plate /
- * Scientific drawing". Mirrors the field-guide margin sketch
- * pattern — a hand-drawn outline beside the live photograph.
- *
- * One plate per category for now; replace with a per-species
- * line drawing later by swapping the resolved component.
+ * Margin annotation that overlaps the bottom-left corner of the hero
+ * photo. Renders the scientific-plate silhouette for the species'
+ * resolved body type — slim tetra, stocky perciform, gourami, eel,
+ * catfish, livebearer, or the plant equivalents. Mirrors the
+ * field-guide margin sketch: a hand-drawn outline beside the live
+ * photograph, captioned with the body type as the field-guide would.
  */
-function SciencePlateAnnotation({
-  category,
-  commonName,
-}: {
-  category: CatalogueCategory;
-  commonName: string;
-}) {
-  const Plate = CATEGORY_PLATE[category];
+function SciencePlateAnnotation({ entry }: { entry: CatalogueEntry }) {
+  const { Plate, label } = getSpeciesPlate(entry);
   return (
     <figure
-      aria-label={`Scientific plate of ${commonName}`}
+      aria-label={`Scientific plate of ${entry.commonName}`}
       className="glass glass-edge pointer-events-none absolute -bottom-6 -left-6 hidden w-44 rotate-[-3deg] rounded-2xl p-3 sm:block lg:-bottom-10 lg:-left-10 lg:w-52 lg:p-4"
     >
       <figcaption className="mb-1 flex items-center justify-between text-[9px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
@@ -697,7 +686,7 @@ function SciencePlateAnnotation({
         <Plate className="h-full w-full" />
       </div>
       <p className="mt-1 text-center text-[10px] italic text-muted-foreground">
-        Scientific drawing
+        {label}
       </p>
     </figure>
   );
