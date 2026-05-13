@@ -1,4 +1,6 @@
-import { Droplets, Fish, Thermometer, Users, Sun, Sprout } from "lucide-react";
+import * as React from "react";
+import { Droplets, Thermometer, Users, Sun, Sprout } from "lucide-react";
+import { FishMark, PlantMark } from "@/components/icons/species-icons";
 import type {
   CatalogueEntry,
   FishEntry,
@@ -7,8 +9,15 @@ import type {
   MossEntry,
 } from "@/types/catalogue";
 
+/** Accepts both Lucide icons and our custom species marks. */
+type IconLike = React.ComponentType<{
+  className?: string;
+  strokeWidth?: number | string;
+  "aria-hidden"?: boolean | "true" | "false";
+}>;
+
 interface KeyFact {
-  icon: typeof Thermometer;
+  icon: IconLike;
   label: string;
   value: string;
 }
@@ -70,7 +79,7 @@ function fishKeyFacts(f: FishEntry): KeyFact[] {
     { icon: Thermometer, label: "Temp", value: `${f.tempRange} °C` },
     { icon: Droplets, label: "pH", value: f.phRange },
     {
-      icon: Fish,
+      icon: FishMark,
       label: "Min tank",
       value: f.minTankSize,
     },
@@ -80,7 +89,7 @@ function fishKeyFacts(f: FishEntry): KeyFact[] {
 function plantKeyFacts(p: PlantEntry): KeyFact[] {
   return [
     { icon: Sun, label: "Light", value: p.light },
-    { icon: Sprout, label: "CO₂", value: p.co2 },
+    { icon: PlantMark, label: "CO₂", value: p.co2 },
     { icon: Thermometer, label: "Temp", value: `${p.tempRange} °C` },
   ];
 }

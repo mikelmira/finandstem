@@ -1,5 +1,13 @@
-import { Fish, Leaf, Sprout } from "lucide-react";
+import * as React from "react";
 import { cn } from "@/lib/utils";
+import {
+  FishMark,
+  MossMark,
+  PlantMark,
+  ShrimpMark,
+} from "@/components/icons/species-icons";
+
+type IconLike = React.ComponentType<{ className?: string; style?: React.CSSProperties }>;
 
 interface SizeBarProps {
   label: string;
@@ -12,11 +20,11 @@ interface SizeBarProps {
   className?: string;
 }
 
-const KIND_ICON: Record<NonNullable<SizeBarProps["kind"]>, typeof Fish> = {
-  fish: Fish,
-  shrimp: Fish,
-  plant: Leaf,
-  moss: Sprout,
+const KIND_ICON: Record<NonNullable<SizeBarProps["kind"]>, IconLike> = {
+  fish: FishMark,
+  shrimp: ShrimpMark,
+  plant: PlantMark,
+  moss: MossMark,
 };
 
 export function SizeBar({
@@ -61,7 +69,7 @@ export function SizeBar({
           className="flex shrink-0 items-center justify-center text-[var(--brand)]"
           style={{ width: 56, height: 56 }}
         >
-          <Icon style={{ width: iconPx, height: iconPx }} strokeWidth={1.5} />
+          <Icon style={{ width: iconPx, height: iconPx }} />
         </span>
         <div className="flex flex-1 flex-col gap-1.5">
           <div

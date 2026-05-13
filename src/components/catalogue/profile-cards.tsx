@@ -1,7 +1,7 @@
+import * as React from "react";
 import {
   ArrowUpDown,
   Beef,
-  Fish,
   Heart,
   Leaf,
   ShieldAlert,
@@ -13,12 +13,25 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { parseRange } from "@/lib/range";
+import {
+  FishMark,
+  MossMark,
+  PlantMark,
+  ShrimpMark,
+} from "@/components/icons/species-icons";
 import type {
   FishEntry,
   MossEntry,
   PlantEntry,
   ShrimpEntry,
 } from "@/types/catalogue";
+
+/** Accepts both Lucide icons and our custom species marks. */
+type IconLike = React.ComponentType<{
+  className?: string;
+  strokeWidth?: number | string;
+  "aria-hidden"?: boolean | "true" | "false";
+}>;
 
 /* ──────────────────────────────────────────────────────────────────
    Shared card wrapper.
@@ -128,10 +141,7 @@ function SchoolingViz({
         className="flex h-12 items-center justify-center"
         aria-hidden
       >
-        <Fish
-          className="size-7 text-[var(--brand)]/80"
-          strokeWidth={1.5}
-        />
+        <FishMark className="size-7 text-[var(--brand)]/80" />
       </div>
     );
   }
@@ -143,13 +153,12 @@ function SchoolingViz({
       aria-hidden
     >
       {Array.from({ length: display }).map((_, i) => (
-        <Fish
+        <FishMark
           key={i}
           className={cn(
             "size-3.5 text-[var(--brand)]/80",
             i % 2 === 1 && "-translate-y-1",
           )}
-          strokeWidth={1.5}
         />
       ))}
       {overflow && (
@@ -377,7 +386,7 @@ function StarRating({
  * doesn't look like a stranded label/value pair next to the richer
  * cards beside it.
  */
-function FamilyHero({ icon: Icon }: { icon: typeof Fish }) {
+function FamilyHero({ icon: Icon }: { icon: IconLike }) {
   return (
     <div
       className="flex items-center justify-center"
@@ -503,13 +512,12 @@ function ColonyShrimpViz({ count }: { count: number }) {
       aria-hidden
     >
       {Array.from({ length: display }).map((_, i) => (
-        <Fish
+        <ShrimpMark
           key={i}
           className={cn(
             "size-3 text-[var(--brand)]/80",
             i % 2 === 1 && "-translate-y-0.5",
           )}
-          strokeWidth={1.5}
         />
       ))}
       {overflow && (
@@ -543,7 +551,7 @@ function FishProfile({ entry: f }: { entry: FishEntry }) {
       <ProfileCard
         label="Family"
         value={f.family}
-        graphic={<FamilyHero icon={Fish} />}
+        graphic={<FamilyHero icon={FishMark} />}
       />
       <ProfileCard
         label="Water column"
@@ -595,7 +603,7 @@ function PlantProfile({ entry: p }: { entry: PlantEntry }) {
       <ProfileCard
         label="Family"
         value={p.family}
-        graphic={<FamilyHero icon={Sprout} />}
+        graphic={<FamilyHero icon={PlantMark} />}
       />
       <ProfileCard
         label="Type"
@@ -687,7 +695,7 @@ function MossProfile({ entry: m }: { entry: MossEntry }) {
       <ProfileCard
         label="Family"
         value={m.family}
-        graphic={<FamilyHero icon={Leaf} />}
+        graphic={<FamilyHero icon={MossMark} />}
       />
       <ProfileCard
         label="Type"

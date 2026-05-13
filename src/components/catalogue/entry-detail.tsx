@@ -8,6 +8,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { WaveMark } from "@/components/wave-mark";
+import { CATEGORY_PLATE } from "@/components/icons/species-icons";
 import { PillButton } from "@/components/ui/pill-button";
 import {
   CATEGORY_META,
@@ -162,10 +163,14 @@ export function EntryDetail({
               </div>
             </div>
 
-            {/* Right — feature image */}
+            {/* Right — feature image + scientific-plate margin annotation. */}
             {image && (
-              <div className="lg:pt-8">
+              <div className="relative lg:pt-8">
                 <EntryImage image={image} ratio="tall" priority />
+                <SciencePlateAnnotation
+                  category={entry.category}
+                  commonName={entry.commonName}
+                />
               </div>
             )}
           </div>
@@ -658,6 +663,43 @@ function HeroImageAttribution({
         </a>
       </div>
     </div>
+  );
+}
+
+/**
+ * Margin annotation that overlaps the bottom-left corner of the
+ * hero photo. Renders the scientific-plate silhouette for the
+ * species' category on a small paper card, labelled "Plate /
+ * Scientific drawing". Mirrors the field-guide margin sketch
+ * pattern — a hand-drawn outline beside the live photograph.
+ *
+ * One plate per category for now; replace with a per-species
+ * line drawing later by swapping the resolved component.
+ */
+function SciencePlateAnnotation({
+  category,
+  commonName,
+}: {
+  category: CatalogueCategory;
+  commonName: string;
+}) {
+  const Plate = CATEGORY_PLATE[category];
+  return (
+    <figure
+      aria-label={`Scientific plate of ${commonName}`}
+      className="glass glass-edge pointer-events-none absolute -bottom-6 -left-6 hidden w-44 rotate-[-3deg] rounded-2xl p-3 sm:block lg:-bottom-10 lg:-left-10 lg:w-52 lg:p-4"
+    >
+      <figcaption className="mb-1 flex items-center justify-between text-[9px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+        <span>Plate</span>
+        <span className="text-[var(--brand)]">01</span>
+      </figcaption>
+      <div className="flex h-24 items-center justify-center text-[var(--brand)] lg:h-28">
+        <Plate className="h-full w-full" />
+      </div>
+      <p className="mt-1 text-center text-[10px] italic text-muted-foreground">
+        Scientific drawing
+      </p>
+    </figure>
   );
 }
 
