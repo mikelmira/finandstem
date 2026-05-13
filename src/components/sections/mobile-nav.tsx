@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
@@ -19,6 +20,11 @@ interface MobileNavProps {
 export function MobileNav({ links, primaryCta }: MobileNavProps) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Lock body scroll while open
   React.useEffect(() => {
@@ -40,30 +46,17 @@ export function MobileNav({ links, primaryCta }: MobileNavProps) {
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        aria-label="Open menu"
-        aria-expanded={open}
-        aria-controls="mobile-nav-drawer"
-        className="press inline-flex size-9 items-center justify-center rounded-full border border-border bg-background/60 text-foreground transition-colors duration-200 hover:border-[var(--brand)]/40 md:hidden"
-      >
-        <Menu className="size-4" aria-hidden />
-      </button>
-
-      {open && (
-        <div
-          id="mobile-nav-drawer"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Site navigation"
-          className="fixed inset-0 z-50 md:hidden"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setOpen(false);
-          }}
-        >
+  const drawer = open ? (
+    <div
+      id="mobile-nav-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site navigation"
+      className="fixed inset-0 z-[100] md:hidden"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) setOpen(false);
+      }}
+    >
           {/* Backdrop — palette-based dark overlay, no white */}
           <div
             aria-hidden
@@ -141,8 +134,22 @@ export function MobileNav({ links, primaryCta }: MobileNavProps) {
               </div>
             )}
           </aside>
-        </div>
-      )}
+    </div>
+  ) : null;
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label="Open menu"
+        aria-expanded={open}
+        aria-controls="mobile-nav-drawer"
+        className="press inline-flex size-9 items-center justify-center rounded-full border border-border bg-background/60 text-foreground transition-colors duration-200 hover:border-[var(--brand)]/40 md:hidden"
+      >
+        <Menu className="size-4" aria-hidden />
+      </button>
+      {mounted && drawer ? createPortal(drawer, document.body) : null}
     </>
   );
 }

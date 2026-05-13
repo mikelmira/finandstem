@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -26,7 +27,12 @@ export function GlobalSearch({ options }: GlobalSearchProps) {
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [mounted, setMounted] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Cmd+K / Ctrl+K to open, Esc to close
   React.useEffect(() => {
@@ -117,12 +123,12 @@ export function GlobalSearch({ options }: GlobalSearchProps) {
       </button>
 
       {/* Modal */}
-      {open && (
+      {open && mounted && createPortal(
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Search the Fin & Stem catalogue"
-          className="fixed inset-0 z-50 flex items-start justify-center bg-[var(--abyss)]/65 px-4 pt-[10vh] backdrop-blur-sm animate-fade-up"
+          className="fixed inset-0 z-[100] flex items-start justify-center bg-[var(--abyss)]/65 px-4 pt-[10vh] backdrop-blur-sm animate-fade-up"
           onClick={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
           }}
@@ -208,7 +214,8 @@ export function GlobalSearch({ options }: GlobalSearchProps) {
               </Link>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   );
