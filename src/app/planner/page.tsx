@@ -2,30 +2,27 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
-import { PlannerForm } from "@/components/planner/planner-form";
-import { PlanResult } from "@/components/planner/plan-result";
-import {
-  buildTankPlan,
-  type Style,
-  type Experience,
-} from "@/lib/catalogue/tank-plan";
+import { BuilderPicker, type BuilderOption } from "@/components/planner/builder-picker";
+import { TankComposition } from "@/components/planner/tank-composition";
+import { TankRequirementsPanel } from "@/components/planner/tank-requirements";
+import { TankWarnings } from "@/components/planner/tank-warnings";
+import { allNorm } from "@/lib/catalogue/normalize";
+import { buildTank } from "@/lib/catalogue/tank-builder";
 
 export const metadata: Metadata = {
   title: "Tank Planner",
   description:
-    "Tell us your tank size, style, and experience level — we'll suggest a stocking plan from the Fin & Stem catalogue that actually fits together. Fish, plants, shrimp, and moss picks cross-referenced for compatibility.",
+    "Build your tank species by species. Add fish, plants, shrimp, and mosses — we cross-reference parameters and flag every compatibility issue, plus surface the water, light, CO₂, and substrate the combined tank actually needs.",
 };
 
-const VALID_STYLES: Style[] = [
-  "low-tech",
-  "high-tech",
-  "community",
-  "shrimp",
-  "biotope-amazon",
-  "biotope-asian",
-];
-
-const VALID_EXPERIENCE: Experience[] = ["beginner", "intermediate", "advanced"];
+const OPTIONS: BuilderOption[] = allNorm
+  .map((n) => ({
+    value: `${n.category}:${n.slug}`,
+    label: n.commonName,
+    scientific: n.scientificName,
+    category: n.category,
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 
 interface PageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -37,47 +34,78 @@ function first(v: string | string[] | undefined): string | undefined {
 
 export default async function PlannerPage({ searchParams }: PageProps) {
   const sp = await searchParams;
-  const tankParam = Number(first(sp.tank));
-  const tankL = Number.isFinite(tankParam) && tankParam >= 10 ? tankParam : 60;
+  const rawIds = first(sp.species) ?? "";
+  const ids = rawIds
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const tankParam = first(sp.tank);
+  const tankL =
+    tankParam && !Number.isNaN(Number(tankParam))
+      ? Number(tankParam)
+      : undefined;
 
-  const styleParam = first(sp.style) as Style | undefined;
-  const style: Style =
-    styleParam && VALID_STYLES.includes(styleParam) ? styleParam : "community";
-
-  const expParam = first(sp.experience) as Experience | undefined;
-  const experience: Experience =
-    expParam && VALID_EXPERIENCE.includes(expParam) ? expParam : "beginner";
-
-  // Only render results if the user has submitted (recognised by the
-  // tank query param being explicitly present).
-  const hasSubmitted = first(sp.tank) !== undefined;
-  const plan = hasSubmitted
-    ? buildTankPlan({ tankL, style, experience })
-    : null;
+  const result = buildTank({ ids, tankL });
+  const entries = result.selection.all.map((a) => a.entry);
+  const hasSelection = entries.length > 0;
 
   return (
     <>
       <PageHero
         eyebrow="Tank Planner"
-        title="Help me plan a tank."
-        subtitle="Tell us the tank size, the style you're going for, and how confident you are. We'll cross-reference the catalogue and suggest a stocking plan that actually fits together — fish, plants, shrimp, and moss that share water, temperament, and compatibility."
+        title="Build your tank, species by species."
+        subtitle="Add the fish, plants, shrimp, and mosses you're considering. We cross-reference every parameter, flag the conflicts, and tell you what water, light, CO₂, and substrate the combined tank actually needs to keep everything happy."
       />
 
       <SectionShell>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-10">
-          {/* Left — form */}
-          <div className="lg:sticky lg:top-24 lg:self-start">
-            <Suspense fallback={null}>
-              <PlannerForm
-                initial={{ tankL, style, experience }}
-              />
-            </Suspense>
+        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-10">
+          {/* Left — picker + composition (sticky on desktop) */}
+          <div className="flex flex-col gap-6 lg:sticky lg:top-24">
+            <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
+              <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
+                Add to your tank
+              </h2>
+              <div className="mt-4">
+                <Suspense fallback={null}>
+                  <BuilderPicker
+                    options={OPTIONS}
+                    selected={ids}
+                    tankL={tankL}
+                  />
+                </Suspense>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <div className="flex items-baseline justify-between gap-3">
+                <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                  Your tank ({entries.length})
+                </h2>
+                {entries.length > 0 && (
+                  <span className="text-[11px] text-muted-foreground/70">
+                    Tap to open • × to remove
+                  </span>
+                )}
+              </div>
+              <Suspense fallback={null}>
+                <TankComposition entries={entries} />
+              </Suspense>
+            </div>
           </div>
 
-          {/* Right — result */}
-          <div>
-            {plan ? (
-              <PlanResult plan={plan} />
+          {/* Right — requirements + warnings */}
+          <div className="flex flex-col gap-10">
+            {hasSelection ? (
+              <>
+                <TankRequirementsPanel
+                  requirements={result.requirements}
+                  tankL={tankL}
+                />
+                <TankWarnings
+                  warnings={result.warnings}
+                  hasSelection={hasSelection}
+                />
+              </>
             ) : (
               <EmptyState />
             )}
@@ -92,33 +120,34 @@ function EmptyState() {
   return (
     <div className="glass glass-edge animate-rise flex flex-col items-start gap-4 rounded-2xl p-8 sm:p-10">
       <span className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
-        Ready when you are
+        Pick your inhabitants
       </span>
       <h2 className="text-display-tight text-2xl sm:text-3xl">
-        Pick a size, style, and experience level
+        Add a species to start the analysis
       </h2>
       <p className="text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-        We&rsquo;ll cross-reference 88 catalogued species to recommend a
-        complete stocking plan — schooler, centrepiece, bottom dweller,
-        algae crew, foreground / midground / background plants, a floater,
-        plus shrimp and moss. Every pick links to its full profile.
+        Every time you add a fish, plant, shrimp, or moss, we recompute
+        the parameters your tank needs to keep all of them happy. You&rsquo;ll
+        see the overlapping temperature, pH, hardness, the minimum tank
+        size, whether CO₂ is required, what kind of substrate to use —
+        plus every compatibility conflict before you spend the money.
       </p>
       <ul className="grid grid-cols-1 gap-2 text-sm text-foreground/85 sm:grid-cols-2">
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Tank-size aware — won&rsquo;t suggest a pleco for a 20 L
+          Parameter intersection in real time
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Difficulty-capped to your experience
+          Predator / prey + plant-safety flags
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Biotope-aware origin filtering
+          Light + CO₂ recommendations from your plants
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Plant- and shrimp-safety enforced
+          Schooling group sizes called out
         </li>
       </ul>
     </div>

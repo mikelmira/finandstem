@@ -3,6 +3,7 @@ import { Wand2 } from "lucide-react";
 import { site } from "@/lib/site";
 import { WaveMark } from "@/components/wave-mark";
 import { GlobalSearch, type SearchOption } from "@/components/search/global-search";
+import { MobileNav } from "@/components/sections/mobile-nav";
 import { allNorm } from "@/lib/catalogue/normalize";
 
 const SEARCH_OPTIONS: SearchOption[] = allNorm
@@ -14,6 +15,8 @@ const SEARCH_OPTIONS: SearchOption[] = allNorm
     origin: n.origin,
   }))
   .sort((a, b) => a.commonName.localeCompare(b.commonName));
+
+const MOBILE_LINKS = [...site.nav];
 
 export function SiteHeader() {
   return (
@@ -32,6 +35,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
+        {/* Desktop nav */}
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-1 text-sm">
             {site.nav.map((item) => (
@@ -60,6 +64,11 @@ export function SiteHeader() {
             />
             Plan a tank
           </Link>
+
+          <MobileNav
+            links={MOBILE_LINKS}
+            primaryCta={{ label: "Plan a tank", href: "/planner" }}
+          />
         </div>
       </div>
     </header>

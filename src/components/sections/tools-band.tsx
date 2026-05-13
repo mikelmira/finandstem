@@ -17,8 +17,8 @@ const TOOLS: Tool[] = [
   {
     href: "/planner",
     eyebrow: "Tank Planner",
-    title: "Plan a tank from scratch.",
-    body: "Tell us the size, style, and your experience. We cross-reference 88 species and suggest a full stocking plan — schooler, plants, shrimp, moss — that actually fits together.",
+    title: "Build your tank, check the fit.",
+    body: "Add the fish, plants, shrimp, and mosses you're considering. We surface the temperature, pH, hardness, light, and CO₂ the combined tank needs — and flag every predator-prey or parameter conflict before you commit.",
     icon: Wand2,
     ctaLabel: "Open the planner",
   },
