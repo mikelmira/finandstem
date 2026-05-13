@@ -173,39 +173,53 @@ export function MossMark(props: IconProps) {
 export function FishPlate(props: IconProps) {
   return (
     <svg
-      viewBox="0 0 160 110"
+      viewBox="0 0 200 100"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
       {...props}
     >
-      {/* Body */}
-      <path d="M28 55 C 36 28, 70 22, 102 28 C 124 32, 138 44, 144 55 C 138 66, 124 78, 102 82 C 70 88, 36 82, 28 55 Z" />
-      {/* Tail fork */}
-      <path d="M28 55 L 8 32 L 16 55 L 8 78 Z" />
-      {/* Lateral line */}
-      <path d="M40 55 Q 80 56, 134 55" opacity="0.45" strokeDasharray="2 4" />
-      {/* Dorsal fin */}
-      <path d="M70 28 Q 78 14, 92 24 Q 86 28, 70 28 Z" />
-      {/* Anal fin */}
-      <path d="M70 82 Q 78 96, 92 86" />
-      {/* Pectoral fin */}
-      <path d="M56 60 Q 62 72, 70 64" opacity="0.7" />
-      {/* Gill cover */}
-      <path d="M104 35 Q 106 55, 104 75" opacity="0.6" />
-      {/* Eye */}
-      <circle cx="122" cy="48" r="3" />
-      <circle cx="122" cy="48" r="1.2" fill="currentColor" />
-      {/* Hatched shading on the back — short parallel strokes */}
-      <path
-        d="M50 38 L 53 34 M58 36 L 61 32 M66 34 L 69 30 M74 33 L 77 29 M82 33 L 85 29 M90 34 L 93 30 M98 36 L 101 32 M106 38 L 109 34"
-        opacity="0.6"
-      />
-      {/* Mouth */}
-      <path d="M138 51 L 144 53 M138 59 L 144 57" />
+      {/* Body + forked caudal fin in one continuous path. The tail
+          notch at (28, 50) draws the V-cut between the two tail lobes. */}
+      <path d="
+        M 14 24
+        L 52 44
+        C 70 22, 132 18, 170 30
+        C 184 34, 192 42, 196 52
+        C 192 62, 184 70, 170 74
+        C 132 86, 70 82, 52 60
+        L 14 80
+        L 28 52
+        Z
+      " />
+
+      {/* Dorsal fin — single triangular fin set at the body midpoint */}
+      <path d="M 88 22 Q 100 8, 124 18 L 120 28 Q 100 28, 88 22 Z" />
+
+      {/* Pectoral fin — behind the operculum, swept back */}
+      <path d="M 142 60 Q 132 74, 118 74 L 132 60 Z" />
+
+      {/* Pelvic fin — small, on the belly mid-way back */}
+      <path d="M 106 70 Q 100 80, 90 76 L 100 70 Z" opacity="0.85" />
+
+      {/* Anal fin — mirrors the dorsal, slightly behind it */}
+      <path d="M 74 72 Q 64 84, 50 76 L 70 66 Z" opacity="0.85" />
+
+      {/* Operculum (gill cover) curve */}
+      <path d="M 158 36 C 156 50, 156 56, 158 70" opacity="0.5" />
+
+      {/* Eye — outline plus filled pupil */}
+      <circle cx="172" cy="46" r="4.5" />
+      <circle cx="172" cy="46" r="2" fill="currentColor" />
+
+      {/* Mouth — single short line at the snout */}
+      <path d="M 195 51 L 198 50" />
+
+      {/* Lateral stripe — the tetra/rasbora midline signature */}
+      <path d="M 52 52 C 88 51, 130 50, 156 49" opacity="0.45" />
     </svg>
   );
 }
@@ -391,39 +405,54 @@ export function MossPlate(props: IconProps) {
 export function FishPlateStocky(props: IconProps) {
   return (
     <svg
-      viewBox="0 0 160 110"
+      viewBox="0 0 200 110"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
       {...props}
     >
-      {/* Almond-shaped body — short and deep */}
-      <path d="M40 55 C 44 18, 80 14, 110 22 C 130 28, 140 42, 142 55 C 140 68, 130 82, 110 88 C 80 96, 44 92, 40 55 Z" />
-      {/* Tail fork */}
-      <path d="M40 55 L 18 28 L 28 55 L 18 82 Z" />
-      {/* Dorsal fin — tall triangular spine */}
-      <path d="M70 18 Q 76 2, 96 8 L 92 22 Q 80 22, 70 24 Z" />
-      {/* Anal fin */}
-      <path d="M76 92 Q 82 102, 96 96 L 94 84 Q 84 84, 76 92 Z" />
-      {/* Pectoral fin */}
-      <path d="M64 62 Q 72 78, 84 72" opacity="0.75" />
+      {/* Body + tail — deeper, almond profile with a more compact tail */}
+      <path d="
+        M 16 26
+        L 54 46
+        C 68 14, 134 10, 170 24
+        C 184 32, 192 42, 196 55
+        C 192 68, 184 78, 170 86
+        C 134 100, 68 96, 54 64
+        L 16 84
+        L 28 55
+        Z
+      " />
+
+      {/* Dorsal fin — tall, leaning slightly forward (barb / cichlid signature) */}
+      <path d="M 76 14 Q 92 -2, 124 6 L 120 22 Q 96 22, 76 18 Z" />
+
+      {/* Anal fin — mirror of dorsal, prominent on stocky fish */}
+      <path d="M 78 92 Q 92 108, 124 100 L 120 86 Q 96 86, 78 92 Z" />
+
       {/* Pelvic fin */}
-      <path d="M86 78 Q 90 90, 96 82" opacity="0.6" />
-      {/* Gill cover */}
-      <path d="M104 28 Q 108 55, 104 82" opacity="0.6" />
+      <path d="M 102 80 Q 96 92, 86 86 L 96 78 Z" opacity="0.85" />
+
+      {/* Pectoral fin */}
+      <path d="M 140 64 Q 130 80, 116 80 L 128 62 Z" />
+
+      {/* Operculum */}
+      <path d="M 158 30 C 156 55, 156 60, 158 82" opacity="0.55" />
+
       {/* Eye */}
-      <circle cx="124" cy="44" r="3" />
-      <circle cx="124" cy="44" r="1.2" fill="currentColor" />
-      {/* Vertical bars suggesting barb / cichlid markings */}
-      <path
-        d="M72 28 L 72 82 M88 24 L 88 86 M104 28 L 104 82"
-        opacity="0.45"
-      />
-      {/* Mouth */}
-      <path d="M140 51 L 146 49 M140 59 L 146 61" />
+      <circle cx="172" cy="42" r="5" />
+      <circle cx="172" cy="42" r="2.2" fill="currentColor" />
+
+      {/* Mouth — slightly upturned */}
+      <path d="M 194 50 L 198 49" />
+
+      {/* Subtle vertical bars — barb / dwarf-cichlid marking */}
+      <path d="M 84 24 C 82 55, 82 64, 84 90" opacity="0.32" />
+      <path d="M 108 18 C 106 55, 106 65, 108 96" opacity="0.32" />
+      <path d="M 132 20 C 130 55, 130 65, 132 94" opacity="0.32" />
     </svg>
   );
 }
@@ -436,35 +465,55 @@ export function FishPlateStocky(props: IconProps) {
 export function FishPlateGourami(props: IconProps) {
   return (
     <svg
-      viewBox="0 0 160 110"
+      viewBox="0 0 200 140"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
       {...props}
     >
-      {/* Tall almond body — very deep */}
-      <path d="M40 55 C 46 12, 90 6, 118 16 C 134 24, 142 38, 144 55 C 142 72, 134 86, 118 94 C 90 104, 46 98, 40 55 Z" />
-      {/* Tail — narrow rounded fan at the rear */}
-      <path d="M40 55 Q 30 38, 22 38 L 26 55 L 22 72 Q 30 72, 40 55 Z" />
-      {/* Dorsal fin — long ridge along the top */}
-      <path d="M68 12 Q 100 -2, 124 14 Q 110 20, 70 20 Z" />
-      {/* Anal fin — long ridge along the bottom */}
-      <path d="M68 98 Q 100 112, 124 96 Q 110 90, 70 90 Z" />
-      {/* Thread-like ventral fins — the gourami signature */}
-      <path d="M76 82 Q 70 100, 60 108" opacity="0.85" />
-      <path d="M82 84 Q 78 102, 70 110" opacity="0.7" />
-      {/* Gill cover */}
-      <path d="M112 22 Q 116 55, 112 88" opacity="0.5" />
+      {/* Body — very deep oval with a small rounded caudal fan */}
+      <path d="
+        M 28 60
+        Q 38 30, 52 36
+        C 64 4, 134 0, 170 16
+        C 184 26, 192 40, 196 60
+        C 192 80, 184 94, 170 104
+        C 134 120, 64 116, 52 84
+        Q 38 90, 28 60
+        Z
+      " />
+      {/* Caudal peduncle separator */}
+      <path d="M 52 36 Q 56 60, 52 84" opacity="0.3" />
+
+      {/* Long dorsal fin — runs the full length of the back */}
+      <path d="M 60 14 C 90 -6, 156 -2, 178 16 C 156 24, 100 26, 60 22 Z" />
+
+      {/* Long anal fin — mirrors the dorsal */}
+      <path d="M 60 106 C 90 126, 156 122, 178 106 C 156 98, 100 96, 60 100 Z" />
+
+      {/* THREAD VENTRAL FINS — the gourami signature, two long filaments
+          trailing well below the body */}
+      <path d="M 96 96 Q 86 122, 64 138" strokeWidth="1.6" />
+      <path d="M 104 96 Q 100 126, 78 140" opacity="0.85" strokeWidth="1.6" />
+
+      {/* Pectoral fin */}
+      <path d="M 144 72 Q 134 88, 120 86 L 134 70 Z" opacity="0.75" />
+
+      {/* Operculum */}
+      <path d="M 158 22 C 156 60, 156 60, 158 98" opacity="0.5" />
+
       {/* Eye */}
-      <circle cx="128" cy="44" r="3" />
-      <circle cx="128" cy="44" r="1.2" fill="currentColor" />
-      {/* Lateral spot — pearl gourami detail */}
-      <circle cx="90" cy="55" r="2.5" opacity="0.45" />
-      {/* Mouth — small and forward */}
-      <path d="M142 51 L 148 49 M142 59 L 148 61" />
+      <circle cx="172" cy="46" r="4.5" />
+      <circle cx="172" cy="46" r="2" fill="currentColor" />
+
+      {/* Mouth — small terminal mouth */}
+      <path d="M 194 56 L 197 55" />
+
+      {/* Pearl-spot — characteristic of pearl gouramis */}
+      <circle cx="110" cy="62" r="3" opacity="0.4" />
     </svg>
   );
 }
@@ -476,32 +525,55 @@ export function FishPlateGourami(props: IconProps) {
 export function FishPlateEel(props: IconProps) {
   return (
     <svg
-      viewBox="0 0 160 110"
+      viewBox="0 0 200 80"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
       {...props}
     >
-      {/* Wavy elongated body — taper to both ends */}
-      <path d="M10 60 Q 24 36, 50 46 Q 78 60, 100 48 Q 126 30, 150 38 Q 152 42, 152 48 Q 130 60, 102 64 Q 78 70, 50 60 Q 28 52, 14 66 Q 10 64, 10 60 Z" />
-      {/* Body bands — kuhli-loach stripes */}
-      <path d="M40 46 Q 42 56, 38 60" opacity="0.5" />
-      <path d="M62 56 Q 64 64, 60 68" opacity="0.5" />
-      <path d="M84 58 Q 86 66, 82 70" opacity="0.5" />
-      <path d="M108 50 Q 110 60, 106 64" opacity="0.5" />
-      <path d="M128 42 Q 130 52, 126 56" opacity="0.5" />
-      {/* Tiny dorsal fin */}
-      <path d="M68 50 Q 74 42, 84 50" opacity="0.65" />
-      {/* Eye near head */}
-      <circle cx="144" cy="42" r="1.8" />
-      <circle cx="144" cy="42" r="0.8" fill="currentColor" />
-      {/* Barbels */}
-      <path d="M150 44 Q 156 46, 158 50 M150 46 Q 156 50, 158 54" opacity="0.7" />
-      {/* Tail tip — small fan */}
-      <path d="M10 60 L 2 52 M10 60 L 2 68" />
+      {/* Wavy elongated body — taper to a small caudal fan at the left
+          and a rounded head at the right. Smooth S-curve through the
+          middle. */}
+      <path d="
+        M 12 38
+        Q 22 30, 48 36
+        Q 80 48, 110 38
+        Q 146 22, 178 28
+        Q 192 32, 196 40
+        Q 192 48, 178 52
+        Q 146 58, 110 48
+        Q 80 56, 48 46
+        Q 22 50, 12 44
+        Z
+      " />
+
+      {/* Caudal fan — small rounded tail at the left tip */}
+      <path d="M 12 38 Q 4 30, 4 40 Q 4 50, 12 44" />
+
+      {/* Body bands — kuhli-loach signature alternating dark bars,
+          drawn as soft saddles across the upper body */}
+      <path d="M 38 33 C 40 36, 40 44, 38 47" opacity="0.4" fill="currentColor" stroke="none" />
+      <path d="M 62 38 C 64 42, 64 50, 62 54" opacity="0.4" fill="currentColor" stroke="none" />
+      <path d="M 88 44 C 90 48, 90 54, 88 57" opacity="0.4" fill="currentColor" stroke="none" />
+      <path d="M 116 40 C 118 44, 118 50, 116 53" opacity="0.4" fill="currentColor" stroke="none" />
+      <path d="M 146 30 C 148 34, 148 42, 146 45" opacity="0.4" fill="currentColor" stroke="none" />
+      <path d="M 172 28 C 174 32, 174 40, 172 43" opacity="0.4" fill="currentColor" stroke="none" />
+
+      {/* Small dorsal fin — barely a bump */}
+      <path d="M 80 42 Q 88 36, 98 42" opacity="0.55" />
+
+      {/* Eye */}
+      <circle cx="186" cy="36" r="2.4" />
+      <circle cx="186" cy="36" r="1" fill="currentColor" />
+
+      {/* Mouth + barbels — kuhli loaches have 4 short barbels */}
+      <path d="M 195 42 L 198 41" />
+      <path d="M 195 44 Q 199 47, 200 51" opacity="0.7" />
+      <path d="M 193 45 Q 197 48, 198 52" opacity="0.7" />
+      <path d="M 191 46 Q 194 50, 196 54" opacity="0.65" />
     </svg>
   );
 }
@@ -514,43 +586,63 @@ export function FishPlateEel(props: IconProps) {
 export function FishPlateCatfish(props: IconProps) {
   return (
     <svg
-      viewBox="0 0 160 110"
+      viewBox="0 0 200 110"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
       {...props}
     >
-      {/* Body — top arch with flat belly */}
-      <path d="M24 70 L 24 60 Q 28 28, 70 22 Q 110 18, 132 30 L 142 30 L 144 44 Q 144 56, 138 64 L 138 76 L 130 76 Q 110 80, 70 80 Q 32 80, 24 76 Z" />
-      {/* Belly line */}
-      <path d="M28 78 L 132 78" opacity="0.4" />
-      {/* Bony plates — vertical hatches across the body */}
-      <path
-        d="M46 28 L 46 76 M62 24 L 62 78 M80 22 L 80 78 M98 22 L 98 78 M116 24 L 116 78"
-        opacity="0.45"
-      />
-      {/* Dorsal fin — tall triangular, leaning back */}
-      <path d="M62 22 L 72 4 L 82 22 Z" />
-      {/* Adipose fin — small bump behind dorsal */}
-      <path d="M96 22 Q 102 14, 108 22" />
-      {/* Tail fork */}
-      <path d="M144 50 L 158 32 L 152 50 L 158 68 L 144 60 Z" />
-      {/* Pectoral fin — large, low and forward */}
-      <path d="M40 76 Q 46 96, 60 92 L 58 78 Z" />
+      {/* Body + forked caudal fin — humped back, flat belly. The body
+          arches up over the back and runs flat along the belly, with
+          the head ending in a blunt rounded snout. */}
+      <path d="
+        M 14 36
+        L 36 64
+        C 40 24, 100 18, 156 28
+        C 174 32, 188 42, 194 56
+        C 194 66, 188 76, 176 80
+        L 38 80
+        L 14 88
+        L 26 62
+        Z
+      " />
+
+      {/* Flat-belly emphasis line */}
+      <path d="M 38 80 L 176 80" opacity="0.35" />
+
+      {/* Tall triangular dorsal fin — the cory's banner */}
+      <path d="M 70 22 L 86 2 L 100 22 Z" />
+
+      {/* Adipose fin — small triangular bump behind the dorsal */}
+      <path d="M 124 22 L 132 12 L 138 22 Z" />
+
+      {/* Pectoral fin — large, set low and forward */}
+      <path d="M 152 80 L 168 102 L 174 82 Z" />
+
       {/* Pelvic fin */}
-      <path d="M86 80 Q 92 96, 102 92 L 100 80 Z" opacity="0.85" />
-      {/* Eye — set on top of head */}
-      <circle cx="130" cy="40" r="2.4" />
-      <circle cx="130" cy="40" r="1" fill="currentColor" />
-      {/* Mouth + barbels — downturned, with 4 short whiskers */}
-      <path d="M138 50 L 144 54" />
-      <path
-        d="M138 54 Q 142 60, 146 62 M140 56 Q 144 62, 150 64 M136 56 Q 140 64, 144 68 M138 58 Q 142 66, 148 70"
-        opacity="0.75"
-      />
+      <path d="M 106 80 L 116 96 L 124 80 Z" opacity="0.85" />
+
+      {/* Bony plate suggestion — corys have armored side plates */}
+      <path d="M 60 30 C 58 50, 58 65, 60 80" opacity="0.32" />
+      <path d="M 90 24 C 88 50, 88 68, 90 80" opacity="0.32" />
+      <path d="M 124 24 C 122 50, 122 68, 124 80" opacity="0.32" />
+      <path d="M 154 28 C 152 50, 152 65, 154 80" opacity="0.32" />
+
+      {/* Eye — set high on the head */}
+      <circle cx="172" cy="42" r="3.5" />
+      <circle cx="172" cy="42" r="1.5" fill="currentColor" />
+
+      {/* Mouth — downturned at the front of the snout */}
+      <path d="M 188 58 Q 192 64, 188 70" opacity="0.7" />
+
+      {/* Barbels — four whiskers fanning out from the mouth */}
+      <path d="M 186 64 Q 194 66, 200 68" opacity="0.7" />
+      <path d="M 184 66 Q 192 70, 199 72" opacity="0.7" />
+      <path d="M 184 68 Q 190 74, 195 78" opacity="0.65" />
+      <path d="M 184 70 Q 188 76, 192 82" opacity="0.6" />
     </svg>
   );
 }
@@ -562,35 +654,69 @@ export function FishPlateCatfish(props: IconProps) {
 export function FishPlateLivebearer(props: IconProps) {
   return (
     <svg
-      viewBox="0 0 160 110"
+      viewBox="0 0 200 110"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
       {...props}
     >
-      {/* Body — short slim ovoid */}
-      <path d="M50 55 C 54 32, 78 26, 100 30 C 116 34, 124 44, 126 55 C 124 66, 116 76, 100 80 C 78 84, 54 78, 50 55 Z" />
-      {/* Large fan tail — flares wide and arches above/below the body */}
-      <path d="M50 55 L 14 24 Q 8 36, 6 50 L 18 55 L 6 60 Q 8 74, 14 86 L 50 55 Z" />
-      {/* Tail rays */}
-      <path
-        d="M50 55 L 16 28 M50 55 L 12 38 M50 55 L 10 50 M50 55 L 10 60 M50 55 L 12 72 M50 55 L 16 82"
-        opacity="0.55"
-      />
-      {/* Dorsal fin — small triangular */}
-      <path d="M78 30 Q 84 16, 96 26 Z" />
-      {/* Anal fin — pointed (suggesting gonopodium) */}
-      <path d="M90 80 L 100 92 L 102 82 Z" opacity="0.85" />
-      {/* Eye */}
-      <circle cx="118" cy="48" r="2.6" />
-      <circle cx="118" cy="48" r="1.1" fill="currentColor" />
+      {/* Body — small ovoid sitting on the right side of the canvas,
+          leaving room for the dramatic fan tail to flare out left. */}
+      <path d="
+        M 74 55
+        C 84 30, 140 26, 168 34
+        C 184 38, 192 46, 196 55
+        C 192 64, 184 72, 168 76
+        C 140 84, 84 80, 74 55
+        Z
+      " />
+
+      {/* Fan tail — wide flowing flag from the caudal peduncle. Drawn
+          as a single rounded fan shape that arches above and below the
+          body's vertical centre. */}
+      <path d="
+        M 74 55
+        L 22 14
+        Q 8 28, 4 50
+        L 22 55
+        L 4 60
+        Q 8 82, 22 96
+        L 74 55
+        Z
+      " />
+
+      {/* Tail rays — subtle radiating lines from the caudal peduncle */}
+      <path d="M 74 55 L 24 20" opacity="0.45" />
+      <path d="M 74 55 L 14 32" opacity="0.45" />
+      <path d="M 74 55 L 6 45" opacity="0.45" />
+      <path d="M 74 55 L 6 65" opacity="0.45" />
+      <path d="M 74 55 L 14 78" opacity="0.45" />
+      <path d="M 74 55 L 24 90" opacity="0.45" />
+
+      {/* Dorsal fin — small triangular fin on the back */}
+      <path d="M 112 28 Q 122 12, 138 22 L 134 30 Q 122 30, 112 28 Z" />
+
+      {/* Anal fin / gonopodium — the male livebearer's pointed fin */}
+      <path d="M 124 76 L 134 92 L 134 78 Z" opacity="0.9" />
+
+      {/* Pectoral fin */}
+      <path d="M 152 64 Q 144 76, 132 76 L 144 64 Z" opacity="0.75" />
+
+      {/* Operculum */}
+      <path d="M 158 38 C 156 55, 156 55, 158 72" opacity="0.55" />
+
+      {/* Eye — large and forward */}
+      <circle cx="172" cy="48" r="4" />
+      <circle cx="172" cy="48" r="1.8" fill="currentColor" />
+
       {/* Mouth */}
-      <path d="M134 52 L 140 50 M134 58 L 140 60" />
-      {/* Lateral spot */}
-      <circle cx="82" cy="55" r="2" opacity="0.4" />
+      <path d="M 194 53 L 197 52" />
+
+      {/* Lateral spot — characteristic of Endler's male body */}
+      <circle cx="124" cy="56" r="2.2" opacity="0.4" />
     </svg>
   );
 }
