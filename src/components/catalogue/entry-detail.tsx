@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, ChevronDown, ExternalLink, MapPin } from "lucide-react";
+import { WaveMark } from "@/components/wave-mark";
+import { PillButton } from "@/components/ui/pill-button";
 import {
   CATEGORY_META,
   type CatalogueEntry,
@@ -396,21 +398,30 @@ function DetailSection({
   return (
     <section id={id} className="scroll-mt-28">
       {!hideHeader && (
-        <header className="mb-7 flex flex-col gap-3 sm:mb-8">
-          <span className="inline-flex items-center gap-2.5 text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-            <span
-              aria-hidden
-              className="font-semibold text-[var(--brand)] tabular-nums"
-            >
-              {String(number).padStart(2, "0")}
+        <header className="mb-8 flex flex-col gap-4 sm:mb-10">
+          {/* Stamp row — brand mark left, big numeral right. Mirrors the
+              postage-stamp card chrome from the reference set. */}
+          <div className="stamp-row">
+            <span className="stamp-mark" aria-hidden>
+              <WaveMark className="size-full" />
             </span>
             <span
+              className="text-[10px] font-medium uppercase tracking-[0.24em] text-muted-foreground"
               aria-hidden
-              className="h-px w-8 bg-[var(--brand)]/40"
-            />
-            {eyebrow}
-          </span>
-          <h2 className="text-display-tight text-3xl sm:text-4xl md:text-[2.75rem]">
+            >
+              {eyebrow}
+            </span>
+            <span className="stamp-numeral" aria-hidden>
+              {String(number).padStart(2, "0")}
+            </span>
+          </div>
+          {/* Thin brand rule under the stamp row, like the printed edge
+              on a field-guide section divider. */}
+          <span
+            aria-hidden
+            className="h-px w-full bg-[var(--brand)]/25"
+          />
+          <h2 className="text-display-tight mt-1 text-3xl sm:text-4xl md:text-[2.75rem]">
             {title}
           </h2>
           {subtitle && (

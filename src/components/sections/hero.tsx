@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Eyebrow } from "@/components/sections/section-shell";
 import { PhotoCredit } from "@/components/sections/photo-credit";
+import { PillButton } from "@/components/ui/pill-button";
 import { WaveMark } from "@/components/wave-mark";
 import type { AtmosphereImage } from "@/data/atmosphere";
 
@@ -105,27 +104,17 @@ export function Hero({
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Link
-              href={primaryCta.href}
-              className={cn(
-                buttonVariants({ size: "lg" }),
-                "h-12 rounded-full px-6 text-sm font-medium shadow-[0_8px_24px_-8px_color-mix(in_oklab,var(--brand)_60%,transparent)] transition-transform hover:-translate-y-0.5",
-              )}
-            >
+            <PillButton href={primaryCta.href} size="lg">
               {primaryCta.label}
-              <ArrowRight className="ml-1 size-4" aria-hidden />
-            </Link>
+            </PillButton>
             {secondaryCta && (
-              <Link
+              <PillButton
                 href={secondaryCta.href}
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background/70 px-5 text-sm font-medium backdrop-blur transition-colors hover:bg-background"
+                variant="ghost"
+                size="lg"
               >
                 {secondaryCta.label}
-                <span
-                  aria-hidden
-                  className="inline-block size-1.5 rounded-full bg-[var(--brand)]"
-                />
-              </Link>
+              </PillButton>
             )}
           </div>
         </div>
