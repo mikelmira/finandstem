@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, MapPin } from "lucide-react";
+import { ArrowLeft, ChevronDown, ExternalLink, MapPin } from "lucide-react";
 import {
   CATEGORY_META,
   type CatalogueEntry,
@@ -16,8 +16,10 @@ import { Eyebrow, SectionShell } from "@/components/sections/section-shell";
 import { EntryCard } from "@/components/catalogue/entry-card";
 import { EntryImage } from "@/components/catalogue/entry-image";
 import { ImageGallery } from "@/components/catalogue/image-gallery";
-import { AtAGlance } from "@/components/catalogue/at-a-glance";
-import { QuickFacts, type QuickFact } from "@/components/catalogue/quick-facts";
+import { HeroKeyFacts } from "@/components/catalogue/hero-key-facts";
+import { TankFitPanel } from "@/components/catalogue/tank-fit-panel";
+import { StickyToc, type StickyTocItem } from "@/components/catalogue/sticky-toc";
+import { type QuickFact } from "@/components/catalogue/quick-facts";
 import { TankMatesPanel } from "@/components/catalogue/tank-mates-panel";
 import { GroupedSection } from "@/components/catalogue/grouped-section";
 import { ProTipsCallout } from "@/components/catalogue/pro-tips-callout";
@@ -66,6 +68,15 @@ export function EntryDetail({
   const grouped = groupDetailSections(sections, entry.category);
   const facts = deriveQuickFacts(entry);
 
+  // Pluck the themed groups by key so we can render them in the new
+  // priority order (tank mates → pro tips → watch → care → background).
+  const careGroup = grouped.groups.find((g) => g.key === "care");
+  const watchGroup = grouped.groups.find((g) => g.key === "watch");
+  const wildGroup = grouped.groups.find((g) => g.key === "wild");
+  const behaviorGroup = grouped.groups.find((g) => g.key === "behavior");
+  const variantsGroup = grouped.groups.find((g) => g.key === "variants");
+  const hasBackground = Boolean(wildGroup ?? behaviorGroup ?? variantsGroup);
+
   // Pick 3 related entries from the same category
   const peers = getCategoryEntries(entry.category).filter(
     (e) => e.slug !== entry.slug,
@@ -80,9 +91,23 @@ export function EntryDetail({
     .map((c) => allEntries.find((e) => e.category === c))
     .filter((e): e is CatalogueEntry => Boolean(e));
 
+  // Sticky TOC items — generated from what's actually present so the
+  // numbering matches what the reader sees.
+  const tocItems: StickyTocItem[] = [
+    { id: "tank-fit", label: "Tank fit" },
+    { id: "tank-mates", label: "Tank mates" },
+    ...(grouped.protips.length > 0
+      ? [{ id: "pro-tips", label: "Pro tips" }]
+      : []),
+    ...(watchGroup ? [{ id: "watch", label: "Watch for" }] : []),
+    ...(careGroup ? [{ id: "care", label: "Care guide" }] : []),
+    ...(hasBackground ? [{ id: "background", label: "Background" }] : []),
+    ...(gallery.length > 1 ? [{ id: "gallery", label: "Gallery" }] : []),
+  ];
+
   return (
     <>
-      {/* Hero ─────────────────────────────────────────────────────── */}
+      {/* ─── Hero ────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden border-b border-border/60">
         <div className="brand-aurora absolute inset-0 -z-20 opacity-80" aria-hidden />
         <div className="bg-grid absolute inset-0 -z-10 opacity-50" aria-hidden />
@@ -119,6 +144,9 @@ export function EntryDetail({
                 />
               </div>
 
+              {/* Key-fact pills — the 3 most decision-critical numbers */}
+              <HeroKeyFacts entry={entry} />
+
               {/* Care summary, sits with the title block */}
               <div className="glass glass-edge animate-rise mt-7 rounded-2xl p-6 sm:p-7">
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
@@ -130,7 +158,7 @@ export function EntryDetail({
               </div>
             </div>
 
-            {/* Right — feature image with attribution */}
+            {/* Right — feature image */}
             {image && (
               <div className="lg:pt-8">
                 <EntryImage image={image} ratio="tall" priority />
@@ -140,157 +168,173 @@ export function EntryDetail({
         </div>
       </section>
 
-      {/* 1. AT A GLANCE — visual parameter charts ────────────────── */}
-      <SectionShell className="!pt-12 sm:!pt-16">
-        <header className="mb-6 flex flex-col gap-1">
-          <h2 className="text-display-tight text-2xl sm:text-3xl">
-            At a glance
-          </h2>
-          <p className="text-sm text-muted-foreground sm:text-base">
-            The parameters that decide whether {entry.commonName.toLowerCase()}{" "}
-            fits in your tank.
-          </p>
-        </header>
-        <AtAGlance entry={entry} />
-      </SectionShell>
+      {/* ─── Main column + sticky TOC on the right rail ──────────── */}
+      <div className="mx-auto w-full max-w-7xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-14 xl:gap-20">
+          <main className="flex min-w-0 flex-col gap-16 sm:gap-20">
+            {/* 1. TANK FIT — parameter charts + categorical facts */}
+            <DetailSection
+              id="tank-fit"
+              eyebrow="Decision"
+              number={1}
+              title="Tank fit"
+              subtitle={`The parameters that decide whether ${entry.commonName.toLowerCase()} fits in your tank.`}
+            >
+              <TankFitPanel entry={entry} facts={facts} />
+            </DetailSection>
 
-      {/* 2. QUICK FACTS — compact category-specific facts ────────── */}
-      {facts.length > 0 && (
-        <SectionShell className="!pt-0">
-          <header className="mb-6 flex flex-col gap-1">
-            <h2 className="text-display-tight text-2xl sm:text-3xl">
-              Quick facts
-            </h2>
-            <p className="text-sm text-muted-foreground sm:text-base">
-              The lookup table for everything that isn&rsquo;t a parameter.
-            </p>
-          </header>
-          <QuickFacts facts={facts} />
-        </SectionShell>
-      )}
+            {/* 2. WHO IT LIVES WITH */}
+            <DetailSection
+              id="tank-mates"
+              eyebrow="Compatibility"
+              number={2}
+              title="Who it lives with"
+              subtitle="Tank-mate safety and the species this one is documented to thrive (or fail) alongside."
+            >
+              <TankMatesPanel
+                entry={entry}
+                good={grouped.goodTankMates}
+                bad={grouped.badTankMates}
+                compatHref={`/compatibility?anchor=${entry.category}:${entry.slug}`}
+              />
+            </DetailSection>
 
-      {/* 3. WHO IT LIVES WITH ─────────────────────────────────────── */}
-      <SectionShell className="!pt-0">
-        <header className="mb-6 flex flex-col gap-1">
-          <h2 className="text-display-tight text-2xl sm:text-3xl">
-            Who it lives with
-          </h2>
-          <p className="text-sm text-muted-foreground sm:text-base">
-            Tank-mate safety and the species this one is documented to thrive
-            (or fail) alongside.
-          </p>
-        </header>
-        <TankMatesPanel
-          entry={entry}
-          good={grouped.goodTankMates}
-          bad={grouped.badTankMates}
-          compatHref={`/compatibility?anchor=${entry.category}:${entry.slug}`}
-        />
-      </SectionShell>
-
-      {/* 4. THEMED SECTIONS — each rendered with its own distinct UI ─ */}
-      {grouped.groups.map((g) => (
-        <SectionShell key={g.key} className="!pt-0">
-          {g.key === "care" ? (
-            <CareSteps sections={g.sections} />
-          ) : g.key === "wild" ? (
-            <WildSplit entry={entry} sections={g.sections} />
-          ) : g.key === "behavior" ? (
-            <BehaviorTimeline sections={g.sections} />
-          ) : g.key === "variants" ? (
-            <VariantsBoard sections={g.sections} />
-          ) : g.key === "watch" ? (
-            <WatchOutCards sections={g.sections} />
-          ) : (
-            <GroupedSection group={g} />
-          )}
-        </SectionShell>
-      ))}
-
-      {/* 5. PRO TIPS callout ─────────────────────────────────────── */}
-      {grouped.protips.length > 0 && (
-        <SectionShell className="!pt-0">
-          <ProTipsCallout sections={grouped.protips} />
-        </SectionShell>
-      )}
-
-      {/* 6. GALLERY ──────────────────────────────────────────────── */}
-      {gallery.length > 1 && (
-        <SectionShell className="!pt-0">
-          <header className="mb-6 flex flex-col gap-1">
-            <h2 className="text-display-tight text-2xl sm:text-3xl">Gallery</h2>
-            <p className="text-sm text-muted-foreground sm:text-base">
-              {gallery.length} photos sourced from Wikimedia Commons,
-              iNaturalist, and retailer catalogues — every image links back to
-              its source.
-            </p>
-          </header>
-          <ImageGallery images={gallery} />
-        </SectionShell>
-      )}
-
-      {/* 7. IMAGE ATTRIBUTION — small fine-print card ────────────── */}
-      {image && (
-        <SectionShell className="!pt-0">
-          <div className="glass rounded-2xl p-5 sm:p-6">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div className="max-w-2xl">
-                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                  Hero image credit
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                  Photo by{" "}
-                  <span className="font-medium">
-                    {image.author && image.author !== "Unknown"
-                      ? image.author
-                      : "Unknown contributor"}
-                  </span>
-                  {image.license && (
-                    <>
-                      , licensed under{" "}
-                      {image.licenseUrl ? (
-                        <a
-                          href={image.licenseUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="link-underline font-medium text-[var(--brand)]"
-                        >
-                          {image.license}
-                        </a>
-                      ) : (
-                        <span className="font-medium">{image.license}</span>
-                      )}
-                    </>
-                  )}
-                  . Source:{" "}
-                  <a
-                    href={image.descriptionUrl ?? entry.imageSourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-underline font-medium text-[var(--brand)]"
-                  >
-                    file page
-                  </a>
-                  .
-                </p>
-              </div>
-              <a
-                href={entry.imageSourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="press inline-flex items-center gap-1.5 rounded-full border border-border bg-background/70 px-4 py-2 text-xs font-medium transition-colors hover:border-[var(--brand)]/40"
+            {/* 3. PRO TIPS — promoted up: editorial moat */}
+            {grouped.protips.length > 0 && (
+              <DetailSection
+                id="pro-tips"
+                eyebrow="Hard-won"
+                number={3}
+                title="Pro tips"
+                subtitle="Lessons from the tank that won't show up in a parameter chart."
+                hideHeader
               >
-                Wikipedia article
-                <ExternalLink className="size-3.5" aria-hidden />
-              </a>
-            </div>
-          </div>
-        </SectionShell>
-      )}
+                <ProTipsCallout sections={grouped.protips} />
+              </DetailSection>
+            )}
 
-      {/* 8. MORE IN THIS CATEGORY ────────────────────────────────── */}
+            {/* 4. WATCH FOR — promoted: high-value pitfall content */}
+            {watchGroup && (
+              <DetailSection
+                id="watch"
+                eyebrow="Heads-up"
+                number={nextNumber(tocItems, "watch")}
+                title={watchGroup.label}
+                subtitle={watchGroup.blurb}
+              >
+                <WatchOutCards sections={watchGroup.sections} />
+              </DetailSection>
+            )}
+
+            {/* 5. CARE GUIDE — what you actually do */}
+            {careGroup && (
+              <DetailSection
+                id="care"
+                eyebrow="Day to day"
+                number={nextNumber(tocItems, "care")}
+                title={careGroup.label}
+                subtitle={careGroup.blurb}
+                hideHeader
+              >
+                <CareSteps sections={careGroup.sections} />
+              </DetailSection>
+            )}
+
+            {/* 6. BACKGROUND — wild + behavior + variants, collapsible */}
+            {hasBackground && (
+              <DetailSection
+                id="background"
+                eyebrow="Origins"
+                number={nextNumber(tocItems, "background")}
+                title="Background"
+                subtitle="Where it comes from, how it behaves, and the variants you'll see at retail."
+              >
+                <details
+                  className="group/bg flex flex-col gap-12 sm:gap-16"
+                  open
+                >
+                  <summary className="press inline-flex w-fit cursor-pointer list-none items-center gap-2 rounded-full border border-border/60 bg-background/60 px-3.5 py-1.5 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:border-[var(--brand)]/40 hover:text-foreground [&::-webkit-details-marker]:hidden">
+                    <ChevronDown
+                      className="size-3.5 transition-transform duration-200 group-open/bg:rotate-180"
+                      strokeWidth={2}
+                      aria-hidden
+                    />
+                    <span className="group-open/bg:hidden">Show background</span>
+                    <span className="hidden group-open/bg:inline">Hide background</span>
+                  </summary>
+
+                  <div className="flex flex-col gap-12 sm:gap-16">
+                    {wildGroup && (
+                      <WildSplit entry={entry} sections={wildGroup.sections} />
+                    )}
+                    {behaviorGroup && (
+                      <BehaviorTimeline sections={behaviorGroup.sections} />
+                    )}
+                    {variantsGroup && (
+                      <VariantsBoard sections={variantsGroup.sections} />
+                    )}
+                  </div>
+                </details>
+              </DetailSection>
+            )}
+
+            {/* Render any leftover themed groups we didn't explicitly pluck
+                (defensive — should be empty given the mapping in detail-groups). */}
+            {grouped.groups
+              .filter(
+                (g) =>
+                  !["care", "watch", "wild", "behavior", "variants"].includes(
+                    g.key,
+                  ),
+              )
+              .map((g) => (
+                <DetailSection
+                  key={g.key}
+                  id={`group-${g.key}`}
+                  eyebrow="More"
+                  number={0}
+                  title={g.label}
+                  subtitle={g.blurb}
+                  hideHeader
+                >
+                  <GroupedSection group={g} />
+                </DetailSection>
+              ))}
+
+            {/* 7. GALLERY — with attribution moved inline */}
+            {gallery.length > 1 && (
+              <DetailSection
+                id="gallery"
+                eyebrow="Photos"
+                number={nextNumber(tocItems, "gallery")}
+                title="Gallery"
+                subtitle={`${gallery.length} photos sourced from Wikimedia Commons, iNaturalist, and retailer catalogues — every image links back to its source.`}
+              >
+                <div className="flex flex-col gap-6">
+                  <ImageGallery images={gallery} />
+                  {image && (
+                    <HeroImageAttribution
+                      image={image}
+                      wikipediaUrl={entry.imageSourceUrl}
+                    />
+                  )}
+                </div>
+              </DetailSection>
+            )}
+          </main>
+
+          {/* Right rail — sticky TOC (desktop only) */}
+          {tocItems.length > 1 && (
+            <aside className="relative hidden lg:block">
+              <StickyToc items={tocItems} />
+            </aside>
+          )}
+        </div>
+      </div>
+
+      {/* ─── More in this category (full-bleed footer block) ─────── */}
       {related.length > 0 && (
-        <SectionShell className="border-t border-border/60">
+        <SectionShell className="border-t border-border/60 !pt-16 sm:!pt-20">
           <h2 className="text-display-tight text-2xl sm:text-3xl">
             More {meta.label.toLowerCase()}
           </h2>
@@ -311,7 +355,7 @@ export function EntryDetail({
         </SectionShell>
       )}
 
-      {/* 9. COMPANIONS — cross-category ─────────────────────────── */}
+      {/* ─── Companions — cross-category ─────────────────────────── */}
       {companions.length > 0 && (
         <SectionShell className="border-t border-border/60">
           <h2 className="text-display-tight text-2xl sm:text-3xl">
@@ -329,6 +373,128 @@ export function EntryDetail({
         </SectionShell>
       )}
     </>
+  );
+}
+
+/**
+ * Consistent section wrapper for the main column. Renders a numbered
+ * eyebrow + title + subtitle, with the section's id wired up so the
+ * sticky TOC can scroll to it.
+ */
+function DetailSection({
+  id,
+  eyebrow,
+  number,
+  title,
+  subtitle,
+  hideHeader = false,
+  children,
+}: {
+  id: string;
+  eyebrow: string;
+  number: number;
+  title: string;
+  subtitle?: string;
+  hideHeader?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <section id={id} className="scroll-mt-28">
+      {!hideHeader && (
+        <header className="mb-6 flex flex-col gap-2">
+          <span className="inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            <span
+              aria-hidden
+              className="text-[var(--brand)] tabular-nums"
+            >
+              {String(number).padStart(2, "0")}
+            </span>
+            <span
+              aria-hidden
+              className="h-px w-6 bg-[var(--brand)]/30"
+            />
+            {eyebrow}
+          </span>
+          <h2 className="text-display-tight text-2xl sm:text-3xl">{title}</h2>
+          {subtitle && (
+            <p className="text-pretty text-sm text-muted-foreground sm:text-base">
+              {subtitle}
+            </p>
+          )}
+        </header>
+      )}
+      {children}
+    </section>
+  );
+}
+
+/** Looks up a section's 1-based position in the rendered TOC list. */
+function nextNumber(items: ReadonlyArray<StickyTocItem>, id: string): number {
+  const idx = items.findIndex((i) => i.id === id);
+  return idx === -1 ? items.length + 1 : idx + 1;
+}
+
+function HeroImageAttribution({
+  image,
+  wikipediaUrl,
+}: {
+  image: NonNullable<ReturnType<typeof getImage>>;
+  wikipediaUrl: string;
+}) {
+  return (
+    <div className="glass rounded-2xl p-5 sm:p-6">
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div className="max-w-2xl">
+          <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            Hero image credit
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-foreground/85">
+            Photo by{" "}
+            <span className="font-medium">
+              {image.author && image.author !== "Unknown"
+                ? image.author
+                : "Unknown contributor"}
+            </span>
+            {image.license && (
+              <>
+                , licensed under{" "}
+                {image.licenseUrl ? (
+                  <a
+                    href={image.licenseUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline font-medium text-[var(--brand)]"
+                  >
+                    {image.license}
+                  </a>
+                ) : (
+                  <span className="font-medium">{image.license}</span>
+                )}
+              </>
+            )}
+            . Source:{" "}
+            <a
+              href={image.descriptionUrl ?? wikipediaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline font-medium text-[var(--brand)]"
+            >
+              file page
+            </a>
+            .
+          </p>
+        </div>
+        <a
+          href={wikipediaUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="press inline-flex items-center gap-1.5 rounded-full border border-border bg-background/70 px-4 py-2 text-xs font-medium transition-colors hover:border-[var(--brand)]/40"
+        >
+          Wikipedia article
+          <ExternalLink className="size-3.5" aria-hidden />
+        </a>
+      </div>
+    </div>
   );
 }
 

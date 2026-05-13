@@ -64,7 +64,7 @@ export function BehaviorTimeline({
                 {!isLast && (
                   <span
                     aria-hidden
-                    className="ml-3 hidden h-px flex-1 bg-gradient-to-r from-[var(--brand)]/40 to-transparent sm:block"
+                    className="ml-3 hidden h-px flex-1 bg-[var(--brand)]/25 sm:block"
                   />
                 )}
                 <span className="ml-auto text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground sm:ml-3">

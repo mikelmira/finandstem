@@ -215,7 +215,7 @@ export function FlowDemand({ raw, className }: FlowDemandProps) {
                     className={cn(
                       "h-[2px] rounded-full transition-colors",
                       active
-                        ? "bg-gradient-to-r from-[var(--brand)]/80 to-[var(--leaf)]/95"
+                        ? "bg-[var(--brand)]/85"
                         : "bg-foreground/15",
                     )}
                   />
@@ -274,7 +274,7 @@ export function GrowthRateBadge({ raw, className }: GrowthRateBadgeProps) {
                 className={cn(
                   "w-2 rounded-t-md transition-colors",
                   active
-                    ? "bg-gradient-to-t from-[var(--brand)]/75 to-[var(--leaf)]/95"
+                    ? "bg-[var(--brand)]/85"
                     : "bg-foreground/15",
                 )}
               />

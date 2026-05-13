@@ -77,7 +77,7 @@ export function SiteFooter() {
       <div className="relative mt-12 select-none overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-border/60"
         />
         <div
           aria-hidden

@@ -127,7 +127,7 @@ export function MultiRangeBar({
           ))}
           {intersection && (
             <div
-              className="absolute inset-y-0 rounded-full bg-gradient-to-r from-[var(--brand)]/85 to-[var(--leaf)]/90 shadow-[0_0_14px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
+              className="absolute inset-y-0 rounded-full bg-[var(--brand)]/85 shadow-[0_0_14px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
               style={{
                 left: `${clamp(intersection.min)}%`,
                 width: `${Math.max(2, clamp(intersection.max) - clamp(intersection.min))}%`,

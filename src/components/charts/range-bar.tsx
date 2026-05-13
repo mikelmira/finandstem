@@ -18,10 +18,10 @@ interface RangeBarProps {
   className?: string;
 }
 
-const TONE: Record<NonNullable<RangeBarProps["tone"]>, { from: string; to: string }> = {
-  brand: { from: "from-[var(--brand)]/65", to: "to-[var(--leaf)]/85" },
-  blue: { from: "from-sky-400/60", to: "to-sky-300/85" },
-  warning: { from: "from-amber-400/65", to: "to-amber-300/85" },
+const TONE: Record<NonNullable<RangeBarProps["tone"]>, { fill: string }> = {
+  brand: { fill: "bg-[var(--brand)]/80" },
+  blue: { fill: "bg-sky-400/75" },
+  warning: { fill: "bg-amber-400/80" },
 };
 
 export function RangeBar({
@@ -68,9 +68,8 @@ export function RangeBar({
         {range && (
           <div
             className={cn(
-              "absolute inset-y-0 rounded-full bg-gradient-to-r shadow-[0_0_12px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]",
-              colour.from,
-              colour.to,
+              "absolute inset-y-0 rounded-full shadow-[0_0_12px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]",
+              colour.fill,
             )}
             style={{
               left: `${clamp(range.min)}%`,

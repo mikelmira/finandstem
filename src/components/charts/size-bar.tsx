@@ -73,7 +73,7 @@ export function SizeBar({
           >
             {range && (
               <div
-                className="absolute inset-y-0 rounded-full bg-gradient-to-r from-[var(--brand)]/70 to-[var(--leaf)]/85 shadow-[0_0_10px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
+                className="absolute inset-y-0 rounded-full bg-[var(--brand)]/80 shadow-[0_0_10px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
                 style={{
                   left: `${clamp(range.min)}%`,
                   width: `${Math.max(2, clamp(range.max) - clamp(range.min))}%`,

@@ -65,7 +65,7 @@ export function WildSplit({ entry, sections, className }: WildSplitProps) {
         {/* Habitat pull-quote */}
         {habitat && (
           <article className="animate-fade-up glass glass-edge relative overflow-hidden rounded-2xl p-7 sm:p-9">
-            {/* Subtle leaf gradient texture in the corner */}
+            {/* Subtle leaf-tinted glow in the corner */}
             <span
               aria-hidden
               className="pointer-events-none absolute -right-10 -top-10 size-60 rounded-full bg-[var(--leaf)]/12 blur-3xl"

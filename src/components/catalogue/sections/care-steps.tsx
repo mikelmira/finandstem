@@ -40,7 +40,7 @@ export function CareSteps({ sections, className }: CareStepsProps) {
         {/* Vertical connector line — runs behind the icons */}
         <span
           aria-hidden
-          className="absolute left-[27px] top-6 bottom-6 w-px bg-gradient-to-b from-[var(--brand)]/40 via-[var(--brand)]/15 to-transparent sm:left-[35px]"
+          className="absolute left-[27px] top-6 bottom-6 w-px bg-[var(--brand)]/25 sm:left-[35px]"
         />
 
         {sections.map((s, i) => {

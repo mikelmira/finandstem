@@ -291,7 +291,7 @@ export function RangePair({
           className={cn(
             "absolute h-1.5 rounded-full transition-colors",
             active
-              ? "bg-gradient-to-r from-[var(--brand)]/85 to-[var(--leaf)]/90 shadow-[0_0_10px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
+              ? "bg-[var(--brand)]/85 shadow-[0_0_10px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
               : "bg-foreground/15",
           )}
           style={{

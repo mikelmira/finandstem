@@ -29,13 +29,7 @@ export function ProTipsCallout({ sections, className }: ProTipsCalloutProps) {
         </p>
       </header>
 
-      <div
-        className="glass glass-edge relative overflow-hidden rounded-2xl p-6 sm:p-8"
-        style={{
-          backgroundImage:
-            "radial-gradient(ellipse 60% 80% at 100% 0%, color-mix(in oklab, var(--brand) 18%, transparent) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 0% 100%, color-mix(in oklab, var(--leaf) 14%, transparent) 0%, transparent 65%)",
-        }}
-      >
+      <div className="glass glass-edge relative overflow-hidden rounded-2xl p-6 sm:p-8">
         {proTips && (
           <div className="flex gap-4">
             <span

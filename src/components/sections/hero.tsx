@@ -67,7 +67,7 @@ export function Hero({
         <div className="bg-grid absolute inset-0 -z-10 opacity-60" aria-hidden />
       )}
       <div
-        className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+        className="absolute inset-x-0 top-0 -z-10 h-px bg-border/60"
         aria-hidden
       />
 

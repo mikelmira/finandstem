@@ -267,12 +267,7 @@
   border-radius: inherit;
   padding: 1px;
   pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--brand) 55%, transparent) 0%,
-    color-mix(in oklab, var(--brand) 0%, transparent) 40%,
-    color-mix(in oklab, var(--moss) 40%, transparent) 100%
-  );
+  background: color-mix(in oklab, var(--brand) 28%, transparent);
   mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -283,12 +278,7 @@
   -webkit-mask-composite: xor;
 }
 .dark .glass-edge::before {
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--brand) 32%, transparent) 0%,
-    color-mix(in oklab, var(--brand) 0%, transparent) 40%,
-    color-mix(in oklab, var(--abyss) 70%, transparent) 100%
-  );
+  background: color-mix(in oklab, var(--brand) 18%, transparent);
 }
 
 /* ─── Atmospheric backgrounds ──────────────────────────────────────────── */
@@ -397,14 +387,7 @@
   letter-spacing: -0.06em;
   font-variation-settings: "opsz" 144;
   line-height: 0.78;
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--brand) 22%, transparent) 0%,
-    color-mix(in oklab, var(--moss) 12%, transparent) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: color-mix(in oklab, var(--brand) 18%, transparent);
   user-select: none;
 }
 
@@ -487,22 +470,17 @@
 
 /* Loading shimmer — used on skeletons and pending UI. */
 @keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
+  0%,
   100% {
-    background-position: 200% 0;
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.85;
   }
 }
 
 .shimmer {
-  background: linear-gradient(
-    90deg,
-    color-mix(in oklab, var(--muted) 60%, transparent) 0%,
-    color-mix(in oklab, var(--brand) 12%, transparent) 50%,
-    color-mix(in oklab, var(--muted) 60%, transparent) 100%
-  );
-  background-size: 200% 100%;
+  background: color-mix(in oklab, var(--muted) 60%, transparent);
   animation: shimmer 1.6s ease-in-out infinite;
 }
 
@@ -639,16 +617,9 @@
   }
 }
 
-/* Section divider — fades brand colour across the top edge */
+/* Section divider — thin brand-tinted top edge */
 .divider-brand {
-  border-top: 1px solid transparent;
-  border-image: linear-gradient(
-      90deg,
-      transparent 0%,
-      color-mix(in oklab, var(--brand) 35%, transparent) 50%,
-      transparent 100%
-    )
-    1;
+  border-top: 1px solid color-mix(in oklab, var(--brand) 18%, transparent);
 }
 
 /* Dual-thumb range slider — two stacked <input type="range"> with only
