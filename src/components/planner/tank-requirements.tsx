@@ -86,74 +86,92 @@ export function TankRequirementsPanel({
           label="Temperature"
           index={1}
         >
-          {contributions.temp.length >= 2 ? (
-            <MultiRangeBar
-              label="Temperature"
-              unit="°C"
-              scale={{ min: 15, max: 32 }}
-              ticks={[15, 20, 25, 30]}
-              precision={0}
-              species={contributions.temp}
-              intersection={r.temp}
-            />
-          ) : r.temp ? (
-            <RangeBar
-              label="Target window"
-              unit="°C"
-              scale={{ min: 15, max: 32 }}
-              range={r.temp}
-              precision={0}
-              ticks={[15, 20, 25, 30]}
-            />
+          {r.temp ? (
+            <div className="flex flex-col gap-4">
+              <RangeBar
+                label="Target window"
+                unit="°C"
+                scale={{ min: 15, max: 32 }}
+                range={r.temp}
+                precision={0}
+                ticks={[15, 20, 25, 30]}
+              />
+              {contributions.temp.length >= 2 && (
+                <PerSpeciesBreakdown>
+                  <MultiRangeBar
+                    label="Temperature"
+                    unit="°C"
+                    scale={{ min: 15, max: 32 }}
+                    ticks={[15, 20, 25, 30]}
+                    precision={0}
+                    species={contributions.temp}
+                    intersection={r.temp}
+                    compact
+                  />
+                </PerSpeciesBreakdown>
+              )}
+            </div>
           ) : (
             <Conflict label="No overlapping temperature window" />
           )}
         </RequirementCard>
 
         <RequirementCard icon={Droplet} label="pH" index={2}>
-          {contributions.ph.length >= 2 ? (
-            <MultiRangeBar
-              label="pH"
-              scale={{ min: 4, max: 8.5 }}
-              ticks={[4, 5, 6, 7, 8]}
-              precision={1}
-              species={contributions.ph}
-              intersection={r.ph}
-            />
-          ) : r.ph ? (
-            <RangeBar
-              label="Target window"
-              scale={{ min: 4, max: 8.5 }}
-              range={r.ph}
-              precision={1}
-              ticks={[4, 5, 6, 7, 8]}
-              tone="blue"
-            />
+          {r.ph ? (
+            <div className="flex flex-col gap-4">
+              <RangeBar
+                label="Target window"
+                scale={{ min: 4, max: 8.5 }}
+                range={r.ph}
+                precision={1}
+                ticks={[4, 5, 6, 7, 8]}
+                tone="blue"
+              />
+              {contributions.ph.length >= 2 && (
+                <PerSpeciesBreakdown>
+                  <MultiRangeBar
+                    label="pH"
+                    scale={{ min: 4, max: 8.5 }}
+                    ticks={[4, 5, 6, 7, 8]}
+                    precision={1}
+                    species={contributions.ph}
+                    intersection={r.ph}
+                    compact
+                  />
+                </PerSpeciesBreakdown>
+              )}
+            </div>
           ) : (
             <Conflict label="No overlapping pH window" />
           )}
         </RequirementCard>
 
         <RequirementCard icon={FlaskConical} label="Hardness" index={3}>
-          {contributions.dgh.length >= 2 ? (
-            <MultiRangeBar
-              label="Hardness"
-              unit="dGH"
-              scale={{ min: 0, max: 25 }}
-              ticks={[0, 5, 10, 15, 20, 25]}
-              precision={0}
-              species={contributions.dgh}
-              intersection={r.dgh}
-            />
-          ) : r.dgh ? (
-            <RangeBar
-              label="Target window"
-              unit="dGH"
-              scale={{ min: 0, max: 25 }}
-              range={r.dgh}
-              precision={0}
-              ticks={[0, 5, 10, 15, 20, 25]}
-            />
+          {r.dgh ? (
+            <div className="flex flex-col gap-4">
+              <RangeBar
+                label="Target window"
+                unit="dGH"
+                scale={{ min: 0, max: 25 }}
+                range={r.dgh}
+                precision={0}
+                ticks={[0, 5, 10, 15, 20, 25]}
+              />
+              {contributions.dgh.length >= 2 && (
+                <PerSpeciesBreakdown>
+                  <MultiRangeBar
+                    label="Hardness"
+                    unit="dGH"
+                    scale={{ min: 0, max: 25 }}
+                    ticks={[0, 5, 10, 15, 20, 25]}
+                    precision={0}
+                    species={contributions.dgh}
+                    intersection={r.dgh}
+                    compact
+                  />
+                </PerSpeciesBreakdown>
+              )}
+            </div>
           ) : (
             <NoData label="No hardness data among the selection" />
           )}
@@ -346,6 +364,21 @@ function RequirementCard({
       </div>
       <div>{children}</div>
     </article>
+  );
+}
+
+/** Small subordinate wrapper used to anchor the per-species
+ *  breakdown beneath the primary target-window bar. Gives it a
+ *  "Per species" eyebrow and a thin top divider so the user can
+ *  see the relationship at a glance. */
+function PerSpeciesBreakdown({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex flex-col gap-2 border-t border-foreground/8 pt-3">
+      <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+        Per species
+      </span>
+      {children}
+    </div>
   );
 }
 
