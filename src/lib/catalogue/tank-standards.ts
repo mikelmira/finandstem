@@ -262,14 +262,23 @@ export const CO2_SCALE_LABELS: Record<Co2Scale, string> = {
  *   ≤ 1.5  full
  *   > 1.5  overstocked
  */
+/**
+ * Stocking verdict — `tooSmall` overrides the bioload bands when at
+ * least one selected species' `minTankL` exceeds the chosen tank
+ * volume. In that case the bioload number is technically fine but
+ * the user can't keep these species in this tank for *dimensional*
+ * reasons (a 3 cm tetra needs horizontal swimming room for the
+ * whole shoal, even if the cumulative bioload is low).
+ */
 export type StockingVerdict =
+  | "tooSmall"
   | "understocked"
   | "comfortable"
   | "full"
   | "overstocked";
 
 export const STOCKING_BANDS: Record<
-  StockingVerdict,
+  Exclude<StockingVerdict, "tooSmall">,
   { min: number; max: number; label: string; blurb: string }
 > = {
   understocked: {
@@ -298,7 +307,9 @@ export const STOCKING_BANDS: Record<
   },
 };
 
-export function verdictForLoad(loadPerL: number): StockingVerdict {
+export function verdictForLoad(
+  loadPerL: number,
+): Exclude<StockingVerdict, "tooSmall"> {
   if (loadPerL <= STOCKING_BANDS.understocked.max) return "understocked";
   if (loadPerL <= STOCKING_BANDS.comfortable.max) return "comfortable";
   if (loadPerL <= STOCKING_BANDS.full.max) return "full";

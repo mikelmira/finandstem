@@ -102,6 +102,14 @@ export interface StockingReport {
    *  is assuming (group size × adult length). Sorted by contribution
    *  descending. */
   breakdown: StockingItem[];
+  /** When the verdict is "tooSmall", these are the species whose
+   *  minTankL exceeds the user's tank size — so the UI can name
+   *  them directly. */
+  oversizedSpecies: ReadonlyArray<{ commonName: string; minTankL: number }>;
+  /** The required tank size = max minTankL across the selection.
+   *  Populated whenever we have at least one species with a
+   *  minTankL value, regardless of tank size. */
+  requiredTankL: number | null;
 }
 
 export interface FilterReport {
@@ -649,11 +657,37 @@ function computeBioload(selection: TankSelectionResolved): {
   return { cm: Number(total.toFixed(1)), breakdown };
 }
 
+/** Collect every species in the selection whose minTankL is set,
+ *  so we can compute the dimensional requirement and surface the
+ *  offending species names when the tank is too small. */
+function collectMinTanks(
+  selection: TankSelectionResolved,
+): Array<{ commonName: string; minTankL: number }> {
+  const out: Array<{ commonName: string; minTankL: number }> = [];
+  for (const f of selection.fish) {
+    if (f.minTankL !== null) {
+      out.push({ commonName: f.commonName, minTankL: f.minTankL });
+    }
+  }
+  for (const s of selection.shrimp) {
+    if (s.minTankL !== null) {
+      out.push({ commonName: s.commonName, minTankL: s.minTankL });
+    }
+  }
+  return out;
+}
+
 function buildStockingReport(
   selection: TankSelectionResolved,
   tankL: number | undefined,
 ): StockingReport {
   const { cm: bioloadCm, breakdown } = computeBioload(selection);
+  const minTanks = collectMinTanks(selection);
+  const requiredTankL =
+    minTanks.length > 0
+      ? Math.max(...minTanks.map((m) => m.minTankL))
+      : null;
+
   if (tankL === undefined || tankL <= 0) {
     return {
       bioloadCm,
@@ -661,13 +695,45 @@ function buildStockingReport(
       verdict: null,
       headroomCm: null,
       breakdown,
+      oversizedSpecies: [],
+      requiredTankL,
     };
   }
+
+  // Dimensional check takes precedence over the bioload bands —
+  // if any selected species needs a bigger tank than the user has
+  // picked, the stocking gauge reports "tooSmall" regardless of
+  // how light the bioload looks.
+  const oversizedSpecies = minTanks
+    .filter((m) => m.minTankL > tankL)
+    .sort((a, b) => b.minTankL - a.minTankL);
+
   const loadPerLitre = Number((bioloadCm / tankL).toFixed(2));
+
+  if (oversizedSpecies.length > 0) {
+    return {
+      bioloadCm,
+      loadPerLitre,
+      verdict: "tooSmall",
+      headroomCm: null,
+      breakdown,
+      oversizedSpecies,
+      requiredTankL,
+    };
+  }
+
   const verdict = verdictForLoad(loadPerLitre);
   // Headroom = cm of fish you can still add before "full" (1.0 cm/L).
   const headroomCm = Math.max(0, Number((tankL * 1.0 - bioloadCm).toFixed(1)));
-  return { bioloadCm, loadPerLitre, verdict, headroomCm, breakdown };
+  return {
+    bioloadCm,
+    loadPerLitre,
+    verdict,
+    headroomCm,
+    breakdown,
+    oversizedSpecies: [],
+    requiredTankL,
+  };
 }
 
 function buildFilterReport(
