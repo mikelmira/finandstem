@@ -3,32 +3,18 @@ import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TankSizeBadge } from "@/components/charts/tank-size-badge";
 import { RangeBar } from "@/components/charts/range-bar";
+import {
+  lightTo5,
+  co2To3,
+  LIGHT_SCALE_LABELS,
+  CO2_SCALE_LABELS,
+} from "@/lib/catalogue/tank-standards";
 import type { TankRequirements } from "@/lib/catalogue/tank-builder";
 
 interface TankRequirementsPanelProps {
   requirements: TankRequirements;
   tankL?: number;
 }
-
-const LIGHT_LABEL: Record<string, string> = {
-  Low: "Low light",
-  Medium: "Medium light",
-  High: "High light",
-};
-
-const CO2_LABEL: Record<string, string> = {
-  None: "No CO₂ needed",
-  Optional: "CO₂ optional",
-  Recommended: "CO₂ recommended",
-  Required: "CO₂ required",
-};
-
-const CO2_TONE: Record<string, string> = {
-  None: "border-emerald-400/40 bg-emerald-400/10 text-emerald-200",
-  Optional: "border-sky-400/40 bg-sky-400/10 text-sky-200",
-  Recommended: "border-amber-400/45 bg-amber-400/12 text-amber-200",
-  Required: "border-rose-400/45 bg-rose-400/12 text-rose-200",
-};
 
 export function TankRequirementsPanel({
   requirements,
@@ -132,28 +118,32 @@ export function TankRequirementsPanel({
         </RequirementCard>
       </div>
 
-      {(r.light || r.co2 || r.substrateNotes.length > 0 || r.equipmentNotes.length > 0) && (
+      {/* Light + CO2 — shown as 1–5 / 1–3 visual scales. */}
+      {(r.light || r.co2) && (
+        <div className="glass glass-edge animate-fade-up grid grid-cols-1 gap-4 rounded-2xl p-5 sm:grid-cols-2 sm:p-6">
+          {r.light && (
+            <LightScaleBar value={lightTo5(r.light) ?? 1} />
+          )}
+          {r.co2 && (
+            <Co2ScaleBar value={co2To3(r.co2) ?? 1} />
+          )}
+        </div>
+      )}
+
+      {(r.substrateNotes.length > 0 || r.equipmentNotes.length > 0) && (
         <div className="glass glass-edge animate-fade-up flex flex-col gap-4 rounded-2xl p-5 sm:p-6">
           <h3 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
             Equipment & substrate
           </h3>
-          <div className="flex flex-wrap gap-2">
-            {r.light && (
-              <Chip icon={Sun} tone="brand">
-                {LIGHT_LABEL[r.light]}
-              </Chip>
-            )}
-            {r.co2 && (
-              <Chip icon={FlaskConical} tone={CO2_TONE[r.co2]}>
-                {CO2_LABEL[r.co2]}
-              </Chip>
-            )}
-            {r.substrateNotes.map((n) => (
-              <Chip key={n} icon={Layers}>
-                {n}
-              </Chip>
-            ))}
-          </div>
+          {r.substrateNotes.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {r.substrateNotes.map((n) => (
+                <Chip key={n} icon={Layers}>
+                  {n}
+                </Chip>
+              ))}
+            </div>
+          )}
           {r.equipmentNotes.length > 0 && (
             <ul className="flex flex-col gap-2 text-sm leading-relaxed text-foreground/85">
               {r.equipmentNotes.map((n) => (
@@ -170,6 +160,102 @@ export function TankRequirementsPanel({
         </div>
       )}
     </section>
+  );
+}
+
+/* ─── Scale bars ────────────────────────────────────────────────────────
+   Render a 1-of-N segmented bar with the active segment lit. Used
+   to convert our internal Low/Medium/High and None…Required strings
+   into the 1–5 / 1–3 user-facing scales requested.
+   ────────────────────────────────────────────────────────────────────── */
+
+function LightScaleBar({ value }: { value: 1 | 2 | 3 | 4 | 5 }) {
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center gap-2">
+        <span
+          aria-hidden
+          className="inline-flex size-8 items-center justify-center rounded-full bg-[var(--brand)]/15 text-[var(--brand)]"
+        >
+          <Sun className="size-4" strokeWidth={1.85} />
+        </span>
+        <div className="flex flex-col">
+          <span className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+            Light demand
+          </span>
+          <span className="text-sm font-semibold">
+            {LIGHT_SCALE_LABELS[value]}
+            <span className="ml-2 text-xs font-normal text-muted-foreground">
+              {value} / 5
+            </span>
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center gap-1.5" aria-hidden>
+        {[1, 2, 3, 4, 5].map((n) => (
+          <span
+            key={n}
+            className={cn(
+              "h-2 flex-1 rounded-full transition-colors",
+              n <= value
+                ? "bg-[var(--brand)] shadow-[0_0_8px_-2px_color-mix(in_oklab,var(--brand)_60%,transparent)]"
+                : "bg-foreground/10",
+            )}
+          />
+        ))}
+      </div>
+      <div className="flex justify-between text-[10px] uppercase tracking-[0.14em] text-muted-foreground/60">
+        <span>Very low</span>
+        <span>Low</span>
+        <span>Med</span>
+        <span>Med–hi</span>
+        <span>High</span>
+      </div>
+    </div>
+  );
+}
+
+function Co2ScaleBar({ value }: { value: 1 | 2 | 3 }) {
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center gap-2">
+        <span
+          aria-hidden
+          className="inline-flex size-8 items-center justify-center rounded-full bg-[var(--brand)]/15 text-[var(--brand)]"
+        >
+          <FlaskConical className="size-4" strokeWidth={1.85} />
+        </span>
+        <div className="flex flex-col">
+          <span className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+            CO₂ demand
+          </span>
+          <span className="text-sm font-semibold">
+            {CO2_SCALE_LABELS[value]}
+            <span className="ml-2 text-xs font-normal text-muted-foreground">
+              {value} / 3
+            </span>
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center gap-1.5" aria-hidden>
+        {[1, 2, 3].map((n) => (
+          <span
+            key={n}
+            className={cn(
+              "h-2 flex-1 rounded-full transition-colors",
+              n <= value
+                ? "bg-[var(--brand)] shadow-[0_0_8px_-2px_color-mix(in_oklab,var(--brand)_60%,transparent)]"
+                : "bg-foreground/10",
+            )}
+          />
+        ))}
+      </div>
+      <div className="flex justify-between text-[10px] uppercase tracking-[0.14em] text-muted-foreground/60">
+        <span>Optional</span>
+        <span>Recommended</span>
+        <span>Required</span>
+      </div>
+    </div>
   );
 }
 

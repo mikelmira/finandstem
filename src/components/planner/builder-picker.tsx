@@ -16,14 +16,9 @@ export interface BuilderOption {
 interface BuilderPickerProps {
   options: ReadonlyArray<BuilderOption>;
   selected: string[];
-  tankL?: number;
 }
 
-export function BuilderPicker({
-  options,
-  selected,
-  tankL,
-}: BuilderPickerProps) {
+export function BuilderPicker({ options, selected }: BuilderPickerProps) {
   const router = useRouter();
   const search = useSearchParams();
   const [query, setQuery] = React.useState("");
@@ -55,14 +50,6 @@ export function BuilderPicker({
     setQuery("");
   }
 
-  function updateTank(next: number | undefined) {
-    const sp = new URLSearchParams(search?.toString() ?? "");
-    if (next === undefined || Number.isNaN(next)) sp.delete("tank");
-    else sp.set("tank", String(next));
-    const qs = sp.toString();
-    router.replace(qs ? `/planner?${qs}` : "/planner", { scroll: false });
-  }
-
   const q = query.trim().toLowerCase();
   const filtered = q
     ? options.filter(
@@ -75,41 +62,6 @@ export function BuilderPicker({
 
   return (
     <div className="flex flex-col gap-4" ref={containerRef}>
-      {/* Tank size — optional helper input */}
-      <div className="flex flex-wrap items-center gap-3">
-        <label
-          htmlFor="builder-tank"
-          className="text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground"
-        >
-          Tank size (optional)
-        </label>
-        <div className="flex items-center gap-2">
-          <input
-            id="builder-tank"
-            type="number"
-            inputMode="numeric"
-            min={10}
-            max={1000}
-            step={5}
-            placeholder="e.g. 60"
-            value={tankL ?? ""}
-            onChange={(e) => {
-              const v = e.target.value;
-              if (v === "") updateTank(undefined);
-              else {
-                const n = Number(v);
-                if (!Number.isNaN(n)) updateTank(n);
-              }
-            }}
-            className="w-24 rounded-full border border-border bg-background/70 px-3 py-1.5 text-sm placeholder:text-muted-foreground/60 focus:border-[var(--brand)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]/25"
-          />
-          <span className="text-xs text-muted-foreground">L</span>
-          <span className="text-[11px] text-muted-foreground/70">
-            tells us whether the species you&rsquo;ve added actually fit
-          </span>
-        </div>
-      </div>
-
       {/* Species typeahead */}
       <div className="relative">
         <Search

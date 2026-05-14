@@ -5,6 +5,8 @@ import { SectionShell } from "@/components/sections/section-shell";
 import { BuilderPicker, type BuilderOption } from "@/components/planner/builder-picker";
 import { TankComposition } from "@/components/planner/tank-composition";
 import { TankRequirementsPanel } from "@/components/planner/tank-requirements";
+import { TankSetupCard } from "@/components/planner/tank-setup-card";
+import { StockingGauge } from "@/components/planner/stocking-gauge";
 import { TankWarnings } from "@/components/planner/tank-warnings";
 import { allNorm } from "@/lib/catalogue/normalize";
 import { buildTank } from "@/lib/catalogue/tank-builder";
@@ -32,6 +34,13 @@ function first(v: string | string[] | undefined): string | undefined {
   return Array.isArray(v) ? v[0] : v;
 }
 
+function numParam(v: string | string[] | undefined): number | undefined {
+  const s = first(v);
+  if (!s) return undefined;
+  const n = Number(s);
+  return Number.isNaN(n) ? undefined : n;
+}
+
 export default async function PlannerPage({ searchParams }: PageProps) {
   const sp = await searchParams;
   const rawIds = first(sp.species) ?? "";
@@ -39,13 +48,10 @@ export default async function PlannerPage({ searchParams }: PageProps) {
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
-  const tankParam = first(sp.tank);
-  const tankL =
-    tankParam && !Number.isNaN(Number(tankParam))
-      ? Number(tankParam)
-      : undefined;
+  const tankL = numParam(sp.tank);
+  const filterLph = numParam(sp.filter);
 
-  const result = buildTank({ ids, tankL });
+  const result = buildTank({ ids, tankL, filterLph });
   const entries = result.selection.all.map((a) => a.entry);
   const hasSelection = entries.length > 0;
 
@@ -54,24 +60,24 @@ export default async function PlannerPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Tank Planner"
         title="Build your tank, species by species."
-        subtitle="Add the fish, plants, shrimp, and mosses you're considering. We cross-reference every parameter, flag the conflicts, and tell you what water, light, CO₂, and substrate the combined tank actually needs to keep everything happy."
+        subtitle="Pick the tank, pick the filter, then add the fish, plants, shrimp, and mosses you're considering. We cross-reference every parameter, check stocking against best-practice rules, and tell you what light, CO₂, and substrate the combined tank actually needs."
       />
 
       <SectionShell>
         <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-10">
-          {/* Left — picker + composition (sticky on desktop) */}
-          <div className="flex flex-col gap-6 lg:sticky lg:top-24">
+          {/* Left — tank setup + species picker + composition (sticky on desktop) */}
+          <div className="flex flex-col gap-5 lg:sticky lg:top-24">
+            <Suspense fallback={null}>
+              <TankSetupCard tankL={tankL} filterLph={filterLph} />
+            </Suspense>
+
             <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
               <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
                 Add to your tank
               </h2>
               <div className="mt-4">
                 <Suspense fallback={null}>
-                  <BuilderPicker
-                    options={OPTIONS}
-                    selected={ids}
-                    tankL={tankL}
-                  />
+                  <BuilderPicker options={OPTIONS} selected={ids} />
                 </Suspense>
               </div>
             </div>
@@ -93,10 +99,11 @@ export default async function PlannerPage({ searchParams }: PageProps) {
             </div>
           </div>
 
-          {/* Right — requirements + warnings */}
-          <div className="flex flex-col gap-10">
+          {/* Right — stocking, requirements + warnings */}
+          <div className="flex flex-col gap-8">
             {hasSelection ? (
               <>
+                <StockingGauge stocking={result.stocking} tankL={tankL} />
                 <TankRequirementsPanel
                   requirements={result.requirements}
                   tankL={tankL}
@@ -127,27 +134,28 @@ function EmptyState() {
       </h2>
       <p className="text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
         Every time you add a fish, plant, shrimp, or moss, we recompute
-        the parameters your tank needs to keep all of them happy. You&rsquo;ll
-        see the overlapping temperature, pH, hardness, the minimum tank
-        size, whether CO₂ is required, what kind of substrate to use —
+        the parameters your tank needs to keep all of them happy.
+        You&rsquo;ll see whether your chosen tank size + filter handle
+        the combined bioload, the overlapping temperature / pH /
+        hardness, the light and CO₂ scales, what substrate to use —
         plus every compatibility conflict before you spend the money.
       </p>
       <ul className="grid grid-cols-1 gap-2 text-sm text-foreground/85 sm:grid-cols-2">
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Parameter intersection in real time
+          Standard tank sizes with matched filter ranges
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+          Live stocking gauge — comfortable, full, overstocked
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+          Light 1–5 + CO₂ 1–3 from the plants you add
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
           Predator / prey + plant-safety flags
-        </li>
-        <li className="flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Light + CO₂ recommendations from your plants
-        </li>
-        <li className="flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Schooling group sizes called out
         </li>
       </ul>
     </div>

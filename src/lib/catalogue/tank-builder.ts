@@ -11,6 +11,12 @@ import {
   type Light,
   type CO2,
 } from "@/lib/catalogue/normalize";
+import {
+  classifyFlow,
+  verdictForLoad,
+  type FlowVerdict,
+  type StockingVerdict,
+} from "@/lib/catalogue/tank-standards";
 import type { CatalogueEntry } from "@/types/catalogue";
 
 const LIGHT_RANK: Record<Light, number> = { Low: 1, Medium: 2, High: 3 };
@@ -26,6 +32,8 @@ export interface TankSelection {
   ids: string[];
   /** User-supplied tank size in litres, optional. */
   tankL?: number;
+  /** User-supplied filter flow in litres per hour, optional. */
+  filterLph?: number;
 }
 
 export interface TankSelectionResolved {
@@ -60,6 +68,27 @@ export interface TankRequirements {
   equipmentNotes: string[];
 }
 
+export interface StockingReport {
+  /** Sum of adult fish lengths plus shrimp contribution, in cm. */
+  bioloadCm: number;
+  /** Bioload divided by tank volume, cm per litre. */
+  loadPerLitre: number | null;
+  /** Bucket verdict — only populated when tankL is provided. */
+  verdict: StockingVerdict | null;
+  /** Headroom in cm before tipping into the next band. */
+  headroomCm: number | null;
+}
+
+export interface FilterReport {
+  /** Filter flow rate the user picked, l/h. Null if not set. */
+  filterLph: number | null;
+  /** Recommended [min, max] range for the chosen tank volume. */
+  recommendedRange: [number, number] | null;
+  /** Verdict from classifyFlow — only populated when both tankL and
+   *  filterLph are provided. */
+  verdict: FlowVerdict | null;
+}
+
 export interface TankWarning {
   severity: "danger" | "warn" | "info";
   title: string;
@@ -69,6 +98,8 @@ export interface TankWarning {
 export interface TankBuilderResult {
   selection: TankSelectionResolved;
   requirements: TankRequirements;
+  stocking: StockingReport;
+  filter: FilterReport;
   warnings: TankWarning[];
 }
 
@@ -422,6 +453,160 @@ function bioWarnings(
   return out;
 }
 
+/* ────────────────────────────  Bioload / filter  ──────────────────────── */
+
+/**
+ * Cumulative "cm of adult fish" load for the selection. Fish count
+ * at their full adult size × the actual stocking group; shrimp
+ * contribute roughly 1/5 of a comparable-length fish.
+ *
+ * `groupSize` defaults to each fish's minGroupSize — that's the
+ * stocking the planner assumes if the user just adds a single
+ * species. Future iterations can let users override this per fish.
+ */
+function computeBioload(selection: TankSelectionResolved): number {
+  let cm = 0;
+  for (const f of selection.fish) {
+    const range = parseRange(f.raw.adultSize);
+    const adult = range ? range.max : 0;
+    const group = Math.max(1, f.minGroupSize);
+    cm += adult * group;
+  }
+  for (const s of selection.shrimp) {
+    const range = parseRange(s.raw.adultSize);
+    const adult = range ? range.max : 0;
+    // Shrimp produce far less waste per cm of body — scale to ~⅕.
+    // Use the colony minimum so the load reflects a real shrimp
+    // colony, not a single specimen.
+    cm += adult * Math.max(1, s.raw.colonyMin) * 0.2;
+  }
+  return Number(cm.toFixed(1));
+}
+
+function buildStockingReport(
+  selection: TankSelectionResolved,
+  tankL: number | undefined,
+): StockingReport {
+  const bioloadCm = computeBioload(selection);
+  if (tankL === undefined || tankL <= 0) {
+    return {
+      bioloadCm,
+      loadPerLitre: null,
+      verdict: null,
+      headroomCm: null,
+    };
+  }
+  const loadPerLitre = Number((bioloadCm / tankL).toFixed(2));
+  const verdict = verdictForLoad(loadPerLitre);
+  // Headroom = cm of fish you can still add before "full" (1.0 cm/L).
+  const headroomCm = Math.max(0, Number((tankL * 1.0 - bioloadCm).toFixed(1)));
+  return { bioloadCm, loadPerLitre, verdict, headroomCm };
+}
+
+function buildFilterReport(
+  tankL: number | undefined,
+  filterLph: number | undefined,
+): FilterReport {
+  if (tankL === undefined) {
+    return {
+      filterLph: filterLph ?? null,
+      recommendedRange: null,
+      verdict: null,
+    };
+  }
+  if (filterLph === undefined) {
+    // We can still surface the recommendation even without a flow
+    // value, so the UI can prefill the input.
+    const v = classifyFlow(tankL, 0);
+    if (v.kind === "starve") {
+      return {
+        filterLph: null,
+        recommendedRange: v.recommended,
+        verdict: null,
+      };
+    }
+    return { filterLph: null, recommendedRange: null, verdict: null };
+  }
+  const verdict = classifyFlow(tankL, filterLph);
+  const recommendedRange =
+    verdict.kind === "ok"
+      ? null
+      : (verdict.recommended as [number, number]);
+  return { filterLph, recommendedRange, verdict };
+}
+
+function filterAndStockingWarnings(
+  selection: TankSelectionResolved,
+  stocking: StockingReport,
+  filter: FilterReport,
+  tankL: number | undefined,
+): TankWarning[] {
+  const out: TankWarning[] = [];
+
+  // Stocking verdict
+  if (stocking.verdict === "overstocked" && tankL !== undefined) {
+    out.push({
+      severity: "danger",
+      title: "Overstocked",
+      body: `Combined adult bioload is ~${stocking.bioloadCm} cm of fish in a ${tankL} L tank (${stocking.loadPerLitre} cm/L). That's above the 1.5 cm/L ceiling — expect ammonia spikes and aggression. Drop a group or upsize the tank.`,
+    });
+  } else if (stocking.verdict === "full" && tankL !== undefined) {
+    out.push({
+      severity: "warn",
+      title: "Approaching capacity",
+      body: `~${stocking.bioloadCm} cm of fish in a ${tankL} L tank (${stocking.loadPerLitre} cm/L). Comfortable, but no headroom for a new group without water-change discipline.`,
+    });
+  } else if (
+    stocking.verdict === "understocked" &&
+    selection.fish.length > 0 &&
+    tankL !== undefined
+  ) {
+    out.push({
+      severity: "info",
+      title: "Room for more",
+      body: `~${stocking.headroomCm} cm of fish capacity available before this tank is full. Consider a second schooling group or a small bottom team.`,
+    });
+  }
+
+  // Filter verdict
+  if (filter.verdict && tankL !== undefined) {
+    const v = filter.verdict;
+    if (v.kind === "blast") {
+      out.push({
+        severity: "danger",
+        title: `Filter too strong (${v.turnover.toFixed(1)}× turnover)`,
+        body: `A ${filter.filterLph} L/h filter on a ${tankL} L tank will blast inhabitants around. Recommended range for this tank: ${v.recommended[0]}–${v.recommended[1]} L/h. Either step down to a smaller filter or fit a flow diffuser / spray bar.`,
+      });
+    } else if (v.kind === "starve") {
+      out.push({
+        severity: "danger",
+        title: `Filter undersized (${v.turnover.toFixed(1)}× turnover)`,
+        body: `${filter.filterLph} L/h is too little for a ${tankL} L tank — biofilter starves and detritus settles. Aim for ${v.recommended[0]}–${v.recommended[1]} L/h.`,
+      });
+    } else if (v.kind === "high") {
+      // Hillstream / strong-flow species are happy here.
+      const flowFriendly = selection.fish.some((f) =>
+        f.flow.includes("High") || f.flow.includes("Very High"),
+      );
+      if (!flowFriendly) {
+        out.push({
+          severity: "warn",
+          title: `Filter at the top of range (${v.turnover.toFixed(1)}× turnover)`,
+          body: `Recommended range is ${v.recommended[0]}–${v.recommended[1]} L/h. A spray bar or flow deflector will help keep the surface action without stressing slow swimmers.`,
+        });
+      }
+    } else if (v.kind === "low") {
+      out.push({
+        severity: "info",
+        title: `Filter on the gentle side (${v.turnover.toFixed(1)}× turnover)`,
+        body: `Recommended range is ${v.recommended[0]}–${v.recommended[1]} L/h. Light filtration suits shrimp and slow swimmers; ramp up if you stock heavier in future.`,
+      });
+    }
+  }
+
+  return out;
+}
+
 /* ──────────────────────────────  Builder  ─────────────────────────────── */
 
 export function buildTank(input: TankSelection): TankBuilderResult {
@@ -476,12 +661,16 @@ export function buildTank(input: TankSelection): TankBuilderResult {
     ),
   };
 
+  const stocking = buildStockingReport(selection, input.tankL);
+  const filter = buildFilterReport(input.tankL, input.filterLph);
+
   const warnings = [
     ...paramWarnings(selection, requirements),
     ...bioWarnings(selection, input.tankL, requirements),
+    ...filterAndStockingWarnings(selection, stocking, filter, input.tankL),
   ];
 
-  return { selection, requirements, warnings };
+  return { selection, requirements, stocking, filter, warnings };
 }
 
 /* ─────────────────────  Utility for the UI layer  ─────────────────────── */
