@@ -64,7 +64,7 @@ export function MultiRangeBar({
             "rounded-full border px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em]",
             intersection
               ? "border-[var(--brand)]/45 bg-[var(--brand)]/15 text-foreground"
-              : "border-rose-400/45 bg-rose-400/12 text-rose-200",
+              : "border-rose-500/50 bg-rose-500/15 text-rose-800",
           )}
         >
           {intersection

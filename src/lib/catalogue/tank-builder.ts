@@ -28,7 +28,9 @@ const CO2_RANK: Record<CO2, number> = {
 };
 
 export interface TankSelection {
-  /** `${category}:${slug}` ids in URL order. */
+  /** `${category}:${slug}` or `${category}:${slug}:${count}` ids in
+   *  URL order. The optional count overrides the species' default
+   *  stocking (minGroupSize for fish, colonyMin for shrimp). */
   ids: string[];
   /** User-supplied tank size in litres, optional. */
   tankL?: number;
@@ -46,7 +48,17 @@ export interface TankSelectionResolved {
     category: CatalogueEntry["category"];
     slug: string;
     entry: CatalogueEntry;
+    /** Resolved count — user override or default (minGroupSize /
+     *  colonyMin / 1 for plants & mosses). */
+    count: number;
+    /** Default count this species would use if the user hasn't
+     *  set one — surfaced so the UI can show "default: 10". */
+    defaultCount: number;
+    /** True if the user explicitly set the count via URL. */
+    hasCustomCount: boolean;
   }>;
+  /** Map of `${category}:${slug}` → resolved count, for quick lookups. */
+  counts: Record<string, number>;
 }
 
 export interface TankRequirements {
@@ -118,6 +130,37 @@ export interface TankBuilderResult {
 
 /* ─────────────────────────────  Resolver  ──────────────────────────────── */
 
+/** Parse one id token. Accepts `category:slug` or
+ *  `category:slug:count`. Returns null for malformed tokens. */
+function parseIdToken(raw: string): {
+  category: string;
+  slug: string;
+  count: number | null;
+} | null {
+  const parts = raw.split(":");
+  if (parts.length < 2) return null;
+  const [category, slug, countStr] = parts;
+  if (!category || !slug) return null;
+  if (countStr === undefined) return { category, slug, count: null };
+  const n = Number(countStr);
+  if (Number.isNaN(n) || n < 1) return { category, slug, count: null };
+  return { category, slug, count: Math.floor(n) };
+}
+
+/** Default stocking count for a species when the user hasn't picked
+ *  one — schooling fish at their school minimum, shrimp at colony
+ *  minimum, single-fish at 1, plants & mosses always 1. */
+function defaultCountFor(
+  category: string,
+  fish?: FishNorm,
+  shrimp?: ShrimpNorm,
+): number {
+  if (category === "fish" && fish) return Math.max(1, fish.minGroupSize);
+  if (category === "shrimp" && shrimp)
+    return Math.max(1, shrimp.raw.colonyMin);
+  return 1;
+}
+
 export function resolveSelection(ids: string[]): TankSelectionResolved {
   const fish: FishNorm[] = [];
   const plants: PlantNorm[] = [];
@@ -127,39 +170,83 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
     category: CatalogueEntry["category"];
     slug: string;
     entry: CatalogueEntry;
+    count: number;
+    defaultCount: number;
+    hasCustomCount: boolean;
   }> = [];
+  const counts: Record<string, number> = {};
 
   for (const id of ids) {
-    const [category, slug] = id.split(":");
-    if (!category || !slug) continue;
+    const parsed = parseIdToken(id);
+    if (!parsed) continue;
+    const { category, slug, count: userCount } = parsed;
+
     if (category === "fish") {
       const hit = fishNorm.find((f) => f.slug === slug);
       if (hit && !all.some((a) => a.category === "fish" && a.slug === slug)) {
+        const def = defaultCountFor("fish", hit);
+        const count = userCount ?? def;
         fish.push(hit);
-        all.push({ category: "fish", slug, entry: hit.raw });
+        all.push({
+          category: "fish",
+          slug,
+          entry: hit.raw,
+          count,
+          defaultCount: def,
+          hasCustomCount: userCount !== null,
+        });
+        counts[`fish:${slug}`] = count;
       }
     } else if (category === "plants") {
       const hit = plantNorm.find((p) => p.slug === slug);
       if (hit && !all.some((a) => a.category === "plants" && a.slug === slug)) {
+        const count = userCount ?? 1;
         plants.push(hit);
-        all.push({ category: "plants", slug, entry: hit.raw });
+        all.push({
+          category: "plants",
+          slug,
+          entry: hit.raw,
+          count,
+          defaultCount: 1,
+          hasCustomCount: userCount !== null,
+        });
+        counts[`plants:${slug}`] = count;
       }
     } else if (category === "shrimp") {
       const hit = shrimpNorm.find((s) => s.slug === slug);
       if (hit && !all.some((a) => a.category === "shrimp" && a.slug === slug)) {
+        const def = defaultCountFor("shrimp", undefined, hit);
+        const count = userCount ?? def;
         shrimp.push(hit);
-        all.push({ category: "shrimp", slug, entry: hit.raw });
+        all.push({
+          category: "shrimp",
+          slug,
+          entry: hit.raw,
+          count,
+          defaultCount: def,
+          hasCustomCount: userCount !== null,
+        });
+        counts[`shrimp:${slug}`] = count;
       }
     } else if (category === "mosses") {
       const hit = mossNorm.find((m) => m.slug === slug);
       if (hit && !all.some((a) => a.category === "mosses" && a.slug === slug)) {
+        const count = userCount ?? 1;
         mosses.push(hit);
-        all.push({ category: "mosses", slug, entry: hit.raw });
+        all.push({
+          category: "mosses",
+          slug,
+          entry: hit.raw,
+          count,
+          defaultCount: 1,
+          hasCustomCount: userCount !== null,
+        });
+        counts[`mosses:${slug}`] = count;
       }
     }
   }
 
-  return { fish, plants, shrimp, mosses, all };
+  return { fish, plants, shrimp, mosses, all, counts };
 }
 
 /* ────────────────────────────  Computations  ───────────────────────────── */
@@ -434,13 +521,16 @@ function bioWarnings(
     }
   }
 
-  // Schooling fish reminders
+  // Schooling fish reminders — warn when stocked below the species'
+  // minGroupSize, otherwise stay silent.
   for (const f of selection.fish) {
-    if (f.schooling && f.minGroupSize >= 6) {
+    if (!f.schooling) continue;
+    const count = selection.counts[`fish:${f.slug}`] ?? f.minGroupSize;
+    if (count < f.minGroupSize) {
       out.push({
-        severity: "info",
-        title: `${f.commonName} schools`,
-        body: `Plan for at least ${f.minGroupSize} ${f.commonName.toLowerCase()}s — they're stressed in smaller groups and lose colour.`,
+        severity: "warn",
+        title: `${f.commonName} under-grouped`,
+        body: `You've planned for ${count} ${f.commonName.toLowerCase()}${count === 1 ? "" : "s"} — they need at least ${f.minGroupSize} to feel safe and shoal naturally. Below that they're stressed and lose colour.`,
       });
     }
   }
@@ -523,14 +613,14 @@ function computeBioload(selection: TankSelectionResolved): {
   for (const f of selection.fish) {
     const range = parseRange(f.raw.adultSize);
     const adult = range ? range.max : 0;
-    const group = Math.max(1, f.minGroupSize);
-    const contribution = adult * group;
+    const count = selection.counts[`fish:${f.slug}`] ?? f.minGroupSize;
+    const contribution = adult * count;
     if (contribution > 0) {
       total += contribution;
       breakdown.push({
         commonName: f.commonName,
         category: "fish",
-        count: group,
+        count,
         adultSizeCm: adult,
         contributionCm: Number(contribution.toFixed(1)),
       });
@@ -540,7 +630,7 @@ function computeBioload(selection: TankSelectionResolved): {
   for (const s of selection.shrimp) {
     const range = parseRange(s.raw.adultSize);
     const adult = range ? range.max : 0;
-    const count = Math.max(1, s.raw.colonyMin);
+    const count = selection.counts[`shrimp:${s.slug}`] ?? s.raw.colonyMin;
     // Shrimp produce far less waste per cm of body — scale to ⅕.
     const contribution = adult * count * 0.2;
     if (contribution > 0) {

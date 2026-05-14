@@ -47,19 +47,19 @@ const SEVERITY_CLASS: Record<
   { card: string; chip: string; icon: string }
 > = {
   danger: {
-    card: "border-rose-400/35 hover:border-rose-400/55",
-    chip: "border-rose-400/45 bg-rose-400/12 text-rose-200",
-    icon: "bg-rose-400/15 text-rose-300",
+    card: "border-rose-400/35 hover:border-rose-500/55",
+    chip: "border-rose-500/50 bg-rose-500/15 text-rose-800",
+    icon: "bg-rose-500/18 text-rose-700",
   },
   warn: {
-    card: "border-amber-400/35 hover:border-amber-400/55",
-    chip: "border-amber-400/45 bg-amber-400/12 text-amber-200",
-    icon: "bg-amber-400/15 text-amber-300",
+    card: "border-amber-400/35 hover:border-amber-500/55",
+    chip: "border-amber-500/45 bg-amber-500/15 text-amber-800",
+    icon: "bg-amber-500/18 text-amber-700",
   },
   info: {
-    card: "border-sky-400/35 hover:border-sky-400/55",
-    chip: "border-sky-400/45 bg-sky-400/12 text-sky-200",
-    icon: "bg-sky-400/15 text-sky-300",
+    card: "border-sky-400/35 hover:border-sky-500/55",
+    chip: "border-sky-500/45 bg-sky-500/15 text-sky-800",
+    icon: "bg-sky-500/18 text-sky-700",
   },
 };
 

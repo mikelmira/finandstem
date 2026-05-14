@@ -114,7 +114,7 @@ export function VariantsBoard({ sections, className }: VariantsBoardProps) {
                 <div className="flex items-center gap-2">
                   <span
                     aria-hidden
-                    className="inline-flex size-7 items-center justify-center rounded-full bg-amber-400/15 text-amber-300"
+                    className="inline-flex size-7 items-center justify-center rounded-full bg-amber-500/18 text-amber-700"
                   >
                     {s.key === "sisterSpecies" ? (
                       <Layers className="size-3.5" strokeWidth={2} />

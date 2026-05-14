@@ -20,9 +20,9 @@ interface WildSplitProps {
 }
 
 const SIDE_ICON: Record<string, { icon: LucideIcon; tint: string }> = {
-  wildDiet: { icon: Bug, tint: "text-amber-300" },
+  wildDiet: { icon: Bug, tint: "text-amber-700" },
   conservation: { icon: ShieldCheck, tint: "text-[var(--brand)]" },
-  emersedForm: { icon: Sun, tint: "text-amber-200" },
+  emersedForm: { icon: Sun, tint: "text-amber-800" },
   flowering: { icon: Sprout, tint: "text-[var(--leaf)]" },
 };
 

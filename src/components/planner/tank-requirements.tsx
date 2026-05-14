@@ -294,8 +294,8 @@ function RequirementCard({
             className={cn(
               "inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em]",
               chip.tone === "good"
-                ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-200"
-                : "border-rose-400/45 bg-rose-400/12 text-rose-200",
+                ? "border-emerald-600/45 bg-emerald-500/15 text-emerald-800"
+                : "border-rose-500/50 bg-rose-500/15 text-rose-800",
             )}
           >
             {chip.text}
@@ -317,7 +317,7 @@ function NoData({ label }: { label?: string }) {
 
 function Conflict({ label }: { label: string }) {
   return (
-    <p className="text-sm text-rose-300">
+    <p className="text-sm text-rose-700">
       <span className="font-semibold">Conflict:</span> {label}. See the
       warnings below.
     </p>

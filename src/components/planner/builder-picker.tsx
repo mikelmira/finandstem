@@ -83,7 +83,7 @@ export function BuilderPicker({ options, selected }: BuilderPickerProps) {
         {focused && filtered.length > 0 && (
           <ul
             role="listbox"
-            className="animate-drop-in absolute z-30 mt-2 max-h-80 w-full overflow-auto rounded-xl border border-border bg-background/95 p-1 shadow-lg backdrop-blur"
+            className="animate-drop-in absolute z-50 mt-2 max-h-80 w-full overflow-auto rounded-xl border border-border bg-card p-1 shadow-xl"
           >
             {filtered.slice(0, 30).map((o, i) => (
               <li key={o.value} style={{ ["--i" as string]: Math.min(i, 8) }}>

@@ -8,6 +8,8 @@ import {
   ImageOff,
   Fish,
   Leaf,
+  Minus,
+  Plus,
   Shell,
   Sprout,
 } from "lucide-react";
@@ -16,8 +18,18 @@ import { CATEGORY_META, type CatalogueEntry } from "@/types/catalogue";
 import { getImage } from "@/data";
 import { cn } from "@/lib/utils";
 
+export interface TankCompositionItem {
+  entry: CatalogueEntry;
+  /** Currently resolved stocking count for this species. */
+  count: number;
+  /** Species default count (minGroupSize / colonyMin / 1). */
+  defaultCount: number;
+  /** Whether the user has manually picked a count. */
+  hasCustomCount: boolean;
+}
+
 interface TankCompositionProps {
-  entries: CatalogueEntry[];
+  items: TankCompositionItem[];
 }
 
 const CAT_ICON: Record<CatalogueEntry["category"], LucideIcon> = {
@@ -27,31 +39,68 @@ const CAT_ICON: Record<CatalogueEntry["category"], LucideIcon> = {
   mosses: Sprout,
 };
 
+/** Category pill tones — picked for legibility on the cream
+ *  paper ground (darker text, slightly richer fill than the
+ *  dark-theme originals). */
 const CAT_TONE: Record<CatalogueEntry["category"], string> = {
-  fish: "border-sky-400/40 bg-sky-400/10 text-sky-200",
-  plants: "border-[var(--brand)]/40 bg-[var(--brand)]/12 text-foreground",
-  shrimp: "border-rose-400/35 bg-rose-400/10 text-rose-200",
-  mosses: "border-emerald-400/35 bg-emerald-400/10 text-emerald-200",
+  fish: "border-sky-500/45 bg-sky-500/15 text-sky-800",
+  plants: "border-[var(--brand)]/45 bg-[var(--brand)]/15 text-[var(--brand)]",
+  shrimp: "border-rose-500/40 bg-rose-500/12 text-rose-800",
+  mosses: "border-emerald-600/40 bg-emerald-600/12 text-emerald-800",
 };
 
-export function TankComposition({ entries }: TankCompositionProps) {
+/** Categories whose stocking the user can scale up or down. Plants
+ *  and mosses are treated as binary "present or not" in the planner
+ *  for now — they don't add bioload and one bunch of rotala scales
+ *  the same as five for our purposes. */
+const COUNTABLE: Record<CatalogueEntry["category"], boolean> = {
+  fish: true,
+  shrimp: true,
+  plants: false,
+  mosses: false,
+};
+
+export function TankComposition({ items }: TankCompositionProps) {
   const router = useRouter();
   const search = useSearchParams();
 
-  function remove(category: string, slug: string) {
+  /** Read current ids from URL and rebuild with a modified entry. */
+  function updateIds(
+    transform: (ids: string[]) => string[],
+  ) {
     const sp = new URLSearchParams(search?.toString() ?? "");
-    const ids = (sp.get("species") ?? "")
+    const current = (sp.get("species") ?? "")
       .split(",")
       .map((s) => s.trim())
-      .filter(Boolean)
-      .filter((id) => id !== `${category}:${slug}`);
-    if (ids.length === 0) sp.delete("species");
-    else sp.set("species", ids.join(","));
+      .filter(Boolean);
+    const next = transform(current);
+    if (next.length === 0) sp.delete("species");
+    else sp.set("species", next.join(","));
     const qs = sp.toString();
     router.replace(qs ? `/planner?${qs}` : "/planner", { scroll: false });
   }
 
-  if (entries.length === 0) {
+  function remove(category: string, slug: string) {
+    updateIds((ids) =>
+      ids.filter((id) => {
+        const parts = id.split(":");
+        return !(parts[0] === category && parts[1] === slug);
+      }),
+    );
+  }
+
+  function setCount(category: string, slug: string, count: number) {
+    const clamped = Math.max(1, Math.min(999, Math.round(count)));
+    updateIds((ids) =>
+      ids.map((id) => {
+        const parts = id.split(":");
+        if (parts[0] !== category || parts[1] !== slug) return id;
+        return `${category}:${slug}:${clamped}`;
+      }),
+    );
+  }
+
+  if (items.length === 0) {
     return (
       <div className="glass rounded-2xl border border-dashed border-border/60 p-8 text-center">
         <p className="text-sm font-medium text-foreground">
@@ -67,12 +116,19 @@ export function TankComposition({ entries }: TankCompositionProps) {
   }
 
   return (
-    <ul className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
-      {entries.map((entry, i) => {
+    <ul className="stagger flex flex-col gap-3">
+      {items.map((item, i) => {
+        const { entry, count, defaultCount, hasCustomCount } = item;
         const meta = CATEGORY_META[entry.category];
         const img = getImage(entry.slug);
         const Icon = CAT_ICON[entry.category];
         const tone = CAT_TONE[entry.category];
+        const countable = COUNTABLE[entry.category];
+
+        // Flag when the user has stocked below the species' default
+        // (fish below schooling minimum, shrimp below colony min)
+        const belowDefault = countable && count < defaultCount;
+
         return (
           <li
             key={`${entry.category}-${entry.slug}`}
@@ -101,7 +157,8 @@ export function TankComposition({ entries }: TankCompositionProps) {
                 </div>
               )}
             </Link>
-            <div className="flex min-w-0 flex-1 flex-col gap-1 py-0.5">
+
+            <div className="flex min-w-0 flex-1 flex-col gap-1 py-0.5 pr-9">
               <span
                 className={cn(
                   "inline-flex w-fit items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em]",
@@ -120,7 +177,67 @@ export function TankComposition({ entries }: TankCompositionProps) {
               <span className="truncate text-xs italic text-muted-foreground">
                 {entry.scientificName}
               </span>
+
+              {/* Count picker — only fish & shrimp */}
+              {countable && (
+                <div className="mt-1.5 flex items-center gap-2">
+                  <div className="inline-flex items-stretch rounded-full border border-border bg-background/60">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setCount(entry.category, entry.slug, count - 1)
+                      }
+                      disabled={count <= 1}
+                      aria-label={`Decrease ${entry.commonName} count`}
+                      className="press flex size-7 items-center justify-center rounded-l-full text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      <Minus className="size-3.5" aria-hidden />
+                    </button>
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min={1}
+                      max={999}
+                      value={count}
+                      onChange={(e) => {
+                        const n = Number(e.target.value);
+                        if (!Number.isNaN(n) && n >= 1)
+                          setCount(entry.category, entry.slug, n);
+                      }}
+                      aria-label={`${entry.commonName} count`}
+                      className="w-10 border-x border-border/60 bg-transparent px-1 text-center text-xs font-semibold tabular-nums text-foreground [appearance:textfield] focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                    />
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setCount(entry.category, entry.slug, count + 1)
+                      }
+                      aria-label={`Increase ${entry.commonName} count`}
+                      className="press flex size-7 items-center justify-center rounded-r-full text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
+                    >
+                      <Plus className="size-3.5" aria-hidden />
+                    </button>
+                  </div>
+                  <span
+                    className={cn(
+                      "text-[10px] uppercase tracking-[0.14em]",
+                      belowDefault
+                        ? "text-amber-700"
+                        : hasCustomCount
+                          ? "text-muted-foreground"
+                          : "text-muted-foreground/60",
+                    )}
+                  >
+                    {belowDefault
+                      ? `below ${entry.category === "fish" ? "school min" : "colony min"} ${defaultCount}`
+                      : hasCustomCount
+                        ? "custom"
+                        : `default ${defaultCount}`}
+                  </span>
+                </div>
+              )}
             </div>
+
             <button
               type="button"
               onClick={() => remove(entry.category, entry.slug)}

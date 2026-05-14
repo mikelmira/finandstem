@@ -56,8 +56,8 @@ function getSafetyRows(entry: CatalogueEntry): SafetyRow[] {
 
 const TONE_CLASS: Record<SafetyRow["tone"], string> = {
   good: "border-[color-mix(in_oklab,var(--brand)_45%,transparent)] bg-[color-mix(in_oklab,var(--brand)_14%,transparent)]",
-  warn: "border-amber-400/45 bg-amber-400/10",
-  danger: "border-rose-400/45 bg-rose-400/10",
+  warn: "border-amber-500/45 bg-amber-500/15",
+  danger: "border-rose-500/50 bg-rose-500/15",
 };
 
 const TONE_DOT: Record<SafetyRow["tone"], string> = {
@@ -129,7 +129,7 @@ export function TankMatesPanel({
               style={{ ["--i" as string]: 1 }}
             >
               <div className="flex items-center gap-2">
-                <span className="inline-flex size-7 items-center justify-center rounded-full bg-rose-400/15 text-rose-300">
+                <span className="inline-flex size-7 items-center justify-center rounded-full bg-rose-500/18 text-rose-700">
                   <X className="size-4" aria-hidden strokeWidth={2.5} />
                 </span>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">

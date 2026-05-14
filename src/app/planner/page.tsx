@@ -52,8 +52,13 @@ export default async function PlannerPage({ searchParams }: PageProps) {
   const filterLph = numParam(sp.filter);
 
   const result = buildTank({ ids, tankL, filterLph });
-  const entries = result.selection.all.map((a) => a.entry);
-  const hasSelection = entries.length > 0;
+  const items = result.selection.all.map((a) => ({
+    entry: a.entry,
+    count: a.count,
+    defaultCount: a.defaultCount,
+    hasCustomCount: a.hasCustomCount,
+  }));
+  const hasSelection = items.length > 0;
 
   return (
     <>
@@ -85,16 +90,16 @@ export default async function PlannerPage({ searchParams }: PageProps) {
             <div className="flex flex-col gap-3">
               <div className="flex items-baseline justify-between gap-3">
                 <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                  Your tank ({entries.length})
+                  Your tank ({items.length})
                 </h2>
-                {entries.length > 0 && (
+                {items.length > 0 && (
                   <span className="text-[11px] text-muted-foreground/70">
-                    Tap to open • × to remove
+                    Adjust counts with − / +
                   </span>
                 )}
               </div>
               <Suspense fallback={null}>
-                <TankComposition entries={entries} />
+                <TankComposition items={items} />
               </Suspense>
             </div>
           </div>

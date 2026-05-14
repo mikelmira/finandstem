@@ -136,7 +136,7 @@ export function TankSetupCard({ tankL, filterLph }: TankSetupCardProps) {
           {open && (
             <ul
               role="listbox"
-              className="animate-drop-in absolute left-0 right-0 top-full z-30 mt-1 max-h-80 overflow-auto rounded-xl border border-border bg-background/95 p-1 shadow-lg backdrop-blur"
+              className="animate-drop-in absolute left-0 right-0 top-full z-50 mt-1 max-h-80 overflow-auto rounded-xl border border-border bg-card p-1 shadow-xl"
             >
               {STANDARD_TANKS.map((t) => {
                 const selected = t.litres === tankL;
@@ -215,13 +215,13 @@ export function TankSetupCard({ tankL, filterLph }: TankSetupCardProps) {
                 className={cn(
                   "ml-auto inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.14em]",
                   verdict.kind === "ok" &&
-                    "border-emerald-400/40 bg-emerald-400/10 text-emerald-300",
+                    "border-emerald-600/45 bg-emerald-500/12 text-emerald-800",
                   verdict.kind === "low" &&
-                    "border-sky-400/40 bg-sky-400/10 text-sky-200",
+                    "border-sky-500/45 bg-sky-500/12 text-sky-800",
                   verdict.kind === "high" &&
-                    "border-amber-400/45 bg-amber-400/10 text-amber-200",
+                    "border-amber-500/45 bg-amber-500/15 text-amber-800",
                   (verdict.kind === "blast" || verdict.kind === "starve") &&
-                    "border-rose-400/50 bg-rose-400/12 text-rose-200",
+                    "border-rose-500/50 bg-rose-500/15 text-rose-800",
                 )}
               >
                 {verdict.kind === "ok" && `${verdict.turnover.toFixed(1)}× turnover`}

@@ -19,23 +19,23 @@ const SEVERITY: Record<
 > = {
   danger: {
     icon: AlertTriangle,
-    card: "border-rose-400/45",
-    chip: "border-rose-400/55 bg-rose-400/15 text-rose-200",
-    iconBg: "bg-rose-400/15 text-rose-200",
+    card: "border-rose-500/45",
+    chip: "border-rose-500/55 bg-rose-500/15 text-rose-800",
+    iconBg: "bg-rose-500/15 text-rose-700",
     label: "Conflict",
   },
   warn: {
     icon: AlertCircle,
-    card: "border-amber-400/40",
-    chip: "border-amber-400/55 bg-amber-400/15 text-amber-200",
-    iconBg: "bg-amber-400/15 text-amber-200",
+    card: "border-amber-500/40",
+    chip: "border-amber-500/55 bg-amber-500/18 text-amber-800",
+    iconBg: "bg-amber-500/18 text-amber-700",
     label: "Watch",
   },
   info: {
     icon: Info,
-    card: "border-sky-400/40",
-    chip: "border-sky-400/55 bg-sky-400/12 text-sky-200",
-    iconBg: "bg-sky-400/15 text-sky-200",
+    card: "border-sky-500/40",
+    chip: "border-sky-500/55 bg-sky-500/15 text-sky-800",
+    iconBg: "bg-sky-500/15 text-sky-700",
     label: "Tip",
   },
 };
@@ -60,10 +60,10 @@ export function TankWarnings({
             Compatibility check
           </h2>
         </header>
-        <article className="glass glass-edge animate-fade-up flex items-start gap-3 rounded-2xl border border-emerald-400/40 p-5">
+        <article className="glass glass-edge animate-fade-up flex items-start gap-3 rounded-2xl border border-emerald-600/45 p-5">
           <span
             aria-hidden
-            className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300"
+            className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-emerald-500/18 text-emerald-700"
           >
             <CheckCircle2 className="size-4" strokeWidth={1.85} />
           </span>

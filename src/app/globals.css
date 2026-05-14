@@ -191,9 +191,13 @@
    along the top, like the printed bar at the top of a field-guide
    page. */
 @layer components {
+  /* `.glass-edge` deliberately does NOT use `isolation: isolate` —
+     creating a new stacking context here would trap dropdowns and
+     popovers inside the card, hiding them behind sibling cards.
+     The ::before border highlight uses a mask to render only at the
+     edge, so it doesn't need isolation to stay out of the way. */
   .glass-edge {
     position: relative;
-    isolation: isolate;
   }
 }
 .glass-edge::before {

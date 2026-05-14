@@ -101,7 +101,7 @@ export function StockingGauge({ stocking, tankL }: StockingGaugeProps) {
               they sit in the scale even before the fill paints */}
           <span
             aria-hidden
-            className="absolute inset-y-0 left-0 bg-sky-400/15"
+            className="absolute inset-y-0 left-0 bg-sky-500/18"
             style={{ width: "25%" }}
           />
           <span
@@ -111,12 +111,12 @@ export function StockingGauge({ stocking, tankL }: StockingGaugeProps) {
           />
           <span
             aria-hidden
-            className="absolute inset-y-0 bg-amber-400/15"
+            className="absolute inset-y-0 bg-amber-500/18"
             style={{ left: "50%", width: "25%" }}
           />
           <span
             aria-hidden
-            className="absolute inset-y-0 right-0 bg-rose-400/15"
+            className="absolute inset-y-0 right-0 bg-rose-500/18"
             style={{ width: "25%" }}
           />
           {/* Tick dividers */}
@@ -223,23 +223,23 @@ const TONES: Record<
   { fill: string; marker: string; chip: string }
 > = {
   understocked: {
-    fill: "bg-sky-400/70",
-    marker: "bg-sky-400",
-    chip: "border-sky-400/40 bg-sky-400/10 text-sky-200",
+    fill: "bg-sky-500/70",
+    marker: "bg-sky-500",
+    chip: "border-sky-500/45 bg-sky-500/15 text-sky-800",
   },
   comfortable: {
     fill: "bg-[var(--brand)]/80",
     marker: "bg-[var(--brand)]",
-    chip: "border-[var(--brand)]/45 bg-[var(--brand)]/12 text-foreground",
+    chip: "border-[var(--brand)]/45 bg-[var(--brand)]/15 text-[var(--brand)]",
   },
   full: {
-    fill: "bg-amber-400/75",
-    marker: "bg-amber-400",
-    chip: "border-amber-400/45 bg-amber-400/12 text-amber-200",
+    fill: "bg-amber-500/75",
+    marker: "bg-amber-500",
+    chip: "border-amber-500/45 bg-amber-500/15 text-amber-800",
   },
   overstocked: {
-    fill: "bg-rose-400/80",
-    marker: "bg-rose-400",
-    chip: "border-rose-400/50 bg-rose-400/12 text-rose-200",
+    fill: "bg-rose-500/80",
+    marker: "bg-rose-500",
+    chip: "border-rose-500/50 bg-rose-500/15 text-rose-800",
   },
 };

@@ -62,7 +62,7 @@ export function CompareButton({
       className={cn(
         "press group inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-medium transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5",
         present
-          ? "border-emerald-400/45 bg-emerald-400/12 text-emerald-200 hover:shadow-[0_10px_24px_-12px_color-mix(in_oklab,rgb(110_231_183)_60%,transparent)]"
+          ? "border-emerald-600/45 bg-emerald-500/15 text-emerald-800 hover:shadow-[0_10px_24px_-12px_color-mix(in_oklab,rgb(110_231_183)_60%,transparent)]"
           : "border-border bg-background/70 text-foreground hover:border-[var(--brand)]/45 hover:text-[var(--brand)] hover:shadow-[0_10px_24px_-12px_color-mix(in_oklab,var(--brand)_50%,transparent)]",
         className,
       )}

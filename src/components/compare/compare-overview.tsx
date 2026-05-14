@@ -43,8 +43,8 @@ const BANDS: ScoreBand[] = [
     summary: "Every key parameter overlaps and no major conflicts surfaced.",
     tone: "emerald",
     ring: "ring-emerald-300/50",
-    text: "text-emerald-200",
-    chip: "border-emerald-400/45 bg-emerald-400/12 text-emerald-200",
+    text: "text-emerald-800",
+    chip: "border-emerald-600/45 bg-emerald-500/15 text-emerald-800",
   },
   {
     letter: "B",
@@ -61,8 +61,8 @@ const BANDS: ScoreBand[] = [
     summary: "A few warnings — pick equipment and stocking carefully.",
     tone: "amber",
     ring: "ring-amber-400/55",
-    text: "text-amber-200",
-    chip: "border-amber-400/45 bg-amber-400/12 text-amber-200",
+    text: "text-amber-800",
+    chip: "border-amber-500/45 bg-amber-500/15 text-amber-800",
   },
   {
     letter: "D",
@@ -79,8 +79,8 @@ const BANDS: ScoreBand[] = [
     summary: "These species shouldn't share a tank — drop the outliers.",
     tone: "rose",
     ring: "ring-rose-400/55",
-    text: "text-rose-200",
-    chip: "border-rose-400/45 bg-rose-400/12 text-rose-200",
+    text: "text-rose-800",
+    chip: "border-rose-500/50 bg-rose-500/15 text-rose-800",
   },
 ];
 
@@ -312,19 +312,19 @@ function ScoreCard({
         {(dangerCount > 0 || warnCount > 0 || infoCount > 0) && (
           <p className="text-[11px] text-muted-foreground">
             {dangerCount > 0 && (
-              <span className="text-rose-200">
+              <span className="text-rose-800">
                 {dangerCount} conflict{dangerCount === 1 ? "" : "s"}
               </span>
             )}
             {dangerCount > 0 && (warnCount > 0 || infoCount > 0) && " · "}
             {warnCount > 0 && (
-              <span className="text-amber-200">
+              <span className="text-amber-800">
                 {warnCount} warning{warnCount === 1 ? "" : "s"}
               </span>
             )}
             {warnCount > 0 && infoCount > 0 && " · "}
             {infoCount > 0 && (
-              <span className="text-sky-200">
+              <span className="text-sky-800">
                 {infoCount} note{infoCount === 1 ? "" : "s"}
               </span>
             )}
@@ -358,9 +358,9 @@ function Stat({
 }) {
   const toneClass =
     tone === "rose"
-      ? "border-rose-400/45 bg-rose-400/12 text-rose-200"
+      ? "border-rose-500/50 bg-rose-500/15 text-rose-800"
       : tone === "amber"
-        ? "border-amber-400/45 bg-amber-400/12 text-amber-200"
+        ? "border-amber-500/45 bg-amber-500/15 text-amber-800"
         : tone === "muted"
           ? "border-border bg-background/60 text-muted-foreground"
           : "border-[var(--brand)]/40 bg-[var(--brand)]/12 text-foreground";
@@ -408,17 +408,17 @@ const SEVERITY: Record<
 > = {
   danger: {
     icon: CircleAlert,
-    chip: "border-rose-400/45 bg-rose-400/12 text-rose-200",
+    chip: "border-rose-500/50 bg-rose-500/15 text-rose-800",
     bar: "bg-rose-400/70",
   },
   warn: {
     icon: AlertTriangle,
-    chip: "border-amber-400/45 bg-amber-400/12 text-amber-200",
+    chip: "border-amber-500/45 bg-amber-500/15 text-amber-800",
     bar: "bg-amber-400/70",
   },
   info: {
     icon: Info,
-    chip: "border-sky-400/40 bg-sky-400/10 text-sky-200",
+    chip: "border-sky-500/45 bg-sky-500/15 text-sky-800",
     bar: "bg-sky-400/70",
   },
 };
