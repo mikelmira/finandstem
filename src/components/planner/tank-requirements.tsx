@@ -3,22 +3,35 @@ import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TankSizeBadge } from "@/components/charts/tank-size-badge";
 import { RangeBar } from "@/components/charts/range-bar";
+import { MultiRangeBar } from "@/components/charts/multi-range-bar";
 import {
   lightTo5,
   co2To3,
   LIGHT_SCALE_LABELS,
   CO2_SCALE_LABELS,
 } from "@/lib/catalogue/tank-standards";
-import type { TankRequirements } from "@/lib/catalogue/tank-builder";
+import type {
+  ParameterContribution,
+  TankRequirements,
+} from "@/lib/catalogue/tank-builder";
 
 interface TankRequirementsPanelProps {
   requirements: TankRequirements;
   tankL?: number;
+  /** Per-species range contributions so the panel can render a small
+   *  stacked chart under each parameter showing every contributing
+   *  species' window plus the intersection. */
+  contributions: {
+    temp: ParameterContribution[];
+    ph: ParameterContribution[];
+    dgh: ParameterContribution[];
+  };
 }
 
 export function TankRequirementsPanel({
   requirements,
   tankL,
+  contributions,
 }: TankRequirementsPanelProps) {
   const r = requirements;
 
@@ -73,7 +86,17 @@ export function TankRequirementsPanel({
           label="Temperature"
           index={1}
         >
-          {r.temp ? (
+          {contributions.temp.length >= 2 ? (
+            <MultiRangeBar
+              label="Temperature"
+              unit="°C"
+              scale={{ min: 15, max: 32 }}
+              ticks={[15, 20, 25, 30]}
+              precision={0}
+              species={contributions.temp}
+              intersection={r.temp}
+            />
+          ) : r.temp ? (
             <RangeBar
               label="Target window"
               unit="°C"
@@ -88,7 +111,16 @@ export function TankRequirementsPanel({
         </RequirementCard>
 
         <RequirementCard icon={Droplet} label="pH" index={2}>
-          {r.ph ? (
+          {contributions.ph.length >= 2 ? (
+            <MultiRangeBar
+              label="pH"
+              scale={{ min: 4, max: 8.5 }}
+              ticks={[4, 5, 6, 7, 8]}
+              precision={1}
+              species={contributions.ph}
+              intersection={r.ph}
+            />
+          ) : r.ph ? (
             <RangeBar
               label="Target window"
               scale={{ min: 4, max: 8.5 }}
@@ -103,7 +135,17 @@ export function TankRequirementsPanel({
         </RequirementCard>
 
         <RequirementCard icon={FlaskConical} label="Hardness" index={3}>
-          {r.dgh ? (
+          {contributions.dgh.length >= 2 ? (
+            <MultiRangeBar
+              label="Hardness"
+              unit="dGH"
+              scale={{ min: 0, max: 25 }}
+              ticks={[0, 5, 10, 15, 20, 25]}
+              precision={0}
+              species={contributions.dgh}
+              intersection={r.dgh}
+            />
+          ) : r.dgh ? (
             <RangeBar
               label="Target window"
               unit="dGH"

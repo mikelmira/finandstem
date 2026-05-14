@@ -8,8 +8,15 @@ import { TankRequirementsPanel } from "@/components/planner/tank-requirements";
 import { TankSetupCard } from "@/components/planner/tank-setup-card";
 import { StockingGauge } from "@/components/planner/stocking-gauge";
 import { TankWarnings } from "@/components/planner/tank-warnings";
+import { RecommendedSpecies } from "@/components/planner/recommended-species";
 import { allNorm } from "@/lib/catalogue/normalize";
-import { buildTank } from "@/lib/catalogue/tank-builder";
+import {
+  buildTank,
+  dghContributions,
+  phContributions,
+  temperatureContributions,
+} from "@/lib/catalogue/tank-builder";
+import { recommendFish } from "@/lib/catalogue/recommend";
 
 export const metadata: Metadata = {
   title: "Tank Planner",
@@ -59,6 +66,20 @@ export default async function PlannerPage({ searchParams }: PageProps) {
     hasCustomCount: a.hasCustomCount,
   }));
   const hasSelection = items.length > 0;
+
+  const contributions = {
+    temp: temperatureContributions(result.selection),
+    ph: phContributions(result.selection),
+    dgh: dghContributions(result.selection),
+  };
+
+  // Only run the recommender when the user has at least one fish or
+  // shrimp — recommending into an empty tank isn't meaningful.
+  const recommendations =
+    hasSelection &&
+    (result.selection.fish.length > 0 || result.selection.shrimp.length > 0)
+      ? recommendFish(result, tankL, 4)
+      : [];
 
   return (
     <>
@@ -112,11 +133,17 @@ export default async function PlannerPage({ searchParams }: PageProps) {
                 <TankRequirementsPanel
                   requirements={result.requirements}
                   tankL={tankL}
+                  contributions={contributions}
                 />
                 <TankWarnings
                   warnings={result.warnings}
                   hasSelection={hasSelection}
                 />
+                {recommendations.length > 0 && (
+                  <Suspense fallback={null}>
+                    <RecommendedSpecies recommendations={recommendations} />
+                  </Suspense>
+                )}
               </>
             ) : (
               <EmptyState />
