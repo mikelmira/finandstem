@@ -165,6 +165,55 @@ export function StockingGauge({ stocking, tankL }: StockingGaugeProps) {
           </span>
         )}
       </p>
+
+      {/* Breakdown — surface the assumed group sizes so the user sees
+          how the planner arrived at the bioload number. Shrimp lines
+          show the colony minimum + the ⅕ adjustment in a footnote. */}
+      {stocking.breakdown.length > 0 && (
+        <details className="group/breakdown -mx-1">
+          <summary className="press flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground [&::-webkit-details-marker]:hidden">
+            <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+            Stocking assumptions
+            <span className="ml-auto text-[10px] text-muted-foreground/70 group-open/breakdown:hidden">
+              Show
+            </span>
+            <span className="ml-auto hidden text-[10px] text-muted-foreground/70 group-open/breakdown:inline">
+              Hide
+            </span>
+          </summary>
+          <ul className="mt-2 flex flex-col gap-1.5 px-2 text-xs">
+            {stocking.breakdown.map((b) => (
+              <li
+                key={`${b.category}-${b.commonName}`}
+                className="flex items-baseline justify-between gap-3 text-foreground/85"
+              >
+                <span>
+                  <span className="font-semibold tabular-nums">
+                    {b.count} ×
+                  </span>{" "}
+                  {b.commonName}
+                  <span className="ml-1.5 text-muted-foreground">
+                    · {b.adultSizeCm} cm adult
+                  </span>
+                  {b.category === "shrimp" && (
+                    <span className="ml-1.5 text-muted-foreground/70">
+                      (× 0.2 shrimp factor)
+                    </span>
+                  )}
+                </span>
+                <span className="tabular-nums text-muted-foreground">
+                  {b.contributionCm} cm
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-2 px-2 text-[10px] leading-snug text-muted-foreground/70">
+            Counts default to each species' minimum responsible group
+            (schoolers stocked at their school minimum, shrimp at their
+            colony minimum). Adjust by adding or removing species.
+          </p>
+        </details>
+      )}
     </article>
   );
 }

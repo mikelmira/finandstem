@@ -197,16 +197,25 @@ export function classifyFlow(
 
 /**
  * Convert our stored Light token ("Low"/"Medium"/"High") to a finer
- * 1–5 scale the planner UI exposes. Maps 3-point input to a 5-point
- * output by interpolating: Low=1, Medium=3, High=5. We don't have
- * data to populate the 2 and 4 buckets directly — those are reserved
- * for future per-species refinement.
+ * 1–5 scale the planner UI exposes.
+ *
+ * Mapped against PAR (μmol/m²/s) categories:
+ *   1 = Very low      (<15 PAR — deep blackwater biotope)
+ *   2 = Low           (15–30 PAR — Anubias / Java fern / crypts)   ← "Low"
+ *   3 = Medium        (30–50 PAR — most aquarium plants)            ← "Medium"
+ *   4 = High          (50–80 PAR — carpets, demanding reds)         ← "High"
+ *   5 = Very high     (80+ PAR — high-tech competition scapes)
+ *
+ * Positions 1 and 5 are reserved for finer per-species data the
+ * catalogue doesn't carry yet.
  */
 export type LightScale = 1 | 2 | 3 | 4 | 5;
-export function lightTo5(light: "Low" | "Medium" | "High" | null): LightScale | null {
-  if (light === "Low") return 1;
+export function lightTo5(
+  light: "Low" | "Medium" | "High" | null,
+): LightScale | null {
+  if (light === "Low") return 2;
   if (light === "Medium") return 3;
-  if (light === "High") return 5;
+  if (light === "High") return 4;
   return null;
 }
 
@@ -230,8 +239,8 @@ export const LIGHT_SCALE_LABELS: Record<LightScale, string> = {
   1: "Very low",
   2: "Low",
   3: "Medium",
-  4: "Medium–high",
-  5: "High",
+  4: "High",
+  5: "Very high",
 };
 
 export const CO2_SCALE_LABELS: Record<Co2Scale, string> = {

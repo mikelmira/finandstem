@@ -68,6 +68,15 @@ export interface TankRequirements {
   equipmentNotes: string[];
 }
 
+export interface StockingItem {
+  /** Per-species line in the breakdown, e.g. "10 × Neon Tetra (40 cm)". */
+  commonName: string;
+  category: "fish" | "shrimp";
+  count: number;
+  adultSizeCm: number;
+  contributionCm: number;
+}
+
 export interface StockingReport {
   /** Sum of adult fish lengths plus shrimp contribution, in cm. */
   bioloadCm: number;
@@ -77,6 +86,10 @@ export interface StockingReport {
   verdict: StockingVerdict | null;
   /** Headroom in cm before tipping into the next band. */
   headroomCm: number | null;
+  /** Per-species contribution, so the user can see what the planner
+   *  is assuming (group size × adult length). Sorted by contribution
+   *  descending. */
+  breakdown: StockingItem[];
 }
 
 export interface FilterReport {
@@ -162,34 +175,67 @@ function intersect(
   return { min, max };
 }
 
+/**
+ * Light demand for the tank = the max of each species's MINIMUM
+ * requirement.
+ *
+ * `parseLight("Low to Medium")` expands to `["Low", "Medium"]`
+ * meaning the plant *tolerates* that range. Its actual minimum
+ * requirement is the LOW end. The tank must satisfy the
+ * most-demanding plant's minimum — anyone whose minimum is met has
+ * no problem with extra light.
+ *
+ * The previous version took max over the union of all tolerated
+ * levels, which over-reported (e.g. Anubias alone reported "Medium
+ * light" when it grows fine at Low).
+ */
 function highestLight(
   pieces: ReadonlyArray<{ light: Light[] }>,
 ): Light | null {
-  let max: Light | null = null;
   let maxRank = -1;
+  let result: Light | null = null;
   for (const p of pieces) {
+    if (p.light.length === 0) continue;
+    let minRank = Infinity;
+    let minLight: Light | null = null;
     for (const l of p.light) {
-      if (LIGHT_RANK[l] > maxRank) {
-        max = l;
-        maxRank = LIGHT_RANK[l];
+      if (LIGHT_RANK[l] < minRank) {
+        minRank = LIGHT_RANK[l];
+        minLight = l;
       }
     }
+    if (minLight !== null && minRank > maxRank) {
+      maxRank = minRank;
+      result = minLight;
+    }
   }
-  return max;
+  return result;
 }
 
+/**
+ * CO₂ demand for the tank — same shape as `highestLight`. Each
+ * species's minimum CO₂ need is the lowest token in its tolerance
+ * range; the tank needs the maximum of those minimums.
+ */
 function highestCO2(pieces: ReadonlyArray<{ co2: CO2[] }>): CO2 | null {
-  let max: CO2 | null = null;
   let maxRank = -1;
+  let result: CO2 | null = null;
   for (const p of pieces) {
+    if (p.co2.length === 0) continue;
+    let minRank = Infinity;
+    let minCo2: CO2 | null = null;
     for (const l of p.co2) {
-      if (CO2_RANK[l] > maxRank) {
-        max = l;
-        maxRank = CO2_RANK[l];
+      if (CO2_RANK[l] < minRank) {
+        minRank = CO2_RANK[l];
+        minCo2 = l;
       }
     }
+    if (minCo2 !== null && minRank > maxRank) {
+      maxRank = minRank;
+      result = minCo2;
+    }
   }
-  return max;
+  return result;
 }
 
 function substrateNotes(plants: PlantNorm[]): string[] {
@@ -456,51 +502,82 @@ function bioWarnings(
 /* ────────────────────────────  Bioload / filter  ──────────────────────── */
 
 /**
- * Cumulative "cm of adult fish" load for the selection. Fish count
- * at their full adult size × the actual stocking group; shrimp
- * contribute roughly 1/5 of a comparable-length fish.
+ * Cumulative "cm of adult fish" load for the selection plus a
+ * per-species breakdown so the UI can show what the planner is
+ * assuming (group size × adult length).
  *
- * `groupSize` defaults to each fish's minGroupSize — that's the
- * stocking the planner assumes if the user just adds a single
- * species. Future iterations can let users override this per fish.
+ * Assumptions:
+ *   • Fish count at the species' minGroupSize. This is the minimum
+ *     responsible stocking for schoolers; non-schoolers default to 1.
+ *   • Each fish contributes its adult length max (worst-case planning).
+ *   • Shrimp contribute at ~⅕ a comparable-length fish, scaled to the
+ *     species' colony minimum.
  */
-function computeBioload(selection: TankSelectionResolved): number {
-  let cm = 0;
+function computeBioload(selection: TankSelectionResolved): {
+  cm: number;
+  breakdown: StockingItem[];
+} {
+  let total = 0;
+  const breakdown: StockingItem[] = [];
+
   for (const f of selection.fish) {
     const range = parseRange(f.raw.adultSize);
     const adult = range ? range.max : 0;
     const group = Math.max(1, f.minGroupSize);
-    cm += adult * group;
+    const contribution = adult * group;
+    if (contribution > 0) {
+      total += contribution;
+      breakdown.push({
+        commonName: f.commonName,
+        category: "fish",
+        count: group,
+        adultSizeCm: adult,
+        contributionCm: Number(contribution.toFixed(1)),
+      });
+    }
   }
+
   for (const s of selection.shrimp) {
     const range = parseRange(s.raw.adultSize);
     const adult = range ? range.max : 0;
-    // Shrimp produce far less waste per cm of body — scale to ~⅕.
-    // Use the colony minimum so the load reflects a real shrimp
-    // colony, not a single specimen.
-    cm += adult * Math.max(1, s.raw.colonyMin) * 0.2;
+    const count = Math.max(1, s.raw.colonyMin);
+    // Shrimp produce far less waste per cm of body — scale to ⅕.
+    const contribution = adult * count * 0.2;
+    if (contribution > 0) {
+      total += contribution;
+      breakdown.push({
+        commonName: s.commonName,
+        category: "shrimp",
+        count,
+        adultSizeCm: adult,
+        contributionCm: Number(contribution.toFixed(1)),
+      });
+    }
   }
-  return Number(cm.toFixed(1));
+
+  breakdown.sort((a, b) => b.contributionCm - a.contributionCm);
+  return { cm: Number(total.toFixed(1)), breakdown };
 }
 
 function buildStockingReport(
   selection: TankSelectionResolved,
   tankL: number | undefined,
 ): StockingReport {
-  const bioloadCm = computeBioload(selection);
+  const { cm: bioloadCm, breakdown } = computeBioload(selection);
   if (tankL === undefined || tankL <= 0) {
     return {
       bioloadCm,
       loadPerLitre: null,
       verdict: null,
       headroomCm: null,
+      breakdown,
     };
   }
   const loadPerLitre = Number((bioloadCm / tankL).toFixed(2));
   const verdict = verdictForLoad(loadPerLitre);
   // Headroom = cm of fish you can still add before "full" (1.0 cm/L).
   const headroomCm = Math.max(0, Number((tankL * 1.0 - bioloadCm).toFixed(1)));
-  return { bioloadCm, loadPerLitre, verdict, headroomCm };
+  return { bioloadCm, loadPerLitre, verdict, headroomCm, breakdown };
 }
 
 function buildFilterReport(

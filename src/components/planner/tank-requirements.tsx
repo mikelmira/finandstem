@@ -205,11 +205,11 @@ function LightScaleBar({ value }: { value: 1 | 2 | 3 | 4 | 5 }) {
         ))}
       </div>
       <div className="flex justify-between text-[10px] uppercase tracking-[0.14em] text-muted-foreground/60">
-        <span>Very low</span>
+        <span>V. low</span>
         <span>Low</span>
         <span>Med</span>
-        <span>Med–hi</span>
         <span>High</span>
+        <span>V. high</span>
       </div>
     </div>
   );
