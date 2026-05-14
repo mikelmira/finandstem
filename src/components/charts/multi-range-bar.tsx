@@ -82,19 +82,19 @@ export function MultiRangeBar({
 
       {/* Stacked species ranges — drawn against the same scale as the
           intersection bar (and as the primary RangeBar when this chart
-          sits below one in `compact` mode). The shaded intersection
-          band drawn behind every row gives the eye a fixed anchor so
-          you can see at a glance which species fall inside it. */}
+          sits below one in `compact` mode). Labels sit BELOW each bar
+          so the bars stay the same width regardless of species name
+          length — otherwise long names would shorten the bars and the
+          ticks would no longer line up across rows. The shaded
+          intersection band drawn behind every row gives the eye a
+          fixed anchor for which species fall inside the overlap. */}
       <ul
-        className="flex flex-col gap-1.5"
+        className="flex flex-col gap-3"
         aria-label={`${label} ranges per species`}
       >
         {species.map((s) => (
-          <li
-            key={s.label}
-            className="grid grid-cols-[1fr_auto] items-center gap-3"
-          >
-            <div className="relative h-4 rounded-full bg-foreground/[0.06]">
+          <li key={s.label} className="flex flex-col gap-1">
+            <div className="relative h-4 w-full rounded-full bg-foreground/[0.06]">
               {/* Intersection band — subtle backdrop so the overlap
                   reads against each species row, not just the
                   separate target bar. */}
@@ -128,15 +128,22 @@ export function MultiRangeBar({
                 aria-label={`${s.label}: ${fmt(s.range.min)}–${fmt(s.range.max)}${unit ? ` ${unit}` : ""}`}
               />
             </div>
-            <span className="flex items-center gap-1.5 text-[11px] text-foreground/85">
-              <span
-                aria-hidden
-                className={cn("size-1.5 rounded-full", CATEGORY_DOT[s.category])}
-              />
-              <span className="truncate max-w-[12ch] sm:max-w-[16ch]">
-                {s.label}
+            <div className="flex items-baseline justify-between gap-3 text-[11px] leading-tight">
+              <span className="flex items-center gap-1.5 text-foreground/85">
+                <span
+                  aria-hidden
+                  className={cn(
+                    "size-1.5 shrink-0 rounded-full",
+                    CATEGORY_DOT[s.category],
+                  )}
+                />
+                <span>{s.label}</span>
               </span>
-            </span>
+              <span className="tabular-nums text-muted-foreground">
+                {fmt(s.range.min)}–{fmt(s.range.max)}
+                {unit ? ` ${unit}` : ""}
+              </span>
+            </div>
           </li>
         ))}
       </ul>
