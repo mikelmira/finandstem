@@ -1085,6 +1085,24 @@ const FISH_BODY_TYPES: Record<string, FishBodyType> = {
 
   // Livebearer
   "endler-livebearer": "livebearer",
+  guppy: "livebearer",
+  platy: "livebearer",
+  "sailfin-molly": "livebearer",
+  swordtail: "livebearer",
+
+  // Slim cyprinids / characins from the SA-hobby additions
+  "zebra-danio": "slim",
+  "black-skirt-tetra": "slim",
+  "red-tail-shark": "slim",
+
+  // Stocky community fish
+  "tiger-barb": "stocky",
+
+  // Catfish family
+  "bronze-corydoras": "catfish",
+
+  // Laterally compressed
+  angelfish: "gourami",
 };
 
 const FISH_PLATE_BY_TYPE: Record<FishBodyType, React.ComponentType<IconProps>> =
