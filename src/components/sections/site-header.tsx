@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Wand2 } from "lucide-react";
 import { site } from "@/lib/site";
-import { WaveMark } from "@/components/wave-mark";
 import { GlobalSearch, type SearchOption } from "@/components/search/global-search";
 import { MobileNav } from "@/components/sections/mobile-nav";
 import { allNorm } from "@/lib/catalogue/normalize";
@@ -22,15 +21,20 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 px-4 pt-4 sm:px-6">
       <div className="glass glass-edge mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-full px-3 pl-4 pr-3 sm:h-16 sm:pl-6 sm:pr-3">
+        {/* Wordmark logo — same display family + weight as the giant
+            footer watermark, sized for the header. No icon. */}
         <Link
           href="/"
-          className="group flex items-center gap-2.5"
+          className="group flex items-center"
           aria-label={`${site.name} home`}
         >
-          <span className="inline-flex size-7 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:rotate-[14deg] group-hover:scale-110 group-hover:bg-[var(--brand)]/25">
-            <WaveMark className="size-4" />
-          </span>
-          <span className="text-base font-semibold tracking-tight transition-colors duration-300 group-hover:text-[var(--brand)]">
+          <span
+            className="font-display text-xl font-bold leading-none tracking-tight text-foreground transition-colors duration-200 group-hover:text-[var(--brand)] sm:text-2xl"
+            style={{
+              fontVariationSettings: '"opsz" 96, "wdth" 100',
+              letterSpacing: "-0.035em",
+            }}
+          >
             {site.name}
           </span>
         </Link>
