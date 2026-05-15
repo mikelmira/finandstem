@@ -544,6 +544,45 @@ export function ProfileCards({
   return <MossProfile entry={entry} />;
 }
 
+/**
+ * Surface a stocking recommendation under the "Schooling" card so
+ * the reader knows how many to add — regardless of whether the
+ * species is technically a schooler. Examples:
+ *   • Yes / Yes (loose shoal)        → "Group of 8+"
+ *   • Pair                            → "Keep as a bonded pair"
+ *   • Pair or trio                    → "Best as a pair or trio"
+ *   • Harem (1 male, 2–3 females)     → "Harem · 1 male, 2–3 females"
+ *   • Solitary or pair                → "Solo or a pair"
+ *   • No (live in groups)             → "Small group of 4+"
+ *   • No                              → "Can be kept solo"
+ */
+function recommendedGroupNote(
+  raw: string,
+  min: number,
+  isSchooling: boolean,
+): string | undefined {
+  const r = raw.toLowerCase();
+  // Schoolers — straight count
+  if (isSchooling) return `Group of ${min}+`;
+  // Harem — surface the breakdown when the spreadsheet wrote it in parens
+  if (/harem/.test(r)) {
+    const m = raw.match(/\(([^)]+)\)/);
+    return m ? `Harem · ${m[1]}` : "Keep as a harem";
+  }
+  // Pair-bonders
+  if (/\bpair\b/.test(r)) {
+    if (/trio/.test(r)) return "Best as a pair or trio";
+    if (/solitary|solo/.test(r)) return "Solo or a pair";
+    return "Keep as a bonded pair";
+  }
+  // "Loose group" / "No (live in groups)" — small group recommended
+  if (/group/.test(r) && min >= 3) return `Small group of ${min}+`;
+  // Fall-through — multiple recommended even if "No" reads literally
+  if (min >= 2) return `Keep ${min}+ together`;
+  // Genuinely solo species
+  return "Can be kept solo";
+}
+
 function FishProfile({ entry: f }: { entry: FishEntry }) {
   const schoolingYes = /\byes\b/i.test(f.schooling);
   return (
@@ -561,7 +600,7 @@ function FishProfile({ entry: f }: { entry: FishEntry }) {
       <ProfileCard
         label="Schooling"
         value={schoolingYes ? "Yes" : "No"}
-        helper={schoolingYes ? `Group of ${f.minGroupSize}+` : undefined}
+        helper={recommendedGroupNote(f.schooling, f.minGroupSize, schoolingYes)}
         graphic={
           <SchoolingViz
             minGroupSize={f.minGroupSize}
