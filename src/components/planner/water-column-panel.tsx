@@ -157,9 +157,7 @@ export function WaterColumnPanel({ report }: WaterColumnPanelProps) {
                   </span>
                   {active ? (
                     <span className="mt-0.5 text-xs leading-snug text-foreground/85">
-                      {data.species
-                        .map((s) => `${s.count} × ${s.commonName}`)
-                        .join(" · ")}
+                      {data.species.map((s) => s.commonName).join(", ")}
                     </span>
                   ) : (
                     <span className="mt-0.5 text-xs italic text-muted-foreground/70">

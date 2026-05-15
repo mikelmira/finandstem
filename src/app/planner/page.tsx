@@ -64,6 +64,7 @@ export default async function PlannerPage({ searchParams }: PageProps) {
     entry: a.entry,
     count: a.count,
     defaultCount: a.defaultCount,
+    recommendedCount: a.recommendedCount,
     hasCustomCount: a.hasCustomCount,
   }));
   const hasSelection = items.length > 0;

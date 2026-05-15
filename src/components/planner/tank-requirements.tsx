@@ -196,13 +196,29 @@ export function TankRequirementsPanel({
             Equipment & substrate
           </h3>
           {r.substrateNotes.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {r.substrateNotes.map((n) => (
-                <Chip key={n} icon={Layers}>
-                  {n}
-                </Chip>
+            <ul className="flex flex-col gap-2">
+              {r.substrateNotes.map(({ note, sources }) => (
+                <li
+                  key={note}
+                  className="flex flex-col gap-1 rounded-xl border border-foreground/10 bg-background/40 p-3"
+                >
+                  <span className="flex items-start gap-2 text-sm leading-snug text-foreground/90">
+                    <Layers
+                      className="mt-0.5 size-3.5 shrink-0 text-[var(--brand)]"
+                      aria-hidden
+                      strokeWidth={1.85}
+                    />
+                    <span>{note}</span>
+                  </span>
+                  <span className="pl-[1.375rem] text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                    For{" "}
+                    <span className="normal-case tracking-normal text-foreground/75">
+                      {sources.join(", ")}
+                    </span>
+                  </span>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
           {r.equipmentNotes.length > 0 && (
             <ul className="flex flex-col gap-2 text-sm leading-relaxed text-foreground/85">

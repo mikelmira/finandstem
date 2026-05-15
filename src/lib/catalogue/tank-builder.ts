@@ -50,17 +50,30 @@ export interface TankSelectionResolved {
     category: CatalogueEntry["category"];
     slug: string;
     entry: CatalogueEntry;
-    /** Resolved count — user override or default (minGroupSize /
-     *  colonyMin / 1 for plants & mosses). */
+    /** Resolved count — user override or default (1 for newly added
+     *  species; user can dial up via the picker). */
     count: number;
-    /** Default count this species would use if the user hasn't
-     *  set one — surfaced so the UI can show "default: 10". */
+    /** Default count this species starts at when first added (always 1
+     *  for fish / shrimp / plants / mosses). */
     defaultCount: number;
+    /** Recommended stocking — fish: minGroupSize, shrimp: colonyMin,
+     *  plants & mosses: 1. The picker shows "below school min N" when
+     *  count < recommendedCount so the schooling guidance stays
+     *  visible even though defaults are 1. */
+    recommendedCount: number;
     /** True if the user explicitly set the count via URL. */
     hasCustomCount: boolean;
   }>;
   /** Map of `${category}:${slug}` → resolved count, for quick lookups. */
   counts: Record<string, number>;
+}
+
+export interface SubstrateNote {
+  /** The plant's substrate instruction (e.g. "Attach to wood or
+   *  stone — never bury rhizome"). */
+  note: string;
+  /** Names of every plant that contributed this exact note. */
+  sources: string[];
 }
 
 export interface TankRequirements {
@@ -76,8 +89,9 @@ export interface TankRequirements {
   light: Light | null;
   /** Highest CO₂ demand across selected plants + mosses. */
   co2: CO2 | null;
-  /** Distinct substrate notes the selected plants ask for. */
-  substrateNotes: string[];
+  /** Distinct substrate notes the selected plants ask for, each
+   *  carrying the list of plant names that contributed it. */
+  substrateNotes: SubstrateNote[];
   /** Aggregated equipment recommendations. */
   equipmentNotes: string[];
 }
@@ -224,10 +238,19 @@ function parseIdToken(raw: string): {
   return { category, slug, count: Math.floor(n) };
 }
 
-/** Default stocking count for a species when the user hasn't picked
- *  one — schooling fish at their school minimum, shrimp at colony
- *  minimum, single-fish at 1, plants & mosses always 1. */
-function defaultCountFor(
+/** Starting count when a species is first added — always 1 across
+ *  every category. The user can dial up via the picker; the
+ *  picker's helper text surfaces the *recommended* count separately
+ *  (see {@link recommendedCountFor}). */
+function defaultCountFor(): number {
+  return 1;
+}
+
+/** Recommended stocking count for the species — schooling fish at
+ *  their school minimum, shrimp at colony minimum, plants & mosses
+ *  at 1. Used by the picker label ("below school min 10") and by
+ *  the bioload-fit headroom check inside the recommender. */
+function recommendedCountFor(
   category: string,
   fish?: FishNorm,
   shrimp?: ShrimpNorm,
@@ -249,6 +272,7 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
     entry: CatalogueEntry;
     count: number;
     defaultCount: number;
+    recommendedCount: number;
     hasCustomCount: boolean;
   }> = [];
   const counts: Record<string, number> = {};
@@ -257,11 +281,11 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
     const parsed = parseIdToken(id);
     if (!parsed) continue;
     const { category, slug, count: userCount } = parsed;
+    const def = defaultCountFor();
 
     if (category === "fish") {
       const hit = fishNorm.find((f) => f.slug === slug);
       if (hit && !all.some((a) => a.category === "fish" && a.slug === slug)) {
-        const def = defaultCountFor("fish", hit);
         const count = userCount ?? def;
         fish.push(hit);
         all.push({
@@ -270,6 +294,7 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
           entry: hit.raw,
           count,
           defaultCount: def,
+          recommendedCount: recommendedCountFor("fish", hit),
           hasCustomCount: userCount !== null,
         });
         counts[`fish:${slug}`] = count;
@@ -277,14 +302,15 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
     } else if (category === "plants") {
       const hit = plantNorm.find((p) => p.slug === slug);
       if (hit && !all.some((a) => a.category === "plants" && a.slug === slug)) {
-        const count = userCount ?? 1;
+        const count = userCount ?? def;
         plants.push(hit);
         all.push({
           category: "plants",
           slug,
           entry: hit.raw,
           count,
-          defaultCount: 1,
+          defaultCount: def,
+          recommendedCount: 1,
           hasCustomCount: userCount !== null,
         });
         counts[`plants:${slug}`] = count;
@@ -292,7 +318,6 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
     } else if (category === "shrimp") {
       const hit = shrimpNorm.find((s) => s.slug === slug);
       if (hit && !all.some((a) => a.category === "shrimp" && a.slug === slug)) {
-        const def = defaultCountFor("shrimp", undefined, hit);
         const count = userCount ?? def;
         shrimp.push(hit);
         all.push({
@@ -301,6 +326,7 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
           entry: hit.raw,
           count,
           defaultCount: def,
+          recommendedCount: recommendedCountFor("shrimp", undefined, hit),
           hasCustomCount: userCount !== null,
         });
         counts[`shrimp:${slug}`] = count;
@@ -308,14 +334,15 @@ export function resolveSelection(ids: string[]): TankSelectionResolved {
     } else if (category === "mosses") {
       const hit = mossNorm.find((m) => m.slug === slug);
       if (hit && !all.some((a) => a.category === "mosses" && a.slug === slug)) {
-        const count = userCount ?? 1;
+        const count = userCount ?? def;
         mosses.push(hit);
         all.push({
           category: "mosses",
           slug,
           entry: hit.raw,
           count,
-          defaultCount: 1,
+          defaultCount: def,
+          recommendedCount: 1,
           hasCustomCount: userCount !== null,
         });
         counts[`mosses:${slug}`] = count;
@@ -402,14 +429,25 @@ function highestCO2(pieces: ReadonlyArray<{ co2: CO2[] }>): CO2 | null {
   return result;
 }
 
-function substrateNotes(plants: PlantNorm[]): string[] {
-  const out = new Set<string>();
+/**
+ * Group plants by their substrate instruction so the UI can label
+ * each chip with which species it came from. Returns the notes in
+ * insertion order (first plant that contributed wins), with sources
+ * collated.
+ */
+function substrateNotes(plants: PlantNorm[]): SubstrateNote[] {
+  const map = new Map<string, string[]>();
   for (const p of plants) {
-    const note = p.raw.substrate;
-    if (!note) continue;
-    out.add(note.replace(/—/g, "—").trim());
+    const raw = p.raw.substrate;
+    if (!raw) continue;
+    const note = raw.replace(/—/g, "—").trim();
+    if (!map.has(note)) map.set(note, []);
+    map.get(note)!.push(p.commonName);
   }
-  return Array.from(out);
+  return Array.from(map.entries()).map(([note, sources]) => ({
+    note,
+    sources,
+  }));
 }
 
 function equipmentNotes(
@@ -598,16 +636,18 @@ function bioWarnings(
     }
   }
 
-  // Schooling fish reminders — warn when stocked below the species'
-  // minGroupSize, otherwise stay silent.
+  // Schooling fish reminders — picker default is 1, so this fires
+  // for every new schooling addition. Kept as `info` (not `warn`) so
+  // it reads as a recommendation, not an alarm; the picker label
+  // already flags the count in amber.
   for (const f of selection.fish) {
     if (!f.schooling) continue;
-    const count = selection.counts[`fish:${f.slug}`] ?? f.minGroupSize;
+    const count = selection.counts[`fish:${f.slug}`] ?? 1;
     if (count < f.minGroupSize) {
       out.push({
-        severity: "warn",
-        title: `${f.commonName} under-grouped`,
-        body: `You've planned for ${count} ${f.commonName.toLowerCase()}${count === 1 ? "" : "s"} — they need at least ${f.minGroupSize} to feel safe and shoal naturally. Below that they're stressed and lose colour.`,
+        severity: "info",
+        title: `${f.commonName} schools — stock at least ${f.minGroupSize}`,
+        body: `You've planned for ${count} ${f.commonName.toLowerCase()}${count === 1 ? "" : "s"}. ${f.commonName} need a group of at least ${f.minGroupSize} to feel safe and shoal naturally — below that they're stressed and lose colour. Dial up the count, or remove the species.`,
       });
     }
   }

@@ -22,8 +22,12 @@ export interface TankCompositionItem {
   entry: CatalogueEntry;
   /** Currently resolved stocking count for this species. */
   count: number;
-  /** Species default count (minGroupSize / colonyMin / 1). */
+  /** Species default count (always 1 — what new species start at). */
   defaultCount: number;
+  /** Recommended stocking — schooling fish at their school minimum,
+   *  shrimp at colony minimum, plants/mosses at 1. Used to show the
+   *  "below school min N" tip while letting users start at 1. */
+  recommendedCount: number;
   /** Whether the user has manually picked a count. */
   hasCustomCount: boolean;
 }
@@ -124,16 +128,18 @@ export function TankComposition({ items }: TankCompositionProps) {
   return (
     <ul className="stagger flex flex-col gap-3">
       {items.map((item, i) => {
-        const { entry, count, defaultCount, hasCustomCount } = item;
+        const { entry, count, defaultCount, recommendedCount, hasCustomCount } =
+          item;
         const meta = CATEGORY_META[entry.category];
         const img = getImage(entry.slug);
         const Icon = CAT_ICON[entry.category];
         const tone = CAT_TONE[entry.category];
         const countable = COUNTABLE[entry.category];
 
-        // Flag when the user has stocked below the species' default
-        // (fish below schooling minimum, shrimp below colony min)
-        const belowDefault = countable && count < defaultCount;
+        // Flag when the user is stocked below the species' recommended
+        // minimum (school for fish, colony for shrimp).
+        const belowRecommended =
+          countable && count < recommendedCount && recommendedCount > 1;
 
         return (
           <li
@@ -228,7 +234,7 @@ export function TankComposition({ items }: TankCompositionProps) {
                   <span
                     className={cn(
                       "text-[10px] uppercase tracking-[0.14em]",
-                      belowDefault
+                      belowRecommended
                         ? "text-amber-700"
                         : "text-muted-foreground/70",
                     )}
@@ -236,9 +242,9 @@ export function TankComposition({ items }: TankCompositionProps) {
                     {countLabel({
                       category: entry.category,
                       count,
-                      defaultCount,
+                      recommendedCount,
                       hasCustomCount,
-                      belowDefault,
+                      belowRecommended,
                     })}
                   </span>
                 </div>
@@ -262,28 +268,36 @@ export function TankComposition({ items }: TankCompositionProps) {
 
 /**
  * Pick the helper text that sits under the count picker.
- *   • Fish / shrimp below the species' default get a coloured
- *     "below school min N" or "below colony min N" callout.
- *   • Plants / mosses always read as a unit count ("3 bunches",
- *     "1 portion") so the user knows what one count represents.
- *   • Otherwise we show whether it's the species default or custom.
+ *   • Fish / shrimp below the species' recommended group get a
+ *     coloured "below school min N" / "below colony min N"
+ *     callout — visible until the user dials up to the recommended
+ *     count. New species start at 1, so this tip fires immediately
+ *     for any schooling fish or shrimp.
+ *   • Once at or above the recommendation, fish/shrimp show
+ *     "recommended N+" so the user knows what's a healthy minimum.
+ *   • Plants / mosses read as a unit count ("3 bunches",
+ *     "1 portion").
  */
 function countLabel(opts: {
   category: CatalogueEntry["category"];
   count: number;
-  defaultCount: number;
+  recommendedCount: number;
   hasCustomCount: boolean;
-  belowDefault: boolean;
+  belowRecommended: boolean;
 }): string {
-  const { category, count, defaultCount, hasCustomCount, belowDefault } = opts;
-  if (belowDefault) {
+  const { category, count, recommendedCount, belowRecommended } = opts;
+  if (belowRecommended) {
     return category === "fish"
-      ? `below school min ${defaultCount}`
-      : `below colony min ${defaultCount}`;
+      ? `below school min ${recommendedCount}`
+      : `below colony min ${recommendedCount}`;
   }
   if (category === "plants" || category === "mosses") {
     const unit = COUNT_UNIT[category];
     return `${count} × ${unit}${count === 1 ? "" : "s"}`;
   }
-  return hasCustomCount ? "custom" : `default ${defaultCount}`;
+  // Fish / shrimp at-or-above the recommended group
+  if (recommendedCount > 1) {
+    return `${count} stocked · recommended ${recommendedCount}+`;
+  }
+  return `${count} stocked`;
 }
