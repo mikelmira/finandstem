@@ -29,6 +29,13 @@ export interface TankStandard {
   recMaxLph: number;
   /** Maximum filter flow before it's considered too strong. */
   maxSafeLph: number;
+  /** Internal water-column depth in cm — the planning ceiling for
+   *  background plant height. Estimated as ~5 cm less than typical
+   *  tank height for the given volume. */
+  internalHeightCm: number;
+  /** Approximate floor area in cm² — used to estimate plant
+   *  coverage. */
+  floorAreaCm2: number;
 }
 
 export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
@@ -40,6 +47,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 50,
     recMaxLph: 100,
     maxSafeLph: 150,
+    internalHeightCm: 18,
+    floorAreaCm2: 450,
   },
   {
     litres: 20,
@@ -49,6 +58,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 100,
     recMaxLph: 200,
     maxSafeLph: 300,
+    internalHeightCm: 22,
+    floorAreaCm2: 700,
   },
   {
     litres: 30,
@@ -58,6 +69,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 150,
     recMaxLph: 300,
     maxSafeLph: 450,
+    internalHeightCm: 26,
+    floorAreaCm2: 1000,
   },
   {
     litres: 45,
@@ -67,6 +80,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 220,
     recMaxLph: 450,
     maxSafeLph: 680,
+    internalHeightCm: 30,
+    floorAreaCm2: 1250,
   },
   {
     litres: 60,
@@ -76,6 +91,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 300,
     recMaxLph: 600,
     maxSafeLph: 900,
+    internalHeightCm: 26,
+    floorAreaCm2: 1800,
   },
   {
     litres: 90,
@@ -85,6 +102,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 450,
     recMaxLph: 900,
     maxSafeLph: 1350,
+    internalHeightCm: 32,
+    floorAreaCm2: 2800,
   },
   {
     litres: 120,
@@ -94,6 +113,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 600,
     recMaxLph: 1200,
     maxSafeLph: 1800,
+    internalHeightCm: 37,
+    floorAreaCm2: 3200,
   },
   {
     litres: 180,
@@ -103,6 +124,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 900,
     recMaxLph: 1800,
     maxSafeLph: 2700,
+    internalHeightCm: 42,
+    floorAreaCm2: 4050,
   },
   {
     litres: 240,
@@ -112,6 +135,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 1200,
     recMaxLph: 2400,
     maxSafeLph: 3600,
+    internalHeightCm: 46,
+    floorAreaCm2: 4800,
   },
   {
     litres: 350,
@@ -121,6 +146,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 1750,
     recMaxLph: 3500,
     maxSafeLph: 5250,
+    internalHeightCm: 46,
+    floorAreaCm2: 7500,
   },
   {
     litres: 600,
@@ -130,6 +157,8 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
     recMinLph: 3000,
     recMaxLph: 6000,
     maxSafeLph: 9000,
+    internalHeightCm: 56,
+    floorAreaCm2: 10800,
   },
 ];
 

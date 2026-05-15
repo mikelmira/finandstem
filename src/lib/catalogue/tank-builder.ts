@@ -13,6 +13,8 @@ import {
 } from "@/lib/catalogue/normalize";
 import {
   classifyFlow,
+  findTankStandard,
+  nearestTankStandard,
   verdictForLoad,
   type FlowVerdict,
   type StockingVerdict,
@@ -122,6 +124,41 @@ export interface FilterReport {
   verdict: FlowVerdict | null;
 }
 
+export type PlantFitVerdict =
+  | "fits"        // max height ≤ 0.7× water column
+  | "borderline"  // 0.7×–1.0× — will press against the surface
+  | "overflow";   // > water column — won't physically fit submerged
+
+export interface PlantFitItem {
+  commonName: string;
+  slug: string;
+  category: "plants" | "mosses";
+  count: number;
+  maxHeightCm: number | null;
+  /** Estimated total floor footprint, count × per-specimen spread. */
+  footprintCm2: number;
+  /** True for floating plants — their coverage applies to the
+   *  surface, not the floor. */
+  isFloating: boolean;
+  verdict: PlantFitVerdict | null;
+}
+
+export interface PlantFitReport {
+  items: PlantFitItem[];
+  /** Sum of footprintCm2 for non-floating plants. */
+  floorCoverageCm2: number;
+  /** Sum of footprintCm2 for floating plants. */
+  surfaceCoverageCm2: number;
+  /** Tank floor area when known; cm². */
+  tankFloorAreaCm2: number | null;
+  /** Tank water-column depth when known; cm. */
+  tankHeightCm: number | null;
+  /** floorCoverageCm2 / tankFloorAreaCm2 — null when either is missing. */
+  floorCoveragePct: number | null;
+  /** surfaceCoverageCm2 / tankFloorAreaCm2. */
+  surfaceCoveragePct: number | null;
+}
+
 export interface TankWarning {
   severity: "danger" | "warn" | "info";
   title: string;
@@ -133,6 +170,7 @@ export interface TankBuilderResult {
   requirements: TankRequirements;
   stocking: StockingReport;
   filter: FilterReport;
+  plantFit: PlantFitReport;
   warnings: TankWarning[];
 }
 
@@ -840,6 +878,184 @@ function filterAndStockingWarnings(
   return out;
 }
 
+/* ─────────────────────────────  Plant fit  ───────────────────────────── */
+
+/**
+ * Typical per-specimen floor footprint, cm². Looked up from the
+ * freeform `plantType` string (e.g. "Rhizome / Epiphyte") via
+ * keyword matching. Numbers are rough planting estimates from
+ * aquascaping experience — the user can sanity-check by eye in
+ * the planner UI.
+ */
+function plantFootprintFor(plantType: string): number {
+  const t = plantType.toLowerCase();
+  if (t.includes("floating")) return 80;       // 9 cm round leaves
+  if (t.includes("carpet")) return 100;        // per pot — spreads further
+  if (t.includes("grass")) return 150;         // val / sag / hairgrass
+  if (t.includes("rhizome") || t.includes("epiphyte")) return 250;
+  if (t.includes("bulb")) return 400;          // tiger lotus, aponogeton
+  if (t.includes("rosette")) return 400;       // sword / crypt
+  if (t.includes("stem")) return 50;           // per bunch of 5 stems
+  return 100;
+}
+
+function buildPlantFitReport(
+  selection: TankSelectionResolved,
+  tankL: number | undefined,
+): PlantFitReport {
+  const std =
+    tankL !== undefined
+      ? (findTankStandard(tankL) ?? nearestTankStandard(tankL))
+      : null;
+  const tankHeightCm = std?.internalHeightCm ?? null;
+  const tankFloorAreaCm2 = std?.floorAreaCm2 ?? null;
+
+  const items: PlantFitItem[] = [];
+  let floor = 0;
+  let surface = 0;
+
+  for (const p of selection.plants) {
+    const count = selection.counts[`plants:${p.slug}`] ?? 1;
+    const footprint = plantFootprintFor(p.raw.plantType) * count;
+    const isFloating = p.raw.plantType.toLowerCase().includes("floating");
+    const max = p.maxHeightCm;
+
+    let verdict: PlantFitVerdict | null = null;
+    if (tankHeightCm !== null && max !== null && !isFloating) {
+      if (max > tankHeightCm) verdict = "overflow";
+      else if (max > tankHeightCm * 0.7) verdict = "borderline";
+      else verdict = "fits";
+    }
+
+    if (isFloating) surface += footprint;
+    else floor += footprint;
+
+    items.push({
+      commonName: p.commonName,
+      slug: p.slug,
+      category: "plants",
+      count,
+      maxHeightCm: max,
+      footprintCm2: footprint,
+      isFloating,
+      verdict,
+    });
+  }
+
+  // Mosses contribute small footprints — attached to hardscape and
+  // grow as patches. Height is irrelevant (they sit where you put
+  // them) so verdict stays null.
+  for (const m of selection.mosses) {
+    const count = selection.counts[`mosses:${m.slug}`] ?? 1;
+    const footprint = 60 * count;
+    floor += footprint;
+    items.push({
+      commonName: m.commonName,
+      slug: m.slug,
+      category: "mosses",
+      count,
+      maxHeightCm: null,
+      footprintCm2: footprint,
+      isFloating: false,
+      verdict: null,
+    });
+  }
+
+  const floorCoveragePct =
+    tankFloorAreaCm2 !== null && tankFloorAreaCm2 > 0
+      ? Number((floor / tankFloorAreaCm2).toFixed(2))
+      : null;
+  const surfaceCoveragePct =
+    tankFloorAreaCm2 !== null && tankFloorAreaCm2 > 0
+      ? Number((surface / tankFloorAreaCm2).toFixed(2))
+      : null;
+
+  return {
+    items,
+    floorCoverageCm2: floor,
+    surfaceCoverageCm2: surface,
+    tankFloorAreaCm2,
+    tankHeightCm,
+    floorCoveragePct,
+    surfaceCoveragePct,
+  };
+}
+
+function plantFitWarnings(
+  report: PlantFitReport,
+  tankL: number | undefined,
+): TankWarning[] {
+  const out: TankWarning[] = [];
+
+  // Per-plant height overflow / borderline
+  const overflow = report.items.filter((i) => i.verdict === "overflow");
+  const borderline = report.items.filter((i) => i.verdict === "borderline");
+
+  if (overflow.length > 0 && report.tankHeightCm !== null) {
+    out.push({
+      severity: "danger",
+      title:
+        overflow.length === 1
+          ? `${overflow[0].commonName} is too tall for this tank`
+          : `${overflow.length} plants will outgrow this tank`,
+      body: `Tank water column is ~${report.tankHeightCm} cm. ${overflow
+        .map((o) => `${o.commonName} grows to ${o.maxHeightCm} cm`)
+        .join("; ")}. These plants will press against the surface and need constant trimming, or choose shorter alternatives (carpet / rosette).`,
+    });
+  }
+
+  if (borderline.length > 0 && report.tankHeightCm !== null) {
+    out.push({
+      severity: "info",
+      title: `Background plants will fill the tank`,
+      body: `${borderline
+        .map((b) => `${b.commonName} (${b.maxHeightCm} cm)`)
+        .join(", ")} grow tall enough to fill most of your ${report.tankHeightCm} cm water column. Plan for regular trimming.`,
+    });
+  }
+
+  // Floor coverage — surface a tip when planting density is heavy
+  if (
+    report.floorCoveragePct !== null &&
+    report.tankFloorAreaCm2 !== null &&
+    tankL !== undefined
+  ) {
+    if (report.floorCoveragePct > 1.1) {
+      out.push({
+        severity: "warn",
+        title: "Tank floor is over-planted",
+        body: `Plants would cover ~${Math.round(
+          report.floorCoveragePct * 100,
+        )} % of the tank floor (${report.floorCoverageCm2} cm² in ${report.tankFloorAreaCm2} cm²). Drop counts or pick smaller-footprint species — over-dense plantings shade each other and trap detritus.`,
+      });
+    } else if (report.floorCoveragePct < 0.2 && report.items.length > 0) {
+      out.push({
+        severity: "info",
+        title: "Room for more plants",
+        body: `Plants cover ~${Math.round(
+          report.floorCoveragePct * 100,
+        )} % of the tank floor. A heavier planting (60–80 %) outcompetes algae and gives fish more cover.`,
+      });
+    }
+  }
+
+  // Surface coverage — floaters shouldn't cover the whole tank
+  if (
+    report.surfaceCoveragePct !== null &&
+    report.surfaceCoveragePct > 0.6
+  ) {
+    out.push({
+      severity: "warn",
+      title: "Floating plants will shade the tank",
+      body: `Floaters would cover ~${Math.round(
+        report.surfaceCoveragePct * 100,
+      )} % of the surface. Keep below 50 % so light still reaches the substrate — skim weekly.`,
+    });
+  }
+
+  return out;
+}
+
 /* ──────────────────────────────  Builder  ─────────────────────────────── */
 
 export function buildTank(input: TankSelection): TankBuilderResult {
@@ -896,14 +1112,16 @@ export function buildTank(input: TankSelection): TankBuilderResult {
 
   const stocking = buildStockingReport(selection, input.tankL);
   const filter = buildFilterReport(input.tankL, input.filterLph);
+  const plantFit = buildPlantFitReport(selection, input.tankL);
 
   const warnings = [
     ...paramWarnings(selection, requirements),
     ...bioWarnings(selection, input.tankL, requirements),
     ...filterAndStockingWarnings(selection, stocking, filter, input.tankL),
+    ...plantFitWarnings(plantFit, input.tankL),
   ];
 
-  return { selection, requirements, stocking, filter, warnings };
+  return { selection, requirements, stocking, filter, plantFit, warnings };
 }
 
 /* ─────────────────────  Utility for the UI layer  ─────────────────────── */

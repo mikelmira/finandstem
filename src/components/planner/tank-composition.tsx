@@ -49,15 +49,21 @@ const CAT_TONE: Record<CatalogueEntry["category"], string> = {
   mosses: "border-emerald-600/40 bg-emerald-600/12 text-emerald-800",
 };
 
-/** Categories whose stocking the user can scale up or down. Plants
- *  and mosses are treated as binary "present or not" in the planner
- *  for now — they don't add bioload and one bunch of rotala scales
- *  the same as five for our purposes. */
+/** Categories whose stocking the user can scale up or down. */
 const COUNTABLE: Record<CatalogueEntry["category"], boolean> = {
   fish: true,
   shrimp: true,
-  plants: false,
-  mosses: false,
+  plants: true,
+  mosses: true,
+};
+
+/** What "one count" represents for each category — surfaced in the
+ *  picker's helper text so the user knows what they're stocking. */
+const COUNT_UNIT: Record<CatalogueEntry["category"], string> = {
+  fish: "fish",
+  shrimp: "shrimp",
+  plants: "bunch/specimen",
+  mosses: "portion",
 };
 
 export function TankComposition({ items }: TankCompositionProps) {
@@ -178,7 +184,8 @@ export function TankComposition({ items }: TankCompositionProps) {
                 {entry.scientificName}
               </span>
 
-              {/* Count picker — only fish & shrimp */}
+              {/* Count picker — fish stock at group, shrimp at colony,
+                  plants by bunch/specimen, mosses by portion */}
               {countable && (
                 <div className="mt-1.5 flex items-center gap-2">
                   <div className="inline-flex items-stretch rounded-full border border-border bg-background/60">
@@ -223,16 +230,16 @@ export function TankComposition({ items }: TankCompositionProps) {
                       "text-[10px] uppercase tracking-[0.14em]",
                       belowDefault
                         ? "text-amber-700"
-                        : hasCustomCount
-                          ? "text-muted-foreground"
-                          : "text-muted-foreground/60",
+                        : "text-muted-foreground/70",
                     )}
                   >
-                    {belowDefault
-                      ? `below ${entry.category === "fish" ? "school min" : "colony min"} ${defaultCount}`
-                      : hasCustomCount
-                        ? "custom"
-                        : `default ${defaultCount}`}
+                    {countLabel({
+                      category: entry.category,
+                      count,
+                      defaultCount,
+                      hasCustomCount,
+                      belowDefault,
+                    })}
                   </span>
                 </div>
               )}
@@ -251,4 +258,32 @@ export function TankComposition({ items }: TankCompositionProps) {
       })}
     </ul>
   );
+}
+
+/**
+ * Pick the helper text that sits under the count picker.
+ *   • Fish / shrimp below the species' default get a coloured
+ *     "below school min N" or "below colony min N" callout.
+ *   • Plants / mosses always read as a unit count ("3 bunches",
+ *     "1 portion") so the user knows what one count represents.
+ *   • Otherwise we show whether it's the species default or custom.
+ */
+function countLabel(opts: {
+  category: CatalogueEntry["category"];
+  count: number;
+  defaultCount: number;
+  hasCustomCount: boolean;
+  belowDefault: boolean;
+}): string {
+  const { category, count, defaultCount, hasCustomCount, belowDefault } = opts;
+  if (belowDefault) {
+    return category === "fish"
+      ? `below school min ${defaultCount}`
+      : `below colony min ${defaultCount}`;
+  }
+  if (category === "plants" || category === "mosses") {
+    const unit = COUNT_UNIT[category];
+    return `${count} × ${unit}${count === 1 ? "" : "s"}`;
+  }
+  return hasCustomCount ? "custom" : `default ${defaultCount}`;
 }
