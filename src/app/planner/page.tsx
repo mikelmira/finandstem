@@ -9,6 +9,7 @@ import { TankSetupCard } from "@/components/planner/tank-setup-card";
 import { StockingGauge } from "@/components/planner/stocking-gauge";
 import { TankWarnings } from "@/components/planner/tank-warnings";
 import { RecommendedSpecies } from "@/components/planner/recommended-species";
+import { WaterColumnPanel } from "@/components/planner/water-column-panel";
 import { allNorm } from "@/lib/catalogue/normalize";
 import {
   buildTank,
@@ -130,6 +131,9 @@ export default async function PlannerPage({ searchParams }: PageProps) {
             {hasSelection ? (
               <>
                 <StockingGauge stocking={result.stocking} tankL={tankL} />
+                {result.selection.fish.length > 0 && (
+                  <WaterColumnPanel report={result.waterColumn} />
+                )}
                 <TankRequirementsPanel
                   requirements={result.requirements}
                   tankL={tankL}

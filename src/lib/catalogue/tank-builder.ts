@@ -124,6 +124,36 @@ export interface FilterReport {
   verdict: FlowVerdict | null;
 }
 
+export type WaterColumnZone = "Top" | "Mid" | "Bottom";
+
+export interface WaterColumnSpecies {
+  slug: string;
+  commonName: string;
+  /** Resolved stocking count for the species. */
+  count: number;
+}
+
+export interface WaterColumnReport {
+  zones: Record<
+    WaterColumnZone,
+    {
+      /** Species that occupy this zone (a species can be in multiple). */
+      species: WaterColumnSpecies[];
+      /** Sum of stocked fish in this zone. */
+      fishCount: number;
+    }
+  >;
+  /** Zones with no fish. */
+  missingZones: WaterColumnZone[];
+  /** Zone with the most stocked fish; null when nothing is stocked. */
+  dominantZone: WaterColumnZone | null;
+  /** Share of the most-occupied zone, 0–1. */
+  dominantShare: number;
+  /** True when every zone has at least one species and no zone holds
+   *  more than 65 % of total fish. */
+  isBalanced: boolean;
+}
+
 export type PlantFitVerdict =
   | "fits"        // max height ≤ 0.7× water column
   | "borderline"  // 0.7×–1.0× — will press against the surface
@@ -171,6 +201,7 @@ export interface TankBuilderResult {
   stocking: StockingReport;
   filter: FilterReport;
   plantFit: PlantFitReport;
+  waterColumn: WaterColumnReport;
   warnings: TankWarning[];
 }
 
@@ -1056,6 +1087,143 @@ function plantFitWarnings(
   return out;
 }
 
+/* ───────────────────────────  Water column  ─────────────────────────── */
+
+/**
+ * Build a water-column occupancy report from the fish selection.
+ * Each fish can occupy more than one zone (e.g. zebra danios use
+ * both mid and top); the species appears in every zone it touches
+ * but its full count is counted in each zone for visualisation
+ * purposes — share calculations elsewhere use total stocked fish
+ * across the *distinct* species per zone (i.e. counts are summed
+ * per zone, then compared to the all-zones total).
+ */
+function buildWaterColumnReport(
+  selection: TankSelectionResolved,
+): WaterColumnReport {
+  const zones: Record<WaterColumnZone, WaterColumnSpecies[]> = {
+    Top: [],
+    Mid: [],
+    Bottom: [],
+  };
+
+  for (const f of selection.fish) {
+    const count = selection.counts[`fish:${f.slug}`] ?? f.minGroupSize;
+    for (const z of f.waterColumn) {
+      zones[z].push({ slug: f.slug, commonName: f.commonName, count });
+    }
+  }
+
+  const zoneCounts: Record<WaterColumnZone, number> = {
+    Top: zones.Top.reduce((acc, s) => acc + s.count, 0),
+    Mid: zones.Mid.reduce((acc, s) => acc + s.count, 0),
+    Bottom: zones.Bottom.reduce((acc, s) => acc + s.count, 0),
+  };
+
+  const total = zoneCounts.Top + zoneCounts.Mid + zoneCounts.Bottom;
+  const dominantZone =
+    total === 0
+      ? null
+      : (Object.entries(zoneCounts).sort((a, b) => b[1] - a[1])[0][0] as WaterColumnZone);
+  const dominantShare =
+    total === 0 || dominantZone === null
+      ? 0
+      : zoneCounts[dominantZone] / total;
+  const missingZones = (["Top", "Mid", "Bottom"] as WaterColumnZone[]).filter(
+    (z) => zoneCounts[z] === 0,
+  );
+  const isBalanced =
+    selection.fish.length >= 2 &&
+    missingZones.length === 0 &&
+    dominantShare <= 0.65;
+
+  return {
+    zones: {
+      Top: { species: zones.Top, fishCount: zoneCounts.Top },
+      Mid: { species: zones.Mid, fishCount: zoneCounts.Mid },
+      Bottom: { species: zones.Bottom, fishCount: zoneCounts.Bottom },
+    },
+    missingZones,
+    dominantZone,
+    dominantShare,
+    isBalanced,
+  };
+}
+
+function waterColumnWarnings(
+  selection: TankSelectionResolved,
+  report: WaterColumnReport,
+): TankWarning[] {
+  // Only meaningful once there are 2+ fish species to balance across.
+  if (selection.fish.length < 2) return [];
+
+  const out: TankWarning[] = [];
+
+  // All bottom dwellers — no surface action, food drops uneaten
+  if (
+    report.zones.Bottom.fishCount > 0 &&
+    report.zones.Top.fishCount === 0 &&
+    report.zones.Mid.fishCount === 0
+  ) {
+    out.push({
+      severity: "warn",
+      title: "All fish are bottom-dwellers",
+      body: "Top and middle of the tank will look empty, and surface food drops uneaten. Add a mid or top species (rasboras, danios, hatchetfish) to use the whole water column.",
+    });
+    return out;
+  }
+
+  // All surface dwellers — bottom is dead, no clean-up crew
+  if (
+    report.zones.Top.fishCount > 0 &&
+    report.zones.Mid.fishCount === 0 &&
+    report.zones.Bottom.fishCount === 0
+  ) {
+    out.push({
+      severity: "warn",
+      title: "All fish are surface-dwellers",
+      body: "The bottom of the tank is unstocked — debris will build up. Add a bottom team (corydoras, otocinclus, hillstream loach) or shrimp.",
+    });
+    return out;
+  }
+
+  // No mid-level — most common imbalance
+  if (
+    report.zones.Mid.fishCount === 0 &&
+    report.zones.Top.fishCount + report.zones.Bottom.fishCount > 0
+  ) {
+    out.push({
+      severity: "info",
+      title: "No mid-level swimmers",
+      body: "The middle of the tank is empty. Adding a schooling mid-water species (tetras, rasboras) gives the tank visual depth and ties the top and bottom together.",
+    });
+  }
+
+  // No bottom — common in nano scapes, worth flagging
+  if (
+    report.zones.Bottom.fishCount === 0 &&
+    report.zones.Top.fishCount + report.zones.Mid.fishCount > 0
+  ) {
+    out.push({
+      severity: "info",
+      title: "No bottom team",
+      body: "No bottom-dwelling fish or shrimp. A small group of corydoras or a shrimp colony picks up leftover food and keeps detritus in check.",
+    });
+  }
+
+  // Dominant zone — one zone holds the majority of the bioload
+  if (report.dominantZone && report.dominantShare > 0.65) {
+    const pct = Math.round(report.dominantShare * 100);
+    out.push({
+      severity: "info",
+      title: `${pct}% of your fish swim in the ${report.dominantZone.toLowerCase()}`,
+      body: `Heavy concentration in a single zone. Spreading stocking across all three levels makes the tank read fuller for the same bioload.`,
+    });
+  }
+
+  return out;
+}
+
 /* ──────────────────────────────  Builder  ─────────────────────────────── */
 
 export function buildTank(input: TankSelection): TankBuilderResult {
@@ -1113,15 +1281,25 @@ export function buildTank(input: TankSelection): TankBuilderResult {
   const stocking = buildStockingReport(selection, input.tankL);
   const filter = buildFilterReport(input.tankL, input.filterLph);
   const plantFit = buildPlantFitReport(selection, input.tankL);
+  const waterColumn = buildWaterColumnReport(selection);
 
   const warnings = [
     ...paramWarnings(selection, requirements),
     ...bioWarnings(selection, input.tankL, requirements),
     ...filterAndStockingWarnings(selection, stocking, filter, input.tankL),
     ...plantFitWarnings(plantFit, input.tankL),
+    ...waterColumnWarnings(selection, waterColumn),
   ];
 
-  return { selection, requirements, stocking, filter, plantFit, warnings };
+  return {
+    selection,
+    requirements,
+    stocking,
+    filter,
+    plantFit,
+    waterColumn,
+    warnings,
+  };
 }
 
 /* ─────────────────────  Utility for the UI layer  ─────────────────────── */
