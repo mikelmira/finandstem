@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Droplets, Thermometer, Users, Sun, Sprout, Leaf, Shell } from "lucide-react";
+import { Users, Sun, Sprout, Leaf, Shell } from "lucide-react";
 import { FishMark, PlantMark } from "@/components/icons/species-icons";
 import { cn } from "@/lib/utils";
 import type {
@@ -34,15 +34,16 @@ interface HeroKeyFactsProps {
 
 /**
  * At-a-glance pills shown in the hero so a reader can triage
- * "does this even fit my tank?" without scrolling. The picks are
- * the parameters most likely to disqualify a species — temperature,
- * pH / minimum tank size — plus the cross-tank safety flags
- * (plant-safe / shrimp-safe) that used to live further down the page.
+ * "does this even fit my tank?" without scrolling. Temperature, pH
+ * and hardness are deliberately *not* surfaced here — those have
+ * their own range-bar charts in the Parameters block below and the
+ * pills would just repeat the same numbers. The picks here are the
+ * categorical / tank-fit facts plus the cross-tank safety flags:
  *
- *   • fish    → temp · pH · min tank · plant-safe · shrimp-safe
- *   • plants  → light · CO₂ · temp
- *   • shrimp  → temp · pH · colony · plant-safe · tank-mate safe
- *   • mosses  → temp · light · CO₂
+ *   • fish    → min tank · plant-safe · shrimp-safe
+ *   • plants  → light · CO₂
+ *   • shrimp  → colony · plant-safe · tank-mate safe
+ *   • mosses  → light · CO₂
  */
 export function HeroKeyFacts({ entry }: HeroKeyFactsProps) {
   const facts = pickFacts(entry);
@@ -120,9 +121,9 @@ function pickFacts(entry: CatalogueEntry): KeyFact[] {
 }
 
 function fishKeyFacts(f: FishEntry): KeyFact[] {
+  // Temp / pH live in the Parameters charts below — no need to repeat
+  // them here. Surface tank-fit and cross-tank safety only.
   const facts: KeyFact[] = [
-    { icon: Thermometer, label: "Temp", value: `${f.tempRange} °C` },
-    { icon: Droplets, label: "pH", value: f.phRange },
     { icon: FishMark, label: "Min tank", value: f.minTankSize },
   ];
   if (f.plantSafe) {
@@ -148,14 +149,11 @@ function plantKeyFacts(p: PlantEntry): KeyFact[] {
   return [
     { icon: Sun, label: "Light", value: p.light },
     { icon: PlantMark, label: "CO₂", value: p.co2 },
-    { icon: Thermometer, label: "Temp", value: `${p.tempRange} °C` },
   ];
 }
 
 function shrimpKeyFacts(s: ShrimpEntry): KeyFact[] {
   const facts: KeyFact[] = [
-    { icon: Thermometer, label: "Temp", value: `${s.tempRange} °C` },
-    { icon: Droplets, label: "pH", value: s.phRange },
     { icon: Users, label: "Colony", value: `${s.colonyMin}+` },
   ];
   if (s.plantSafe) {
@@ -179,7 +177,6 @@ function shrimpKeyFacts(s: ShrimpEntry): KeyFact[] {
 
 function mossKeyFacts(m: MossEntry): KeyFact[] {
   return [
-    { icon: Thermometer, label: "Temp", value: `${m.tempRange} °C` },
     { icon: Sun, label: "Light", value: m.light },
     { icon: Sprout, label: "CO₂", value: m.co2 },
   ];
