@@ -13,59 +13,6 @@ interface TankMatesPanelProps {
   className?: string;
 }
 
-interface SafetyRow {
-  label: string;
-  raw: string;
-  tone: "good" | "warn" | "danger";
-}
-
-function safetyTone(value: string): SafetyRow["tone"] {
-  const v = value.toLowerCase();
-  if (v.startsWith("no") || v.includes("risky") || v.includes("not safe"))
-    return "danger";
-  if (v.includes("mostly") || v.includes("adult") || v.includes("caution"))
-    return "warn";
-  return "good";
-}
-
-function getSafetyRows(entry: CatalogueEntry): SafetyRow[] {
-  const rows: SafetyRow[] = [];
-  if ("plantSafe" in entry && entry.plantSafe) {
-    rows.push({
-      label: "Plant-safe",
-      raw: entry.plantSafe,
-      tone: safetyTone(entry.plantSafe),
-    });
-  }
-  if ("shrimpSafe" in entry && entry.shrimpSafe) {
-    rows.push({
-      label: "Shrimp-safe",
-      raw: entry.shrimpSafe,
-      tone: safetyTone(entry.shrimpSafe),
-    });
-  }
-  if ("fishTankSafeWith" in entry && entry.fishTankSafeWith) {
-    rows.push({
-      label: "Tank-mate safe with",
-      raw: entry.fishTankSafeWith,
-      tone: safetyTone(entry.fishTankSafeWith),
-    });
-  }
-  return rows;
-}
-
-const TONE_CLASS: Record<SafetyRow["tone"], string> = {
-  good: "border-[color-mix(in_oklab,var(--brand)_45%,transparent)] bg-[color-mix(in_oklab,var(--brand)_14%,transparent)]",
-  warn: "border-amber-500/45 bg-amber-500/15",
-  danger: "border-rose-500/50 bg-rose-500/15",
-};
-
-const TONE_DOT: Record<SafetyRow["tone"], string> = {
-  good: "bg-[var(--brand)]",
-  warn: "bg-amber-400",
-  danger: "bg-rose-400",
-};
-
 export function TankMatesPanel({
   entry,
   good,
@@ -73,38 +20,12 @@ export function TankMatesPanel({
   compatHref,
   className,
 }: TankMatesPanelProps) {
-  const safety = getSafetyRows(entry);
-  const hasContent = safety.length > 0 || good || bad;
+  void entry;
+  const hasContent = good || bad;
   if (!hasContent) return null;
 
   return (
     <div className={cn("flex flex-col gap-4", className)}>
-      {/* Safety chip row */}
-      {safety.length > 0 && (
-        <div className="stagger flex flex-wrap gap-2">
-          {safety.map((s, i) => (
-            <span
-              key={s.label}
-              style={{ ["--i" as string]: i }}
-              className={cn(
-                "animate-fade-up inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs",
-                TONE_CLASS[s.tone],
-              )}
-            >
-              <span
-                className={cn("size-1.5 rounded-full", TONE_DOT[s.tone])}
-                aria-hidden
-              />
-              <span className="font-medium uppercase tracking-[0.14em] text-foreground/85">
-                {s.label}
-              </span>
-              <span className="text-foreground/85">·</span>
-              <span className="text-foreground">{s.raw}</span>
-            </span>
-          ))}
-        </div>
-      )}
-
       {/* Good / bad tank mates side-by-side */}
       {(good || bad) && (
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">

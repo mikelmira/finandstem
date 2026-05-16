@@ -24,7 +24,6 @@ import { PlanButton } from "@/components/catalogue/plan-button";
 import type { Stat } from "@/components/catalogue/stat-grid";
 import { Eyebrow, SectionShell } from "@/components/sections/section-shell";
 import { EntryCard } from "@/components/catalogue/entry-card";
-import { EntryImage } from "@/components/catalogue/entry-image";
 import { ImageGallery } from "@/components/catalogue/image-gallery";
 import { HeroKeyFacts } from "@/components/catalogue/hero-key-facts";
 import { TankFitPanel } from "@/components/catalogue/tank-fit-panel";
@@ -110,29 +109,59 @@ export function EntryDetail({
     ...(watchGroup ? [{ id: "watch", label: "Watch for" }] : []),
     ...(careGroup ? [{ id: "care", label: "Care guide" }] : []),
     ...(hasBackground ? [{ id: "background", label: "Background" }] : []),
-    ...(gallery.length > 1 ? [{ id: "gallery", label: "Gallery" }] : []),
   ];
 
   return (
     <>
       {/* ─── Hero ────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden border-b border-border/60">
-        <div className="brand-aurora absolute inset-0 -z-20 opacity-80" aria-hidden />
-        <div className="bg-grid absolute inset-0 -z-10 opacity-50" aria-hidden />
+        {/* Full-bleed species photo behind everything */}
+        {image && (
+          <>
+            <div className="absolute inset-0 -z-30">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
+            {/* Dark overlay to keep hero copy legible on top of the
+                species photo. Matches the PageHero treatment used on
+                category index pages. */}
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-20 bg-[oklch(0.16_0.045_152/0.78)]"
+            />
+            {/* Bottom fade into the page background */}
+            <div
+              aria-hidden
+              className="absolute inset-x-0 bottom-0 -z-20 h-48 bg-gradient-to-b from-transparent to-background"
+            />
+          </>
+        )}
+        <div
+          className="brand-aurora absolute inset-0 -z-10 opacity-40 mix-blend-overlay"
+          aria-hidden
+        />
 
         <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
-          <Breadcrumb
-            items={[
-              { label: meta.label, href: meta.path },
-              { label: entry.commonName },
-            ]}
-          />
-
-          <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
-            {/* Left — name + meta */}
-            <div className="flex flex-col justify-end">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
+            {/* Left — name + meta + key facts + care summary, wrapped
+                in a glass card so the cream-paper reading surface sits
+                cleanly on top of the species photo. */}
+            <div className="glass glass-edge animate-rise relative flex flex-col rounded-3xl p-7 sm:p-8 md:p-10">
+              <Breadcrumb
+                items={[
+                  { label: meta.label, href: meta.path },
+                  { label: entry.commonName },
+                ]}
+                className="mb-5"
+              />
               <Eyebrow>{meta.singular}</Eyebrow>
-              <h1 className="text-display-tight animate-rise mt-4 text-balance text-5xl sm:text-6xl md:text-7xl">
+              <h1 className="text-display-tight mt-4 text-balance text-5xl sm:text-6xl md:text-7xl">
                 {entry.commonName}
               </h1>
               <p className="mt-4 text-pretty text-xl italic text-muted-foreground sm:text-2xl">
@@ -156,12 +185,13 @@ export function EntryDetail({
                 />
               </div>
 
-              {/* Key-fact pills — the 3 most decision-critical numbers */}
+              {/* Key-fact pills — temp / pH / minimum-tank, plus the
+                  cross-tank safety flags (plant-safe / shrimp-safe). */}
               <HeroKeyFacts entry={entry} />
 
               {/* Care summary — opens with a drop cap, like a field-guide
                   monograph. */}
-              <div className="glass glass-edge animate-rise mt-7 rounded-2xl p-7 sm:p-8">
+              <div className="mt-7 border-t border-border/40 pt-6">
                 <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
                   Care at a glance
                 </p>
@@ -171,13 +201,64 @@ export function EntryDetail({
               </div>
             </div>
 
-            {/* Right — feature image + scientific-plate margin annotation. */}
-            {image && (
-              <div className="relative lg:pt-8">
-                <EntryImage image={image} ratio="tall" priority />
+            {/* Right — gallery (formerly the spot for the single hero
+                image, which has been promoted to the full-bleed
+                background). Falls back to the scientific plate on
+                species with no extra photos. */}
+            <div className="relative lg:pt-8">
+              {gallery.length > 0 ? (
+                <div className="glass glass-edge animate-rise rounded-3xl p-5 sm:p-6">
+                  <ImageGallery
+                    images={gallery}
+                    gridClassName="grid-cols-2"
+                  />
+                  {image && (
+                    <p className="mt-4 text-[10px] leading-snug text-muted-foreground/85">
+                      Hero photo by{" "}
+                      <span className="font-medium text-foreground/85">
+                        {image.author && image.author !== "Unknown"
+                          ? image.author
+                          : "unknown contributor"}
+                      </span>
+                      {image.license && (
+                        <>
+                          {" · "}
+                          {image.licenseUrl ? (
+                            <a
+                              href={image.licenseUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link-underline font-medium text-[var(--brand)]"
+                            >
+                              {image.license}
+                            </a>
+                          ) : (
+                            <span className="font-medium">
+                              {image.license}
+                            </span>
+                          )}
+                        </>
+                      )}
+                      {entry.imageSourceUrl && (
+                        <>
+                          {" · "}
+                          <a
+                            href={entry.imageSourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link-underline font-medium text-[var(--brand)]"
+                          >
+                            Wikipedia
+                          </a>
+                        </>
+                      )}
+                    </p>
+                  )}
+                </div>
+              ) : (
                 <SciencePlateAnnotation entry={entry} />
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -315,26 +396,7 @@ export function EntryDetail({
                 </DetailSection>
               ))}
 
-            {/* 7. GALLERY — with attribution moved inline */}
-            {gallery.length > 1 && (
-              <DetailSection
-                id="gallery"
-                eyebrow="Photos"
-                number={nextNumber(tocItems, "gallery")}
-                title="Gallery"
-                subtitle={`${gallery.length} photos sourced from Wikimedia Commons, iNaturalist, and retailer catalogues — every image links back to its source.`}
-              >
-                <div className="flex flex-col gap-6">
-                  <ImageGallery images={gallery} />
-                  {image && (
-                    <HeroImageAttribution
-                      image={image}
-                      wikipediaUrl={entry.imageSourceUrl}
-                    />
-                  )}
-                </div>
-              </DetailSection>
-            )}
+            {/* Gallery now lives in the hero right column — see above */}
           </main>
 
           {/* Right rail — sticky TOC (desktop only) */}
@@ -575,70 +637,6 @@ function DetailSection({
 function nextNumber(items: ReadonlyArray<StickyTocItem>, id: string): number {
   const idx = items.findIndex((i) => i.id === id);
   return idx === -1 ? items.length + 1 : idx + 1;
-}
-
-function HeroImageAttribution({
-  image,
-  wikipediaUrl,
-}: {
-  image: NonNullable<ReturnType<typeof getImage>>;
-  wikipediaUrl: string;
-}) {
-  return (
-    <div className="glass rounded-2xl p-5 sm:p-6">
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div className="max-w-2xl">
-          <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-            Hero image credit
-          </p>
-          <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-            Photo by{" "}
-            <span className="font-medium">
-              {image.author && image.author !== "Unknown"
-                ? image.author
-                : "Unknown contributor"}
-            </span>
-            {image.license && (
-              <>
-                , licensed under{" "}
-                {image.licenseUrl ? (
-                  <a
-                    href={image.licenseUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-underline font-medium text-[var(--brand)]"
-                  >
-                    {image.license}
-                  </a>
-                ) : (
-                  <span className="font-medium">{image.license}</span>
-                )}
-              </>
-            )}
-            . Source:{" "}
-            <a
-              href={image.descriptionUrl ?? wikipediaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline font-medium text-[var(--brand)]"
-            >
-              file page
-            </a>
-            .
-          </p>
-        </div>
-        <a
-          href={wikipediaUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="press inline-flex items-center gap-1.5 rounded-full border border-border bg-background/70 px-4 py-2 text-xs font-medium transition-colors hover:border-[var(--brand)]/40"
-        >
-          Wikipedia article
-          <ExternalLink className="size-3.5" aria-hidden />
-        </a>
-      </div>
-    </div>
-  );
 }
 
 /**

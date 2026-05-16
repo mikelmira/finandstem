@@ -1,15 +1,24 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import type { PreparedImage } from "@/lib/wikimedia";
+import { cn } from "@/lib/utils";
 
 interface ImageGalleryProps {
   images: PreparedImage[];
+  /** Override the default grid template — used in the hero where the
+   *  gallery sits in a narrower column. */
+  gridClassName?: string;
 }
 
-export function ImageGallery({ images }: ImageGalleryProps) {
+export function ImageGallery({ images, gridClassName }: ImageGalleryProps) {
   if (images.length === 0) return null;
   return (
-    <div className="stagger grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+    <div
+      className={cn(
+        "stagger grid gap-3",
+        gridClassName ?? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4",
+      )}
+    >
       {images.map((img, i) => (
         <figure
           key={img.url}
