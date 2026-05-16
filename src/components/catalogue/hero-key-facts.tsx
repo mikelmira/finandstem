@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Users, Sun, Sprout, Leaf, Shell } from "lucide-react";
+import { Users, Sun, Sprout, Leaf, Shell, HeartHandshake } from "lucide-react";
 import { FishMark, PlantMark } from "@/components/icons/species-icons";
 import { cn } from "@/lib/utils";
 import type {
@@ -40,7 +40,7 @@ interface HeroKeyFactsProps {
  * pills would just repeat the same numbers. The picks here are the
  * categorical / tank-fit facts plus the cross-tank safety flags:
  *
- *   • fish    → min tank · plant-safe · shrimp-safe
+ *   • fish    → min tank · temperament · plant-safe · shrimp-safe
  *   • plants  → light · CO₂
  *   • shrimp  → colony · plant-safe · tank-mate safe
  *   • mosses  → light · CO₂
@@ -122,10 +122,17 @@ function pickFacts(entry: CatalogueEntry): KeyFact[] {
 
 function fishKeyFacts(f: FishEntry): KeyFact[] {
   // Temp / pH live in the Parameters charts below — no need to repeat
-  // them here. Surface tank-fit and cross-tank safety only.
+  // them here. Surface tank-fit, temperament, and cross-tank safety.
   const facts: KeyFact[] = [
     { icon: FishMark, label: "Min tank", value: f.minTankSize },
   ];
+  if (f.temperament) {
+    facts.push({
+      icon: HeartHandshake,
+      label: "Temperament",
+      value: capWord(f.temperament),
+    });
+  }
   if (f.plantSafe) {
     facts.push({
       icon: Leaf,
@@ -143,6 +150,11 @@ function fishKeyFacts(f: FishEntry): KeyFact[] {
     });
   }
   return facts;
+}
+
+function capWord(s: string): string {
+  if (!s) return "";
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 function plantKeyFacts(p: PlantEntry): KeyFact[] {

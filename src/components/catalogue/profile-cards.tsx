@@ -64,51 +64,12 @@ export function ProfileCards({
   return <MossProfile entry={entry} />;
 }
 
-/**
- * Surface a stocking recommendation under the "Schooling" item so
- * the reader knows how many to add — regardless of whether the
- * species is technically a schooler. Examples:
- *   • Yes / Yes (loose shoal)        → "Group of 8+"
- *   • Pair                            → "Keep as a bonded pair"
- *   • Pair or trio                    → "Best as a pair or trio"
- *   • Harem (1 male, 2–3 females)     → "Harem · 1 male, 2–3 females"
- *   • Solitary or pair                → "Solo or a pair"
- *   • No (live in groups)             → "Small group of 4+"
- *   • No                              → "Can be kept solo"
- */
-function recommendedGroupNote(
-  raw: string,
-  min: number,
-  isSchooling: boolean,
-): string | undefined {
-  const r = raw.toLowerCase();
-  if (isSchooling) return `Group of ${min}+`;
-  if (/harem/.test(r)) {
-    const m = raw.match(/\(([^)]+)\)/);
-    return m ? `Harem · ${m[1]}` : "Keep as a harem";
-  }
-  if (/\bpair\b/.test(r)) {
-    if (/trio/.test(r)) return "Best as a pair or trio";
-    if (/solitary|solo/.test(r)) return "Solo or a pair";
-    return "Keep as a bonded pair";
-  }
-  if (/group/.test(r) && min >= 3) return `Small group of ${min}+`;
-  if (min >= 2) return `Keep ${min}+ together`;
-  return "Can be kept solo";
-}
-
 function FishProfile({ entry: f }: { entry: FishEntry }) {
-  const schoolingYes = /\byes\b/i.test(f.schooling);
+  // Water column, schooling, and temperament now live in the Parameters
+  // block / hero pill row, so they're not repeated here.
   return (
     <div className={PROFILE_GRID}>
       <ProfileItem label="Family" value={f.family} />
-      <ProfileItem label="Water column" value={cap(f.waterColumn)} />
-      <ProfileItem
-        label="Schooling"
-        value={schoolingYes ? "Yes" : "No"}
-        helper={recommendedGroupNote(f.schooling, f.minGroupSize, schoolingYes)}
-      />
-      <ProfileItem label="Temperament" value={cap(f.temperament)} />
       <ProfileItem
         label="Diet"
         value={cap(f.diet)}

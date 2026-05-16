@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
-import { parseRange, parseLeadingNumber } from "@/lib/range";
+import { parseRange } from "@/lib/range";
 import { RangeBar } from "@/components/charts/range-bar";
 import { SizeBar } from "@/components/charts/size-bar";
-import { TankSizeBadge } from "@/components/charts/tank-size-badge";
 import {
   LightLevel,
   CO2Demand,
@@ -82,8 +81,13 @@ export function AtAGlance({ entry, className }: AtAGlanceProps) {
 }
 
 function FishExtras({ entry }: { entry: FishEntry }) {
-  const tankL = parseLeadingNumber(entry.minTankSize);
   const adultRange = parseRange(entry.adultSize);
+  const schoolingYes = /\byes\b/i.test(entry.schooling);
+  const schoolingHelper = recommendedGroupNote(
+    entry.schooling,
+    entry.minGroupSize,
+    schoolingYes,
+  );
   return (
     <>
       {adultRange && (
@@ -96,18 +100,24 @@ function FishExtras({ entry }: { entry: FishEntry }) {
           />
         </div>
       )}
-      {tankL !== null && (
-        <div
-          className="animate-fade-up flex items-center"
-          style={{ ["--i" as string]: 4 }}
-        >
-          <TankSizeBadge litres={tankL} />
-        </div>
-      )}
+      {/* Water column + Schooling sit inline as a pair just above the
+          flow row. Both are categorical (not numeric ranges) so they
+          render as labelled values rather than charts. */}
+      <ParameterFact
+        index={4}
+        label="Water column"
+        value={capWord(entry.waterColumn)}
+      />
+      <ParameterFact
+        index={5}
+        label="Schooling"
+        value={schoolingYes ? "Yes" : "No"}
+        helper={schoolingHelper}
+      />
       {entry.flowRate && (
         <div
           className="animate-fade-up md:col-span-2"
-          style={{ ["--i" as string]: 5 }}
+          style={{ ["--i" as string]: 6 }}
         >
           <FlowDemand raw={entry.flowRate} />
         </div>
@@ -117,7 +127,6 @@ function FishExtras({ entry }: { entry: FishEntry }) {
 }
 
 function ShrimpExtras({ entry }: { entry: ShrimpEntry }) {
-  const tankL = parseLeadingNumber(entry.minTankSize);
   const adultRange = parseRange(entry.adultSize);
   const tdsRange = parseRange(entry.tdsRange);
   return (
@@ -132,16 +141,8 @@ function ShrimpExtras({ entry }: { entry: ShrimpEntry }) {
           />
         </div>
       )}
-      {tankL !== null && (
-        <div
-          className="animate-fade-up flex items-center"
-          style={{ ["--i" as string]: 4 }}
-        >
-          <TankSizeBadge litres={tankL} note="Minimum tank size" />
-        </div>
-      )}
       {tdsRange && (
-        <div className="animate-fade-up md:col-span-2" style={{ ["--i" as string]: 5 }}>
+        <div className="animate-fade-up md:col-span-2" style={{ ["--i" as string]: 4 }}>
           <RangeBar
             label="TDS"
             unit="ppm"
@@ -156,7 +157,7 @@ function ShrimpExtras({ entry }: { entry: ShrimpEntry }) {
       {entry.flowRate && (
         <div
           className="animate-fade-up md:col-span-2"
-          style={{ ["--i" as string]: 6 }}
+          style={{ ["--i" as string]: 5 }}
         >
           <FlowDemand raw={entry.flowRate} />
         </div>
@@ -238,4 +239,79 @@ function getDghString(entry: CatalogueEntry): string | undefined {
 
 function hasDgh(entry: CatalogueEntry): boolean {
   return Boolean(getDghString(entry));
+}
+
+function capWord(s: string): string {
+  if (!s) return "";
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/**
+ * Surface a stocking recommendation under the "Schooling" parameter
+ * fact so the reader knows how many to add — regardless of whether
+ * the species is technically a schooler. Examples:
+ *   • Yes / Yes (loose shoal)        → "Group of 8+"
+ *   • Pair                            → "Keep as a bonded pair"
+ *   • Pair or trio                    → "Best as a pair or trio"
+ *   • Harem (1 male, 2–3 females)     → "Harem · 1 male, 2–3 females"
+ *   • Solitary or pair                → "Solo or a pair"
+ *   • No (live in groups)             → "Small group of 4+"
+ *   • No                              → "Can be kept solo"
+ */
+function recommendedGroupNote(
+  raw: string,
+  min: number,
+  isSchooling: boolean,
+): string | undefined {
+  const r = raw.toLowerCase();
+  if (isSchooling) return `Group of ${min}+`;
+  if (/harem/.test(r)) {
+    const m = raw.match(/\(([^)]+)\)/);
+    return m ? `Harem · ${m[1]}` : "Keep as a harem";
+  }
+  if (/\bpair\b/.test(r)) {
+    if (/trio/.test(r)) return "Best as a pair or trio";
+    if (/solitary|solo/.test(r)) return "Solo or a pair";
+    return "Keep as a bonded pair";
+  }
+  if (/group/.test(r) && min >= 3) return `Small group of ${min}+`;
+  if (min >= 2) return `Keep ${min}+ together`;
+  return "Can be kept solo";
+}
+
+/**
+ * Small labelled-fact tile for categorical parameters that don't have
+ * a numeric range to chart (water column, schooling). Matches the
+ * visual weight of the RangeBar / SizeBar charts so the grid stays
+ * coherent.
+ */
+function ParameterFact({
+  label,
+  value,
+  helper,
+  index,
+}: {
+  label: string;
+  value: string;
+  helper?: string;
+  index: number;
+}) {
+  return (
+    <div
+      className="animate-fade-up flex flex-col gap-1"
+      style={{ ["--i" as string]: index }}
+    >
+      <span className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+        {label}
+      </span>
+      <p className="text-sm font-semibold text-foreground sm:text-base">
+        {value}
+      </p>
+      {helper && (
+        <p className="text-[11px] leading-snug text-muted-foreground/80">
+          {helper}
+        </p>
+      )}
+    </div>
+  );
 }
