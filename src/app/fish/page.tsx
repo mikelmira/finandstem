@@ -36,6 +36,7 @@ export default async function FishIndexPage({ searchParams }: PageProps) {
         title="Fish for the planted tank."
         subtitle={`${fishNorm.length} species profiled — schoolers, micropredators, algae crew, surface specialists and centrepieces. Parameters, group sizes, water column, plant and shrimp safety. Filter by what your water can hold; the catalogue tells you what fits.`}
         backgroundImage={atmosphere.angelfish}
+        breadcrumb={[{ label: "Fish" }]}
       />
       <SectionShell>
         <Suspense fallback={null}>

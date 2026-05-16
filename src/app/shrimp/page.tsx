@@ -36,6 +36,7 @@ export default async function ShrimpIndexPage({ searchParams }: PageProps) {
         title="Shrimp for the planted tank."
         subtitle={`${shrimpNorm.length} species profiled — Neocaridina colour morphs through Caridina specialists like Crystal Red and Blue Bolt, plus filter-feeding bamboo shrimp and the legendary Amano algae crew. Colony minimums, TDS targets, lineage, and which fish they survive alongside.`}
         backgroundImage={atmosphere.amanoMacro}
+        breadcrumb={[{ label: "Shrimp" }]}
       />
       <SectionShell>
         <Suspense fallback={null}>

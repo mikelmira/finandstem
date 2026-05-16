@@ -9,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
-  return <LegalSection {...legal.terms} />;
+  return (
+    <LegalSection
+      {...legal.terms}
+      breadcrumb={[{ label: "Legal" }, { label: "Terms" }]}
+    />
+  );
 }

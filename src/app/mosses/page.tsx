@@ -36,6 +36,7 @@ export default async function MossesIndexPage({ searchParams }: PageProps) {
         title="Mosses for the planted tank."
         subtitle={`${mossNorm.length} species profiled — Java and Christmas through Fissidens, Süßwassertang, Riccia and beyond. Attachment surface, typical use, trimming cadence, and the shapes each one forms underwater. The detail work that makes a scape feel alive.`}
         backgroundImage={atmosphere.driftwoodMoss}
+        breadcrumb={[{ label: "Mosses" }]}
       />
       <SectionShell>
         <Suspense fallback={null}>

@@ -89,6 +89,7 @@ export default async function PlannerPage({ searchParams }: PageProps) {
         eyebrow="Tank Planner"
         title="Build your tank, species by species."
         subtitle="Pick the tank, pick the filter, then add the fish, plants, shrimp, and mosses you're considering. We cross-reference every parameter, check stocking against best-practice rules, and tell you what light, CO₂, and substrate the combined tank actually needs."
+        breadcrumb={[{ label: "Planner" }]}
       />
 
       <SectionShell>

@@ -1,10 +1,15 @@
 import { SectionShell } from "@/components/sections/section-shell";
+import {
+  Breadcrumb,
+  type BreadcrumbItem,
+} from "@/components/sections/breadcrumb";
 
 interface LegalSectionProps {
   title: string;
   lastUpdated: string;
   intro: string;
   sections: ReadonlyArray<{ heading: string; body: string }>;
+  breadcrumb?: ReadonlyArray<BreadcrumbItem>;
 }
 
 export function LegalSection({
@@ -12,9 +17,13 @@ export function LegalSection({
   lastUpdated,
   intro,
   sections,
+  breadcrumb,
 }: LegalSectionProps) {
   return (
     <SectionShell containerClassName="max-w-3xl">
+      {breadcrumb && breadcrumb.length > 0 && (
+        <Breadcrumb items={breadcrumb} className="mb-6" />
+      )}
       <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
         {title}
       </h1>

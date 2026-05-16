@@ -15,7 +15,11 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero {...contact.hero} backgroundImage={atmosphere.dwarfGourami} />
+      <PageHero
+        {...contact.hero}
+        backgroundImage={atmosphere.dwarfGourami}
+        breadcrumb={[{ label: "Contact" }]}
+      />
 
       {/* Feedback */}
       <SectionShell className="border-t border-border/60">

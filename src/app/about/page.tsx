@@ -18,7 +18,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero {...about.hero} backgroundImage={atmosphere.nanoTank} />
+      <PageHero
+        {...about.hero}
+        backgroundImage={atmosphere.nanoTank}
+        breadcrumb={[{ label: "About" }]}
+      />
 
       {/* Ethos */}
       <SectionShell>

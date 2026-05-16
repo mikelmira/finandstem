@@ -36,6 +36,7 @@ export default async function PlantsIndexPage({ searchParams }: PageProps) {
         title="Plants for the planted tank."
         subtitle={`${plantNorm.length} species profiled — beginner Anubias and Java Fern through Cryptocoryne, sword plants, carpets, high-tech stems, bulbs and floaters. Light, CO₂, substrate, and propagation in one place. Filter by what your tank can support.`}
         backgroundImage={atmosphere.plantMacro}
+        breadcrumb={[{ label: "Plants" }]}
       />
       <SectionShell>
         <Suspense fallback={null}>

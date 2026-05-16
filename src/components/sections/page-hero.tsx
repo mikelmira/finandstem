@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/sections/section-shell";
 import { PhotoCredit } from "@/components/sections/photo-credit";
+import {
+  Breadcrumb,
+  type BreadcrumbItem,
+} from "@/components/sections/breadcrumb";
 import { cn } from "@/lib/utils";
 import type { AtmosphereImage } from "@/data/atmosphere";
 
@@ -9,6 +13,8 @@ interface PageHeroProps {
   title: string;
   subtitle?: string;
   backgroundImage?: AtmosphereImage;
+  /** Trail rendered above the eyebrow. "Home" is prepended automatically. */
+  breadcrumb?: ReadonlyArray<BreadcrumbItem>;
 }
 
 export function PageHero({
@@ -16,6 +22,7 @@ export function PageHero({
   title,
   subtitle,
   backgroundImage,
+  breadcrumb,
 }: PageHeroProps) {
   return (
     <section className="relative isolate overflow-hidden border-b border-border/60">
@@ -65,6 +72,9 @@ export function PageHero({
 
       <div className="mx-auto w-full max-w-6xl px-6 pt-20 pb-16 sm:px-8 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24">
         <div className="glass glass-edge animate-rise max-w-3xl rounded-3xl p-8 sm:p-10 md:p-12">
+          {breadcrumb && breadcrumb.length > 0 && (
+            <Breadcrumb items={breadcrumb} className="mb-5" />
+          )}
           <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="text-display-tight mt-5 text-balance text-4xl sm:text-5xl md:text-[3.5rem]">
             {title}

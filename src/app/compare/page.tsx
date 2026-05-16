@@ -51,6 +51,7 @@ export default async function ComparePage({ searchParams }: PageProps) {
         eyebrow="Compare"
         title="Put species side by side."
         subtitle="Pick up to four species from any category. We score the group out of 100, stack every species' temperature, pH, and hardness on the same axis to show the overlap, and surface the conflicts you'll need to plan around."
+        breadcrumb={[{ label: "Compare" }]}
       />
 
       <SectionShell>

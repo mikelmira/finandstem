@@ -9,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
-  return <LegalSection {...legal.privacy} />;
+  return (
+    <LegalSection
+      {...legal.privacy}
+      breadcrumb={[{ label: "Legal" }, { label: "Privacy" }]}
+    />
+  );
 }

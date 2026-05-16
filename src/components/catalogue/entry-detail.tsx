@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ArrowLeft,
   ArrowUpRight,
   ChevronDown,
   ExternalLink,
   MapPin,
 } from "lucide-react";
+import { Breadcrumb } from "@/components/sections/breadcrumb";
 import { WaveMark } from "@/components/wave-mark";
 import {
   CATEGORY_MARK,
@@ -121,13 +121,12 @@ export function EntryDetail({
         <div className="bg-grid absolute inset-0 -z-10 opacity-50" aria-hidden />
 
         <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
-          <Link
-            href={meta.path}
-            className="press inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <ArrowLeft className="size-4" aria-hidden />
-            Back to {meta.label.toLowerCase()}
-          </Link>
+          <Breadcrumb
+            items={[
+              { label: meta.label, href: meta.path },
+              { label: entry.commonName },
+            ]}
+          />
 
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
             {/* Left — name + meta */}

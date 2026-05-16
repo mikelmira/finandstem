@@ -46,6 +46,7 @@ export default async function CompatibilityPage({ searchParams }: PageProps) {
         eyebrow="Compatibility"
         title="What else fits this tank?"
         subtitle="Pick any fish, plant, shrimp, or moss. We cross-reference temperature, pH, hardness, and tank-mate safety to show what works alongside it. Built to help aquascapers anywhere plan a tank that actually holds together."
+        breadcrumb={[{ label: "Compatibility" }]}
       />
       <SectionShell>
         <Suspense fallback={<PickerFallback />}>
