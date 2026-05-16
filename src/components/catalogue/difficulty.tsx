@@ -12,18 +12,23 @@ interface DifficultyProps {
   level: number;
   className?: string;
   showLabel?: boolean;
+  /** Render with light colours for use over dark hero gradients. */
+  tone?: "light" | "dark";
 }
 
 export function Difficulty({
   level,
   className,
   showLabel = true,
+  tone = "dark",
 }: DifficultyProps) {
   const safe = Math.max(1, Math.min(5, Math.round(level)));
+  const isLight = tone === "light";
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 text-xs text-muted-foreground",
+        "inline-flex items-center gap-2 text-xs",
+        isLight ? "text-white/85" : "text-muted-foreground",
         className,
       )}
       aria-label={`Difficulty ${safe} of 5 — ${LABELS[safe]}`}
@@ -34,13 +39,24 @@ export function Difficulty({
             key={n}
             className={cn(
               "h-1.5 w-3 rounded-full transition-colors",
-              n <= safe ? "bg-[var(--brand)]" : "bg-muted-foreground/20",
+              n <= safe
+                ? "bg-[var(--brand)]"
+                : isLight
+                  ? "bg-white/25"
+                  : "bg-muted-foreground/20",
             )}
           />
         ))}
       </span>
       {showLabel && (
-        <span className="font-medium text-foreground/80">{LABELS[safe]}</span>
+        <span
+          className={cn(
+            "font-medium",
+            isLight ? "text-white" : "text-foreground/80",
+          )}
+        >
+          {LABELS[safe]}
+        </span>
       )}
     </span>
   );

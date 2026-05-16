@@ -166,32 +166,36 @@ export function EntryDetail({
             <p className="mt-5 text-pretty text-xl italic text-white/85 drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] sm:text-2xl md:text-3xl">
               {entry.scientificName}
             </p>
+
+            {/* Meta row — origin + difficulty + CTAs, sitting inside
+                the hero. Origin pill uses a light backdrop-blur strip;
+                Difficulty switches to its light tone; the Plan / Compare
+                buttons keep their own cream-pill styling which already
+                reads cleanly on the dark gradient. */}
+            <div className="mt-7 flex flex-wrap items-center gap-3 text-sm">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/15 px-3 py-1 text-white backdrop-blur-sm">
+                <MapPin className="size-3.5" aria-hidden />
+                {entry.origin}
+              </span>
+              <Difficulty level={entry.difficulty} tone="light" />
+              <PlanButton
+                category={entry.category}
+                slug={entry.slug}
+                commonName={entry.commonName}
+              />
+              <CompareButton
+                category={entry.category}
+                slug={entry.slug}
+                commonName={entry.commonName}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ─── Intro band — meta row, key facts, care, gallery ───── */}
+      {/* ─── Intro band — key facts, care, gallery ─────────────── */}
       <section className="border-b border-border/60">
         <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
-          {/* Meta row — origin + difficulty + CTAs */}
-          <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-card/70 px-3 py-1">
-              <MapPin className="size-3.5" aria-hidden />
-              {entry.origin}
-            </span>
-            <Difficulty level={entry.difficulty} />
-            <PlanButton
-              category={entry.category}
-              slug={entry.slug}
-              commonName={entry.commonName}
-            />
-            <CompareButton
-              category={entry.category}
-              slug={entry.slug}
-              commonName={entry.commonName}
-            />
-          </div>
-
           {/* Key-fact pills — temp / pH / minimum-tank, plus cross-tank
               safety flags (plant-safe / shrimp-safe). */}
           <HeroKeyFacts entry={entry} />
