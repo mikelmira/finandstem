@@ -52,10 +52,10 @@ export function Breadcrumb({
 
   const linkBase =
     tone === "light"
-      ? "text-foreground/55 hover:text-foreground"
+      ? "text-white/70 hover:text-white"
       : "text-muted-foreground hover:text-foreground";
   const currentBase =
-    tone === "light" ? "text-foreground/90" : "text-foreground";
+    tone === "light" ? "text-white" : "text-foreground";
 
   return (
     <nav
@@ -72,7 +72,10 @@ export function Breadcrumb({
             <li key={`${c.label}-${i}`} className="flex items-center gap-x-1.5">
               {i === 0 && (
                 <Home
-                  className="size-3 text-[var(--brand)] sm:size-3.5"
+                  className={cn(
+                    "size-3 sm:size-3.5",
+                    tone === "light" ? "text-white/90" : "text-[var(--brand)]",
+                  )}
                   strokeWidth={2}
                   aria-hidden
                 />
@@ -100,7 +103,12 @@ export function Breadcrumb({
               )}
               {!isLast && (
                 <ChevronRight
-                  className="size-3 text-muted-foreground/55"
+                  className={cn(
+                    "size-3",
+                    tone === "light"
+                      ? "text-white/55"
+                      : "text-muted-foreground/55",
+                  )}
                   strokeWidth={2}
                   aria-hidden
                 />

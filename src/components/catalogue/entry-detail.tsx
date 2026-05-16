@@ -41,6 +41,7 @@ import { getGallery } from "@/data/image-gallery";
 import { getDetailSections } from "@/data/species-detail";
 import { groupDetailSections } from "@/lib/catalogue/detail-groups";
 import { prepareImage } from "@/lib/wikimedia";
+import { cn } from "@/lib/utils";
 
 interface LegacyDetail {
   heading: string;
@@ -113,152 +114,154 @@ export function EntryDetail({
 
   return (
     <>
-      {/* ─── Hero ────────────────────────────────────────────────── */}
-      <section className="relative isolate overflow-hidden border-b border-border/60">
-        {/* Full-bleed species photo behind everything */}
+      {/* ─── Hero — traditional 100vh splash ────────────────────── */}
+      <section className="relative isolate flex h-screen min-h-[600px] flex-col overflow-hidden">
+        {/* Full-bleed species photo */}
         {image && (
-          <>
-            <div className="absolute inset-0 -z-30">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover"
-              />
-            </div>
-            {/* Dark overlay to keep hero copy legible on top of the
-                species photo. Matches the PageHero treatment used on
-                category index pages. */}
-            <div
-              aria-hidden
-              className="absolute inset-0 -z-20 bg-[oklch(0.16_0.045_152/0.78)]"
+          <div className="absolute inset-0 -z-30">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
             />
-            {/* Bottom fade into the page background */}
-            <div
-              aria-hidden
-              className="absolute inset-x-0 bottom-0 -z-20 h-48 bg-gradient-to-b from-transparent to-background"
-            />
-          </>
+          </div>
         )}
+        {/* Dual gradient — darker at top + bottom for legibility, lighter
+            in the middle so the species photo stays the star */}
         <div
-          className="brand-aurora absolute inset-0 -z-10 opacity-40 mix-blend-overlay"
           aria-hidden
+          className="absolute inset-0 -z-20 bg-gradient-to-b from-black/55 via-black/20 to-black/75"
+        />
+        {/* Final fade into the page background */}
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 -z-20 h-40 bg-gradient-to-b from-transparent to-background"
         />
 
-        <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
-            {/* Left — name + meta + key facts + care summary, wrapped
-                in a glass card so the cream-paper reading surface sits
-                cleanly on top of the species photo. */}
-            <div className="glass glass-edge animate-rise relative flex flex-col rounded-3xl p-7 sm:p-8 md:p-10">
-              <Breadcrumb
-                items={[
-                  { label: meta.label, href: meta.path },
-                  { label: entry.commonName },
-                ]}
-                className="mb-5"
+        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col px-6 pt-8 pb-16 sm:px-8 sm:pt-10 sm:pb-20">
+          {/* Top — breadcrumb */}
+          <Breadcrumb
+            items={[
+              { label: meta.label, href: meta.path },
+              { label: entry.commonName },
+            ]}
+            tone="light"
+          />
+
+          {/* Bottom — title block, pushed down by mt-auto */}
+          <div className="animate-rise mt-auto max-w-3xl">
+            <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-white/85">
+              <span
+                aria-hidden
+                className="size-1.5 rounded-full bg-[var(--brand)]"
               />
-              <Eyebrow>{meta.singular}</Eyebrow>
-              <h1 className="text-display-tight mt-4 text-balance text-5xl sm:text-6xl md:text-7xl">
-                {entry.commonName}
-              </h1>
-              <p className="mt-4 text-pretty text-xl italic text-muted-foreground sm:text-2xl">
-                {entry.scientificName}
+              {meta.singular}
+            </span>
+            <h1 className="text-display-tight mt-5 text-balance text-5xl text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+              {entry.commonName}
+            </h1>
+            <p className="mt-5 text-pretty text-xl italic text-white/85 drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] sm:text-2xl md:text-3xl">
+              {entry.scientificName}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Intro band — meta row, key facts, care, gallery ───── */}
+      <section className="border-b border-border/60">
+        <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
+          {/* Meta row — origin + difficulty + CTAs */}
+          <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-card/70 px-3 py-1">
+              <MapPin className="size-3.5" aria-hidden />
+              {entry.origin}
+            </span>
+            <Difficulty level={entry.difficulty} />
+            <PlanButton
+              category={entry.category}
+              slug={entry.slug}
+              commonName={entry.commonName}
+            />
+            <CompareButton
+              category={entry.category}
+              slug={entry.slug}
+              commonName={entry.commonName}
+            />
+          </div>
+
+          {/* Key-fact pills — temp / pH / minimum-tank, plus cross-tank
+              safety flags (plant-safe / shrimp-safe). */}
+          <HeroKeyFacts entry={entry} />
+
+          {/* Care summary — full-width when no gallery, paired with the
+              gallery on the right when there are extra photos */}
+          <div
+            className={cn(
+              "mt-10 grid grid-cols-1 gap-8",
+              gallery.length > 0 &&
+                "lg:grid-cols-[1.1fr_1fr] lg:gap-12",
+            )}
+          >
+            <article className="glass glass-edge animate-rise rounded-3xl p-7 sm:p-8 md:p-10">
+              <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+                Care at a glance
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-card/70 px-3 py-1">
-                  <MapPin className="size-3.5" aria-hidden />
-                  {entry.origin}
-                </span>
-                <Difficulty level={entry.difficulty} />
-                <PlanButton
-                  category={entry.category}
-                  slug={entry.slug}
-                  commonName={entry.commonName}
+              <p className="drop-cap mt-4 text-base leading-[1.65] text-foreground/90 sm:text-[17px]">
+                {entry.careSummary}
+              </p>
+            </article>
+
+            {gallery.length > 0 && (
+              <div className="glass glass-edge animate-rise rounded-3xl p-5 sm:p-6">
+                <ImageGallery
+                  images={gallery}
+                  gridClassName="grid-cols-2"
                 />
-                <CompareButton
-                  category={entry.category}
-                  slug={entry.slug}
-                  commonName={entry.commonName}
-                />
-              </div>
-
-              {/* Key-fact pills — temp / pH / minimum-tank, plus the
-                  cross-tank safety flags (plant-safe / shrimp-safe). */}
-              <HeroKeyFacts entry={entry} />
-
-              {/* Care summary — opens with a drop cap, like a field-guide
-                  monograph. */}
-              <div className="mt-7 border-t border-border/40 pt-6">
-                <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
-                  Care at a glance
-                </p>
-                <p className="drop-cap mt-4 text-base leading-[1.65] text-foreground/90 sm:text-[17px]">
-                  {entry.careSummary}
-                </p>
-              </div>
-            </div>
-
-            {/* Right — gallery (formerly the spot for the single hero
-                image, which has been promoted to the full-bleed
-                background). Falls back to the scientific plate on
-                species with no extra photos. */}
-            <div className="relative lg:pt-8">
-              {gallery.length > 0 ? (
-                <div className="glass glass-edge animate-rise rounded-3xl p-5 sm:p-6">
-                  <ImageGallery
-                    images={gallery}
-                    gridClassName="grid-cols-2"
-                  />
-                  {image && (
-                    <p className="mt-4 text-[10px] leading-snug text-muted-foreground/85">
-                      Hero photo by{" "}
-                      <span className="font-medium text-foreground/85">
-                        {image.author && image.author !== "Unknown"
-                          ? image.author
-                          : "unknown contributor"}
-                      </span>
-                      {image.license && (
-                        <>
-                          {" · "}
-                          {image.licenseUrl ? (
-                            <a
-                              href={image.licenseUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="link-underline font-medium text-[var(--brand)]"
-                            >
-                              {image.license}
-                            </a>
-                          ) : (
-                            <span className="font-medium">
-                              {image.license}
-                            </span>
-                          )}
-                        </>
-                      )}
-                      {entry.imageSourceUrl && (
-                        <>
-                          {" · "}
+                {image && (
+                  <p className="mt-4 text-[10px] leading-snug text-muted-foreground/85">
+                    Hero photo by{" "}
+                    <span className="font-medium text-foreground/85">
+                      {image.author && image.author !== "Unknown"
+                        ? image.author
+                        : "unknown contributor"}
+                    </span>
+                    {image.license && (
+                      <>
+                        {" · "}
+                        {image.licenseUrl ? (
                           <a
-                            href={entry.imageSourceUrl}
+                            href={image.licenseUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="link-underline font-medium text-[var(--brand)]"
                           >
-                            Wikipedia
+                            {image.license}
                           </a>
-                        </>
-                      )}
-                    </p>
-                  )}
-                </div>
-              ) : (
-                <SciencePlateAnnotation entry={entry} />
-              )}
-            </div>
+                        ) : (
+                          <span className="font-medium">{image.license}</span>
+                        )}
+                      </>
+                    )}
+                    {entry.imageSourceUrl && (
+                      <>
+                        {" · "}
+                        <a
+                          href={entry.imageSourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="link-underline font-medium text-[var(--brand)]"
+                        >
+                          Wikipedia
+                        </a>
+                      </>
+                    )}
+                  </p>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </section>
