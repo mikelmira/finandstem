@@ -4,6 +4,7 @@ import {
   Beef,
   Heart,
   Leaf,
+  MapPin,
   ShieldAlert,
   Sparkles,
   Sprout,
@@ -19,6 +20,7 @@ import {
   PlantMark,
   ShrimpMark,
 } from "@/components/icons/species-icons";
+import { getHabitat } from "@/data/habitats";
 import type {
   FishEntry,
   MossEntry,
@@ -87,8 +89,34 @@ function ProfileCard({
 }
 
 /* ──────────────────────────────────────────────────────────────────
+   Layout — uniform side-by-side grid shared across all four profile
+   variants. Auto-fits columns based on a 200px min card width so the
+   row stays single-line on wide screens and gracefully wraps to two
+   rows on narrower ones. No card spans extra columns; every card
+   reads the same.
+   ────────────────────────────────────────────────────────────────── */
+const PROFILE_GRID =
+  "stagger grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4";
+
+/* ──────────────────────────────────────────────────────────────────
    Atomic visualisations.
    ────────────────────────────────────────────────────────────────── */
+
+/**
+ * Habitat marker — a stylised waterway icon in a soft brand-tinted
+ * pill. Used as the graphic on every Habitat card so the row gets a
+ * consistent place-of-origin visual cue without needing a per-species
+ * illustration.
+ */
+function HabitatHero() {
+  return (
+    <div className="flex items-center justify-center" aria-hidden>
+      <span className="flex size-12 items-center justify-center rounded-full border border-[var(--brand)]/30 bg-[var(--brand)]/10 text-[var(--brand)]">
+        <MapPin className="size-5" strokeWidth={1.75} />
+      </span>
+    </div>
+  );
+}
 
 /**
  * Vertical tank cross-section with three swim zones (top / mid /
@@ -586,7 +614,7 @@ function recommendedGroupNote(
 function FishProfile({ entry: f }: { entry: FishEntry }) {
   const schoolingYes = /\byes\b/i.test(f.schooling);
   return (
-    <div className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
+    <div className={PROFILE_GRID}>
       <ProfileCard
         label="Family"
         value={f.family}
@@ -618,7 +646,6 @@ function FishProfile({ entry: f }: { entry: FishEntry }) {
         value={cap(f.diet)}
         helper={f.feedingNotes}
         graphic={<DietPictogram diet={f.diet} />}
-        className="sm:col-span-2"
       />
       <ProfileCard
         label="Lifespan"
@@ -632,13 +659,19 @@ function FishProfile({ entry: f }: { entry: FishEntry }) {
           <BreedingDifficultyViz raw={f.breedingDifficulty} />
         }
       />
+      <ProfileCard
+        label="Habitat"
+        value={getHabitat(f.slug, f.origin)}
+        helper={f.origin}
+        graphic={<HabitatHero />}
+      />
     </div>
   );
 }
 
 function PlantProfile({ entry: p }: { entry: PlantEntry }) {
   return (
-    <div className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
+    <div className={PROFILE_GRID}>
       <ProfileCard
         label="Family"
         value={p.family}
@@ -653,7 +686,6 @@ function PlantProfile({ entry: p }: { entry: PlantEntry }) {
         label="Position"
         value={p.position}
         graphic={<PlantPositionViz raw={p.position} />}
-        className="sm:col-span-2"
       />
       <ProfileCard
         label="Substrate"
@@ -665,7 +697,6 @@ function PlantProfile({ entry: p }: { entry: PlantEntry }) {
             </span>
           </div>
         }
-        className="sm:col-span-2"
       />
       <ProfileCard
         label="Propagation"
@@ -677,7 +708,12 @@ function PlantProfile({ entry: p }: { entry: PlantEntry }) {
             </span>
           </div>
         }
-        className="sm:col-span-2"
+      />
+      <ProfileCard
+        label="Habitat"
+        value={getHabitat(p.slug, p.origin)}
+        helper={p.origin}
+        graphic={<HabitatHero />}
       />
     </div>
   );
@@ -685,7 +721,7 @@ function PlantProfile({ entry: p }: { entry: PlantEntry }) {
 
 function ShrimpProfile({ entry: s }: { entry: ShrimpEntry }) {
   return (
-    <div className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
+    <div className={PROFILE_GRID}>
       <ProfileCard
         label="Colony minimum"
         value={`${s.colonyMin}+`}
@@ -696,7 +732,6 @@ function ShrimpProfile({ entry: s }: { entry: ShrimpEntry }) {
         value={cap(s.diet)}
         helper={s.feedingNotes}
         graphic={<DietPictogram diet={s.diet} />}
-        className="sm:col-span-2"
       />
       <ProfileCard
         label="Algae grazing"
@@ -722,7 +757,12 @@ function ShrimpProfile({ entry: s }: { entry: ShrimpEntry }) {
         label="Lifespan"
         value={`${s.lifespan} yrs`}
         graphic={<LifespanBar raw={s.lifespan} scaleMaxYears={5} />}
-        className="sm:col-span-2"
+      />
+      <ProfileCard
+        label="Habitat"
+        value={getHabitat(s.slug, s.origin)}
+        helper={s.origin}
+        graphic={<HabitatHero />}
       />
     </div>
   );
@@ -730,7 +770,7 @@ function ShrimpProfile({ entry: s }: { entry: ShrimpEntry }) {
 
 function MossProfile({ entry: m }: { entry: MossEntry }) {
   return (
-    <div className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
+    <div className={PROFILE_GRID}>
       <ProfileCard
         label="Family"
         value={m.family}
@@ -751,7 +791,6 @@ function MossProfile({ entry: m }: { entry: MossEntry }) {
             </span>
           </div>
         }
-        className="sm:col-span-2"
       />
       <ProfileCard
         label="Typical use"
@@ -763,7 +802,6 @@ function MossProfile({ entry: m }: { entry: MossEntry }) {
             </span>
           </div>
         }
-        className="sm:col-span-2"
       />
       <ProfileCard
         label="Trimming"
@@ -775,7 +813,12 @@ function MossProfile({ entry: m }: { entry: MossEntry }) {
             </span>
           </div>
         }
-        className="sm:col-span-2"
+      />
+      <ProfileCard
+        label="Habitat"
+        value={getHabitat(m.slug, m.origin)}
+        helper={m.origin}
+        graphic={<HabitatHero />}
       />
     </div>
   );

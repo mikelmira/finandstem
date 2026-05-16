@@ -7,28 +7,27 @@ interface TankFitPanelProps {
 }
 
 /**
- * Two-column decision panel for the species detail page.
+ * Two-row decision panel for the species detail page.
  *
- * Left ("Parameters"): the numeric ranges that decide whether the
+ * Top ("Parameters"): the numeric ranges that decide whether the
  * species fits in a given tank — temperature, pH, hardness, size,
  * tank capacity, light/CO2/flow demand. These are the charts that
  * already lived in <AtAGlance>.
  *
- * Right ("Profile"): the categorical facts about the species —
- * family, water column, schooling, temperament, diet, lifespan —
- * each rendered as a small visual card by <ProfileCards> so the
- * column reads as data, not a definition list.
- *
- * On narrow screens the two stack; on lg+ they sit side-by-side.
+ * Bottom ("Profile"): the categorical facts about the species —
+ * family, water column, schooling, temperament, diet, lifespan,
+ * habitat — laid out side-by-side as a full-width row of small
+ * visual cards so the section reads as a quick-glance dashboard
+ * rather than a definition list.
  */
 export function TankFitPanel({ entry }: TankFitPanelProps) {
   return (
-    <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-6">
+    <div className="flex flex-col gap-8">
       <div className="flex flex-col">
         <h3 className="mb-3 text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
           Parameters
         </h3>
-        <AtAGlance entry={entry} className="h-full" />
+        <AtAGlance entry={entry} />
       </div>
 
       <div className="flex flex-col">

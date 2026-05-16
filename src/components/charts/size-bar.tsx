@@ -1,13 +1,5 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import {
-  FishMark,
-  MossMark,
-  PlantMark,
-  ShrimpMark,
-} from "@/components/icons/species-icons";
-
-type IconLike = React.ComponentType<{ className?: string; style?: React.CSSProperties }>;
 
 interface SizeBarProps {
   label: string;
@@ -15,36 +7,23 @@ interface SizeBarProps {
   scaleMaxCm: number;
   /** The species' size range in cm. */
   range: { min: number; max: number } | null;
-  /** Silhouette to show beside the size readout. */
+  /** Kept for backward compatibility — no longer rendered as a
+   *  silhouette. The size readout now stands on its own ruler. */
   kind?: "fish" | "shrimp" | "plant" | "moss";
   className?: string;
 }
-
-const KIND_ICON: Record<NonNullable<SizeBarProps["kind"]>, IconLike> = {
-  fish: FishMark,
-  shrimp: ShrimpMark,
-  plant: PlantMark,
-  moss: MossMark,
-};
 
 export function SizeBar({
   label,
   scaleMaxCm,
   range,
-  kind = "fish",
+  kind: _kind,
   className,
 }: SizeBarProps) {
-  const Icon = KIND_ICON[kind];
+  void _kind;
   const span = scaleMaxCm;
   const clamp = (n: number) =>
     Math.max(0, Math.min(100, (n / span) * 100));
-
-  // Render scaled silhouette next to the bar. Map species' max size to a
-  // size class (in the 12px–48px range) so the icon visually grows with
-  // the species — a 100 cm plant looks bigger than a 3 cm shrimp.
-  const iconPx = range
-    ? Math.max(14, Math.min(48, 14 + (range.max / scaleMaxCm) * 34))
-    : 14;
 
   // Build a coarse tick set across the scale — 0, 25%, 50%, 75%, 100%
   const ticks = [0, scaleMaxCm * 0.25, scaleMaxCm * 0.5, scaleMaxCm * 0.75, scaleMaxCm];
@@ -63,45 +42,36 @@ export function SizeBar({
             : "—"}
         </span>
       </figcaption>
-      <div className="flex items-center gap-3">
-        <span
-          aria-hidden
-          className="flex shrink-0 items-center justify-center text-[var(--brand)]"
-          style={{ width: 56, height: 56 }}
+      <div className="flex flex-col gap-1.5">
+        <div
+          className="relative h-2.5 w-full overflow-hidden rounded-full bg-foreground/10"
+          role="img"
+          aria-label={`${label}${
+            range ? ` ${range.min}–${range.max} cm` : ""
+          } on a ruler from 0 to ${scaleMaxCm} cm`}
         >
-          <Icon style={{ width: iconPx, height: iconPx }} />
-        </span>
-        <div className="flex flex-1 flex-col gap-1.5">
-          <div
-            className="relative h-2.5 w-full overflow-hidden rounded-full bg-foreground/10"
-            role="img"
-            aria-label={`${label}${
-              range ? ` ${range.min}–${range.max} cm` : ""
-            } on a ruler from 0 to ${scaleMaxCm} cm`}
-          >
-            {range && (
-              <div
-                className="absolute inset-y-0 rounded-full bg-[var(--brand)]/80 shadow-[0_0_10px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
-                style={{
-                  left: `${clamp(range.min)}%`,
-                  width: `${Math.max(2, clamp(range.max) - clamp(range.min))}%`,
-                }}
-              />
-            )}
-            {ticks.map((t) => (
-              <span
-                key={t}
-                aria-hidden
-                className="absolute top-0 h-full w-px bg-foreground/15"
-                style={{ left: `${clamp(t)}%` }}
-              />
-            ))}
-          </div>
-          <div className="flex justify-between text-[10px] tabular-nums text-muted-foreground">
-            {ticks.map((t) => (
-              <span key={t}>{Math.round(t)}</span>
-            ))}
-          </div>
+          {range && (
+            <div
+              className="absolute inset-y-0 rounded-full bg-[var(--brand)]/80 shadow-[0_0_10px_-2px_color-mix(in_oklab,var(--brand)_55%,transparent)]"
+              style={{
+                left: `${clamp(range.min)}%`,
+                width: `${Math.max(2, clamp(range.max) - clamp(range.min))}%`,
+              }}
+            />
+          )}
+          {ticks.map((t) => (
+            <span
+              key={t}
+              aria-hidden
+              className="absolute top-0 h-full w-px bg-foreground/15"
+              style={{ left: `${clamp(t)}%` }}
+            />
+          ))}
+        </div>
+        <div className="flex justify-between text-[10px] tabular-nums text-muted-foreground">
+          {ticks.map((t) => (
+            <span key={t}>{Math.round(t)}</span>
+          ))}
         </div>
       </div>
     </figure>
