@@ -11,6 +11,9 @@ import {
   applyShrimpFilters,
   shrimpChips,
 } from "@/lib/catalogue/filters";
+import { shrimp } from "@/data";
+import { JsonLd } from "@/components/seo/json-ld";
+import { categoryIndexJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Shrimp",
@@ -31,6 +34,10 @@ export default async function ShrimpIndexPage({ searchParams }: PageProps) {
 
   return (
     <>
+      <JsonLd
+        data={categoryIndexJsonLd("shrimp", shrimp)}
+        id="shrimp-index-jsonld"
+      />
       <PageHero
         eyebrow="Shrimp"
         title="Shrimp for the planted tank."

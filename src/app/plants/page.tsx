@@ -11,6 +11,9 @@ import {
   applyPlantFilters,
   plantChips,
 } from "@/lib/catalogue/filters";
+import { plants } from "@/data";
+import { JsonLd } from "@/components/seo/json-ld";
+import { categoryIndexJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Plants",
@@ -31,6 +34,10 @@ export default async function PlantsIndexPage({ searchParams }: PageProps) {
 
   return (
     <>
+      <JsonLd
+        data={categoryIndexJsonLd("plants", plants)}
+        id="plants-index-jsonld"
+      />
       <PageHero
         eyebrow="Plants"
         title="Plants for the planted tank."

@@ -31,7 +31,7 @@ export const contact = {
   partnership: {
     eyebrow: "Partnership / press",
     title: "Brand, shop, supplier, or media.",
-    body: "We're selective. Sponsored content fits if it's something we'd already recommend. Affiliate relationships are open with most major hobby brands. Press / interviews welcome — we'll be candid about what we do and don't know.",
+    body: "Fin & Stem partners with people who share the same care for the underwater world — shops who treat livestock properly, growers who put plant health first, photographers, biologists, and journalists. Tell us what you have in mind and we'll be candid about whether it fits.",
     fields: {
       name: { label: "Name", placeholder: "Olivia Rhye" },
       email: { label: "Email", placeholder: "olivia@brand.com" },

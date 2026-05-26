@@ -39,13 +39,13 @@ export const home = {
   },
   ethos: {
     eyebrow: "What this site is",
-    title: "Built to help, not to sell.",
-    body: "Most aquascaping resources profile species in isolation, hide parameters behind sales copy, and leave you cross-referencing five tabs to figure out what works with what. Fin & Stem ties everything together — every fish links to plant and shrimp safety, every plant lists its real light and CO₂ demand, every shrimp tells you which fish it survives alongside. Built by a tank-keeper, for the global aquascaping community.",
+    title: "Built for everyone who loves the underwater world.",
+    body: "Most aquascaping resources profile species in isolation and leave you cross-referencing five tabs to figure out what works with what. Fin & Stem ties everything together — every fish links to plant and shrimp safety, every plant lists its real light and CO₂ demand, every shrimp tells you which fish it survives alongside. Written by a tank-keeper for the global aquascaping community — a love letter to the beauty of what we build underwater.",
     points: [
       "88+ species profiled across four pillars — every entry shows the parameters that actually matter up front.",
       "The Compatibility page cross-references any anchor species against the other three categories — see at a glance what fits in your water.",
       "Image galleries sourced from Wikimedia Commons, iNaturalist, and retailer catalogues — with full attribution and back-links to the source on every photo.",
-      "No paywall, no shop, no AI-generated stock fish art. Written by someone who actually keeps the tanks.",
+      "Written by someone who actually keeps the tanks — and who still finds the underwater world quietly astonishing.",
     ],
   },
   faq: {
@@ -74,7 +74,7 @@ export const home = {
       },
       {
         q: "Where do the photos come from?",
-        a: "Wikimedia Commons first (commercial-use Creative Commons), iNaturalist second (CC-BY and CC0 only), and retailer catalogue photos third (Tropica, Buce Plant) for species without freely-licensed coverage. Every gallery photo links back to its source page so you can verify the licensing and author yourself.",
+        a: "Wikimedia Commons first (open-license Creative Commons), iNaturalist second (CC-BY and CC0 only), and retailer catalogue photos third (Tropica, Buce Plant) where the more obscure species need coverage. Every gallery photo links back to its source page so you can verify the licensing and author yourself.",
       },
     ],
   },

@@ -385,3 +385,33 @@ export function siteJsonLd() {
     "@graph": [websiteEntity(), organizationEntity()],
   };
 }
+
+/* ─── Homepage ────────────────────────────────────────────────────────── */
+
+/**
+ * Homepage-specific JSON-LD. Adds a WebPage entity (ties this URL into
+ * the WebSite graph already emitted from the layout) plus a top-level
+ * BreadcrumbList so Google can render the home crumb in SERPs.
+ */
+export function homePageJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${site.url}/#webpage`,
+        url: `${site.url}/`,
+        name: `${site.name} — ${site.tagline}`,
+        description: site.description,
+        inLanguage: "en",
+        isPartOf: { "@id": WEBSITE_ID },
+        publisher: organizationRef(),
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${site.url}/fin-and-stem-logo.png`,
+        },
+      },
+      breadcrumbsJsonLd([{ name: "Home" }]),
+    ],
+  };
+}

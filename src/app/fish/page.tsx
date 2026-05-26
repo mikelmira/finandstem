@@ -11,6 +11,9 @@ import {
   applyFishFilters,
   fishChips,
 } from "@/lib/catalogue/filters";
+import { fish } from "@/data";
+import { JsonLd } from "@/components/seo/json-ld";
+import { categoryIndexJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Fish",
@@ -31,6 +34,10 @@ export default async function FishIndexPage({ searchParams }: PageProps) {
 
   return (
     <>
+      <JsonLd
+        data={categoryIndexJsonLd("fish", fish)}
+        id="fish-index-jsonld"
+      />
       <PageHero
         eyebrow="Fish"
         title="Fish for the planted tank."

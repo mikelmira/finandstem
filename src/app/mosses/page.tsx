@@ -11,6 +11,9 @@ import {
   applyMossFilters,
   mossChips,
 } from "@/lib/catalogue/filters";
+import { mosses } from "@/data";
+import { JsonLd } from "@/components/seo/json-ld";
+import { categoryIndexJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Mosses",
@@ -31,6 +34,10 @@ export default async function MossesIndexPage({ searchParams }: PageProps) {
 
   return (
     <>
+      <JsonLd
+        data={categoryIndexJsonLd("mosses", mosses)}
+        id="mosses-index-jsonld"
+      />
       <PageHero
         eyebrow="Mosses"
         title="Mosses for the planted tank."

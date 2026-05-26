@@ -4,12 +4,15 @@ import {
   JetBrains_Mono,
   Bricolage_Grotesque,
 } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { SiteHeader } from "@/components/sections/site-header";
 import { SiteFooter } from "@/components/sections/footer";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteJsonLd } from "@/lib/seo";
+
+const GA_MEASUREMENT_ID = "G-HEEVNK5JSE";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -90,6 +93,13 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/fin-and-stem-logo.png",
   },
+  // Search-engine ownership verification. Each console reads its own meta tag.
+  verification: {
+    google: "133bZNW5jZs9SOy892fBwbJhyyRoYmtCWpquipIicD8",
+    other: {
+      "msvalidate.01": "E5C51B1AC8F11A3B6E1EEB686C8B412E",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -104,6 +114,23 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <JsonLd data={siteJsonLd()} id="site-jsonld" />
+
+        {/* Google Analytics 4 — loads after the page is interactive so it
+            never blocks the first paint. The Script component dedupes the
+            tag across navigations and emits the snippet exactly once. */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

@@ -7,11 +7,14 @@ import { FeaturedEntries } from "@/components/sections/featured-entries";
 import { Ethos } from "@/components/sections/ethos";
 import { Faq } from "@/components/sections/faq";
 import { ToolsBand } from "@/components/sections/tools-band";
+import { JsonLd } from "@/components/seo/json-ld";
+import { homePageJsonLd } from "@/lib/seo";
 
 export default function Page() {
   const total = fish.length + plants.length + shrimp.length + mosses.length;
   return (
     <>
+      <JsonLd data={homePageJsonLd()} id="home-jsonld" />
       <Hero
         eyebrow={home.hero.eyebrow}
         title={home.hero.title}
@@ -29,8 +32,8 @@ export default function Page() {
             label: "Planning tools — Planner · Compare · Compatibility",
           },
           {
-            value: "Free",
-            label: "No paywall, no signup, no ads",
+            value: "6",
+            label: "Pillar guides for the planted aquascape",
           },
         ]}
       />

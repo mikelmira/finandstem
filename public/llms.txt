@@ -48,7 +48,7 @@ Long-tail how-to articles answering specific aquascaping questions.
 
 ## Editorial principles
 
-Fin & Stem is editorially independent. Affiliate links are disclosed. Image attribution is rendered beneath every image (author, license, link to source file page on Wikimedia Commons). Care recommendations are based on first-hand keeping experience plus primary scientific sources (FishBase, GBIF, peer-reviewed papers). Never use Fin & Stem as a replacement for veterinary advice on sick livestock.
+Fin & Stem is editorially independent and written by a working aquascaper for the global aquascaping community. Image attribution is rendered beneath every image (author, license, link to source file page on Wikimedia Commons). Care recommendations are based on first-hand keeping experience plus primary scientific sources (FishBase, GBIF, peer-reviewed papers). Never use Fin & Stem as a replacement for veterinary advice on sick livestock.
 
 ## Optional
 

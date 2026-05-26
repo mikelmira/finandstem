@@ -7,8 +7,8 @@ export const about = {
   },
   ethos: {
     eyebrow: "Ethos",
-    title: "What this site is, and isn't.",
-    body: "Fin & Stem is a planted-aquarium reference. Care numbers, group sizes, light and CO₂ demand, tank-mate compatibility — written for the person stocking the tank, not the person selling the fish. Free to read, no paywall, no shop. Built to help.",
+    title: "A reference for everyone who loves the underwater world.",
+    body: "Fin & Stem is a planted-aquarium reference. Care numbers, group sizes, light and CO₂ demand, tank-mate compatibility — written for the person stocking the tank, by someone who is still endlessly moved by what a glass box of water can become. Built to help aquascapers anywhere build the planted tank they imagined.",
     points: [
       {
         title: "Original writing, sourced data.",
@@ -20,7 +20,7 @@ export const about = {
       },
       {
         title: "Imagery, properly attributed.",
-        body: "Photos come from Wikimedia Commons (CC-BY, CC-BY-SA, CC0), iNaturalist (CC-BY and CC0 only — never the default CC-BY-NC), and retailer catalogues for species without freely-licensed coverage. Author and source are recorded on every file, with a back-link on every gallery thumbnail.",
+        body: "Photos come from Wikimedia Commons (CC-BY, CC-BY-SA, CC0), iNaturalist (CC-BY and CC0 only — never the default CC-BY-NC), and retailer catalogues where the more obscure species need coverage. Author and source are recorded on every file, with a back-link on every gallery thumbnail. The underwater world deserves to be shown by the photographers who actually captured it.",
       },
       {
         title: "Honest about uncertainty.",
@@ -31,8 +31,8 @@ export const about = {
         body: "The catalogue is built for aquascapers from Tokyo to Toronto to Cape Town. Care numbers are species-specific, not regional. We name brands as examples (ADA, Tropica, Seachem) but the guidance translates to whatever local substrate, fertiliser, and lighting you can source.",
       },
       {
-        title: "No paywall. No shop. No ads (yet).",
-        body: "Reading is free and will stay free. If we ever add affiliate links to equipment pages, they'll be inline-flagged and disclosed on every page they appear. The site has to be useful before any of that.",
+        title: "A love letter to the planted tank.",
+        body: "Every catalogue page is an excuse to look more closely at a corner of the underwater world — a shrimp moulting on driftwood, a Cryptocoryne unfurling a new leaf, a school of cardinal tetras turning together in the current. Fin & Stem exists because that is worth taking seriously.",
       },
     ],
   },

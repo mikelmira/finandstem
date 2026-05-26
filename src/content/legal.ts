@@ -1,17 +1,17 @@
 export const legal = {
   privacy: {
     title: "Privacy",
-    lastUpdated: "2026-05-12",
+    lastUpdated: "2026-05-26",
     intro:
       "Fin & Stem is a reference site. This page describes what data we collect, why, and what your rights are.",
     sections: [
       {
         heading: "What we collect",
-        body: "Pageview-level analytics that don't set tracking cookies, and any details you submit through the contact form. We don't require an account, we don't track you across sessions, and we don't sell, rent, or share your data with third parties.",
+        body: "Aggregate pageview analytics, and any details you submit through the contact form. We don't require an account, we don't sell, rent, or share your data with third parties, and we keep collection to the minimum we need to understand what's working on the site.",
       },
       {
         heading: "Analytics",
-        body: "We default to cookieless analytics (Vercel Web Analytics, Plausible, or Cloudflare Web Analytics). If we ever add Google Analytics or another cookie-based tool, it sits behind explicit opt-in via a consent banner and does not load until you accept.",
+        body: "Fin & Stem uses Google Analytics 4 to understand which species and guides aquascapers find most useful. The GA4 measurement runs in 'consent mode' wherever required by local law (GDPR, POPIA, etc.) and never receives personally-identifiable information from us. You can block the analytics script at the browser level (e.g. via uBlock Origin or your browser's Do-Not-Track setting) without affecting any other part of the site.",
       },
       {
         heading: "Contact form",
@@ -23,11 +23,7 @@ export const legal = {
       },
       {
         heading: "Cookies",
-        body: "We don't set any tracking cookies. Essential cookies (e.g. a session cookie if a future feature requires one) are disclosed here at the point of introduction.",
-      },
-      {
-        heading: "Affiliate disclosure",
-        body: "If equipment pages include affiliate links in future, they will be flagged inline and disclosed on every page they appear. The price you pay is unaffected.",
+        body: "We don't set tracking cookies. Essential cookies (e.g. a session cookie if a future feature requires one) are disclosed here at the point of introduction.",
       },
       {
         heading: "Changes",
@@ -41,7 +37,7 @@ export const legal = {
   },
   terms: {
     title: "Terms",
-    lastUpdated: "2026-05-12",
+    lastUpdated: "2026-05-26",
     intro:
       "By using this site you agree to the following. Deliberately short — we don't want to hide anything behind boilerplate.",
     sections: [
@@ -60,10 +56,6 @@ export const legal = {
       {
         heading: "Open data & licensing",
         body: "Some data and imagery is drawn from open sources — FishBase, GBIF, Wikidata, Wikimedia Commons — and used under their respective licenses (typically CC0, CC-BY, CC-BY-SA). Attribution is rendered alongside each image. Original photography, writing, and the database structure itself are © Fin & Stem.",
-      },
-      {
-        heading: "Affiliate links",
-        body: "Where active, affiliate links are disclosed on every page that uses them. We only recommend products we'd use ourselves. We may earn a commission at no cost to you.",
       },
       {
         heading: "User-generated content",
