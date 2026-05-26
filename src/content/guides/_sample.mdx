@@ -1,0 +1,87 @@
+---
+slug: "_sample"
+title: "Sample guide — how to use this template"
+description: "Internal MDX template for new guides. Copy this file, rename to your slug, fill in the body. Not published."
+publishedAt: "2026-05-26T00:00:00.000Z"
+updatedAt: "2026-05-26T00:00:00.000Z"
+kind: "faq"
+targetQuery: "sample"
+keywords:
+  - "sample"
+  - "template"
+pillar: "/planted-tank-guide"
+relatedSpecies:
+  - "fish:neon-tetra"
+  - "shrimp:cherry-shrimp"
+  - "mosses:java-moss"
+published: false
+faqs:
+  - question: "Why is this here?"
+    answer: "It's the copy-paste template every new guide should start from. Delete this section once your real article is written."
+  - question: "What changes when published goes true?"
+    answer: "The guide appears in /guides, in the sitemap, in llms.txt, and gets statically pre-rendered. Until then it's only visible at /guides/_sample in development."
+sources:
+  - label: "Internal-linking rules"
+    url: "https://finandstem.com/seo/internal-linking-rules"
+  - label: "Page templates"
+    url: "https://finandstem.com/seo/page-templates"
+---
+
+## The short answer
+
+This is the TL;DR — open with the direct answer to the article's `targetQuery`
+in 100–150 words. Lead with a sentence that names the species or topic and
+states the conclusion. Crawlers and AI overviews extract from this first
+paragraph more often than anywhere else on the page.
+
+## Background
+
+Here's the longer reasoning. Drop inline catalogue cards anywhere in the prose:
+
+<SpeciesCard slug="neon-tetra" />
+
+The card auto-pulls the photo, name, and origin from `src/data` — there's
+nothing per-article to wire up. Cards work for any catalogue entry; pass
+`category` only if a slug is ambiguous.
+
+External links automatically get `target="_blank"`, `rel="noopener
+noreferrer"`, and a little outbound icon. Authority domains (FishBase, GBIF,
+Wikipedia, Tropica, Seriously Fish, 2HR Aquarist) keep `dofollow`; everything
+else gets `rel="nofollow"`. Try one:
+[FishBase entry for Paracheirodon innesi](https://www.fishbase.se/summary/Paracheirodon-innesi).
+
+## Cross-link up to the pillar
+
+Use `<PillarLink>` to recommend the pillar this guide hangs under. Every
+guide must link up per Rule 7 of `seo/internal-linking-rules.md`:
+
+<PillarLink href="/aquarium-fish-guide">
+  the complete guide to aquarium fish for the planted tank
+</PillarLink>
+
+## What I've observed
+
+This is the section that makes a guide rank for E-E-A-T's experience axis.
+Write 2–4 paragraphs of first-hand observation — what surprised you, what
+you'd do differently, parameters that worked in your specific water. Stock
+SEO copy gets ignored here; specifics get cited.
+
+## Comparison tables work in MDX too
+
+| Metric           | Cherry shrimp | Crystal red shrimp |
+| ---------------- | ------------- | ------------------ |
+| TDS              | 150–250 ppm   | 100–150 ppm        |
+| pH               | 6.5–8.0       | 5.5–6.8            |
+| Tap-water OK?    | Usually yes   | No — needs RO+remineraliser |
+| Colony stability | Bombproof     | Sensitive to swings |
+
+## Closing thought
+
+End with one sentence that points the reader either to the next logical
+guide or to the compatibility tool. Reader knows where to go next, you keep
+session depth high, search engines see internal-link equity move properly.
+
+## FAQ
+
+The FAQs declared in this file's frontmatter render automatically below the
+article body and emit `FAQPage` JSON-LD. Add 4+ per article.

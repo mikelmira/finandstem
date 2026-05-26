@@ -384,6 +384,104 @@ export function compatibilityToolJsonLd() {
   };
 }
 
+/* ─── Guides (MDX articles) ───────────────────────────────────────────── */
+
+import type { GuideFrontmatter } from "@/types/guide";
+
+export interface GuideSchemaInput {
+  guide: GuideFrontmatter;
+  /** Falls back to `guide.description` if empty. */
+  tldr: string;
+  faqs: ReadonlyArray<FaqItem>;
+  /** Computed at render time so the schema mirrors the rendered body. */
+  wordCount: number;
+}
+
+export function guidePageJsonLd({ guide, tldr, faqs, wordCount }: GuideSchemaInput) {
+  const url = `${site.url}/guides/${guide.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: guide.title,
+        description: guide.description || tldr,
+        datePublished: guide.publishedAt,
+        dateModified: guide.updatedAt,
+        inLanguage: "en",
+        wordCount,
+        author: personEntity(),
+        publisher: organizationEntity(),
+        keywords: guide.keywords.join(", "),
+        articleSection: "Guides",
+        ...(guide.keptByAuthor && { reviewedBy: authorRef() }),
+        ...(guide.heroImage
+          ? {
+              image: [
+                guide.heroImage.startsWith("http")
+                  ? guide.heroImage
+                  : `${site.url}${guide.heroImage}`,
+              ],
+            }
+          : {}),
+      },
+      breadcrumbsJsonLd([
+        { name: "Home", href: "/" },
+        { name: "Guides", href: "/guides" },
+        { name: guide.title },
+      ]),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
+export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
+  const url = `${site.url}/guides`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${url}#collection`,
+        url,
+        name: "Guides — Fin & Stem",
+        description:
+          "Long-form articles answering the specific questions aquascapers ask — compatibility, comparisons, setups, biotopes, and FAQ deep-dives.",
+        publisher: organizationRef(),
+        inLanguage: "en",
+        isPartOf: { "@id": WEBSITE_ID },
+      },
+      breadcrumbsJsonLd([{ name: "Home", href: "/" }, { name: "Guides" }]),
+      ...(items.length > 0
+        ? [
+            {
+              "@type": "ItemList",
+              itemListElement: items.map((g, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `${site.url}/guides/${g.slug}`,
+                name: g.title,
+              })),
+            },
+          ]
+        : []),
+    ],
+  };
+}
+
 /* ─── Build journals ──────────────────────────────────────────────────── */
 
 import type { BuildJournal } from "@/types/builds";

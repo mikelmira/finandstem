@@ -689,3 +689,27 @@
 .range-thumb::-webkit-slider-runnable-track {
   background: transparent;
 }
+
+/* ─── Guide prose ──────────────────────────────────────────────────────
+   Scoped utilities for /guides/[slug] article body. The MDX element
+   overrides in src/mdx-components.tsx do the bulk of the typography;
+   these rules handle things only addressable in CSS — anchor-link
+   targeting, header-clearance scroll-margin, and the autolink wrapper
+   added by rehype-autolink-headings. */
+.guide-prose {
+  /* Floating site header is ~80px tall; offset deep-link targets so
+     clicked anchors aren't hidden underneath it. */
+  scroll-padding-top: 96px;
+}
+.guide-prose :is(h2, h3, h4) {
+  scroll-margin-top: 96px;
+}
+/* rehype-autolink-headings wraps each heading in an <a> — strip the
+   default underline so the heading still reads as a heading. */
+.guide-prose :is(h1, h2, h3, h4) a {
+  color: inherit;
+  text-decoration: none;
+}
+.guide-prose :is(h1, h2, h3, h4) a:hover {
+  color: var(--brand);
+}

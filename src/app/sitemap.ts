@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { fish, plants, shrimp, mosses } from "@/data";
 import { builds } from "@/data/builds";
 import { getEntryDates } from "@/data/timestamps";
+import { listGuides } from "@/lib/guides";
 
 /**
  * sitemap.ts — mirror of /seo/sitemap-plan.md.
@@ -43,6 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/shrimp", priority: 0.9, freq: "weekly" },
     { path: "/mosses", priority: 0.9, freq: "weekly" },
 
+    // Long-form guides hub
+    { path: "/guides", priority: 0.9, freq: "weekly" },
+
     // Build journals hub
     { path: "/builds", priority: 0.85, freq: "weekly" },
 
@@ -80,6 +84,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const guidePages = listGuides().map((g) => ({
+    url: `${site.url}/guides/${g.slug}`,
+    lastModified: new Date(g.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -89,5 +100,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...cataloguePages,
     ...buildPages,
+    ...guidePages,
   ];
 }
