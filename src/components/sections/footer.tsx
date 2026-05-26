@@ -58,18 +58,9 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
+        <div className="mt-14 border-t border-border/60 pt-6 text-xs text-muted-foreground">
           <p>
             © {new Date().getFullYear()} {site.name}. {site.owner.location}.
-          </p>
-          <p>
-            Built with Next.js · Tailwind · shadcn ·{" "}
-            <a
-              href={`mailto:${site.owner.email}`}
-              className="hover:text-foreground"
-            >
-              {site.owner.email}
-            </a>
           </p>
         </div>
       </div>

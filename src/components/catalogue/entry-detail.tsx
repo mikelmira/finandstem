@@ -181,7 +181,7 @@ export function EntryDetail({
           className="absolute inset-x-0 bottom-0 -z-20 h-40 bg-gradient-to-b from-transparent to-background"
         />
 
-        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col px-6 pt-8 pb-16 sm:px-8 sm:pt-10 sm:pb-20">
+        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col px-6 pt-24 pb-16 sm:px-8 sm:pt-28 sm:pb-20">
           {/* Top — breadcrumb */}
           <Breadcrumb
             items={[

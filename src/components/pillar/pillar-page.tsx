@@ -42,7 +42,7 @@ export function PillarPage({ pillar }: PillarPageProps) {
       <section className="relative isolate overflow-hidden border-b border-border/60">
         <div className="brand-aurora absolute inset-0 -z-20 opacity-80" aria-hidden />
         <div className="bg-grid absolute inset-0 -z-10 opacity-50" aria-hidden />
-        <div className="mx-auto w-full max-w-4xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
+        <div className="mx-auto w-full max-w-4xl px-6 pt-24 pb-12 sm:px-8 sm:pt-28 sm:pb-16">
           <Breadcrumbs
             items={[
               { name: "Home", href: "/" },
