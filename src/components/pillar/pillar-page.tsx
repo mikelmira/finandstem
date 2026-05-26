@@ -8,6 +8,7 @@ import { Faq } from "@/components/seo/faq";
 import { AuthorByline } from "@/components/seo/author-byline";
 import { pillarPageJsonLd } from "@/lib/seo";
 import { clusterItemsFor, type Pillar } from "@/lib/pillars";
+import { getPillarDates } from "@/data/timestamps";
 
 interface PillarPageProps {
   pillar: Pillar;
@@ -23,6 +24,18 @@ interface PillarPageProps {
  */
 export function PillarPage({ pillar }: PillarPageProps) {
   const cluster = clusterItemsFor(pillar);
+  const { updatedAt } = getPillarDates(pillar.slug);
+
+  // Reading time — count the TL;DR plus every intro paragraph plus every
+  // FAQ answer at 220 wpm.
+  const wordCount =
+    pillar.tldr.split(/\s+/).length +
+    pillar.intro.reduce((acc, p) => acc + p.split(/\s+/).length, 0) +
+    pillar.faqs.reduce(
+      (acc, q) => acc + q.question.split(/\s+/).length + q.answer.split(/\s+/).length,
+      0,
+    );
+  const readingTimeMin = Math.max(1, Math.round(wordCount / 220));
 
   return (
     <>
@@ -34,6 +47,7 @@ export function PillarPage({ pillar }: PillarPageProps) {
           tldr: pillar.tldr,
           faqs: pillar.faqs,
           cluster,
+          slug: pillar.slug,
         })}
         id={`pillar-jsonld-${pillar.slug}`}
       />
@@ -60,7 +74,10 @@ export function PillarPage({ pillar }: PillarPageProps) {
             {pillar.description}
           </p>
           <div className="mt-6">
-            <AuthorByline />
+            <AuthorByline
+              updatedAt={updatedAt}
+              readingTimeMin={readingTimeMin}
+            />
           </div>
         </div>
       </section>

@@ -15,10 +15,17 @@ import { fish } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
 
+import { site } from "@/lib/site";
+
 export const metadata: Metadata = {
   title: "Fish",
   description:
     "Freshwater fish for the planted tank — schoolers, micropredators, dwarf cichlids, surface specialists, and algae crew. Filter by tank size, temperament, water column, parameters, plant- and shrimp-safety, and more. Built to help aquascapers anywhere stock the right fish for their water.",
+  alternates: {
+    // Pin canonical at the bare path so filter combinations (e.g. /fish?temp=22-26)
+    // don't fragment crawl budget across hundreds of permutations.
+    canonical: `${site.url}/fish`,
+  },
 };
 
 interface PageProps {

@@ -11,6 +11,7 @@ import { site } from "@/lib/site";
 import { getImage } from "@/data";
 import { CATEGORY_META, type CatalogueEntry } from "@/types/catalogue";
 import { buildTldr } from "@/lib/species-faq";
+import { getEntryDates } from "@/data/timestamps";
 
 /** Trim text to ≤160 chars on a word boundary for meta description. */
 function trim(text: string, max = 160): string {
@@ -39,6 +40,7 @@ export function speciesMetadata(entry: CatalogueEntry): Metadata {
         alt: image.alt,
       }
     : undefined;
+  const { publishedAt, updatedAt } = getEntryDates(entry.slug);
 
   return {
     title: headline,
@@ -55,8 +57,8 @@ export function speciesMetadata(entry: CatalogueEntry): Metadata {
       locale: "en",
       images: ogImage ? [ogImage] : undefined,
       authors: [`${site.url}/about`],
-      publishedTime: "2025-11-01T00:00:00.000Z",
-      modifiedTime: "2025-11-01T00:00:00.000Z",
+      publishedTime: publishedAt,
+      modifiedTime: updatedAt,
       section: meta.label,
     },
     twitter: {

@@ -15,10 +15,15 @@ import { mosses } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
 
+import { site } from "@/lib/site";
+
 export const metadata: Metadata = {
   title: "Mosses",
   description:
     "Aquatic mosses for hardscape, shrimp nurseries, and aquascaping detail work — Java, Christmas, Flame, Weeping, Phoenix, Süßwassertang and more. Filter by attachment surface, typical use, light, and CO₂. Built for aquascapers worldwide.",
+  alternates: {
+    canonical: `${site.url}/mosses`,
+  },
 };
 
 interface PageProps {

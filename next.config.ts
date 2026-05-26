@@ -45,6 +45,36 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  /**
+   * Site-wide security headers. HSTS protects the canonical https origin,
+   * the rest harden the page against MIME sniffing, referrer leakage, and
+   * uninvited use of the camera / mic / geolocation APIs.
+   *
+   * `Strict-Transport-Security` is only honoured over a real https
+   * connection — local dev (http://localhost) ignores it, which is fine.
+   */
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

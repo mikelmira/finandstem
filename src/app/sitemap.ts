@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { fish, plants, shrimp, mosses } from "@/data";
+import { builds } from "@/data/builds";
+import { getEntryDates } from "@/data/timestamps";
 
 /**
  * sitemap.ts — mirror of /seo/sitemap-plan.md.
@@ -41,6 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/shrimp", priority: 0.9, freq: "weekly" },
     { path: "/mosses", priority: 0.9, freq: "weekly" },
 
+    // Build journals hub
+    { path: "/builds", priority: 0.85, freq: "weekly" },
+
     // Tools
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },
@@ -53,12 +58,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal/terms", priority: 0.3, freq: "yearly" },
   ];
 
-  const entryPaths = [
-    ...fish.map((f) => `/fish/${f.slug}`),
-    ...plants.map((p) => `/plants/${p.slug}`),
-    ...shrimp.map((s) => `/shrimp/${s.slug}`),
-    ...mosses.map((m) => `/mosses/${m.slug}`),
-  ];
+  // Catalogue detail pages with real per-entry lastModified timestamps so
+  // Google can detect freshness without re-crawling every URL.
+  type CatalogueSitemapEntry = MetadataRoute.Sitemap[number];
+  const cataloguePages: CatalogueSitemapEntry[] = [
+    ...fish.map((f) => ({ path: `/fish/${f.slug}`, slug: f.slug })),
+    ...plants.map((p) => ({ path: `/plants/${p.slug}`, slug: p.slug })),
+    ...shrimp.map((s) => ({ path: `/shrimp/${s.slug}`, slug: s.slug })),
+    ...mosses.map((m) => ({ path: `/mosses/${m.slug}`, slug: m.slug })),
+  ].map(({ path, slug }) => ({
+    url: `${site.url}${path}`,
+    lastModified: new Date(getEntryDates(slug).updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  const buildPages = builds.map((b) => ({
+    url: `${site.url}/builds/${b.slug}`,
+    lastModified: new Date(b.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
 
   return [
     ...staticPaths.map((p) => ({
@@ -67,11 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: p.freq,
       priority: p.priority,
     })),
-    ...entryPaths.map((p) => ({
-      url: `${site.url}${p}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
+    ...cataloguePages,
+    ...buildPages,
   ];
 }

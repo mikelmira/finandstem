@@ -3,57 +3,67 @@ import { PenLine } from "lucide-react";
 import { site } from "@/lib/site";
 
 interface AuthorBylineProps {
+  /** ISO 8601 timestamp shown as a `<time>` element after the byline. */
   updatedAt?: string;
+  /** Estimated reading time, in minutes. Shown as "N min read". */
+  readingTimeMin?: number;
   className?: string;
 }
 
 /**
- * Author byline with rel="author" link to /about.
+ * Author byline with `rel="author"` link to /about, optional last-updated
+ * timestamp, and optional reading-time estimate.
  *
- * Google's E-E-A-T signals weight authored content above unattributed pages.
- * Always render this on any indexable Article-typed page (species, guides,
- * pillar pages). The matching <Person> entity is emitted by personEntity()
- * in lib/seo.ts.
+ * Visible-DOM equivalent of the Person + Article `author` / `dateModified`
+ * JSON-LD properties: Google rewards pages where the structured data and
+ * the rendered text agree. The matching <Person> entity is emitted by
+ * `personEntity()` in lib/seo.ts.
  */
 export function AuthorByline({
   updatedAt,
+  readingTimeMin,
   className,
 }: AuthorBylineProps) {
+  const updatedDisplay = updatedAt
+    ? new Date(updatedAt).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      })
+    : undefined;
+
   return (
-    <div
+    <p
       className={
-        "flex flex-wrap items-center gap-2 text-xs text-muted-foreground" +
+        "flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted-foreground" +
         (className ? ` ${className}` : "")
       }
     >
       <span className="inline-flex items-center gap-1.5">
         <PenLine className="size-3.5" aria-hidden />
-        Written by{" "}
+        By{" "}
         <Link
           href="/about"
           rel="author"
-          className="font-medium text-foreground transition-colors hover:text-[var(--brand)]"
+          className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)] hover:decoration-[var(--brand)]"
         >
           {site.owner.name}
         </Link>
       </span>
-      {updatedAt && (
+      {updatedDisplay && (
         <>
           <span aria-hidden>·</span>
           <span>
-            Updated{" "}
-            <time dateTime={updatedAt}>
-              {new Date(updatedAt).toLocaleDateString("en-GB", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
+            Updated <time dateTime={updatedAt}>{updatedDisplay}</time>
           </span>
         </>
       )}
-      <span aria-hidden>·</span>
-      <span>Editorially independent. Image credits below.</span>
-    </div>
+      {readingTimeMin !== undefined && readingTimeMin > 0 && (
+        <>
+          <span aria-hidden>·</span>
+          <span>{readingTimeMin} min read</span>
+        </>
+      )}
+    </p>
   );
 }

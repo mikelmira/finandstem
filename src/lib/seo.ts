@@ -18,8 +18,7 @@ import type {
   ImageAttribution,
 } from "@/types/catalogue";
 import { CATEGORY_META } from "@/types/catalogue";
-
-const PUBLISHED_AT = "2025-11-01T00:00:00.000Z";
+import { getEntryDates, getPillarDates } from "@/data/timestamps";
 
 const PERSON_ID = `${site.url}/about#mike`;
 const ORG_ID = `${site.url}/#org`;
@@ -139,6 +138,7 @@ export function speciesPageJsonLd({
   const imageList = images
     .map((i) => (i.src.startsWith("http") ? i.src : `${site.url}${i.src}`))
     .slice(0, 6);
+  const { publishedAt, updatedAt } = getEntryDates(entry.slug);
 
   return {
     "@context": "https://schema.org",
@@ -151,11 +151,14 @@ export function speciesPageJsonLd({
         headline: `${entry.commonName} (${entry.scientificName}) — Care, Tank Mates, Compatibility`,
         description: tldr,
         image: imageList.length > 0 ? imageList : undefined,
-        datePublished: PUBLISHED_AT,
-        dateModified: PUBLISHED_AT,
+        datePublished: publishedAt,
+        dateModified: updatedAt,
         inLanguage: "en",
         author: personEntity(),
         publisher: organizationEntity(),
+        // When Mike has personally kept this species, signal first-hand
+        // review — a strong E-E-A-T cue for both Google and AI Overviews.
+        ...(entry.keptByAuthor && { reviewedBy: authorRef() }),
         about: {
           "@type": "Thing",
           name: entry.scientificName,
@@ -228,6 +231,8 @@ export interface PillarSchemaInput {
   tldr: string;
   faqs: ReadonlyArray<FaqItem>;
   cluster: ReadonlyArray<PillarItem>;
+  /** Slug used to look up per-pillar publish + update timestamps. */
+  slug: string;
 }
 
 export function pillarPageJsonLd({
@@ -237,8 +242,10 @@ export function pillarPageJsonLd({
   tldr,
   faqs,
   cluster,
+  slug,
 }: PillarSchemaInput) {
   const url = `${site.url}${path}`;
+  const { publishedAt, updatedAt } = getPillarDates(slug);
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -249,8 +256,8 @@ export function pillarPageJsonLd({
         url,
         headline: title,
         description: tldr || description,
-        datePublished: PUBLISHED_AT,
-        dateModified: PUBLISHED_AT,
+        datePublished: publishedAt,
+        dateModified: updatedAt,
         inLanguage: "en",
         author: personEntity(),
         publisher: organizationEntity(),
@@ -373,6 +380,110 @@ export function compatibilityToolJsonLd() {
         { name: "Home", href: "/" },
         { name: "Compatibility" },
       ]),
+    ],
+  };
+}
+
+/* ─── Build journals ──────────────────────────────────────────────────── */
+
+import type { BuildJournal } from "@/types/builds";
+
+/**
+ * Build journal — emits HowTo + BreadcrumbList per seo/json-ld-templates.md.
+ *
+ * Build journals are the editorial moat: first-hand multi-week tank
+ * builds with photos, parts lists, and timelines. HowTo gives Google
+ * the steps-and-supplies rich-result eligibility.
+ */
+export function buildJournalJsonLd(build: BuildJournal) {
+  const url = `${site.url}/builds/${build.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "@id": `${url}#howto`,
+        name: build.title,
+        description: build.tldr,
+        image: build.heroImage
+          ? build.heroImage.startsWith("http")
+            ? build.heroImage
+            : `${site.url}${build.heroImage}`
+          : undefined,
+        totalTime: build.totalTimeIso,
+        estimatedCost: build.estimatedCostUsd
+          ? {
+              "@type": "MonetaryAmount",
+              currency: "USD",
+              value: build.estimatedCostUsd,
+            }
+          : undefined,
+        supply: build.supplies.map((s) => ({
+          "@type": "HowToSupply",
+          name: s.name,
+        })),
+        step: build.steps.map((step, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: step.title,
+          text: step.description,
+          image: step.image
+            ? step.image.startsWith("http")
+              ? step.image
+              : `${site.url}${step.image}`
+            : undefined,
+        })),
+        datePublished: build.publishedAt,
+        dateModified: build.updatedAt,
+        author: personEntity(),
+        publisher: organizationEntity(),
+        inLanguage: "en",
+      },
+      breadcrumbsJsonLd([
+        { name: "Home", href: "/" },
+        { name: "Build journals", href: "/builds" },
+        { name: build.title },
+      ]),
+    ],
+  };
+}
+
+/**
+ * /builds index page JSON-LD — CollectionPage + ItemList for the hub URL.
+ */
+export function buildsIndexJsonLd(items: ReadonlyArray<BuildJournal>) {
+  const url = `${site.url}/builds`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${url}#collection`,
+        url,
+        name: "Build journals — Fin & Stem",
+        description:
+          "First-hand tank-build journals from Fin & Stem — week-by-week timelines, parts lists, and photographs of real planted aquariums under construction and after they've matured.",
+        publisher: organizationRef(),
+        inLanguage: "en",
+        isPartOf: { "@id": WEBSITE_ID },
+      },
+      breadcrumbsJsonLd([
+        { name: "Home", href: "/" },
+        { name: "Build journals" },
+      ]),
+      ...(items.length > 0
+        ? [
+            {
+              "@type": "ItemList",
+              itemListElement: items.map((b, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `${site.url}/builds/${b.slug}`,
+                name: b.title,
+              })),
+            },
+          ]
+        : []),
     ],
   };
 }

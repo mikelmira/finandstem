@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, ImageOff } from "lucide-react";
+import { ArrowUpRight, ImageOff, Sparkles } from "lucide-react";
 import { CATEGORY_META, type CatalogueEntry } from "@/types/catalogue";
 import { Difficulty } from "@/components/catalogue/difficulty";
 import { CATEGORY_MARK } from "@/components/icons/species-icons";
 import { getImage } from "@/data";
 import { allEntries } from "@/data";
+import { site } from "@/lib/site";
 
 interface EntryCardProps {
   entry: CatalogueEntry;
@@ -87,6 +88,15 @@ export function EntryCard({ entry }: EntryCardProps) {
           className="absolute right-3 top-3 size-7 rounded-full bg-card/95 p-1.5 text-foreground shadow-[0_2px_6px_-2px_color-mix(in_oklab,var(--moss)_30%,transparent)] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:rotate-[8deg] group-hover:bg-[var(--brand)] group-hover:text-[var(--brand-foreground)]"
           aria-hidden
         />
+        {/* "Mike keeps this" badge — only on species Mike has first-hand
+            experience with. Pairs with the FirstHandNote callout on the
+            detail page. */}
+        {entry.keptByAuthor && (
+          <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-[var(--brand)]/95 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-white shadow-[0_2px_8px_-2px_color-mix(in_oklab,var(--brand)_60%,transparent)]">
+            <Sparkles className="size-3" aria-hidden />
+            {site.owner.name.split(" ")[0]} keeps this
+          </span>
+        )}
       </div>
 
       {/* Body — the editorial entry text. Hidden line-clamp keeps every

@@ -50,6 +50,10 @@ export const plants: ReadonlyArray<PlantEntry> = [
     careSummary: "Sturdy and forgiving. Produces baby ferns on leaf tips that can be detached and replanted. Black spots can indicate nutrient deficiency or melt — increase trace dosing.",
     imageSourceUrl: "https://en.wikipedia.org/wiki/Java_fern",
     imageLicenseHint: "Commons (mostly CC-BY-SA)",
+    // TODO(mike): replace placeholder with real first-hand observation.
+    keptByAuthor: true,
+    firstHandNote:
+      "Java fern has been on the upright spider wood in my 90-litre low-tech tank for the better part of three years — fishing-line tie, never buried, never trimmed apart from the occasional brown rhizome edge. The thing I underestimated: how much one healthy mother fern can throw off in plantlets once it settles. I've now spread daughters across three tanks and gifted half a dozen to people at the local fishkeeping club. Placeholder for a longer write-up.",
   },
   {
     id: "plant-003",

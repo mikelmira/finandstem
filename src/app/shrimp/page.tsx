@@ -15,10 +15,15 @@ import { shrimp } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
 
+import { site } from "@/lib/site";
+
 export const metadata: Metadata = {
   title: "Shrimp",
   description:
     "Freshwater shrimp for the planted tank — Neocaridina colour morphs, Caridina specialists, Amano algae crew, and filter-feeding bamboo shrimp. Filter by lineage, breeding difficulty, TDS, parameters, and algae-eating capability. Helping aquascapers everywhere build healthy shrimp colonies.",
+  alternates: {
+    canonical: `${site.url}/shrimp`,
+  },
 };
 
 interface PageProps {

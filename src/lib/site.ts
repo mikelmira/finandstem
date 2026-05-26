@@ -23,6 +23,7 @@ export const site = {
     { label: "Plants", href: "/plants" },
     { label: "Shrimp", href: "/shrimp" },
     { label: "Mosses", href: "/mosses" },
+    { label: "Builds", href: "/builds" },
     { label: "Planner", href: "/planner" },
     { label: "Compare", href: "/compare" },
     { label: "Compatibility", href: "/compatibility" },
@@ -52,6 +53,7 @@ export const site = {
         links: [
           { label: "Home", href: "/" },
           { label: "About", href: "/about" },
+          { label: "Build journals", href: "/builds" },
           { label: "Contact", href: "/contact" },
         ],
       },
