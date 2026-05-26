@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site";
-import { WaveMark } from "@/components/wave-mark";
 
 export function SiteFooter() {
   return (
@@ -14,15 +14,16 @@ export function SiteFooter() {
           <div>
             <Link
               href="/"
-              className="inline-flex items-center gap-2.5"
+              className="inline-flex items-center"
               aria-label={`${site.name} home`}
             >
-              <span className="inline-flex size-7 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
-                <WaveMark className="size-4" />
-              </span>
-              <span className="text-base font-semibold tracking-tight">
-                {site.name}
-              </span>
+              <Image
+                src="/fin-and-stem-logo.png"
+                alt={`${site.name} logo`}
+                width={1344}
+                height={386}
+                className="h-8 w-auto dark:invert"
+              />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted-foreground">
               {site.description}

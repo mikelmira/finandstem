@@ -42,6 +42,15 @@ import { getDetailSections } from "@/data/species-detail";
 import { groupDetailSections } from "@/lib/catalogue/detail-groups";
 import { prepareImage } from "@/lib/wikimedia";
 import { cn } from "@/lib/utils";
+// SEO / AEO scaffolding — emits Article + BreadcrumbList + ImageObject +
+// FAQPage JSON-LD plus rendered FAQ, sources, byline, and pillar link.
+import { JsonLd } from "@/components/seo/json-ld";
+import { Faq } from "@/components/seo/faq";
+import { Sources } from "@/components/seo/sources";
+import { AuthorByline } from "@/components/seo/author-byline";
+import { speciesPageJsonLd, type SourceItem } from "@/lib/seo";
+import { buildTldr, buildFaqs } from "@/lib/species-faq";
+import type { ImageAttribution } from "@/types/catalogue";
 
 interface LegacyDetail {
   heading: string;
@@ -99,8 +108,33 @@ export function EntryDetail({
     .map((c) => allEntries.find((e) => e.category === c))
     .filter((e): e is CatalogueEntry => Boolean(e));
 
+  // SEO / AEO inputs — derived deterministically from the catalogue data
+  // so every species page emits the same scaffolding without bespoke work.
+  const tldr = buildTldr(entry);
+  const faqs = buildFaqs(entry);
+  const pillar = PILLAR_FOR_CATEGORY[entry.category];
+  const sources: SourceItem[] = [
+    { label: `Wikipedia: ${entry.scientificName}`, url: entry.imageSourceUrl },
+    ...(image?.descriptionUrl
+      ? [
+          {
+            label: "Lead image source (Wikimedia Commons)",
+            url: image.descriptionUrl,
+          },
+        ]
+      : []),
+    ...uniqueGalleryDescriptionUrls(galleryRaw)
+      .slice(0, 3)
+      .map((url, i) => ({
+        label: `Gallery image source #${i + 1}`,
+        url,
+      })),
+  ];
+  const seoImages: ImageAttribution[] = image ? [image] : [];
+
   // Sticky TOC items — generated from what's actually present so the
-  // numbering matches what the reader sees.
+  // numbering matches what the reader sees. FAQ + Sources appended so
+  // they're navigable from the right rail too.
   const tocItems: StickyTocItem[] = [
     { id: "tank-fit", label: "Tank fit" },
     { id: "tank-mates", label: "Tank mates" },
@@ -110,10 +144,16 @@ export function EntryDetail({
     ...(watchGroup ? [{ id: "watch", label: "Watch for" }] : []),
     ...(careGroup ? [{ id: "care", label: "Care guide" }] : []),
     ...(hasBackground ? [{ id: "background", label: "Background" }] : []),
+    { id: "faq", label: "FAQ" },
+    { id: "sources", label: "Sources" },
   ];
 
   return (
     <>
+      <JsonLd
+        data={speciesPageJsonLd({ entry, tldr, faqs, images: seoImages })}
+        id={`species-jsonld-${entry.slug}`}
+      />
       {/* ─── Hero — traditional 100vh splash ────────────────────── */}
       <section className="relative isolate flex h-screen min-h-[600px] flex-col overflow-hidden">
         {/* Full-bleed species photo */}
@@ -216,6 +256,19 @@ export function EntryDetail({
               <p className="drop-cap mt-4 text-base leading-[1.65] text-foreground/90 sm:text-[17px]">
                 {entry.careSummary}
               </p>
+              <div className="mt-6 border-t border-border/50 pt-5">
+                <AuthorByline />
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Part of our{" "}
+                  <Link
+                    href={pillar.href}
+                    className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)] hover:decoration-[var(--brand)]"
+                  >
+                    {pillar.label}
+                  </Link>
+                  .
+                </p>
+              </div>
             </article>
 
             {gallery.length > 0 && (
@@ -402,6 +455,30 @@ export function EntryDetail({
                   <GroupedSection group={g} />
                 </DetailSection>
               ))}
+
+            {/* ─── FAQ — answer-engine direct-answer block ─────────── */}
+            <DetailSection
+              id="faq"
+              eyebrow="Common questions"
+              number={nextNumber(tocItems, "faq")}
+              title="Frequently asked questions"
+              subtitle="Direct answers to the questions search engines and AI assistants surface most often about this species."
+              hideHeader
+            >
+              <Faq items={faqs} />
+            </DetailSection>
+
+            {/* ─── Sources & further reading ───────────────────────── */}
+            <DetailSection
+              id="sources"
+              eyebrow="Provenance"
+              number={nextNumber(tocItems, "sources")}
+              title="Sources & further reading"
+              subtitle="Primary references this profile draws on."
+              hideHeader
+            >
+              <Sources items={sources} />
+            </DetailSection>
 
             {/* Gallery now lives in the hero right column — see above */}
           </main>
@@ -644,6 +721,44 @@ function DetailSection({
 function nextNumber(items: ReadonlyArray<StickyTocItem>, id: string): number {
   const idx = items.findIndex((i) => i.id === id);
   return idx === -1 ? items.length + 1 : idx + 1;
+}
+
+/** Each catalogue category links up to one pillar hub. */
+const PILLAR_FOR_CATEGORY: Record<
+  CatalogueCategory,
+  { href: string; label: string }
+> = {
+  fish: {
+    href: "/aquarium-fish-guide",
+    label: "complete guide to aquarium fish for the planted tank",
+  },
+  plants: {
+    href: "/planted-tank-guide",
+    label: "complete guide to the planted aquarium",
+  },
+  shrimp: {
+    href: "/freshwater-shrimp-guide",
+    label: "complete freshwater shrimp guide",
+  },
+  mosses: {
+    href: "/aquatic-moss-guide",
+    label: "complete guide to aquatic mosses",
+  },
+};
+
+/** Dedupe gallery descriptionUrls for the Sources block. */
+function uniqueGalleryDescriptionUrls(
+  gallery: ReadonlyArray<{ descriptionUrl?: string }>,
+): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const g of gallery) {
+    const url = g.descriptionUrl;
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    out.push(url);
+  }
+  return out;
 }
 
 /**

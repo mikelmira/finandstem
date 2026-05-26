@@ -15,11 +15,22 @@ import {
   findAnchor,
   type MatchReason,
 } from "@/lib/catalogue/compatibility";
+import { JsonLd } from "@/components/seo/json-ld";
+import { compatibilityToolJsonLd } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Compatibility",
+  title: "Compatibility — Plant + Fish + Shrimp + Moss Cross-Reference",
   description:
     "The aquascaper's compatibility tool — cross-reference fish, plants, shrimp, and mosses by overlapping water parameters and tank-mate safety. Pick any anchor species and see what else fits in the same tank.",
+  alternates: { canonical: `${site.url}/compatibility` },
+  openGraph: {
+    type: "website",
+    url: `${site.url}/compatibility`,
+    title: "Compatibility cross-reference",
+    description:
+      "Pick a fish, plant, shrimp, or moss — Fin & Stem returns everything compatible across all four categories based on water-parameter overlap and safety flags.",
+  },
 };
 
 const ANCHOR_OPTIONS = allNorm
@@ -42,6 +53,7 @@ export default async function CompatibilityPage({ searchParams }: PageProps) {
 
   return (
     <>
+      <JsonLd data={compatibilityToolJsonLd()} id="compat-jsonld" />
       <PageHero
         eyebrow="Compatibility"
         title="What else fits this tank?"

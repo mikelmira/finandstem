@@ -8,16 +8,28 @@ import {
   SectionHeading,
   Eyebrow,
 } from "@/components/sections/section-shell";
+import { JsonLd } from "@/components/seo/json-ld";
+import { aboutPageJsonLd } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "What Fin & Stem is, how it's sourced, and who runs it. A working planted-aquarium reference, built to help aquascapers anywhere in the world stock and care for the tank they imagined.",
+  alternates: { canonical: `${site.url}/about` },
+  openGraph: {
+    type: "profile",
+    url: `${site.url}/about`,
+    title: `About — ${site.name}`,
+    description:
+      "Mike Elmira on why Fin & Stem exists, how the catalogue is sourced, and what gets fact-checked before it ships.",
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={aboutPageJsonLd()} id="about-jsonld" />
       <PageHero
         {...about.hero}
         backgroundImage={atmosphere.nanoTank}

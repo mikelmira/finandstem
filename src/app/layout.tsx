@@ -8,6 +8,8 @@ import "./globals.css";
 import { site } from "@/lib/site";
 import { SiteHeader } from "@/components/sections/site-header";
 import { SiteFooter } from "@/components/sections/footer";
+import { JsonLd } from "@/components/seo/json-ld";
+import { siteJsonLd } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -73,6 +75,20 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: site.url,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/fin-and-stem-logo.png",
   },
 };
 
@@ -87,6 +103,7 @@ export default function RootLayout({
       className={`${inter.variable} ${mono.variable} ${display.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <JsonLd data={siteJsonLd()} id="site-jsonld" />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

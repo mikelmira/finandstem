@@ -1,0 +1,56 @@
+# Fin & Stem
+
+> The cross-referenced catalogue for aquascapers — freshwater plants, fish, shrimp, mosses, hardscape, and equipment with real compatibility data and first-hand tank build journals. Every catalogue entry knows what it works with; every build guide is built from catalogue entries; every entry shows up in real tank builds.
+
+This file follows the [llms.txt convention](https://llmstxt.org/). It's a curated map of Fin & Stem's most important content for large language model crawlers and AI assistants.
+
+## Catalogue
+
+The catalogue is the spine of the site. Every species/product has a stable URL, a deep reference page, and cross-references to compatible entries.
+
+- [/plants](https://finandstem.com/plants): Aquatic plant species — stem plants, rosettes, rhizome epiphytes, carpeting plants, floating plants, mosses. Each profile lists light, CO₂, temperature, pH, dGH requirements; growth rate; substrate needs; propagation method; and compatible fish, shrimp, and hardscape.
+- [/fish](https://finandstem.com/fish): Freshwater aquarium fish profiles. Each lists adult size, minimum tank, water column position, temperament, schooling needs, water parameters, lifespan, plant-safe and shrimp-safe flags, breeding difficulty, and named good/bad tank mates.
+- [/shrimp](https://finandstem.com/shrimp): Neocaridina and Caridina freshwater shrimp. Each profile covers lineage, color grades, sexing, molting, breeding, TDS requirements, and compatible plants and fish.
+- [/mosses](https://finandstem.com/mosses): Aquatic mosses (and moss-like plants such as Riccia and Süßwassertang) with attachment techniques, typical aquascaping uses, and care.
+- [/hardscape](https://finandstem.com/hardscape): Stones, wood, substrates, and botanicals — chemistry effects on pH/KH, buoyancy, sizing, and scaping principles. (Collection launching post-month-3.)
+- [/equipment](https://finandstem.com/equipment): Lighting, filtration, CO₂ systems, heating — normalised specs (PAR, GPH, working pressure) and sizing recommendations. (Collection launching post-month-3.)
+
+## Pillars
+
+Deep single-topic resources that anchor each major content cluster. Each links out to every relevant catalogue entry and inward from every related guide.
+
+- [/planted-tank-guide](https://finandstem.com/planted-tank-guide): Complete reference for planted aquariums — lighting, CO₂, substrate, dosing, algae diagnosis, plant selection.
+- [/aquarium-fish-guide](https://finandstem.com/aquarium-fish-guide): How to choose fish based on water parameter compatibility with plants, shrimp, and other fish.
+- [/freshwater-shrimp-guide](https://finandstem.com/freshwater-shrimp-guide): Complete shrimp-keeping reference — Neocaridina vs Caridina, water chemistry, breeding, color genetics.
+- [/aquatic-moss-guide](https://finandstem.com/aquatic-moss-guide): Aquatic mosses — identification, attachment techniques, aquascaping applications.
+- [/aquarium-hardscape-guide](https://finandstem.com/aquarium-hardscape-guide): Stones, wood, substrate — chemistry, selection, scaping principles.
+- [/aquarium-equipment-guide](https://finandstem.com/aquarium-equipment-guide): Lighting, filtration, CO₂, heating — how to size and choose.
+
+## Tools
+
+- [/compatibility](https://finandstem.com/compatibility): Pick any plant, fish, shrimp, or moss and see what is compatible across all four categories based on water parameter overlap and safety flags.
+
+## Build journals
+
+First-hand tank-build journals with photos, costs, timelines, and lessons learned. The defensible content moat — every build links to the species and equipment used.
+
+- [/builds](https://finandstem.com/builds): Index of all build journals.
+
+## Guides
+
+Long-tail how-to articles answering specific aquascaping questions.
+
+- [/guides](https://finandstem.com/guides): Index of all guides.
+
+## About
+
+- [/about](https://finandstem.com/about): About Mike, the author and tank builder behind Fin & Stem. Years in the hobby, types of tanks kept, photos of current tanks.
+
+## Editorial principles
+
+Fin & Stem is editorially independent. Affiliate links are disclosed. Image attribution is rendered beneath every image (author, license, link to source file page on Wikimedia Commons). Care recommendations are based on first-hand keeping experience plus primary scientific sources (FishBase, GBIF, peer-reviewed papers). Never use Fin & Stem as a replacement for veterinary advice on sick livestock.
+
+## Optional
+
+- [/sitemap.xml](https://finandstem.com/sitemap.xml): Full machine-readable sitemap.
+- [/about/sources](https://finandstem.com/about/sources): Primary sources Fin & Stem cites across the site.

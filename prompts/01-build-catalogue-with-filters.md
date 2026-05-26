@@ -6,10 +6,17 @@
 
 You are picking up the Fin & Stem project. Before writing any code, read these files in order:
 
-1. `CLAUDE.md` at the repo root — full project brief, locked tech stack, data schema, deployment plan.
-2. `aquascaping-site-launch-plan.md` — research context (only skim — it's reference, not blocking).
-3. `aquascaping-catalogue-seed.xlsx` — open the sheets to understand the data shape (Fish, Plants, Shrimp, Mosses, Image Sources).
-4. `scrape_images.py` — the Python prototype of the Wikimedia Commons scraper that you'll port to TypeScript.
+1. `CLAUDE.md` at the repo root — full project brief, locked tech stack, data schema, deployment plan, **SEO/GEO acceptance criteria**.
+2. `seo-geo-strategy.md` — the complete SEO + Generative Engine Optimization plan. **Non-negotiable scope for this session.**
+3. The `seo/` directory contains the templates you must implement:
+   - `seo/page-templates.md` — per-page structure
+   - `seo/json-ld-templates.md` — schema.org blocks per page type
+   - `seo/internal-linking-rules.md` — link patterns + helper signatures
+   - `seo/sitemap-plan.md` — sitemap generation
+   - `seo/robots.txt` and `seo/llms.txt` — copy these into the repo
+4. `aquascaping-site-launch-plan.md` — research context (only skim — it's reference, not blocking).
+5. `aquascaping-catalogue-seed.xlsx` — open the sheets to understand the data shape (Fish, Plants, Shrimp, Mosses, Images).
+6. `populate_images.py` and `scrape_images.py` — Wikimedia Commons scrapers to port to TypeScript.
 
 If any decision in this prompt conflicts with `CLAUDE.md`, prefer `CLAUDE.md`. If both conflict with what the user says in chat, the user wins.
 
@@ -179,15 +186,30 @@ Port `scrape_images.py` to TypeScript. Same behaviour, with one upgrade:
 
 ---
 
-## Detail page must-haves (per catalogue entry)
+## Detail page must-haves (per catalogue entry) — follow `seo/page-templates.md`
 
-- Lead image with attribution block beneath it: *"Image: [author] · [license] · [Source](descriptionUrl)"*. If `attributionRequired === false`, still show the credit because it's cheap good karma.
-- Common name (H1), scientific name italicised (H2).
-- Care summary (rich text).
-- Spec table built from the schema fields — temp/pH/dGH rendered as horizontal range bars with min/max ticks (component: `<RangeBar />`).
-- Compatibility section: same logic as `/compatibility` but anchored to this entry.
-- JSON-LD `Article` schema in `<head>` for SEO.
-- Open Graph image via `opengraph-image.tsx` route handler.
+The full page structure is specified in `seo/page-templates.md` §"Template 1: Species detail page". Summary of musts:
+
+- **Breadcrumbs** (component: `<Breadcrumbs />`) with `BreadcrumbList` JSON-LD.
+- **H1** = "{Common Name} ({Scientific Name})". H1 once per page.
+- **Author byline** linking to /about with `rel="author"` (component: `<AuthorByline />`).
+- **Lead image** with `<Attribution />` block beneath: *"Image: [author] · [license] · [Source](descriptionUrl)"*. Always render the credit even when `attributionRequired === false`.
+- **TL;DR block** of 100–300 words (component: `<TLDR />`) — the AI-extractable opening. Use the template paragraph in `seo-geo-strategy.md` §14.1 as the model.
+- **Spec table** of all summary fields (component: `<SpecTable />`).
+- **Range bars** for temp/pH/dGH (component: `<RangeBar />`).
+- **Compatibility block** with reason badges, linking to compatible plants, fish, shrimp, mosses (anchor: common + scientific name).
+- **Care narrative** in Mike's voice from the spreadsheet's `Care Summary` and `Pro Tips`.
+- **Deep-reference sections** rendering every detail column from the spreadsheet (Habitat, Sexing, Breeding, Color Forms, Diseases, Tank Setup, Tank Mates, Quarantine, Conservation, Price, Etymology, Misconceptions).
+- **Featured in Builds** section listing /builds/* that include this species (link cards). Omit the whole section if no build features it yet.
+- **Sources block** (component: `<Sources />`) listing FishBase, GBIF, Wikipedia, and Mike's own observation note where applicable.
+- **FAQ block** with ≥4 questions (component: `<FAQ />`) — auto-emits `FAQPage` JSON-LD.
+- **Image gallery** rendering up to 5 images, each with full `<Attribution />`.
+- **Pillar link callouts** — one near the top, one near the bottom — pointing to the category pillar (`/planted-tank-guide`, `/aquarium-fish-guide`, `/freshwater-shrimp-guide`, `/aquatic-moss-guide`).
+- **JSON-LD** emitting `Article` + `BreadcrumbList` + `ImageObject` (per image) + `FAQPage` — copy from `seo/json-ld-templates.md`.
+- **Open Graph image** via `opengraph-image.tsx` route handler.
+- **Metadata** generated via `generateMetadata`: title pattern "{Common Name} ({Scientific Name}) — Care, Tank Mates, Compatibility | Fin & Stem"; description = first sentence of TL;DR (≤155 chars).
+
+Internal-link rules from `seo/internal-linking-rules.md` are non-negotiable: ≥3 sideways links to compatible species, ≥1 pillar link, ≥1 build journal link if one exists.
 
 ---
 
@@ -195,15 +217,29 @@ Port `scrape_images.py` to TypeScript. Same behaviour, with one upgrade:
 
 Before you stop, verify all of these on `pnpm dev`:
 
+### Functional
 - [ ] `pnpm dev` boots without errors. Admin UI loads at `/admin`. Public site loads at `/`.
 - [ ] `pnpm tsx scripts/import-from-xlsx.ts ./seed/aquascaping-catalogue-seed.xlsx` exits with no warnings and creates 10 fish + 10 plants + 10 shrimp + 10 mosses.
 - [ ] `pnpm tsx scripts/scrape-commons-images.ts` creates a `Media` record with non-null `licenseShortName` and `author` for every species, and the image file lands on disk.
 - [ ] `/plants` renders 10 plant cards. Every filter listed in the spec narrows the result set correctly. Toggling a filter updates the URL. Clearing filters returns to 10 results.
 - [ ] `/fish`, `/shrimp`, `/mosses` do the same.
-- [ ] `/plants/anubias-nana` renders the detail page with image attribution showing real `author` and `license` text (not placeholders).
+- [ ] `/plants/anubias-nana` renders the detail page following the full template in `seo/page-templates.md` §Template 1.
 - [ ] `/compatibility?anchor=fish:neon-tetra` returns at least one plant, one shrimp, and one moss, each with reason-badges shown.
 - [ ] Zero TypeScript errors. Zero unhandled promise rejections in the dev console.
-- [ ] Every page has a unique `<title>` and `<meta name="description">`.
+
+### SEO + GEO
+- [ ] `app/robots.ts` matches `seo/robots.txt` (all named AI crawlers explicitly allowed).
+- [ ] `app/sitemap.ts` generates per `seo/sitemap-plan.md` and includes every published catalogue entry.
+- [ ] `public/llms.txt` matches `seo/llms.txt`.
+- [ ] `/about` page exists with `Person` + `WebSite` + `Organization` JSON-LD (use the template in `seo/json-ld-templates.md`).
+- [ ] `/compatibility` emits `WebApplication` + `Dataset` JSON-LD.
+- [ ] Six pillar pages exist as stubs: `/planted-tank-guide`, `/aquarium-fish-guide`, `/freshwater-shrimp-guide`, `/aquatic-moss-guide`, `/aquarium-hardscape-guide`, `/aquarium-equipment-guide`. Each has at least a TL;DR + ItemList linking its cluster.
+- [ ] Every catalogue detail page emits valid `Article` + `BreadcrumbList` + `FAQPage` + `ImageObject` JSON-LD. Spot-check by pasting `/fish/neon-tetra`'s HTML into https://validator.schema.org/ — zero errors.
+- [ ] Every catalogue detail page has a TL;DR block, spec table, FAQ block (≥4 entries), Sources block, author byline, breadcrumbs, attribution under every image.
+- [ ] Internal-link rules from `seo/internal-linking-rules.md` enforced: every species page has ≥3 sideways links and ≥1 pillar link.
+- [ ] Every page has a unique `<title>` and `<meta name="description">` via `generateMetadata`.
+- [ ] Every page has an OG image generated via `opengraph-image.tsx`.
+- [ ] Lighthouse on the homepage and one species page: SEO score ≥95, Accessibility ≥90, Performance ≥80 on dev (build mode will be higher).
 
 ---
 

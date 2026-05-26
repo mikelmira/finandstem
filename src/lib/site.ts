@@ -6,7 +6,7 @@ export const site = {
   description:
     "Fin & Stem is a planted-aquarium reference for aquascapers worldwide. 80+ profiled species — fish, plants, shrimp, and mosses — cross-referenced for compatibility, photographed from Wikimedia and iNaturalist, and written by tank-keepers in plain English.",
   url:
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://finandstem.example.com",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://finandstem.com",
   owner: {
     name: "Mike Elmira",
     email: "mikee@dsg.co.za",

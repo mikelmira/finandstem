@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { fish, findFish } from "@/data";
 import { EntryDetail } from "@/components/catalogue/entry-detail";
 import type { Stat } from "@/components/catalogue/stat-grid";
+import { speciesMetadata } from "@/lib/species-metadata";
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
@@ -18,10 +19,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const entry = findFish(slug);
   if (!entry) return {};
-  return {
-    title: `${entry.commonName} (${entry.scientificName})`,
-    description: entry.careSummary,
-  };
+  return speciesMetadata(entry);
 }
 
 export default async function FishDetailPage({ params }: RouteParams) {

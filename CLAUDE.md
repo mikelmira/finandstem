@@ -12,19 +12,52 @@
 You are picking up a project that has been planned but not yet scaffolded. Before writing any code:
 
 1. Read this entire file.
-2. Read `aquascaping-site-launch-plan.md` (sibling file) for the deeper research, competitor analysis, monetization, and SEO context.
-3. Open `aquascaping-catalogue-seed.xlsx` to understand the data shape. Sheets: README, Fish (10), Plants (10), Shrimp (10), Mosses (10), Image Sources (40 consolidated).
-4. Skim `scrape_images.py` — the Wikimedia Commons image scraper. Each image must capture `url, license, author, licenseUrl, sourceUrl` for legal attribution.
-5. Confirm the tech stack with Mike before scaffolding (see §3). If anything in this file conflicts with what Mike says in chat, **Mike wins**.
+2. Read `seo-geo-strategy.md` (sibling file) — the complete SEO + Generative Engine Optimization plan. **This is non-negotiable scope for the first build session.**
+3. Read `aquascaping-site-launch-plan.md` (sibling file) for the deeper research, competitor analysis, and monetization context.
+4. Read the templates in `seo/` (`page-templates.md`, `json-ld-templates.md`, `internal-linking-rules.md`, `sitemap-plan.md`, `robots.txt`, `llms.txt`) — these define the per-page implementation patterns.
+5. Open `aquascaping-catalogue-seed.xlsx` to understand the data shape. Sheets: README, Fish (10), Plants (10), Shrimp (10), Mosses (10), Images (200 image slots).
+6. Skim `populate_images.py` and `scrape_images.py` — the Wikimedia Commons image scrapers. Each image must capture `url, license, author, licenseUrl, sourceUrl` for legal attribution.
+7. Confirm the tech stack with Mike before scaffolding (see §3). If anything in this file conflicts with what Mike says in chat, **Mike wins**.
 
 **What to do first when scaffolding starts:**
 1. `pnpm create next-app@latest finandstem --typescript --app --tailwind --eslint --import-alias "@/*"`
 2. Install Payload 3 inside the same Next.js app (see §3.2 and the Payload 3 docs link in §10).
 3. Define collections: `Plant`, `Fish`, `Shrimp`, `Moss`, `Hardscape`, `Equipment`, `Build`, `Guide`, `Media`. Schema in §5.
 4. Write the spreadsheet → Payload import script. Schema in §5.
-5. Extend `scrape_images.py` so it writes directly into the Payload `Media` collection.
-6. Render catalogue list + detail pages with ISR. SEO metadata + JSON-LD schema.org markup per entry.
-7. Pagefind for static search. No Algolia.
+5. Extend `populate_images.py` (or port to TypeScript) so it writes directly into the Payload `Media` collection.
+6. Render catalogue list + detail pages with ISR. **Every page must follow the templates in `seo/page-templates.md` and emit the JSON-LD blocks in `seo/json-ld-templates.md`.**
+7. Implement `app/robots.ts`, `app/sitemap.ts`, and `public/llms.txt` per `seo/robots.txt`, `seo/sitemap-plan.md`, and `seo/llms.txt`.
+8. Implement the SEO components in `components/seo/`: `<TLDR />`, `<SpecTable />`, `<FAQ />`, `<Sources />`, `<AuthorByline />`, `<Breadcrumbs />`, `<Attribution />`.
+9. Pagefind for static search. No Algolia.
+
+## SEO & GEO requirements (non-negotiable acceptance criteria)
+
+Every catalogue and guide page must, by the end of the first build session:
+
+- [ ] Open with a **TL;DR block** of 100–300 words containing the direct answer to the page's core query (component: `<TLDR />`).
+- [ ] Render a **spec table** of all summary fields (component: `<SpecTable />`).
+- [ ] Render an **FAQ block** with ≥4 questions and emit `FAQPage` JSON-LD (component: `<FAQ />`).
+- [ ] Render a **Sources** block citing every external reference (component: `<Sources />`).
+- [ ] Show an **author byline** linking to `/about` with `rel="author"` (component: `<AuthorByline />`).
+- [ ] Show **breadcrumbs** with `BreadcrumbList` JSON-LD (component: `<Breadcrumbs />`).
+- [ ] Emit **`Article` + `BreadcrumbList` + `FAQPage` + `ImageObject` JSON-LD** per the templates in `seo/json-ld-templates.md`.
+- [ ] Link **up to the relevant pillar page** (≥1 link with keyword-rich anchor).
+- [ ] Link **sideways to ≥3 compatible species** (anchor text: common + scientific name).
+- [ ] Render **`Attribution />`** below every image (author · license · Commons source URL).
+- [ ] Include a **unique `<title>` and `<meta description>`** generated via `generateMetadata`.
+- [ ] Generate an **OG image** via `opengraph-image.tsx`.
+
+Site-wide:
+- [ ] `app/robots.ts` matches `seo/robots.txt` (explicit AI-crawler allows).
+- [ ] `app/sitemap.ts` generates per `seo/sitemap-plan.md`.
+- [ ] `public/llms.txt` matches `seo/llms.txt`.
+- [ ] `/about` page exists with `Person` + `WebSite` + `Organization` JSON-LD.
+- [ ] `/compatibility` page emits `WebApplication` + `Dataset` JSON-LD.
+- [ ] Six pillar pages exist as stubs (even with placeholder content) so internal-link rules can wire to them: `/planted-tank-guide`, `/aquarium-fish-guide`, `/freshwater-shrimp-guide`, `/aquatic-moss-guide`, `/aquarium-hardscape-guide`, `/aquarium-equipment-guide`.
+
+Verification:
+- [ ] Pick one species per category and validate its JSON-LD via https://validator.schema.org/ — zero errors.
+- [ ] Run Lighthouse on the homepage and one species page — SEO score ≥95, accessibility ≥90.
 
 ---
 
