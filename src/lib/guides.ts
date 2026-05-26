@@ -26,11 +26,24 @@ const REQUIRED_FIELDS = [
   "relatedSpecies",
 ] as const;
 
+/**
+ * Files in the guides folder that are documentation rather than articles.
+ * README, CHANGELOG, etc. live alongside the .mdx articles but should not
+ * be parsed as guides. Match exact filenames (case-insensitive).
+ */
+const NON_GUIDE_FILES: ReadonlySet<string> = new Set([
+  "readme.md",
+  "readme.mdx",
+  "changelog.md",
+  "license.md",
+]);
+
 function readAllGuideFiles(): string[] {
   if (!fs.existsSync(GUIDES_DIR)) return [];
   return fs
     .readdirSync(GUIDES_DIR)
-    .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
+    .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"))
+    .filter((f) => !NON_GUIDE_FILES.has(f.toLowerCase()));
 }
 
 function parseFile(filename: string): GuideEntry | null {

@@ -54,3 +54,17 @@ Fin & Stem is editorially independent and written by a working aquascaper for th
 
 - [/sitemap.xml](https://finandstem.com/sitemap.xml): Full machine-readable sitemap.
 - [/about/sources](https://finandstem.com/about/sources): Primary sources Fin & Stem cites across the site.
+## Published guides
+
+Long-form articles answering specific aquascaping queries — each one cross-references catalogue entries and links up to its pillar guide.
+
+- [Stocking a 60 Litre Community Planted Tank](https://finandstem.com/guides/stocking-a-60-litre-community-planted-tank): A complete stocking guide for a 60 litre planted community tank. Three species plus shrimp, full plant list, equipment, parameters, and 6-week timeline.
+- [Low-Light Aquarium Plants That Don't Need CO2](https://finandstem.com/guides/low-light-aquarium-plants-no-co2): Six aquarium plants that thrive without CO2 in a low-tech tank. What works, what to avoid, plus a complete starter setup for a 60 litre tank.
+- [How Many Ember Tetras Should You Keep Together?](https://finandstem.com/guides/how-many-ember-tetras-to-keep-together): Ember tetras are obligate schoolers. Bare minimum is 6. Ideal is 10 to 15. Here is the math by tank size and what goes wrong with too few.
+- [Do Otocinclus Really Eat Algae? What to Know Before You Buy](https://finandstem.com/guides/do-otocinclus-eat-algae): Otocinclus eat soft brown algae and biofilm, not the hair algae most aquarists want gone. Here is when to actually buy them and when to skip.
+- [Neocaridina vs Caridina Shrimp: Which Should You Start With?](https://finandstem.com/guides/neocaridina-vs-caridina-shrimp): Neocaridina shrimp tolerate tap water and forgive mistakes. Caridina shrimp need RO water and active soil. Here is which to start with and why.
+- [Java Moss vs Christmas Moss: Which to Choose](https://finandstem.com/guides/java-moss-vs-christmas-moss): Java moss and Christmas moss look alike but grow differently. Pick Christmas for ornament, Java for shrimp tanks. Here is the full comparison.
+- [Best Fish for a 30 Litre Planted Tank](https://finandstem.com/guides/best-fish-for-30-litre-planted-tank): A 30 litre planted tank has one fish slot, not several. Four top picks, why neon tetras do not belong, and three complete sample stockings.
+- [Neon Tetra vs Cardinal Tetra: The Real Differences](https://finandstem.com/guides/neon-tetra-vs-cardinal-tetra): Neon and cardinal tetras look similar but differ in stripe pattern, size, water needs, and sourcing. Here is the honest comparison and which to pick.
+- [Can Neon Tetras Live With Cherry Shrimp?](https://finandstem.com/guides/can-neon-tetras-live-with-cherry-shrimp): Adult neon tetras and adult cherry shrimp coexist fine. The only problem is shrimplets. Here is how to set up the tank so both populations actually thrive.
+

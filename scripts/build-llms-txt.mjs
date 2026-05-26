@@ -27,11 +27,20 @@ const GUIDES_DIR = path.join(ROOT, "src", "content", "guides");
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://finandstem.com";
 
+// README, CHANGELOG, etc. live alongside the .mdx articles. Skip them.
+const NON_GUIDE_FILES = new Set([
+  "readme.md",
+  "readme.mdx",
+  "changelog.md",
+  "license.md",
+]);
+
 function readPublishedGuides() {
   if (!fs.existsSync(GUIDES_DIR)) return [];
   return fs
     .readdirSync(GUIDES_DIR)
     .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"))
+    .filter((f) => !NON_GUIDE_FILES.has(f.toLowerCase()))
     .map((filename) => {
       const file = fs.readFileSync(path.join(GUIDES_DIR, filename), "utf8");
       const { data } = matter(file);
