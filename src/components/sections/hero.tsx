@@ -7,7 +7,7 @@ import type { AtmosphereImage } from "@/data/atmosphere";
 interface HeroProps {
   eyebrow: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   primaryCta: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   stats?: ReadonlyArray<{ value: string; label: string }>;
@@ -131,16 +131,18 @@ export function Hero({
             {title}
           </h1>
 
-          <p
-            className={cn(
-              "mt-6 max-w-2xl text-pretty text-base leading-relaxed sm:text-lg md:text-xl",
-              hasPhoto
-                ? "text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
-                : "text-muted-foreground",
-            )}
-          >
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p
+              className={cn(
+                "mt-6 max-w-2xl text-pretty text-base leading-relaxed sm:text-lg md:text-xl",
+                hasPhoto
+                  ? "text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
+                  : "text-muted-foreground",
+              )}
+            >
+              {subtitle}
+            </p>
+          )}
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <PillButton href={primaryCta.href} size="lg">

@@ -2,6 +2,7 @@ import { home } from "@/content/home";
 import { fish, plants, shrimp, mosses } from "@/data";
 import { atmosphere } from "@/data/atmosphere";
 import { Hero } from "@/components/sections/hero";
+import { ScrollRevealText } from "@/components/sections/scroll-reveal-text";
 import { Pillars } from "@/components/sections/pillars";
 import { FeaturedEntries } from "@/components/sections/featured-entries";
 import { Ethos } from "@/components/sections/ethos";
@@ -18,7 +19,6 @@ export default function Page() {
       <Hero
         eyebrow={home.hero.eyebrow}
         title={home.hero.title}
-        subtitle={home.hero.subtitle}
         primaryCta={{ label: "Plan a tank", href: "/planner" }}
         secondaryCta={{ label: "Browse catalogue", href: "/fish" }}
         backgroundImage={atmosphere.aquascapeWide}
@@ -32,6 +32,10 @@ export default function Page() {
             label: "Planning tools — Planner · Compare · Compatibility",
           },
         ]}
+      />
+      <ScrollRevealText
+        eyebrow="What this is"
+        text={home.hero.subtitle}
       />
       <Pillars {...home.pillars} />
       <ToolsBand />
