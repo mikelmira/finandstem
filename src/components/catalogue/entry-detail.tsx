@@ -168,7 +168,7 @@ export function EntryDetail({
         id={`species-jsonld-${entry.slug}`}
       />
       {/* ─── Hero, traditional 100vh splash ────────────────────── */}
-      <section className="relative isolate flex h-screen min-h-[600px] flex-col overflow-hidden">
+      <section className="relative isolate flex h-[90vh] flex-col overflow-hidden md:h-screen md:min-h-[600px]">
         {/* Full-bleed species photo */}
         {image && (
           <div className="absolute inset-0 -z-30">

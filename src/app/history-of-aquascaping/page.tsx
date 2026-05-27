@@ -148,7 +148,7 @@ export default function HistoryOfAquascapingPage() {
       <JsonLd data={jsonLd()} id="history-jsonld" />
 
       {/* Hero, full-bleed image with overlay + breadcrumb + headline */}
-      <section className="relative isolate min-h-[80vh] overflow-hidden border-b border-border/60">
+      <section className="relative isolate min-h-[90vh] overflow-hidden border-b border-border/60 md:min-h-[80vh]">
         <div className="absolute inset-0 -z-30">
           <Image
             src={hero.heroImage.src}
@@ -168,7 +168,7 @@ export default function HistoryOfAquascapingPage() {
           className="absolute inset-x-0 bottom-0 -z-20 h-40 bg-gradient-to-b from-transparent to-background"
         />
 
-        <div className="relative mx-auto flex min-h-[80vh] w-full max-w-5xl flex-col px-6 pt-24 pb-20 sm:px-8 sm:pt-28 sm:pb-24">
+        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col px-6 pt-24 pb-20 sm:px-8 sm:pt-28 sm:pb-24 md:min-h-[80vh]">
           <Breadcrumbs
             items={[{ name: "Home", href: "/" }, { name: "History" }]}
             tone="light"

@@ -43,7 +43,7 @@ export function PageHero({
     <section
       className={cn(
         "relative isolate overflow-hidden border-b border-border/60",
-        hasPhoto ? "min-h-[60vh]" : "",
+        hasPhoto ? "min-h-[90vh] md:min-h-[60vh]" : "",
       )}
     >
       {/* Background photo + dark overlay (when a photo is provided) */}
@@ -99,7 +99,7 @@ export function PageHero({
         className={cn(
           "relative mx-auto flex w-full max-w-6xl flex-col px-6 sm:px-8",
           hasPhoto
-            ? "min-h-[60vh] pt-24 pb-16 sm:pt-28 sm:pb-20"
+            ? "min-h-[90vh] md:min-h-[60vh] pt-24 pb-16 sm:pt-28 sm:pb-20"
             : "pt-20 pb-16 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24",
         )}
       >
