@@ -14,7 +14,7 @@ interface FilterRailProps {
   onClearChip: (key: string) => void;
   resultCount: number;
   totalCount: number;
-  category: "fish" | "plants" | "shrimp" | "mosses";
+  category: "fish" | "plants" | "shrimp" | "mosses" | "snails";
   children: React.ReactNode;
 }
 

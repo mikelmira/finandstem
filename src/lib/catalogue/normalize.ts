@@ -4,13 +4,14 @@ import type {
   PlantEntry,
   ShrimpEntry,
   MossEntry,
+  SnailEntry,
 } from "@/types/catalogue";
 import {
   parseRange,
   parseLeadingNumber,
   type NumericRange,
 } from "@/lib/range";
-import { fish, plants, shrimp, mosses } from "@/data";
+import { fish, plants, shrimp, mosses, snails } from "@/data";
 
 export type WaterColumn = "Top" | "Mid" | "Bottom";
 export type Temperament =
@@ -353,7 +354,19 @@ export interface MossNorm extends BaseNorm {
   raw: MossEntry;
 }
 
-export type NormalizedEntry = FishNorm | PlantNorm | ShrimpNorm | MossNorm;
+export interface SnailNorm extends BaseNorm {
+  category: "snails";
+  minTankL: number | null;
+  algaeEaterRating: number;
+  raw: SnailEntry;
+}
+
+export type NormalizedEntry =
+  | FishNorm
+  | PlantNorm
+  | ShrimpNorm
+  | MossNorm
+  | SnailNorm;
 
 function base(entry: CatalogueEntry): BaseNorm {
   return {
@@ -426,11 +439,20 @@ export const mossNorm: ReadonlyArray<MossNorm> = mosses.map((m) => ({
   raw: m,
 }));
 
+export const snailNorm: ReadonlyArray<SnailNorm> = snails.map((s) => ({
+  ...base(s),
+  category: "snails" as const,
+  minTankL: parseLeadingNumber(s.minTankSize),
+  algaeEaterRating: s.algaeEaterRating,
+  raw: s,
+}));
+
 export const allNorm: ReadonlyArray<NormalizedEntry> = [
   ...fishNorm,
   ...plantNorm,
   ...shrimpNorm,
   ...mossNorm,
+  ...snailNorm,
 ];
 
 export function findNorm(

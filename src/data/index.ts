@@ -2,6 +2,7 @@ import { fish } from "./fish";
 import { plants } from "./plants";
 import { shrimp } from "./shrimp";
 import { mosses } from "./mosses";
+import { snails } from "./snails";
 import { IMAGE_ATTRIBUTION } from "./image-attribution";
 import { getGallery } from "./image-gallery";
 import { cleanAuthor } from "@/lib/wikimedia";
@@ -12,16 +13,18 @@ import type {
   PlantEntry,
   ShrimpEntry,
   MossEntry,
+  SnailEntry,
   ImageAttribution,
 } from "@/types/catalogue";
 
-export { fish, plants, shrimp, mosses };
+export { fish, plants, shrimp, mosses, snails };
 
 function categoryForSlug(slug: string): CatalogueCategory | undefined {
   if (fish.some((f) => f.slug === slug)) return "fish";
   if (plants.some((p) => p.slug === slug)) return "plants";
   if (shrimp.some((s) => s.slug === slug)) return "shrimp";
   if (mosses.some((m) => m.slug === slug)) return "mosses";
+  if (snails.some((s) => s.slug === slug)) return "snails";
   return undefined;
 }
 
@@ -33,6 +36,7 @@ function entryName(
     ...plants,
     ...shrimp,
     ...mosses,
+    ...snails,
   ];
   const hit = all.find((e) => e.slug === slug);
   if (!hit) return undefined;
@@ -74,6 +78,7 @@ export const allEntries: ReadonlyArray<CatalogueEntry> = [
   ...plants,
   ...shrimp,
   ...mosses,
+  ...snails,
 ];
 
 export function getCategoryEntries(
@@ -88,6 +93,8 @@ export function getCategoryEntries(
       return shrimp;
     case "mosses":
       return mosses;
+    case "snails":
+      return snails;
   }
 }
 
@@ -102,4 +109,7 @@ export function findShrimp(slug: string): ShrimpEntry | undefined {
 }
 export function findMoss(slug: string): MossEntry | undefined {
   return mosses.find((m) => m.slug === slug);
+}
+export function findSnail(slug: string): SnailEntry | undefined {
+  return snails.find((s) => s.slug === slug);
 }

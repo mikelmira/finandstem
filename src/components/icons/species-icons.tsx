@@ -83,6 +83,46 @@ export function MossMark(props: MarkProps) {
   return <MaskIcon src="/grass.png" {...props} />;
 }
 
+/**
+ * Snail silhouette mark — inline SVG spiral shell + slug body. Drawn
+ * directly rather than via PNG mask because we don't have a /snail.png
+ * asset; SVG with `currentColor` fill gives us the same parent-tinted
+ * behaviour as the masked PNGs.
+ */
+export function SnailMark({ className, ...rest }: MarkProps) {
+  return (
+    <span
+      aria-hidden
+      role="img"
+      className={mergeClass(
+        className,
+        "inline-block shrink-0 align-middle text-current",
+      )}
+      {...rest}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="size-full"
+      >
+        {/* Slug body — gentle arch resting on a baseline */}
+        <path d="M 2.5 18 Q 3 14 6 13.5 L 17 13.5 Q 22 13.5 22 18 L 2.5 18 Z" />
+        {/* Antennae */}
+        <path d="M 4 13.5 L 3 10" />
+        <path d="M 5.5 13.5 L 5 10.5" />
+        {/* Shell — spiral coil */}
+        <circle cx="14" cy="11" r="5.5" />
+        <path d="M 14 11 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" />
+        <path d="M 14 11 m -1 0 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0" />
+      </svg>
+    </span>
+  );
+}
+
 /* ─── Scientific plates ──────────────────────────────────────────────────
    Larger silhouettes — drawn at ~120px for use as a margin annotation
    next to a species hero photo. One template per category; the
@@ -1314,6 +1354,71 @@ export function PlantPlateGrass(props: IconProps) {
   );
 }
 
+/**
+ * Snail plate — coiled shell with body extended forward, antennae out.
+ * Drawn outline-only at ~120 px to match the other scientific plates.
+ */
+export function SnailPlate(props: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 200 120"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      {...props}
+    >
+      {/* Foot / body — long extended slug shape resting on a baseline */}
+      <path d="
+        M 12 96
+        Q 8 80, 26 76
+        L 80 76
+        Q 130 64, 158 70
+        Q 184 78, 184 96
+        L 12 96
+        Z
+      " />
+
+      {/* Baseline ground line */}
+      <path d="M 8 100 L 192 100" opacity="0.45" />
+
+      {/* Spiral shell — large coiled chamber on the rear (right side) */}
+      <circle cx="132" cy="58" r="34" />
+      <circle cx="132" cy="58" r="24" opacity="0.85" />
+      <circle cx="132" cy="58" r="14" opacity="0.7" />
+      <circle cx="132" cy="58" r="6" opacity="0.6" />
+
+      {/* Spiral connector — line tracing the whorl from outer to inner */}
+      <path
+        d="M 132 92 Q 100 92, 100 58 Q 100 24, 132 24 Q 156 24, 156 58 Q 156 82, 132 82 Q 116 82, 116 58 Q 116 44, 132 44"
+        opacity="0.4"
+      />
+
+      {/* Hatching along the upper shell — engraved tonal lines */}
+      <g opacity="0.25">
+        <path d="M 110 36 L 100 30" />
+        <path d="M 120 30 L 116 22" />
+        <path d="M 132 28 L 132 18" />
+        <path d="M 146 30 L 152 22" />
+        <path d="M 158 38 L 168 32" />
+      </g>
+
+      {/* Eye stalks / antennae rising from the front of the body */}
+      <path d="M 30 76 L 26 56" />
+      <path d="M 40 76 L 38 54" />
+      <circle cx="26" cy="54" r="2.2" />
+      <circle cx="38" cy="52" r="2.2" />
+      <circle cx="26" cy="54" r="0.9" fill="currentColor" />
+      <circle cx="38" cy="52" r="0.9" fill="currentColor" />
+
+      {/* Mouth — tiny */}
+      <path d="M 14 88 L 22 86" opacity="0.65" />
+    </svg>
+  );
+}
+
 /* ─── Resolver ──────────────────────────────────────────────────────────
    Convenience: get the right mark or plate for a category or species.
    Per-species body type is derived from slug (fish) or the plantType
@@ -1330,6 +1435,7 @@ export const CATEGORY_MARK: Record<
   plants: PlantMark,
   shrimp: ShrimpMark,
   mosses: MossMark,
+  snails: SnailMark,
 };
 
 /** Legacy default plate per category — kept for callers that don't
@@ -1343,6 +1449,7 @@ export const CATEGORY_PLATE: Record<
   plants: PlantPlate,
   shrimp: ShrimpPlate,
   mosses: MossPlate,
+  snails: SnailPlate,
 };
 
 export type FishBodyType =
@@ -1513,6 +1620,9 @@ export function getSpeciesPlate(entry: CatalogueEntry): {
   }
   if (entry.category === "shrimp") {
     return { Plate: ShrimpPlate, label: "Shrimp" };
+  }
+  if (entry.category === "snails") {
+    return { Plate: SnailPlate, label: "Snail" };
   }
   return { Plate: MossPlate, label: "Moss tuft" };
 }

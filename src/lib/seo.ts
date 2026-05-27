@@ -211,6 +211,8 @@ function defaultKeywords(entry: CatalogueEntry): string[] {
       return [...base, `${entry.commonName} breeding`, `${entry.commonName} TDS`];
     case "mosses":
       return [...base, `${entry.commonName} attachment`, `${entry.commonName} aquascape`];
+    case "snails":
+      return [...base, `${entry.commonName} algae`, `${entry.commonName} breeding`];
   }
 }
 

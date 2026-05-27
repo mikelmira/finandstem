@@ -11,6 +11,7 @@ import {
   PlantMark,
   ShrimpMark,
   MossMark,
+  SnailMark,
 } from "@/components/icons/species-icons";
 
 export interface MobileNavLink {
@@ -49,9 +50,13 @@ const LIVESTOCK_META: Record<
     description: "Java, Christmas, Flame, Fissidens and more.",
     Icon: MossMark,
   },
+  "/snails": {
+    description: "Nerites, mystery snails, assassins and the algae crew.",
+    Icon: SnailMark,
+  },
 };
 
-const LIVESTOCK_ORDER = ["/fish", "/plants", "/shrimp", "/mosses"];
+const LIVESTOCK_ORDER = ["/fish", "/plants", "/shrimp", "/mosses", "/snails"];
 
 export function MobileNav({ links, primaryCta }: MobileNavProps) {
   const pathname = usePathname();

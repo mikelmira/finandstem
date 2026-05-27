@@ -6,6 +6,7 @@ import type {
   MossEntry,
   PlantEntry,
   ShrimpEntry,
+  SnailEntry,
 } from "@/types/catalogue";
 
 /* ──────────────────────────────────────────────────────────────────
@@ -56,11 +57,12 @@ const PROFILE_GRID =
 export function ProfileCards({
   entry,
 }: {
-  entry: FishEntry | PlantEntry | ShrimpEntry | MossEntry;
+  entry: FishEntry | PlantEntry | ShrimpEntry | MossEntry | SnailEntry;
 }) {
   if (entry.category === "fish") return <FishProfile entry={entry} />;
   if (entry.category === "plants") return <PlantProfile entry={entry} />;
   if (entry.category === "shrimp") return <ShrimpProfile entry={entry} />;
+  if (entry.category === "snails") return <SnailProfile entry={entry} />;
   return <MossProfile entry={entry} />;
 }
 
@@ -124,6 +126,35 @@ function ShrimpProfile({ entry: s }: { entry: ShrimpEntry }) {
       />
       <ProfileItem label="Breeding" value={cap(s.breeding)} />
       <ProfileItem label="Lifespan" value={`${s.lifespan} yrs`} />
+      <ProfileItem
+        label="Habitat"
+        value={getHabitat(s.slug, s.origin)}
+        helper={s.origin}
+      />
+    </div>
+  );
+}
+
+function SnailProfile({ entry: s }: { entry: SnailEntry }) {
+  return (
+    <div className={PROFILE_GRID}>
+      <ProfileItem label="Family" value={s.family} />
+      <ProfileItem
+        label="Diet"
+        value={cap(s.diet)}
+        helper={s.feedingNotes}
+      />
+      <ProfileItem
+        label="Algae grazing"
+        value={`${s.algaeEaterRating} / 5`}
+      />
+      <ProfileItem label="Breeding" value={s.breeding} />
+      <ProfileItem label="Lifespan" value={`${s.lifespan} yrs`} />
+      <ProfileItem
+        label="Shell calcium demand"
+        value={cap(s.shellCalciumDemand)}
+      />
+      <ProfileItem label="Plant safe" value={s.plantSafe} />
       <ProfileItem
         label="Habitat"
         value={getHabitat(s.slug, s.origin)}

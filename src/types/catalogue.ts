@@ -1,4 +1,9 @@
-export type CatalogueCategory = "fish" | "plants" | "shrimp" | "mosses";
+export type CatalogueCategory =
+  | "fish"
+  | "plants"
+  | "shrimp"
+  | "mosses"
+  | "snails";
 
 export interface ImageAttribution {
   slug: string;
@@ -86,6 +91,26 @@ export interface ShrimpEntry extends CatalogueEntryBase {
   fishTankSafeWith: string;
 }
 
+export interface SnailEntry extends CatalogueEntryBase {
+  category: "snails";
+  family: string;
+  adultSize: string;
+  minTankSize: string;
+  diet: string;
+  feedingNotes: string;
+  tempRange: string;
+  phRange: string;
+  dghRange: string;
+  khRange: string;
+  flowRate: string;
+  lifespan: string;
+  breeding: string;
+  algaeEaterRating: number;
+  plantSafe: string;
+  fishTankSafeWith: string;
+  shellCalciumDemand: string;
+}
+
 export interface MossEntry extends CatalogueEntryBase {
   category: "mosses";
   family: string;
@@ -105,7 +130,8 @@ export type CatalogueEntry =
   | FishEntry
   | PlantEntry
   | ShrimpEntry
-  | MossEntry;
+  | MossEntry
+  | SnailEntry;
 
 export const CATEGORY_META: Record<
   CatalogueCategory,
@@ -143,5 +169,12 @@ export const CATEGORY_META: Record<
     path: "/mosses",
     blurb:
       "Java, Christmas, Flame, Phoenix and more. Attachment, trimming cadence, and what each one is actually for.",
+  },
+  snails: {
+    label: "Snails",
+    singular: "Snail",
+    path: "/snails",
+    blurb:
+      "Nerites, mystery snails, assassins, rabbits and more. Algae crew, display species, and the ones to avoid — with parameters, breeding, and tank-mate notes.",
   },
 };

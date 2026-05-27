@@ -10,6 +10,7 @@ import {
   PlantMark,
   ShrimpMark,
   MossMark,
+  SnailMark,
 } from "@/components/icons/species-icons";
 
 /**
@@ -54,6 +55,12 @@ const ITEMS: ReadonlyArray<LivestockItem> = [
     href: "/mosses",
     description: "Java, Christmas, Flame, Fissidens and more.",
     Icon: MossMark,
+  },
+  {
+    label: "Snails",
+    href: "/snails",
+    description: "Nerites, mystery snails, assassins and the algae crew.",
+    Icon: SnailMark,
   },
 ];
 

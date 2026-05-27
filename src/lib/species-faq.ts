@@ -18,6 +18,7 @@ import type {
   PlantEntry,
   ShrimpEntry,
   MossEntry,
+  SnailEntry,
 } from "@/types/catalogue";
 
 export interface FaqItem {
@@ -48,6 +49,8 @@ function factParagraph(entry: CatalogueEntry): string {
       return shrimpFactParagraph(entry as ShrimpEntry);
     case "mosses":
       return mossFactParagraph(entry as MossEntry);
+    case "snails":
+      return snailFactParagraph(entry as SnailEntry);
   }
 }
 
@@ -87,6 +90,18 @@ function shrimpFactParagraph(s: ShrimpEntry): string {
   ].join(" ");
 }
 
+function snailFactParagraph(s: SnailEntry): string {
+  return [
+    `${s.commonName} (${s.scientificName}) is an aquarium snail in family ${s.family}, native to ${s.origin}.`,
+    `Adults reach ${s.adultSize} cm; minimum tank ${s.minTankSize} L.`,
+    `Target ${s.tempRange} °C, pH ${s.phRange}, ${s.dghRange} dGH, ${s.khRange} dKH. Shell calcium demand: ${s.shellCalciumDemand.toLowerCase()}.`,
+    `Diet: ${s.diet.toLowerCase()} — ${s.feedingNotes}`,
+    `Breeding: ${s.breeding}`,
+    `Algae-eating rating: ${s.algaeEaterRating}/5. Plant-safe: ${s.plantSafe}.`,
+    `Tank mates: ${s.fishTankSafeWith}`,
+  ].join(" ");
+}
+
 function mossFactParagraph(m: MossEntry): string {
   return [
     `${m.commonName} (${m.scientificName}) is a ${m.type.toLowerCase()} aquatic moss native to ${m.origin}.`,
@@ -109,6 +124,8 @@ export function buildFaqs(entry: CatalogueEntry): FaqItem[] {
       return shrimpFaqs(entry as ShrimpEntry);
     case "mosses":
       return mossFaqs(entry as MossEntry);
+    case "snails":
+      return snailFaqs(entry as SnailEntry);
   }
 }
 
@@ -195,6 +212,39 @@ function shrimpFaqs(s: ShrimpEntry): FaqItem[] {
     {
       question: `How long do ${s.commonName} live?`,
       answer: `Typical lifespan: ${s.lifespan} years.`,
+    },
+  ];
+}
+
+function snailFaqs(s: SnailEntry): FaqItem[] {
+  return [
+    {
+      question: `What tank size do ${s.commonName} need?`,
+      answer: `Minimum tank: ${s.minTankSize} L. ${s.commonName} (${s.scientificName}) reach ${s.adultSize} cm as adults.`,
+    },
+    {
+      question: `What water parameters do ${s.commonName} need?`,
+      answer: `Target ${s.tempRange} °C, pH ${s.phRange}, ${s.dghRange} dGH, and ${s.khRange} dKH. Shell calcium demand is ${s.shellCalciumDemand.toLowerCase()} — supplement with cuttlebone or a mineral stone if your water is soft.`,
+    },
+    {
+      question: `Are ${s.commonName} plant-safe?`,
+      answer: `Plant safety: ${s.plantSafe}. ${s.commonName} are ${s.diet.toLowerCase()} — ${s.feedingNotes}`,
+    },
+    {
+      question: `What fish can live with ${s.commonName}?`,
+      answer: `Tank mates: ${s.fishTankSafeWith}`,
+    },
+    {
+      question: `Do ${s.commonName} clean algae?`,
+      answer: `Algae-eating rating: ${s.algaeEaterRating}/5. ${s.feedingNotes}`,
+    },
+    {
+      question: `Do ${s.commonName} breed in freshwater?`,
+      answer: `${s.breeding}`,
+    },
+    {
+      question: `How long do ${s.commonName} live?`,
+      answer: `Typical lifespan: ${s.lifespan} years in a stable, well-maintained tank.`,
     },
   ];
 }

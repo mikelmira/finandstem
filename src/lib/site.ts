@@ -26,6 +26,7 @@ export const site = {
     { label: "Plants", href: "/plants" },
     { label: "Shrimp", href: "/shrimp" },
     { label: "Mosses", href: "/mosses" },
+    { label: "Snails", href: "/snails" },
     { label: "Guides", href: "/guides" },
     { label: "History", href: "/history-of-aquascaping" },
     { label: "Planner", href: "/planner" },
@@ -42,6 +43,7 @@ export const site = {
           { label: "Plants", href: "/plants" },
           { label: "Shrimp", href: "/shrimp" },
           { label: "Mosses", href: "/mosses" },
+          { label: "Snails", href: "/snails" },
         ],
       },
       {

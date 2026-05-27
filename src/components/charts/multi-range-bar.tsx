@@ -28,6 +28,7 @@ const CATEGORY_BAR: Record<CatalogueCategory, string> = {
   plants: "bg-[var(--brand)]/55 ring-1 ring-inset ring-[var(--brand)]/55",
   shrimp: "bg-rose-400/55 ring-1 ring-inset ring-rose-300/50",
   mosses: "bg-emerald-400/55 ring-1 ring-inset ring-emerald-300/50",
+  snails: "bg-amber-400/55 ring-1 ring-inset ring-amber-300/50",
 };
 
 const CATEGORY_DOT: Record<CatalogueCategory, string> = {
@@ -35,6 +36,7 @@ const CATEGORY_DOT: Record<CatalogueCategory, string> = {
   plants: "bg-[var(--brand)]",
   shrimp: "bg-rose-300",
   mosses: "bg-emerald-300",
+  snails: "bg-amber-300",
 };
 
 export function MultiRangeBar({

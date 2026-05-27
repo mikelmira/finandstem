@@ -41,6 +41,7 @@ const CAT_ICON: Record<CatalogueEntry["category"], LucideIcon> = {
   plants: Leaf,
   shrimp: Shell,
   mosses: Sprout,
+  snails: Shell,
 };
 
 /** Category pill tones — picked for legibility on the cream
@@ -51,6 +52,7 @@ const CAT_TONE: Record<CatalogueEntry["category"], string> = {
   plants: "border-[var(--brand)]/45 bg-[var(--brand)]/15 text-[var(--brand)]",
   shrimp: "border-rose-500/40 bg-rose-500/12 text-rose-800",
   mosses: "border-emerald-600/40 bg-emerald-600/12 text-emerald-800",
+  snails: "border-amber-600/40 bg-amber-500/12 text-amber-800",
 };
 
 /** Categories whose stocking the user can scale up or down. */
@@ -59,6 +61,7 @@ const COUNTABLE: Record<CatalogueEntry["category"], boolean> = {
   shrimp: true,
   plants: true,
   mosses: true,
+  snails: true,
 };
 
 /** What "one count" represents for each category — surfaced in the
@@ -68,6 +71,7 @@ const COUNT_UNIT: Record<CatalogueEntry["category"], string> = {
   shrimp: "shrimp",
   plants: "bunch/specimen",
   mosses: "portion",
+  snails: "snail",
 };
 
 export function TankComposition({ items }: TankCompositionProps) {

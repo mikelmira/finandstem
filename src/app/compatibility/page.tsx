@@ -33,7 +33,14 @@ export const metadata: Metadata = {
   },
 };
 
+// Compatibility currently covers fish, plants, shrimp, mosses. Snails
+// aren't integrated into the parameter cross-reference yet — filtered out
+// of the anchor picker here.
 const ANCHOR_OPTIONS = allNorm
+  .filter(
+    (n): n is typeof n & { category: "fish" | "plants" | "shrimp" | "mosses" } =>
+      n.category !== "snails",
+  )
   .map((n) => ({
     value: `${n.category}:${n.slug}`,
     label: n.commonName,

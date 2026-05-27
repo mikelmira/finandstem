@@ -23,7 +23,13 @@ const MOBILE_LINKS = [...site.nav];
  * Slugs grouped under the desktop "Livestock" dropdown — surfaced
  * individually in the mobile drawer for one-tap navigation.
  */
-const LIVESTOCK_HREFS = new Set(["/fish", "/plants", "/shrimp", "/mosses"]);
+const LIVESTOCK_HREFS = new Set([
+  "/fish",
+  "/plants",
+  "/shrimp",
+  "/mosses",
+  "/snails",
+]);
 
 /**
  * Desktop nav items that sit alongside the Livestock dropdown.

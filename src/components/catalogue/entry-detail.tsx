@@ -780,6 +780,12 @@ const PILLAR_FOR_CATEGORY: Record<
     href: "/aquatic-moss-guide",
     label: "complete guide to aquatic mosses",
   },
+  // Snails don't yet have a dedicated pillar — point at the planted-tank
+  // pillar as a sensible default (snails live as part of a planted setup).
+  snails: {
+    href: "/planted-tank-guide",
+    label: "complete planted-aquarium guide",
+  },
 };
 
 /**

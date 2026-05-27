@@ -1228,11 +1228,14 @@ export const MOSS_DETAIL: DetailMap = // Mosses
 };
 
 export function getDetailSections(
-  category: 'fish' | 'plants' | 'shrimp' | 'mosses',
+  category: 'fish' | 'plants' | 'shrimp' | 'mosses' | 'snails',
   slug: string,
 ): DetailSection[] {
   if (category === 'fish') return FISH_DETAIL[slug] ?? [];
   if (category === 'plants') return PLANT_DETAIL[slug] ?? [];
   if (category === 'shrimp') return SHRIMP_DETAIL[slug] ?? [];
-  return MOSS_DETAIL[slug] ?? [];
+  if (category === 'mosses') return MOSS_DETAIL[slug] ?? [];
+  // Snails: no editorial detail-section data yet — the catalogue base
+  // fields render via the at-a-glance block.
+  return [];
 }
