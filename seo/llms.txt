@@ -36,6 +36,10 @@ Long-tail how-to articles answering specific aquascaping questions.
 
 - [/guides](https://finandstem.com/guides): Index of all guides.
 
+## History
+
+- [/history-of-aquascaping](https://finandstem.com/history-of-aquascaping): A history of aquascaping — Dutch origins in the 1930s, Takashi Amano's Nature Aquarium revolution at ADA, the Iwagumi style, the Amano shrimp, the IAPLC contest, and the global hobby today.
+
 ## About
 
 - [/about](https://finandstem.com/about): About Mike, the author and tank builder behind Fin & Stem. Years in the hobby, types of tanks kept, photos of current tanks.

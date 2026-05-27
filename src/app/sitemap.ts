@@ -46,6 +46,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Long-form guides hub
     { path: "/guides", priority: 0.9, freq: "weekly" },
 
+    // History feature page — single editorial reference piece
+    { path: "/history-of-aquascaping", priority: 0.85, freq: "yearly" },
+
     // Tools
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },
