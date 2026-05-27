@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { MapPin, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { MapPin, ArrowRight } from "lucide-react";
 import { about } from "@/content/about";
 import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
@@ -110,13 +111,13 @@ export default function AboutPage() {
             <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
               {about.founder.body}
             </p>
-            <a
-              href="mailto:mikee@dsg.co.za"
-              className="mt-7 inline-flex w-fit items-center gap-2 rounded-full border border-border/70 bg-background/60 px-4 py-2 text-sm font-medium backdrop-blur transition-colors hover:border-[var(--brand)]/40"
+            <Link
+              href="/contact"
+              className="press mt-7 inline-flex w-fit items-center gap-2 rounded-full border border-border/70 bg-background/60 px-4 py-2 text-sm font-medium backdrop-blur transition-colors hover:border-[var(--brand)]/40"
             >
-              mikee@dsg.co.za
-              <ExternalLink className="size-3.5" aria-hidden />
-            </a>
+              Get in touch
+              <ArrowRight className="size-3.5" aria-hidden />
+            </Link>
           </div>
         </div>
       </SectionShell>

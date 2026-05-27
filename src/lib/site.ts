@@ -9,8 +9,11 @@ export const site = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://finandstem.com",
   owner: {
     name: "Mike Elmira",
-    email: "mikee@dsg.co.za",
     location: "South Africa",
+  },
+  /** Public-facing routes for getting in touch. Email lives behind the form. */
+  contact: {
+    formHref: "/contact",
   },
   social: {
     youtube: "#",

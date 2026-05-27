@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -9,6 +10,22 @@ import { AuthorByline } from "@/components/seo/author-byline";
 import { pillarPageJsonLd } from "@/lib/seo";
 import { clusterItemsFor, type Pillar } from "@/lib/pillars";
 import { getPillarDates } from "@/data/timestamps";
+import { atmosphere, type AtmosphereImage } from "@/data/atmosphere";
+
+/**
+ * Each pillar gets a hero background photo chosen for thematic fit.
+ * Plants → plant macro; Fish → angelfish over sand; Shrimp → Amano on
+ * driftwood; Mosses → mossy driftwood; Hardscape → nano-tank still life;
+ * Equipment → wide aquascape so the lighting hardware reads.
+ */
+const PILLAR_HERO_IMAGE: Record<string, AtmosphereImage> = {
+  "planted-tank-guide": atmosphere.plantMacro,
+  "aquarium-fish-guide": atmosphere.angelfish,
+  "freshwater-shrimp-guide": atmosphere.amanoMacro,
+  "aquatic-moss-guide": atmosphere.driftwoodMoss,
+  "aquarium-hardscape-guide": atmosphere.nanoTank,
+  "aquarium-equipment-guide": atmosphere.aquascapeWide,
+};
 
 interface PillarPageProps {
   pillar: Pillar;
@@ -52,32 +69,77 @@ export function PillarPage({ pillar }: PillarPageProps) {
         id={`pillar-jsonld-${pillar.slug}`}
       />
 
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden border-b border-border/60">
-        <div className="brand-aurora absolute inset-0 -z-20 opacity-80" aria-hidden />
-        <div className="bg-grid absolute inset-0 -z-10 opacity-50" aria-hidden />
-        <div className="mx-auto w-full max-w-4xl px-6 pt-24 pb-12 sm:px-8 sm:pt-28 sm:pb-16">
+      {/* Hero — full-bleed photo + dark overlay + white text. Matches
+          the species detail and PageHero patterns so every hero on the
+          site reads as the same lockup. */}
+      <section className="relative isolate min-h-[60vh] overflow-hidden border-b border-border/60">
+        {(() => {
+          const heroImage = PILLAR_HERO_IMAGE[pillar.slug];
+          return heroImage ? (
+            <>
+              <div className="absolute inset-0 -z-30">
+                <Image
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  fill
+                  priority
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div
+                aria-hidden
+                className="absolute inset-0 -z-20 bg-gradient-to-b from-black/60 via-black/25 to-black/70"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 -z-20 h-32 bg-gradient-to-b from-transparent to-background"
+              />
+            </>
+          ) : (
+            <>
+              <div
+                className="brand-aurora absolute inset-0 -z-20 opacity-80"
+                aria-hidden
+              />
+              <div
+                className="bg-grid absolute inset-0 -z-10 opacity-50"
+                aria-hidden
+              />
+            </>
+          );
+        })()}
+
+        <div className="relative mx-auto flex min-h-[60vh] w-full max-w-4xl flex-col px-6 pt-24 pb-16 sm:px-8 sm:pt-28 sm:pb-20">
           <Breadcrumbs
             items={[
               { name: "Home", href: "/" },
               { name: pillar.title },
             ]}
+            tone="light"
             className="mb-6"
           />
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
-            {pillar.heroEyebrow}
-          </p>
-          <h1 className="text-display-tight animate-rise mt-3 text-balance text-3xl sm:text-4xl md:text-5xl">
-            {pillar.title}
-          </h1>
-          <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            {pillar.description}
-          </p>
-          <div className="mt-6">
-            <AuthorByline
-              updatedAt={updatedAt}
-              readingTimeMin={readingTimeMin}
-            />
+
+          <div className="animate-rise mt-auto max-w-3xl">
+            <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-white/85">
+              <span
+                aria-hidden
+                className="inline-block size-1.5 rounded-full bg-[var(--brand)]"
+              />
+              {pillar.heroEyebrow}
+            </p>
+            <h1 className="text-display-tight mt-5 text-balance text-4xl text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl lg:text-[4.5rem]">
+              {pillar.title}
+            </h1>
+            <p className="mt-5 text-pretty text-base leading-relaxed text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-lg md:text-xl">
+              {pillar.description}
+            </p>
+            <div className="mt-6 text-white/85 [&_*]:!text-white/85">
+              <AuthorByline
+                updatedAt={updatedAt}
+                readingTimeMin={readingTimeMin}
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -48,9 +48,8 @@ export const contact = {
     submitLabel: "Send",
   },
   direct: {
-    eyebrow: "Direct",
-    title: "Or just email.",
-    body: "If forms aren't your thing, write directly. Every email gets read, and corrections from real tanks always win against documentation.",
-    email: "mikee@dsg.co.za",
+    eyebrow: "Anything else",
+    title: "Other ways to reach us.",
+    body: "Both forms above land in the same inbox. Use the catalogue feedback form for care corrections and species requests, and the partnership form for brand or press inquiries. Every message gets read.",
   },
 } as const;

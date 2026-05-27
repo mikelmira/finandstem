@@ -19,7 +19,7 @@ export const legal = {
       },
       {
         heading: "Your rights",
-        body: "You can request access to, correction of, or deletion of any data we hold by writing to mikee@dsg.co.za — we'll process it within 14 days. POPIA (South Africa) and GDPR (EU) rights apply where you live.",
+        body: "You can request access to, correction of, or deletion of any data we hold via the contact form at /contact — we process requests within 14 days. POPIA (South Africa) and GDPR (EU) rights apply where you live.",
       },
       {
         heading: "Cookies",
@@ -31,7 +31,7 @@ export const legal = {
       },
       {
         heading: "Contact",
-        body: "Privacy questions go to mikee@dsg.co.za.",
+        body: "Privacy questions reach us via the contact form at /contact.",
       },
     ],
   },

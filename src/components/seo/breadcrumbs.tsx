@@ -1,10 +1,17 @@
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 import type { CrumbItem } from "@/lib/seo";
+import { cn } from "@/lib/utils";
 
 interface BreadcrumbsProps {
   items: ReadonlyArray<CrumbItem>;
   className?: string;
+  /**
+   * `"light"` renders the breadcrumb in white/light tones so it reads
+   * legibly when sitting on top of a dark hero photo. Defaults to the
+   * standard muted-foreground colour used on plain backgrounds.
+   */
+  tone?: "default" | "light";
 }
 
 /**
@@ -12,14 +19,16 @@ interface BreadcrumbsProps {
  * JSON-LD graph for the BreadcrumbList structured data Google needs to render
  * site-link-style breadcrumbs in SERPs.
  */
-export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
+export function Breadcrumbs({ items, className, tone = "default" }: BreadcrumbsProps) {
+  const isLight = tone === "light";
   return (
     <nav
       aria-label="Breadcrumb"
-      className={
-        "flex items-center text-sm text-muted-foreground" +
-        (className ? ` ${className}` : "")
-      }
+      className={cn(
+        "flex items-center text-sm",
+        isLight ? "text-white/75" : "text-muted-foreground",
+        className,
+      )}
     >
       <ol className="flex flex-wrap items-center gap-1.5">
         {items.map((item, idx) => {
@@ -33,7 +42,10 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
               {idx === 0 && item.href === "/" ? (
                 <Link
                   href={item.href}
-                  className="press inline-flex items-center gap-1 transition-colors hover:text-foreground"
+                  className={cn(
+                    "press inline-flex items-center gap-1 transition-colors",
+                    isLight ? "hover:text-white" : "hover:text-foreground",
+                  )}
                 >
                   <Home className="size-3.5" aria-hidden />
                   <span className="sr-only">{item.name}</span>
@@ -41,22 +53,29 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
               ) : item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="press transition-colors hover:text-foreground"
+                  className={cn(
+                    "press transition-colors",
+                    isLight ? "hover:text-white" : "hover:text-foreground",
+                  )}
                 >
                   {item.name}
                 </Link>
               ) : (
                 <span
-                  className={
-                    isLast ? "font-medium text-foreground" : undefined
-                  }
+                  className={cn(
+                    "font-medium",
+                    isLast && (isLight ? "text-white" : "text-foreground"),
+                  )}
                 >
                   {item.name}
                 </span>
               )}
               {!isLast && (
                 <ChevronRight
-                  className="size-3.5 text-muted-foreground/60"
+                  className={cn(
+                    "size-3.5",
+                    isLight ? "text-white/50" : "text-muted-foreground/60",
+                  )}
                   aria-hidden
                 />
               )}
