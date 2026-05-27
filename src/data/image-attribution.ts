@@ -135,20 +135,19 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bacopa_caroliniana"
   },
-  "bacopa-monnieri": {
-    "alt": "Bacopa Monnieri (Bacopa monnieri)",
-    "author": "Forest & Kim Starr",
+  "bacopa-monnieri":   {
+    "alt": "Bacopa monnieri growing as a planted-aquarium foreground species",
+    "author": "Izabela1958",
     "category": "plants",
-    "credit": "Plants of Hawaii, Image 010818-0007 from http://www.starrenvironmental.com/plants/images/image/?q=010818-0007",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Starr_010818-0007_Bacopa_monnieri.jpg",
-    "fileTitle": "File:Starr_010818-0007_Bacopa_monnieri.jpg",
-    "height": 900,
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "credit": "",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Bacopa%20monnieri%20aquarium%20plant.jpg",
+    "fileTitle": "File:Bacopa monnieri aquarium plant.jpg",
+    "height": 480,
+    "license": "CC BY-SA 4.0",
     "slug": "bacopa-monnieri",
     "src": "/images/catalogue/plants/bacopa-monnieri.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bacopa_monnieri"
+    "width": 640,
+    "wikipediaUrl": ""
   },
   "bamboo-shrimp": {
     "alt": "Bamboo / Wood Shrimp (Atyopsis moluccensis)",
@@ -373,20 +372,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Celestial_pearl_danio"
   },
-  "chain-sword": {
-    "alt": "Pygmy Chain Sword (Helanthium tenellum)",
-    "author": "USDA-NRCS PLANTS Database / Britton, N.L., and A. Brown. 1913. An illustrated flora of the northern United States, Canada and the British Possessions. Vol. 1: 95.",
-    "category": "plants",
-    "credit": "http://plants.usda.gov/java/profile?symbol=ECTE2",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Echinodorus_tenellus_BB-1913.jpg",
-    "fileTitle": "File:Echinodorus tenellus BB-1913.jpg",
-    "height": 900,
-    "license": "Public domain",
-    "slug": "chain-sword",
-    "src": "/images/catalogue/plants/chain-sword.jpg",
-    "width": 600,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Helanthium"
-  },
   "cherry-shrimp": {
     "alt": "Red Cherry Shrimp (Neocaridina davidi)",
     "author": "TheJammingYam ( talk )",
@@ -507,20 +492,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1280,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dwarf_gourami"
   },
-  "dwarf-hairgrass": {
-    "alt": "Dwarf Hairgrass (Eleocharis parvula)",
-    "author": "Robert H. Mohlenbrock",
-    "category": "plants",
-    "credit": "http://plants.usda.gov/java/largeImage?imageID=elpa5_002_ahp.tif",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Eleocharis_parvula_NRCS-1.jpg",
-    "fileTitle": "File:Eleocharis_parvula_NRCS-1.jpg",
-    "height": 901,
-    "license": "Public domain",
-    "slug": "dwarf-hairgrass",
-    "src": "/images/catalogue/plants/dwarf-hairgrass.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Eleocharis_parvula"
-  },
   "ember-tetra": {
     "alt": "Ember Tetra (Hyphessobrycon amandae)",
     "author": "Klaus Rudloff",
@@ -579,21 +550,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/shrimp/ghost-shrimp.jpg",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Palaemonetes_paludosus"
-  },
-  "glossostigma-elatinoides": {
-    "alt": "Glossostigma Elatinoides (Glossostigma elatinoides)",
-    "author": "Murray Fagg",
-    "category": "plants",
-    "credit": "https://biocache.ala.org.au/occurrences/2a6fa953-f5eb-4074-a5ca-c8c6a05ceb35",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Glossostigma_elatinoides_flower.jpg",
-    "fileTitle": "File:Glossostigma elatinoides flower.jpg",
-    "height": 562,
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "slug": "glossostigma-elatinoides",
-    "src": "/images/catalogue/plants/glossostigma-elatinoides.jpg",
-    "width": 750,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Glossostigma_elatinoides"
   },
   "guppy": {
     "alt": "Guppy (Poecilia reticulata)",
@@ -698,20 +654,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Java_fern"
   },
-  "java-fern-trident": {
-    "alt": "Java Fern 'Trident' (Microsorum pteropus 'Trident')",
-    "author": "Tsunamicarlos at English Wikipedia",
-    "category": "plants",
-    "credit": "Transferred from en.wikipedia to Commons. Transfer was stated to be made by User:Soulkeeper .",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Microsorum_pteropus.jpg",
-    "fileTitle": "File:Microsorum_pteropus.jpg",
-    "height": 530,
-    "license": "Public domain",
-    "slug": "java-fern-trident",
-    "src": "/images/catalogue/plants/java-fern-trident.jpg",
-    "width": 476,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Java_fern"
-  },
   "java-moss": {
     "alt": "Java Moss (Taxiphyllum barbieri)",
     "author": "Unknown",
@@ -742,21 +684,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 800,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pelvicachromis_pulcher"
   },
-  "lilaeopsis-brasiliensis": {
-    "alt": "Brazilian Micro Sword (Lilaeopsis brasiliensis)",
-    "author": "Averater",
-    "category": "plants",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lilaeopsis_brasiliensis_flower_(3).jpg",
-    "fileTitle": "File:Lilaeopsis brasiliensis flower (3).jpg",
-    "height": 799,
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "slug": "lilaeopsis-brasiliensis",
-    "src": "/images/catalogue/plants/lilaeopsis-brasiliensis.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lilaeopsis"
-  },
   "limnophila-sessiliflora": {
     "alt": "Asian Ambulia (Limnophila sessiliflora)",
     "author": "kajuko",
@@ -772,21 +699,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 784,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Limnophila_sessiliflora"
   },
-  "lobelia-cardinalis-mini": {
-    "alt": "Lobelia Cardinalis 'Mini' (Lobelia cardinalis 'Mini')",
-    "author": "Denis Barthel",
-    "category": "plants",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lobelia_cardinalis_Belize_1.jpg",
-    "fileTitle": "File:Lobelia cardinalis Belize 1.jpg",
-    "height": 1800,
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "slug": "lobelia-cardinalis-mini",
-    "src": "/images/catalogue/plants/lobelia-cardinalis-mini.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lobelia_cardinalis"
-  },
   "ludwigia-repens": {
     "alt": "Ludwigia Repens (Ludwigia repens)",
     "author": "Show_ryu",
@@ -800,36 +712,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/plants/ludwigia-repens.jpg",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ludwigia_repens"
-  },
-  "ludwigia-super-red": {
-    "alt": "Ludwigia Super Red (Ludwigia palustris 'Super Red')",
-    "author": "Forest & Kim Starr",
-    "category": "plants",
-    "credit": "Plants of Hawaii, Image 070515-7067 from http://www.hear.org/starr/plants/images/image/?q=070515-7067",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Starr_070515-7067_Ludwigia_palustris.jpg",
-    "fileTitle": "File:Starr 070515-7067 Ludwigia palustris.jpg",
-    "height": 1600,
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-    "slug": "ludwigia-super-red",
-    "src": "/images/catalogue/plants/ludwigia-super-red.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ludwigia_palustris"
-  },
-  "marsilea-hirsuta": {
-    "alt": "Marsilea Hirsuta (Marsilea hirsuta)",
-    "author": "Macleay Grass Man",
-    "category": "plants",
-    "credit": "https://www.flickr.com/photos/73840284@N04/49911594838/",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Marsilea_hirsuta_plant_NC1.jpg",
-    "fileTitle": "File:Marsilea hirsuta plant NC1.jpg",
-    "height": 900,
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "slug": "marsilea-hirsuta",
-    "src": "/images/catalogue/plants/marsilea-hirsuta.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Marsilea_hirsuta"
   },
   "mini-christmas-moss": {
     "alt": "Mini Christmas Moss (Vesicularia sp.)",
@@ -845,36 +727,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/mosses/mini-christmas-moss.jpg",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesicularia_sp."
-  },
-  "monte-carlo": {
-    "alt": "Monte Carlo (Micranthemum tweediei)",
-    "author": "Spike",
-    "category": "plants",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Monaco_02.jpg",
-    "fileTitle": "File:Monaco 02.jpg",
-    "height": 544,
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "slug": "monte-carlo",
-    "src": "/images/catalogue/plants/monte-carlo.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Micranthemum_tweediei"
-  },
-  "needle-hairgrass": {
-    "alt": "Needle Hairgrass (Eleocharis acicularis)",
-    "author": "Kristian Peters -- Fabelfroh 07:18, 1 July 2007 (UTC)",
-    "category": "plants",
-    "credit": "photographed by Kristian Peters",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Eleocharis_acicularis.jpeg",
-    "fileTitle": "File:Eleocharis acicularis.jpeg",
-    "height": 900,
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-    "slug": "needle-hairgrass",
-    "src": "/images/catalogue/plants/needle-hairgrass.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Eleocharis_acicularis"
   },
   "neon-tetra": {
     "alt": "Neon Tetra (Paracheirodon innesi)",
@@ -951,20 +803,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum"
   },
-  "pearlweed": {
-    "alt": "Pearlweed (Hemianthus glomeratus)",
-    "author": "Britton, N.L., and A. Brown. 1913. An illustrated flora of the northern United States, Canada and the British Possessions. 3 vols. Charles Scribner's Sons, New York. Vol. 3: 197. Courtesy of Kentucky Native Plant Society. Scanned by Omnitek Inc.",
-    "category": "plants",
-    "credit": "USDA-NRCS PLANTS Database / Britton, N.L., and A. Brown. 1913. An illustrated flora of the northern United States, Canada and the British Possessions. 3 vols. Charles Scribner's Sons, New York. Vol. 3: 197.",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Micranthemum_micranthemoides_BB-1913.png",
-    "fileTitle": "File:Micranthemum micranthemoides BB-1913.png",
-    "height": 1452,
-    "license": "Public domain",
-    "slug": "pearlweed",
-    "src": "/images/catalogue/plants/pearlweed.png",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hemianthus"
-  },
   "phoenix-moss": {
     "alt": "Phoenix Moss / Fissidens (Fissidens fontanus)",
     "author": "Njmeyer03",
@@ -1040,21 +878,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mikrogeophagus_ramirezi"
   },
-  "ranunculus-inundatus": {
-    "alt": "Ranunculus Inundatus (Ranunculus inundatus)",
-    "author": "Harry Rose from Dungog, Australia",
-    "category": "plants",
-    "credit": "Ranunculus inundatus leaf5",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ranunculus_inundatus_leaf5_-_Flickr_-_Macleay_Grass_Man.jpg",
-    "fileTitle": "File:Ranunculus inundatus leaf5 - Flickr - Macleay Grass Man.jpg",
-    "height": 900,
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "slug": "ranunculus-inundatus",
-    "src": "/images/catalogue/plants/ranunculus-inundatus.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ranunculus_inundatus"
-  },
   "red-tail-shark": {
     "alt": "Red-Tailed Black Shark (Epalzeorhynchos bicolor)",
     "author": "Astellar87",
@@ -1098,21 +921,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/mosses/riccia-fluitans.jpg",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Riccia_fluitans"
-  },
-  "rotala-hra": {
-    "alt": "Rotala 'H'ra' (Rotala rotundifolia 'H'ra')",
-    "author": "Vinayaraj",
-    "category": "plants",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Rotala_rotundifolia.jpg",
-    "fileTitle": "File:Rotala_rotundifolia.jpg",
-    "height": 1428,
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "slug": "rotala-hra",
-    "src": "/images/catalogue/plants/rotala-hra.jpg",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rotala_rotundifolia"
   },
   "rotala-rotundifolia": {
     "alt": "Rotala Rotundifolia (Rotala rotundifolia)",
