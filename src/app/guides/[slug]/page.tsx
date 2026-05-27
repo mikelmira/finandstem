@@ -116,7 +116,7 @@ export default async function GuidePage({ params }: RouteParams) {
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
             {kindLabel(fm.kind)}
           </p>
-          <h1 className="text-display-tight mt-3 text-balance text-3xl sm:text-4xl md:text-5xl">
+          <h1 className="text-display-tight mt-3 text-balance text-3xl leading-[1.2] sm:text-4xl md:text-5xl">
             {fm.title}
           </h1>
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">

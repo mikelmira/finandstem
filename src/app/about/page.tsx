@@ -70,11 +70,14 @@ export default function AboutPage() {
         />
         <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {about.references.items.map((item) => (
-            <article
+            <a
               key={item.name}
-              className="glass glass-edge flex flex-col gap-2 rounded-2xl p-6"
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass glass-edge lift group flex flex-col gap-2 rounded-2xl p-6 no-underline transition-colors hover:border-[var(--brand)]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              <h3 className="text-base font-semibold tracking-tight">
+              <h3 className="text-base font-semibold tracking-tight transition-colors group-hover:text-[var(--brand)]">
                 {item.name}
               </h3>
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
@@ -83,7 +86,7 @@ export default function AboutPage() {
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {item.note}
               </p>
-            </article>
+            </a>
           ))}
         </div>
       </SectionShell>

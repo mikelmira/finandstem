@@ -139,7 +139,7 @@ export function PageHero({
 
           <h1
             className={cn(
-              "text-display-tight mt-5 text-balance",
+              "text-display-tight mt-5 text-balance leading-[1.2]",
               hasPhoto
                 ? "text-4xl text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl lg:text-[4.5rem]"
                 : "text-4xl text-foreground sm:text-5xl md:text-[3.5rem]",

@@ -224,7 +224,7 @@ export function EntryDetail({
                 </span>
               )}
             </div>
-            <h1 className="text-display-tight mt-5 text-balance text-5xl text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+            <h1 className="text-display-tight mt-5 text-balance text-5xl leading-[1.2] text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
               {entry.commonName}
             </h1>
             <p className="mt-5 text-pretty text-xl italic text-white/85 drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] sm:text-2xl md:text-3xl">

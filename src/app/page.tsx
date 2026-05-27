@@ -31,10 +31,6 @@ export default function Page() {
             value: "3",
             label: "Planning tools — Planner · Compare · Compatibility",
           },
-          {
-            value: "6",
-            label: "Pillar guides for the planted aquascape",
-          },
         ]}
       />
       <Pillars {...home.pillars} />

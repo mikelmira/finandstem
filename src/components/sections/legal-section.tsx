@@ -24,7 +24,7 @@ export function LegalSection({
       {breadcrumb && breadcrumb.length > 0 && (
         <Breadcrumb items={breadcrumb} className="mb-6" />
       )}
-      <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+      <h1 className="text-4xl font-semibold leading-[1.2] tracking-tight sm:text-5xl">
         {title}
       </h1>
       <p className="mt-2 text-sm text-muted-foreground">

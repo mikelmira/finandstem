@@ -128,7 +128,7 @@ export function PillarPage({ pillar }: PillarPageProps) {
               />
               {pillar.heroEyebrow}
             </p>
-            <h1 className="text-display-tight mt-5 text-balance text-4xl text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-display-tight mt-5 text-balance text-4xl leading-[1.2] text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl lg:text-[4.5rem]">
               {pillar.title}
             </h1>
             <p className="mt-5 text-pretty text-base leading-relaxed text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-lg md:text-xl">
