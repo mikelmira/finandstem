@@ -66,6 +66,12 @@ export const atmosphere = {
     photographer: "Aquarium Products India",
     source: "https://unsplash.com/photos/Z6yUFdhuz-s",
   },
+  snailsOnBacopa: {
+    src: "/images/atmosphere/snails-on-bacopa.jpg",
+    alt: "Red ramshorn snails climbing a Bacopa stem in a planted aquarium",
+    photographer: "Josephina Kolpachnikof",
+    source: "https://unsplash.com/photos/l14vjcZBerc",
+  },
 } as const satisfies Record<string, AtmosphereImage>;
 
 export type AtmosphereKey = keyof typeof atmosphere;
