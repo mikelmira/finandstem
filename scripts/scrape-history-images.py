@@ -65,6 +65,28 @@ TARGETS = [
         "Positive nihilism-2, 2021 IIAC R.25, RFLAC R.14.jpg",
         "An international-contest aquascape that placed at IIAC 2021 and RFLAC 2021 — typical of the contest-aesthetic now dominating global aquascaping",
     ),
+    # ADA's Florestas Submersas — additional angles and details
+    (
+        "florestas-submersas-detail",
+        "Florestas Submersas by Takashi Amano (31995077867).jpg",
+        "A detail view of Takashi Amano's Florestas Submersas installation at Oceanário de Lisboa",
+    ),
+    (
+        "florestas-submersas-fish",
+        "Oceanario 2018 5.jpg",
+        "Schooling fish and aquatic plants inside ADA's Florestas Submersas Nature Aquarium at the Lisbon Oceanarium",
+    ),
+    (
+        "florestas-submersas-school",
+        "Oceanario 2018 6.jpg",
+        "A school of fish in front of aquatic plant masses inside the Florestas Submersas installation",
+    ),
+    # Dutch-style proxy — densely planted community aquarium in the NBAT tradition
+    (
+        "dutch-style-community-tank",
+        "Fish Aquarium with Vallisneria.jpg",
+        "A densely planted community freshwater aquarium with Vallisneria — close to the Dutch NBAT style of the 1950s and 1960s",
+    ),
 ]
 
 

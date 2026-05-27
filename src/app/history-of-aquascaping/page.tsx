@@ -4,6 +4,7 @@ import Image from "next/image";
 import {
   ArrowRight,
   ArrowUpRight,
+  Building2,
   Quote,
   Trophy,
   ExternalLink as ExternalLinkIcon,
@@ -19,7 +20,6 @@ import { history, type HistoryImage } from "@/content/history";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
-import { AuthorByline } from "@/components/seo/author-byline";
 import { Faq } from "@/components/seo/faq";
 import { Sources } from "@/components/seo/sources";
 import { cn } from "@/lib/utils";
@@ -131,12 +131,17 @@ function jsonLd() {
 }
 
 export default function HistoryOfAquascapingPage() {
-  const { hero, tldr, chapters, contests, timeline, faqs, sources } = history;
-  const wordCount = chapters.reduce(
-    (acc, c) => acc + c.body.join(" ").split(/\s+/).filter(Boolean).length,
-    0,
-  );
-  const readingTimeMin = Math.max(1, Math.round(wordCount / 220));
+  const {
+    hero,
+    tldr,
+    chapters,
+    florestasGallery,
+    studios,
+    contests,
+    timeline,
+    faqs,
+    sources,
+  } = history;
 
   return (
     <>
@@ -184,12 +189,6 @@ export default function HistoryOfAquascapingPage() {
             <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-lg md:text-xl">
               {hero.subtitle}
             </p>
-            <div className="mt-6 text-white/85 [&_*]:!text-white/85">
-              <AuthorByline
-                updatedAt={hero.updatedAt}
-                readingTimeMin={readingTimeMin}
-              />
-            </div>
           </div>
         </div>
 
@@ -225,6 +224,66 @@ export default function HistoryOfAquascapingPage() {
       {chapters.map((chapter, i) => (
         <Chapter key={chapter.number} chapter={chapter} flip={i % 2 === 1} />
       ))}
+
+      {/* Florestas Submersas gallery — three views of Amano's largest work,
+          linking out to ADA's official project page. */}
+      <SectionShell className="border-t border-border/60 bg-muted/30">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
+            Inside Florestas Submersas
+          </p>
+          <h2 className="text-display-tight mt-4 text-balance text-3xl leading-[1.2] sm:text-4xl">
+            ADA's biggest Nature Aquarium, in three views
+          </h2>
+          <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            {florestasGallery.intro}
+          </p>
+          <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {florestasGallery.images.map((img) => (
+              <li key={img.src} className="group flex flex-col gap-3">
+                <a
+                  href={img.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${img.alt} on Wikimedia Commons`}
+                  className="relative block aspect-[4/5] overflow-hidden rounded-2xl border border-border/60"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+                  />
+                </a>
+                {img.caption && (
+                  <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
+                    {img.caption}
+                  </p>
+                )}
+                <a
+                  href={img.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] text-muted-foreground/85 transition-colors hover:text-[var(--brand)]"
+                >
+                  Photo: {img.author} · {img.license}
+                  <ExternalLinkIcon className="size-3" aria-hidden />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={florestasGallery.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="press mt-8 inline-flex items-center gap-1.5 rounded-full border border-border bg-background/70 px-5 py-2.5 text-sm font-medium backdrop-blur transition-colors hover:border-[var(--brand)]/40"
+          >
+            {florestasGallery.hrefLabel}
+            <ArrowUpRight className="size-4" aria-hidden />
+          </a>
+        </div>
+      </SectionShell>
 
       {/* Contests — three big international competitions with images + links */}
       <SectionShell className="border-t border-border/60">
@@ -365,6 +424,62 @@ export default function HistoryOfAquascapingPage() {
       {/* Sources */}
       <SectionShell className="!pt-0" containerClassName="max-w-3xl">
         <Sources items={sources} />
+      </SectionShell>
+
+      {/* Studios & associations — the three organisations that shaped the hobby */}
+      <SectionShell className="!pt-0">
+        <div className="mx-auto max-w-5xl">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex size-9 items-center justify-center rounded-full bg-[var(--brand)]/12 text-[var(--brand)]">
+              <Building2 className="size-4" aria-hidden />
+            </span>
+            <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
+              Studios & associations
+            </p>
+          </div>
+          <h2 className="text-display-tight mt-5 text-balance text-3xl leading-[1.2] sm:text-4xl">
+            The organisations that built the discipline
+          </h2>
+          <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            One Japanese studio, one Dutch society, one American association —
+            most of the rules, styles, products, and contests aquascapers use
+            today trace back to these three.
+          </p>
+          <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {studios.map((s) => (
+              <li key={s.slug}>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass glass-edge lift group flex h-full flex-col gap-3 rounded-2xl p-6 no-underline transition-colors hover:border-[var(--brand)]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
+                      Est. {s.founded}
+                    </span>
+                    <span className="text-[10px] text-muted-foreground">
+                      {s.country}
+                    </span>
+                  </div>
+                  <h3 className="text-display-tight text-lg leading-snug text-foreground transition-colors group-hover:text-[var(--brand)]">
+                    {s.name}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {s.blurb}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-1 text-xs font-medium text-[var(--brand)] transition-colors group-hover:text-foreground">
+                    Visit website
+                    <ArrowUpRight
+                      className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      aria-hidden
+                    />
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </SectionShell>
 
       {/* Footer CTA */}

@@ -54,6 +54,15 @@ export interface ContestStat {
   value: string;
 }
 
+export interface Studio {
+  slug: string;
+  name: string;
+  founded: string;
+  country: string;
+  blurb: string;
+  url: string;
+}
+
 export interface Contest {
   slug: string;
   name: string;
@@ -145,6 +154,47 @@ const iaplcEntry: HistoryImage = {
     "\"Time\" — a 2021 IAPLC entry by Cho Jaesun. The IAPLC receives over 1,500 entries from more than 70 countries each year.",
 };
 
+const florestasDetail: HistoryImage = {
+  src: "/images/history/florestas-submersas-detail.jpg",
+  alt: "A detail of Takashi Amano's Florestas Submersas installation at Oceanário de Lisboa",
+  author: "Marco Albuquerque",
+  license: "Public domain",
+  source:
+    "https://commons.wikimedia.org/wiki/File:Florestas_Submersas_by_Takashi_Amano_(31995077867).jpg",
+  caption: "A detail of Florestas Submersas — driftwood, dense planting, deep light.",
+};
+
+const florestasFish: HistoryImage = {
+  src: "/images/history/florestas-submersas-fish.jpg",
+  alt: "Schooling fish swimming over aquatic plants inside Amano's Florestas Submersas",
+  author: "Pierre Goiffon",
+  license: "CC BY-SA 4.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+  source: "https://commons.wikimedia.org/wiki/File:Oceanario_2018_5.jpg",
+  caption: "Schooling fish move through the planted hardscape — the installation is a true ecosystem.",
+};
+
+const florestasSchool: HistoryImage = {
+  src: "/images/history/florestas-submersas-school.jpg",
+  alt: "A school of small fish moving through the Florestas Submersas planted aquarium",
+  author: "Pierre Goiffon",
+  license: "CC BY-SA 4.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+  source: "https://commons.wikimedia.org/wiki/File:Oceanario_2018_6.jpg",
+  caption: "Yellow accent fish in front of dense plant masses — Amano's late style at its biggest scale.",
+};
+
+const dutchCommunityTank: HistoryImage = {
+  src: "/images/history/dutch-style-community-tank.jpg",
+  alt: "A densely planted community aquarium with Vallisneria — close to the Dutch NBAT style",
+  author: "Damitr",
+  license: "CC BY-SA 4.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+  source: "https://commons.wikimedia.org/wiki/File:Fish_Aquarium_with_Vallisneria.jpg",
+  caption:
+    "A densely planted community tank in the Dutch tradition — Vallisneria streets, mixed species, fish chosen to complement the plants.",
+};
+
 const internationalContestScape: HistoryImage = {
   src: "/images/history/international-contest-scape.jpg",
   alt: "A contest aquascape — placed at the IIAC 2021 and RFLAC 2021 international competitions",
@@ -204,7 +254,7 @@ export const history = {
         "The rules were strict. A Dutch tank needed at least ten plant species per 100 litres. Stems were arranged in straight or curving streets running diagonally from front to back. Coloured plants were placed at the focal point. Each species occupied a defined block of space and was not allowed to grow into another's territory. The aesthetic was formal, controlled, almost architectural.",
         "This was the first place in the history of fishkeeping where the arrangement of the plants became the point of the tank.",
       ],
-      figure: shrimpTank,
+      figure: dutchCommunityTank,
       pullQuote:
         "Dutch aquarists planted densely across the entire substrate, arranging different species into plant streets with deliberate colour and height contrast.",
     },
@@ -341,6 +391,44 @@ export const history = {
       ],
     },
   ] satisfies ReadonlyArray<HistoryChapter>,
+
+  florestasGallery: {
+    intro:
+      "Florestas Submersas opened at the Oceanário de Lisboa in April 2015 and remains the largest Nature Aquarium installation ever built. 160,000 litres, 78 metres of viewing glass, more than 40 plant species, schooling fish, and Amano's signature use of driftwood as the structural spine of the scene. It was his final major project — he died four months later. ADA still maintains the installation as a permanent tribute.",
+    href: "https://www.adana.co.jp/en/lisbon/",
+    hrefLabel: "Read ADA's project page for Florestas Submersas",
+    images: [florestasDetail, florestasFish, florestasSchool] as ReadonlyArray<HistoryImage>,
+  },
+
+  studios: [
+    {
+      slug: "ada",
+      name: "Aqua Design Amano (ADA)",
+      founded: "1982",
+      country: "Niigata, Japan",
+      blurb:
+        "Takashi Amano's company. Originator of the Nature Aquarium style, Iwagumi, the modern rimless tank, active aquasoil, the lily pipe, and pressurised CO₂ for the hobbyist. The Nature Aquarium Gallery in Niigata is still open to visitors.",
+      url: "https://www.adana.co.jp/en/",
+    },
+    {
+      slug: "nbat",
+      name: "Nederlandse Bond Aqua Terra (NBAT)",
+      founded: "1930",
+      country: "Netherlands",
+      blurb:
+        "The Dutch Society for Aquarists. Codified the original Dutch Aquascape rules in 1956 and ran the annual home-inspection Huiskeuring contest from 1964. The first organisation to treat plant arrangement as the discipline.",
+      url: "https://www.nbat.nl",
+    },
+    {
+      slug: "aga",
+      name: "Aquatic Gardeners Association",
+      founded: "1985",
+      country: "United States",
+      blurb:
+        "The first Western organisation dedicated to planted aquariums. Launched the international AGA Aquascaping Contest in 2000 — one year before the IAPLC — and still hosts every submission since then in a public online archive.",
+      url: "https://www.aquatic-gardeners.org",
+    },
+  ] satisfies ReadonlyArray<Studio>,
 
   contests: [
     {

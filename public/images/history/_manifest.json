@@ -79,5 +79,41 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Positive%20nihilism-2%2C%202021%20IIAC%20R.25%2C%20RFLAC%20R.14.jpg"
+  },
+  {
+    "slug": "florestas-submersas-detail",
+    "src": "/images/history/florestas-submersas-detail.jpg",
+    "alt": "A detail view of Takashi Amano's Florestas Submersas installation at Ocean\u00e1rio de Lisboa",
+    "author": "Marco Albuquerque from Macau, China",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Florestas%20Submersas%20by%20Takashi%20Amano%20%2831995077867%29.jpg"
+  },
+  {
+    "slug": "florestas-submersas-fish",
+    "src": "/images/history/florestas-submersas-fish.jpg",
+    "alt": "Schooling fish and aquatic plants inside ADA's Florestas Submersas Nature Aquarium at the Lisbon Oceanarium",
+    "author": "Pierre Goiffon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oceanario%202018%205.jpg"
+  },
+  {
+    "slug": "florestas-submersas-school",
+    "src": "/images/history/florestas-submersas-school.jpg",
+    "alt": "A school of fish in front of aquatic plant masses inside the Florestas Submersas installation",
+    "author": "Pierre Goiffon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oceanario%202018%206.jpg"
+  },
+  {
+    "slug": "dutch-style-community-tank",
+    "src": "/images/history/dutch-style-community-tank.jpg",
+    "alt": "A densely planted community freshwater aquarium with Vallisneria \u2014 close to the Dutch NBAT style of the 1950s and 1960s",
+    "author": "Damitr",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish%20Aquarium%20with%20Vallisneria.jpg"
   }
 ]
