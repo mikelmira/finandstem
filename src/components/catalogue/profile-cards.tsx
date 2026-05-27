@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { getHabitat } from "@/data/habitats";
+import { StarRating, cleanupCrewLabel } from "@/components/catalogue/star-rating";
 import type {
   FishEntry,
   MossEntry,
@@ -19,12 +20,16 @@ import type {
 
 interface ProfileItemProps {
   label: string;
-  value: string;
+  value: React.ReactNode;
   helper?: string;
   className?: string;
 }
 
 function ProfileItem({ label, value, helper, className }: ProfileItemProps) {
+  // String values render in the standard typographic style. Anything
+  // richer (e.g. a StarRating) is rendered inline so callers can drop
+  // in their own composition without losing the row's label + helper
+  // chrome.
   return (
     <div
       className={cn(
@@ -35,9 +40,15 @@ function ProfileItem({ label, value, helper, className }: ProfileItemProps) {
       <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
         {label}
       </span>
-      <p className="text-sm font-semibold leading-tight text-foreground sm:text-base">
-        {value}
-      </p>
+      {typeof value === "string" ? (
+        <p className="text-sm font-semibold leading-tight text-foreground sm:text-base">
+          {value}
+        </p>
+      ) : (
+        <div className="text-sm font-semibold leading-tight text-foreground sm:text-base">
+          {value}
+        </div>
+      )}
       {helper && (
         <p className="text-[11px] leading-snug text-muted-foreground/80">
           {helper}
@@ -121,8 +132,13 @@ function ShrimpProfile({ entry: s }: { entry: ShrimpEntry }) {
         helper={s.feedingNotes}
       />
       <ProfileItem
-        label="Algae grazing"
-        value={`${s.algaeEaterRating} / 5`}
+        label="Clean-up crew"
+        value={
+          <StarRating
+            value={s.algaeEaterRating}
+            label={cleanupCrewLabel(s.algaeEaterRating)}
+          />
+        }
       />
       <ProfileItem label="Breeding" value={cap(s.breeding)} />
       <ProfileItem label="Lifespan" value={`${s.lifespan} yrs`} />
@@ -145,8 +161,13 @@ function SnailProfile({ entry: s }: { entry: SnailEntry }) {
         helper={s.feedingNotes}
       />
       <ProfileItem
-        label="Algae grazing"
-        value={`${s.algaeEaterRating} / 5`}
+        label="Clean-up crew"
+        value={
+          <StarRating
+            value={s.algaeEaterRating}
+            label={cleanupCrewLabel(s.algaeEaterRating)}
+          />
+        }
       />
       <ProfileItem label="Breeding" value={s.breeding} />
       <ProfileItem label="Lifespan" value={`${s.lifespan} yrs`} />

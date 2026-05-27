@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { snails, findSnail } from "@/data";
 import { EntryDetail } from "@/components/catalogue/entry-detail";
 import type { Stat } from "@/components/catalogue/stat-grid";
+import { StarRating, cleanupCrewLabel } from "@/components/catalogue/star-rating";
 import { speciesMetadata } from "@/lib/species-metadata";
 
 interface RouteParams {
@@ -33,7 +34,15 @@ export default async function SnailDetailPage({ params }: RouteParams) {
     { label: "Temperature", value: `${entry.tempRange} °C` },
     { label: "pH", value: entry.phRange },
     { label: "dGH", value: entry.dghRange },
-    { label: "Algae rating", value: `${entry.algaeEaterRating} / 5` },
+    {
+      label: "Clean-up crew",
+      value: (
+        <StarRating
+          value={entry.algaeEaterRating}
+          label={cleanupCrewLabel(entry.algaeEaterRating)}
+        />
+      ),
+    },
   ];
 
   const details = [

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { shrimp, findShrimp } from "@/data";
 import { EntryDetail } from "@/components/catalogue/entry-detail";
 import type { Stat } from "@/components/catalogue/stat-grid";
+import { StarRating, cleanupCrewLabel } from "@/components/catalogue/star-rating";
 import { speciesMetadata } from "@/lib/species-metadata";
 
 interface RouteParams {
@@ -35,7 +36,15 @@ export default async function ShrimpDetailPage({ params }: RouteParams) {
     { label: "pH", value: entry.phRange },
     { label: "Hardness", value: `${entry.dghRange} dGH` },
     { label: "TDS", value: `${entry.tdsRange} ppm` },
-    { label: "Lifespan", value: `${entry.lifespan} yrs` },
+    {
+      label: "Clean-up crew",
+      value: (
+        <StarRating
+          value={entry.algaeEaterRating}
+          label={cleanupCrewLabel(entry.algaeEaterRating)}
+        />
+      ),
+    },
   ];
 
   const details = [
@@ -43,8 +52,8 @@ export default async function ShrimpDetailPage({ params }: RouteParams) {
     { heading: "Feeding", body: entry.feedingNotes },
     { heading: "Breeding", body: entry.breeding },
     {
-      heading: "Algae grazing",
-      body: `${entry.algaeEaterRating}/5 — ${algaeLabel(entry.algaeEaterRating)}`,
+      heading: "Clean-up crew",
+      body: `${entry.algaeEaterRating}/5 — ${cleanupCrewLabel(entry.algaeEaterRating)}. ${algaeLabel(entry.algaeEaterRating)}.`,
     },
   ];
 
