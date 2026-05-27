@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArrowUpRight } from "lucide-react";
 import { about } from "@/content/about";
 import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
@@ -86,6 +87,13 @@ export default function AboutPage() {
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {item.note}
               </p>
+              <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-[var(--brand)] transition-colors group-hover:text-foreground">
+                Visit website
+                <ArrowUpRight
+                  className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  aria-hidden
+                />
+              </span>
             </a>
           ))}
         </div>
