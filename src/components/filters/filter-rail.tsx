@@ -90,7 +90,12 @@ export function FilterRail({
       <aside
         id="filter-rail"
         className={cn(
-          "glass glass-edge order-2 animate-fade-up rounded-2xl p-5 lg:order-1 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto",
+          // Filter rail scrolls with the page (no internal scrollbar) so
+          // the green card always covers every section, and so the lower
+          // filters are reachable even when their stack is taller than
+          // the viewport. We drop the sticky+max-h pattern that previously
+          // truncated the bottom of the rail on tall mobile views.
+          "glass glass-edge order-2 animate-fade-up rounded-2xl p-5 lg:order-1",
           !mobileOpen && "hidden lg:block",
         )}
         aria-label="Filters"

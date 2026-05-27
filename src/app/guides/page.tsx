@@ -42,7 +42,7 @@ export default function GuidesIndexPage() {
       <PageHero
         eyebrow="Guides"
         title="Long-form answers to the questions aquascapers actually ask."
-        subtitle="Every guide here is the same shape: lead with the direct answer, walk through the reasoning, link out to the catalogue species mentioned, and cite real sources. Written for aquascapers anywhere — not for SEO machines."
+        subtitle="Every guide here is the same shape: lead with the direct answer, walk through the reasoning, link out to the catalogue species mentioned, and cite real sources. Written for aquascapers anywhere."
         breadcrumb={[{ label: "Guides" }]}
       />
 

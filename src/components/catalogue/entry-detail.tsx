@@ -17,6 +17,7 @@ import {
   CATEGORY_META,
   type CatalogueEntry,
   type CatalogueCategory,
+  type PlantEntry,
 } from "@/types/catalogue";
 import { Difficulty } from "@/components/catalogue/difficulty";
 import { CompareButton } from "@/components/catalogue/compare-button";
@@ -205,13 +206,24 @@ export function EntryDetail({
 
           {/* Bottom — title block, pushed down by mt-auto */}
           <div className="animate-rise mt-auto max-w-3xl">
-            <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-white/85">
-              <span
-                aria-hidden
-                className="size-1.5 rounded-full bg-[var(--brand)]"
-              />
-              {meta.singular}
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-white/85">
+                <span
+                  aria-hidden
+                  className="size-1.5 rounded-full bg-[var(--brand)]"
+                />
+                {meta.singular}
+              </span>
+              {/* Plant pages get a second pill calling out the growth form
+                  (stem, epiphyte, rosette, etc.) — instantly tells the
+                  reader what shape this plant takes in the tank without
+                  scrolling to the spec table. */}
+              {entry.category === "plants" && (
+                <span className="inline-flex items-center rounded-full border border-white/25 bg-white/15 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                  {distillPlantType((entry as PlantEntry).plantType)}
+                </span>
+              )}
+            </div>
             <h1 className="text-display-tight mt-5 text-balance text-5xl text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
               {entry.commonName}
             </h1>
@@ -769,6 +781,35 @@ const PILLAR_FOR_CATEGORY: Record<
     label: "complete guide to aquatic mosses",
   },
 };
+
+/**
+ * Distill a plant's compound `plantType` string into a single,
+ * aquascaper-friendly label for the hero pill. Examples:
+ *   "Rhizome / Epiphyte"      → "Epiphyte"
+ *   "Rosette / Runner"        → "Rosette"
+ *   "Stem / Floating-tolerant" → "Stem"
+ *   "Bulb / Rosette"          → "Bulb"
+ *   "Carpet / Runner"         → "Carpet"
+ *   "Floating"                → "Floating"
+ *
+ * Order matters — the most specific functional category wins (Floating
+ * before Carpet, Carpet before Stem, etc.) because plants like
+ * "Stem / Floating-tolerant" are still stems by behaviour. The check
+ * for genuine floaters uses an anchored regex so it doesn't accidentally
+ * match "floating-tolerant" inside a compound string.
+ */
+function distillPlantType(raw: string): string {
+  const t = raw.toLowerCase();
+  if (/^floating(\s|\/|$)/i.test(raw)) return "Floating";
+  if (t.includes("bulb")) return "Bulb";
+  if (t.includes("carpet")) return "Carpet";
+  if (t.includes("epiphyte")) return "Epiphyte";
+  if (t.includes("stem")) return "Stem";
+  if (t.includes("rosette")) return "Rosette";
+  if (t.includes("rhizome")) return "Rhizome";
+  if (t.includes("moss")) return "Moss";
+  return raw;
+}
 
 /** Dedupe gallery descriptionUrls for the Sources block. */
 function uniqueGalleryDescriptionUrls(
