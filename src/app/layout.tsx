@@ -89,10 +89,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: site.url,
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/fin-and-stem-logo.png",
-  },
+  // Favicon + apple-touch-icon emitted automatically by Next 16 via
+  // the file-system convention: src/app/icon.png and src/app/apple-icon.png.
   // Search-engine ownership verification. Each console reads its own meta tag.
   verification: {
     google: "133bZNW5jZs9SOy892fBwbJhyyRoYmtCWpquipIicD8",
