@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { SectionShell, SectionHeading } from "@/components/sections/section-shell";
 
 interface EthosProps {
@@ -10,18 +12,27 @@ interface EthosProps {
 /**
  * Ethos — the "what this site is" section on the homepage.
  *
- * Background is a looping underwater video (autoplay, muted, no audio).
- * A dark gradient overlay sits between the video and the content so the
- * white heading + glass card stay legible. The video is hidden for users
- * with `prefers-reduced-motion` via the Tailwind `motion-reduce:hidden`
- * utility — the section falls back to the dark overlay alone.
+ * Full-bleed looping underwater video as the background. No
+ * gradient overlays — the heading and body text rely on
+ * `drop-shadow` for legibility across whatever frame the video
+ * happens to be on. Glass card on the right already adapts to any
+ * backdrop.
  *
- * Layout: two-column on lg+ (heading on the left, glass-card list on
- * the right); single column stacked on mobile.
+ * Layout sizes the section to 90vh on desktop and ~70vh on mobile
+ * (clamped so the section never collapses below content height on
+ * small screens). Two-column grid on lg+ centred vertically inside
+ * the section; single column stacked on mobile.
+ *
+ * Video is hidden when `prefers-reduced-motion: reduce` is set; the
+ * section then falls back to the cream paper background.
  */
 export function Ethos({ eyebrow, title, body, points }: EthosProps) {
   return (
-    <SectionShell className="relative isolate overflow-hidden border-t border-border/60">
+    <SectionShell
+      className="relative isolate flex min-h-[70vh] items-center overflow-hidden border-t border-border/60 lg:min-h-[90vh]"
+      bleed
+      containerClassName="py-16 sm:py-20 lg:py-24"
+    >
       {/* Background video — covers the whole section, sits below all
           content. Autoplays muted on loop. */}
       <video
@@ -31,34 +42,26 @@ export function Ethos({ eyebrow, title, body, points }: EthosProps) {
         muted
         playsInline
         preload="metadata"
-        className="absolute inset-0 -z-30 size-full object-cover motion-reduce:hidden"
+        className="absolute inset-0 -z-10 size-full object-cover motion-reduce:hidden"
       >
         <source src="/videos/underwater-loop.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark gradient overlay — base layer that is always present, even
-          when the video is hidden by prefers-reduced-motion. */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-20 bg-gradient-to-b from-[var(--abyss)]/85 via-[var(--abyss)]/70 to-[var(--abyss)]/90"
-      />
-      {/* Top/bottom feather strips so the section blends back into the
-          cream-paper background of the surrounding page. */}
-      <div
-        aria-hidden
-        className="absolute inset-x-0 top-0 -z-10 h-16 bg-gradient-to-b from-background to-transparent"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 -z-10 h-16 bg-gradient-to-t from-background to-transparent"
-      />
-
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-        {/* Heading — text colour forced to white so it reads on the
-            video / overlay regardless of how SectionHeading styles
-            its children. */}
-        <div className="[&_*]:!text-white [&_p]:!text-white/90">
+        {/* Heading column — text colour forced to white with a
+            drop-shadow so it stays legible on any video frame,
+            without resorting to an overlay. */}
+        <div className="[&_h2]:!text-white [&_h2]:drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)] [&_p]:!text-white/95 [&_p]:drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] [&_span]:!text-white/85">
           <SectionHeading eyebrow={eyebrow} title={title} subtitle={body} />
+          <div className="mt-8">
+            <Link
+              href="/history-of-aquascaping"
+              className="press inline-flex items-center gap-1.5 rounded-full bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-[var(--brand)]/30 transition-all hover:-translate-y-0.5"
+            >
+              Read the history of aquascaping
+              <ArrowRight className="size-4" aria-hidden />
+            </Link>
+          </div>
         </div>
         <ul className="glass glass-edge space-y-4 rounded-2xl p-7 sm:p-8">
           {points.map((point, i) => (

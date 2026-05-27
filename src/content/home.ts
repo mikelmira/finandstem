@@ -8,7 +8,7 @@ export const home = {
     secondaryCta: { label: "Compatibility tool", href: "/compatibility" },
   },
   pillars: {
-    eyebrow: "Four pillars",
+    eyebrow: "Five pillars",
     title: "Stock smarter. Start anywhere.",
     items: [
       {
@@ -34,6 +34,12 @@ export const home = {
         slug: "mosses",
         body: "Java, Christmas, Flame, Phoenix, Fissidens, Süßwassertang and more. Attachment surface, typical use, trimming cadence, and the shape each one forms underwater.",
         sources: "Attachment · use · trimming",
+      },
+      {
+        title: "Snails",
+        slug: "snails",
+        body: "Nerites, mystery snails, ramshorns, MTS, assassins, rabbits. The algae crew, the substrate cleaners, the display species, and the ones that arrive uninvited.",
+        sources: "Algae crew · breeding · plant safety",
       },
     ],
   },

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { SectionShell, SectionHeading } from "@/components/sections/section-shell";
 import { PillButton } from "@/components/ui/pill-button";
 import { CATEGORY_MARK } from "@/components/icons/species-icons";
-import { fish, plants, shrimp, mosses, getImage } from "@/data";
+import { fish, plants, shrimp, mosses, snails, getImage } from "@/data";
 import type { CatalogueCategory } from "@/types/catalogue";
 
 interface PillarsProps {
@@ -60,6 +60,13 @@ const PILLAR_META: Record<
     featuredAlt: "Java Moss",
     audience: "Beginner-proof",
   },
+  snails: {
+    href: "/snails",
+    count: snails.length,
+    featuredSlug: "zebra-nerite-snail",
+    featuredAlt: "Zebra Nerite Snail",
+    audience: "Algae crew",
+  },
 };
 
 /**
@@ -79,7 +86,7 @@ export function Pillars({ eyebrow, title, items }: PillarsProps) {
       />
       <SectionHeading eyebrow={eyebrow} title={title} />
 
-      <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {items.map((p) => {
           const m = PILLAR_META[p.slug] ?? PILLAR_META.fish;
           const image = getImage(m.featuredSlug);
