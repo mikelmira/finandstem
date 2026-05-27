@@ -248,7 +248,7 @@ function capWord(s: string): string {
 
 /**
  * Surface a stocking recommendation under the "Schooling" parameter
- * fact so the reader knows how many to add — regardless of whether
+ * fact so the reader knows how many to add, regardless of whether
  * the species is technically a schooler. Examples:
  *   • Yes / Yes (loose shoal)        → "Group of 8+"
  *   • Pair                            → "Keep as a bonded pair"

@@ -10,7 +10,7 @@
  * `> maxSafe` = too strong).
  *
  * The "min/maxSafe" bounds widen by a further 50 % so the planner
- * can warn without outright blocking — a slow filter on a heavily
+ * can warn without outright blocking, a slow filter on a heavily
  * planted tank or a strong filter feeding a hillstream loach are
  * both legitimate edge cases.
  */
@@ -29,11 +29,11 @@ export interface TankStandard {
   recMaxLph: number;
   /** Maximum filter flow before it's considered too strong. */
   maxSafeLph: number;
-  /** Internal water-column depth in cm — the planning ceiling for
+  /** Internal water-column depth in cm, the planning ceiling for
    *  background plant height. Estimated as ~5 cm less than typical
    *  tank height for the given volume. */
   internalHeightCm: number;
-  /** Approximate floor area in cm² — used to estimate plant
+  /** Approximate floor area in cm², used to estimate plant
    *  coverage. */
   floorAreaCm2: number;
 }
@@ -86,7 +86,7 @@ export const STANDARD_TANKS: ReadonlyArray<TankStandard> = [
   {
     litres: 60,
     label: "Aquascape · 60 L",
-    blurb: "Classic 60 × 30 × 30 — the ADA mini-M standard scape.",
+    blurb: "Classic 60 × 30 × 30, the ADA mini-M standard scape.",
     minSafeLph: 150,
     recMinLph: 300,
     recMaxLph: 600,
@@ -167,7 +167,7 @@ export function findTankStandard(litres: number): TankStandard | null {
   return STANDARD_TANKS.find((t) => t.litres === litres) ?? null;
 }
 
-/** Closest standard for an arbitrary volume — used to give a flow
+/** Closest standard for an arbitrary volume, used to give a flow
  *  recommendation even if the user enters a non-standard size. */
 export function nearestTankStandard(litres: number): TankStandard {
   let closest = STANDARD_TANKS[0];
@@ -197,7 +197,7 @@ export type FlowVerdict =
  *   - "low"    = between minSafe and recMin
  *   - "ok"     = within the recommended band
  *   - "high"   = between recMax and maxSafe
- *   - "blast"  = above maxSafe — likely to stress inhabitants
+ *   - "blast"  = above maxSafe, likely to stress inhabitants
  */
 export function classifyFlow(
   litres: number,
@@ -229,11 +229,11 @@ export function classifyFlow(
  * 1–5 scale the planner UI exposes.
  *
  * Mapped against PAR (μmol/m²/s) categories:
- *   1 = Very low      (<15 PAR — deep blackwater biotope)
- *   2 = Low           (15–30 PAR — Anubias / Java fern / crypts)   ← "Low"
- *   3 = Medium        (30–50 PAR — most aquarium plants)            ← "Medium"
- *   4 = High          (50–80 PAR — carpets, demanding reds)         ← "High"
- *   5 = Very high     (80+ PAR — high-tech competition scapes)
+ *   1 = Very low      (<15 PAR, deep blackwater biotope)
+ *   2 = Low           (15–30 PAR, Anubias / Java fern / crypts)   ← "Low"
+ *   3 = Medium        (30–50 PAR, most aquarium plants)            ← "Medium"
+ *   4 = High          (50–80 PAR, carpets, demanding reds)         ← "High"
+ *   5 = Very high     (80+ PAR, high-tech competition scapes)
  *
  * Positions 1 and 5 are reserved for finer per-species data the
  * catalogue doesn't carry yet.
@@ -250,9 +250,9 @@ export function lightTo5(
 
 /**
  * Convert our stored CO₂ token to a 1–3 scale.
- *   1 — optional (None / Optional)
- *   2 — recommended
- *   3 — required
+ *   1, optional (None / Optional)
+ *   2, recommended
+ *   3, required
  */
 export type Co2Scale = 1 | 2 | 3;
 export function co2To3(
@@ -292,7 +292,7 @@ export const CO2_SCALE_LABELS: Record<Co2Scale, string> = {
  *   > 1.5  overstocked
  */
 /**
- * Stocking verdict — `tooSmall` overrides the bioload bands when at
+ * Stocking verdict, `tooSmall` overrides the bioload bands when at
  * least one selected species' `minTankL` exceeds the chosen tank
  * volume. In that case the bioload number is technically fine but
  * the user can't keep these species in this tank for *dimensional*
@@ -314,7 +314,7 @@ export const STOCKING_BANDS: Record<
     min: 0,
     max: 0.5,
     label: "Understocked",
-    blurb: "Plenty of room — you can comfortably add more.",
+    blurb: "Plenty of room, you can comfortably add more.",
   },
   comfortable: {
     min: 0.5,

@@ -11,7 +11,7 @@ interface TankSizeBadgeProps {
 interface Tier {
   label: string;
   min: number;
-  /** SVG viewBox proportions (width, height) — taller for bigger tanks. */
+  /** SVG viewBox proportions (width, height), taller for bigger tanks. */
   ratio: [number, number];
 }
 

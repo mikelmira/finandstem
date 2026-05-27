@@ -8,7 +8,7 @@
  * blended with the human-written `careSummary`. This keeps the answers
  * accurate to the data and trivially regeneratable when entries change.
  *
- * The generators are pure functions — safe to call inside server components,
+ * The generators are pure functions, safe to call inside server components,
  * generateMetadata, and JSON-LD builders.
  */
 
@@ -57,14 +57,14 @@ function factParagraph(entry: CatalogueEntry): string {
 function fishFactParagraph(f: FishEntry): string {
   const group =
     f.minGroupSize > 1
-      ? `Keep ${f.commonName.toLowerCase()} in groups of ${f.minGroupSize}+ — ${f.schooling.toLowerCase()} schoolers need numbers to display natural behaviour.`
+      ? `Keep ${f.commonName.toLowerCase()} in groups of ${f.minGroupSize}+, ${f.schooling.toLowerCase()} schoolers need numbers to display natural behaviour.`
       : `${f.commonName} can be kept singly or in a small group.`;
   return [
     `${f.commonName} (${f.scientificName}) reaches ${f.adultSize} as an adult and needs a minimum tank of ${f.minTankSize}.`,
     `Native to ${f.origin}, it lives in the ${f.waterColumn.toLowerCase()} water column with a ${f.temperament.toLowerCase()} temperament.`,
     `Aim for ${f.tempRange} °C, pH ${f.phRange}, and ${f.dghRange} dGH hardness. Lifespan is ${f.lifespan} years with good care.`,
     group,
-    `Diet: ${f.diet.toLowerCase()} — ${f.feedingNotes}`,
+    `Diet: ${f.diet.toLowerCase()}, ${f.feedingNotes}`,
     `Plant-safe: ${f.plantSafe}. Shrimp-safe: ${f.shrimpSafe}.`,
   ].join(" ");
 }
@@ -85,7 +85,7 @@ function shrimpFactParagraph(s: ShrimpEntry): string {
     `Native to ${s.origin}.`,
     `Aim for ${s.tempRange} °C, pH ${s.phRange}, ${s.dghRange} dGH, and ${s.tdsRange} ppm TDS.`,
     `Lifespan: ${s.lifespan} years. Breeding: ${s.breeding.toLowerCase()}.`,
-    `Diet: ${s.diet.toLowerCase()} — ${s.feedingNotes}`,
+    `Diet: ${s.diet.toLowerCase()}, ${s.feedingNotes}`,
     `Plant-safe: ${s.plantSafe}. Tank-mates: ${s.fishTankSafeWith}.`,
   ].join(" ");
 }
@@ -95,7 +95,7 @@ function snailFactParagraph(s: SnailEntry): string {
     `${s.commonName} (${s.scientificName}) is an aquarium snail in family ${s.family}, native to ${s.origin}.`,
     `Adults reach ${s.adultSize} cm; minimum tank ${s.minTankSize} L.`,
     `Target ${s.tempRange} °C, pH ${s.phRange}, ${s.dghRange} dGH, ${s.khRange} dKH. Shell calcium demand: ${s.shellCalciumDemand.toLowerCase()}.`,
-    `Diet: ${s.diet.toLowerCase()} — ${s.feedingNotes}`,
+    `Diet: ${s.diet.toLowerCase()}, ${s.feedingNotes}`,
     `Breeding: ${s.breeding}`,
     `Algae-eating rating: ${s.algaeEaterRating}/5. Plant-safe: ${s.plantSafe}.`,
     `Tank mates: ${s.fishTankSafeWith}`,
@@ -207,7 +207,7 @@ function shrimpFaqs(s: ShrimpEntry): FaqItem[] {
     },
     {
       question: `What do ${s.commonName} eat?`,
-      answer: `Diet: ${s.diet.toLowerCase()} — ${s.feedingNotes} Algae-eating rating: ${s.algaeEaterRating}/5.`,
+      answer: `Diet: ${s.diet.toLowerCase()}, ${s.feedingNotes} Algae-eating rating: ${s.algaeEaterRating}/5.`,
     },
     {
       question: `How long do ${s.commonName} live?`,
@@ -224,11 +224,11 @@ function snailFaqs(s: SnailEntry): FaqItem[] {
     },
     {
       question: `What water parameters do ${s.commonName} need?`,
-      answer: `Target ${s.tempRange} °C, pH ${s.phRange}, ${s.dghRange} dGH, and ${s.khRange} dKH. Shell calcium demand is ${s.shellCalciumDemand.toLowerCase()} — supplement with cuttlebone or a mineral stone if your water is soft.`,
+      answer: `Target ${s.tempRange} °C, pH ${s.phRange}, ${s.dghRange} dGH, and ${s.khRange} dKH. Shell calcium demand is ${s.shellCalciumDemand.toLowerCase()}, supplement with cuttlebone or a mineral stone if your water is soft.`,
     },
     {
       question: `Are ${s.commonName} plant-safe?`,
-      answer: `Plant safety: ${s.plantSafe}. ${s.commonName} are ${s.diet.toLowerCase()} — ${s.feedingNotes}`,
+      answer: `Plant safety: ${s.plantSafe}. ${s.commonName} are ${s.diet.toLowerCase()}, ${s.feedingNotes}`,
     },
     {
       question: `What fish can live with ${s.commonName}?`,
@@ -277,15 +277,15 @@ function mossFaqs(m: MossEntry): FaqItem[] {
 function difficultyExplainer(level: number): string {
   switch (level) {
     case 1:
-      return "Almost unkillable — a solid first-tank choice.";
+      return "Almost unkillable, a solid first-tank choice.";
     case 2:
-      return "Forgiving — beginner-friendly once the tank is cycled.";
+      return "Forgiving, beginner-friendly once the tank is cycled.";
     case 3:
-      return "Intermediate — stable parameters and a mature tank matter.";
+      return "Intermediate, stable parameters and a mature tank matter.";
     case 4:
-      return "Advanced — demands dialled-in CO₂/dosing or precise water chemistry.";
+      return "Advanced, demands dialled-in CO₂/dosing or precise water chemistry.";
     case 5:
-      return "Expert — narrow tolerances; not recommended until you've kept a stable tank for a year.";
+      return "Expert, narrow tolerances; not recommended until you've kept a stable tank for a year.";
     default:
       return "";
   }

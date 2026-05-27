@@ -29,7 +29,7 @@ export function speciesMetadata(entry: CatalogueEntry): Metadata {
   const path = `${meta.path}/${entry.slug}`;
   const canonical = `${site.url}${path}`;
 
-  const headline = `${entry.commonName} (${entry.scientificName}) — Care, Tank Mates & Compatibility`;
+  const headline = `${entry.commonName} (${entry.scientificName}), Care, Tank Mates & Compatibility`;
   const tldr = buildTldr(entry);
   const description = trim(tldr, 160);
 

@@ -20,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Fish",
   description:
-    "Freshwater fish for the planted tank — schoolers, micropredators, dwarf cichlids, algae crew. Filter by tank size, temperament, parameters, and safety.",
+    "Freshwater fish for the planted tank, schoolers, micropredators, dwarf cichlids, algae crew. Filter by tank size, temperament, parameters, and safety.",
   alternates: {
     // Pin canonical at the bare path so filter combinations (e.g. /fish?temp=22-26)
     // don't fragment crawl budget across hundreds of permutations.
@@ -48,7 +48,7 @@ export default async function FishIndexPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Fish"
         title="Fish for the planted tank."
-        subtitle={`${fishNorm.length} species profiled — schoolers, micropredators, algae crew, surface specialists and centrepieces. Parameters, group sizes, water column, plant and shrimp safety. Filter by what your water can hold; the catalogue tells you what fits.`}
+        subtitle={`${fishNorm.length} species profiled, schoolers, micropredators, algae crew, surface specialists and centrepieces. Parameters, group sizes, water column, plant and shrimp safety. Filter by what your water can hold; the catalogue tells you what fits.`}
         backgroundImage={atmosphere.angelfish}
         breadcrumb={[{ label: "Fish" }]}
       />

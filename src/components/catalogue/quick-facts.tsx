@@ -31,7 +31,7 @@ export function QuickFacts({ facts, className }: QuickFactsProps) {
             {f.label}
           </dt>
           <dd className="text-sm font-medium leading-tight text-foreground sm:text-base">
-            {f.value || "—"}
+            {f.value || ", "}
           </dd>
           {f.helper && (
             <p className="text-[11px] leading-snug text-muted-foreground/80">

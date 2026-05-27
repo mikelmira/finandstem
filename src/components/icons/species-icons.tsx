@@ -1,7 +1,7 @@
 import * as React from "react";
 
 /* ─── Category marks ─────────────────────────────────────────────────────
-   Compact silhouettes for the four catalogue pillars — used as the
+   Compact silhouettes for the four catalogue pillars, used as the
    identity glyph in eyebrow rows, profile cards, hero pills, the
    Livestock dropdown, and planner chips.
 
@@ -24,7 +24,7 @@ type MarkProps = React.HTMLAttributes<HTMLSpanElement>;
 
 /**
  * Props accepted by the larger scientific-plate SVG icons further down
- * in this file. SVG-based — kept unchanged so all the plate components
+ * in this file. SVG-based, kept unchanged so all the plate components
  * (FishPlate, PlantPlateRosette, …) compile against the original signature.
  */
 type IconProps = React.SVGProps<SVGSVGElement>;
@@ -68,7 +68,7 @@ export function FishMark(props: MarkProps) {
   return <MaskIcon src="/fish.png" {...props} />;
 }
 
-/** Plant silhouette mark — twin-leaf line-art PNG (/leaf.png). */
+/** Plant silhouette mark, twin-leaf line-art PNG (/leaf.png). */
 export function PlantMark(props: MarkProps) {
   return <MaskIcon src="/leaf.png" {...props} />;
 }
@@ -78,13 +78,13 @@ export function ShrimpMark(props: MarkProps) {
   return <MaskIcon src="/shrimp.png" {...props} />;
 }
 
-/** Moss silhouette mark — clustered fronds line-art PNG (/grass.png). */
+/** Moss silhouette mark, clustered fronds line-art PNG (/grass.png). */
 export function MossMark(props: MarkProps) {
   return <MaskIcon src="/grass.png" {...props} />;
 }
 
 /**
- * Snail silhouette mark — inline SVG spiral shell + slug body. Drawn
+ * Snail silhouette mark, inline SVG spiral shell + slug body. Drawn
  * directly rather than via PNG mask because we don't have a /snail.png
  * asset; SVG with `currentColor` fill gives us the same parent-tinted
  * behaviour as the masked PNGs.
@@ -109,12 +109,12 @@ export function SnailMark({ className, ...rest }: MarkProps) {
         strokeLinejoin="round"
         className="size-full"
       >
-        {/* Slug body — gentle arch resting on a baseline */}
+        {/* Slug body, gentle arch resting on a baseline */}
         <path d="M 2.5 18 Q 3 14 6 13.5 L 17 13.5 Q 22 13.5 22 18 L 2.5 18 Z" />
         {/* Antennae */}
         <path d="M 4 13.5 L 3 10" />
         <path d="M 5.5 13.5 L 5 10.5" />
-        {/* Shell — spiral coil */}
+        {/* Shell, spiral coil */}
         <circle cx="14" cy="11" r="5.5" />
         <path d="M 14 11 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" />
         <path d="M 14 11 m -1 0 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0" />
@@ -124,19 +124,19 @@ export function SnailMark({ className, ...rest }: MarkProps) {
 }
 
 /* ─── Scientific plates ──────────────────────────────────────────────────
-   Larger silhouettes — drawn at ~120px for use as a margin annotation
+   Larger silhouettes, drawn at ~120px for use as a margin annotation
    next to a species hero photo. One template per category; the
    intent is that they read as a hand-drawn field sketch beside the
    actual specimen photograph. Stroke-only so they layer cleanly on
    cream paper.
 
-   These are deliberately generic — every species in a category shares
+   These are deliberately generic, every species in a category shares
    its plate. To replace with per-species line art later, swap the
    silhouette path passed to the wrapper.
    ────────────────────────────────────────────────────────────────────── */
 
 /**
- * Tetra-style fish plate — slim torpedo body with engraved hatching
+ * Tetra-style fish plate, slim torpedo body with engraved hatching
  * along the shaded back, lateral-line dash, ray-detailed forked tail.
  * The default silhouette beside any fish detail page hero.
  */
@@ -152,7 +152,7 @@ export function FishPlate(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Body — slim fusiform tapering into the caudal peduncle */}
+      {/* Body, slim fusiform tapering into the caudal peduncle */}
       <path d="
         M 56 38
         C 80 18, 152 12, 200 24
@@ -173,7 +173,7 @@ export function FishPlate(props: IconProps) {
         <path d="M 50 72 L 22 90" />
       </g>
 
-      {/* Dorsal fin — flag set at body midpoint, with ray detail */}
+      {/* Dorsal fin, flag set at body midpoint, with ray detail */}
       <path d="M 122 18 C 136 6, 156 6, 164 20 L 156 26 Q 138 24, 122 20 Z" />
       <g opacity="0.5">
         <path d="M 128 24 L 130 12" />
@@ -182,10 +182,10 @@ export function FishPlate(props: IconProps) {
         <path d="M 156 24 L 156 18" />
       </g>
 
-      {/* Pectoral fin — behind the operculum */}
+      {/* Pectoral fin, behind the operculum */}
       <path d="M 186 62 Q 176 80, 158 78 L 176 62 Z" />
 
-      {/* Pelvic fin — small, on the belly mid-way back */}
+      {/* Pelvic fin, small, on the belly mid-way back */}
       <path d="M 142 72 Q 134 86, 122 82 L 134 70 Z" opacity="0.85" />
 
       {/* Anal fin */}
@@ -194,7 +194,7 @@ export function FishPlate(props: IconProps) {
       {/* Operculum (gill cover) */}
       <path d="M 200 32 C 198 50, 198 60, 200 80" opacity="0.5" />
 
-      {/* Engraving hatching — parallel strokes along the shaded back */}
+      {/* Engraving hatching, parallel strokes along the shaded back */}
       <g opacity="0.22">
         <path d="M 80 26 L 96 22" />
         <path d="M 102 22 L 118 20" />
@@ -207,14 +207,14 @@ export function FishPlate(props: IconProps) {
         <path d="M 162 26 L 178 28" />
       </g>
 
-      {/* Lateral stripe — tetra / rasbora signature */}
+      {/* Lateral stripe, tetra / rasbora signature */}
       <path
         d="M 56 55 L 198 53"
         opacity="0.55"
         strokeDasharray="1 2.5"
       />
 
-      {/* Eye — outline + filled pupil */}
+      {/* Eye, outline + filled pupil */}
       <circle cx="214" cy="46" r="4.5" />
       <circle cx="214" cy="46" r="2.2" fill="currentColor" />
 
@@ -225,7 +225,7 @@ export function FishPlate(props: IconProps) {
 }
 
 /**
- * Aquatic stem plate — substrate stippled with grain, gently curving
+ * Aquatic stem plate, substrate stippled with grain, gently curving
  * central stem, alternating leaves at four levels with central veins,
  * a small leaf bud at the apex. Drawn outline-only for a botanical-
  * plate feel.
@@ -244,7 +244,7 @@ export function PlantPlate(props: IconProps) {
     >
       {/* Substrate line */}
       <path d="M8 152 L 112 152" opacity="0.7" />
-      {/* Substrate stipple — tiny round grains */}
+      {/* Substrate stipple, tiny round grains */}
       <g opacity="0.5" fill="currentColor" stroke="none">
         <circle cx="18" cy="156" r="0.7" />
         <circle cx="28" cy="158" r="0.6" />
@@ -255,17 +255,17 @@ export function PlantPlate(props: IconProps) {
         <circle cx="98" cy="158" r="0.7" />
         <circle cx="108" cy="156" r="0.6" />
       </g>
-      {/* Roots — three fine tapered strokes below the substrate */}
+      {/* Roots, three fine tapered strokes below the substrate */}
       <g opacity="0.6">
         <path d="M58 152 Q 54 158, 52 168" />
         <path d="M60 152 L 60 170" />
         <path d="M62 152 Q 66 158, 68 168" />
       </g>
 
-      {/* Main stem — gentle S-curve rather than ruler-straight */}
+      {/* Main stem, gentle S-curve rather than ruler-straight */}
       <path d="M60 152 Q 58 110, 62 70 Q 60 36, 60 18" />
 
-      {/* Lower leaf pair — large lanceolate */}
+      {/* Lower leaf pair, large lanceolate */}
       <path d="M60 134 C 36 130, 20 118, 10 96 C 26 98, 44 116, 60 128 Z" />
       <path d="M60 134 C 84 130, 100 118, 110 96 C 94 98, 76 116, 60 128 Z" />
       <g opacity="0.45">
@@ -293,7 +293,7 @@ export function PlantPlate(props: IconProps) {
       <path d="M60 60 C 46 56, 38 48, 38 36 C 48 38, 56 48, 60 56 Z" />
       <path d="M60 60 C 74 56, 82 48, 82 36 C 72 38, 64 48, 60 56 Z" />
 
-      {/* Top bud — small filled teardrop */}
+      {/* Top bud, small filled teardrop */}
       <path
         d="M60 30 Q 66 22, 60 14 Q 54 22, 60 30 Z"
         fill="currentColor"
@@ -304,7 +304,7 @@ export function PlantPlate(props: IconProps) {
 }
 
 /**
- * Shrimp plate — proper carcinological view. Distinct cephalothorax
+ * Shrimp plate, proper carcinological view. Distinct cephalothorax
  * with a forward-pointing rostrum, segmented pleon (abdomen),
  * pereiopods (walking legs) along the thorax, pleopods (swimmerets)
  * along the abdomen, telson + uropod tail fan, and a pair of long
@@ -322,7 +322,7 @@ export function ShrimpPlate(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Body outline — gentle banana curve. Drawn so the cephalothorax
+      {/* Body outline, gentle banana curve. Drawn so the cephalothorax
           sits at the right with the tail fan at the left. */}
       <path d="
         M 36 76
@@ -339,7 +339,7 @@ export function ShrimpPlate(props: IconProps) {
       {/* Cephalothorax / abdomen division */}
       <path d="M 116 32 Q 122 56, 116 84" opacity="0.6" />
 
-      {/* Abdomen segments — six slim arcs */}
+      {/* Abdomen segments, six slim arcs */}
       <g opacity="0.55">
         <path d="M 50 38 Q 52 60, 58 84" />
         <path d="M 64 32 Q 66 60, 72 88" />
@@ -348,7 +348,7 @@ export function ShrimpPlate(props: IconProps) {
         <path d="M 112 30 Q 114 60, 118 88" />
       </g>
 
-      {/* Carapace shading — fine hatching along the upper back */}
+      {/* Carapace shading, fine hatching along the upper back */}
       <g opacity="0.22">
         <path d="M 50 38 L 60 36" />
         <path d="M 66 34 L 78 32" />
@@ -358,7 +358,7 @@ export function ShrimpPlate(props: IconProps) {
         <path d="M 140 36 L 152 40" />
       </g>
 
-      {/* Rostrum — saw-edged spike projecting forward */}
+      {/* Rostrum, saw-edged spike projecting forward */}
       <path d="M 156 40 L 188 36" />
       <path d="M 188 36 L 156 44" opacity="0.7" />
       <g opacity="0.55">
@@ -367,18 +367,18 @@ export function ShrimpPlate(props: IconProps) {
         <path d="M 180 37 L 182 35" />
       </g>
 
-      {/* Eye — on a short stalk */}
+      {/* Eye, on a short stalk */}
       <path d="M 152 46 L 156 50" opacity="0.7" />
       <circle cx="158" cy="50" r="2.6" />
       <circle cx="158" cy="50" r="1.1" fill="currentColor" />
 
-      {/* Antennae — one long primary, one shorter antennule, both
+      {/* Antennae, one long primary, one shorter antennule, both
           sweeping forward and curling at the tips */}
       <path d="M 160 42 Q 180 28, 196 14" />
       <path d="M 158 46 Q 178 36, 198 28" opacity="0.85" />
       <path d="M 154 50 Q 170 52, 184 50" opacity="0.6" />
 
-      {/* Pereiopods — five pairs of walking legs from the thorax */}
+      {/* Pereiopods, five pairs of walking legs from the thorax */}
       <g opacity="0.75">
         <path d="M 120 84 L 118 106" />
         <path d="M 130 86 L 132 108" />
@@ -387,7 +387,7 @@ export function ShrimpPlate(props: IconProps) {
         <path d="M 154 76 L 162 96" />
       </g>
 
-      {/* Pleopods — swimmerets along the abdomen */}
+      {/* Pleopods, swimmerets along the abdomen */}
       <g opacity="0.55">
         <path d="M 56 84 L 54 98" />
         <path d="M 68 88 L 66 102" />
@@ -396,7 +396,7 @@ export function ShrimpPlate(props: IconProps) {
         <path d="M 104 88 L 106 102" />
       </g>
 
-      {/* Tail fan — telson (centre) with uropod blades flaring out */}
+      {/* Tail fan, telson (centre) with uropod blades flaring out */}
       <path d="M 36 76 L 14 90" />
       <path d="M 32 64 L 8 68" />
       <path d="M 36 52 L 14 36" />
@@ -411,7 +411,7 @@ export function ShrimpPlate(props: IconProps) {
 }
 
 /**
- * Moss plate — a soft dome cluster of branching fronds rising from a
+ * Moss plate, a soft dome cluster of branching fronds rising from a
  * stippled substrate. Fronds vary in height and lean direction so the
  * cluster reads naturally rather than as a comb. Each frond carries
  * three pairs of upturned branchlets and a soft tip drop.
@@ -465,7 +465,7 @@ export function MossPlate(props: IconProps) {
         const tipY = 96 - h;
         return (
           <g key={i}>
-            {/* Stem — curves slightly in the direction of the lean */}
+            {/* Stem, curves slightly in the direction of the lean */}
             <path
               d={`M${x} 96 Q ${x + lean * h * 0.18} ${96 - h * 0.55}, ${tipX} ${tipY}`}
             />
@@ -482,7 +482,7 @@ export function MossPlate(props: IconProps) {
                 </g>
               );
             })}
-            {/* Tip droop — small curve at the apex */}
+            {/* Tip droop, small curve at the apex */}
             <path
               d={`M${tipX} ${tipY} q 1 -1.4, ${lean * 2 + 0.2} -2.5`}
               opacity="0.7"
@@ -491,7 +491,7 @@ export function MossPlate(props: IconProps) {
         );
       })}
 
-      {/* Faint cluster halo — broad arc behind the dome to give the
+      {/* Faint cluster halo, broad arc behind the dome to give the
           mass a soft outer silhouette */}
       <path
         d="M 8 96 Q 30 56, 78 24 Q 124 50, 152 96"
@@ -503,14 +503,14 @@ export function MossPlate(props: IconProps) {
 }
 
 /* ─── Fish body-type plates ────────────────────────────────────────────
-   FishPlate above is the slim torpedo body — the default. Below are
+   FishPlate above is the slim torpedo body, the default. Below are
    five additional silhouettes covering the catalogue's other body
    plans: stocky, gourami (laterally compressed), eel, catfish (bottom
    dweller), and livebearer (small fan-tail).
    ────────────────────────────────────────────────────────────────────── */
 
 /**
- * Stocky / barb body — deep-bodied perciform. Almond profile, tall
+ * Stocky / barb body, deep-bodied perciform. Almond profile, tall
  * dorsal and anal fins, three faint vertical bars suggesting barb /
  * dwarf-cichlid markings. Suits cherry barbs, rams, apistogrammas,
  * dwarf puffers.
@@ -527,7 +527,7 @@ export function FishPlateStocky(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Body — deep almond */}
+      {/* Body, deep almond */}
       <path d="
         M 60 36
         C 78 14, 152 8, 200 22
@@ -547,7 +547,7 @@ export function FishPlateStocky(props: IconProps) {
         <path d="M 50 80 L 22 96" />
       </g>
 
-      {/* Dorsal — tall, slightly forward-leaning */}
+      {/* Dorsal, tall, slightly forward-leaning */}
       <path d="M 110 16 C 128 0, 156 0, 168 18 L 158 26 Q 134 24, 110 20 Z" />
       <g opacity="0.5">
         <path d="M 118 24 L 120 8" />
@@ -557,7 +557,7 @@ export function FishPlateStocky(props: IconProps) {
         <path d="M 164 24 L 164 14" />
       </g>
 
-      {/* Anal — mirror of dorsal */}
+      {/* Anal, mirror of dorsal */}
       <path d="M 110 102 C 128 116, 156 116, 168 102 L 158 94 Q 134 96, 110 98 Z" />
       <g opacity="0.5">
         <path d="M 118 96 L 120 110" />
@@ -585,7 +585,7 @@ export function FishPlateStocky(props: IconProps) {
         <path d="M 184 26 L 198 30" />
       </g>
 
-      {/* Vertical bars — barb / cichlid signature */}
+      {/* Vertical bars, barb / cichlid signature */}
       <path d="M 88 26 C 86 60, 86 70, 88 96" opacity="0.3" />
       <path d="M 122 20 C 120 60, 120 70, 122 100" opacity="0.3" />
       <path d="M 156 22 C 154 60, 154 70, 156 98" opacity="0.3" />
@@ -594,14 +594,14 @@ export function FishPlateStocky(props: IconProps) {
       <circle cx="214" cy="48" r="5" />
       <circle cx="214" cy="48" r="2.4" fill="currentColor" />
 
-      {/* Mouth — slightly upturned */}
+      {/* Mouth, slightly upturned */}
       <path d="M 234 58 L 237.5 56" />
     </svg>
   );
 }
 
 /**
- * Gourami / labyrinth fish — laterally compressed disk-body. Long
+ * Gourami / labyrinth fish, laterally compressed disk-body. Long
  * dorsal + anal fins spanning the back and belly, plus the gourami
  * signature: long thread-like ventral filaments trailing below. Also
  * covers angelfish thanks to the deep disk profile.
@@ -618,7 +618,7 @@ export function FishPlateGourami(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Body — very deep oval */}
+      {/* Body, very deep oval */}
       <path d="
         M 70 40
         C 86 14, 154 8, 200 22
@@ -638,7 +638,7 @@ export function FishPlateGourami(props: IconProps) {
         <path d="M 58 82 L 34 94" />
       </g>
 
-      {/* Long dorsal — spans most of the back */}
+      {/* Long dorsal, spans most of the back */}
       <path d="M 86 18 C 116 -2, 184 2, 204 22 C 184 30, 130 32, 86 24 Z" />
       <g opacity="0.5">
         <path d="M 104 26 L 106 6" />
@@ -648,7 +648,7 @@ export function FishPlateGourami(props: IconProps) {
         <path d="M 188 26 L 188 12" />
       </g>
 
-      {/* Long anal — mirrors the dorsal */}
+      {/* Long anal, mirrors the dorsal */}
       <path d="M 86 110 C 116 130, 184 126, 204 108 C 184 100, 130 102, 86 104 Z" />
       <g opacity="0.5">
         <path d="M 104 102 L 106 124" />
@@ -657,7 +657,7 @@ export function FishPlateGourami(props: IconProps) {
         <path d="M 168 102 L 168 126" />
       </g>
 
-      {/* Thread ventrals — the gourami signature */}
+      {/* Thread ventrals, the gourami signature */}
       <path
         d="M 122 102 Q 110 128, 90 156"
         strokeWidth="1.4"
@@ -684,21 +684,21 @@ export function FishPlateGourami(props: IconProps) {
         <path d="M 190 26 L 204 32" />
       </g>
 
-      {/* Pearl-spot — characteristic of pearl gouramis */}
+      {/* Pearl-spot, characteristic of pearl gouramis */}
       <circle cx="132" cy="68" r="3.2" opacity="0.4" />
 
       {/* Eye */}
       <circle cx="214" cy="52" r="4.5" />
       <circle cx="214" cy="52" r="2.2" fill="currentColor" />
 
-      {/* Mouth — small terminal */}
+      {/* Mouth, small terminal */}
       <path d="M 234 62 L 237.5 61" />
     </svg>
   );
 }
 
 /**
- * Eel / loach body — elongated S-shaped tube with a tiny caudal fan,
+ * Eel / loach body, elongated S-shaped tube with a tiny caudal fan,
  * subtle dorsal fin, kuhli-style saddle bars, and four short head
  * barbels. Suits kuhli loaches and similar long-bodied burrowers.
  */
@@ -714,7 +714,7 @@ export function FishPlateEel(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Elongated body — gentle S-curve from caudal fan (left) to head
+      {/* Elongated body, gentle S-curve from caudal fan (left) to head
           (right). Upper and lower edges drawn as parallel curves. */}
       <path d="
         M 14 42
@@ -731,7 +731,7 @@ export function FishPlateEel(props: IconProps) {
         Z
       " />
 
-      {/* Caudal fan — small rounded tail */}
+      {/* Caudal fan, small rounded tail */}
       <path d="M 14 42 Q 4 32, 4 45 Q 4 58, 14 48" />
       <g opacity="0.5">
         <path d="M 10 38 L 6 36" />
@@ -739,7 +739,7 @@ export function FishPlateEel(props: IconProps) {
         <path d="M 10 52 L 6 54" />
       </g>
 
-      {/* Saddle bars — kuhli-loach signature, soft elliptical saddles
+      {/* Saddle bars, kuhli-loach signature, soft elliptical saddles
           across the dorsum (drawn at varying widths so they read as a
           natural band pattern). */}
       <g opacity="0.42" fill="currentColor" stroke="none">
@@ -751,7 +751,7 @@ export function FishPlateEel(props: IconProps) {
         <ellipse cx="200" cy="30" rx="3" ry="6" />
       </g>
 
-      {/* Tiny dorsal fin — barely a bump halfway along */}
+      {/* Tiny dorsal fin, barely a bump halfway along */}
       <path d="M 102 38 Q 112 30, 124 38" opacity="0.65" />
       <g opacity="0.45">
         <path d="M 108 36 L 108 32" />
@@ -759,14 +759,14 @@ export function FishPlateEel(props: IconProps) {
         <path d="M 120 36 L 120 33" />
       </g>
 
-      {/* Lateral line — fine dashed dorsal-ventral midline */}
+      {/* Lateral line, fine dashed dorsal-ventral midline */}
       <path
         d="M 14 45 Q 60 44, 100 47 Q 160 42, 232 44"
         opacity="0.35"
         strokeDasharray="1 3"
       />
 
-      {/* Eye — set high on the head */}
+      {/* Eye, set high on the head */}
       <circle cx="222" cy="36" r="2.6" />
       <circle cx="222" cy="36" r="1.1" fill="currentColor" />
 
@@ -781,7 +781,7 @@ export function FishPlateEel(props: IconProps) {
 }
 
 /**
- * Catfish / bottom dweller — humped back, flat belly, tall dorsal
+ * Catfish / bottom dweller, humped back, flat belly, tall dorsal
  * banner, adipose fin, large low-set pectorals, downturned barbeled
  * mouth, and bony lateral plates. Suits corydoras, otocinclus, plecos,
  * hillstream loaches.
@@ -798,7 +798,7 @@ export function FishPlateCatfish(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Body — arched back over a flat belly */}
+      {/* Body, arched back over a flat belly */}
       <path d="
         M 58 40
         C 64 16, 132 8, 192 22
@@ -821,7 +821,7 @@ export function FishPlateCatfish(props: IconProps) {
       {/* Flat-belly emphasis line */}
       <path d="M 56 82 L 208 82" opacity="0.4" />
 
-      {/* Tall triangular dorsal — the cory banner */}
+      {/* Tall triangular dorsal, the cory banner */}
       <path d="M 100 20 L 122 -2 L 142 20 Z" />
       <g opacity="0.5">
         <path d="M 108 18 L 112 4" />
@@ -830,10 +830,10 @@ export function FishPlateCatfish(props: IconProps) {
         <path d="M 138 18 L 136 8" />
       </g>
 
-      {/* Adipose fin — small bump behind the dorsal */}
+      {/* Adipose fin, small bump behind the dorsal */}
       <path d="M 162 22 L 172 10 L 180 22 Z" />
 
-      {/* Pectoral fin — large, low and forward */}
+      {/* Pectoral fin, large, low and forward */}
       <path d="M 188 82 L 208 110 L 218 84 Z" />
       <g opacity="0.5">
         <path d="M 196 88 L 202 104" />
@@ -844,7 +844,7 @@ export function FishPlateCatfish(props: IconProps) {
       {/* Pelvic fin */}
       <path d="M 132 82 L 144 100 L 152 82 Z" opacity="0.85" />
 
-      {/* Bony lateral plates — cory armor suggestion */}
+      {/* Bony lateral plates, cory armor suggestion */}
       <g opacity="0.32">
         <path d="M 88 28 C 86 54, 86 70, 88 82" />
         <path d="M 124 22 C 122 54, 122 70, 124 82" />
@@ -862,14 +862,14 @@ export function FishPlateCatfish(props: IconProps) {
         <path d="M 192 30 L 210 36" />
       </g>
 
-      {/* Eye — set high on the head */}
+      {/* Eye, set high on the head */}
       <circle cx="210" cy="44" r="3.8" />
       <circle cx="210" cy="44" r="1.7" fill="currentColor" />
 
-      {/* Mouth — downturned */}
+      {/* Mouth, downturned */}
       <path d="M 228 60 Q 234 66, 228 72" opacity="0.75" />
 
-      {/* Barbels — four whiskers from the mouth */}
+      {/* Barbels, four whiskers from the mouth */}
       <path d="M 226 64 Q 236 66, 240 68" opacity="0.7" />
       <path d="M 224 67 Q 234 71, 238 74" opacity="0.7" />
       <path d="M 224 70 Q 232 76, 236 80" opacity="0.65" />
@@ -879,7 +879,7 @@ export function FishPlateCatfish(props: IconProps) {
 }
 
 /**
- * Livebearer — small ovoid body with a dramatic flowing fan tail.
+ * Livebearer, small ovoid body with a dramatic flowing fan tail.
  * Modest dorsal, pointed gonopodium (male anal fin), lateral spot.
  * Suits Endler's, guppies, mollies, platys, swordtails.
  */
@@ -895,7 +895,7 @@ export function FishPlateLivebearer(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Body — compact ovoid on the right side of the canvas */}
+      {/* Body, compact ovoid on the right side of the canvas */}
       <path d="
         M 100 60
         C 112 32, 168 28, 200 36
@@ -905,7 +905,7 @@ export function FishPlateLivebearer(props: IconProps) {
         Z
       " />
 
-      {/* Fan tail — drawn as a flag arching above and below the
+      {/* Fan tail, drawn as a flag arching above and below the
           peduncle, with internal ray detail */}
       <path d="
         M 100 60
@@ -927,14 +927,14 @@ export function FishPlateLivebearer(props: IconProps) {
         <path d="M 100 60 L 34 102" />
       </g>
 
-      {/* Dorsal fin — small banner */}
+      {/* Dorsal fin, small banner */}
       <path d="M 140 30 Q 152 14, 168 22 L 164 32 Q 150 32, 140 30 Z" />
       <g opacity="0.45">
         <path d="M 148 30 L 150 18" />
         <path d="M 158 30 L 160 18" />
       </g>
 
-      {/* Gonopodium — pointed male anal fin */}
+      {/* Gonopodium, pointed male anal fin */}
       <path d="M 152 86 L 158 104 L 164 88 Z" opacity="0.9" />
 
       {/* Pectoral fin */}
@@ -943,7 +943,7 @@ export function FishPlateLivebearer(props: IconProps) {
       {/* Operculum */}
       <path d="M 200 44 C 198 60, 198 62, 200 78" opacity="0.55" />
 
-      {/* Lateral spot — Endler / guppy male marking */}
+      {/* Lateral spot, Endler / guppy male marking */}
       <circle cx="156" cy="62" r="2.6" opacity="0.45" />
 
       {/* Engraving hatching on the upper flank */}
@@ -954,7 +954,7 @@ export function FishPlateLivebearer(props: IconProps) {
         <path d="M 188 32 L 204 34" />
       </g>
 
-      {/* Eye — large, forward */}
+      {/* Eye, large, forward */}
       <circle cx="214" cy="52" r="4" />
       <circle cx="214" cy="52" r="1.9" fill="currentColor" />
 
@@ -965,14 +965,14 @@ export function FishPlateLivebearer(props: IconProps) {
 }
 
 /* ─── Plant body-type plates ──────────────────────────────────────────
-   PlantPlate above is the stem-plant silhouette — the default. Below
+   PlantPlate above is the stem-plant silhouette, the default. Below
    are five additional silhouettes covering the catalogue's other
    plant body plans: rosette (broad leaves from a crown), rhizome
    (creeping rhizome with broad upright leaves), carpet (short
    ground-cover), floating, and grass (long strap blades).
    ────────────────────────────────────────────────────────────────────── */
 
-/** Rosette — broad ovate leaves radiating outward from a central crown.
+/** Rosette, broad ovate leaves radiating outward from a central crown.
  *  Suits Echinodorus, Cryptocoryne, Aponogeton, and other plants that
  *  spread from a single basal point. */
 export function PlantPlateRosette(props: IconProps) {
@@ -998,17 +998,17 @@ export function PlantPlateRosette(props: IconProps) {
         <circle cx="116" cy="158" r="0.7" />
       </g>
 
-      {/* Roots — three fine tapered strokes */}
+      {/* Roots, three fine tapered strokes */}
       <g opacity="0.6">
         <path d="M68 154 Q 64 162, 60 170" />
         <path d="M70 154 L 70 170" />
         <path d="M72 154 Q 76 162, 80 170" />
       </g>
 
-      {/* Crown — small filled mound at the base */}
+      {/* Crown, small filled mound at the base */}
       <path d="M58 146 Q 70 152, 82 146 Q 76 152, 70 154 Q 64 152, 58 146 Z" />
 
-      {/* Leaves radiating outward — five blades, each with central
+      {/* Leaves radiating outward, five blades, each with central
           midrib. Drawn closed so they read as broad ovate leaves. */}
       {/* Far left */}
       <path d="M70 148 C 30 134, 16 102, 12 60 C 28 76, 50 110, 70 140 Z" />
@@ -1030,7 +1030,7 @@ export function PlantPlateRosette(props: IconProps) {
 }
 
 /**
- * Rhizome epiphyte — a creeping horizontal rhizome sitting atop a
+ * Rhizome epiphyte, a creeping horizontal rhizome sitting atop a
  * piece of hardscape, with broad upright leaves rising from it at
  * intervals. Holdfast roots grip the rock. Suits anubias, java fern,
  * bucephalandra, bolbitis.
@@ -1047,7 +1047,7 @@ export function PlantPlateRhizome(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Hardscape rock — irregular hump along the bottom */}
+      {/* Hardscape rock, irregular hump along the bottom */}
       <path d="M6 148 Q 28 124, 50 126 Q 78 124, 104 130 Q 122 134, 132 148 L 132 162 L 6 162 Z" />
       {/* Rock contour lines for stone texture */}
       <g opacity="0.4">
@@ -1063,13 +1063,13 @@ export function PlantPlateRhizome(props: IconProps) {
         <circle cx="108" cy="148" r="0.6" />
       </g>
 
-      {/* Horizontal rhizome — drawn slightly thicker than the leaves */}
+      {/* Horizontal rhizome, drawn slightly thicker than the leaves */}
       <path
         d="M14 132 Q 36 122, 70 124 Q 104 126, 126 134"
         strokeWidth="1.8"
       />
 
-      {/* Holdfast roots — short fibres gripping the rock under the rhizome */}
+      {/* Holdfast roots, short fibres gripping the rock under the rhizome */}
       <g opacity="0.65">
         <path d="M22 130 Q 21 134, 22 138" />
         <path d="M36 122 Q 36 130, 36 136" />
@@ -1080,21 +1080,21 @@ export function PlantPlateRhizome(props: IconProps) {
         <path d="M118 130 Q 119 134, 118 138" />
       </g>
 
-      {/* Broad upright leaves — five rising at intervals, with central
+      {/* Broad upright leaves, five rising at intervals, with central
           midrib veining. */}
-      {/* Leaf 1 — left */}
+      {/* Leaf 1, left */}
       <path d="M30 124 C 10 100, 14 60, 22 24 C 30 60, 36 100, 34 122 Z" />
       <path d="M22 36 Q 26 76, 32 116" opacity="0.45" />
       {/* Leaf 2 */}
       <path d="M52 124 C 38 92, 42 44, 50 8 C 56 44, 58 92, 56 122 Z" />
       <path d="M50 22 L 54 116" opacity="0.45" />
-      {/* Leaf 3 — centre, tallest */}
+      {/* Leaf 3, centre, tallest */}
       <path d="M72 124 C 64 80, 68 30, 72 0 C 76 30, 80 80, 74 124 Z" />
       <path d="M72 12 L 72 120" opacity="0.45" />
       {/* Leaf 4 */}
       <path d="M92 124 C 106 92, 102 44, 94 8 C 88 44, 86 92, 88 122 Z" />
       <path d="M94 22 L 90 116" opacity="0.45" />
-      {/* Leaf 5 — right */}
+      {/* Leaf 5, right */}
       <path d="M114 124 C 134 100, 130 60, 122 24 C 114 60, 108 100, 110 122 Z" />
       <path d="M122 36 Q 118 76, 112 116" opacity="0.45" />
     </svg>
@@ -1102,7 +1102,7 @@ export function PlantPlateRhizome(props: IconProps) {
 }
 
 /**
- * Carpet — dense lawn of short upright shoots emerging from a
+ * Carpet, dense lawn of short upright shoots emerging from a
  * horizontal runner. Suits HC cuba, monte carlo, dwarf hairgrass,
  * glossostigma, lilaeopsis, marsilea.
  */
@@ -1151,7 +1151,7 @@ export function PlantPlateCarpet(props: IconProps) {
         <circle cx="128" cy="152" r="0.6" />
       </g>
 
-      {/* Runner — gentle wave just above the substrate */}
+      {/* Runner, gentle wave just above the substrate */}
       <path
         d="M4 142 Q 36 138, 70 142 Q 102 146, 136 140"
         opacity="0.6"
@@ -1176,7 +1176,7 @@ export function PlantPlateCarpet(props: IconProps) {
         );
       })}
 
-      {/* Sub-runner crossing — faint diagonal stolon */}
+      {/* Sub-runner crossing, faint diagonal stolon */}
       <path
         d="M22 144 Q 64 152, 110 144"
         opacity="0.25"
@@ -1187,7 +1187,7 @@ export function PlantPlateCarpet(props: IconProps) {
 }
 
 /**
- * Floating — rounded leaves resting atop a wavy water-surface line
+ * Floating, rounded leaves resting atop a wavy water-surface line
  * with feathery root tendrils descending below. Suits salvinia,
  * frogbit, duckweed, water lettuce.
  */
@@ -1203,7 +1203,7 @@ export function PlantPlateFloating(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Water surface — gently undulating ripple line */}
+      {/* Water surface, gently undulating ripple line */}
       <path
         d="M4 40 Q 18 36, 32 40 Q 46 44, 60 40 Q 74 36, 88 40 Q 102 44, 116 40 Q 128 36, 136 40"
         opacity="0.7"
@@ -1215,7 +1215,7 @@ export function PlantPlateFloating(props: IconProps) {
         strokeDasharray="1 2"
       />
 
-      {/* Leaves resting on the surface — three rounded pads of varying
+      {/* Leaves resting on the surface, three rounded pads of varying
           size, the largest centre. Each leaf has a central vein and
           two side veins. */}
       {/* Left leaf */}
@@ -1224,7 +1224,7 @@ export function PlantPlateFloating(props: IconProps) {
       <path d="M28 28 Q 36 32, 44 28" opacity="0.4" />
       <path d="M30 32 Q 36 34, 42 32" opacity="0.35" />
 
-      {/* Centre leaf — largest */}
+      {/* Centre leaf, largest */}
       <ellipse cx="70" cy="24" rx="18" ry="11" />
       <path d="M70 14 L 70 34" opacity="0.45" />
       <path d="M58 22 Q 70 26, 82 22" opacity="0.4" />
@@ -1236,19 +1236,19 @@ export function PlantPlateFloating(props: IconProps) {
       <path d="M104 22 L 104 38" opacity="0.45" />
       <path d="M97 28 Q 104 32, 111 28" opacity="0.4" />
 
-      {/* Hanging root systems — feathery tendrils */}
+      {/* Hanging root systems, feathery tendrils */}
       {[
         { x: 36, branches: 4 },
         { x: 70, branches: 5 },
         { x: 104, branches: 4 },
       ].map(({ x, branches }, leafIdx) => (
         <g key={leafIdx}>
-          {/* Main root — drifts slightly */}
+          {/* Main root, drifts slightly */}
           <path
             d={`M${x} 40 Q ${x - 3} 90, ${x + 2} 150`}
             opacity="0.7"
           />
-          {/* Side rootlets — alternating each side, taper outward */}
+          {/* Side rootlets, alternating each side, taper outward */}
           {Array.from({ length: branches }).map((_, i) => {
             const y = 58 + i * 22;
             const side = i % 2 === 0 ? -1 : 1;
@@ -1273,7 +1273,7 @@ export function PlantPlateFloating(props: IconProps) {
 }
 
 /**
- * Grass — long narrow strap blades arching outward from a tight
+ * Grass, long narrow strap blades arching outward from a tight
  * crown. Each blade is drawn as two parallel edges with a central
  * vein, giving the blade visible width without a heavy silhouette.
  * Suits vallisneria, sagittaria, dwarf hairgrass.
@@ -1319,7 +1319,7 @@ export function PlantPlateGrass(props: IconProps) {
         <path d="M76 154 L 80 168" />
       </g>
 
-      {/* Crown — tight base */}
+      {/* Crown, tight base */}
       <path d="M58 148 Q 70 154, 82 148 Q 76 156, 70 156 Q 64 156, 58 148 Z" />
 
       {blades.map(({ tipX, tipY, side }, i) => {
@@ -1355,7 +1355,7 @@ export function PlantPlateGrass(props: IconProps) {
 }
 
 /**
- * Snail plate — coiled shell with body extended forward, antennae out.
+ * Snail plate, coiled shell with body extended forward, antennae out.
  * Drawn outline-only at ~120 px to match the other scientific plates.
  */
 export function SnailPlate(props: IconProps) {
@@ -1370,7 +1370,7 @@ export function SnailPlate(props: IconProps) {
       aria-hidden
       {...props}
     >
-      {/* Foot / body — long extended slug shape resting on a baseline */}
+      {/* Foot / body, long extended slug shape resting on a baseline */}
       <path d="
         M 12 96
         Q 8 80, 26 76
@@ -1384,19 +1384,19 @@ export function SnailPlate(props: IconProps) {
       {/* Baseline ground line */}
       <path d="M 8 100 L 192 100" opacity="0.45" />
 
-      {/* Spiral shell — large coiled chamber on the rear (right side) */}
+      {/* Spiral shell, large coiled chamber on the rear (right side) */}
       <circle cx="132" cy="58" r="34" />
       <circle cx="132" cy="58" r="24" opacity="0.85" />
       <circle cx="132" cy="58" r="14" opacity="0.7" />
       <circle cx="132" cy="58" r="6" opacity="0.6" />
 
-      {/* Spiral connector — line tracing the whorl from outer to inner */}
+      {/* Spiral connector, line tracing the whorl from outer to inner */}
       <path
         d="M 132 92 Q 100 92, 100 58 Q 100 24, 132 24 Q 156 24, 156 58 Q 156 82, 132 82 Q 116 82, 116 58 Q 116 44, 132 44"
         opacity="0.4"
       />
 
-      {/* Hatching along the upper shell — engraved tonal lines */}
+      {/* Hatching along the upper shell, engraved tonal lines */}
       <g opacity="0.25">
         <path d="M 110 36 L 100 30" />
         <path d="M 120 30 L 116 22" />
@@ -1413,7 +1413,7 @@ export function SnailPlate(props: IconProps) {
       <circle cx="26" cy="54" r="0.9" fill="currentColor" />
       <circle cx="38" cy="52" r="0.9" fill="currentColor" />
 
-      {/* Mouth — tiny */}
+      {/* Mouth, tiny */}
       <path d="M 14 88 L 22 86" opacity="0.65" />
     </svg>
   );
@@ -1438,7 +1438,7 @@ export const CATEGORY_MARK: Record<
   snails: SnailMark,
 };
 
-/** Legacy default plate per category — kept for callers that don't
+/** Legacy default plate per category, kept for callers that don't
  *  have a full entry handy. New code should prefer
  *  `getSpeciesPlate(entry)` so each species gets its body-type plate. */
 export const CATEGORY_PLATE: Record<
@@ -1557,7 +1557,7 @@ const PLANT_PLATE_BY_TYPE: Record<
 };
 
 /**
- * Map a fish slug to its body type. Defaults to "slim" — the most
+ * Map a fish slug to its body type. Defaults to "slim", the most
  * common silhouette across the catalogue.
  */
 export function getFishBodyType(slug: string): FishBodyType {
@@ -1570,7 +1570,7 @@ export function getFishBodyType(slug: string): FishBodyType {
  * etc.) so we keyword-match the parts.
  *
  * Specific slug overrides handle the few cases where the type string
- * alone doesn't capture the visual shape — e.g. vallisneria has
+ * alone doesn't capture the visual shape, e.g. vallisneria has
  * `Rosette / Runner` but reads as a grass-blade plant.
  */
 const PLANT_TYPE_SLUG_OVERRIDES: Record<string, PlantBodyType> = {

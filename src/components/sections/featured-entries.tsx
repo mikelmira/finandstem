@@ -5,7 +5,7 @@ import type { CatalogueEntry } from "@/types/catalogue";
 import { FeaturedSlider } from "@/components/sections/featured-slider";
 
 /**
- * "Start here" — horizontal slider of beginner-friendly species
+ * "Start here", horizontal slider of beginner-friendly species
  * pulled from across all five catalogue pillars. Native scroll-snap
  * carries mobile + desktop; a small client component layers in
  * the prev/next buttons on the desktop view.
@@ -35,7 +35,7 @@ export function FeaturedEntries() {
         <SectionHeading
           eyebrow="Start here"
           title="Beginner-friendly classics."
-          subtitle="Species that almost always work in a first planted tank — across fish, plants, shrimp, mosses, and snails. Swipe through and tap any card for the full profile."
+          subtitle="Species that almost always work in a first planted tank, across fish, plants, shrimp, mosses, and snails. Swipe through and tap any card for the full profile."
         />
         <PillButton href="/fish" variant="ghost" size="sm">
           Browse all

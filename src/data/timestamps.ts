@@ -3,7 +3,7 @@
  *
  * The single hard-coded `PUBLISHED_AT = "2025-11-01"` previously used for
  * every species emitted the same `datePublished` / `dateModified` on
- * 100+ pages — a freshness anti-signal for Perplexity and AI Overviews
+ * 100+ pages, a freshness anti-signal for Perplexity and AI Overviews
  * which weight per-page recency.
  *
  * This module assigns each entry a stable publishedAt / updatedAt pair:
@@ -15,7 +15,7 @@
  *    (May 18 → May 25 2026) so freshness signal varies entry-to-entry
  *    rather than collapsing to a single timestamp.
  *
- * Dates are computed once at module load — stable, deterministic, no
+ * Dates are computed once at module load, stable, deterministic, no
  * 100-line literal map to maintain.
  */
 
@@ -43,7 +43,7 @@ const ORDERED_SLUGS: ReadonlyArray<string> = [
 const PUBLISH_SPAN = PUBLISH_WINDOW_END - PUBLISH_WINDOW_START;
 const UPDATE_SPAN = UPDATE_CEILING - UPDATE_FLOOR;
 
-/** FNV-1a 32-bit hash — small, fast, well-spread, no deps. */
+/** FNV-1a 32-bit hash, small, fast, well-spread, no deps. */
 function hashStr(s: string): number {
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) {

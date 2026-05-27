@@ -14,7 +14,7 @@
 
 const STORAGE_KEY = "finstem.planner.species";
 
-/** Safe to call from SSR — returns [] when window is unavailable. */
+/** Safe to call from SSR, returns [] when window is unavailable. */
 export function readPlannerIds(): string[] {
   if (typeof window === "undefined") return [];
   try {
@@ -33,7 +33,7 @@ export function writePlannerIds(ids: string[]): void {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
   } catch {
-    /* storage full or disabled — selection just won't persist */
+    /* storage full or disabled, selection just won't persist */
   }
 }
 

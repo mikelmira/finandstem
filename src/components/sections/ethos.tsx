@@ -10,10 +10,10 @@ interface EthosProps {
 }
 
 /**
- * Ethos — the "what this site is" section on the homepage.
+ * Ethos, the "what this site is" section on the homepage.
  *
  * Full-bleed looping underwater video as the background. No
- * gradient overlays — the heading and body text rely on
+ * gradient overlays, the heading and body text rely on
  * `drop-shadow` for legibility across whatever frame the video
  * happens to be on. Glass card on the right already adapts to any
  * backdrop.
@@ -33,7 +33,7 @@ export function Ethos({ eyebrow, title, body, points }: EthosProps) {
       bleed
       containerClassName="py-16 sm:py-20 lg:py-24"
     >
-      {/* Background video — covers the whole section, sits below all
+      {/* Background video, covers the whole section, sits below all
           content. Autoplays muted on loop. */}
       <video
         aria-hidden
@@ -48,7 +48,7 @@ export function Ethos({ eyebrow, title, body, points }: EthosProps) {
       </video>
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-        {/* Heading column — text colour forced to white with a
+        {/* Heading column, text colour forced to white with a
             drop-shadow so it stays legible on any video frame,
             without resorting to an overlay. */}
         <div className="[&_h2]:!text-white [&_h2]:drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)] [&_p]:!text-white/95 [&_p]:drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] [&_span]:!text-white/85">

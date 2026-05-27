@@ -25,7 +25,7 @@ interface MobileNavProps {
 }
 
 /**
- * Mirrors the desktop Livestock dropdown — the four catalogue routes
+ * Mirrors the desktop Livestock dropdown, the four catalogue routes
  * are grouped at the top of the drawer under a "Livestock" header
  * (with the same PNG icons used on desktop), and the remaining nav
  * items render below a divider.
@@ -98,7 +98,7 @@ export function MobileNav({ links, primaryCta }: MobileNavProps) {
         if (e.target === e.currentTarget) setOpen(false);
       }}
     >
-          {/* Backdrop — palette-based dark overlay, no white */}
+          {/* Backdrop, palette-based dark overlay, no white */}
           <div
             aria-hidden
             className="absolute inset-0 bg-[var(--abyss)]/70 backdrop-blur-sm animate-fade-up"
@@ -127,7 +127,7 @@ export function MobileNav({ links, primaryCta }: MobileNavProps) {
               aria-label="Primary"
               className="stagger flex flex-col gap-1 overflow-y-auto p-3"
             >
-              {/* Livestock — grouped at the top, mirroring desktop dropdown */}
+              {/* Livestock, grouped at the top, mirroring desktop dropdown */}
               <div className="px-2 pb-1 pt-2">
                 <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
                   Species

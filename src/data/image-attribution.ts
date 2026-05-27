@@ -1221,7 +1221,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neritina_natalensis"
   },
   "mystery-snail": {
-    "alt": "Mystery Snail (Pomacea bridgesii) — golden body with long antennae crawling on sand",
+    "alt": "Mystery Snail (Pomacea bridgesii), golden body with long antennae crawling on sand",
     "author": "Stijn Ghesquiere",
     "category": "snails",
     "credit": "",
@@ -1236,7 +1236,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pomacea_bridgesii"
   },
   "ramshorn-snail": {
-    "alt": "Ramshorn Snail (Planorbella duryi) — spiral flat shells in a planted aquarium",
+    "alt": "Ramshorn Snail (Planorbella duryi), spiral flat shells in a planted aquarium",
     "author": "Dat doris",
     "category": "snails",
     "credit": "Own work",
@@ -1265,7 +1265,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Melanoides_tuberculata"
   },
   "assassin-snail": {
-    "alt": "Assassin Snail (Anentome helena) — yellow-and-brown striped conical shell on aquarium substrate",
+    "alt": "Assassin Snail (Anentome helena), yellow-and-brown striped conical shell on aquarium substrate",
     "author": "Neptuno33",
     "category": "snails",
     "credit": "Own work",
@@ -1280,7 +1280,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Anentome_helena"
   },
   "rabbit-snail": {
-    "alt": "Rabbit Snail (Tylomelania sp.) — long conical shell on aquarium sand",
+    "alt": "Rabbit Snail (Tylomelania sp.), long conical shell on aquarium sand",
     "author": "Jarne Colman",
     "category": "snails",
     "credit": "Own work",
@@ -1295,7 +1295,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tylomelania"
   },
   "horned-nerite-snail": {
-    "alt": "Horned Nerite Snail (Clithon corona) — live snail with distinctive horn spines",
+    "alt": "Horned Nerite Snail (Clithon corona), live snail with distinctive horn spines",
     "author": "Obsidian Soul",
     "category": "snails",
     "credit": "Own work",

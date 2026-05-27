@@ -1,5 +1,5 @@
 /**
- * Fin & Stem — JSON-LD schema builders.
+ * Fin & Stem, JSON-LD schema builders.
  *
  * Every public page emits structured data so search engines and answer
  * engines (ChatGPT, Perplexity, Claude, Google AI Overviews) can parse
@@ -148,7 +148,7 @@ export function speciesPageJsonLd({
         "@id": `${url}#article`,
         mainEntityOfPage: url,
         url,
-        headline: `${entry.commonName} (${entry.scientificName}) — Care, Tank Mates, Compatibility`,
+        headline: `${entry.commonName} (${entry.scientificName}), Care, Tank Mates, Compatibility`,
         description: tldr,
         image: imageList.length > 0 ? imageList : undefined,
         datePublished: publishedAt,
@@ -267,7 +267,7 @@ export function pillarPageJsonLd({
       ]),
       {
         "@type": "ItemList",
-        name: `${title} — cluster pages`,
+        name: `${title}, cluster pages`,
         itemListElement: cluster.map((p, i) => ({
           "@type": "ListItem",
           position: i + 1,
@@ -302,7 +302,7 @@ export function categoryIndexJsonLd(category: CatalogueCategory, entries: Readon
         "@type": "CollectionPage",
         "@id": `${url}#collection`,
         url,
-        name: `${meta.label} — Fin & Stem catalogue`,
+        name: `${meta.label}, Fin & Stem catalogue`,
         description: `Browse Fin & Stem's full catalogue of ${entries.length} ${meta.label.toLowerCase()} profiles, each cross-referenced for compatibility with plants, fish, shrimp, and mosses.`,
         publisher: organizationRef(),
         inLanguage: "en",
@@ -455,9 +455,9 @@ export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
         "@type": "CollectionPage",
         "@id": `${url}#collection`,
         url,
-        name: "Guides — Fin & Stem",
+        name: "Guides, Fin & Stem",
         description:
-          "Long-form articles answering the specific questions aquascapers ask — compatibility, comparisons, setups, biotopes, and FAQ deep-dives.",
+          "Long-form articles answering the specific questions aquascapers ask, compatibility, comparisons, setups, biotopes, and FAQ deep-dives.",
         publisher: organizationRef(),
         inLanguage: "en",
         isPartOf: { "@id": WEBSITE_ID },
@@ -504,7 +504,7 @@ export function homePageJsonLd() {
         "@type": "WebPage",
         "@id": `${site.url}/#webpage`,
         url: `${site.url}/`,
-        name: `${site.name} — ${site.tagline}`,
+        name: `${site.name}, ${site.tagline}`,
         description: site.description,
         inLanguage: "en",
         isPartOf: { "@id": WEBSITE_ID },

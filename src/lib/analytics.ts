@@ -1,5 +1,5 @@
 /**
- * Placeholder analytics helper. The real wiring lands at milestone M4 — see
+ * Placeholder analytics helper. The real wiring lands at milestone M4, see
  * docs/TRACKING_PLAN.md. No provider SDKs are pulled in yet on purpose, so
  * the proposal site stays light and we don't ship cookies pre-consent.
  */

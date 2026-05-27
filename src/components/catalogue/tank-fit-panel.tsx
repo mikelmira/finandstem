@@ -10,13 +10,13 @@ interface TankFitPanelProps {
  * Two-row decision panel for the species detail page.
  *
  * Top ("Parameters"): the numeric ranges that decide whether the
- * species fits in a given tank — temperature, pH, hardness, size,
+ * species fits in a given tank, temperature, pH, hardness, size,
  * tank capacity, light/CO2/flow demand. These are the charts that
  * already lived in <AtAGlance>.
  *
- * Bottom ("Profile"): the categorical facts about the species —
+ * Bottom ("Profile"): the categorical facts about the species, 
  * family, water column, schooling, temperament, diet, lifespan,
- * habitat — laid out side-by-side as a full-width row of small
+ * habitat, laid out side-by-side as a full-width row of small
  * visual cards so the section reads as a quick-glance dashboard
  * rather than a definition list.
  */

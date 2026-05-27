@@ -123,7 +123,7 @@ export function CO2Demand({ raw, className }: CO2DemandProps) {
                   active ? "text-[var(--brand)]" : "text-foreground/30",
                 )}
               >
-                {/* CO2 bubble — circle */}
+                {/* CO2 bubble, circle */}
                 <circle
                   cx="12"
                   cy="12"
@@ -222,14 +222,14 @@ export function FlowDemand({ raw, className }: FlowDemandProps) {
 }
 
 /**
- * Custom flow-rate icons — five distinct silhouettes that read at a
+ * Custom flow-rate icons, five distinct silhouettes that read at a
  * glance as a progression from calm to turbulent.
  *
- *   0 Still     — three flat layers of motionless water
- *   1 Low       — a single gentle ripple over a calm layer
- *   2 Medium    — two stacked sine waves
- *   3 High      — three taller stacked waves
- *   4 V. high   — three tight, high-frequency waves
+ *   0 Still, three flat layers of motionless water
+ *   1 Low, a single gentle ripple over a calm layer
+ *   2 Medium, two stacked sine waves
+ *   3 High, three taller stacked waves
+ *   4 V. high, three tight, high-frequency waves
  *
  * Drawn with currentColor so the parent controls active/inactive
  * tinting; aria-hidden because the textual label sits beside them.

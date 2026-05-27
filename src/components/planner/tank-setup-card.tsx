@@ -12,9 +12,9 @@ import {
 } from "@/lib/catalogue/tank-standards";
 
 interface TankSetupCardProps {
-  /** Current tank litres from the URL — undefined when unset. */
+  /** Current tank litres from the URL, undefined when unset. */
   tankL?: number;
-  /** Current filter flow l/h from the URL — undefined when unset. */
+  /** Current filter flow l/h from the URL, undefined when unset. */
   filterLph?: number;
 }
 
@@ -234,7 +234,7 @@ export function TankSetupCard({ tankL, filterLph }: TankSetupCardProps) {
           </div>
           {!tankL && (
             <p className="text-[11px] text-muted-foreground/70">
-              Pick a tank size first — we'll suggest a matching filter range.
+              Pick a tank size first, we'll suggest a matching filter range.
             </p>
           )}
         </div>

@@ -25,7 +25,7 @@ const TOOLS: ReadonlyArray<Tool> = [
     href: "/planner",
     eyebrow: "Tank Planner",
     title: "Build your tank, check the fit.",
-    body: "Add the fish, plants, shrimp, mosses, and snails you're considering. We surface the temperature, pH, hardness, light, and CO₂ the combined tank needs — and flag every predator-prey or parameter conflict before you commit.",
+    body: "Add the fish, plants, shrimp, mosses, and snails you're considering. We surface the temperature, pH, hardness, light, and CO₂ the combined tank needs, and flag every predator-prey or parameter conflict before you commit.",
     icon: Wand2,
     ctaLabel: "Open the planner",
     image: atmosphere.aquascapeWide,
@@ -64,7 +64,7 @@ const TOOLS: ReadonlyArray<Tool> = [
  * on the left and the prose/CTA on the right; stacks vertically on
  * mobile.
  *
- * No JS — pure CSS sticky positioning. Works the same on every modern
+ * No JS, pure CSS sticky positioning. Works the same on every modern
  * browser; reduced-motion users still see the cards stack because the
  * effect is driven by document scroll, not animation.
  */
@@ -147,14 +147,14 @@ function ToolCard({ tool, index, total }: ToolCardProps) {
                 aria-hidden
                 className="absolute inset-0 bg-gradient-to-tr from-[var(--abyss)]/35 via-transparent to-transparent"
               />
-              {/* Icon chip — top-left */}
+              {/* Icon chip, top-left */}
               <span
                 aria-hidden
                 className="absolute left-5 top-5 inline-flex size-12 items-center justify-center rounded-full bg-background/85 text-[var(--brand)] backdrop-blur transition-transform duration-300 group-hover:rotate-[8deg]"
               >
                 <tool.icon className="size-5" strokeWidth={1.85} />
               </span>
-              {/* Eyebrow chip — bottom-left over the photo */}
+              {/* Eyebrow chip, bottom-left over the photo */}
               <span className="absolute bottom-5 left-5 inline-flex items-center gap-1.5 rounded-full bg-background/85 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-foreground backdrop-blur">
                 <span
                   aria-hidden
@@ -166,7 +166,7 @@ function ToolCard({ tool, index, total }: ToolCardProps) {
 
             {/* Prose column */}
             <div className="flex flex-col gap-5 p-7 sm:p-10 lg:p-12">
-              {/* Numeric stamp — keeps the eye registering the deck order */}
+              {/* Numeric stamp, keeps the eye registering the deck order */}
               <span
                 aria-hidden
                 className="text-display-tight text-3xl text-[var(--brand)]/70 sm:text-4xl"

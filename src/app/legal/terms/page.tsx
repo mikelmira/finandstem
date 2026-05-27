@@ -5,7 +5,7 @@ import { LegalSection } from "@/components/sections/legal-section";
 export const metadata: Metadata = {
   title: "Terms",
   description:
-    "Fin & Stem site terms — accuracy, trademarks, open data licensing, and liability.",
+    "Fin & Stem site terms, accuracy, trademarks, open data licensing, and liability.",
 };
 
 export default function TermsPage() {

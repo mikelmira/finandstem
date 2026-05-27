@@ -20,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Plants",
   description:
-    "Aquatic plants for every planted aquarium — carpets, epiphytes, stems, floaters, and bulbs. Filter by light, CO₂, position, and water parameters.",
+    "Aquatic plants for every planted aquarium, carpets, epiphytes, stems, floaters, and bulbs. Filter by light, CO₂, position, and water parameters.",
   alternates: {
     canonical: `${site.url}/plants`,
   },
@@ -46,7 +46,7 @@ export default async function PlantsIndexPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Plants"
         title="Plants for the planted tank."
-        subtitle={`${plantNorm.length} species profiled — beginner Anubias and Java Fern through Cryptocoryne, sword plants, carpets, high-tech stems, bulbs and floaters. Light, CO₂, substrate, and propagation in one place. Filter by what your tank can support.`}
+        subtitle={`${plantNorm.length} species profiled, beginner Anubias and Java Fern through Cryptocoryne, sword plants, carpets, high-tech stems, bulbs and floaters. Light, CO₂, substrate, and propagation in one place. Filter by what your tank can support.`}
         backgroundImage={atmosphere.plantMacro}
         breadcrumb={[{ label: "Plants" }]}
       />

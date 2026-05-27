@@ -8,7 +8,7 @@ interface TldrProps {
 }
 
 /**
- * TL;DR — the answer-engine-friendly direct-answer block.
+ * TL;DR, the answer-engine-friendly direct-answer block.
  *
  * Ranks well for "what is X" queries in AI overviews because it leads with the
  * answer in a single tightly-scoped block. Keep body between 100–300 words.
@@ -28,7 +28,7 @@ export function Tldr({ body, subject }: TldrProps) {
           id="tldr-heading"
           className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand)]"
         >
-          TL;DR — {subject}
+          TL;DR, {subject}
         </h2>
       </div>
       <div className="mt-4 space-y-3 text-base leading-relaxed text-foreground/90">

@@ -15,7 +15,7 @@ interface RecommendedSpeciesProps {
 }
 
 /**
- * Recommended-next strip — the planner's "you could add…" panel.
+ * Recommended-next strip, the planner's "you could add…" panel.
  * Each card shows a candidate fish with a specimen photo, the
  * scored rationale, and an "Add to tank" pill that writes the
  * species back into the URL.
@@ -72,7 +72,7 @@ export function RecommendedSpecies({ recommendations }: RecommendedSpeciesProps)
           </h2>
           <p className="text-sm text-muted-foreground sm:text-base">
             Fish that fit your tank's parameters, stocking headroom, and
-            already-selected species — scored against the running state.
+            already-selected species, scored against the running state.
           </p>
         </div>
       </header>

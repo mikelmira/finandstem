@@ -31,7 +31,7 @@ export function Difficulty({
         isLight ? "text-white/85" : "text-muted-foreground",
         className,
       )}
-      aria-label={`Difficulty ${safe} of 5 — ${LABELS[safe]}`}
+      aria-label={`Difficulty ${safe} of 5, ${LABELS[safe]}`}
     >
       <span className="flex gap-[3px]" aria-hidden>
         {[1, 2, 3, 4, 5].map((n) => (

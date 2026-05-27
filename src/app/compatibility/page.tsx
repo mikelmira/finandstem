@@ -20,7 +20,7 @@ import { compatibilityToolJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Compatibility — Plant + Fish + Shrimp + Moss Cross-Reference",
+  title: "Compatibility, Plant + Fish + Shrimp + Moss Cross-Reference",
   description:
     "Cross-reference fish, plants, shrimp, and mosses by water-parameter overlap and tank-mate safety. Pick any species, see what else fits the same tank.",
   alternates: { canonical: `${site.url}/compatibility` },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: `${site.url}/compatibility`,
     title: "Compatibility cross-reference",
     description:
-      "Pick a fish, plant, shrimp, or moss — see what's compatible across all four categories by parameter overlap and safety flags.",
+      "Pick a fish, plant, shrimp, or moss, see what's compatible across all four categories by parameter overlap and safety flags.",
   },
 };
 

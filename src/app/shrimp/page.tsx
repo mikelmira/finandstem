@@ -20,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Shrimp",
   description:
-    "Freshwater shrimp for the planted tank — Neocaridina morphs, Caridina specialists, Amano, and bamboo filter-feeders. Filter by lineage and TDS.",
+    "Freshwater shrimp for the planted tank, Neocaridina morphs, Caridina specialists, Amano, and bamboo filter-feeders. Filter by lineage and TDS.",
   alternates: {
     canonical: `${site.url}/shrimp`,
   },
@@ -46,7 +46,7 @@ export default async function ShrimpIndexPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Shrimp"
         title="Shrimp for the planted tank."
-        subtitle={`${shrimpNorm.length} species profiled — Neocaridina colour morphs through Caridina specialists like Crystal Red and Blue Bolt, plus filter-feeding bamboo shrimp and the legendary Amano algae crew. Colony minimums, TDS targets, lineage, and which fish they survive alongside.`}
+        subtitle={`${shrimpNorm.length} species profiled, Neocaridina colour morphs through Caridina specialists like Crystal Red and Blue Bolt, plus filter-feeding bamboo shrimp and the legendary Amano algae crew. Colony minimums, TDS targets, lineage, and which fish they survive alongside.`}
         backgroundImage={atmosphere.amanoMacro}
         breadcrumb={[{ label: "Shrimp" }]}
       />

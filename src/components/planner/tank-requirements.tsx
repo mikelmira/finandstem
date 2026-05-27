@@ -48,7 +48,7 @@ export function TankRequirementsPanel({
           Your tank should be…
         </h2>
         <p className="text-sm text-muted-foreground sm:text-base">
-          The intersection of every species&rsquo; care range — the window where
+          The intersection of every species&rsquo; care range, the window where
           everything in your tank actually thrives.
         </p>
       </header>
@@ -178,7 +178,7 @@ export function TankRequirementsPanel({
         </RequirementCard>
       </div>
 
-      {/* Light + CO2 — shown as 1–5 / 1–3 visual scales. */}
+      {/* Light + CO2, shown as 1–5 / 1–3 visual scales. */}
       {(r.light || r.co2) && (
         <div className="glass glass-edge animate-fade-up grid grid-cols-1 gap-4 rounded-2xl p-5 sm:grid-cols-2 sm:p-6">
           {r.light && (

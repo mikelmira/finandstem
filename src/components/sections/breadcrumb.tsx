@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export interface BreadcrumbItem {
   label: string;
-  /** Omit on the trailing crumb — the current page is not a link. */
+  /** Omit on the trailing crumb, the current page is not a link. */
   href?: string;
 }
 
@@ -18,7 +18,7 @@ interface BreadcrumbProps {
 }
 
 /**
- * Compact breadcrumb trail — a Home icon, then label crumbs separated
+ * Compact breadcrumb trail, a Home icon, then label crumbs separated
  * by chevrons. The trailing crumb is non-linked and gets the foreground
  * colour to mark "you are here". Emits JSON-LD BreadcrumbList markup
  * so search engines pick the trail up as a rich result.

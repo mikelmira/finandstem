@@ -76,7 +76,7 @@ const GROUP_BLURBS: Record<GroupKey, string> = {
   behavior: "How it moves, courts, and reproduces.",
   watch: "What can go wrong and how to spot it.",
   variants: "Cultivars, color lines, and what gets mislabeled.",
-  tankmates: "Who it lives with — and who it doesn't.",
+  tankmates: "Who it lives with, and who it doesn't.",
   protips: "Hard-won lessons from the tank.",
 };
 

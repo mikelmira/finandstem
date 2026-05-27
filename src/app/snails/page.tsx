@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Snails",
   description:
-    "Aquarium snails for algae control, substrate cleanup, and display — nerites, mystery, ramshorn, MTS, assassins, rabbits, and more. Care, breeding, and tank-mate notes.",
+    "Aquarium snails for algae control, substrate cleanup, and display, nerites, mystery, ramshorn, MTS, assassins, rabbits, and more. Care, breeding, and tank-mate notes.",
   alternates: {
     canonical: `${site.url}/snails`,
   },
@@ -28,7 +28,7 @@ export default function SnailsIndexPage() {
       <PageHero
         eyebrow="Snails"
         title="Snails for the planted tank."
-        subtitle={`${snails.length} species profiled — nerites, mystery snails, ramshorns, MTS, assassins, rabbits and more. The algae crew, the substrate cleaners, the display species, and the ones that arrive uninvited. Each entry lists shell-calcium demand, plant safety, breeding mechanism, and what eats them.`}
+        subtitle={`${snails.length} species profiled, nerites, mystery snails, ramshorns, MTS, assassins, rabbits and more. The algae crew, the substrate cleaners, the display species, and the ones that arrive uninvited. Each entry lists shell-calcium demand, plant safety, breeding mechanism, and what eats them.`}
         backgroundImage={atmosphere.snailsOnBacopa}
         breadcrumb={[{ label: "Snails" }]}
       />

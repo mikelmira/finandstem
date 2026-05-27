@@ -12,10 +12,10 @@ interface EntryCardProps {
 }
 
 /**
- * Entry card — restyled as a field-guide postage-stamp specimen card.
+ * Entry card, restyled as a field-guide postage-stamp specimen card.
  *
  * Top row: brand mark left, big numeric right (entry's index within
- * its category, padded to two digits — feels like a catalog plate).
+ * its category, padded to two digits, feels like a catalog plate).
  *
  * Middle: title + scientific name in serif, then the careSummary as
  * the specimen's body text.
@@ -32,9 +32,9 @@ export function EntryCard({ entry }: EntryCardProps) {
   return (
     <Link
       href={`${meta.path}/${entry.slug}`}
-      className="glass glass-edge lift group relative flex flex-col overflow-hidden rounded-2xl transition-colors duration-300 hover:border-[var(--brand)]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      className="glass glass-edge lift group relative flex h-full w-full flex-col overflow-hidden rounded-2xl transition-colors duration-300 hover:border-[var(--brand)]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
-      {/* Stamp row — category mark + category eyebrow + numeral */}
+      {/* Stamp row, category mark + category eyebrow + numeral */}
       <div className="flex items-center justify-between gap-3 px-5 pt-5 sm:px-6 sm:pt-6">
         <span className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
           <CategoryMark className="size-5 text-[var(--brand)]" />
@@ -58,7 +58,7 @@ export function EntryCard({ entry }: EntryCardProps) {
         </p>
       </div>
 
-      {/* Cover image — half-bleed, like the illustration plate on a
+      {/* Cover image, half-bleed, like the illustration plate on a
           field-guide entry. */}
       <div className="relative aspect-[5/3] w-full overflow-hidden bg-muted">
         {image ? (
@@ -77,7 +77,7 @@ export function EntryCard({ entry }: EntryCardProps) {
             />
           </div>
         )}
-        {/* Subtle bottom scrim to seat any caption legibility — kept
+        {/* Subtle bottom scrim to seat any caption legibility, kept
             because we still allow image scrims as functional overlays. */}
         <div
           aria-hidden
@@ -89,7 +89,7 @@ export function EntryCard({ entry }: EntryCardProps) {
         />
       </div>
 
-      {/* Body — the editorial entry text. Hidden line-clamp keeps every
+      {/* Body, the editorial entry text. Hidden line-clamp keeps every
           card the same height. */}
       <div className="flex flex-1 flex-col gap-3 px-5 pt-4 pb-5 sm:px-6 sm:pb-6">
         <p className="line-clamp-3 text-sm leading-relaxed text-foreground/80">
@@ -105,7 +105,7 @@ export function EntryCard({ entry }: EntryCardProps) {
 }
 
 /**
- * Stable 1-based index of this entry within its category — used as
+ * Stable 1-based index of this entry within its category, used as
  * the stamp-numeral in the top-right corner. Pads to 2 digits so it
  * always reads as a catalogue plate number (`01`, `12`, etc.).
  */

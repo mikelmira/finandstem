@@ -147,7 +147,7 @@ export const CATEGORY_META: Record<
     singular: "Fish",
     path: "/fish",
     blurb:
-      "Community fish, schoolers, and centrepieces for the planted tank — from chili rasboras to German blue rams.",
+      "Community fish, schoolers, and centrepieces for the planted tank, from chili rasboras to German blue rams.",
   },
   plants: {
     label: "Plants",
@@ -161,7 +161,7 @@ export const CATEGORY_META: Record<
     singular: "Shrimp",
     path: "/shrimp",
     blurb:
-      "Neocaridina and Caridina species — colony minimums, water parameters, breeding notes, and tank-mate safety.",
+      "Neocaridina and Caridina species, colony minimums, water parameters, breeding notes, and tank-mate safety.",
   },
   mosses: {
     label: "Mosses",
@@ -175,6 +175,6 @@ export const CATEGORY_META: Record<
     singular: "Snail",
     path: "/snails",
     blurb:
-      "Nerites, mystery snails, assassins, rabbits and more. Algae crew, display species, and the ones to avoid — with parameters, breeding, and tank-mate notes.",
+      "Nerites, mystery snails, assassins, rabbits and more. Algae crew, display species, and the ones to avoid, with parameters, breeding, and tank-mate notes.",
   },
 };

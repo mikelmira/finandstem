@@ -88,14 +88,14 @@ export function WaterColumnPanel({ report }: WaterColumnPanelProps) {
                   active ? "bg-[var(--brand)]/12" : "bg-foreground/[0.04]",
                 )}
               >
-                {/* Density tint — wider band for zones with more fish */}
+                {/* Density tint, wider band for zones with more fish */}
                 {active && (
                   <span
                     className="absolute inset-x-2 inset-y-2 rounded-md bg-[var(--brand)]/15"
                     style={{ opacity: 0.5 + density * 0.5 }}
                   />
                 )}
-                {/* Mini fish silhouettes — up to 5, scales with count */}
+                {/* Mini fish silhouettes, up to 5, scales with count */}
                 {active && (
                   <div className="relative z-10 flex items-center justify-center gap-1">
                     {Array.from({
@@ -118,7 +118,7 @@ export function WaterColumnPanel({ report }: WaterColumnPanelProps) {
                   {z}
                 </span>
                 <span className="absolute right-2 top-1.5 text-[9px] font-semibold tabular-nums text-foreground/80">
-                  {data.fishCount > 0 ? `${data.fishCount}` : "—"}
+                  {data.fishCount > 0 ? `${data.fishCount}` : ", "}
                 </span>
               </div>
             );

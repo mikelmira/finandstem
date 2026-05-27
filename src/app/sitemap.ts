@@ -5,7 +5,7 @@ import { getEntryDates } from "@/data/timestamps";
 import { listGuides } from "@/lib/guides";
 
 /**
- * sitemap.ts — mirror of /seo/sitemap-plan.md.
+ * sitemap.ts, mirror of /seo/sitemap-plan.md.
  *
  * Priority ladder:
  *  1.0  Homepage

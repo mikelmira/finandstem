@@ -1,5 +1,5 @@
 /**
- * Atmosphere photography — used as hero backgrounds across the site.
+ * Atmosphere photography, used as hero backgrounds across the site.
  * Each photo credits its Unsplash photographer per the Unsplash License
  * (https://unsplash.com/license).
  */

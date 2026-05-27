@@ -29,7 +29,7 @@ export default function Page() {
           },
           {
             value: "3",
-            label: "Planning tools — Planner · Compare · Compatibility",
+            label: "Planning tools, Planner · Compare · Compatibility",
           },
         ]}
       />

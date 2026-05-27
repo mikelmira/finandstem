@@ -20,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Mosses",
   description:
-    "Aquatic mosses for hardscape, shrimp nurseries, and aquascaping detail — Java, Christmas, Flame, Weeping, Phoenix, and more. Filter by use, light, and CO₂.",
+    "Aquatic mosses for hardscape, shrimp nurseries, and aquascaping detail, Java, Christmas, Flame, Weeping, Phoenix, and more. Filter by use, light, and CO₂.",
   alternates: {
     canonical: `${site.url}/mosses`,
   },
@@ -46,7 +46,7 @@ export default async function MossesIndexPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Mosses"
         title="Mosses for the planted tank."
-        subtitle={`${mossNorm.length} species profiled — Java and Christmas through Fissidens, Süßwassertang, Riccia and beyond. Attachment surface, typical use, trimming cadence, and the shapes each one forms underwater. The detail work that makes a scape feel alive.`}
+        subtitle={`${mossNorm.length} species profiled, Java and Christmas through Fissidens, Süßwassertang, Riccia and beyond. Attachment surface, typical use, trimming cadence, and the shapes each one forms underwater. The detail work that makes a scape feel alive.`}
         backgroundImage={atmosphere.driftwoodMoss}
         breadcrumb={[{ label: "Mosses" }]}
       />

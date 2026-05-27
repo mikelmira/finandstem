@@ -124,7 +124,7 @@ export function Pillars({ eyebrow, title, items }: PillarsProps) {
                 ) : (
                   <div className="h-full w-full bg-muted" />
                 )}
-                {/* Hover scrim — readability for the Read-more pill */}
+                {/* Hover scrim, readability for the Read-more pill */}
                 <div
                   aria-hidden
                   className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[var(--abyss)]/60 to-transparent"
@@ -155,7 +155,7 @@ export function Pillars({ eyebrow, title, items }: PillarsProps) {
                 </div>
               </div>
 
-              {/* Sources line — subtle taxonomic footer */}
+              {/* Sources line, subtle taxonomic footer */}
               <div className="border-t border-foreground/8 px-5 py-3 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground/70 sm:px-6">
                 {p.sources}
               </div>

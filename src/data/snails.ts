@@ -21,14 +21,14 @@ export const snails: ReadonlyArray<SnailEntry> = [
     flowRate: "Low to High",
     lifespan: "1–2",
     breeding:
-      "Lays hard white eggs on hardscape and glass but eggs will not hatch in freshwater — true breeding requires brackish water. Eggs are cosmetic-only in a freshwater tank.",
+      "Lays hard white eggs on hardscape and glass but eggs will not hatch in freshwater, true breeding requires brackish water. Eggs are cosmetic-only in a freshwater tank.",
     algaeEaterRating: 5,
     plantSafe: "Yes",
     fishTankSafeWith: "Peaceful community fish and shrimp. Avoid puffers, large loaches, and crayfish.",
     shellCalciumDemand: "High",
     difficulty: 2,
     careSummary:
-      "The most popular algae crew snail in the hobby. Bold zebra-striped shell and a relentless work ethic on glass and rocks. Will lay sterile white eggs everywhere in fresh water — accept it or move on.",
+      "The most popular algae crew snail in the hobby. Bold zebra-striped shell and a relentless work ethic on glass and rocks. Will lay sterile white eggs everywhere in fresh water, accept it or move on.",
     imageSourceUrl: "https://en.wikipedia.org/wiki/Neritina_natalensis",
     imageLicenseHint: "Commons (mostly CC-BY-SA)",
   },
@@ -52,7 +52,7 @@ export const snails: ReadonlyArray<SnailEntry> = [
     flowRate: "Low to Medium",
     lifespan: "1–3",
     breeding:
-      "Sexual reproduction — needs a male and female. Females climb above the waterline and deposit clutches of pink eggs on glass. Easy to control by removing egg clutches.",
+      "Sexual reproduction, needs a male and female. Females climb above the waterline and deposit clutches of pink eggs on glass. Easy to control by removing egg clutches.",
     algaeEaterRating: 2,
     plantSafe: "Yes",
     fishTankSafeWith: "Peaceful community. Avoid loaches, puffers, large cichlids, and assassin snails.",
@@ -75,7 +75,7 @@ export const snails: ReadonlyArray<SnailEntry> = [
     minTankSize: "10",
     diet: "Omnivore / detritivore",
     feedingNotes:
-      "Eats biofilm, algae, leftover food, decaying plant matter, and soft new plant tissue when underfed. Don't supplement — they breed faster the more you feed them.",
+      "Eats biofilm, algae, leftover food, decaying plant matter, and soft new plant tissue when underfed. Don't supplement, they breed faster the more you feed them.",
     tempRange: "18–28",
     phRange: "7.0–8.0",
     dghRange: "5–15",
@@ -83,14 +83,14 @@ export const snails: ReadonlyArray<SnailEntry> = [
     flowRate: "Low to Medium",
     lifespan: "1–2",
     breeding:
-      "Hermaphroditic — any two adults can breed. Lays clear jelly egg clutches on every surface. Populations explode in overfed tanks; assassin snails or manual culling controls them.",
+      "Hermaphroditic, any two adults can breed. Lays clear jelly egg clutches on every surface. Populations explode in overfed tanks; assassin snails or manual culling controls them.",
     algaeEaterRating: 3,
-    plantSafe: "Mostly — may nibble new growth in low-nutrient tanks",
+    plantSafe: "Mostly, may nibble new growth in low-nutrient tanks",
     fishTankSafeWith: "Most community fish. Loaches, puffers, and assassin snails will eat them.",
     shellCalciumDemand: "Medium",
     difficulty: 1,
     careSummary:
-      "Either the easiest pet snail in the hobby or the pest you can't get rid of. Available in red, brown, blue, pink, and leopard variants when bred intentionally. Population scales with available food — keep feeding modest.",
+      "Either the easiest pet snail in the hobby or the pest you can't get rid of. Available in red, brown, blue, pink, and leopard variants when bred intentionally. Population scales with available food, keep feeding modest.",
     imageSourceUrl: "https://en.wikipedia.org/wiki/Planorbella_duryi",
     imageLicenseHint: "Commons (mostly CC-BY-SA)",
   },
@@ -106,7 +106,7 @@ export const snails: ReadonlyArray<SnailEntry> = [
     minTankSize: "10",
     diet: "Detritivore",
     feedingNotes:
-      "Sifts through substrate eating uneaten food and decaying organic matter. Self-sustaining — does not need supplemental feeding in any established tank.",
+      "Sifts through substrate eating uneaten food and decaying organic matter. Self-sustaining, does not need supplemental feeding in any established tank.",
     tempRange: "18–28",
     phRange: "7.0–8.0",
     dghRange: "6–18",
@@ -114,14 +114,14 @@ export const snails: ReadonlyArray<SnailEntry> = [
     flowRate: "Low to High",
     lifespan: "1–2",
     breeding:
-      "Parthenogenetic livebearer — every snail is female and breeds without a mate. Population grows quickly but stays out of sight in the substrate. Comes out at night.",
+      "Parthenogenetic livebearer, every snail is female and breeds without a mate. Population grows quickly but stays out of sight in the substrate. Comes out at night.",
     algaeEaterRating: 1,
-    plantSafe: "Yes — never eats live plants",
+    plantSafe: "Yes, never eats live plants",
     fishTankSafeWith: "Most community fish. Loaches and assassin snails will hunt them.",
     shellCalciumDemand: "Medium",
     difficulty: 1,
     careSummary:
-      "The clean-up crew that lives in the substrate. Aerates the gravel, eats detritus, and stays invisible during the day. Breeds via cloning so a single snail can start a colony — also why some aquarists call them a pest.",
+      "The clean-up crew that lives in the substrate. Aerates the gravel, eats detritus, and stays invisible during the day. Breeds via cloning so a single snail can start a colony, also why some aquarists call them a pest.",
     imageSourceUrl: "https://en.wikipedia.org/wiki/Melanoides_tuberculata",
     imageLicenseHint: "Commons (mostly CC-BY-SA)",
   },
@@ -145,10 +145,10 @@ export const snails: ReadonlyArray<SnailEntry> = [
     flowRate: "Low to Medium",
     lifespan: "2–3",
     breeding:
-      "Sexual — needs male and female. Females lay single transparent eggs in square cases stuck to hardscape. Slow breeders, never a population problem.",
+      "Sexual, needs male and female. Females lay single transparent eggs in square cases stuck to hardscape. Slow breeders, never a population problem.",
     algaeEaterRating: 1,
     plantSafe: "Yes",
-    fishTankSafeWith: "Peaceful community. Will eat dwarf shrimp shrimplets in some cases — keep separately if breeding shrimp.",
+    fishTankSafeWith: "Peaceful community. Will eat dwarf shrimp shrimplets in some cases, keep separately if breeding shrimp.",
     shellCalciumDemand: "Medium",
     difficulty: 2,
     careSummary:
@@ -176,7 +176,7 @@ export const snails: ReadonlyArray<SnailEntry> = [
     flowRate: "Low to Medium",
     lifespan: "3–5",
     breeding:
-      "Livebearer with extremely low reproductive rate — one young snail in a calcium-coated egg every 4–6 weeks per adult. Never a population problem.",
+      "Livebearer with extremely low reproductive rate, one young snail in a calcium-coated egg every 4–6 weeks per adult. Never a population problem.",
     algaeEaterRating: 2,
     plantSafe: "Yes (will sample soft new growth occasionally)",
     fishTankSafeWith: "Peaceful warm-water community. Sulawesi shrimp share their preferred conditions.",
@@ -199,7 +199,7 @@ export const snails: ReadonlyArray<SnailEntry> = [
     minTankSize: "15",
     diet: "Algae grazer",
     feedingNotes:
-      "Eats green spot algae, soft green algae, biofilm, and diatoms across glass and hardscape. Tiny mouth makes it a precision grazer — better for tight corners than broad surfaces.",
+      "Eats green spot algae, soft green algae, biofilm, and diatoms across glass and hardscape. Tiny mouth makes it a precision grazer, better for tight corners than broad surfaces.",
     tempRange: "22–28",
     phRange: "7.0–8.5",
     dghRange: "6–15",
@@ -207,7 +207,7 @@ export const snails: ReadonlyArray<SnailEntry> = [
     flowRate: "Low to High",
     lifespan: "1–2",
     breeding:
-      "Same as zebra nerite — lays white eggs on hardscape that will not hatch in freshwater. Eggs are cosmetic-only outside brackish water.",
+      "Same as zebra nerite, lays white eggs on hardscape that will not hatch in freshwater. Eggs are cosmetic-only outside brackish water.",
     algaeEaterRating: 5,
     plantSafe: "Yes",
     fishTankSafeWith: "Peaceful community fish and shrimp. Avoid puffers, large loaches, and crayfish.",

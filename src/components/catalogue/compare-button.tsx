@@ -56,7 +56,7 @@ export function CompareButton({
       onClick={onClick}
       aria-label={
         present
-          ? `${commonName} is in your comparison — open compare page`
+          ? `${commonName} is in your comparison, open compare page`
           : `Add ${commonName} to comparison (up to ${COMPARE_MAX})`
       }
       className={cn(

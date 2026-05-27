@@ -13,7 +13,7 @@ interface ScrollRevealTextProps {
 }
 
 /**
- * Scroll-driven word-by-word highlight — Apple/Linear-style reveal.
+ * Scroll-driven word-by-word highlight, Apple/Linear-style reveal.
  *
  * Structure: an outer section taller than the viewport, with the text
  * stuck to the centre via `sticky top-0`. As the section scrolls past
@@ -118,7 +118,7 @@ export function ScrollRevealText({
       aria-label="What Fin & Stem is"
     >
       <div className="sticky top-0 flex h-screen items-center">
-        <div className="mx-auto w-full max-w-4xl px-6 sm:px-8">
+        <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
           {eyebrow && (
             <p
               className="mb-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-[var(--brand)]"
@@ -131,7 +131,7 @@ export function ScrollRevealText({
               {eyebrow}
             </p>
           )}
-          {/* Visually hidden full sentence for screen readers — the
+          {/* Visually hidden full sentence for screen readers, the
               animated version below is decorative for them. */}
           <span className="sr-only">{text}</span>
           <p

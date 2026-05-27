@@ -35,7 +35,7 @@ interface HeroKeyFactsProps {
 /**
  * At-a-glance pills shown in the hero so a reader can triage
  * "does this even fit my tank?" without scrolling. Temperature, pH
- * and hardness are deliberately *not* surfaced here — those have
+ * and hardness are deliberately *not* surfaced here, those have
  * their own range-bar charts in the Parameters block below and the
  * pills would just repeat the same numbers. The picks here are the
  * categorical / tank-fit facts plus the cross-tank safety flags:

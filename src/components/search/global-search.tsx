@@ -107,7 +107,7 @@ export function GlobalSearch({ options }: GlobalSearchProps) {
 
   return (
     <>
-      {/* Trigger button — visible on every page from the header */}
+      {/* Trigger button, visible on every page from the header */}
       <button
         type="button"
         onClick={() => setOpen(true)}

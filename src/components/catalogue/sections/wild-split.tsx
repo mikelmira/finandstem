@@ -56,7 +56,7 @@ export function WildSplit({ entry, sections, className }: WildSplitProps) {
         </p>
       </header>
 
-      {/* World map — only shown when we can geo-locate the origin */}
+      {/* World map, only shown when we can geo-locate the origin */}
       {mappableRegions.length > 0 && (
         <OriginMap origin={entry.origin} className="animate-fade-up" />
       )}
@@ -92,7 +92,7 @@ export function WildSplit({ entry, sections, className }: WildSplitProps) {
           </article>
         )}
 
-        {/* Side facts — iconified panels */}
+        {/* Side facts, iconified panels */}
         {side.length > 0 && (
           <div className="stagger flex flex-col gap-3">
             {side.map((s, i) => {

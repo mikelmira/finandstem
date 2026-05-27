@@ -49,7 +49,7 @@ const BANDS: ScoreBand[] = [
   {
     letter: "B",
     label: "Good fit",
-    summary: "Workable as-is — only minor advisories to plan around.",
+    summary: "Workable as-is, only minor advisories to plan around.",
     tone: "brand",
     ring: "ring-[var(--brand)]/55",
     text: "text-foreground",
@@ -58,7 +58,7 @@ const BANDS: ScoreBand[] = [
   {
     letter: "C",
     label: "Workable with care",
-    summary: "A few warnings — pick equipment and stocking carefully.",
+    summary: "A few warnings, pick equipment and stocking carefully.",
     tone: "amber",
     ring: "ring-amber-400/55",
     text: "text-amber-800",
@@ -67,7 +67,7 @@ const BANDS: ScoreBand[] = [
   {
     letter: "D",
     label: "Multiple conflicts",
-    summary: "Real tension in this combination — likely needs a swap.",
+    summary: "Real tension in this combination, likely needs a swap.",
     tone: "orange",
     ring: "ring-orange-400/55",
     text: "text-orange-200",
@@ -76,7 +76,7 @@ const BANDS: ScoreBand[] = [
   {
     letter: "F",
     label: "Major conflicts",
-    summary: "These species shouldn't share a tank — drop the outliers.",
+    summary: "These species shouldn't share a tank, drop the outliers.",
     tone: "rose",
     ring: "ring-rose-400/55",
     text: "text-rose-800",
@@ -291,7 +291,7 @@ function ScoreCard({
           <Stat
             icon={Box}
             label="Min tank"
-            value={minTank !== null ? `${minTank} L` : "—"}
+            value={minTank !== null ? `${minTank} L` : ", "}
             tone={
               minTank === null ? "muted" : minTank >= 100 ? "amber" : "brand"
             }

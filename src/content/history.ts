@@ -1,7 +1,7 @@
 /**
  * Editorial content for /history-of-aquascaping.
  *
- * This is a feature page rather than a guide — it has its own layout
+ * This is a feature page rather than a guide, it has its own layout
  * (chapter eyebrows, drop cap, figure-text rhythm, timeline strip) and
  * lives on its own URL outside `/guides/[slug]`. The content is the
  * same arc as the original history-of-aquascaping.mdx article, restructured
@@ -19,7 +19,7 @@ export interface HistoryImage {
 }
 
 export interface HistoryChapter {
-  /** Two-digit chapter number — `01`, `02`, …  */
+  /** Two-digit chapter number, `01`, `02`, …  */
   number: string;
   eyebrow: string;
   title: string;
@@ -77,13 +77,13 @@ export interface Contest {
 
 const hero: HistoryImage = {
   src: "/images/history/florestas-submersas-hero.webp",
-  alt: "Florestas Submersas — Takashi Amano's 160,000-litre Nature Aquarium installation at Oceanário de Lisboa",
+  alt: "Florestas Submersas, Takashi Amano's 160,000-litre Nature Aquarium installation at Oceanário de Lisboa",
   author: "Marco Albuquerque",
   license: "Public domain",
   source:
     "https://commons.wikimedia.org/wiki/File:Florestas_Submersas_by_Takashi_Amano_(31995078117).jpg",
   caption:
-    "Florestas Submersas — the 160,000-litre Nature Aquarium Takashi Amano installed at Oceanário de Lisboa in April 2015, his final major project.",
+    "Florestas Submersas, the 160,000-litre Nature Aquarium Takashi Amano installed at Oceanário de Lisboa in April 2015, his final major project.",
 };
 
 const florestasWide: HistoryImage = {
@@ -105,7 +105,7 @@ const iwagumi: HistoryImage = {
   licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
   source: "https://commons.wikimedia.org/wiki/File:Iwagumi_Scape.jpg",
   caption:
-    "A textbook Iwagumi layout — odd-numbered stones, a single carpeting plant, a tight school of small fish.",
+    "A textbook Iwagumi layout, odd-numbered stones, a single carpeting plant, a tight school of small fish.",
 };
 
 const natureStyle: HistoryImage = {
@@ -117,7 +117,7 @@ const natureStyle: HistoryImage = {
   source:
     "https://commons.wikimedia.org/wiki/File:Nature_style_aquascape.png",
   caption:
-    "A Nature Aquarium in the Amano tradition — driftwood as the spine, mosses softening the stones, stem plants in the back third.",
+    "A Nature Aquarium in the Amano tradition, driftwood as the spine, mosses softening the stones, stem plants in the back third.",
 };
 
 const agaContestWinner: HistoryImage = {
@@ -140,18 +140,18 @@ const shrimpTank: HistoryImage = {
   source:
     "https://commons.wikimedia.org/wiki/File:Live_planted_aquarium_with_neocaridina_shrimp.jpg",
   caption:
-    "A planted tank stocked with dwarf shrimp — the algae-control standard Amano established in the 1980s with Caridina multidentata.",
+    "A planted tank stocked with dwarf shrimp, the algae-control standard Amano established in the 1980s with Caridina multidentata.",
 };
 
 const iaplcEntry: HistoryImage = {
   src: "/images/history/iaplc-2021-entry.webp",
-  alt: "Time — a 2021 IAPLC entry by Cho Jaesun, photographed for the contest archive",
+  alt: "Time, a 2021 IAPLC entry by Cho Jaesun, photographed for the contest archive",
   author: "Cho Jaesun (조재선)",
   license: "CC BY-SA 3.0",
   licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
   source: "https://commons.wikimedia.org/wiki/File:2021_IAPLC_Time.jpg",
   caption:
-    "\"Time\" — a 2021 IAPLC entry by Cho Jaesun. The IAPLC receives over 1,500 entries from more than 70 countries each year.",
+    "\"Time\", a 2021 IAPLC entry by Cho Jaesun. The IAPLC receives over 1,500 entries from more than 70 countries each year.",
 };
 
 const florestasDetail: HistoryImage = {
@@ -161,7 +161,7 @@ const florestasDetail: HistoryImage = {
   license: "Public domain",
   source:
     "https://commons.wikimedia.org/wiki/File:Florestas_Submersas_by_Takashi_Amano_(31995077867).jpg",
-  caption: "A detail of Florestas Submersas — driftwood, dense planting, deep light.",
+  caption: "A detail of Florestas Submersas, driftwood, dense planting, deep light.",
 };
 
 const florestasFish: HistoryImage = {
@@ -171,53 +171,53 @@ const florestasFish: HistoryImage = {
   license: "CC BY-SA 4.0",
   licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
   source: "https://commons.wikimedia.org/wiki/File:Oceanario_2018_5.jpg",
-  caption: "Schooling fish move through the planted hardscape — the installation is a true ecosystem.",
+  caption: "Schooling fish move through the planted hardscape, the installation is a true ecosystem.",
 };
 
 const florestasSchool: HistoryImage = {
   src: "/images/history/florestas-submersas-school.webp",
-  alt: "Silhouetted sword plants and a school of yellow-tailed fish in deep water — Florestas Submersas at the Lisbon Oceanarium",
+  alt: "Silhouetted sword plants and a school of yellow-tailed fish in deep water, Florestas Submersas at the Lisbon Oceanarium",
   author: "Andrey Filippov",
   license: "CC BY 2.0",
   licenseUrl: "https://creativecommons.org/licenses/by/2.0",
   source: "https://commons.wikimedia.org/wiki/File:Lisboa,_Portugal_(48813838571).jpg",
   caption:
-    "A deeper view — silhouetted sword plants on the left, yellow-tailed fish moving through the open water column.",
+    "A deeper view, silhouetted sword plants on the left, yellow-tailed fish moving through the open water column.",
 };
 
 const dutchCommunityTank: HistoryImage = {
   src: "/images/history/dutch-style-community-tank.webp",
-  alt: "A densely planted community aquarium with Vallisneria — close to the Dutch NBAT style",
+  alt: "A densely planted community aquarium with Vallisneria, close to the Dutch NBAT style",
   author: "Damitr",
   license: "CC BY-SA 4.0",
   licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
   source: "https://commons.wikimedia.org/wiki/File:Fish_Aquarium_with_Vallisneria.jpg",
   caption:
-    "A densely planted community tank in the Dutch tradition — Vallisneria streets, mixed species, fish chosen to complement the plants.",
+    "A densely planted community tank in the Dutch tradition, Vallisneria streets, mixed species, fish chosen to complement the plants.",
 };
 
 const internationalContestScape: HistoryImage = {
   src: "/images/history/international-contest-scape.webp",
-  alt: "A contest aquascape — placed at the IIAC 2021 and RFLAC 2021 international competitions",
+  alt: "A contest aquascape, placed at the IIAC 2021 and RFLAC 2021 international competitions",
   author: "Cho Jaesun (조재선)",
   license: "CC BY-SA 3.0",
   licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
   source:
     "https://commons.wikimedia.org/wiki/File:Positive_nihilism-2,_2021_IIAC_R.25,_RFLAC_R.14.jpg",
   caption:
-    "\"Positive Nihilism\" — a finalist at the IIAC 2021 and RFLAC 2021 contests. The CIPS / CIAC circuit in China has driven much of the contemporary contest aesthetic.",
+    "\"Positive Nihilism\", a finalist at the IIAC 2021 and RFLAC 2021 contests. The CIPS / CIAC circuit in China has driven much of the contemporary contest aesthetic.",
 };
 
 const triangleDesign: HistoryImage = {
   src: "/images/history/triangle-design.webp",
-  alt: "A triangular composition aquascape — a contest-style evolution of the Nature Aquarium",
+  alt: "A triangular composition aquascape, a contest-style evolution of the Nature Aquarium",
   author: "Brudinho5",
   license: "CC BY-SA 4.0",
   licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
   source:
     "https://commons.wikimedia.org/wiki/File:Aquascape_im_Triangel_Design.jpg",
   caption:
-    "Triangular composition — one of the standard layouts inherited from Japanese garden design and refined by ADA-trained aquascapers.",
+    "Triangular composition, one of the standard layouts inherited from Japanese garden design and refined by ADA-trained aquascapers.",
 };
 
 export const history = {
@@ -225,7 +225,7 @@ export const history = {
     eyebrow: "History",
     title: "A history of aquascaping",
     subtitle:
-      "From Dutch gardens in the 1930s to Takashi Amano's Nature Aquarium revolution to the global contest circuit today — the full story of how a glass box of water became an art form.",
+      "From Dutch gardens in the 1930s to Takashi Amano's Nature Aquarium revolution to the global contest circuit today, the full story of how a glass box of water became an art form.",
     publishedAt: "2026-05-26T12:00:00.000Z",
     updatedAt: "2026-05-26T12:00:00.000Z",
     heroImage: hero,
@@ -292,7 +292,7 @@ export const history = {
       body: [
         "The Iwagumi style is Amano's most pure expression of Japanese garden principles in aquarium form. The word means \"rock formation\" in Japanese and the style was first published in the mid-1980s.",
         "A traditional Iwagumi uses an odd number of stones (almost always three or five) arranged according to a strict compositional logic borrowed from Japanese stone gardens. Each stone has a specific name and role:",
-        "Iwagumi tanks typically use a single carpeting plant — historically dwarf hairgrass or Riccia fluitans — as the only vegetation, with a single small schooling fish species (often cardinal tetras, rummynose tetras, or harlequin rasboras) as the only livestock. The effect is meditative, minimal, and difficult to execute well.",
+        "Iwagumi tanks typically use a single carpeting plant, historically dwarf hairgrass or Riccia fluitans, as the only vegetation, with a single small schooling fish species (often cardinal tetras, rummynose tetras, or harlequin rasboras) as the only livestock. The effect is meditative, minimal, and difficult to execute well.",
         "The Iwagumi has remained the signature style of the Nature Aquarium tradition for forty years and is still the layout most frequently associated with Takashi Amano's name.",
       ],
       figure: iwagumi,
@@ -335,7 +335,7 @@ export const history = {
         license: "Unsplash",
         source: "https://unsplash.com/photos/Nti1SPucduY",
         caption:
-          "Caridina multidentata — better known as the Amano shrimp, named for the man who put it in nearly every planted tank in the world.",
+          "Caridina multidentata, better known as the Amano shrimp, named for the man who put it in nearly every planted tank in the world.",
       },
     },
     {
@@ -345,7 +345,7 @@ export const history = {
       body: [
         "Amano was also the first to popularise pressurised carbon dioxide injection in freshwater aquariums. CO₂ had been used by botanical research aquariums earlier, but the equipment was expensive, finicky, and unavailable to hobbyists. ADA productised it.",
         "The argument was simple. Plants photosynthesise faster with more dissolved CO₂, and faster plant growth outcompetes algae for nutrients. A tank with 25 to 35 ppm dissolved CO₂, balanced lighting, and regular fertilisation grows plants several times faster than a low-tech setup and stays cleaner doing it. The ADA Beetle counter and disposable CO₂ cartridge system put pressurised CO₂ within reach of any committed hobbyist for the first time.",
-        "The whole modern high-tech planted tank tradition — intense lighting, pressurised CO₂, full Estimative Index dosing, weekly trimming of stem walls — descends from the CO₂ systems Amano shipped in the late 1980s and early 1990s. The 2HR Aquarist methodology, the Tropica Specialised dosing line, the Dutch revival of the 2000s and 2010s, all assume the equipment Amano made common.",
+        "The whole modern high-tech planted tank tradition, intense lighting, pressurised CO₂, full Estimative Index dosing, weekly trimming of stem walls, descends from the CO₂ systems Amano shipped in the late 1980s and early 1990s. The 2HR Aquarist methodology, the Tropica Specialised dosing line, the Dutch revival of the 2000s and 2010s, all assume the equipment Amano made common.",
       ],
     },
     {
@@ -356,7 +356,7 @@ export const history = {
         "The International Aquatic Plants Layout Contest (IAPLC) launched in 2001 with 557 entries from 19 countries. ADA hosted it as a way to recognise the best aquascapes from around the world in a single annual competition. The contest grew exponentially.",
         "By 2025 the IAPLC received 1,533 entries from 77 countries and regions, making it the largest planted aquarium contest in history. Submissions are judged on layout, plant condition, photographic quality, and overall artistic impression. Grand prize winners come from every continent. Japan, Vietnam, Thailand, Brazil, and Italy have all produced multiple top-ten finishers. Takayuki Fukada (Japan) won the top prize in 2015 and 2016, one of the few aquascapers to win consecutive years.",
         "The IAPLC changed how aquascaping evolved. Because the contest is judged primarily from photographs, aquascapers began designing layouts that would photograph well rather than necessarily be sustainable long-term ecosystems. Mountain dioramas with cliffs of dragon stone, forest layouts with miniature trees of moss-covered driftwood, and underwater roadways with bonsai-style perspective all emerged as a contest aesthetic distinct from the everyday Nature Aquarium tradition.",
-        "Two other major international contests sit alongside the IAPLC. The Aquatic Gardeners Association in the United States actually ran the first such contest in 2000 — one year before the IAPLC — and its public archive of every submission since then is the most complete visual record of the planted-aquarium tradition. The CIPS International Aquascaping Contest in China, founded in 2017, has grown rapidly alongside China's emergence as the largest single market for aquascaping products. Together the three contests receive more than three thousand entries every year from over eighty countries.",
+        "Two other major international contests sit alongside the IAPLC. The Aquatic Gardeners Association in the United States actually ran the first such contest in 2000, one year before the IAPLC, and its public archive of every submission since then is the most complete visual record of the planted-aquarium tradition. The CIPS International Aquascaping Contest in China, founded in 2017, has grown rapidly alongside China's emergence as the largest single market for aquascaping products. Together the three contests receive more than three thousand entries every year from over eighty countries.",
       ],
     },
     {
@@ -368,7 +368,7 @@ export const history = {
         "Jungle style is a deliberately wilder take on the planted tank. Where the Nature Aquarium prizes balance and clear focal points, jungle scapes embrace overgrowth, dense layered planting, and a sense of tropical chaos. Vallisneria, large swords, broad-leaf hygrophila, and floating plants dominate. The style is forgiving of imperfect trimming and well suited to low-tech tanks.",
         "Biotope aquariums attempt to recreate a specific natural habitat. The plants, fish, hardscape, and substrate all match what would actually be found in a defined geographic location: the Rio Negro in Brazil, Lake Tanganyika, peat swamps of Borneo, or temperate streams of Vietnam. Biotope aquascapes are judged on accuracy to the source habitat rather than visual composition.",
         "Diorama aquariums are the contest-driven extreme of the Nature Aquarium tradition. Mountain ranges built from dragon stone, ancient forests built from moss-covered manzanita branches, underwater valleys lit to suggest sunrise. Diorama scapes prioritise the photograph above all else and often use forced perspective tricks that only work from a single viewing angle.",
-        "Wabi-kusa is a separate Amano invention. A ball of substrate wrapped in mesh and planted with emersed aquatic plants, kept in a partially filled glass vessel. Hardscape-only layouts strip the aquascape down to stones, wood, and substrate without any living plants — the aesthetic borrows directly from Japanese karesansui (dry landscape) gardens.",
+        "Wabi-kusa is a separate Amano invention. A ball of substrate wrapped in mesh and planted with emersed aquatic plants, kept in a partially filled glass vessel. Hardscape-only layouts strip the aquascape down to stones, wood, and substrate without any living plants, the aesthetic borrows directly from Japanese karesansui (dry landscape) gardens.",
       ],
       figure: triangleDesign,
     },
@@ -395,7 +395,7 @@ export const history = {
 
   florestasGallery: {
     intro:
-      "Florestas Submersas opened at the Oceanário de Lisboa in April 2015 and remains the largest Nature Aquarium installation ever built. 160,000 litres, 78 metres of viewing glass, more than 40 plant species, schooling fish, and Amano's signature use of driftwood as the structural spine of the scene. It was his final major project — he died four months later. ADA still maintains the installation as a permanent tribute.",
+      "Florestas Submersas opened at the Oceanário de Lisboa in April 2015 and remains the largest Nature Aquarium installation ever built. 160,000 litres, 78 metres of viewing glass, more than 40 plant species, schooling fish, and Amano's signature use of driftwood as the structural spine of the scene. It was his final major project, he died four months later. ADA still maintains the installation as a permanent tribute.",
     href: "https://www.adana.co.jp/en/lisbon/",
     hrefLabel: "Read ADA's project page for Florestas Submersas",
     images: [florestasDetail, florestasFish, florestasSchool] as ReadonlyArray<HistoryImage>,
@@ -426,7 +426,7 @@ export const history = {
       founded: "1985",
       country: "United States",
       blurb:
-        "The first Western organisation dedicated to planted aquariums. Launched the international AGA Aquascaping Contest in 2000 — one year before the IAPLC — and still hosts every submission since then in a public online archive.",
+        "The first Western organisation dedicated to planted aquariums. Launched the international AGA Aquascaping Contest in 2000, one year before the IAPLC, and still hosts every submission since then in a public online archive.",
       url: "https://www.aquatic-gardeners.org",
     },
   ] satisfies ReadonlyArray<Studio>,
@@ -439,7 +439,7 @@ export const history = {
       founded: "2001",
       host: "Aqua Design Amano (ADA), Japan",
       blurb:
-        "The largest planted-aquarium contest in the world. Founded by Takashi Amano and ADA in 2001 with 557 entries from 19 countries, the IAPLC has grown into the gravitational centre of the global hobby. Submissions are judged on layout, plant condition, photographic quality, and overall artistic impression — which has reshaped the visual language of aquascaping itself.",
+        "The largest planted-aquarium contest in the world. Founded by Takashi Amano and ADA in 2001 with 557 entries from 19 countries, the IAPLC has grown into the gravitational centre of the global hobby. Submissions are judged on layout, plant condition, photographic quality, and overall artistic impression, which has reshaped the visual language of aquascaping itself.",
       stats: [
         { label: "Founded", value: "2001" },
         { label: "2025 entries", value: "1,533" },
@@ -456,7 +456,7 @@ export const history = {
       founded: "2000",
       host: "Aquatic Gardeners Association, USA",
       blurb:
-        "The first international aquascaping contest in history — predating the IAPLC by one year. Run by the Aquatic Gardeners Association (founded 1985, the first Western planted-aquarium organisation). Free to enter, and every submission since 2000 lives on the AGA archive in perpetuity, making it the most complete historical record of planted-aquarium design over the past 25 years.",
+        "The first international aquascaping contest in history, predating the IAPLC by one year. Run by the Aquatic Gardeners Association (founded 1985, the first Western planted-aquarium organisation). Free to enter, and every submission since 2000 lives on the AGA archive in perpetuity, making it the most complete historical record of planted-aquarium design over the past 25 years.",
       stats: [
         { label: "Founded", value: "2000" },
         { label: "2025 entries", value: "426" },
@@ -499,7 +499,7 @@ export const history = {
     {
       year: "1956",
       title: "Dutch rules",
-      body: "NBAT publishes the first formal Dutch Aquascape guidelines — the first set of aquascaping rules ever written.",
+      body: "NBAT publishes the first formal Dutch Aquascape guidelines, the first set of aquascaping rules ever written.",
     },
     {
       year: "1982",

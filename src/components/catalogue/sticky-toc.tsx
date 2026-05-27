@@ -15,7 +15,7 @@ interface StickyTocProps {
 /**
  * Right-rail sticky table of contents for the species detail page.
  *
- *   • Desktop only (lg+ breakpoint) — the detail page main column
+ *   • Desktop only (lg+ breakpoint), the detail page main column
  *     reserves enough room for it via the parent grid.
  *   • Active-section highlighting via IntersectionObserver. The first
  *     visible section wins; once everything's scrolled past, the last

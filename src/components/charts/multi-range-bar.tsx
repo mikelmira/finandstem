@@ -82,11 +82,11 @@ export function MultiRangeBar({
         </figcaption>
       )}
 
-      {/* Stacked species ranges — drawn against the same scale as the
+      {/* Stacked species ranges, drawn against the same scale as the
           intersection bar (and as the primary RangeBar when this chart
           sits below one in `compact` mode). Labels sit BELOW each bar
           so the bars stay the same width regardless of species name
-          length — otherwise long names would shorten the bars and the
+          length, otherwise long names would shorten the bars and the
           ticks would no longer line up across rows. The shaded
           intersection band drawn behind every row gives the eye a
           fixed anchor for which species fall inside the overlap. */}
@@ -97,7 +97,7 @@ export function MultiRangeBar({
         {species.map((s) => (
           <li key={s.label} className="flex flex-col gap-1">
             <div className="relative h-4 w-full rounded-full bg-foreground/[0.06]">
-              {/* Intersection band — subtle backdrop so the overlap
+              {/* Intersection band, subtle backdrop so the overlap
                   reads against each species row, not just the
                   separate target bar. */}
               {intersection && (
@@ -150,7 +150,7 @@ export function MultiRangeBar({
         ))}
       </ul>
 
-      {/* Full-mode footer — keeps the intersection bar + tick labels.
+      {/* Full-mode footer, keeps the intersection bar + tick labels.
           In compact mode the chart sits below another bar that already
           shows them, so we omit. */}
       {!compact && (

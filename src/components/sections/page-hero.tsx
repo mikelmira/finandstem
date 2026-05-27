@@ -17,14 +17,14 @@ interface PageHeroProps {
 }
 
 /**
- * PageHero — the shared full-bleed hero used by every non-homepage page.
+ * PageHero, the shared full-bleed hero used by every non-homepage page.
  *
  * Pattern matches the species detail hero (entry-detail.tsx): the
  * background photo runs edge-to-edge with a dark dual gradient
  * (heavier at top + bottom for legibility against the floating
  * header pill and the page content below it). The eyebrow, breadcrumb,
  * H1, and subtitle sit directly on the photo as white text with a
- * drop-shadow — no card, no glass wrapper.
+ * drop-shadow, no card, no glass wrapper.
  *
  * Without a backgroundImage the hero falls back to a tinted brand
  * gradient with the title block in normal foreground text. The
@@ -59,7 +59,7 @@ export function PageHero({
               className="object-cover"
             />
           </div>
-          {/* Dual gradient — heavier at the top (so the floating header pill
+          {/* Dual gradient, heavier at the top (so the floating header pill
               reads cleanly) and at the bottom (so the H1 has contrast),
               lighter through the middle so the photo stays present. */}
           <div
@@ -75,7 +75,7 @@ export function PageHero({
         </>
       )}
 
-      {/* Fallback decorative layers when no photo is set — keep the
+      {/* Fallback decorative layers when no photo is set, keep the
           brand aurora wash and the oversized wordmark behind the text. */}
       {!hasPhoto && (
         <>

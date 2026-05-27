@@ -13,7 +13,7 @@ interface PillarLinkProps {
  * visually distinct aside so the link reads as a structured recommendation
  * rather than an inline reference.
  *
- * Pairs with Rule 7 of seo/internal-linking-rules.md — every guide must
+ * Pairs with Rule 7 of seo/internal-linking-rules.md, every guide must
  * link up to its pillar with keyword-rich anchor text.
  */
 export function PillarLink({ href, children }: PillarLinkProps) {

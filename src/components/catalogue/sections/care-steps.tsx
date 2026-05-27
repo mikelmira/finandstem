@@ -32,12 +32,12 @@ export function CareSteps({ sections, className }: CareStepsProps) {
           How to care for it
         </h2>
         <p className="text-sm text-muted-foreground sm:text-base">
-          The practical routine — read top to bottom.
+          The practical routine, read top to bottom.
         </p>
       </header>
 
       <ol className="stagger relative flex flex-col">
-        {/* Vertical connector line — runs behind the icons */}
+        {/* Vertical connector line, runs behind the icons */}
         <span
           aria-hidden
           className="absolute left-[27px] top-6 bottom-6 w-px bg-[var(--brand)]/25 sm:left-[35px]"

@@ -12,15 +12,15 @@ import { guidesIndexJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Guides",
   description:
-    "Long-form guides answering the questions aquascapers ask — compatibility, comparisons, tank-setup walkthroughs, biotope deep-dives.",
+    "Long-form guides answering the questions aquascapers ask, compatibility, comparisons, tank-setup walkthroughs, biotope deep-dives.",
   alternates: { canonical: `${site.url}/guides` },
   openGraph: {
     type: "website",
     url: `${site.url}/guides`,
     siteName: site.name,
-    title: "Guides — Fin & Stem",
+    title: "Guides, Fin & Stem",
     description:
-      "Long-form guides answering the questions aquascapers ask — compatibility, comparisons, tank-setup walkthroughs, biotope deep-dives.",
+      "Long-form guides answering the questions aquascapers ask, compatibility, comparisons, tank-setup walkthroughs, biotope deep-dives.",
   },
 };
 
@@ -134,10 +134,10 @@ function EmptyState() {
       </h2>
       <p className="max-w-prose text-base leading-relaxed text-muted-foreground">
         Guides are long-form articles answering the specific questions
-        aquascapers ask before stocking — &ldquo;can these two species live
+        aquascapers ask before stocking, &ldquo;can these two species live
         together?&rdquo;, &ldquo;low-tech vs high-tech: which carpet plant
         is right?&rdquo;, &ldquo;how do I scape a 30 L blackwater nano?&rdquo;
-        — each one cross-referencing the catalogue. The first batch is in
+       , each one cross-referencing the catalogue. The first batch is in
         the pipeline.
       </p>
       <div className="flex flex-wrap justify-center gap-3 pt-2">

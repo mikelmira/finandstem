@@ -22,9 +22,9 @@ export interface TankCompositionItem {
   entry: CatalogueEntry;
   /** Currently resolved stocking count for this species. */
   count: number;
-  /** Species default count (always 1 — what new species start at). */
+  /** Species default count (always 1, what new species start at). */
   defaultCount: number;
-  /** Recommended stocking — schooling fish at their school minimum,
+  /** Recommended stocking, schooling fish at their school minimum,
    *  shrimp at colony minimum, plants/mosses at 1. Used to show the
    *  "below school min N" tip while letting users start at 1. */
   recommendedCount: number;
@@ -44,7 +44,7 @@ const CAT_ICON: Record<CatalogueEntry["category"], LucideIcon> = {
   snails: Shell,
 };
 
-/** Category pill tones — picked for legibility on the cream
+/** Category pill tones, picked for legibility on the cream
  *  paper ground (darker text, slightly richer fill than the
  *  dark-theme originals). */
 const CAT_TONE: Record<CatalogueEntry["category"], string> = {
@@ -64,7 +64,7 @@ const COUNTABLE: Record<CatalogueEntry["category"], boolean> = {
   snails: true,
 };
 
-/** What "one count" represents for each category — surfaced in the
+/** What "one count" represents for each category, surfaced in the
  *  picker's helper text so the user knows what they're stocking. */
 const COUNT_UNIT: Record<CatalogueEntry["category"], string> = {
   fish: "fish",
@@ -194,7 +194,7 @@ export function TankComposition({ items }: TankCompositionProps) {
                 {entry.scientificName}
               </span>
 
-              {/* Count picker — fish stock at group, shrimp at colony,
+              {/* Count picker, fish stock at group, shrimp at colony,
                   plants by bunch/specimen, mosses by portion */}
               {countable && (
                 <div className="mt-1.5 flex items-center gap-2">
@@ -274,7 +274,7 @@ export function TankComposition({ items }: TankCompositionProps) {
  * Pick the helper text that sits under the count picker.
  *   • Fish / shrimp below the species' recommended group get a
  *     coloured "below school min N" / "below colony min N"
- *     callout — visible until the user dials up to the recommended
+ *     callout, visible until the user dials up to the recommended
  *     count. New species start at 1, so this tip fires immediately
  *     for any schooling fish or shrimp.
  *   • Once at or above the recommendation, fish/shrimp show

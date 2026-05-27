@@ -62,11 +62,11 @@ interface LegacyDetail {
 
 interface EntryDetailProps {
   entry: CatalogueEntry;
-  /** Kept for backward compatibility — no longer rendered. */
+  /** Kept for backward compatibility, no longer rendered. */
   stats?: ReadonlyArray<Stat>;
-  /** Kept for backward compatibility — no longer rendered. */
+  /** Kept for backward compatibility, no longer rendered. */
   details?: ReadonlyArray<LegacyDetail>;
-  /** Kept for backward compatibility — no longer rendered. */
+  /** Kept for backward compatibility, no longer rendered. */
   pairings?: ReadonlyArray<{ label: string; value: string }>;
 }
 
@@ -167,7 +167,7 @@ export function EntryDetail({
         data={speciesPageJsonLd({ entry, tldr, faqs, images: seoImages })}
         id={`species-jsonld-${entry.slug}`}
       />
-      {/* ─── Hero — traditional 100vh splash ────────────────────── */}
+      {/* ─── Hero, traditional 100vh splash ────────────────────── */}
       <section className="relative isolate flex h-screen min-h-[600px] flex-col overflow-hidden">
         {/* Full-bleed species photo */}
         {image && (
@@ -182,7 +182,7 @@ export function EntryDetail({
             />
           </div>
         )}
-        {/* Dual gradient — darker at top + bottom for legibility, lighter
+        {/* Dual gradient, darker at top + bottom for legibility, lighter
             in the middle so the species photo stays the star */}
         <div
           aria-hidden
@@ -195,7 +195,7 @@ export function EntryDetail({
         />
 
         <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col px-6 pt-24 pb-16 sm:px-8 sm:pt-28 sm:pb-20">
-          {/* Top — breadcrumb */}
+          {/* Top, breadcrumb */}
           <Breadcrumb
             items={[
               { label: meta.label, href: meta.path },
@@ -204,7 +204,7 @@ export function EntryDetail({
             tone="light"
           />
 
-          {/* Bottom — title block, pushed down by mt-auto */}
+          {/* Bottom, title block, pushed down by mt-auto */}
           <div className="animate-rise mt-auto max-w-3xl">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-white/85">
@@ -215,7 +215,7 @@ export function EntryDetail({
                 {meta.singular}
               </span>
               {/* Plant pages get a second pill calling out the growth form
-                  (stem, epiphyte, rosette, etc.) — instantly tells the
+                  (stem, epiphyte, rosette, etc.), instantly tells the
                   reader what shape this plant takes in the tank without
                   scrolling to the spec table. */}
               {entry.category === "plants" && (
@@ -231,7 +231,7 @@ export function EntryDetail({
               {entry.scientificName}
             </p>
 
-            {/* Meta row — origin + difficulty + CTAs, sitting inside
+            {/* Meta row, origin + difficulty + CTAs, sitting inside
                 the hero. Origin pill uses a light backdrop-blur strip;
                 Difficulty switches to its light tone; the Plan / Compare
                 buttons keep their own cream-pill styling which already
@@ -257,7 +257,7 @@ export function EntryDetail({
         </div>
       </section>
 
-      {/* ─── TL;DR — visible direct-answer paragraph ──────────────
+      {/* ─── TL;DR, visible direct-answer paragraph ──────────────
           Lives in HTML, not just JSON-LD, so AI Overviews and answer
           engines can extract the 150-250-word factual lead. */}
       <section className="border-b border-border/60">
@@ -266,14 +266,14 @@ export function EntryDetail({
         </div>
       </section>
 
-      {/* ─── Intro band — key facts, care, gallery ─────────────── */}
+      {/* ─── Intro band, key facts, care, gallery ─────────────── */}
       <section className="border-b border-border/60">
         <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
-          {/* Key-fact pills — temp / pH / minimum-tank, plus cross-tank
+          {/* Key-fact pills, temp / pH / minimum-tank, plus cross-tank
               safety flags (plant-safe / shrimp-safe). */}
           <HeroKeyFacts entry={entry} />
 
-          {/* Care summary — full-width when no gallery, paired with the
+          {/* Care summary, full-width when no gallery, paired with the
               gallery on the right when there are extra photos */}
           <div
             className={cn(
@@ -363,7 +363,7 @@ export function EntryDetail({
       <div className="mx-auto w-full max-w-7xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-14 xl:gap-20">
           <main className="flex min-w-0 flex-col gap-16 sm:gap-20">
-            {/* 1. TANK FIT — parameter charts + categorical facts */}
+            {/* 1. TANK FIT, parameter charts + categorical facts */}
             <DetailSection
               id="tank-fit"
               eyebrow="Decision"
@@ -390,7 +390,7 @@ export function EntryDetail({
               />
             </DetailSection>
 
-            {/* 3. PRO TIPS — promoted up: editorial moat */}
+            {/* 3. PRO TIPS, promoted up: editorial moat */}
             {grouped.protips.length > 0 && (
               <DetailSection
                 id="pro-tips"
@@ -404,7 +404,7 @@ export function EntryDetail({
               </DetailSection>
             )}
 
-            {/* 4. WATCH FOR — promoted: high-value pitfall content */}
+            {/* 4. WATCH FOR, promoted: high-value pitfall content */}
             {watchGroup && (
               <DetailSection
                 id="watch"
@@ -417,7 +417,7 @@ export function EntryDetail({
               </DetailSection>
             )}
 
-            {/* 5. CARE GUIDE — what you actually do */}
+            {/* 5. CARE GUIDE, what you actually do */}
             {careGroup && (
               <DetailSection
                 id="care"
@@ -431,7 +431,7 @@ export function EntryDetail({
               </DetailSection>
             )}
 
-            {/* 6. BACKGROUND — wild + behavior + variants, collapsible */}
+            {/* 6. BACKGROUND, wild + behavior + variants, collapsible */}
             {hasBackground && (
               <DetailSection
                 id="background"
@@ -470,7 +470,7 @@ export function EntryDetail({
             )}
 
             {/* Render any leftover themed groups we didn't explicitly pluck
-                (defensive — should be empty given the mapping in detail-groups). */}
+                (defensive, should be empty given the mapping in detail-groups). */}
             {grouped.groups
               .filter(
                 (g) =>
@@ -492,7 +492,7 @@ export function EntryDetail({
                 </DetailSection>
               ))}
 
-            {/* ─── FAQ — answer-engine direct-answer block ─────────── */}
+            {/* ─── FAQ, answer-engine direct-answer block ─────────── */}
             <DetailSection
               id="faq"
               eyebrow="Common questions"
@@ -516,10 +516,10 @@ export function EntryDetail({
               <Sources items={sources} />
             </DetailSection>
 
-            {/* Gallery now lives in the hero right column — see above */}
+            {/* Gallery now lives in the hero right column, see above */}
           </main>
 
-          {/* Right rail — sticky TOC (desktop only) */}
+          {/* Right rail, sticky TOC (desktop only) */}
           {tocItems.length > 1 && (
             <aside className="relative hidden lg:block">
               <StickyToc items={tocItems} />
@@ -528,7 +528,7 @@ export function EntryDetail({
         </div>
       </div>
 
-      {/* ─── More in this category — featured + sidebar bento ───── */}
+      {/* ─── More in this category, featured + sidebar bento ───── */}
       {related.length > 0 && (
         <SectionShell className="border-t border-border/60 !pt-16 sm:!pt-20">
           <div className="flex flex-wrap items-end justify-between gap-6">
@@ -545,7 +545,7 @@ export function EntryDetail({
             </PillButton>
           </div>
 
-          {/* Asymmetric bento — one large featured card, two compact rows */}
+          {/* Asymmetric bento, one large featured card, two compact rows */}
           <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-6">
             {related[0] && (
               <div className="lg:col-span-7">
@@ -565,7 +565,7 @@ export function EntryDetail({
         </SectionShell>
       )}
 
-      {/* ─── Companions — editorial cross-category strip ─────────── */}
+      {/* ─── Companions, editorial cross-category strip ─────────── */}
       {companions.length > 0 && (
         <SectionShell className="border-t border-border/60">
           <div className="max-w-2xl">
@@ -594,7 +594,7 @@ export function EntryDetail({
 }
 
 /**
- * Compact horizontal entry row — square specimen image left, name +
+ * Compact horizontal entry row, square specimen image left, name +
  * scientific name + difficulty right. Used by "More in this category"
  * to provide visual variety against the featured EntryCard.
  */
@@ -644,7 +644,7 @@ function CompactEntryRow({ entry }: { entry: CatalogueEntry }) {
 }
 
 /**
- * Companion tile — vertical specimen plate used in the cross-category
+ * Companion tile, vertical specimen plate used in the cross-category
  * "Build the rest of the tank" strip. Smaller and more uniform than
  * the main EntryCard so the three category callouts read as a set.
  */
@@ -716,7 +716,7 @@ function DetailSection({
     <section id={id} className="scroll-mt-28">
       {!hideHeader && (
         <header className="mb-8 flex flex-col gap-4 sm:mb-10">
-          {/* Stamp row — brand mark left, big numeral right. Mirrors the
+          {/* Stamp row, brand mark left, big numeral right. Mirrors the
               postage-stamp card chrome from the reference set. */}
           <div className="stamp-row">
             <span className="stamp-mark" aria-hidden>
@@ -798,7 +798,7 @@ const PILLAR_FOR_CATEGORY: Record<
  *   "Carpet / Runner"         → "Carpet"
  *   "Floating"                → "Floating"
  *
- * Order matters — the most specific functional category wins (Floating
+ * Order matters, the most specific functional category wins (Floating
  * before Carpet, Carpet before Stem, etc.) because plants like
  * "Stem / Floating-tolerant" are still stems by behaviour. The check
  * for genuine floaters uses an anchored regex so it doesn't accidentally
@@ -835,7 +835,7 @@ function uniqueGalleryDescriptionUrls(
 /**
  * Margin annotation that overlaps the bottom-left corner of the hero
  * photo. Renders the scientific-plate silhouette for the species'
- * resolved body type — slim tetra, stocky perciform, gourami, eel,
+ * resolved body type, slim tetra, stocky perciform, gourami, eel,
  * catfish, livebearer, or the plant equivalents. Mirrors the
  * field-guide margin sketch: a hand-drawn outline beside the live
  * photograph, captioned with the body type as the field-guide would.

@@ -29,25 +29,25 @@ const ROWS: Row[] = [
   },
   {
     label: "Family",
-    value: (e) => ("family" in e ? (e.family as string) : "—"),
+    value: (e) => ("family" in e ? (e.family as string) : ", "),
   },
   {
     label: "Temperature",
     value: (e) =>
-      "tempRange" in e ? `${e.tempRange as string} °C` : "—",
+      "tempRange" in e ? `${e.tempRange as string} °C` : ", ",
     rangeOf: (e) =>
       "tempRange" in e ? parseRange(e.tempRange as string) : null,
   },
   {
     label: "pH",
-    value: (e) => ("phRange" in e ? (e.phRange as string) : "—"),
+    value: (e) => ("phRange" in e ? (e.phRange as string) : ", "),
     rangeOf: (e) =>
       "phRange" in e ? parseRange(e.phRange as string) : null,
   },
   {
     label: "Hardness (dGH)",
     value: (e) =>
-      "dghRange" in e && e.dghRange ? `${e.dghRange as string}` : "—",
+      "dghRange" in e && e.dghRange ? `${e.dghRange as string}` : ", ",
     rangeOf: (e) =>
       "dghRange" in e && e.dghRange
         ? parseRange(e.dghRange as string)
@@ -55,21 +55,21 @@ const ROWS: Row[] = [
   },
   {
     label: "Flow rate",
-    value: (e) => ("flowRate" in e && e.flowRate ? (e.flowRate as string) : "—"),
+    value: (e) => ("flowRate" in e && e.flowRate ? (e.flowRate as string) : ", "),
   },
   {
     label: "Min tank",
     value: (e) =>
-      "minTankSize" in e ? (e.minTankSize as string) : "—",
+      "minTankSize" in e ? (e.minTankSize as string) : ", ",
   },
   {
     label: "Adult size",
-    value: (e) => ("adultSize" in e ? (e.adultSize as string) : "—"),
+    value: (e) => ("adultSize" in e ? (e.adultSize as string) : ", "),
   },
   {
     label: "Max height",
     value: (e) =>
-      "maxHeight" in e ? `${e.maxHeight as string} cm` : "—",
+      "maxHeight" in e ? `${e.maxHeight as string} cm` : ", ",
   },
   {
     label: "Difficulty",
@@ -78,39 +78,39 @@ const ROWS: Row[] = [
   {
     label: "Lifespan",
     value: (e) =>
-      "lifespan" in e ? `${e.lifespan as string} yrs` : "—",
+      "lifespan" in e ? `${e.lifespan as string} yrs` : ", ",
   },
   {
     label: "Diet",
-    value: (e) => ("diet" in e ? (e.diet as string) : "—"),
+    value: (e) => ("diet" in e ? (e.diet as string) : ", "),
   },
   {
     label: "Light",
-    value: (e) => ("light" in e ? (e.light as string) : "—"),
+    value: (e) => ("light" in e ? (e.light as string) : ", "),
   },
   {
     label: "CO₂",
-    value: (e) => ("co2" in e ? (e.co2 as string) : "—"),
+    value: (e) => ("co2" in e ? (e.co2 as string) : ", "),
   },
   {
     label: "Growth rate",
-    value: (e) => ("growthRate" in e ? (e.growthRate as string) : "—"),
+    value: (e) => ("growthRate" in e ? (e.growthRate as string) : ", "),
   },
   {
     label: "Water column",
-    value: (e) => ("waterColumn" in e ? (e.waterColumn as string) : "—"),
+    value: (e) => ("waterColumn" in e ? (e.waterColumn as string) : ", "),
   },
   {
     label: "Schooling",
-    value: (e) => ("schooling" in e ? (e.schooling as string) : "—"),
+    value: (e) => ("schooling" in e ? (e.schooling as string) : ", "),
   },
   {
     label: "Plant safe",
-    value: (e) => ("plantSafe" in e ? (e.plantSafe as string) : "—"),
+    value: (e) => ("plantSafe" in e ? (e.plantSafe as string) : ", "),
   },
   {
     label: "Shrimp safe",
-    value: (e) => ("shrimpSafe" in e ? (e.shrimpSafe as string) : "—"),
+    value: (e) => ("shrimpSafe" in e ? (e.shrimpSafe as string) : ", "),
   },
 ];
 
@@ -138,7 +138,7 @@ export function CompareTable({ entries }: CompareTableProps) {
   const visibleRows = ROWS.filter((r) =>
     entries.some((e) => {
       const v = r.value(e);
-      return v !== "—" && v !== undefined && v !== null;
+      return v !== ", " && v !== undefined && v !== null;
     }),
   );
 

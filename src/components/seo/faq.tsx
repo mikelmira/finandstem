@@ -9,7 +9,7 @@ interface FaqProps {
  * FAQ list rendered as a native <details> stack for accessibility + zero JS.
  *
  * Pair with FAQPage JSON-LD via speciesPageJsonLd() so the same Q/A appears
- * in both the human-readable DOM and the structured data — Google's FAQ
+ * in both the human-readable DOM and the structured data, Google's FAQ
  * rich-result requires both, and AI assistants score pages much higher when
  * the answers are present verbatim in the HTML.
  */

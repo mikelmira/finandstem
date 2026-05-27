@@ -9,7 +9,7 @@
 export const COMPARE_MAX = 4;
 const STORAGE_KEY = "finstem.compare.ids";
 
-/** Safe to call from SSR — returns [] when window is unavailable. */
+/** Safe to call from SSR, returns [] when window is unavailable. */
 export function readCompareIds(): string[] {
   if (typeof window === "undefined") return [];
   try {
@@ -28,7 +28,7 @@ export function writeCompareIds(ids: string[]): void {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
   } catch {
-    /* storage full or disabled — comparison just won't persist */
+    /* storage full or disabled, comparison just won't persist */
   }
 }
 

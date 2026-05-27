@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { ParallaxBackground } from "@/components/sections/parallax-background";
 import { PhotoCredit } from "@/components/sections/photo-credit";
 import { PillButton } from "@/components/ui/pill-button";
 import type { AtmosphereImage } from "@/data/atmosphere";
@@ -15,13 +15,13 @@ interface HeroProps {
 }
 
 /**
- * Homepage Hero — full-bleed background photo with the title block
+ * Homepage Hero, full-bleed background photo with the title block
  * sitting directly on top. No card, no glass wrapper. Matches the
  * pattern used on every species detail page.
  *
  * The hero is intentionally tall (min-h-screen / 100vh) so the H1 + subtitle +
  * CTAs all sit comfortably with breathing room around them. Stats
- * grid sits at the bottom as a glass strip — translucent enough that
+ * grid sits at the bottom as a glass strip, translucent enough that
  * the photo still reads behind it, opaque enough that the numbers
  * stay legible.
  */
@@ -45,16 +45,7 @@ export function Hero({
     >
       {backgroundImage && (
         <>
-          <div className="absolute inset-0 -z-30">
-            <Image
-              src={backgroundImage.src}
-              alt={backgroundImage.alt}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
+          <ParallaxBackground image={backgroundImage} />
           {/* Dark dual gradient so white H1 + subtitle read on any image.
               Slightly stronger top than bottom because the floating
               header pill sits in that band. */}

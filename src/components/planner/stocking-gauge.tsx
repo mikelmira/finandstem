@@ -12,7 +12,7 @@ interface StockingGaugeProps {
 }
 
 /**
- * Visual stocking gauge — a horizontal bar showing cumulative
+ * Visual stocking gauge, a horizontal bar showing cumulative
  * adult-fish bioload (cm) against the tank's comfortable capacity.
  *
  * Bands (cm of fish per litre):
@@ -24,7 +24,7 @@ interface StockingGaugeProps {
  * Dimensional override: when at least one selected species' minTankL
  * exceeds the chosen tank, the gauge enters a "tooSmall" state that
  * suppresses the bioload bands. The bioload number is still shown
- * (informationally) but the verdict is "tank too small" — the user
+ * (informationally) but the verdict is "tank too small", the user
  * can't fix it by adding more or fewer fish, only by upsizing the
  * tank or removing the dimension-limited species.
  *
@@ -110,7 +110,7 @@ export function StockingGauge({ stocking, tankL }: StockingGaugeProps) {
           aria-label={`${stocking.bioloadCm} centimetres of fish in a ${tankL} litre tank, ${STOCKING_BANDS[verdict].label.toLowerCase()}`}
           className="relative h-3 w-full overflow-hidden rounded-full bg-foreground/8"
         >
-          {/* Band backgrounds — subtle tints so the user sees where
+          {/* Band backgrounds, subtle tints so the user sees where
               they sit in the scale even before the fill paints */}
           <span
             aria-hidden
@@ -150,7 +150,7 @@ export function StockingGauge({ stocking, tankL }: StockingGaugeProps) {
             style={{ width: `${pct}%` }}
             aria-hidden
           />
-          {/* Marker — the precise current value */}
+          {/* Marker, the precise current value */}
           <span
             className={cn(
               "absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card",
@@ -185,7 +185,7 @@ export function StockingGauge({ stocking, tankL }: StockingGaugeProps) {
 }
 
 /**
- * Renders the "tank too small" state — the gauge is dimmed and a
+ * Renders the "tank too small" state, the gauge is dimmed and a
  * clear "upsize or remove these species" message takes its place.
  */
 function TankTooSmallPanel({
@@ -224,7 +224,7 @@ function TankTooSmallPanel({
 
       <p className="text-sm leading-relaxed text-foreground/85">
         The bioload would be fine, but at least one species can't physically
-        live in a {tankL} L tank. Aquarium minimums aren't about waste — they
+        live in a {tankL} L tank. Aquarium minimums aren't about waste, they
         cover horizontal swimming room, schooling behaviour, and territory.
       </p>
 
@@ -247,7 +247,7 @@ function TankTooSmallPanel({
       {required !== null && (
         <p className="text-sm text-muted-foreground">
           Upsize to <strong className="text-foreground">{required} L</strong>{" "}
-          or larger — or remove the species above.
+          or larger, or remove the species above.
         </p>
       )}
 

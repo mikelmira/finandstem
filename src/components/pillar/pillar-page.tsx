@@ -69,7 +69,7 @@ export function PillarPage({ pillar }: PillarPageProps) {
         id={`pillar-jsonld-${pillar.slug}`}
       />
 
-      {/* Hero — full-bleed photo + dark overlay + white text. Matches
+      {/* Hero, full-bleed photo + dark overlay + white text. Matches
           the species detail and PageHero patterns so every hero on the
           site reads as the same lockup. */}
       <section className="relative isolate min-h-[60vh] overflow-hidden border-b border-border/60">

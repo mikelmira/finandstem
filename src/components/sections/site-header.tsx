@@ -20,7 +20,7 @@ const SEARCH_OPTIONS: SearchOption[] = allNorm
 const MOBILE_LINKS = [...site.nav];
 
 /**
- * Slugs grouped under the desktop "Livestock" dropdown — surfaced
+ * Slugs grouped under the desktop "Livestock" dropdown, surfaced
  * individually in the mobile drawer for one-tap navigation.
  */
 const LIVESTOCK_HREFS = new Set([
@@ -47,7 +47,7 @@ export function SiteHeader() {
      */
     <header className="pointer-events-none fixed inset-x-0 top-0 z-40 px-4 pt-4 sm:px-6">
       <div className="glass glass-edge pointer-events-auto mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-full px-3 pl-4 pr-3 sm:h-16 sm:pl-6 sm:pr-3">
-        {/* Logo — image lockup, replaces the previous text wordmark. */}
+        {/* Logo, image lockup, replaces the previous text wordmark. */}
         <Link
           href="/"
           className="group flex items-center"

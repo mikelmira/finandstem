@@ -11,9 +11,9 @@ import type {
 } from "@/types/catalogue";
 
 /* ──────────────────────────────────────────────────────────────────
-   Profile — a field-guide-style list of categorical facts about the
+   Profile, a field-guide-style list of categorical facts about the
    species. Each entry is a label / value pair sitting directly on
-   the cream paper background — no glass card chrome, no graphics,
+   the cream paper background, no glass card chrome, no graphics,
    just the information. Items lay out in a two-column grid on md+
    so the section reads as a clean reference table.
    ────────────────────────────────────────────────────────────────── */

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "article",
     url: `${site.url}${PAGE_PATH}`,
     siteName: site.name,
-    title: `${PAGE_TITLE} — ${site.name}`,
+    title: `${PAGE_TITLE}, ${site.name}`,
     description: PAGE_DESCRIPTION,
     locale: "en",
     publishedTime: history.hero.publishedAt,
@@ -147,7 +147,7 @@ export default function HistoryOfAquascapingPage() {
     <>
       <JsonLd data={jsonLd()} id="history-jsonld" />
 
-      {/* Hero — full-bleed image with overlay + breadcrumb + headline */}
+      {/* Hero, full-bleed image with overlay + breadcrumb + headline */}
       <section className="relative isolate min-h-[80vh] overflow-hidden border-b border-border/60">
         <div className="absolute inset-0 -z-30">
           <Image
@@ -202,7 +202,7 @@ export default function HistoryOfAquascapingPage() {
         </figcaption>
       </section>
 
-      {/* TL;DR — single editorial paragraph with a drop cap and brand rule */}
+      {/* TL;DR, single editorial paragraph with a drop cap and brand rule */}
       <SectionShell className="!pt-14 sm:!pt-20" containerClassName="max-w-3xl">
         <div className="relative">
           <span
@@ -218,14 +218,14 @@ export default function HistoryOfAquascapingPage() {
         </div>
       </SectionShell>
 
-      {/* Chapters — alternating layout. Even-numbered chapters get the figure
+      {/* Chapters, alternating layout. Even-numbered chapters get the figure
           on the right; odd chapters get it below the prose. Image always
           sized 4:5 portrait or 3:2 landscape based on aspect of the source. */}
       {chapters.map((chapter, i) => (
         <Chapter key={chapter.number} chapter={chapter} flip={i % 2 === 1} />
       ))}
 
-      {/* Florestas Submersas gallery — three views of Amano's largest work,
+      {/* Florestas Submersas gallery, three views of Amano's largest work,
           linking out to ADA's official project page. */}
       <SectionShell className="border-t border-border/60 bg-muted/30">
         <div className="mx-auto max-w-5xl">
@@ -285,7 +285,7 @@ export default function HistoryOfAquascapingPage() {
         </div>
       </SectionShell>
 
-      {/* Contests — three big international competitions with images + links */}
+      {/* Contests, three big international competitions with images + links */}
       <SectionShell className="border-t border-border/60">
         <div className="mx-auto max-w-5xl">
           <div className="flex items-center gap-3">
@@ -382,7 +382,7 @@ export default function HistoryOfAquascapingPage() {
         </div>
       </SectionShell>
 
-      {/* Timeline strip — horizontal scroll on mobile, grid on desktop */}
+      {/* Timeline strip, horizontal scroll on mobile, grid on desktop */}
       <SectionShell className="border-t border-border/60 bg-muted/30">
         <div className="mx-auto max-w-5xl">
           <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
@@ -426,7 +426,7 @@ export default function HistoryOfAquascapingPage() {
         <Sources items={sources} />
       </SectionShell>
 
-      {/* Studios & associations — the three organisations that shaped the hobby */}
+      {/* Studios & associations, the three organisations that shaped the hobby */}
       <SectionShell className="!pt-0">
         <div className="mx-auto max-w-5xl">
           <div className="flex items-center gap-3">
@@ -441,7 +441,7 @@ export default function HistoryOfAquascapingPage() {
             The organisations that built the discipline
           </h2>
           <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            One Japanese studio, one Dutch society, one American association —
+            One Japanese studio, one Dutch society, one American association, 
             most of the rules, styles, products, and contests aquascapers use
             today trace back to these three.
           </p>
@@ -489,7 +489,7 @@ export default function HistoryOfAquascapingPage() {
             Build your own corner of this story.
           </h2>
           <p className="mt-3 text-base text-muted-foreground sm:text-lg">
-            Every species in the catalogue is cross-referenced for compatibility —
+            Every species in the catalogue is cross-referenced for compatibility, 
             so you can put together the Nature Aquarium, Iwagumi, or biotope
             you've been thinking about.
           </p>
@@ -528,7 +528,7 @@ function Chapter({ chapter, flip }: ChapterProps) {
       className={cn("!pt-0", chapter.number === "01" && "!pt-12 sm:!pt-16")}
     >
       <article className="mx-auto max-w-5xl">
-        {/* Chapter header — number + eyebrow + title */}
+        {/* Chapter header, number + eyebrow + title */}
         <header className="grid grid-cols-1 gap-6 border-b border-border/40 pb-6 sm:grid-cols-[80px_1fr] sm:items-end">
           <div className="flex items-baseline gap-3 sm:flex-col sm:items-start sm:gap-1">
             <span className="text-display-tight text-4xl text-[var(--brand)] sm:text-5xl">
@@ -543,7 +543,7 @@ function Chapter({ chapter, flip }: ChapterProps) {
           </h2>
         </header>
 
-        {/* Body — prose on one side, figure on the other on desktop when present.
+        {/* Body, prose on one side, figure on the other on desktop when present.
             On mobile the figure stacks after the prose. */}
         <div
           className={cn(
@@ -563,7 +563,7 @@ function Chapter({ chapter, flip }: ChapterProps) {
               </p>
             ))}
 
-            {/* Pull quote — only when supplied */}
+            {/* Pull quote, only when supplied */}
             {chapter.pullQuote && (
               <blockquote className="relative my-8 border-l-4 border-[var(--brand)] bg-[var(--brand)]/8 py-5 pl-6 pr-5">
                 <Quote
@@ -576,7 +576,7 @@ function Chapter({ chapter, flip }: ChapterProps) {
               </blockquote>
             )}
 
-            {/* Iwagumi stones grid — 2x2 cards inline with the prose */}
+            {/* Iwagumi stones grid, 2x2 cards inline with the prose */}
             {chapter.grid && (
               <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {chapter.grid.map((cell) => (

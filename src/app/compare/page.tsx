@@ -11,7 +11,7 @@ import type { CatalogueEntry } from "@/types/catalogue";
 export const metadata: Metadata = {
   title: "Compare species",
   description:
-    "Put up to four catalogue species side by side — temperature, pH, hardness, tank size, light, CO₂, and tank-mate safety. Spot the conflicts at a glance.",
+    "Put up to four catalogue species side by side, temperature, pH, hardness, tank size, light, CO₂, and tank-mate safety. Spot the conflicts at a glance.",
 };
 
 const OPTIONS: CompareOption[] = allNorm
@@ -95,7 +95,7 @@ function EmptyState() {
       <p className="text-base font-medium">Pick a species to start.</p>
       <p className="mt-2 text-sm text-muted-foreground">
         Search above by common name or scientific name. Add up to four
-        species across any category — fish, plants, shrimp, or mosses.
+        species across any category, fish, plants, shrimp, or mosses.
       </p>
     </div>
   );

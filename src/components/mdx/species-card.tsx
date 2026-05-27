@@ -5,7 +5,7 @@ import { allEntries, getImage } from "@/data";
 import { CATEGORY_META, type CatalogueCategory } from "@/types/catalogue";
 
 interface SpeciesCardProps {
-  /** Catalogue slug — must match one entry in src/data. */
+  /** Catalogue slug, must match one entry in src/data. */
   slug: string;
   /**
    * Disambiguator. Two different categories can theoretically share a slug;
@@ -16,7 +16,7 @@ interface SpeciesCardProps {
 
 /**
  * Inline catalogue card for MDX guides. Drops into the prose with a single
- * tag — `<SpeciesCard slug="neon-tetra" />` — and renders the photo, name,
+ * tag, `<SpeciesCard slug="neon-tetra" />`, and renders the photo, name,
  * scientific binomial, and a one-line origin pull.
  *
  * Links to the canonical species page so internal anchor text reads naturally

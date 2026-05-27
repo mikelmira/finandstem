@@ -86,7 +86,7 @@ export function ComparePicker({
       <div className="flex flex-wrap items-center gap-2">
         {selected.length === 0 && (
           <span className="text-xs text-muted-foreground">
-            No species selected yet — add up to {max}.
+            No species selected yet, add up to {max}.
           </span>
         )}
         {selected.map((value) => {
@@ -124,7 +124,7 @@ export function ComparePicker({
           <input
             type="search"
             autoComplete="off"
-            placeholder="Add a species — search by name or scientific…"
+            placeholder="Add a species, search by name or scientific…"
             value={query}
             onFocus={() => setOpen(true)}
             onChange={(e) => {

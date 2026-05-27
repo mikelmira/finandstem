@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     url: `${site.url}/about`,
-    title: `About — ${site.name}`,
+    title: `About, ${site.name}`,
     description:
       "Mike Elmira on why Fin & Stem exists, how the catalogue is sourced, and what gets fact-checked before it ships.",
   },

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 /**
- * Fin & Stem mark — a stylised stem rising through water, with a fin curl at
+ * Fin & Stem mark, a stylised stem rising through water, with a fin curl at
  * the base. Stroke uses currentColor so it inherits theme accent.
  */
 export function WaveMark(props: React.SVGProps<SVGSVGElement>) {

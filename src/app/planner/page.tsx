@@ -22,7 +22,7 @@ import { recommendFish } from "@/lib/catalogue/recommend";
 export const metadata: Metadata = {
   title: "Tank Planner",
   description:
-    "Build your tank species by species. Add fish, plants, shrimp, and mosses — we cross-reference parameters and flag every compatibility issue.",
+    "Build your tank species by species. Add fish, plants, shrimp, and mosses, we cross-reference parameters and flag every compatibility issue.",
 };
 
 const OPTIONS: BuilderOption[] = allNorm
@@ -94,7 +94,7 @@ export default async function PlannerPage({ searchParams }: PageProps) {
 
       <SectionShell>
         <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-10">
-          {/* Left — tank setup + species picker + composition (sticky on desktop) */}
+          {/* Left, tank setup + species picker + composition (sticky on desktop) */}
           <div className="flex flex-col gap-5 lg:sticky lg:top-24">
             <Suspense fallback={null}>
               <TankSetupCard tankL={tankL} filterLph={filterLph} />
@@ -128,7 +128,7 @@ export default async function PlannerPage({ searchParams }: PageProps) {
             </div>
           </div>
 
-          {/* Right — stocking, requirements + warnings */}
+          {/* Right, stocking, requirements + warnings */}
           <div className="flex flex-col gap-8">
             {hasSelection ? (
               <>
@@ -175,7 +175,7 @@ function EmptyState() {
         the parameters your tank needs to keep all of them happy.
         You&rsquo;ll see whether your chosen tank size + filter handle
         the combined bioload, the overlapping temperature / pH /
-        hardness, the light and CO₂ scales, what substrate to use —
+        hardness, the light and CO₂ scales, what substrate to use , 
         plus every compatibility conflict before you spend the money.
       </p>
       <ul className="grid grid-cols-1 gap-2 text-sm text-foreground/85 sm:grid-cols-2">
@@ -185,7 +185,7 @@ function EmptyState() {
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Live stocking gauge — comfortable, full, overstocked
+          Live stocking gauge, comfortable, full, overstocked
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />

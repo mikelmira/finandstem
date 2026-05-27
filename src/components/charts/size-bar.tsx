@@ -7,7 +7,7 @@ interface SizeBarProps {
   scaleMaxCm: number;
   /** The species' size range in cm. */
   range: { min: number; max: number } | null;
-  /** Kept for backward compatibility — no longer rendered as a
+  /** Kept for backward compatibility, no longer rendered as a
    *  silhouette. The size readout now stands on its own ruler. */
   kind?: "fish" | "shrimp" | "plant" | "moss";
   className?: string;
@@ -39,7 +39,7 @@ export function SizeBar({
             ? range.min === range.max
               ? `${range.min} cm`
               : `${range.min}–${range.max} cm`
-            : "—"}
+            : ", "}
         </span>
       </figcaption>
       <div className="flex flex-col gap-1.5">

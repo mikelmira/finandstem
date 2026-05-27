@@ -30,7 +30,7 @@ interface PillButtonAsButton extends PillButtonBaseProps {
 type PillButtonProps = PillButtonAsLink | PillButtonAsButton;
 
 /**
- * Field-guide pill button — a flat capsule with a circular arrow puck
+ * Field-guide pill button, a flat capsule with a circular arrow puck
  * tucked into its trailing edge. Mirrors the pattern across the
  * reference set (set 1 images 1+2, set 2 image 5). Use for the
  * primary site-wide CTAs and any "Read more" / "Explore" link.

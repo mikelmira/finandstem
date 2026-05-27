@@ -67,7 +67,7 @@ export function OriginMap({ origin, width, className }: OriginMapProps) {
         aria-hidden="true"
         className="block w-full h-auto"
       >
-        {/* Ocean — subtle deep-water tint */}
+        {/* Ocean, subtle deep-water tint */}
         <rect
           x={0}
           y={0}
@@ -114,7 +114,7 @@ export function OriginMap({ origin, width, className }: OriginMapProps) {
           </g>
         )}
 
-        {/* Markers — pulsing outer ring + solid dot */}
+        {/* Markers, pulsing outer ring + solid dot */}
         {markers.map((m) => (
           <g key={m.region.id} transform={`translate(${m.x} ${m.y})`}>
             <circle
@@ -132,7 +132,7 @@ export function OriginMap({ origin, width, className }: OriginMapProps) {
         ))}
       </svg>
 
-      {/* Legend — accessible plain text */}
+      {/* Legend, accessible plain text */}
       <figcaption className="border-t border-border/50 bg-background/40 px-5 py-3">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-foreground/85">
           <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">

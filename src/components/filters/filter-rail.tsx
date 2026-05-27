@@ -85,7 +85,7 @@ export function FilterRail({
         </span>
       </div>
 
-      {/* Filter rail — appears as the second item on mobile (right after
+      {/* Filter rail, appears as the second item on mobile (right after
           the toggle button), and as the left column on desktop. */}
       <aside
         id="filter-rail"
@@ -152,7 +152,7 @@ export function FilterRail({
         </div>
       </aside>
 
-      {/* Right column — content area. On mobile sits AFTER the rail
+      {/* Right column, content area. On mobile sits AFTER the rail
           (when open) so tapping "Filters" reveals the rail immediately
           above the result list rather than way below it. */}
       <div className="order-3 flex flex-col gap-5 lg:order-2">

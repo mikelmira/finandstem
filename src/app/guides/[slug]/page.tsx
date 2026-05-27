@@ -153,7 +153,7 @@ export default async function GuidePage({ params }: RouteParams) {
           </div>
         )}
 
-        {/* The article body — MDX compiled at request time, with our shared
+        {/* The article body, MDX compiled at request time, with our shared
             component mapping. The prose wrapper sets sensible defaults that
             the per-element overrides in useMDXComponents fine-tune. */}
         <div className="guide-prose">

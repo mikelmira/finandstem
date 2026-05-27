@@ -1,9 +1,9 @@
 /**
- * Guide loader — reads `.mdx` files from `src/content/guides/`, parses
+ * Guide loader, reads `.mdx` files from `src/content/guides/`, parses
  * YAML frontmatter, and exposes a typed list to the rest of the app.
  *
  * Runs at build time inside RSCs. Throws synchronously when a guide is
- * missing a required field — so CI catches editorial mistakes before they
+ * missing a required field, so CI catches editorial mistakes before they
  * reach production.
  */
 
@@ -74,7 +74,7 @@ function parseFile(filename: string): GuideEntry | null {
   const expectedFilenameMd = `${frontmatter.slug}.md`;
   if (filename !== expectedFilename && filename !== expectedFilenameMd) {
     throw new Error(
-      `Guide "${filename}" has slug "${frontmatter.slug}" — filename must match.`,
+      `Guide "${filename}" has slug "${frontmatter.slug}", filename must match.`,
     );
   }
 
@@ -102,7 +102,7 @@ export function listAllGuides(): GuideFrontmatter[] {
 
 /**
  * Read one guide by slug. Returns `null` (rather than throwing) when the
- * file simply doesn't exist — that's how `/guides/[slug]` renders 404.
+ * file simply doesn't exist, that's how `/guides/[slug]` renders 404.
  */
 export function getGuide(slug: string): GuideEntry | null {
   const mdx = `${slug}.mdx`;

@@ -13,7 +13,7 @@ interface RangeBarProps {
   precision?: number;
   /** Optional tick stops to label below the bar. */
   ticks?: number[];
-  /** Visual accent — defaults to brand. */
+  /** Visual accent, defaults to brand. */
   tone?: "brand" | "blue" | "warning";
   className?: string;
 }
@@ -55,7 +55,7 @@ export function RangeBar({
             ? range.min === range.max
               ? `${fmt(range.min)}${unit ? ` ${unit}` : ""}`
               : `${fmt(range.min)}–${fmt(range.max)}${unit ? ` ${unit}` : ""}`
-            : "—"}
+            : ", "}
         </span>
       </figcaption>
       <div

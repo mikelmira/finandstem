@@ -11,7 +11,7 @@ import { siteJsonLd } from "@/lib/seo";
 const GA_MEASUREMENT_ID = "G-HEEVNK5JSE";
 
 /**
- * Body sans — Inter. Loaded as a variable font (single network
+ * Body sans, Inter. Loaded as a variable font (single network
  * request) so the whole weight axis is available, but we still
  * benefit from next/font's automatic subsetting + self-hosting.
  */
@@ -22,7 +22,7 @@ const inter = Inter({
 });
 
 /**
- * Display family — Bricolage Grotesque, also variable. One file
+ * Display family, Bricolage Grotesque, also variable. One file
  * carries 400 body fallback through 800 wordmark-bleed weight, so the
  * design system stays expressive without paying for multiple downloads.
  */
@@ -34,7 +34,7 @@ const display = Bricolage_Grotesque({
 });
 
 /*
- * JetBrains Mono was dropped — only six tiny `font-mono` references
+ * JetBrains Mono was dropped, only six tiny `font-mono` references
  * across the codebase, all decorative. `--font-mono` now resolves to
  * the system monospace stack (set in globals.css), which removes one
  * full Google Fonts request and ~25 kB of CSS.
@@ -43,8 +43,8 @@ const display = Bricolage_Grotesque({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.tagline}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name}, ${site.tagline}`,
+    template: `%s, ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
     type: "website",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name}, ${site.tagline}`,
     description: site.description,
     locale: "en",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name}, ${site.tagline}`,
     description: site.description,
   },
   robots: {
@@ -114,7 +114,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <JsonLd data={siteJsonLd()} id="site-jsonld" />
 
-        {/* Google Analytics 4 — loads after the page is interactive so it
+        {/* Google Analytics 4, loads after the page is interactive so it
             never blocks the first paint. The Script component dedupes the
             tag across navigations and emits the snippet exactly once. */}
         <Script

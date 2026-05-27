@@ -1,5 +1,5 @@
 /**
- * MDX component mapping — the single source of truth for what custom
+ * MDX component mapping, the single source of truth for what custom
  * React components MDX articles can use inline, plus the styling overrides
  * for built-in markdown elements (`h2`, `a`, `blockquote`, etc.).
  *

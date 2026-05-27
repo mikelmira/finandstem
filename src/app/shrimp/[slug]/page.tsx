@@ -53,7 +53,7 @@ export default async function ShrimpDetailPage({ params }: RouteParams) {
     { heading: "Breeding", body: entry.breeding },
     {
       heading: "Clean-up crew",
-      body: `${entry.algaeEaterRating}/5 — ${cleanupCrewLabel(entry.algaeEaterRating)}. ${algaeLabel(entry.algaeEaterRating)}.`,
+      body: `${entry.algaeEaterRating}/5, ${cleanupCrewLabel(entry.algaeEaterRating)}. ${algaeLabel(entry.algaeEaterRating)}.`,
     },
   ];
 

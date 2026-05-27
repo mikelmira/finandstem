@@ -1,5 +1,5 @@
 /**
- * Shared Open Graph image template — used by every per-route
+ * Shared Open Graph image template, used by every per-route
  * `opengraph-image.tsx` so the social-share card looks consistent
  * across species, pillars, guides, and the homepage.
  *
@@ -10,14 +10,14 @@
 
 import { ImageResponse } from "next/og";
 
-/** Shared canvas — 1200×630 is the universal OG card aspect. */
+/** Shared canvas, 1200×630 is the universal OG card aspect. */
 export const OG_SIZE = { width: 1200, height: 630 } as const;
 export const OG_CONTENT_TYPE = "image/png" as const;
 
 export interface OgTemplateInput {
   /** Pill text at the top of the card (e.g. "FIN & STEM · FISH"). */
   eyebrow: string;
-  /** Big headline — the page's title. */
+  /** Big headline, the page's title. */
   title: string;
   /** Italic supporting line (scientific name, pillar subtitle, etc.). */
   subtitle?: string;

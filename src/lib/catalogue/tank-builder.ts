@@ -50,13 +50,13 @@ export interface TankSelectionResolved {
     category: CatalogueEntry["category"];
     slug: string;
     entry: CatalogueEntry;
-    /** Resolved count — user override or default (1 for newly added
+    /** Resolved count, user override or default (1 for newly added
      *  species; user can dial up via the picker). */
     count: number;
     /** Default count this species starts at when first added (always 1
      *  for fish / shrimp / plants / mosses). */
     defaultCount: number;
-    /** Recommended stocking — fish: minGroupSize, shrimp: colonyMin,
+    /** Recommended stocking, fish: minGroupSize, shrimp: colonyMin,
      *  plants & mosses: 1. The picker shows "below school min N" when
      *  count < recommendedCount so the schooling guidance stays
      *  visible even though defaults are 1. */
@@ -70,7 +70,7 @@ export interface TankSelectionResolved {
 
 export interface SubstrateNote {
   /** The plant's substrate instruction (e.g. "Attach to wood or
-   *  stone — never bury rhizome"). */
+   *  stone, never bury rhizome"). */
   note: string;
   /** Names of every plant that contributed this exact note. */
   sources: string[];
@@ -110,7 +110,7 @@ export interface StockingReport {
   bioloadCm: number;
   /** Bioload divided by tank volume, cm per litre. */
   loadPerLitre: number | null;
-  /** Bucket verdict — only populated when tankL is provided. */
+  /** Bucket verdict, only populated when tankL is provided. */
   verdict: StockingVerdict | null;
   /** Headroom in cm before tipping into the next band. */
   headroomCm: number | null;
@@ -119,7 +119,7 @@ export interface StockingReport {
    *  descending. */
   breakdown: StockingItem[];
   /** When the verdict is "tooSmall", these are the species whose
-   *  minTankL exceeds the user's tank size — so the UI can name
+   *  minTankL exceeds the user's tank size, so the UI can name
    *  them directly. */
   oversizedSpecies: ReadonlyArray<{ commonName: string; minTankL: number }>;
   /** The required tank size = max minTankL across the selection.
@@ -133,7 +133,7 @@ export interface FilterReport {
   filterLph: number | null;
   /** Recommended [min, max] range for the chosen tank volume. */
   recommendedRange: [number, number] | null;
-  /** Verdict from classifyFlow — only populated when both tankL and
+  /** Verdict from classifyFlow, only populated when both tankL and
    *  filterLph are provided. */
   verdict: FlowVerdict | null;
 }
@@ -181,7 +181,7 @@ export interface PlantFitItem {
   maxHeightCm: number | null;
   /** Estimated total floor footprint, count × per-specimen spread. */
   footprintCm2: number;
-  /** True for floating plants — their coverage applies to the
+  /** True for floating plants, their coverage applies to the
    *  surface, not the floor. */
   isFloating: boolean;
   verdict: PlantFitVerdict | null;
@@ -197,7 +197,7 @@ export interface PlantFitReport {
   tankFloorAreaCm2: number | null;
   /** Tank water-column depth when known; cm. */
   tankHeightCm: number | null;
-  /** floorCoverageCm2 / tankFloorAreaCm2 — null when either is missing. */
+  /** floorCoverageCm2 / tankFloorAreaCm2, null when either is missing. */
   floorCoveragePct: number | null;
   /** surfaceCoverageCm2 / tankFloorAreaCm2. */
   surfaceCoveragePct: number | null;
@@ -238,7 +238,7 @@ function parseIdToken(raw: string): {
   return { category, slug, count: Math.floor(n) };
 }
 
-/** Starting count when a species is first added — always 1 across
+/** Starting count when a species is first added, always 1 across
  *  every category. The user can dial up via the picker; the
  *  picker's helper text surfaces the *recommended* count separately
  *  (see {@link recommendedCountFor}). */
@@ -246,7 +246,7 @@ function defaultCountFor(): number {
   return 1;
 }
 
-/** Recommended stocking count for the species — schooling fish at
+/** Recommended stocking count for the species, schooling fish at
  *  their school minimum, shrimp at colony minimum, plants & mosses
  *  at 1. Used by the picker label ("below school min 10") and by
  *  the bioload-fit headroom check inside the recommender. */
@@ -373,7 +373,7 @@ function intersect(
  * `parseLight("Low to Medium")` expands to `["Low", "Medium"]`
  * meaning the plant *tolerates* that range. Its actual minimum
  * requirement is the LOW end. The tank must satisfy the
- * most-demanding plant's minimum — anyone whose minimum is met has
+ * most-demanding plant's minimum, anyone whose minimum is met has
  * no problem with extra light.
  *
  * The previous version took max over the union of all tolerated
@@ -404,7 +404,7 @@ function highestLight(
 }
 
 /**
- * CO₂ demand for the tank — same shape as `highestLight`. Each
+ * CO₂ demand for the tank, same shape as `highestLight`. Each
  * species's minimum CO₂ need is the lowest token in its tolerance
  * range; the tank needs the maximum of those minimums.
  */
@@ -440,7 +440,7 @@ function substrateNotes(plants: PlantNorm[]): SubstrateNote[] {
   for (const p of plants) {
     const raw = p.raw.substrate;
     if (!raw) continue;
-    const note = raw.replace(/—/g, "—").trim();
+    const note = raw.replace(/, /g, ", ").trim();
     if (!map.has(note)) map.set(note, []);
     map.get(note)!.push(p.commonName);
   }
@@ -461,11 +461,11 @@ function equipmentNotes(
   const out = new Set<string>();
   if (co2 === "Required" || co2 === "Recommended") {
     out.add(
-      `CO₂ injection ${co2.toLowerCase()} — pressurised system + diffuser + drop checker.`,
+      `CO₂ injection ${co2.toLowerCase()}, pressurised system + diffuser + drop checker.`,
     );
   } else if (co2 === "Optional" && plants.length > 0) {
     out.add(
-      "CO₂ is optional — adding it accelerates growth but isn't required.",
+      "CO₂ is optional, adding it accelerates growth but isn't required.",
     );
   }
   if (light === "High") {
@@ -487,7 +487,7 @@ function equipmentNotes(
     shrimp.some((s) => s.lineage !== "Caridina")
   ) {
     out.add(
-      "Caridina + Neocaridina together is risky — they want different water; keep them separate.",
+      "Caridina + Neocaridina together is risky, they want different water; keep them separate.",
     );
   } else if (shrimp.some((s) => s.lineage === "Caridina")) {
     out.add(
@@ -503,7 +503,7 @@ function equipmentNotes(
   // Mosses sometimes attached
   if (mosses.length > 0) {
     out.add(
-      "Mosses attach to wood, stone, or mesh — tie or super-glue, never bury.",
+      "Mosses attach to wood, stone, or mesh, tie or super-glue, never bury.",
     );
   }
   return Array.from(out);
@@ -544,7 +544,7 @@ function paramWarnings(
       out.push({
         severity: "danger",
         title: "pH mismatch",
-        body: "The selected species' pH ranges don't overlap. Some prefer soft acidic blackwater, others alkaline — one tank can't serve both.",
+        body: "The selected species' pH ranges don't overlap. Some prefer soft acidic blackwater, others alkaline, one tank can't serve both.",
       });
     }
     // dGH conflict
@@ -646,8 +646,8 @@ function bioWarnings(
     if (count < f.minGroupSize) {
       out.push({
         severity: "info",
-        title: `${f.commonName} schools — stock at least ${f.minGroupSize}`,
-        body: `You've planned for ${count} ${f.commonName.toLowerCase()}${count === 1 ? "" : "s"}. ${f.commonName} need a group of at least ${f.minGroupSize} to feel safe and shoal naturally — below that they're stressed and lose colour. Dial up the count, or remove the species.`,
+        title: `${f.commonName} schools, stock at least ${f.minGroupSize}`,
+        body: `You've planned for ${count} ${f.commonName.toLowerCase()}${count === 1 ? "" : "s"}. ${f.commonName} need a group of at least ${f.minGroupSize} to feel safe and shoal naturally, below that they're stressed and lose colour. Dial up the count, or remove the species.`,
       });
     }
   }
@@ -890,7 +890,7 @@ function filterAndStockingWarnings(
     out.push({
       severity: "danger",
       title: "Overstocked",
-      body: `Combined adult bioload is ~${stocking.bioloadCm} cm of fish in a ${tankL} L tank (${stocking.loadPerLitre} cm/L). That's above the 1.5 cm/L ceiling — expect ammonia spikes and aggression. Drop a group or upsize the tank.`,
+      body: `Combined adult bioload is ~${stocking.bioloadCm} cm of fish in a ${tankL} L tank (${stocking.loadPerLitre} cm/L). That's above the 1.5 cm/L ceiling, expect ammonia spikes and aggression. Drop a group or upsize the tank.`,
     });
   } else if (stocking.verdict === "full" && tankL !== undefined) {
     out.push({
@@ -923,7 +923,7 @@ function filterAndStockingWarnings(
       out.push({
         severity: "danger",
         title: `Filter undersized (${v.turnover.toFixed(1)}× turnover)`,
-        body: `${filter.filterLph} L/h is too little for a ${tankL} L tank — biofilter starves and detritus settles. Aim for ${v.recommended[0]}–${v.recommended[1]} L/h.`,
+        body: `${filter.filterLph} L/h is too little for a ${tankL} L tank, biofilter starves and detritus settles. Aim for ${v.recommended[0]}–${v.recommended[1]} L/h.`,
       });
     } else if (v.kind === "high") {
       // Hillstream / strong-flow species are happy here.
@@ -955,7 +955,7 @@ function filterAndStockingWarnings(
  * Typical per-specimen floor footprint, cm². Looked up from the
  * freeform `plantType` string (e.g. "Rhizome / Epiphyte") via
  * keyword matching. Numbers are rough planting estimates from
- * aquascaping experience — the user can sanity-check by eye in
+ * aquascaping experience, the user can sanity-check by eye in
  * the planner UI.
  */
 function plantFootprintFor(plantType: string): number {
@@ -1097,7 +1097,7 @@ function plantFitWarnings(
         title: "Tank floor is over-planted",
         body: `Plants would cover ~${Math.round(
           report.floorCoveragePct * 100,
-        )} % of the tank floor (${report.floorCoverageCm2} cm² in ${report.tankFloorAreaCm2} cm²). Drop counts or pick smaller-footprint species — over-dense plantings shade each other and trap detritus.`,
+        )} % of the tank floor (${report.floorCoverageCm2} cm² in ${report.tankFloorAreaCm2} cm²). Drop counts or pick smaller-footprint species, over-dense plantings shade each other and trap detritus.`,
       });
     } else if (report.floorCoveragePct < 0.2 && report.items.length > 0) {
       out.push({
@@ -1120,7 +1120,7 @@ function plantFitWarnings(
       title: "Floating plants will shade the tank",
       body: `Floaters would cover ~${Math.round(
         report.surfaceCoveragePct * 100,
-      )} % of the surface. Keep below 50 % so light still reaches the substrate — skim weekly.`,
+      )} % of the surface. Keep below 50 % so light still reaches the substrate, skim weekly.`,
     });
   }
 
@@ -1134,7 +1134,7 @@ function plantFitWarnings(
  * Each fish can occupy more than one zone (e.g. zebra danios use
  * both mid and top); the species appears in every zone it touches
  * but its full count is counted in each zone for visualisation
- * purposes — share calculations elsewhere use total stocked fish
+ * purposes, share calculations elsewhere use total stocked fish
  * across the *distinct* species per zone (i.e. counts are summed
  * per zone, then compared to the all-zones total).
  */
@@ -1222,7 +1222,7 @@ function waterColumnWarnings(
     out.push({
       severity: "warn",
       title: "All fish are surface-dwellers",
-      body: "The bottom of the tank is unstocked — debris will build up. Add a bottom team (corydoras, otocinclus, hillstream loach) or shrimp.",
+      body: "The bottom of the tank is unstocked, debris will build up. Add a bottom team (corydoras, otocinclus, hillstream loach) or shrimp.",
     });
     return out;
   }

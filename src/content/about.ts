@@ -3,16 +3,16 @@ export const about = {
     eyebrow: "About",
     title: "A working reference for the planted aquarium.",
     subtitle:
-      "Fin & Stem started as a frustration. Care numbers were scattered across forums and product pages. Species were profiled in isolation. Nothing connected the fish to the plants to the shrimp to the gear that made them work. So we started writing it down — and connecting it. Today it's a living reference for aquascapers anywhere in the world.",
+      "Fin & Stem started as a frustration. Care numbers were scattered across forums and product pages. Species were profiled in isolation. Nothing connected the fish to the plants to the shrimp to the gear that made them work. So we started writing it down, and connecting it. Today it's a living reference for aquascapers anywhere in the world.",
   },
   ethos: {
     eyebrow: "Ethos",
     title: "A reference for everyone who loves the underwater world.",
-    body: "Fin & Stem is a planted-aquarium reference. Care numbers, group sizes, light and CO₂ demand, tank-mate compatibility — written for the person stocking the tank, by someone who is still endlessly moved by what a glass box of water can become. Built to help aquascapers anywhere build the planted tank they imagined.",
+    body: "Fin & Stem is a planted-aquarium reference. Care numbers, group sizes, light and CO₂ demand, tank-mate compatibility, written for the person stocking the tank, by someone who is still endlessly moved by what a glass box of water can become. Built to help aquascapers anywhere build the planted tank they imagined.",
     points: [
       {
         title: "Original writing, sourced data.",
-        body: "Care ranges cross-reference FishBase, the IUCN Red List, Tropica's plant database, original species descriptions, and the documented experience of working aquascapers. Common-name and origin data tracks Wikipedia and Wikidata. We don't paraphrase competitor sites — if a number is from someone else, it's cited.",
+        body: "Care ranges cross-reference FishBase, the IUCN Red List, Tropica's plant database, original species descriptions, and the documented experience of working aquascapers. Common-name and origin data tracks Wikipedia and Wikidata. We don't paraphrase competitor sites, if a number is from someone else, it's cited.",
       },
       {
         title: "Connections matter.",
@@ -20,11 +20,11 @@ export const about = {
       },
       {
         title: "Imagery, properly attributed.",
-        body: "Photos come from Wikimedia Commons (CC-BY, CC-BY-SA, CC0), iNaturalist (CC-BY and CC0 only — never the default CC-BY-NC), and retailer catalogues where the more obscure species need coverage. Author and source are recorded on every file, with a back-link on every gallery thumbnail. The underwater world deserves to be shown by the photographers who actually captured it.",
+        body: "Photos come from Wikimedia Commons (CC-BY, CC-BY-SA, CC0), iNaturalist (CC-BY and CC0 only, never the default CC-BY-NC), and retailer catalogues where the more obscure species need coverage. Author and source are recorded on every file, with a back-link on every gallery thumbnail. The underwater world deserves to be shown by the photographers who actually captured it.",
       },
       {
         title: "Honest about uncertainty.",
-        body: "Where authoritative sources disagree, we say so and pick a position with reasoning. When we don't know something, we say so. Care numbers are working ranges, not promises. If you find a species in your tank that contradicts what we wrote, tell us — we'd rather be corrected than wrong.",
+        body: "Where authoritative sources disagree, we say so and pick a position with reasoning. When we don't know something, we say so. Care numbers are working ranges, not promises. If you find a species in your tank that contradicts what we wrote, tell us, we'd rather be corrected than wrong.",
       },
       {
         title: "Written for everywhere.",
@@ -32,7 +32,7 @@ export const about = {
       },
       {
         title: "A love letter to the planted tank.",
-        body: "Every catalogue page is an excuse to look more closely at a corner of the underwater world — a shrimp moulting on driftwood, a Cryptocoryne unfurling a new leaf, a school of cardinal tetras turning together in the current. Fin & Stem exists because that is worth taking seriously.",
+        body: "Every catalogue page is an excuse to look more closely at a corner of the underwater world, a shrimp moulting on driftwood, a Cryptocoryne unfurling a new leaf, a school of cardinal tetras turning together in the current. Fin & Stem exists because that is worth taking seriously.",
       },
     ],
   },
@@ -44,7 +44,7 @@ export const about = {
       {
         name: "FishBase",
         role: "Scientific fish data",
-        note: "35,000+ fish species — biology, ecology, ranges. The backbone for every fish entry's taxonomy and parameter ranges.",
+        note: "35,000+ fish species, biology, ecology, ranges. The backbone for every fish entry's taxonomy and parameter ranges.",
         url: "https://www.fishbase.se",
       },
       {
@@ -56,7 +56,7 @@ export const about = {
       {
         name: "iNaturalist",
         role: "Open-license imagery (fallback)",
-        note: "CC-BY and CC0 photos only — never the default CC-BY-NC. Fills gaps where Wikimedia has no coverage, especially for aquarium-trade plants.",
+        note: "CC-BY and CC0 photos only, never the default CC-BY-NC. Fills gaps where Wikimedia has no coverage, especially for aquarium-trade plants.",
         url: "https://www.inaturalist.org",
       },
       {
@@ -86,7 +86,7 @@ export const about = {
       {
         name: "IUCN Red List",
         role: "Conservation status",
-        note: "Cited on every species where conservation status matters — particularly for wild-caught fish from Southeast Asia and Amazonia.",
+        note: "Cited on every species where conservation status matters, particularly for wild-caught fish from Southeast Asia and Amazonia.",
         url: "https://www.iucnredlist.org",
       },
     ],

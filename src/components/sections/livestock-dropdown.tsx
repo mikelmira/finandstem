@@ -14,7 +14,7 @@ import {
 } from "@/components/icons/species-icons";
 
 /**
- * Livestock dropdown — groups the four catalogue categories
+ * Livestock dropdown, groups the four catalogue categories
  * (Fish · Plants · Shrimp · Mosses) into a single hover/click menu on
  * desktop. The dropdown opens on hover for fast browsing on pointer
  * devices, falls back to a click toggle on keyboard / touch.
@@ -149,7 +149,7 @@ export function LivestockDropdown() {
             : "pointer-events-none -translate-y-1 opacity-0",
         )}
       >
-        {/* Hover bridge — invisible strip between the trigger and panel
+        {/* Hover bridge, invisible strip between the trigger and panel
             so the cursor can travel without closing the menu */}
         <div aria-hidden className="h-3 w-full" />
         <div className="glass glass-edge rounded-2xl p-2 shadow-2xl shadow-[var(--abyss)]/15">

@@ -20,7 +20,7 @@ interface PlanButtonProps {
 }
 
 /**
- * "Add to tank" button — mirrors the CompareButton pattern but
+ * "Add to tank" button, mirrors the CompareButton pattern but
  * persists to the planner storage and navigates to /planner.
  *
  * When clicked:
@@ -67,7 +67,7 @@ export function PlanButton({
       onClick={onClick}
       aria-label={
         present
-          ? `${commonName} is already in your tank — open the planner`
+          ? `${commonName} is already in your tank, open the planner`
           : `Add ${commonName} to your tank planner`
       }
       className={cn(

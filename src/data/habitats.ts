@@ -1,5 +1,5 @@
 /**
- * Natural habitat snippet per species — a short sentence describing
+ * Natural habitat snippet per species, a short sentence describing
  * where each one is found in the wild ("slow blackwater stream",
  * "leaf-littered forest pool", "fast oxygen-rich Himalayan stream").
  * Surfaced on the species profile so the reader can picture the
@@ -109,14 +109,14 @@ export const HABITATS: Record<string, string> = {
     "Wet meadows and stream banks of North America",
   "sagittaria-subulata": "Brackish tidal marshes of the eastern USA",
   "ludwigia-super-red":
-    "Cultivated red form of Ludwigia — wild kin in tropical American swamps",
+    "Cultivated red form of Ludwigia, wild kin in tropical American swamps",
   pearlweed: "Damp wooded streams and bogs of Eurasia",
   "chain-sword": "Marshy floodplains of Central and South America",
   "needle-hairgrass":
     "Damp shorelines of temperate ponds and seasonal pools",
   "cryptocoryne-lutea": "Heavily shaded forest streams of Sri Lanka",
   "java-fern-windelov":
-    "Cultivar of Java fern — wild kin in Southeast Asian streams",
+    "Cultivar of Java fern, wild kin in Southeast Asian streams",
   "bolbitis-heudelotii":
     "Rocks in fast-flowing rivers of West Africa",
   "ranunculus-inundatus":
@@ -138,25 +138,25 @@ export const HABITATS: Record<string, string> = {
   "cryptocoryne-balansae":
     "Fast-flowing limestone rivers of Indochina",
   "hydrocotyle-japan":
-    "Cultivar of pennywort — wild kin on damp South-East Asian stream edges",
+    "Cultivar of pennywort, wild kin on damp South-East Asian stream edges",
 
   /* ── SHRIMP ───────────────────────────────────────────────────── */
   "cherry-shrimp":
     "Cool weedy streams of Taiwan and southern China",
   "amano-shrimp": "Cool clear streams of Japan and Taiwan",
   "crystal-red-shrimp":
-    "Bred from Bee shrimp — wild kin in southern Chinese streams",
+    "Bred from Bee shrimp, wild kin in southern Chinese streams",
   "ghost-shrimp": "Vegetated rivers and lakes of the southern USA",
   "blue-dream-shrimp":
-    "Bred from Cherry shrimp — wild kin in Taiwanese streams",
+    "Bred from Cherry shrimp, wild kin in Taiwanese streams",
   "yellow-shrimp":
-    "Bred from Cherry shrimp — wild kin in Taiwanese streams",
+    "Bred from Cherry shrimp, wild kin in Taiwanese streams",
   "bee-shrimp": "Soft acidic streams of southern China",
   "bamboo-shrimp": "Fast clear rivers of Southeast Asia",
   "snowball-shrimp":
-    "Bred from Neocaridina — wild kin in Eastern Chinese streams",
+    "Bred from Neocaridina, wild kin in Eastern Chinese streams",
   "blue-bolt-shrimp":
-    "Bred from Caridina — wild kin in Chinese mountain streams",
+    "Bred from Caridina, wild kin in Chinese mountain streams",
 
   /* ── MOSSES ───────────────────────────────────────────────────── */
   "java-moss":
@@ -176,7 +176,7 @@ export const HABITATS: Record<string, string> = {
   "phoenix-moss":
     "Wet rocks in fast-flowing Southeast Asian streams",
   sussewassertang:
-    "A liverwort gametophyte — origin uncertain; cultivated worldwide",
+    "A liverwort gametophyte, origin uncertain; cultivated worldwide",
 };
 
 /**

@@ -28,7 +28,7 @@ export function StatGrid({ stats, className }: StatGridProps) {
             {s.label}
           </dt>
           <dd className="text-base font-medium leading-tight text-foreground sm:text-lg">
-            {s.value || "—"}
+            {s.value || ", "}
           </dd>
           {s.helper && (
             <p className="text-[11px] leading-snug text-muted-foreground/80">

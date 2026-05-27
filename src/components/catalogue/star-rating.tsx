@@ -14,7 +14,7 @@ interface StarRatingProps {
 }
 
 /**
- * Star-rating display — used for the Clean-up crew score on snails and
+ * Star-rating display, used for the Clean-up crew score on snails and
  * shrimp. Renders `value` filled stars followed by `outOf - value`
  * outlined stars. Includes a screen-reader-friendly text equivalent
  * and an optional human-readable label suffix.
@@ -35,7 +35,7 @@ export function StarRating({
         "inline-flex items-center gap-1.5 text-[var(--brand)]",
         className,
       )}
-      aria-label={`${safe} out of ${outOf}${label ? ` — ${label}` : ""}`}
+      aria-label={`${safe} out of ${outOf}${label ? `, ${label}` : ""}`}
       role="img"
     >
       <span className="inline-flex items-center gap-0.5">

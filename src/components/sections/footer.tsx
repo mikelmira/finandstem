@@ -58,7 +58,7 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        {/* Disclaimer + contact strip — image takedown requests,
+        {/* Disclaimer + contact strip, image takedown requests,
             corrections, suggestions all funnel to one address. */}
         <div className="mt-14 border-t border-border/60 pt-6 text-xs leading-relaxed text-muted-foreground">
           <p className="max-w-3xl">
@@ -78,7 +78,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Mega wordmark — Terrava / Botany reference */}
+      {/* Mega wordmark, Terrava / Botany reference */}
       <div className="relative mt-12 select-none overflow-hidden">
         <div
           aria-hidden

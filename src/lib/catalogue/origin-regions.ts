@@ -6,7 +6,7 @@
  * matches one of the keyword patterns, dedupes them, and that's what gets
  * rendered as markers on the OriginMap.
  *
- * Coordinates are intentionally approximate — they're meant to drop a pin
+ * Coordinates are intentionally approximate, they're meant to drop a pin
  * "around here" on a world map, not pinpoint a stream.
  */
 
@@ -15,7 +15,7 @@ export interface OriginRegion {
   id: string;
   /** Display label shown on the map legend + tooltip. */
   label: string;
-  /** [longitude, latitude] — d3-geo / GeoJSON order. */
+  /** [longitude, latitude], d3-geo / GeoJSON order. */
   coords: [number, number];
 }
 

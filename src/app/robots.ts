@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 
 /**
- * robots.ts — mirror of /seo/robots.txt.
+ * robots.ts, mirror of /seo/robots.txt.
  *
  * We explicitly allow major AI-training and AI-search crawlers (GPTBot, ClaudeBot,
  * PerplexityBot, Google-Extended, Applebot-Extended, etc.) so Fin & Stem content is
