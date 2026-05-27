@@ -49,6 +49,23 @@ export interface HistorySource {
   url: string;
 }
 
+export interface ContestStat {
+  label: string;
+  value: string;
+}
+
+export interface Contest {
+  slug: string;
+  name: string;
+  acronym: string;
+  founded: string;
+  host: string;
+  blurb: string;
+  stats: ReadonlyArray<ContestStat>;
+  url: string;
+  image: HistoryImage;
+}
+
 const hero: HistoryImage = {
   src: "/images/history/florestas-submersas-hero.jpg",
   alt: "Florestas Submersas — Takashi Amano's 160,000-litre Nature Aquarium installation at Oceanário de Lisboa",
@@ -115,6 +132,29 @@ const shrimpTank: HistoryImage = {
     "https://commons.wikimedia.org/wiki/File:Live_planted_aquarium_with_neocaridina_shrimp.jpg",
   caption:
     "A planted tank stocked with dwarf shrimp — the algae-control standard Amano established in the 1980s with Caridina multidentata.",
+};
+
+const iaplcEntry: HistoryImage = {
+  src: "/images/history/iaplc-2021-entry.jpg",
+  alt: "Time — a 2021 IAPLC entry by Cho Jaesun, photographed for the contest archive",
+  author: "Cho Jaesun (조재선)",
+  license: "CC BY-SA 3.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+  source: "https://commons.wikimedia.org/wiki/File:2021_IAPLC_Time.jpg",
+  caption:
+    "\"Time\" — a 2021 IAPLC entry by Cho Jaesun. The IAPLC receives over 1,500 entries from more than 70 countries each year.",
+};
+
+const internationalContestScape: HistoryImage = {
+  src: "/images/history/international-contest-scape.jpg",
+  alt: "A contest aquascape — placed at the IIAC 2021 and RFLAC 2021 international competitions",
+  author: "Cho Jaesun (조재선)",
+  license: "CC BY-SA 3.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+  source:
+    "https://commons.wikimedia.org/wiki/File:Positive_nihilism-2,_2021_IIAC_R.25,_RFLAC_R.14.jpg",
+  caption:
+    "\"Positive Nihilism\" — a finalist at the IIAC 2021 and RFLAC 2021 contests. The CIPS / CIAC circuit in China has driven much of the contemporary contest aesthetic.",
 };
 
 const triangleDesign: HistoryImage = {
@@ -259,28 +299,17 @@ export const history = {
     },
     {
       number: "08",
-      eyebrow: "The IAPLC",
+      eyebrow: "The contest era",
       title: "Aquascaping becomes a global sport",
       body: [
         "The International Aquatic Plants Layout Contest (IAPLC) launched in 2001 with 557 entries from 19 countries. ADA hosted it as a way to recognise the best aquascapes from around the world in a single annual competition. The contest grew exponentially.",
         "By 2025 the IAPLC received 1,533 entries from 77 countries and regions, making it the largest planted aquarium contest in history. Submissions are judged on layout, plant condition, photographic quality, and overall artistic impression. Grand prize winners come from every continent. Japan, Vietnam, Thailand, Brazil, and Italy have all produced multiple top-ten finishers. Takayuki Fukada (Japan) won the top prize in 2015 and 2016, one of the few aquascapers to win consecutive years.",
-        "The IAPLC also changed how aquascaping evolved. Because the contest is judged primarily from photographs, aquascapers began designing layouts that would photograph well rather than necessarily be sustainable long-term ecosystems. Mountain dioramas with cliffs of dragon stone, forest layouts with miniature trees of moss-covered driftwood, and underwater roadways with bonsai-style perspective all emerged as a contest aesthetic distinct from the everyday Nature Aquarium tradition.",
-        "The contest is still the gravitational centre of the hobby. The IAPLC results book each year sets visual trends that ripple through everything from retail product design to the average home aquarium for the next twelve months.",
+        "The IAPLC changed how aquascaping evolved. Because the contest is judged primarily from photographs, aquascapers began designing layouts that would photograph well rather than necessarily be sustainable long-term ecosystems. Mountain dioramas with cliffs of dragon stone, forest layouts with miniature trees of moss-covered driftwood, and underwater roadways with bonsai-style perspective all emerged as a contest aesthetic distinct from the everyday Nature Aquarium tradition.",
+        "Two other major international contests sit alongside the IAPLC. The Aquatic Gardeners Association in the United States actually ran the first such contest in 2000 — one year before the IAPLC — and its public archive of every submission since then is the most complete visual record of the planted-aquarium tradition. The CIPS International Aquascaping Contest in China, founded in 2017, has grown rapidly alongside China's emergence as the largest single market for aquascaping products. Together the three contests receive more than three thousand entries every year from over eighty countries.",
       ],
-      figure: agaContestWinner,
     },
     {
       number: "09",
-      eyebrow: "AGA & CIPS",
-      title: "Western and Chinese recognition",
-      body: [
-        "The Aquatic Gardeners Association was founded in 1985 in the United States as the first Western organisation dedicated to planted aquariums. The AGA launched its International Aquascaping Contest in 2000, one year before the IAPLC, making it technically the first international aquascaping contest of its kind.",
-        "The AGA contest began with 70 entries from a small group of enthusiasts and grew to 426 aquascapes from 365 contestants from 52 countries by its 25th anniversary in 2025. The contest is free to enter and every submission since 2000 is hosted online in perpetuity, making the AGA archive the most complete historical record of planted aquarium design over the past quarter century.",
-        "The China International Pet Show (CIPS) launched its own international aquascaping contest (CIAC) in 2017, co-founded with the China Fisheries Association Aquascaping (CFAA). By 2025 the CIAC received 680 entries from 28 countries. CIPS also runs the CIPS International Marine Aquascaping Contest (CMAC) for saltwater aquariums and the CIPS Biotope Aquarium Contest (CBAC) for replicating specific natural habitats. The combined contests reflect the rise of China as the largest single market for planted aquarium products.",
-      ],
-    },
-    {
-      number: "10",
       eyebrow: "Modern styles",
       title: "Beyond Nature Aquarium",
       body: [
@@ -293,7 +322,7 @@ export const history = {
       figure: triangleDesign,
     },
     {
-      number: "11",
+      number: "10",
       eyebrow: "August 2015",
       title: "The death of Takashi Amano",
       body: [
@@ -302,7 +331,7 @@ export const history = {
       ],
     },
     {
-      number: "12",
+      number: "11",
       eyebrow: "Today",
       title: "The hobby Amano left us",
       body: [
@@ -312,6 +341,60 @@ export const history = {
       ],
     },
   ] satisfies ReadonlyArray<HistoryChapter>,
+
+  contests: [
+    {
+      slug: "iaplc",
+      name: "International Aquatic Plants Layout Contest",
+      acronym: "IAPLC",
+      founded: "2001",
+      host: "Aqua Design Amano (ADA), Japan",
+      blurb:
+        "The largest planted-aquarium contest in the world. Founded by Takashi Amano and ADA in 2001 with 557 entries from 19 countries, the IAPLC has grown into the gravitational centre of the global hobby. Submissions are judged on layout, plant condition, photographic quality, and overall artistic impression — which has reshaped the visual language of aquascaping itself.",
+      stats: [
+        { label: "Founded", value: "2001" },
+        { label: "2025 entries", value: "1,533" },
+        { label: "Countries", value: "77" },
+        { label: "Host", value: "ADA, Japan" },
+      ],
+      url: "https://iaplc.com/e/",
+      image: iaplcEntry,
+    },
+    {
+      slug: "aga",
+      name: "AGA International Aquascaping Contest",
+      acronym: "AGA",
+      founded: "2000",
+      host: "Aquatic Gardeners Association, USA",
+      blurb:
+        "The first international aquascaping contest in history — predating the IAPLC by one year. Run by the Aquatic Gardeners Association (founded 1985, the first Western planted-aquarium organisation). Free to enter, and every submission since 2000 lives on the AGA archive in perpetuity, making it the most complete historical record of planted-aquarium design over the past 25 years.",
+      stats: [
+        { label: "Founded", value: "2000" },
+        { label: "2025 entries", value: "426" },
+        { label: "Countries", value: "52" },
+        { label: "Host", value: "AGA, USA" },
+      ],
+      url: "https://showcase.aquatic-gardeners.org/",
+      image: agaContestWinner,
+    },
+    {
+      slug: "cips",
+      name: "CIPS International Aquascaping Contest",
+      acronym: "CIAC",
+      founded: "2017",
+      host: "China International Pet Show / CFAA",
+      blurb:
+        "The newest of the big three. Launched in 2017 by the China International Pet Show with the China Fisheries Association Aquascaping, the CIAC has scaled rapidly alongside the boom in Chinese aquascaping. CIPS also runs separate marine (CMAC) and biotope (CBAC) contests, making it the broadest contest portfolio in the world.",
+      stats: [
+        { label: "Founded", value: "2017" },
+        { label: "2025 entries", value: "680" },
+        { label: "Countries", value: "28" },
+        { label: "Host", value: "CIPS / CFAA, China" },
+      ],
+      url: "https://ciacen.cipscom.com/sc.htm",
+      image: internationalContestScape,
+    },
+  ] satisfies ReadonlyArray<Contest>,
 
   timeline: [
     {

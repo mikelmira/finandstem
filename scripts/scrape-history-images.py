@@ -55,6 +55,16 @@ TARGETS = [
         "Aquascape im Triangel Design.jpg",
         "Triangular composition aquascape — a contest-driven evolution of the Nature Aquarium style",
     ),
+    (
+        "iaplc-2021-entry",
+        "2021 IAPLC Time.jpg",
+        "Time — an IAPLC 2021 entry. The International Aquatic Plants Layout Contest is the world's largest planted-tank competition",
+    ),
+    (
+        "international-contest-scape",
+        "Positive nihilism-2, 2021 IIAC R.25, RFLAC R.14.jpg",
+        "An international-contest aquascape that placed at IIAC 2021 and RFLAC 2021 — typical of the contest-aesthetic now dominating global aquascaping",
+    ),
 ]
 
 

@@ -3,7 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
+  ArrowUpRight,
   Quote,
+  Trophy,
   ExternalLink as ExternalLinkIcon,
 } from "lucide-react";
 
@@ -105,12 +107,31 @@ function jsonLd() {
           acceptedAnswer: { "@type": "Answer", text: q.answer },
         })),
       },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#contests`,
+        name: "Major international aquascaping contests",
+        itemListElement: history.contests.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "EventSeries",
+            name: c.name,
+            alternateName: c.acronym,
+            startDate: c.founded,
+            organizer: { "@type": "Organization", name: c.host },
+            url: c.url,
+            image: `${site.url}${c.image.src}`,
+            description: c.blurb,
+          },
+        })),
+      },
     ],
   };
 }
 
 export default function HistoryOfAquascapingPage() {
-  const { hero, tldr, chapters, timeline, faqs, sources } = history;
+  const { hero, tldr, chapters, contests, timeline, faqs, sources } = history;
   const wordCount = chapters.reduce(
     (acc, c) => acc + c.body.join(" ").split(/\s+/).filter(Boolean).length,
     0,
@@ -204,6 +225,103 @@ export default function HistoryOfAquascapingPage() {
       {chapters.map((chapter, i) => (
         <Chapter key={chapter.number} chapter={chapter} flip={i % 2 === 1} />
       ))}
+
+      {/* Contests — three big international competitions with images + links */}
+      <SectionShell className="border-t border-border/60">
+        <div className="mx-auto max-w-5xl">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex size-9 items-center justify-center rounded-full bg-[var(--brand)]/12 text-[var(--brand)]">
+              <Trophy className="size-4" aria-hidden />
+            </span>
+            <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
+              The three big contests
+            </p>
+          </div>
+          <h2 className="text-display-tight mt-5 text-balance text-3xl leading-[1.2] sm:text-4xl">
+            Where aquascaping is judged each year
+          </h2>
+          <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            The IAPLC, AGA, and CIPS contests collectively receive more than
+            three thousand entries from over eighty countries every year. Each
+            one is open to entrants from anywhere in the world and each one
+            sets visual trends that ripple through the hobby for the next twelve
+            months.
+          </p>
+          <ul className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            {contests.map((c) => (
+              <li
+                key={c.slug}
+                className="glass glass-edge group flex flex-col overflow-hidden rounded-2xl"
+              >
+                <div className="relative aspect-[5/3] w-full overflow-hidden bg-muted">
+                  <Image
+                    src={c.image.src}
+                    alt={c.image.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col gap-4 p-6">
+                  <div>
+                    <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
+                      Est. {c.founded} · {c.acronym}
+                    </p>
+                    <h3 className="text-display-tight mt-2 text-pretty text-xl leading-snug">
+                      {c.name}
+                    </h3>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      Host: {c.host}
+                    </p>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {c.blurb}
+                  </p>
+
+                  <dl className="grid grid-cols-2 gap-3 border-t border-border/50 pt-4">
+                    {c.stats.map((s) => (
+                      <div key={s.label}>
+                        <dt className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                          {s.label}
+                        </dt>
+                        <dd className="text-display-tight mt-0.5 text-lg text-foreground">
+                          {s.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit the ${c.name} official site`}
+                    className="press mt-auto inline-flex items-center justify-between gap-1.5 rounded-full bg-[var(--brand)] px-4 py-2.5 text-sm font-medium text-white shadow-lg shadow-[var(--brand)]/20 transition-all hover:-translate-y-0.5"
+                  >
+                    Visit official site
+                    <ArrowUpRight
+                      className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      aria-hidden
+                    />
+                  </a>
+
+                  <a
+                    href={c.image.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] text-muted-foreground/85 transition-colors hover:text-[var(--brand)]"
+                  >
+                    Photo: {c.image.author} · {c.image.license}
+                    <ExternalLinkIcon className="size-3" aria-hidden />
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </SectionShell>
 
       {/* Timeline strip — horizontal scroll on mobile, grid on desktop */}
       <SectionShell className="border-t border-border/60 bg-muted/30">
