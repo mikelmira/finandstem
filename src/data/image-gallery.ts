@@ -16,7 +16,7 @@ export interface GalleryImage {
 export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   "amano-shrimp": [
     {
-      url: "/images/gallery/amano-shrimp/0.jpg",
+      url: "/images/gallery/amano-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Amano_Garnele_(85281493).jpeg",
       fileTitle: "File:Amano_Garnele_(85281493).jpeg",
       license: "CC0",
@@ -27,7 +27,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/amano-shrimp/1.jpg",
+      url: "/images/gallery/amano-shrimp/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Amano_Exuvie_1.jpg",
       fileTitle: "File:Amano Exuvie 1.jpg",
       license: "CC BY-SA 3.0",
@@ -38,7 +38,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amano-shrimp/2.jpg",
+      url: "/images/gallery/amano-shrimp/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Amano_Exuvie_2.jpg",
       fileTitle: "File:Amano Exuvie 2.jpg",
       license: "CC BY-SA 3.0",
@@ -49,7 +49,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amano-shrimp/3.jpg",
+      url: "/images/gallery/amano-shrimp/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Amano_Exuvie_3.jpg",
       fileTitle: "File:Amano Exuvie 3.jpg",
       license: "CC BY-SA 3.0",
@@ -60,7 +60,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amano-shrimp/4.jpg",
+      url: "/images/gallery/amano-shrimp/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Amano_Garnele_(85281493).jpeg",
       fileTitle: "File:Amano Garnele (85281493).jpeg",
       license: "CC0",
@@ -73,7 +73,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "amazon-sword": [
     {
-      url: "/images/gallery/amazon-sword/0.jpg",
+      url: "/images/gallery/amazon-sword/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Echinodorus_bleheri.jpg",
       fileTitle: "File:Echinodorus_bleheri.jpg",
       license: "Public domain",
@@ -84,7 +84,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/amazon-sword/1.jpg",
+      url: "/images/gallery/amazon-sword/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Echinodorus_bleheri_inflorescence_closed.JPG",
       fileTitle: "File:Echinodorus bleheri inflorescence closed.JPG",
       license: "CC BY 3.0",
@@ -95,7 +95,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amazon-sword/2.jpg",
+      url: "/images/gallery/amazon-sword/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Echinodorus_bleheri.jpg",
       fileTitle: "File:Echinodorus bleheri.jpg",
       license: "Public domain",
@@ -106,7 +106,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/amazon-sword/3.jpg",
+      url: "/images/gallery/amazon-sword/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Echinodorus_grisebachii_kz01.jpg",
       fileTitle: "File:Echinodorus grisebachii kz01.jpg",
       license: "CC BY-SA 4.0",
@@ -117,7 +117,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amazon-sword/4.jpg",
+      url: "/images/gallery/amazon-sword/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Echinozziodestateyeah.JPG",
       fileTitle: "File:Echinozziodestateyeah.JPG",
       license: "CC BY-SA 3.0",
@@ -130,7 +130,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "anubias-nana": [
     {
-      url: "/images/gallery/anubias-nana/0.jpg",
+      url: "/images/gallery/anubias-nana/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Anubias_barteri_var_glabra.jpg",
       fileTitle: "File:Anubias_barteri_var_glabra.jpg",
       license: "Public domain",
@@ -141,7 +141,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/anubias-nana/1.jpg",
+      url: "/images/gallery/anubias-nana/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:-A.barteri_var_nana-_with_blackwood.JPG",
       fileTitle: "File:-A.barteri var nana- with blackwood.JPG",
       license: "Public domain",
@@ -152,7 +152,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/anubias-nana/2.jpg",
+      url: "/images/gallery/anubias-nana/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:20061213210458_trigonostigma-heteromorpha_01.jpg",
       fileTitle: "File:20061213210458 trigonostigma-heteromorpha 01.jpg",
       license: "CC BY 2.5",
@@ -163,7 +163,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/anubias-nana/3.jpg",
+      url: "/images/gallery/anubias-nana/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:An_Aquascapist_Planting_Anubias_on_Driftwood.jpg",
       fileTitle: "File:An Aquascapist Planting Anubias on Driftwood.jpg",
       license: "CC BY 4.0",
@@ -174,7 +174,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/anubias-nana/4.jpg",
+      url: "/images/gallery/anubias-nana/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:An_Aquascapist_Planting_Aquatic_Plant_Anubias_Petite_with_Tweezers_in_an_Aquarium.jpg",
       fileTitle: "File:An Aquascapist Planting Aquatic Plant Anubias Petite with Tweezers in an Aquarium.jpg",
       license: "CC BY 4.0",
@@ -187,7 +187,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "apistogramma-agassizii": [
     {
-      url: "/images/gallery/apistogramma-agassizii/0.jpg",
+      url: "/images/gallery/apistogramma-agassizii/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Apistogramma_agassizii_in_aquarium.jpg",
       fileTitle: "File:Apistogramma_agassizii_in_aquarium.jpg",
       license: "CC BY-SA 3.0",
@@ -198,7 +198,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/apistogramma-agassizii/1.jpg",
+      url: "/images/gallery/apistogramma-agassizii/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Agassiz%27s_dwarf_cichlid_(Apistogramma_agassizii)_(15443591763).jpg",
       fileTitle: "File:Agassiz's dwarf cichlid (Apistogramma agassizii) (15443591763).jpg",
       license: "CC BY-SA 2.0",
@@ -209,7 +209,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/apistogramma-agassizii/2.jpg",
+      url: "/images/gallery/apistogramma-agassizii/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Agassiz%27s_dwarf_cichlid_(Apistogramma_agassizii)_(15875959140).jpg",
       fileTitle: "File:Agassiz's dwarf cichlid (Apistogramma agassizii) (15875959140).jpg",
       license: "CC BY-SA 2.0",
@@ -220,7 +220,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/apistogramma-agassizii/3.jpg",
+      url: "/images/gallery/apistogramma-agassizii/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Apistogramma_agassizii_(Wroclaw_zoo)-1.JPG",
       fileTitle: "File:Apistogramma agassizii (Wroclaw zoo)-1.JPG",
       license: "CC BY-SA 3.0",
@@ -231,7 +231,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/apistogramma-agassizii/4.jpg",
+      url: "/images/gallery/apistogramma-agassizii/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Apistogramma_agassizii_(Wroclaw_zoo)-2.JPG",
       fileTitle: "File:Apistogramma agassizii (Wroclaw zoo)-2.JPG",
       license: "CC BY-SA 3.0",
@@ -244,7 +244,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "apistogramma-cacatuoides": [
     {
-      url: "/images/gallery/apistogramma-cacatuoides/0.jpg",
+      url: "/images/gallery/apistogramma-cacatuoides/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cacatuoides.JPG",
       fileTitle: "File:Cacatuoides.JPG",
       license: "CC BY-SA 3.0",
@@ -255,7 +255,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/apistogramma-cacatuoides/1.jpg",
+      url: "/images/gallery/apistogramma-cacatuoides/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Adult_male_Apistogramma_Cacatuoides.jpg",
       fileTitle: "File:Adult male Apistogramma Cacatuoides.jpg",
       license: "CC BY-SA 3.0",
@@ -266,7 +266,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/apistogramma-cacatuoides/2.jpg",
+      url: "/images/gallery/apistogramma-cacatuoides/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Apistogramma_cacatuoides_(11120015446).jpg",
       fileTitle: "File:Apistogramma cacatuoides (11120015446).jpg",
       license: "CC BY-SA 2.0",
@@ -277,7 +277,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/apistogramma-cacatuoides/3.jpg",
+      url: "/images/gallery/apistogramma-cacatuoides/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Apistogramma_cacatuoides_(2).jpg",
       fileTitle: "File:Apistogramma cacatuoides (2).jpg",
       license: "Public domain",
@@ -288,7 +288,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/apistogramma-cacatuoides/4.jpg",
+      url: "/images/gallery/apistogramma-cacatuoides/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Apistogramma_cacatuoides_double_red_male_(cropped).jpg",
       fileTitle: "File:Apistogramma cacatuoides double red male (cropped).jpg",
       license: "CC BY-SA 3.0",
@@ -301,7 +301,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "aponogeton-crispus": [
     {
-      url: "/images/gallery/aponogeton-crispus/0.jpg",
+      url: "/images/gallery/aponogeton-crispus/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aponogeton_crispus.jpg",
       fileTitle: "File:Aponogeton_crispus.jpg",
       license: "Public domain",
@@ -312,7 +312,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/aponogeton-crispus/1.jpg",
+      url: "/images/gallery/aponogeton-crispus/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aponogeton_crispus_Fond_blanc.jpg",
       fileTitle: "File:Aponogeton crispus Fond blanc.jpg",
       license: "CC0",
@@ -323,7 +323,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/aponogeton-crispus/2.jpg",
+      url: "/images/gallery/aponogeton-crispus/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aponogeton_crispus.jpg",
       fileTitle: "File:Aponogeton crispus.jpg",
       license: "Public domain",
@@ -336,7 +336,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "bacopa-caroliniana": [
     {
-      url: "/images/gallery/bacopa-caroliniana/0.jpg",
+      url: "/images/gallery/bacopa-caroliniana/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bacopa_caroliniana_BotGardBln07122011D.JPG",
       fileTitle: "File:Bacopa_caroliniana_BotGardBln07122011D.JPG",
       license: "CC BY-SA 3.0",
@@ -347,7 +347,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bacopa-caroliniana/1.jpg",
+      url: "/images/gallery/bacopa-caroliniana/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bacopa_caroliniana_(Walter)_B.L.Rob._(53278638732).jpg",
       fileTitle: "File:Bacopa caroliniana (Walter) B.L.Rob. (53278638732).jpg",
       license: "CC BY-SA 2.0",
@@ -358,7 +358,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bacopa-caroliniana/2.jpg",
+      url: "/images/gallery/bacopa-caroliniana/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bacopa_caroliniana_(Walter)_B.L.Rob._(53278638757).jpg",
       fileTitle: "File:Bacopa caroliniana (Walter) B.L.Rob. (53278638757).jpg",
       license: "CC BY-SA 2.0",
@@ -369,7 +369,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bacopa-caroliniana/3.jpg",
+      url: "/images/gallery/bacopa-caroliniana/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bacopa_caroliniana_(Walter)_B.L.Rob._(53278638797).jpg",
       fileTitle: "File:Bacopa caroliniana (Walter) B.L.Rob. (53278638797).jpg",
       license: "CC BY-SA 2.0",
@@ -380,7 +380,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bacopa-caroliniana/4.jpg",
+      url: "/images/gallery/bacopa-caroliniana/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bacopa_caroliniana_-_Botanischer_Garten_-_Heidelberg,_Germany_-_DSC01267.jpg",
       fileTitle: "File:Bacopa caroliniana - Botanischer Garten - Heidelberg, Germany - DSC01267.jpg",
       license: "CC0",
@@ -393,7 +393,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "bamboo-shrimp": [
     {
-      url: "/images/gallery/bamboo-shrimp/0.jpg",
+      url: "/images/gallery/bamboo-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Atyopsis_moluccensis_-_Molukken-F%C3%A4chergarnele_(2).jpg",
       fileTitle: "File:Atyopsis moluccensis - Molukken-F\u00e4chergarnele (2).jpg",
       license: "CC0",
@@ -404,7 +404,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/bamboo-shrimp/1.jpg",
+      url: "/images/gallery/bamboo-shrimp/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Atyopsis_moluccensis_-_Molukken-F%C3%A4chergarnele_-_subadult_(2).jpg",
       fileTitle: "File:Atyopsis moluccensis - Molukken-F\u00e4chergarnele - subadult (2).jpg",
       license: "CC0",
@@ -415,7 +415,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/bamboo-shrimp/2.jpg",
+      url: "/images/gallery/bamboo-shrimp/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Atyopsis_moluccensis_-_Molukken-F%C3%A4chergarnele_-_subadult.jpg",
       fileTitle: "File:Atyopsis moluccensis - Molukken-F\u00e4chergarnele - subadult.jpg",
       license: "CC0",
@@ -426,7 +426,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/bamboo-shrimp/3.jpg",
+      url: "/images/gallery/bamboo-shrimp/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Atyopsis_moluccensis_-_Molukken-F%C3%A4chergarnele.jpg",
       fileTitle: "File:Atyopsis moluccensis - Molukken-F\u00e4chergarnele.jpg",
       license: "CC0",
@@ -437,7 +437,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/bamboo-shrimp/4.jpg",
+      url: "/images/gallery/bamboo-shrimp/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Atyopsis_moluccensis.jpg",
       fileTitle: "File:Atyopsis moluccensis.jpg",
       license: "CC BY-SA 4.0",
@@ -450,7 +450,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "bee-shrimp": [
     {
-      url: "/images/gallery/bee-shrimp/0.jpg",
+      url: "/images/gallery/bee-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Caridina-cf-cantonensis-crystal-red.jpg",
       fileTitle: "File:Caridina-cf-cantonensis-crystal-red.jpg",
       license: "CC BY-SA 3.0",
@@ -463,7 +463,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "black-neon-tetra": [
     {
-      url: "/images/gallery/black-neon-tetra/0.jpg",
+      url: "/images/gallery/black-neon-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Black-Neon-Tetra.jpg",
       fileTitle: "File:Black-Neon-Tetra.jpg",
       license: "CC BY-SA 4.0",
@@ -474,7 +474,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-neon-tetra/1.jpg",
+      url: "/images/gallery/black-neon-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:02.Hyphessobrycon_herbertaxelrodi.JPG",
       fileTitle: "File:02.Hyphessobrycon herbertaxelrodi.JPG",
       license: "CC BY-SA 3.0",
@@ -485,7 +485,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-neon-tetra/2.jpg",
+      url: "/images/gallery/black-neon-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:03.Hyphessobrycon_herbertaxelrodi.JPG",
       fileTitle: "File:03.Hyphessobrycon herbertaxelrodi.JPG",
       license: "CC BY-SA 3.0",
@@ -496,7 +496,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-neon-tetra/3.jpg",
+      url: "/images/gallery/black-neon-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:04.Hyphessobrycon_herbertaxelrodi.JPG",
       fileTitle: "File:04.Hyphessobrycon herbertaxelrodi.JPG",
       license: "CC BY-SA 3.0",
@@ -507,7 +507,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-neon-tetra/4.jpg",
+      url: "/images/gallery/black-neon-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:05.Hyphessobrycon_herbertaxelrodi.JPG",
       fileTitle: "File:05.Hyphessobrycon herbertaxelrodi.JPG",
       license: "CC BY-SA 3.0",
@@ -520,7 +520,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "black-phantom-tetra": [
     {
-      url: "/images/gallery/black-phantom-tetra/0.jpg",
+      url: "/images/gallery/black-phantom-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hyphessobrycon_megalopterus_Porte_Doree.jpg",
       fileTitle: "File:Hyphessobrycon_megalopterus_Porte_Doree.jpg",
       license: "CC BY-SA 3.0",
@@ -531,7 +531,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-phantom-tetra/1.jpg",
+      url: "/images/gallery/black-phantom-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Black_phantom_tetra,_male.jpg",
       fileTitle: "File:Black phantom tetra, male.jpg",
       license: "CC BY-SA 3.0",
@@ -542,7 +542,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-phantom-tetra/2.jpg",
+      url: "/images/gallery/black-phantom-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Black_phantom_tetra.jpg",
       fileTitle: "File:Black phantom tetra.jpg",
       license: "CC BY-SA 4.0",
@@ -553,7 +553,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-phantom-tetra/3.png",
+      url: "/images/gallery/black-phantom-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blackphantom.PNG",
       fileTitle: "File:Blackphantom.PNG",
       license: "CC BY-SA 3.0",
@@ -564,7 +564,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/black-phantom-tetra/4.jpg",
+      url: "/images/gallery/black-phantom-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:BlackPhantomTetra.jpg",
       fileTitle: "File:BlackPhantomTetra.jpg",
       license: "CC BY-SA 4.0",
@@ -577,7 +577,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "blue-bolt-shrimp": [
     {
-      url: "/images/gallery/blue-bolt-shrimp/0.jpg",
+      url: "/images/gallery/blue-bolt-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Caridina-cf-cantonensis-crystal-red.jpg",
       fileTitle: "File:Caridina-cf-cantonensis-crystal-red.jpg",
       license: "CC BY-SA 3.0",
@@ -590,7 +590,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "blue-dream-shrimp": [
     {
-      url: "/images/gallery/blue-dream-shrimp/0.jpg",
+      url: "/images/gallery/blue-dream-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Red_Cherry_Shrimp_1.jpg",
       fileTitle: "File:Red_Cherry_Shrimp_1.jpg",
       license: "CC BY-SA 3.0",
@@ -601,7 +601,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/blue-dream-shrimp/1.jpg",
+      url: "/images/gallery/blue-dream-shrimp/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Baby_Cherry_shrimp_(Neocaridina_heteropoda)_-_3_Sept._2008.jpg",
       fileTitle: "File:Baby Cherry shrimp (Neocaridina heteropoda) - 3 Sept. 2008.jpg",
       license: "CC BY-SA 2.0",
@@ -612,7 +612,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/blue-dream-shrimp/2.jpg",
+      url: "/images/gallery/blue-dream-shrimp/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Black_Gill_Disease.JPG",
       fileTitle: "File:Black Gill Disease.JPG",
       license: "CC BY 3.0",
@@ -623,7 +623,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/blue-dream-shrimp/3.jpg",
+      url: "/images/gallery/blue-dream-shrimp/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_dream_Neocaridina_davidi.jpg",
       fileTitle: "File:Blue dream Neocaridina davidi.jpg",
       license: "CC BY 4.0",
@@ -634,7 +634,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/blue-dream-shrimp/4.jpg",
+      url: "/images/gallery/blue-dream-shrimp/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_N._Davidi_Shrimps.jpg",
       fileTitle: "File:Blue N. Davidi Shrimps.jpg",
       license: "CC BY-SA 4.0",
@@ -647,7 +647,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "bolbitis-heudelotii": [
     {
-      url: "/images/gallery/bolbitis-heudelotii/0.jpg",
+      url: "/images/gallery/bolbitis-heudelotii/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Kongo_Wasserfarn.jpg",
       fileTitle: "File:Kongo_Wasserfarn.jpg",
       license: "CC BY-SA 3.0",
@@ -658,7 +658,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bolbitis-heudelotii/1.jpg",
+      url: "/images/gallery/bolbitis-heudelotii/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bolbitis_heudelotii_kz01.jpg",
       fileTitle: "File:Bolbitis heudelotii kz01.jpg",
       license: "CC BY-SA 4.0",
@@ -669,7 +669,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bolbitis-heudelotii/2.jpg",
+      url: "/images/gallery/bolbitis-heudelotii/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bolbitis_heudelotii.jpeg",
       fileTitle: "File:Bolbitis heudelotii.jpeg",
       license: "Public domain",
@@ -680,7 +680,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/bolbitis-heudelotii/3.jpg",
+      url: "/images/gallery/bolbitis-heudelotii/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Kongo_Wasserfarn.jpg",
       fileTitle: "File:Kongo Wasserfarn.jpg",
       license: "CC BY-SA 3.0",
@@ -693,7 +693,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "bristlenose-pleco": [
     {
-      url: "/images/gallery/bristlenose-pleco/0.jpg",
+      url: "/images/gallery/bristlenose-pleco/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ancistrus_sp._(aka).jpg",
       fileTitle: "File:Ancistrus_sp._(aka).jpg",
       license: "CC BY-SA 2.5",
@@ -704,7 +704,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bristlenose-pleco/1.jpg",
+      url: "/images/gallery/bristlenose-pleco/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ancistrus_cirrhosus_3.jpg",
       fileTitle: "File:Ancistrus cirrhosus 3.jpg",
       license: "CC BY-SA 4.0",
@@ -715,7 +715,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/bristlenose-pleco/2.jpg",
+      url: "/images/gallery/bristlenose-pleco/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ancistrus_cirrhosus_Orbigny.jpg",
       fileTitle: "File:Ancistrus cirrhosus Orbigny.jpg",
       license: "Public domain",
@@ -726,7 +726,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/bristlenose-pleco/3.jpg",
+      url: "/images/gallery/bristlenose-pleco/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ancistrus_cirrhosus.jpg",
       fileTitle: "File:Ancistrus cirrhosus.jpg",
       license: "CC BY-SA 3.0 de",
@@ -739,7 +739,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "bucephalandra": [
     {
-      url: "/images/gallery/bucephalandra/0.png",
+      url: "/images/gallery/bucephalandra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bucephalandra_botanical_drawing.png",
       fileTitle: "File:Bucephalandra_botanical_drawing.png",
       license: "Public domain",
@@ -752,7 +752,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "cardinal-tetra": [
     {
-      url: "/images/gallery/cardinal-tetra/0.jpg",
+      url: "/images/gallery/cardinal-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cardinal_Paracheirodon_axelrodi_(3).jpg",
       fileTitle: "File:Cardinal_Paracheirodon_axelrodi_(3).jpg",
       license: "CC BY-SA 3.0",
@@ -763,7 +763,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cardinal-tetra/1.jpg",
+      url: "/images/gallery/cardinal-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:01.Paracheirodon_axelrodi.JPG",
       fileTitle: "File:01.Paracheirodon axelrodi.JPG",
       license: "CC BY-SA 3.0",
@@ -774,7 +774,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cardinal-tetra/2.jpg",
+      url: "/images/gallery/cardinal-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:02.Paracheirodon_axelrodi.JPG",
       fileTitle: "File:02.Paracheirodon axelrodi.JPG",
       license: "CC BY-SA 3.0",
@@ -785,7 +785,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cardinal-tetra/3.jpg",
+      url: "/images/gallery/cardinal-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Acuario_iluminado_con_l%C3%A1mparas_led.jpg",
       fileTitle: "File:Acuario iluminado con l\u00e1mparas led.jpg",
       license: "CC BY-SA 4.0",
@@ -796,7 +796,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cardinal-tetra/4.jpg",
+      url: "/images/gallery/cardinal-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Akvarijn%C3%AD_rybky.jpg",
       fileTitle: "File:Akvarijn\u00ed rybky.jpg",
       license: "CC BY 3.0",
@@ -809,7 +809,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "celestial-pearl-danio": [
     {
-      url: "/images/gallery/celestial-pearl-danio/0.jpg",
+      url: "/images/gallery/celestial-pearl-danio/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Celestial_pearl_danio_(male).jpg",
       fileTitle: "File:Celestial pearl danio (male).jpg",
       license: "Public domain",
@@ -820,7 +820,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/celestial-pearl-danio/1.jpg",
+      url: "/images/gallery/celestial-pearl-danio/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Celestial_Pearl_Danio.jpg",
       fileTitle: "File:Celestial Pearl Danio.jpg",
       license: "CC BY 4.0",
@@ -831,7 +831,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/celestial-pearl-danio/2.jpg",
+      url: "/images/gallery/celestial-pearl-danio/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Celestichthys_margaritatus.jpg",
       fileTitle: "File:Celestichthys margaritatus.jpg",
       license: "Public domain",
@@ -842,7 +842,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/celestial-pearl-danio/3.jpg",
+      url: "/images/gallery/celestial-pearl-danio/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Celestichthys_margaritatus2.jpg",
       fileTitle: "File:Celestichthys margaritatus2.jpg",
       license: "CC BY-SA 3.0",
@@ -853,7 +853,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/celestial-pearl-danio/4.jpg",
+      url: "/images/gallery/celestial-pearl-danio/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cyprinidae_Danio_margaritatus_1.jpg",
       fileTitle: "File:Cyprinidae Danio margaritatus 1.jpg",
       license: "CC BY-SA 4.0",
@@ -866,7 +866,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "chain-sword": [
     {
-      url: "/images/gallery/chain-sword/0.jpg",
+      url: "/images/gallery/chain-sword/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Echinodorus_tenellus_BB-1913.jpg",
       fileTitle: "File:Echinodorus tenellus BB-1913.jpg",
       license: "Public domain",
@@ -877,7 +877,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/chain-sword/1.png",
+      url: "/images/gallery/chain-sword/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Echinodorus_tenellus_Bl%C3%BCtendiagramm.png",
       fileTitle: "File:Echinodorus tenellus Bl\u00fctendiagramm.png",
       license: "Public domain",
@@ -888,7 +888,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/chain-sword/2.png",
+      url: "/images/gallery/chain-sword/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Helanthium_tenellum_-_Mutis-2.png",
       fileTitle: "File:Helanthium tenellum - Mutis-2.png",
       license: "Public domain",
@@ -899,7 +899,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/chain-sword/3.png",
+      url: "/images/gallery/chain-sword/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Helanthium_tenellum_BB-1913.png",
       fileTitle: "File:Helanthium tenellum BB-1913.png",
       license: "Public domain",
@@ -910,7 +910,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/chain-sword/4.jpg",
+      url: "/images/gallery/chain-sword/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Helanthium_tenellum_iNat-438373302.jpg",
       fileTitle: "File:Helanthium tenellum iNat-438373302.jpg",
       license: "CC BY 4.0",
@@ -923,7 +923,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "cherry-barb": [
     {
-      url: "/images/gallery/cherry-barb/0.jpg",
+      url: "/images/gallery/cherry-barb/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Male_Cherry_Barb_700.jpg",
       fileTitle: "File:Male_Cherry_Barb_700.jpg",
       license: "CC BY-SA 3.0",
@@ -934,7 +934,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-barb/1.jpg",
+      url: "/images/gallery/cherry-barb/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cherry_barb,_Puntius_titteya.jpg",
       fileTitle: "File:Cherry barb, Puntius titteya.jpg",
       license: "CC BY 2.0",
@@ -945,7 +945,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-barb/2.jpg",
+      url: "/images/gallery/cherry-barb/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cherry-barb_female_and_male.jpg",
       fileTitle: "File:Cherry-barb female and male.jpg",
       license: "CC BY-SA 3.0",
@@ -956,7 +956,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-barb/3.jpg",
+      url: "/images/gallery/cherry-barb/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cyprinidae_Puntius_titteya_3.jpg",
       fileTitle: "File:Cyprinidae Puntius titteya 3.jpg",
       license: "CC BY-SA 4.0",
@@ -967,7 +967,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-barb/4.jpg",
+      url: "/images/gallery/cherry-barb/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Female_Cherry_Barb_500.jpg",
       fileTitle: "File:Female Cherry Barb 500.jpg",
       license: "CC BY-SA 3.0",
@@ -980,7 +980,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "cherry-shrimp": [
     {
-      url: "/images/gallery/cherry-shrimp/0.jpg",
+      url: "/images/gallery/cherry-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Red_Cherry_Shrimp_1.jpg",
       fileTitle: "File:Red_Cherry_Shrimp_1.jpg",
       license: "CC BY-SA 3.0",
@@ -991,7 +991,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-shrimp/1.jpg",
+      url: "/images/gallery/cherry-shrimp/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Baby_Cherry_shrimp_(Neocaridina_heteropoda)_-_3_Sept._2008.jpg",
       fileTitle: "File:Baby Cherry shrimp (Neocaridina heteropoda) - 3 Sept. 2008.jpg",
       license: "CC BY-SA 2.0",
@@ -1002,7 +1002,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-shrimp/2.jpg",
+      url: "/images/gallery/cherry-shrimp/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Black_Gill_Disease.JPG",
       fileTitle: "File:Black Gill Disease.JPG",
       license: "CC BY 3.0",
@@ -1013,7 +1013,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-shrimp/3.jpg",
+      url: "/images/gallery/cherry-shrimp/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_dream_Neocaridina_davidi.jpg",
       fileTitle: "File:Blue dream Neocaridina davidi.jpg",
       license: "CC BY 4.0",
@@ -1024,7 +1024,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cherry-shrimp/4.jpg",
+      url: "/images/gallery/cherry-shrimp/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_N._Davidi_Shrimps.jpg",
       fileTitle: "File:Blue N. Davidi Shrimps.jpg",
       license: "CC BY-SA 4.0",
@@ -1037,7 +1037,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "chili-rasbora": [
     {
-      url: "/images/gallery/chili-rasbora/0.jpg",
+      url: "/images/gallery/chili-rasbora/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Boraras-brigittae-3191524164.jpg",
       fileTitle: "File:Boraras-brigittae-3191524164.jpg",
       license: "CC0",
@@ -1048,7 +1048,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/chili-rasbora/1.jpg",
+      url: "/images/gallery/chili-rasbora/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Boraras_brigittae_2.jpg",
       fileTitle: "File:Boraras brigittae 2.jpg",
       license: "CC BY-SA 4.0",
@@ -1059,7 +1059,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/chili-rasbora/2.jpg",
+      url: "/images/gallery/chili-rasbora/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Boraras_brigittae_by_DaijuAzuma.JPG",
       fileTitle: "File:Boraras brigittae by DaijuAzuma.JPG",
       license: "CC BY-SA 4.0",
@@ -1070,7 +1070,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/chili-rasbora/3.jpg",
+      url: "/images/gallery/chili-rasbora/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Boraras_brigittae.jpg",
       fileTitle: "File:Boraras brigittae.jpg",
       license: "CC BY-SA 4.0",
@@ -1081,7 +1081,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/chili-rasbora/4.jpg",
+      url: "/images/gallery/chili-rasbora/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Borasasb_(cropped).jpg",
       fileTitle: "File:Borasasb (cropped).jpg",
       license: "CC BY-SA 4.0",
@@ -1094,7 +1094,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "christmas-moss": [
     {
-      url: "/images/gallery/christmas-moss/0.jpg",
+      url: "/images/gallery/christmas-moss/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Christmas_moss_and_riccia_(14441185564).jpg",
       fileTitle: "File:Christmas_moss_and_riccia_(14441185564).jpg",
       license: "CC BY-SA 2.0",
@@ -1105,7 +1105,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/christmas-moss/1.jpg",
+      url: "/images/gallery/christmas-moss/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Christmas_moss_and_riccia_(14441185564).jpg",
       fileTitle: "File:Christmas moss and riccia (14441185564).jpg",
       license: "CC BY-SA 2.0",
@@ -1118,7 +1118,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "clown-killifish": [
     {
-      url: "/images/gallery/clown-killifish/0.jpg",
+      url: "/images/gallery/clown-killifish/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Clown_killi_1.jpg",
       fileTitle: "File:Clown killi 1.jpg",
       license: "CC0",
@@ -1129,7 +1129,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/clown-killifish/1.jpg",
+      url: "/images/gallery/clown-killifish/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Epiplaty_annulatus_-_Panchax_%C3%A0_bandes.jpg",
       fileTitle: "File:Epiplaty annulatus - Panchax \u00e0 bandes.jpg",
       license: "CC BY-SA 3.0",
@@ -1140,7 +1140,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/clown-killifish/2.jpg",
+      url: "/images/gallery/clown-killifish/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Epiplaty_annulatus.jpg",
       fileTitle: "File:Epiplaty annulatus.jpg",
       license: "CC BY-SA 3.0",
@@ -1151,7 +1151,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/clown-killifish/3.jpg",
+      url: "/images/gallery/clown-killifish/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Epiplatys_annulatus.JPG",
       fileTitle: "File:Epiplatys annulatus.JPG",
       license: "CC BY-SA 3.0",
@@ -1162,7 +1162,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/clown-killifish/4.jpg",
+      url: "/images/gallery/clown-killifish/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Panchax_prstencov%C3%BD.jpg",
       fileTitle: "File:Panchax prstencov\u00fd.jpg",
       license: "CC BY-SA 4.0",
@@ -1175,7 +1175,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "cryptocoryne-wendtii": [
     {
-      url: "/images/gallery/cryptocoryne-wendtii/0.jpg",
+      url: "/images/gallery/cryptocoryne-wendtii/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cryptocoryne_wendtii.JPG",
       fileTitle: "File:Cryptocoryne_wendtii.JPG",
       license: "CC BY 2.5",
@@ -1186,7 +1186,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cryptocoryne-wendtii/1.jpg",
+      url: "/images/gallery/cryptocoryne-wendtii/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:-Cryptocoryne_wendtii-_from_Tropica_farm.JPG",
       fileTitle: "File:-Cryptocoryne wendtii- from Tropica farm.JPG",
       license: "Public domain",
@@ -1197,7 +1197,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/cryptocoryne-wendtii/2.jpg",
+      url: "/images/gallery/cryptocoryne-wendtii/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cryptocoryne_wendtii_Green.jpg",
       fileTitle: "File:Cryptocoryne wendtii Green.jpg",
       license: "CC BY 3.0",
@@ -1208,7 +1208,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/cryptocoryne-wendtii/3.jpg",
+      url: "/images/gallery/cryptocoryne-wendtii/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cryptocoryne_wendtii.JPG",
       fileTitle: "File:Cryptocoryne wendtii.JPG",
       license: "CC BY 2.5",
@@ -1221,7 +1221,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "crystal-red-shrimp": [
     {
-      url: "/images/gallery/crystal-red-shrimp/0.jpg",
+      url: "/images/gallery/crystal-red-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Caridina-cf-cantonensis-crystal-red.jpg",
       fileTitle: "File:Caridina-cf-cantonensis-crystal-red.jpg",
       license: "CC BY-SA 3.0",
@@ -1234,7 +1234,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "diamond-tetra": [
     {
-      url: "/images/gallery/diamond-tetra/0.jpg",
+      url: "/images/gallery/diamond-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Moenkhausia_pittieri_young_fish_in_aquarium.jpg",
       fileTitle: "File:Moenkhausia_pittieri_young_fish_in_aquarium.jpg",
       license: "CC BY-SA 4.0",
@@ -1245,7 +1245,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/diamond-tetra/1.jpg",
+      url: "/images/gallery/diamond-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:A_diamond_tetra_fish.jpg",
       fileTitle: "File:A diamond tetra fish.jpg",
       license: "CC BY-SA 4.0",
@@ -1256,7 +1256,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/diamond-tetra/2.jpg",
+      url: "/images/gallery/diamond-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Brillantsalmler.jpg",
       fileTitle: "File:Brillantsalmler.jpg",
       license: "CC0",
@@ -1267,7 +1267,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/diamond-tetra/3.jpg",
+      url: "/images/gallery/diamond-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Diamond_tetra_2.JPG",
       fileTitle: "File:Diamond tetra 2.JPG",
       license: "CC BY-SA 3.0",
@@ -1278,7 +1278,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/diamond-tetra/4.jpg",
+      url: "/images/gallery/diamond-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Diamond_tetra.JPG",
       fileTitle: "File:Diamond tetra.JPG",
       license: "CC BY-SA 3.0",
@@ -1291,7 +1291,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "dwarf-hairgrass": [
     {
-      url: "/images/gallery/dwarf-hairgrass/0.jpg",
+      url: "/images/gallery/dwarf-hairgrass/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Eleocharis_parvula_NRCS-1.jpg",
       fileTitle: "File:Eleocharis_parvula_NRCS-1.jpg",
       license: "Public domain",
@@ -1302,7 +1302,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/dwarf-hairgrass/1.jpg",
+      url: "/images/gallery/dwarf-hairgrass/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:2015.08.22_11.07.01_IMG_0255_-_Flickr_-_andrey_zharkikh.jpg",
       fileTitle: "File:2015.08.22 11.07.01 IMG 0255 - Flickr - andrey zharkikh.jpg",
       license: "CC BY 2.0",
@@ -1313,7 +1313,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-hairgrass/2.jpg",
+      url: "/images/gallery/dwarf-hairgrass/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:2015.08.22_11.07.23_IMG_0256_-_Flickr_-_andrey_zharkikh.jpg",
       fileTitle: "File:2015.08.22 11.07.23 IMG 0256 - Flickr - andrey zharkikh.jpg",
       license: "CC BY 2.0",
@@ -1324,7 +1324,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-hairgrass/3.jpg",
+      url: "/images/gallery/dwarf-hairgrass/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:2015.08.22_11.09.12_IMG_0257_-_Flickr_-_andrey_zharkikh.jpg",
       fileTitle: "File:2015.08.22 11.09.12 IMG 0257 - Flickr - andrey zharkikh.jpg",
       license: "CC BY 2.0",
@@ -1335,7 +1335,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-hairgrass/4.jpg",
+      url: "/images/gallery/dwarf-hairgrass/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:2015.08.31_00.03.36_IMG_0317_-_Flickr_-_andrey_zharkikh.jpg",
       fileTitle: "File:2015.08.31 00.03.36 IMG 0317 - Flickr - andrey zharkikh.jpg",
       license: "CC BY 2.0",
@@ -1348,7 +1348,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "dwarf-pencilfish": [
     {
-      url: "/images/gallery/dwarf-pencilfish/0.jpg",
+      url: "/images/gallery/dwarf-pencilfish/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Nannostomus_marginatus.jpg",
       fileTitle: "File:Nannostomus_marginatus.jpg",
       license: "CC BY 2.0",
@@ -1359,7 +1359,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-pencilfish/1.jpg",
+      url: "/images/gallery/dwarf-pencilfish/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Nannostomus_marginatus,_adultes_M%C3%A4nnchen.jpg",
       fileTitle: "File:Nannostomus marginatus, adultes M\u00e4nnchen.jpg",
       license: "CC0",
@@ -1370,7 +1370,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/dwarf-pencilfish/2.jpg",
+      url: "/images/gallery/dwarf-pencilfish/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Nannostomus_marginatus-adultes_Weibchen.jpg",
       fileTitle: "File:Nannostomus marginatus-adultes Weibchen.jpg",
       license: "CC0",
@@ -1381,7 +1381,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/dwarf-pencilfish/3.jpg",
+      url: "/images/gallery/dwarf-pencilfish/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Nannostomus_marginatus.jpg",
       fileTitle: "File:Nannostomus marginatus.jpg",
       license: "CC BY 2.0",
@@ -1394,7 +1394,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "dwarf-puffer": [
     {
-      url: "/images/gallery/dwarf-puffer/0.jpg",
+      url: "/images/gallery/dwarf-puffer/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:%E3%82%A2%E3%83%99%E3%83%8B%E3%83%BC%E3%83%91%E3%83%95%E3%82%A1%E3%83%BC.jpg",
       fileTitle: "File:\u30a2\u30d9\u30cb\u30fc\u30d1\u30d5\u30a1\u30fc.jpg",
       license: "CC BY-SA 4.0",
@@ -1405,7 +1405,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-puffer/1.jpg",
+      url: "/images/gallery/dwarf-puffer/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aquarium_de_la_Porte_Dor%C3%A9e_-_Poisson_126.jpg",
       fileTitle: "File:Aquarium de la Porte Dor\u00e9e - Poisson 126.jpg",
       license: "CC BY-SA 4.0",
@@ -1416,7 +1416,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-puffer/2.jpg",
+      url: "/images/gallery/dwarf-puffer/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aquarium_de_la_Porte_Dor%C3%A9e_-_Poisson_127.jpg",
       fileTitle: "File:Aquarium de la Porte Dor\u00e9e - Poisson 127.jpg",
       license: "CC BY-SA 4.0",
@@ -1427,7 +1427,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-puffer/3.jpg",
+      url: "/images/gallery/dwarf-puffer/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Carinotetraodon_travancoricus_1.JPG",
       fileTitle: "File:Carinotetraodon travancoricus 1.JPG",
       license: "CC BY-SA 3.0",
@@ -1438,7 +1438,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/dwarf-puffer/4.jpg",
+      url: "/images/gallery/dwarf-puffer/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Carinotetraodon_travancoricus_2.JPG",
       fileTitle: "File:Carinotetraodon travancoricus 2.JPG",
       license: "Public domain",
@@ -1451,7 +1451,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "ember-tetra": [
     {
-      url: "/images/gallery/ember-tetra/0.jpg",
+      url: "/images/gallery/ember-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hyphessobrycon_amandae_A.jpg",
       fileTitle: "File:Hyphessobrycon_amandae_A.jpg",
       license: "CC BY-SA 4.0",
@@ -1462,7 +1462,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ember-tetra/1.jpg",
+      url: "/images/gallery/ember-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:AKT_1430bq.jpg",
       fileTitle: "File:AKT 1430bq.jpg",
       license: "CC BY-SA 3.0",
@@ -1473,7 +1473,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ember-tetra/2.jpg",
+      url: "/images/gallery/ember-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:AKT_1575q.jpg",
       fileTitle: "File:AKT 1575q.jpg",
       license: "CC BY-SA 3.0",
@@ -1484,7 +1484,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ember-tetra/3.jpg",
+      url: "/images/gallery/ember-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aquarium_Tropical_Palais_Porte_Dor%C3%A9e_-_Paris_XII_(FR75)_-_2021-06-26_-_24.jpg",
       fileTitle: "File:Aquarium Tropical Palais Porte Dor\u00e9e - Paris XII (FR75) - 2021-06-26 - 24.jpg",
       license: "CC BY-SA 4.0",
@@ -1495,7 +1495,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ember-tetra/4.jpg",
+      url: "/images/gallery/ember-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Funkensalmler_Feuertetra_oder_Feuersalmler_Hyphessobrycon_amandae.JPG",
       fileTitle: "File:Funkensalmler Feuertetra oder Feuersalmler Hyphessobrycon amandae.JPG",
       license: "CC BY 3.0",
@@ -1508,7 +1508,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "endler-livebearer": [
     {
-      url: "/images/gallery/endler-livebearer/0.jpg",
+      url: "/images/gallery/endler-livebearer/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Campoma_Bridge_Number_17.jpg",
       fileTitle: "File:Campoma Bridge Number 17.jpg",
       license: "CC BY-SA 4.0",
@@ -1519,7 +1519,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/endler-livebearer/1.jpg",
+      url: "/images/gallery/endler-livebearer/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Campoma_Bridge_number_28_Poecilia_Wingei.jpg",
       fileTitle: "File:Campoma Bridge number 28 Poecilia Wingei.jpg",
       license: "CC BY-SA 4.0",
@@ -1530,7 +1530,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/endler-livebearer/2.jpg",
+      url: "/images/gallery/endler-livebearer/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Campoma_Bridge_Number_28.jpg",
       fileTitle: "File:Campoma Bridge Number 28.jpg",
       license: "CC BY-SA 4.0",
@@ -1541,7 +1541,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/endler-livebearer/3.jpg",
+      url: "/images/gallery/endler-livebearer/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Campoma_Bridge_Number_31.jpg",
       fileTitle: "File:Campoma Bridge Number 31.jpg",
       license: "CC BY-SA 4.0",
@@ -1552,7 +1552,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/endler-livebearer/4.jpg",
+      url: "/images/gallery/endler-livebearer/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Campoma_Bridge_number_8_Poecilia_Wingei.jpg",
       fileTitle: "File:Campoma Bridge number 8 Poecilia Wingei.jpg",
       license: "CC BY-SA 4.0",
@@ -1565,7 +1565,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "flame-moss": [
     {
-      url: "/images/gallery/flame-moss/0.jpg",
+      url: "/images/gallery/flame-moss/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
       fileTitle: "File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
       license: "CC0",
@@ -1578,7 +1578,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "forktail-blue-eye": [
     {
-      url: "/images/gallery/forktail-blue-eye/0.jpg",
+      url: "/images/gallery/forktail-blue-eye/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Forktail_worakarn.jpg",
       fileTitle: "File:Forktail worakarn.jpg",
       license: "CC BY-SA 4.0",
@@ -1589,7 +1589,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/forktail-blue-eye/1.jpg",
+      url: "/images/gallery/forktail-blue-eye/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Furcatus2.1.jpg",
       fileTitle: "File:Furcatus2.1.jpg",
       license: "CC BY-SA 3.0",
@@ -1600,7 +1600,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/forktail-blue-eye/2.jpg",
+      url: "/images/gallery/forktail-blue-eye/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Pseudomugil_furcatus_(Wroclaw_zoo).JPG",
       fileTitle: "File:Pseudomugil furcatus (Wroclaw zoo).JPG",
       license: "CC BY-SA 3.0",
@@ -1611,7 +1611,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/forktail-blue-eye/3.jpg",
+      url: "/images/gallery/forktail-blue-eye/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Pseudomugil_furcatus_f_Aquarium_DG.jpg",
       fileTitle: "File:Pseudomugil furcatus f Aquarium DG.jpg",
       license: "CC BY-SA 3.0",
@@ -1622,7 +1622,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/forktail-blue-eye/4.jpg",
+      url: "/images/gallery/forktail-blue-eye/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Pseudomugil_furcatus_m_Aquarium_DG.jpg",
       fileTitle: "File:Pseudomugil furcatus m Aquarium DG.jpg",
       license: "CC BY-SA 3.0",
@@ -1635,7 +1635,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "glossostigma-elatinoides": [
     {
-      url: "/images/gallery/glossostigma-elatinoides/0.jpg",
+      url: "/images/gallery/glossostigma-elatinoides/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Glossostigma_elatinoides_flower.jpg",
       fileTitle: "File:Glossostigma_elatinoides_flower.jpg",
       license: "CC BY-SA 3.0",
@@ -1646,7 +1646,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/glossostigma-elatinoides/1.jpg",
+      url: "/images/gallery/glossostigma-elatinoides/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Glossostigma_elatinoides_flower.jpg",
       fileTitle: "File:Glossostigma elatinoides flower.jpg",
       license: "CC BY-SA 3.0",
@@ -1657,7 +1657,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/glossostigma-elatinoides/2.jpg",
+      url: "/images/gallery/glossostigma-elatinoides/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Glossostigma_elatinoides.jpg",
       fileTitle: "File:Glossostigma elatinoides.jpg",
       license: "CC BY-SA 4.0",
@@ -1668,7 +1668,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/glossostigma-elatinoides/3.jpg",
+      url: "/images/gallery/glossostigma-elatinoides/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:%E7%9F%AE%E7%8F%8D%E7%8F%A0.jpg",
       fileTitle: "File:\u77ee\u73cd\u73e0.jpg",
       license: "CC BY-SA 3.0",
@@ -1681,7 +1681,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "glowlight-tetra": [
     {
-      url: "/images/gallery/glowlight-tetra/0.jpg",
+      url: "/images/gallery/glowlight-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Fishinatank.jpg",
       fileTitle: "File:Fishinatank.jpg",
       license: "CC BY 3.0",
@@ -1692,7 +1692,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/glowlight-tetra/1.jpg",
+      url: "/images/gallery/glowlight-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Glowlight_pics.JPG",
       fileTitle: "File:Glowlight pics.JPG",
       license: "Public domain",
@@ -1703,7 +1703,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/glowlight-tetra/2.jpg",
+      url: "/images/gallery/glowlight-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hemigrammus_erythrozonus_h080.jpg",
       fileTitle: "File:Hemigrammus erythrozonus h080.jpg",
       license: "CC BY-SA 2.0",
@@ -1714,7 +1714,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/glowlight-tetra/3.jpg",
+      url: "/images/gallery/glowlight-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hemigrammus_erythrozonus_illustration_(1912).jpg",
       fileTitle: "File:Hemigrammus erythrozonus illustration (1912).jpg",
       license: "Public domain",
@@ -1725,7 +1725,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/glowlight-tetra/4.jpg",
+      url: "/images/gallery/glowlight-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hemigrammus_erythrozonus.jpg",
       fileTitle: "File:Hemigrammus erythrozonus.jpg",
       license: "CC BY-SA 3.0",
@@ -1738,7 +1738,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "harlequin-rasbora": [
     {
-      url: "/images/gallery/harlequin-rasbora/0.jpg",
+      url: "/images/gallery/harlequin-rasbora/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Harlequin_rasboras_03.jpg",
       fileTitle: "File:Harlequin_rasboras_03.jpg",
       license: "CC BY-SA 4.0",
@@ -1749,7 +1749,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/harlequin-rasbora/1.jpg",
+      url: "/images/gallery/harlequin-rasbora/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:01.Rasbora_heteromorpha.jpg",
       fileTitle: "File:01.Rasbora heteromorpha.jpg",
       license: "CC BY-SA 3.0",
@@ -1760,7 +1760,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/harlequin-rasbora/2.jpg",
+      url: "/images/gallery/harlequin-rasbora/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:02.Trigonostigma_heteromorpha.JPG",
       fileTitle: "File:02.Trigonostigma heteromorpha.JPG",
       license: "CC BY-SA 3.0",
@@ -1771,7 +1771,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/harlequin-rasbora/3.jpg",
+      url: "/images/gallery/harlequin-rasbora/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:03.Trigonostigma_heteromorpha.JPG",
       fileTitle: "File:03.Trigonostigma heteromorpha.JPG",
       license: "CC BY-SA 3.0",
@@ -1782,7 +1782,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/harlequin-rasbora/4.jpg",
+      url: "/images/gallery/harlequin-rasbora/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:20061213210458_trigonostigma-heteromorpha_01.jpg",
       fileTitle: "File:20061213210458 trigonostigma-heteromorpha 01.jpg",
       license: "CC BY 2.5",
@@ -1795,7 +1795,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "hc-cuba": [
     {
-      url: "/images/gallery/hc-cuba/0.jpg",
+      url: "/images/gallery/hc-cuba/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Freshwater_aquariums_Sharjah.jpg",
       fileTitle: "File:Freshwater_aquariums_Sharjah.jpg",
       license: "CC BY-SA 4.0",
@@ -1808,7 +1808,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "honey-gourami": [
     {
-      url: "/images/gallery/honey-gourami/0.jpg",
+      url: "/images/gallery/honey-gourami/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Colisasota_male.jpg",
       fileTitle: "File:Colisasota_male.jpg",
       license: "CC BY-SA 3.0",
@@ -1819,7 +1819,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/honey-gourami/1.jpg",
+      url: "/images/gallery/honey-gourami/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Colisa_chuna_male.jpg",
       fileTitle: "File:Colisa chuna male.jpg",
       license: "CC BY-SA 3.0",
@@ -1830,7 +1830,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/honey-gourami/2.jpg",
+      url: "/images/gallery/honey-gourami/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Colisa_chuna.jpg",
       fileTitle: "File:Colisa chuna.jpg",
       license: "CC BY-SA 2.5",
@@ -1841,7 +1841,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/honey-gourami/3.jpg",
+      url: "/images/gallery/honey-gourami/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Colisasota_male.jpg",
       fileTitle: "File:Colisasota male.jpg",
       license: "CC BY-SA 3.0",
@@ -1852,7 +1852,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/honey-gourami/4.jpg",
+      url: "/images/gallery/honey-gourami/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Honey_gaurami.jpg",
       fileTitle: "File:Honey gaurami.jpg",
       license: "CC BY-SA 4.0",
@@ -1865,7 +1865,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "hygrophila-pinnatifida": [
     {
-      url: "/images/gallery/hygrophila-pinnatifida/0.jpg",
+      url: "/images/gallery/hygrophila-pinnatifida/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cardanthera_pinnatifida_(8283176169).jpg",
       fileTitle: "File:Cardanthera pinnatifida (8283176169).jpg",
       license: "CC BY-SA 2.0",
@@ -1876,7 +1876,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-pinnatifida/1.jpg",
+      url: "/images/gallery/hygrophila-pinnatifida/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_pinnatifida_kz01.jpg",
       fileTitle: "File:Hygrophila pinnatifida kz01.jpg",
       license: "CC BY-SA 4.0",
@@ -1887,7 +1887,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-pinnatifida/2.jpg",
+      url: "/images/gallery/hygrophila-pinnatifida/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_pinnatifida_kz02.jpg",
       fileTitle: "File:Hygrophila pinnatifida kz02.jpg",
       license: "CC BY-SA 4.0",
@@ -1898,7 +1898,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-pinnatifida/3.jpg",
+      url: "/images/gallery/hygrophila-pinnatifida/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_pinnatifida_kz03.jpg",
       fileTitle: "File:Hygrophila pinnatifida kz03.jpg",
       license: "CC BY-SA 4.0",
@@ -1909,7 +1909,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-pinnatifida/4.jpg",
+      url: "/images/gallery/hygrophila-pinnatifida/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_pinnatifida_kz04.jpg",
       fileTitle: "File:Hygrophila pinnatifida kz04.jpg",
       license: "CC BY-SA 4.0",
@@ -1922,7 +1922,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "hygrophila-polysperma": [
     {
-      url: "/images/gallery/hygrophila-polysperma/0.jpg",
+      url: "/images/gallery/hygrophila-polysperma/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_polysperma.JPG",
       fileTitle: "File:Hygrophila_polysperma.JPG",
       license: "CC BY-SA 3.0",
@@ -1933,7 +1933,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-polysperma/1.jpg",
+      url: "/images/gallery/hygrophila-polysperma/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:20061213210458_trigonostigma-heteromorpha_01.jpg",
       fileTitle: "File:20061213210458 trigonostigma-heteromorpha 01.jpg",
       license: "CC BY 2.5",
@@ -1944,7 +1944,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-polysperma/2.jpg",
+      url: "/images/gallery/hygrophila-polysperma/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_polysperma_%27Rosanervig%27.jpg",
       fileTitle: "File:Hygrophila polysperma 'Rosanervig'.jpg",
       license: "CC BY-SA 4.0",
@@ -1955,7 +1955,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-polysperma/3.jpg",
+      url: "/images/gallery/hygrophila-polysperma/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_Polysperma_(78786583).jpeg",
       fileTitle: "File:Hygrophila Polysperma (78786583).jpeg",
       license: "CC BY-SA 3.0",
@@ -1966,7 +1966,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/hygrophila-polysperma/4.jpg",
+      url: "/images/gallery/hygrophila-polysperma/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hygrophila_polysperma_indoors.jpg",
       fileTitle: "File:Hygrophila polysperma indoors.jpg",
       license: "CC BY-SA 4.0",
@@ -1979,7 +1979,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "kuhli-loach": [
     {
-      url: "/images/gallery/kuhli-loach/0.jpg",
+      url: "/images/gallery/kuhli-loach/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Acanthophtalamus_khuli.jpg",
       fileTitle: "File:Acanthophtalamus khuli.jpg",
       license: "CC BY-SA 3.0",
@@ -1990,7 +1990,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/kuhli-loach/1.jpg",
+      url: "/images/gallery/kuhli-loach/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ciernioczek_Kuhla.jpg",
       fileTitle: "File:Ciernioczek Kuhla.jpg",
       license: "Public domain",
@@ -2001,7 +2001,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/kuhli-loach/2.jpg",
+      url: "/images/gallery/kuhli-loach/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:JugendlichesDornauge.jpg",
       fileTitle: "File:JugendlichesDornauge.jpg",
       license: "CC BY-SA 3.0",
@@ -2012,7 +2012,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/kuhli-loach/3.jpg",
+      url: "/images/gallery/kuhli-loach/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Kuhli_loach_in_aquarium.jpg",
       fileTitle: "File:Kuhli loach in aquarium.jpg",
       license: "CC BY-SA 4.0",
@@ -2023,7 +2023,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/kuhli-loach/4.png",
+      url: "/images/gallery/kuhli-loach/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Kuhli_Loach_Map.png",
       fileTitle: "File:Kuhli Loach Map.png",
       license: "CC BY 4.0",
@@ -2036,7 +2036,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "lemon-tetra": [
     {
-      url: "/images/gallery/lemon-tetra/0.jpg",
+      url: "/images/gallery/lemon-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hyphessobrycon_pulchripinnis.jpg",
       fileTitle: "File:Hyphessobrycon_pulchripinnis.jpg",
       license: "CC BY 2.5",
@@ -2047,7 +2047,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lemon-tetra/1.jpg",
+      url: "/images/gallery/lemon-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Citrontetra_Hyphessobrycon_pulchripinnis.jpg",
       fileTitle: "File:Citrontetra Hyphessobrycon pulchripinnis.jpg",
       license: "CC BY-SA 4.0",
@@ -2058,7 +2058,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lemon-tetra/2.jpg",
+      url: "/images/gallery/lemon-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hyphessobrycon_pulchripinnis.jpg",
       fileTitle: "File:Hyphessobrycon pulchripinnis.jpg",
       license: "CC BY 2.5",
@@ -2069,7 +2069,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lemon-tetra/3.jpg",
+      url: "/images/gallery/lemon-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lemon_Tetras.jpg",
       fileTitle: "File:Lemon Tetras.jpg",
       license: "CC BY-SA 4.0",
@@ -2080,7 +2080,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lemon-tetra/4.jpg",
+      url: "/images/gallery/lemon-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:London_Zoo_-_Flickr_-_p_a_h_(13).jpg",
       fileTitle: "File:London Zoo - Flickr - p a h (13).jpg",
       license: "CC BY 2.0",
@@ -2093,7 +2093,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "lilaeopsis-brasiliensis": [
     {
-      url: "/images/gallery/lilaeopsis-brasiliensis/0.jpg",
+      url: "/images/gallery/lilaeopsis-brasiliensis/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lilaeopsis_brasiliensis_flower_(3).jpg",
       fileTitle: "File:Lilaeopsis_brasiliensis_flower_(3).jpg",
       license: "CC BY-SA 3.0",
@@ -2104,7 +2104,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lilaeopsis-brasiliensis/1.jpg",
+      url: "/images/gallery/lilaeopsis-brasiliensis/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lilaeopsis_brasiliensis_-_Victoriahuset,_Bergianska_tr%C3%A4dg%C3%A5rden_-_Stockholm,_Sweden_-_DSC00261.JPG",
       fileTitle: "File:Lilaeopsis brasiliensis - Victoriahuset, Bergianska tr\u00e4dg\u00e5rden - Stockholm, Sweden - DSC00261.JPG",
       license: "CC0",
@@ -2115,7 +2115,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/lilaeopsis-brasiliensis/2.jpg",
+      url: "/images/gallery/lilaeopsis-brasiliensis/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lilaeopsis_brasiliensis_flower_(1).jpg",
       fileTitle: "File:Lilaeopsis brasiliensis flower (1).jpg",
       license: "CC BY-SA 3.0",
@@ -2126,7 +2126,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lilaeopsis-brasiliensis/3.jpg",
+      url: "/images/gallery/lilaeopsis-brasiliensis/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lilaeopsis_brasiliensis_flower_(2).jpg",
       fileTitle: "File:Lilaeopsis brasiliensis flower (2).jpg",
       license: "CC BY-SA 3.0",
@@ -2137,7 +2137,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lilaeopsis-brasiliensis/4.jpg",
+      url: "/images/gallery/lilaeopsis-brasiliensis/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lilaeopsis_brasiliensis_flower_(3).jpg",
       fileTitle: "File:Lilaeopsis brasiliensis flower (3).jpg",
       license: "CC BY-SA 3.0",
@@ -2150,7 +2150,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "limnophila-sessiliflora": [
     {
-      url: "/images/gallery/limnophila-sessiliflora/0.jpg",
+      url: "/images/gallery/limnophila-sessiliflora/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Limnophila_sessiliflora.jpg",
       fileTitle: "File:Limnophila_sessiliflora.jpg",
       license: "CC BY-SA 3.0",
@@ -2161,7 +2161,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/limnophila-sessiliflora/1.jpg",
+      url: "/images/gallery/limnophila-sessiliflora/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:-Limnophila_sessiliflora-_from_Japan.JPG",
       fileTitle: "File:-Limnophila sessiliflora- from Japan.JPG",
       license: "Public domain",
@@ -2172,7 +2172,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/limnophila-sessiliflora/2.jpg",
+      url: "/images/gallery/limnophila-sessiliflora/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aquariumpflanzen.JPG",
       fileTitle: "File:Aquariumpflanzen.JPG",
       license: "CC BY-SA 3.0",
@@ -2183,7 +2183,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/limnophila-sessiliflora/3.jpg",
+      url: "/images/gallery/limnophila-sessiliflora/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Limnophila_sessiliflora_(Asian_Ambulia)_in_Hyderabad,_AP_W_IMG_1415.jpg",
       fileTitle: "File:Limnophila sessiliflora (Asian Ambulia) in Hyderabad, AP W IMG 1415.jpg",
       license: "CC BY-SA 4.0",
@@ -2194,7 +2194,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/limnophila-sessiliflora/4.jpg",
+      url: "/images/gallery/limnophila-sessiliflora/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Limnophila_sessiliflora_(Asian_Ambulia)_in_Hyderabad,_AP_W_IMG_1429.jpg",
       fileTitle: "File:Limnophila sessiliflora (Asian Ambulia) in Hyderabad, AP W IMG 1429.jpg",
       license: "CC BY-SA 4.0",
@@ -2207,7 +2207,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "lobelia-cardinalis-mini": [
     {
-      url: "/images/gallery/lobelia-cardinalis-mini/0.jpg",
+      url: "/images/gallery/lobelia-cardinalis-mini/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lobelia_cardinalis_-_Cardinal_Flower.jpg",
       fileTitle: "File:Lobelia_cardinalis_-_Cardinal_Flower.jpg",
       license: "Public domain",
@@ -2218,7 +2218,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/lobelia-cardinalis-mini/1.jpg",
+      url: "/images/gallery/lobelia-cardinalis-mini/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:06-08-16_LobeliaCardinalisIR.jpg",
       fileTitle: "File:06-08-16 LobeliaCardinalisIR.jpg",
       license: "Public domain",
@@ -2229,7 +2229,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/lobelia-cardinalis-mini/2.jpg",
+      url: "/images/gallery/lobelia-cardinalis-mini/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:2021-08-22_16_31_02_Cardinal_flowers_blooming_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill,_Fairfax_County,_Virginia.jpg",
       fileTitle: "File:2021-08-22 16 31 02 Cardinal flowers blooming within Horsepen Run Stream Valley Park in Oak Hill, Fairfax County, Virginia.jpg",
       license: "CC BY-SA 4.0",
@@ -2240,7 +2240,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/lobelia-cardinalis-mini/3.jpg",
+      url: "/images/gallery/lobelia-cardinalis-mini/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cardinal_Flower_-_DPLA_-_3acaaa79d3e34dcf679ae02ee095712d.jpg",
       fileTitle: "File:Cardinal Flower - DPLA - 3acaaa79d3e34dcf679ae02ee095712d.jpg",
       license: "Public domain",
@@ -2251,7 +2251,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/lobelia-cardinalis-mini/4.jpg",
+      url: "/images/gallery/lobelia-cardinalis-mini/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cardinal_Flower_Lobelia_(29182935132).jpg",
       fileTitle: "File:Cardinal Flower Lobelia (29182935132).jpg",
       license: "CC BY 2.0",
@@ -2264,7 +2264,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "ludwigia-repens": [
     {
-      url: "/images/gallery/ludwigia-repens/0.jpg",
+      url: "/images/gallery/ludwigia-repens/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_repens.JPG",
       fileTitle: "File:Ludwigia_repens.JPG",
       license: "Public domain",
@@ -2275,7 +2275,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/ludwigia-repens/1.jpg",
+      url: "/images/gallery/ludwigia-repens/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Algae...or_seaweed...or_plastic.jpg",
       fileTitle: "File:Algae...or seaweed...or plastic.jpg",
       license: "CC BY 2.0",
@@ -2286,7 +2286,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ludwigia-repens/2.jpg",
+      url: "/images/gallery/ludwigia-repens/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_natans_kz01.jpg",
       fileTitle: "File:Ludwigia natans kz01.jpg",
       license: "CC BY-SA 4.0",
@@ -2297,7 +2297,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ludwigia-repens/3.jpg",
+      url: "/images/gallery/ludwigia-repens/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_natans_kz02.jpg",
       fileTitle: "File:Ludwigia natans kz02.jpg",
       license: "CC BY-SA 4.0",
@@ -2308,7 +2308,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ludwigia-repens/4.jpg",
+      url: "/images/gallery/ludwigia-repens/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_natans_kz03.jpg",
       fileTitle: "File:Ludwigia natans kz03.jpg",
       license: "CC BY-SA 4.0",
@@ -2321,18 +2321,18 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "ludwigia-super-red": [
     {
-      url: "/images/gallery/ludwigia-super-red/0.jpg",
+      url: "/images/gallery/ludwigia-super-red/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Starr_070515-7067_Ludwigia_palustris.jpg",
       fileTitle: "File:Starr_070515-7067_Ludwigia_palustris.jpg",
       license: "CC BY 3.0",
       licenseUrl: "https://creativecommons.org/licenses/by/3.0",
       author: "<a rel=\"nofollow\" class=\"external text\" href=\"http://www.hear.org/starr/\">Forest &amp; Kim Starr</a>",
-      credit: "Plants of Hawaii, <a rel=\"nofollow\" class=\"external text\" href=\"http://www.starrenvironmental.com/images/full/starr-070515-7067.jpg\">Image 070515-7067</a> from <a rel=\"nofollow\" class=\"external free\" href=\"http://www.hear.org/starr/plants/images/image/?q=070515-7067\">http://www.hear.org/starr/plants/images/image/?q=070515-7067</a>",
+      credit: "Plants of Hawaii, <a rel=\"nofollow\" class=\"external text\" href=\"http://www.starrenvironmental.com/images/full/starr-070515-7067.webp\">Image 070515-7067</a> from <a rel=\"nofollow\" class=\"external free\" href=\"http://www.hear.org/starr/plants/images/image/?q=070515-7067\">http://www.hear.org/starr/plants/images/image/?q=070515-7067</a>",
       slot: "Lead (hero)",
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ludwigia-super-red/1.jpg",
+      url: "/images/gallery/ludwigia-super-red/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_palustris_258349719.jpg",
       fileTitle: "File:Ludwigia palustris 258349719.jpg",
       license: "CC BY 4.0",
@@ -2343,7 +2343,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ludwigia-super-red/2.jpg",
+      url: "/images/gallery/ludwigia-super-red/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_palustris_258349727.jpg",
       fileTitle: "File:Ludwigia palustris 258349727.jpg",
       license: "CC BY 4.0",
@@ -2354,7 +2354,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ludwigia-super-red/3.jpg",
+      url: "/images/gallery/ludwigia-super-red/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_palustris_258349733.jpg",
       fileTitle: "File:Ludwigia palustris 258349733.jpg",
       license: "CC BY 4.0",
@@ -2365,7 +2365,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ludwigia-super-red/4.jpg",
+      url: "/images/gallery/ludwigia-super-red/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ludwigia_palustris_258350071.jpg",
       fileTitle: "File:Ludwigia palustris 258350071.jpg",
       license: "CC BY 4.0",
@@ -2378,7 +2378,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "marbled-hatchetfish": [
     {
-      url: "/images/gallery/marbled-hatchetfish/0.jpg",
+      url: "/images/gallery/marbled-hatchetfish/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Carnegiella_strigata_lateral_view.jpg",
       fileTitle: "File:Carnegiella_strigata_lateral_view.jpg",
       license: "CC BY-SA 4.0",
@@ -2389,7 +2389,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/marbled-hatchetfish/1.jpg",
+      url: "/images/gallery/marbled-hatchetfish/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Beilbauch_Marmorierter_Beilbauch_Carnegiella_strigata_060311.jpg",
       fileTitle: "File:Beilbauch Marmorierter Beilbauch Carnegiella strigata 060311.jpg",
       license: "CC BY-SA 3.0",
@@ -2400,7 +2400,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/marbled-hatchetfish/2.jpg",
+      url: "/images/gallery/marbled-hatchetfish/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Beilbauchsalmler.jpg",
       fileTitle: "File:Beilbauchsalmler.jpg",
       license: "CC BY-SA 3.0",
@@ -2411,7 +2411,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/marbled-hatchetfish/3.jpg",
+      url: "/images/gallery/marbled-hatchetfish/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Bijlzalm.jpg",
       fileTitle: "File:Bijlzalm.jpg",
       license: "Public domain",
@@ -2422,7 +2422,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/marbled-hatchetfish/4.png",
+      url: "/images/gallery/marbled-hatchetfish/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:C.strigata%E2%80%99s_native_distribution.png",
       fileTitle: "File:C.strigata\u2019s native distribution.png",
       license: "CC0",
@@ -2435,7 +2435,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "marsilea-hirsuta": [
     {
-      url: "/images/gallery/marsilea-hirsuta/0.jpg",
+      url: "/images/gallery/marsilea-hirsuta/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Marsilea_hirsuta_kz01.jpg",
       fileTitle: "File:Marsilea_hirsuta_kz01.jpg",
       license: "CC BY-SA 4.0",
@@ -2446,7 +2446,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/marsilea-hirsuta/1.jpg",
+      url: "/images/gallery/marsilea-hirsuta/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:COI00079503_-_Marsilea_azorica_-_Hansen,_Alfred_-_308.jpg",
       fileTitle: "File:COI00079503 - Marsilea azorica - Hansen, Alfred - 308.jpg",
       license: "CC BY 4.0",
@@ -2457,7 +2457,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/marsilea-hirsuta/2.jpg",
+      url: "/images/gallery/marsilea-hirsuta/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Marsilea_azorica_(Habitus).jpg",
       fileTitle: "File:Marsilea azorica (Habitus).jpg",
       license: "CC BY-SA 3.0",
@@ -2468,7 +2468,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/marsilea-hirsuta/3.jpg",
+      url: "/images/gallery/marsilea-hirsuta/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Marsilea_azorica01.jpg",
       fileTitle: "File:Marsilea azorica01.jpg",
       license: "CC BY-SA 3.0",
@@ -2479,7 +2479,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/marsilea-hirsuta/4.jpg",
+      url: "/images/gallery/marsilea-hirsuta/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Marsilea_hirsuta_-_Victoriahuset,_Bergianska_tr%C3%A4dg%C3%A5rden_-_Stockholm,_Sweden_-_DSC00253.JPG",
       fileTitle: "File:Marsilea hirsuta - Victoriahuset, Bergianska tr\u00e4dg\u00e5rden - Stockholm, Sweden - DSC00253.JPG",
       license: "CC0",
@@ -2492,7 +2492,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "needle-hairgrass": [
     {
-      url: "/images/gallery/needle-hairgrass/0.jpg",
+      url: "/images/gallery/needle-hairgrass/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Eleocharis_acicularis.jpeg",
       fileTitle: "File:Eleocharis_acicularis.jpeg",
       license: "CC BY-SA 3.0",
@@ -2503,7 +2503,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/needle-hairgrass/1.jpg",
+      url: "/images/gallery/needle-hairgrass/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Eleocharis_Acicularis_(Needle_Spike_Rush)_in_Billings-Kittredge_Herbaria_(07f66741-0c0a-414c-aaa9-b8f48912a87c).tif",
       fileTitle: "File:Eleocharis Acicularis (Needle Spike Rush) in Billings-Kittredge Herbaria (07f66741-0c0a-414c-aaa9-b8f48912a87c).tif",
       license: "Public domain",
@@ -2514,7 +2514,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/needle-hairgrass/2.jpg",
+      url: "/images/gallery/needle-hairgrass/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Eleocharis_acicularis_%2B_Eleocharis_ovata_sl1.jpg",
       fileTitle: "File:Eleocharis acicularis + Eleocharis ovata sl1.jpg",
       license: "CC BY-SA 4.0",
@@ -2525,7 +2525,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/needle-hairgrass/3.jpg",
+      url: "/images/gallery/needle-hairgrass/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Eleocharis_acicularis_%2B_Eleocharis_ovata_sl2.jpg",
       fileTitle: "File:Eleocharis acicularis + Eleocharis ovata sl2.jpg",
       license: "CC BY-SA 4.0",
@@ -2536,7 +2536,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/needle-hairgrass/4.jpg",
+      url: "/images/gallery/needle-hairgrass/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Eleocharis_acicularis_%2B_Eleocharis_ovata_sl3.jpg",
       fileTitle: "File:Eleocharis acicularis + Eleocharis ovata sl3.jpg",
       license: "CC BY-SA 4.0",
@@ -2549,7 +2549,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "neon-tetra": [
     {
-      url: "/images/gallery/neon-tetra/0.jpg",
+      url: "/images/gallery/neon-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Neonsalmler_Paracheirodon_innesi.jpg",
       fileTitle: "File:Neonsalmler_Paracheirodon_innesi.jpg",
       license: "CC BY 3.0",
@@ -2560,7 +2560,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/neon-tetra/1.jpg",
+      url: "/images/gallery/neon-tetra/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:2014-Zoo-Basel_58_Aquarium.JPG",
       fileTitle: "File:2014-Zoo-Basel 58 Aquarium.JPG",
       license: "CC BY-SA 3.0",
@@ -2571,7 +2571,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/neon-tetra/2.jpg",
+      url: "/images/gallery/neon-tetra/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:5_Paracheirodon_innesi.JPG",
       fileTitle: "File:5 Paracheirodon innesi.JPG",
       license: "CC0",
@@ -2582,7 +2582,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/neon-tetra/3.jpg",
+      url: "/images/gallery/neon-tetra/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ab_plant_1057.jpg",
       fileTitle: "File:Ab plant 1057.jpg",
       license: "CC BY-SA 3.0",
@@ -2593,7 +2593,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/neon-tetra/4.jpg",
+      url: "/images/gallery/neon-tetra/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aquarium_fish_in_green_aqua_plants.jpg",
       fileTitle: "File:Aquarium fish in green aqua plants.jpg",
       license: "Public domain",
@@ -2606,7 +2606,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "otocinclus": [
     {
-      url: "/images/gallery/otocinclus/0.jpg",
+      url: "/images/gallery/otocinclus/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Otocinclus_arnoldi_(1).JPG",
       fileTitle: "File:Otocinclus_arnoldi_(1).JPG",
       license: "CC BY-SA 3.0",
@@ -2617,7 +2617,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/otocinclus/1.jpg",
+      url: "/images/gallery/otocinclus/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Annals_of_the_Carnegie_Museum_(1906)_(18225673680).jpg",
       fileTitle: "File:Annals of the Carnegie Museum (1906) (18225673680).jpg",
       license: "No restrictions",
@@ -2628,7 +2628,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/otocinclus/2.jpg",
+      url: "/images/gallery/otocinclus/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:FMIB_52368_Otocinclus_vittalus_Regan.jpeg",
       fileTitle: "File:FMIB 52368 Otocinclus vittalus Regan.jpeg",
       license: "Public domain",
@@ -2639,7 +2639,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/otocinclus/3.jpg",
+      url: "/images/gallery/otocinclus/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Otocinclus_vittatus.jpg",
       fileTitle: "File:Otocinclus vittatus.jpg",
       license: "CC BY-SA 3.0",
@@ -2652,7 +2652,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "peacock-moss": [
     {
-      url: "/images/gallery/peacock-moss/0.jpg",
+      url: "/images/gallery/peacock-moss/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
       fileTitle: "File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
       license: "CC0",
@@ -2665,7 +2665,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "pearl-gourami": [
     {
-      url: "/images/gallery/pearl-gourami/0.jpg",
+      url: "/images/gallery/pearl-gourami/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Trichopodus_leerii_Natural_History_Museum_University_of_Pisa.jpg",
       fileTitle: "File:Trichopodus_leerii_Natural_History_Museum_University_of_Pisa.jpg",
       license: "CC BY-SA 4.0",
@@ -2676,7 +2676,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pearl-gourami/1.jpg",
+      url: "/images/gallery/pearl-gourami/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aquarium_(246242273).jpg",
       fileTitle: "File:Aquarium (246242273).jpg",
       license: "CC BY-SA 2.0",
@@ -2687,7 +2687,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pearl-gourami/2.jpg",
+      url: "/images/gallery/pearl-gourami/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Gourami_perl%C3%A9_barbus_requin_nancy_1005953.JPG",
       fileTitle: "File:Gourami perl\u00e9 barbus requin nancy 1005953.JPG",
       license: "CC BY-SA 4.0",
@@ -2698,7 +2698,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pearl-gourami/3.jpg",
+      url: "/images/gallery/pearl-gourami/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:London_Aquarium_(539798309).jpg",
       fileTitle: "File:London Aquarium (539798309).jpg",
       license: "CC BY 2.0",
@@ -2709,7 +2709,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pearl-gourami/4.jpg",
+      url: "/images/gallery/pearl-gourami/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:London_Aquarium_(539798329).jpg",
       fileTitle: "File:London Aquarium (539798329).jpg",
       license: "CC BY 2.0",
@@ -2722,7 +2722,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "pearlweed": [
     {
-      url: "/images/gallery/pearlweed/0.jpg",
+      url: "/images/gallery/pearlweed/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Micranthemum_umbrosum_(J.F._Gmel.)_S.F._Blake_(9714579961).jpg",
       fileTitle: "File:Micranthemum_umbrosum_(J.F._Gmel.)_S.F._Blake_(9714579961).jpg",
       license: "CC BY 2.0",
@@ -2735,7 +2735,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "phoenix-moss": [
     {
-      url: "/images/gallery/phoenix-moss/0.jpg",
+      url: "/images/gallery/phoenix-moss/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:F.fontanus.jpg",
       fileTitle: "File:F.fontanus.jpg",
       license: "CC BY-SA 4.0",
@@ -2748,7 +2748,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "pogostemon-helferi": [
     {
-      url: "/images/gallery/pogostemon-helferi/0.jpg",
+      url: "/images/gallery/pogostemon-helferi/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Pogostemon_cablin_001.jpg",
       fileTitle: "File:Pogostemon_cablin_001.jpg",
       license: "CC BY-SA 3.0",
@@ -2759,7 +2759,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pogostemon-helferi/1.jpg",
+      url: "/images/gallery/pogostemon-helferi/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:CPO_male.jpg",
       fileTitle: "File:CPO male.jpg",
       license: "CC0",
@@ -2770,7 +2770,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/pogostemon-helferi/2.jpg",
+      url: "/images/gallery/pogostemon-helferi/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Pogostemon2.jpg",
       fileTitle: "File:Pogostemon2.jpg",
       license: "Public domain",
@@ -2781,7 +2781,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/pogostemon-helferi/3.jpg",
+      url: "/images/gallery/pogostemon-helferi/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Pogostemon3.jpg",
       fileTitle: "File:Pogostemon3.jpg",
       license: "Public domain",
@@ -2794,7 +2794,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "pygmy-corydoras": [
     {
-      url: "/images/gallery/pygmy-corydoras/0.jpg",
+      url: "/images/gallery/pygmy-corydoras/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:C.pygmaeus.jpg",
       fileTitle: "File:C.pygmaeus.jpg",
       license: "CC BY-SA 4.0",
@@ -2805,7 +2805,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pygmy-corydoras/1.png",
+      url: "/images/gallery/pygmy-corydoras/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Clipped_image_20250728_104721.png",
       fileTitle: "File:Clipped image 20250728 104721.png",
       license: "CC BY-SA 3.0",
@@ -2816,7 +2816,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pygmy-corydoras/2.jpg",
+      url: "/images/gallery/pygmy-corydoras/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Corydoras_pygmaeus_222279897.jpg",
       fileTitle: "File:Corydoras pygmaeus 222279897.jpg",
       license: "CC BY 4.0",
@@ -2827,7 +2827,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pygmy-corydoras/3.png",
+      url: "/images/gallery/pygmy-corydoras/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Corydoras_pygmaeus_carnat_joel_2_(clipped).png",
       fileTitle: "File:Corydoras pygmaeus carnat joel 2 (clipped).png",
       license: "CC BY 2.0",
@@ -2838,7 +2838,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/pygmy-corydoras/4.jpg",
+      url: "/images/gallery/pygmy-corydoras/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Corydoras_pygmaeus_carnat_joel_2.jpg",
       fileTitle: "File:Corydoras pygmaeus carnat joel 2.jpg",
       license: "CC BY 2.0",
@@ -2851,7 +2851,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "ram-cichlid": [
     {
-      url: "/images/gallery/ram-cichlid/0.jpg",
+      url: "/images/gallery/ram-cichlid/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Antennebaarsje.jpg",
       fileTitle: "File:Antennebaarsje.jpg",
       license: "CC BY-SA 3.0",
@@ -2862,7 +2862,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ram-cichlid/1.jpg",
+      url: "/images/gallery/ram-cichlid/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Aquarium_Tropical_Palais_Porte_Dor%C3%A9e_-_Paris_XII_(FR75)_-_2021-06-26_-_26.jpg",
       fileTitle: "File:Aquarium Tropical Palais Porte Dor\u00e9e - Paris XII (FR75) - 2021-06-26 - 26.jpg",
       license: "CC BY-SA 4.0",
@@ -2873,7 +2873,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ram-cichlid/2.jpg",
+      url: "/images/gallery/ram-cichlid/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_ram_(Male).JPG",
       fileTitle: "File:Blue ram (Male).JPG",
       license: "CC BY-SA 3.0",
@@ -2884,7 +2884,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ram-cichlid/3.jpg",
+      url: "/images/gallery/ram-cichlid/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_Ram_2_(Female).JPG",
       fileTitle: "File:Blue Ram 2 (Female).JPG",
       license: "CC BY-SA 3.0",
@@ -2895,7 +2895,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ram-cichlid/4.jpg",
+      url: "/images/gallery/ram-cichlid/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_Ram_2_(Male).JPG",
       fileTitle: "File:Blue Ram 2 (Male).JPG",
       license: "CC BY-SA 3.0",
@@ -2908,7 +2908,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "ranunculus-inundatus": [
     {
-      url: "/images/gallery/ranunculus-inundatus/0.jpg",
+      url: "/images/gallery/ranunculus-inundatus/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ranunculus_inundatus_habit2_(17981491212).jpg",
       fileTitle: "File:Ranunculus_inundatus_habit2_(17981491212).jpg",
       license: "CC BY 2.0",
@@ -2919,7 +2919,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ranunculus-inundatus/1.jpg",
+      url: "/images/gallery/ranunculus-inundatus/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ranunculus_inundatus_flower1_(17958226506).jpg",
       fileTitle: "File:Ranunculus inundatus flower1 (17958226506).jpg",
       license: "CC BY 2.0",
@@ -2930,7 +2930,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ranunculus-inundatus/2.jpg",
+      url: "/images/gallery/ranunculus-inundatus/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ranunculus_inundatus_flower2_(17981506052).jpg",
       fileTitle: "File:Ranunculus inundatus flower2 (17981506052).jpg",
       license: "CC BY 2.0",
@@ -2941,7 +2941,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ranunculus-inundatus/3.jpg",
+      url: "/images/gallery/ranunculus-inundatus/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ranunculus_inundatus_flower3_(17981501012).jpg",
       fileTitle: "File:Ranunculus inundatus flower3 (17981501012).jpg",
       license: "CC BY 2.0",
@@ -2952,7 +2952,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ranunculus-inundatus/4.jpg",
+      url: "/images/gallery/ranunculus-inundatus/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Ranunculus_inundatus_flower4_-_Flickr_-_Macleay_Grass_Man.jpg",
       fileTitle: "File:Ranunculus inundatus flower4 - Flickr - Macleay Grass Man.jpg",
       license: "CC BY 2.0",
@@ -2965,7 +2965,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "reticulated-hillstream-loach": [
     {
-      url: "/images/gallery/reticulated-hillstream-loach/0.jpg",
+      url: "/images/gallery/reticulated-hillstream-loach/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hillstream_Loach.JPG",
       fileTitle: "File:Hillstream_Loach.JPG",
       license: "CC BY-SA 3.0",
@@ -2976,7 +2976,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/reticulated-hillstream-loach/1.jpg",
+      url: "/images/gallery/reticulated-hillstream-loach/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hillstream_Loach.JPG",
       fileTitle: "File:Hillstream Loach.JPG",
       license: "CC BY-SA 3.0",
@@ -2987,7 +2987,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/reticulated-hillstream-loach/2.jpg",
+      url: "/images/gallery/reticulated-hillstream-loach/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Sewellia_lineolata_-_Pracht-Flossensauger.jpg",
       fileTitle: "File:Sewellia lineolata - Pracht-Flossensauger.jpg",
       license: "CC0",
@@ -2998,7 +2998,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/reticulated-hillstream-loach/3.jpg",
+      url: "/images/gallery/reticulated-hillstream-loach/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Sewellia.jpg",
       fileTitle: "File:Sewellia.jpg",
       license: "CC BY 3.0",
@@ -3009,7 +3009,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/reticulated-hillstream-loach/4.jpg",
+      url: "/images/gallery/reticulated-hillstream-loach/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:%E3%82%BB%E3%82%A6%E3%82%A7%E3%83%AB%E3%83%AA%E3%82%A2.jpg",
       fileTitle: "File:\u30bb\u30a6\u30a7\u30eb\u30ea\u30a2.jpg",
       license: "CC BY-SA 4.0",
@@ -3022,7 +3022,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "riccia-fluitans": [
     {
-      url: "/images/gallery/riccia-fluitans/0.jpg",
+      url: "/images/gallery/riccia-fluitans/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:RicciaFluitans1.jpg",
       fileTitle: "File:RicciaFluitans1.jpg",
       license: "CC BY 2.5",
@@ -3033,7 +3033,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/riccia-fluitans/1.jpg",
+      url: "/images/gallery/riccia-fluitans/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Christmas_moss_and_riccia_(14441185564).jpg",
       fileTitle: "File:Christmas moss and riccia (14441185564).jpg",
       license: "CC BY-SA 2.0",
@@ -3044,7 +3044,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/riccia-fluitans/2.png",
+      url: "/images/gallery/riccia-fluitans/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Elfving_Kasvitieteen_oppikirja_Kuva_7.png",
       fileTitle: "File:Elfving Kasvitieteen oppikirja Kuva 7.png",
       license: "Public domain",
@@ -3055,7 +3055,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/riccia-fluitans/3.jpg",
+      url: "/images/gallery/riccia-fluitans/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hoffmann-Dennert_botanischer_Bilderatlas_(Taf._09)_(6424986131).jpg",
       fileTitle: "File:Hoffmann-Dennert botanischer Bilderatlas (Taf. 09) (6424986131).jpg",
       license: "Public domain",
@@ -3066,7 +3066,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/riccia-fluitans/4.jpg",
+      url: "/images/gallery/riccia-fluitans/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Riccia_fluitans_030911.JPG",
       fileTitle: "File:Riccia fluitans 030911.JPG",
       license: "CC BY-SA 3.0",
@@ -3079,7 +3079,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "rotala-rotundifolia": [
     {
-      url: "/images/gallery/rotala-rotundifolia/0.jpg",
+      url: "/images/gallery/rotala-rotundifolia/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Rotala_rotundifolia.jpg",
       fileTitle: "File:Rotala_rotundifolia.jpg",
       license: "CC BY-SA 3.0",
@@ -3090,7 +3090,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/rotala-rotundifolia/1.jpg",
+      url: "/images/gallery/rotala-rotundifolia/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Flower-a.jpg",
       fileTitle: "File:Flower-a.jpg",
       license: "CC BY-SA 4.0",
@@ -3101,7 +3101,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/rotala-rotundifolia/2.jpg",
+      url: "/images/gallery/rotala-rotundifolia/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Flower-b.jpg",
       fileTitle: "File:Flower-b.jpg",
       license: "CC BY-SA 4.0",
@@ -3112,7 +3112,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/rotala-rotundifolia/3.jpg",
+      url: "/images/gallery/rotala-rotundifolia/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Flower-c.jpg",
       fileTitle: "File:Flower-c.jpg",
       license: "CC BY-SA 4.0",
@@ -3123,7 +3123,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/rotala-rotundifolia/4.jpg",
+      url: "/images/gallery/rotala-rotundifolia/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Leaf-a.jpg",
       fileTitle: "File:Leaf-a.jpg",
       license: "CC BY-SA 4.0",
@@ -3136,7 +3136,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "rummynose-tetra": [
     {
-      url: "/images/gallery/rummynose-tetra/0.jpg",
+      url: "/images/gallery/rummynose-tetra/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Hemigrammus_rhodostomus.jpg",
       fileTitle: "File:Hemigrammus_rhodostomus.jpg",
       license: "CC BY-SA 3.0",
@@ -3149,7 +3149,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "sagittaria-subulata": [
     {
-      url: "/images/gallery/sagittaria-subulata/0.jpg",
+      url: "/images/gallery/sagittaria-subulata/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Sagittaria_subulata_kz01.jpg",
       fileTitle: "File:Sagittaria_subulata_kz01.jpg",
       license: "CC BY-SA 4.0",
@@ -3160,7 +3160,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sagittaria-subulata/1.jpg",
+      url: "/images/gallery/sagittaria-subulata/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Poda.jpg",
       fileTitle: "File:Poda.jpg",
       license: "CC BY-SA 4.0",
@@ -3171,7 +3171,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sagittaria-subulata/2.jpg",
+      url: "/images/gallery/sagittaria-subulata/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Poda01.JPG",
       fileTitle: "File:Poda01.JPG",
       license: "CC BY-SA 4.0",
@@ -3182,7 +3182,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sagittaria-subulata/3.jpg",
+      url: "/images/gallery/sagittaria-subulata/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Sagittaria_subulata_-_Botanischer_Garten_-_Heidelberg,_Germany_-_DSC01290.jpg",
       fileTitle: "File:Sagittaria subulata - Botanischer Garten - Heidelberg, Germany - DSC01290.jpg",
       license: "CC0",
@@ -3193,7 +3193,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/sagittaria-subulata/4.jpg",
+      url: "/images/gallery/sagittaria-subulata/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Sagittaria_subulata_-_Copenhagen_Botanical_Garden_-_DSC07957.JPG",
       fileTitle: "File:Sagittaria subulata - Copenhagen Botanical Garden - DSC07957.JPG",
       license: "CC0",
@@ -3206,7 +3206,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "salvinia-natans": [
     {
-      url: "/images/gallery/salvinia-natans/0.jpg",
+      url: "/images/gallery/salvinia-natans/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Salvinia_natans_(habitus)_1.jpg",
       fileTitle: "File:Salvinia_natans_(habitus)_1.jpg",
       license: "CC BY-SA 3.0",
@@ -3217,7 +3217,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/salvinia-natans/1.jpg",
+      url: "/images/gallery/salvinia-natans/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:AboveWater.jpg",
       fileTitle: "File:AboveWater.jpg",
       license: "CC BY-SA 4.0",
@@ -3228,7 +3228,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/salvinia-natans/2.jpg",
+      url: "/images/gallery/salvinia-natans/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Atlas_roslin_pl_Salwinia_p%C5%82ywaj%C4%85ca_3990_7859.jpg",
       fileTitle: "File:Atlas roslin pl Salwinia p\u0142ywaj\u0105ca 3990 7859.jpg",
       license: "CC BY-SA 4.0",
@@ -3239,7 +3239,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/salvinia-natans/3.jpg",
+      url: "/images/gallery/salvinia-natans/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Azolla_filiculoides_kz03.jpg",
       fileTitle: "File:Azolla filiculoides kz03.jpg",
       license: "CC BY-SA 4.0",
@@ -3250,7 +3250,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/salvinia-natans/4.jpg",
+      url: "/images/gallery/salvinia-natans/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:AzollaSalviniaRicciocarpos.jpg",
       fileTitle: "File:AzollaSalviniaRicciocarpos.jpg",
       license: "CC BY-SA 3.0",
@@ -3263,7 +3263,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "siamese-algae-eater": [
     {
-      url: "/images/gallery/siamese-algae-eater/0.jpg",
+      url: "/images/gallery/siamese-algae-eater/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Crossocheilus_Oblongus_(1).jpg",
       fileTitle: "File:Crossocheilus Oblongus (1).jpg",
       license: "CC BY-SA 4.0",
@@ -3274,7 +3274,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/siamese-algae-eater/1.jpg",
+      url: "/images/gallery/siamese-algae-eater/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Crossocheilus_oblongus_-_Jungtier.JPG",
       fileTitle: "File:Crossocheilus oblongus - Jungtier.JPG",
       license: "CC BY-SA 3.0",
@@ -3285,7 +3285,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/siamese-algae-eater/2.jpg",
+      url: "/images/gallery/siamese-algae-eater/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Crossocheilus_oblongus_Bleeker.jpg",
       fileTitle: "File:Crossocheilus oblongus Bleeker.jpg",
       license: "CC BY 3.0",
@@ -3296,7 +3296,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/siamese-algae-eater/3.jpg",
+      url: "/images/gallery/siamese-algae-eater/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Crossocheilus_Oblongus.JPG",
       fileTitle: "File:Crossocheilus Oblongus.JPG",
       license: "CC BY-SA 3.0",
@@ -3307,7 +3307,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/siamese-algae-eater/4.jpg",
+      url: "/images/gallery/siamese-algae-eater/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Crossocheilus_siamensis_(2)_by_Ark.jpg",
       fileTitle: "File:Crossocheilus siamensis (2) by Ark.jpg",
       license: "CC BY 3.0",
@@ -3320,7 +3320,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "snowball-shrimp": [
     {
-      url: "/images/gallery/snowball-shrimp/0.jpg",
+      url: "/images/gallery/snowball-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Neocaridina-palmata.jpg",
       fileTitle: "File:Neocaridina-palmata.jpg",
       license: "CC BY-SA 3.0",
@@ -3331,7 +3331,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/snowball-shrimp/1.png",
+      url: "/images/gallery/snowball-shrimp/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cherry_shrimps_in_aquarium.png",
       fileTitle: "File:Cherry shrimps in aquarium.png",
       license: "CC BY-SA 4.0",
@@ -3342,7 +3342,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/snowball-shrimp/2.png",
+      url: "/images/gallery/snowball-shrimp/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cherry_shrimps_in_freshwater_aquarium.png",
       fileTitle: "File:Cherry shrimps in freshwater aquarium.png",
       license: "CC BY-SA 4.0",
@@ -3353,7 +3353,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/snowball-shrimp/3.jpg",
+      url: "/images/gallery/snowball-shrimp/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Cherry-shrimp.jpg",
       fileTitle: "File:Cherry-shrimp.jpg",
       license: "CC BY-SA 4.0",
@@ -3364,7 +3364,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/snowball-shrimp/4.jpg",
+      url: "/images/gallery/snowball-shrimp/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Konik_morski_w_domowym_akwarium.jpg",
       fileTitle: "File:Konik morski w domowym akwarium.jpg",
       license: "CC BY 4.0",
@@ -3377,7 +3377,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "sparkling-gourami": [
     {
-      url: "/images/gallery/sparkling-gourami/0.jpg",
+      url: "/images/gallery/sparkling-gourami/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Sparkling_Gourami.jpg",
       fileTitle: "File:Sparkling Gourami.jpg",
       license: "CC BY-SA 4.0",
@@ -3388,7 +3388,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sparkling-gourami/1.jpg",
+      url: "/images/gallery/sparkling-gourami/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Sparkling_gourami.jpg",
       fileTitle: "File:Sparkling gourami.jpg",
       license: "CC BY-SA 4.0",
@@ -3399,7 +3399,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sparkling-gourami/2.jpg",
+      url: "/images/gallery/sparkling-gourami/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Trichopsis_pumila_Map.jpg",
       fileTitle: "File:Trichopsis pumila Map.jpg",
       license: "CC BY-SA 4.0",
@@ -3410,7 +3410,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sparkling-gourami/3.jpg",
+      url: "/images/gallery/sparkling-gourami/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Trichopsis_pumila,.jpg",
       fileTitle: "File:Trichopsis pumila,.jpg",
       license: "CC BY-SA 4.0",
@@ -3421,7 +3421,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sparkling-gourami/4.jpg",
+      url: "/images/gallery/sparkling-gourami/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Trichopsis_pumila.jpg",
       fileTitle: "File:Trichopsis pumila.jpg",
       license: "CC BY-SA 3.0",
@@ -3434,7 +3434,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "spiky-moss": [
     {
-      url: "/images/gallery/spiky-moss/0.jpg",
+      url: "/images/gallery/spiky-moss/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
       fileTitle: "File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
       license: "CC0",
@@ -3447,7 +3447,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "staurogyne-repens": [
     {
-      url: "/images/gallery/staurogyne-repens/0.jpg",
+      url: "/images/gallery/staurogyne-repens/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:S._repens_in_a_tank.jpg",
       fileTitle: "File:S. repens in a tank.jpg",
       license: "CC BY-SA 3.0",
@@ -3460,7 +3460,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "sterbai-corydoras": [
     {
-      url: "/images/gallery/sterbai-corydoras/0.jpg",
+      url: "/images/gallery/sterbai-corydoras/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:55067369.Corydorassterbai.jpeg",
       fileTitle: "File:55067369.Corydorassterbai.jpeg",
       license: "Public domain",
@@ -3471,7 +3471,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/sterbai-corydoras/1.png",
+      url: "/images/gallery/sterbai-corydoras/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Corydoras_Sterbai_(clipped).png",
       fileTitle: "File:Corydoras Sterbai (clipped).png",
       license: "Public domain",
@@ -3482,7 +3482,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/sterbai-corydoras/2.jpg",
+      url: "/images/gallery/sterbai-corydoras/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Corydoras_sterbai_-_Kopf.jpeg",
       fileTitle: "File:Corydoras sterbai - Kopf.jpeg",
       license: "CC0",
@@ -3493,7 +3493,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/sterbai-corydoras/3.jpg",
+      url: "/images/gallery/sterbai-corydoras/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Corydoras_sterbai_02.jpg",
       fileTitle: "File:Corydoras sterbai 02.jpg",
       license: "CC BY-SA 3.0",
@@ -3504,7 +3504,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sterbai-corydoras/4.jpg",
+      url: "/images/gallery/sterbai-corydoras/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Corydoras_sterbai.jpg",
       fileTitle: "File:Corydoras sterbai.jpg",
       license: "CC BY 2.5",
@@ -3517,7 +3517,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "sussewassertang": [
     {
-      url: "/images/gallery/sussewassertang/0.jpg",
+      url: "/images/gallery/sussewassertang/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lomariopsis_gametophyte_(%22pelia_moss%22)_in_the_Philippines_01.jpg",
       fileTitle: "File:Lomariopsis gametophyte (\"pelia moss\") in the Philippines 01.jpg",
       license: "CC BY 4.0",
@@ -3528,7 +3528,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sussewassertang/1.jpg",
+      url: "/images/gallery/sussewassertang/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lomariopsis_gametophyte_(%22pelia_moss%22)_in_the_Philippines_02.jpg",
       fileTitle: "File:Lomariopsis gametophyte (\"pelia moss\") in the Philippines 02.jpg",
       license: "CC BY 4.0",
@@ -3539,7 +3539,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sussewassertang/2.jpg",
+      url: "/images/gallery/sussewassertang/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lomariopsis_gametophyte_(%22pelia_moss%22)_in_the_Philippines_03.jpg",
       fileTitle: "File:Lomariopsis gametophyte (\"pelia moss\") in the Philippines 03.jpg",
       license: "CC BY 4.0",
@@ -3550,7 +3550,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sussewassertang/3.jpg",
+      url: "/images/gallery/sussewassertang/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lomariopsis_gametophyte_(%22pelia_moss%22)_in_the_Philippines_04.jpg",
       fileTitle: "File:Lomariopsis gametophyte (\"pelia moss\") in the Philippines 04.jpg",
       license: "CC BY 4.0",
@@ -3561,7 +3561,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/sussewassertang/4.jpg",
+      url: "/images/gallery/sussewassertang/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Lomariopsis_gametophyte_(%22pelia_moss%22)_in_the_Philippines_05.jpg",
       fileTitle: "File:Lomariopsis gametophyte (\"pelia moss\") in the Philippines 05.jpg",
       license: "CC BY 4.0",
@@ -3574,7 +3574,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "threadfin-rainbowfish": [
     {
-      url: "/images/gallery/threadfin-rainbowfish/0.jpg",
+      url: "/images/gallery/threadfin-rainbowfish/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Iriatherina_Werneri-Male_group.jpg",
       fileTitle: "File:Iriatherina_Werneri-Male_group.jpg",
       license: "CC BY-SA 2.5",
@@ -3585,7 +3585,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/threadfin-rainbowfish/1.jpg",
+      url: "/images/gallery/threadfin-rainbowfish/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Iriatherina_Werneri-Male_group.jpg",
       fileTitle: "File:Iriatherina Werneri-Male group.jpg",
       license: "CC BY-SA 2.5",
@@ -3596,7 +3596,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/threadfin-rainbowfish/2.jpg",
+      url: "/images/gallery/threadfin-rainbowfish/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Iriatherina_Werneri-Yellow_Finned_Male.jpg",
       fileTitle: "File:Iriatherina Werneri-Yellow Finned Male.jpg",
       license: "CC BY-SA 2.5",
@@ -3607,7 +3607,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/threadfin-rainbowfish/3.jpg",
+      url: "/images/gallery/threadfin-rainbowfish/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Iriatherina_werneri.jpg",
       fileTitle: "File:Iriatherina werneri.jpg",
       license: "CC BY-SA 4.0",
@@ -3620,7 +3620,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "vallisneria-spiralis": [
     {
-      url: "/images/gallery/vallisneria-spiralis/0.jpg",
+      url: "/images/gallery/vallisneria-spiralis/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Vallisneria_spiralis.jpg",
       fileTitle: "File:Vallisneria_spiralis.jpg",
       license: "CC BY-SA 4.0",
@@ -3631,7 +3631,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/vallisneria-spiralis/1.png",
+      url: "/images/gallery/vallisneria-spiralis/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:PSM_V68_D255_Vallisneria_spiralis_7_weeks_growth_in_lake_soil.png",
       fileTitle: "File:PSM V68 D255 Vallisneria spiralis 7 weeks growth in lake soil.png",
       license: "Public domain",
@@ -3642,7 +3642,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/vallisneria-spiralis/2.png",
+      url: "/images/gallery/vallisneria-spiralis/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:PSM_V68_D256_Vallisneria_spiralis_7_weeks_growth_in_gravel.png",
       fileTitle: "File:PSM V68 D256 Vallisneria spiralis 7 weeks growth in gravel.png",
       license: "Public domain",
@@ -3653,7 +3653,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/vallisneria-spiralis/3.jpg",
+      url: "/images/gallery/vallisneria-spiralis/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Vallisneria_spiralis_L._(AM_AK337227).jpg",
       fileTitle: "File:Vallisneria spiralis L. (AM AK337227).jpg",
       license: "CC BY 4.0",
@@ -3664,7 +3664,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/vallisneria-spiralis/4.jpg",
+      url: "/images/gallery/vallisneria-spiralis/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Vallisneria_spiralis_vaam3_001_php.jpg",
       fileTitle: "File:Vallisneria spiralis vaam3 001 php.jpg",
       license: "Public domain",
@@ -3677,7 +3677,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "white-cloud-mountain-minnow": [
     {
-      url: "/images/gallery/white-cloud-mountain-minnow/0.jpg",
+      url: "/images/gallery/white-cloud-mountain-minnow/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:White_Cloud_Mountain_Minnow_1.jpg",
       fileTitle: "File:White_Cloud_Mountain_Minnow_1.jpg",
       license: "CC BY-SA 3.0",
@@ -3688,7 +3688,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/white-cloud-mountain-minnow/1.jpg",
+      url: "/images/gallery/white-cloud-mountain-minnow/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Meteorminnow.jpg",
       fileTitle: "File:Meteorminnow.jpg",
       license: "Public domain",
@@ -3699,7 +3699,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/white-cloud-mountain-minnow/2.jpg",
+      url: "/images/gallery/white-cloud-mountain-minnow/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Meteorminnow2.jpg",
       fileTitle: "File:Meteorminnow2.jpg",
       license: "CC BY-SA 3.0",
@@ -3710,7 +3710,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/white-cloud-mountain-minnow/3.jpg",
+      url: "/images/gallery/white-cloud-mountain-minnow/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Meteorminnow3.jpg",
       fileTitle: "File:Meteorminnow3.jpg",
       license: "Public domain",
@@ -3721,7 +3721,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/white-cloud-mountain-minnow/4.jpg",
+      url: "/images/gallery/white-cloud-mountain-minnow/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Minnow_display.jpg",
       fileTitle: "File:Minnow display.jpg",
       license: "Public domain",
@@ -3734,7 +3734,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
   ],
   "yellow-shrimp": [
     {
-      url: "/images/gallery/yellow-shrimp/0.jpg",
+      url: "/images/gallery/yellow-shrimp/0.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Red_Cherry_Shrimp_1.jpg",
       fileTitle: "File:Red_Cherry_Shrimp_1.jpg",
       license: "CC BY-SA 3.0",
@@ -3745,7 +3745,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/yellow-shrimp/1.jpg",
+      url: "/images/gallery/yellow-shrimp/1.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Baby_Cherry_shrimp_(Neocaridina_heteropoda)_-_3_Sept._2008.jpg",
       fileTitle: "File:Baby Cherry shrimp (Neocaridina heteropoda) - 3 Sept. 2008.jpg",
       license: "CC BY-SA 2.0",
@@ -3756,7 +3756,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/yellow-shrimp/2.jpg",
+      url: "/images/gallery/yellow-shrimp/2.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Black_Gill_Disease.JPG",
       fileTitle: "File:Black Gill Disease.JPG",
       license: "CC BY 3.0",
@@ -3767,7 +3767,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/yellow-shrimp/3.jpg",
+      url: "/images/gallery/yellow-shrimp/3.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_dream_Neocaridina_davidi.jpg",
       fileTitle: "File:Blue dream Neocaridina davidi.jpg",
       license: "CC BY 4.0",
@@ -3778,7 +3778,7 @@ export const IMAGE_GALLERY: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/yellow-shrimp/4.jpg",
+      url: "/images/gallery/yellow-shrimp/4.webp",
       descriptionUrl: "https://commons.wikimedia.org/wiki/File:Blue_N._Davidi_Shrimps.jpg",
       fileTitle: "File:Blue N. Davidi Shrimps.jpg",
       license: "CC BY-SA 4.0",

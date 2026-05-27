@@ -14,7 +14,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 227,
     "license": "Public domain",
     "slug": "alternanthera-reineckii-mini",
-    "src": "/images/catalogue/plants/alternanthera-reineckii-mini.jpg",
+    "src": "/images/catalogue/plants/alternanthera-reineckii-mini.webp",
     "width": 200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Alternanthera_reineckii"
   },
@@ -29,7 +29,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "slug": "amano-shrimp",
-    "src": "/images/catalogue/shrimp/amano-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/amano-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Caridina_multidentata"
   },
@@ -43,7 +43,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 900,
     "license": "Public domain",
     "slug": "amazon-frogbit",
-    "src": "/images/catalogue/plants/amazon-frogbit.jpg",
+    "src": "/images/catalogue/plants/amazon-frogbit.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Limnobium_laevigatum"
   },
@@ -57,7 +57,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 1600,
     "license": "Public domain",
     "slug": "amazon-sword",
-    "src": "/images/catalogue/plants/amazon-sword.jpg",
+    "src": "/images/catalogue/plants/amazon-sword.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Echinodorus_grisebachii"
   },
@@ -72,7 +72,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "anacharis",
-    "src": "/images/catalogue/plants/anacharis.jpg",
+    "src": "/images/catalogue/plants/anacharis.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Egeria_densa"
   },
@@ -87,7 +87,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "angelfish",
-    "src": "/images/catalogue/fish/angelfish.jpg",
+    "src": "/images/catalogue/fish/angelfish.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pterophyllum_scalare"
   },
@@ -101,7 +101,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 969,
     "license": "Public domain",
     "slug": "anubias-barteri",
-    "src": "/images/catalogue/plants/anubias-barteri.jpg",
+    "src": "/images/catalogue/plants/anubias-barteri.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Anubias_barteri"
   },
@@ -116,7 +116,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "anubias-nana",
-    "src": "/images/catalogue/plants/anubias-nana.jpg",
+    "src": "/images/catalogue/plants/anubias-nana.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Anubias_barteri"
   },
@@ -131,7 +131,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "bacopa-caroliniana",
-    "src": "/images/catalogue/plants/bacopa-caroliniana.jpg",
+    "src": "/images/catalogue/plants/bacopa-caroliniana.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bacopa_caroliniana"
   },
@@ -145,7 +145,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 480,
     "license": "CC BY-SA 4.0",
     "slug": "bacopa-monnieri",
-    "src": "/images/catalogue/plants/bacopa-monnieri.jpg",
+    "src": "/images/catalogue/plants/bacopa-monnieri.webp",
     "width": 640,
     "wikipediaUrl": ""
   },
@@ -160,7 +160,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "bamboo-shrimp",
-    "src": "/images/catalogue/shrimp/bamboo-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/bamboo-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Atyopsis_moluccensis"
   },
@@ -175,7 +175,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "bee-shrimp",
-    "src": "/images/catalogue/shrimp/bee-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/bee-shrimp.webp",
     "width": 1024,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Caridina_cantonensis"
   },
@@ -190,7 +190,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "black-skirt-tetra",
-    "src": "/images/catalogue/fish/black-skirt-tetra.jpg",
+    "src": "/images/catalogue/fish/black-skirt-tetra.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Black_tetra"
   },
@@ -204,7 +204,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 245,
     "license": "Public domain",
     "slug": "bloodfin-tetra",
-    "src": "/images/catalogue/fish/bloodfin-tetra.jpg",
+    "src": "/images/catalogue/fish/bloodfin-tetra.webp",
     "width": 800,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bloodfin_tetra"
   },
@@ -219,7 +219,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "blue-bolt-shrimp",
-    "src": "/images/catalogue/shrimp/blue-bolt-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/blue-bolt-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Caridina_cantonensis"
   },
@@ -234,7 +234,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "slug": "blue-dream-shrimp",
-    "src": "/images/catalogue/shrimp/blue-dream-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/blue-dream-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neocaridina_davidi"
   },
@@ -249,7 +249,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "boesemani-rainbow",
-    "src": "/images/catalogue/fish/boesemani-rainbow.jpg",
+    "src": "/images/catalogue/fish/boesemani-rainbow.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Boeseman%27s_rainbowfish"
   },
@@ -264,7 +264,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "bolbitis-heudelotii",
-    "src": "/images/catalogue/plants/bolbitis-heudelotii.jpg",
+    "src": "/images/catalogue/plants/bolbitis-heudelotii.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bolbitis_heudelotii"
   },
@@ -279,7 +279,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
     "slug": "bolivian-ram",
-    "src": "/images/catalogue/fish/bolivian-ram.jpg",
+    "src": "/images/catalogue/fish/bolivian-ram.webp",
     "width": 600,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bolivian_ram"
   },
@@ -294,7 +294,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "brazilian-pennywort",
-    "src": "/images/catalogue/plants/brazilian-pennywort.jpg",
+    "src": "/images/catalogue/plants/brazilian-pennywort.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hydrocotyle_leucocephala"
   },
@@ -308,7 +308,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 507,
     "license": "Public domain",
     "slug": "bronze-corydoras",
-    "src": "/images/catalogue/fish/bronze-corydoras.jpg",
+    "src": "/images/catalogue/fish/bronze-corydoras.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corydoras_aeneus"
   },
@@ -323,7 +323,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "bucephalandra",
-    "src": "/images/catalogue/plants/bucephalandra.jpg",
+    "src": "/images/catalogue/plants/bucephalandra.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bucephalandra"
   },
@@ -338,7 +338,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
     "slug": "cabomba",
-    "src": "/images/catalogue/plants/cabomba.jpg",
+    "src": "/images/catalogue/plants/cabomba.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cabomba_caroliniana"
   },
@@ -353,7 +353,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "cardinal-tetra",
-    "src": "/images/catalogue/fish/cardinal-tetra.jpg",
+    "src": "/images/catalogue/fish/cardinal-tetra.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cardinal_tetra"
   },
@@ -368,7 +368,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "celestial-pearl-danio",
-    "src": "/images/catalogue/fish/celestial-pearl-danio.jpg",
+    "src": "/images/catalogue/fish/celestial-pearl-danio.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Celestial_pearl_danio"
   },
@@ -383,7 +383,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "cherry-shrimp",
-    "src": "/images/catalogue/shrimp/cherry-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/cherry-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neocaridina_davidi"
   },
@@ -398,7 +398,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "slug": "chili-rasbora",
-    "src": "/images/catalogue/fish/chili-rasbora.jpg",
+    "src": "/images/catalogue/fish/chili-rasbora.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Boraras_brigittae"
   },
@@ -413,7 +413,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "slug": "christmas-moss",
-    "src": "/images/catalogue/mosses/christmas-moss.jpg",
+    "src": "/images/catalogue/mosses/christmas-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesicularia_montagnei"
   },
@@ -428,7 +428,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
     "slug": "congo-tetra",
-    "src": "/images/catalogue/fish/congo-tetra.jpg",
+    "src": "/images/catalogue/fish/congo-tetra.webp",
     "width": 1000,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Congo_tetra"
   },
@@ -443,7 +443,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "cryptocoryne-balansae",
-    "src": "/images/catalogue/plants/cryptocoryne-balansae.jpg",
+    "src": "/images/catalogue/plants/cryptocoryne-balansae.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cryptocoryne_crispatula"
   },
@@ -458,7 +458,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
     "slug": "cryptocoryne-wendtii",
-    "src": "/images/catalogue/plants/cryptocoryne-wendtii.jpg",
+    "src": "/images/catalogue/plants/cryptocoryne-wendtii.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cryptocoryne_wendtii"
   },
@@ -473,7 +473,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "crystal-red-shrimp",
-    "src": "/images/catalogue/shrimp/crystal-red-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/crystal-red-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Caridina_cantonensis"
   },
@@ -488,7 +488,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "dwarf-gourami",
-    "src": "/images/catalogue/fish/dwarf-gourami.jpg",
+    "src": "/images/catalogue/fish/dwarf-gourami.webp",
     "width": 1280,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dwarf_gourami"
   },
@@ -503,7 +503,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "ember-tetra",
-    "src": "/images/catalogue/fish/ember-tetra.jpg",
+    "src": "/images/catalogue/fish/ember-tetra.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ember_tetra"
   },
@@ -518,7 +518,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "espe-rasbora",
-    "src": "/images/catalogue/fish/espe-rasbora.jpg",
+    "src": "/images/catalogue/fish/espe-rasbora.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trigonostigma_espei"
   },
@@ -533,7 +533,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "slug": "flame-moss",
-    "src": "/images/catalogue/mosses/flame-moss.jpg",
+    "src": "/images/catalogue/mosses/flame-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum"
   },
@@ -547,7 +547,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 900,
     "license": "Public domain",
     "slug": "ghost-shrimp",
-    "src": "/images/catalogue/shrimp/ghost-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/ghost-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Palaemonetes_paludosus"
   },
@@ -562,7 +562,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
     "slug": "guppy",
-    "src": "/images/catalogue/fish/guppy.jpg",
+    "src": "/images/catalogue/fish/guppy.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Guppy"
   },
@@ -577,7 +577,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "harlequin-rasbora",
-    "src": "/images/catalogue/fish/harlequin-rasbora.jpg",
+    "src": "/images/catalogue/fish/harlequin-rasbora.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Harlequin_rasbora"
   },
@@ -591,7 +591,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 1024,
     "license": "Public domain",
     "slug": "hydrocotyle-japan",
-    "src": "/images/catalogue/plants/hydrocotyle-japan.jpg",
+    "src": "/images/catalogue/plants/hydrocotyle-japan.webp",
     "width": 974,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hydrocotyle"
   },
@@ -606,7 +606,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "slug": "hygrophila-corymbosa",
-    "src": "/images/catalogue/plants/hygrophila-corymbosa.jpg",
+    "src": "/images/catalogue/plants/hygrophila-corymbosa.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hygrophila_corymbosa"
   },
@@ -621,7 +621,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "hygrophila-pinnatifida",
-    "src": "/images/catalogue/plants/hygrophila-pinnatifida.jpg",
+    "src": "/images/catalogue/plants/hygrophila-pinnatifida.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hygrophila"
   },
@@ -636,7 +636,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "slug": "hygrophila-polysperma",
-    "src": "/images/catalogue/plants/hygrophila-polysperma.jpg",
+    "src": "/images/catalogue/plants/hygrophila-polysperma.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hygrophila_polysperma"
   },
@@ -650,7 +650,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 1336,
     "license": "Public domain",
     "slug": "java-fern",
-    "src": "/images/catalogue/plants/java-fern.jpg",
+    "src": "/images/catalogue/plants/java-fern.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Java_fern"
   },
@@ -665,7 +665,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "slug": "java-moss",
-    "src": "/images/catalogue/mosses/java-moss.jpg",
+    "src": "/images/catalogue/mosses/java-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum_barbieri"
   },
@@ -680,7 +680,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "slug": "kribensis",
-    "src": "/images/catalogue/fish/kribensis.jpg",
+    "src": "/images/catalogue/fish/kribensis.webp",
     "width": 800,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pelvicachromis_pulcher"
   },
@@ -695,7 +695,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "slug": "limnophila-sessiliflora",
-    "src": "/images/catalogue/plants/limnophila-sessiliflora.jpg",
+    "src": "/images/catalogue/plants/limnophila-sessiliflora.webp",
     "width": 784,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Limnophila_sessiliflora"
   },
@@ -709,7 +709,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 900,
     "license": "Public domain",
     "slug": "ludwigia-repens",
-    "src": "/images/catalogue/plants/ludwigia-repens.jpg",
+    "src": "/images/catalogue/plants/ludwigia-repens.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ludwigia_repens"
   },
@@ -724,7 +724,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "slug": "mini-christmas-moss",
-    "src": "/images/catalogue/mosses/mini-christmas-moss.jpg",
+    "src": "/images/catalogue/mosses/mini-christmas-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesicularia_sp."
   },
@@ -739,7 +739,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
     "slug": "neon-tetra",
-    "src": "/images/catalogue/fish/neon-tetra.jpg",
+    "src": "/images/catalogue/fish/neon-tetra.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neon_tetra"
   },
@@ -754,7 +754,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "otocinclus",
-    "src": "/images/catalogue/fish/otocinclus.jpg",
+    "src": "/images/catalogue/fish/otocinclus.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Otocinclus"
   },
@@ -769,7 +769,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "panda-corydoras",
-    "src": "/images/catalogue/fish/panda-corydoras.jpg",
+    "src": "/images/catalogue/fish/panda-corydoras.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corydoras_panda"
   },
@@ -784,7 +784,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
     "slug": "paradise-fish",
-    "src": "/images/catalogue/fish/paradise-fish.jpg",
+    "src": "/images/catalogue/fish/paradise-fish.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Paradise_fish"
   },
@@ -799,7 +799,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "slug": "peacock-moss",
-    "src": "/images/catalogue/mosses/peacock-moss.jpg",
+    "src": "/images/catalogue/mosses/peacock-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum"
   },
@@ -814,7 +814,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "phoenix-moss",
-    "src": "/images/catalogue/mosses/phoenix-moss.jpg",
+    "src": "/images/catalogue/mosses/phoenix-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Fissidens_fontanus"
   },
@@ -829,7 +829,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "platy",
-    "src": "/images/catalogue/fish/platy.jpg",
+    "src": "/images/catalogue/fish/platy.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Xiphophorus_maculatus"
   },
@@ -844,7 +844,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "praecox-rainbow",
-    "src": "/images/catalogue/fish/praecox-rainbow.jpg",
+    "src": "/images/catalogue/fish/praecox-rainbow.webp",
     "width": 1024,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Melanotaenia_praecox"
   },
@@ -859,7 +859,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "slug": "pygmy-corydoras",
-    "src": "/images/catalogue/fish/pygmy-corydoras.jpg",
+    "src": "/images/catalogue/fish/pygmy-corydoras.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corydoras_pygmaeus"
   },
@@ -874,7 +874,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "ram-cichlid",
-    "src": "/images/catalogue/fish/ram-cichlid.jpg",
+    "src": "/images/catalogue/fish/ram-cichlid.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mikrogeophagus_ramirezi"
   },
@@ -889,7 +889,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "red-tail-shark",
-    "src": "/images/catalogue/fish/red-tail-shark.jpg",
+    "src": "/images/catalogue/fish/red-tail-shark.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Red-tailed_black_shark"
   },
@@ -903,7 +903,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 1005,
     "license": "Public domain",
     "slug": "red-tiger-lotus",
-    "src": "/images/catalogue/plants/red-tiger-lotus.jpg",
+    "src": "/images/catalogue/plants/red-tiger-lotus.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nymphaea_zenkeri"
   },
@@ -918,7 +918,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
     "slug": "riccia-fluitans",
-    "src": "/images/catalogue/mosses/riccia-fluitans.jpg",
+    "src": "/images/catalogue/mosses/riccia-fluitans.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Riccia_fluitans"
   },
@@ -933,7 +933,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "rotala-rotundifolia",
-    "src": "/images/catalogue/plants/rotala-rotundifolia.jpg",
+    "src": "/images/catalogue/plants/rotala-rotundifolia.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rotala_rotundifolia"
   },
@@ -948,7 +948,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "sagittaria-subulata",
-    "src": "/images/catalogue/plants/sagittaria-subulata.jpg",
+    "src": "/images/catalogue/plants/sagittaria-subulata.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sagittaria_subulata"
   },
@@ -963,7 +963,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "slug": "sailfin-molly",
-    "src": "/images/catalogue/fish/sailfin-molly.jpg",
+    "src": "/images/catalogue/fish/sailfin-molly.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sailfin_molly"
   },
@@ -978,7 +978,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "salvinia-natans",
-    "src": "/images/catalogue/plants/salvinia-natans.jpg",
+    "src": "/images/catalogue/plants/salvinia-natans.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Salvinia_natans"
   },
@@ -993,7 +993,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "slug": "scarlet-badis",
-    "src": "/images/catalogue/fish/scarlet-badis.jpg",
+    "src": "/images/catalogue/fish/scarlet-badis.webp",
     "width": 1233,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dario_dario"
   },
@@ -1008,7 +1008,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "slug": "silver-tip-tetra",
-    "src": "/images/catalogue/fish/silver-tip-tetra.jpg",
+    "src": "/images/catalogue/fish/silver-tip-tetra.webp",
     "width": 940,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hasemania_nana"
   },
@@ -1023,7 +1023,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "snowball-shrimp",
-    "src": "/images/catalogue/shrimp/snowball-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/snowball-shrimp.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neocaridina"
   },
@@ -1038,7 +1038,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "sparkling-gourami",
-    "src": "/images/catalogue/fish/sparkling-gourami.jpg",
+    "src": "/images/catalogue/fish/sparkling-gourami.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trichopsis_pumila"
   },
@@ -1053,7 +1053,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "slug": "spiky-moss",
-    "src": "/images/catalogue/mosses/spiky-moss.jpg",
+    "src": "/images/catalogue/mosses/spiky-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum"
   },
@@ -1068,7 +1068,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0 de",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
     "slug": "spotted-blue-eye",
-    "src": "/images/catalogue/fish/spotted-blue-eye.jpg",
+    "src": "/images/catalogue/fish/spotted-blue-eye.webp",
     "width": 1000,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pseudomugil_gertrudae"
   },
@@ -1083,7 +1083,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "staurogyne-repens",
-    "src": "/images/catalogue/plants/staurogyne-repens.jpg",
+    "src": "/images/catalogue/plants/staurogyne-repens.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Staurogyne"
   },
@@ -1098,7 +1098,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "sussewassertang",
-    "src": "/images/catalogue/mosses/sussewassertang.jpg",
+    "src": "/images/catalogue/mosses/sussewassertang.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lomariopsis_lineata"
   },
@@ -1113,7 +1113,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "swordtail",
-    "src": "/images/catalogue/fish/swordtail.jpg",
+    "src": "/images/catalogue/fish/swordtail.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Green_swordtail"
   },
@@ -1128,7 +1128,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "tiger-barb",
-    "src": "/images/catalogue/fish/tiger-barb.jpg",
+    "src": "/images/catalogue/fish/tiger-barb.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tiger_barb"
   },
@@ -1143,7 +1143,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "vallisneria-spiralis",
-    "src": "/images/catalogue/plants/vallisneria-spiralis.jpg",
+    "src": "/images/catalogue/plants/vallisneria-spiralis.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Vallisneria_spiralis"
   },
@@ -1157,7 +1157,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 899,
     "license": "Public domain",
     "slug": "water-wisteria",
-    "src": "/images/catalogue/plants/water-wisteria.jpg",
+    "src": "/images/catalogue/plants/water-wisteria.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hygrophila_difformis"
   },
@@ -1172,7 +1172,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "slug": "weeping-moss",
-    "src": "/images/catalogue/mosses/weeping-moss.jpg",
+    "src": "/images/catalogue/mosses/weeping-moss.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesicularia_ferriei"
   },
@@ -1187,7 +1187,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "yellow-shrimp",
-    "src": "/images/catalogue/shrimp/yellow-shrimp.jpg",
+    "src": "/images/catalogue/shrimp/yellow-shrimp.webp",
     "width": 1024,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neocaridina_davidi"
   },
@@ -1201,7 +1201,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 574,
     "license": "Copyrighted free use",
     "slug": "zebra-danio",
-    "src": "/images/catalogue/fish/zebra-danio.jpg",
+    "src": "/images/catalogue/fish/zebra-danio.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Zebrafish"
   },
@@ -1216,7 +1216,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "slug": "zebra-nerite-snail",
-    "src": "/images/catalogue/snails/zebra-nerite-snail.jpg",
+    "src": "/images/catalogue/snails/zebra-nerite-snail.webp",
     "width": 5312,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neritina_natalensis"
   },
@@ -1231,7 +1231,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "mystery-snail",
-    "src": "/images/catalogue/snails/mystery-snail.jpg",
+    "src": "/images/catalogue/snails/mystery-snail.webp",
     "width": 574,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pomacea_bridgesii"
   },
@@ -1246,7 +1246,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "slug": "ramshorn-snail",
-    "src": "/images/catalogue/snails/ramshorn-snail.jpg",
+    "src": "/images/catalogue/snails/ramshorn-snail.webp",
     "width": 600,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Planorbella_duryi"
   },
@@ -1260,7 +1260,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "height": 297,
     "license": "Public domain",
     "slug": "malaysian-trumpet-snail",
-    "src": "/images/catalogue/snails/malaysian-trumpet-snail.jpg",
+    "src": "/images/catalogue/snails/malaysian-trumpet-snail.webp",
     "width": 397,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Melanoides_tuberculata"
   },
@@ -1275,7 +1275,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "assassin-snail",
-    "src": "/images/catalogue/snails/assassin-snail.jpg",
+    "src": "/images/catalogue/snails/assassin-snail.webp",
     "width": 425,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Anentome_helena"
   },
@@ -1290,7 +1290,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0",
     "slug": "rabbit-snail",
-    "src": "/images/catalogue/snails/rabbit-snail.jpg",
+    "src": "/images/catalogue/snails/rabbit-snail.webp",
     "width": 768,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tylomelania"
   },
@@ -1305,7 +1305,7 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0",
     "slug": "horned-nerite-snail",
-    "src": "/images/catalogue/snails/horned-nerite-snail.jpg",
+    "src": "/images/catalogue/snails/horned-nerite-snail.webp",
     "width": 4032,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Clithon_corona"
   }

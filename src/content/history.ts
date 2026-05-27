@@ -76,7 +76,7 @@ export interface Contest {
 }
 
 const hero: HistoryImage = {
-  src: "/images/history/florestas-submersas-hero.jpg",
+  src: "/images/history/florestas-submersas-hero.webp",
   alt: "Florestas Submersas — Takashi Amano's 160,000-litre Nature Aquarium installation at Oceanário de Lisboa",
   author: "Marco Albuquerque",
   license: "Public domain",
@@ -87,7 +87,7 @@ const hero: HistoryImage = {
 };
 
 const florestasWide: HistoryImage = {
-  src: "/images/history/florestas-submersas-wide.jpg",
+  src: "/images/history/florestas-submersas-wide.webp",
   alt: "Wide view of the Florestas Submersas installation at the Lisbon Oceanarium",
   author: "Pierre Goiffon",
   license: "CC BY-SA 4.0",
@@ -98,7 +98,7 @@ const florestasWide: HistoryImage = {
 };
 
 const iwagumi: HistoryImage = {
-  src: "/images/history/iwagumi-scape.jpg",
+  src: "/images/history/iwagumi-scape.webp",
   alt: "An Iwagumi-style planted aquarium with stones arranged in odd-numbered groups",
   author: "Moritz Holzinger",
   license: "CC BY-SA 3.0",
@@ -109,7 +109,7 @@ const iwagumi: HistoryImage = {
 };
 
 const natureStyle: HistoryImage = {
-  src: "/images/history/nature-style-aquascape.png",
+  src: "/images/history/nature-style-aquascape.webp",
   alt: "Nature Aquarium style planted tank with driftwood, mosses, and stem plants in asymmetric composition",
   author: "Duc Viet Bui",
   license: "CC BY-SA 4.0",
@@ -121,7 +121,7 @@ const natureStyle: HistoryImage = {
 };
 
 const agaContestWinner: HistoryImage = {
-  src: "/images/history/aga-contest-winner.jpg",
+  src: "/images/history/aga-contest-winner.webp",
   alt: "Cho Jaesun's top-ten aquascape at the AGA International Aquascaping Contest 2020",
   author: "Aquagarden",
   license: "CC BY-SA 3.0",
@@ -132,7 +132,7 @@ const agaContestWinner: HistoryImage = {
 };
 
 const shrimpTank: HistoryImage = {
-  src: "/images/history/planted-shrimp-tank.jpg",
+  src: "/images/history/planted-shrimp-tank.webp",
   alt: "A modern planted aquarium with Neocaridina shrimp foraging across the substrate",
   author: "Snehayan",
   license: "CC BY 4.0",
@@ -144,7 +144,7 @@ const shrimpTank: HistoryImage = {
 };
 
 const iaplcEntry: HistoryImage = {
-  src: "/images/history/iaplc-2021-entry.jpg",
+  src: "/images/history/iaplc-2021-entry.webp",
   alt: "Time — a 2021 IAPLC entry by Cho Jaesun, photographed for the contest archive",
   author: "Cho Jaesun (조재선)",
   license: "CC BY-SA 3.0",
@@ -155,7 +155,7 @@ const iaplcEntry: HistoryImage = {
 };
 
 const florestasDetail: HistoryImage = {
-  src: "/images/history/florestas-submersas-detail.jpg",
+  src: "/images/history/florestas-submersas-detail.webp",
   alt: "A detail of Takashi Amano's Florestas Submersas installation at Oceanário de Lisboa",
   author: "Marco Albuquerque",
   license: "Public domain",
@@ -165,7 +165,7 @@ const florestasDetail: HistoryImage = {
 };
 
 const florestasFish: HistoryImage = {
-  src: "/images/history/florestas-submersas-fish.jpg",
+  src: "/images/history/florestas-submersas-fish.webp",
   alt: "Schooling fish swimming over aquatic plants inside Amano's Florestas Submersas",
   author: "Pierre Goiffon",
   license: "CC BY-SA 4.0",
@@ -175,7 +175,7 @@ const florestasFish: HistoryImage = {
 };
 
 const florestasSchool: HistoryImage = {
-  src: "/images/history/florestas-submersas-school.jpg",
+  src: "/images/history/florestas-submersas-school.webp",
   alt: "Silhouetted sword plants and a school of yellow-tailed fish in deep water — Florestas Submersas at the Lisbon Oceanarium",
   author: "Andrey Filippov",
   license: "CC BY 2.0",
@@ -186,7 +186,7 @@ const florestasSchool: HistoryImage = {
 };
 
 const dutchCommunityTank: HistoryImage = {
-  src: "/images/history/dutch-style-community-tank.jpg",
+  src: "/images/history/dutch-style-community-tank.webp",
   alt: "A densely planted community aquarium with Vallisneria — close to the Dutch NBAT style",
   author: "Damitr",
   license: "CC BY-SA 4.0",
@@ -197,7 +197,7 @@ const dutchCommunityTank: HistoryImage = {
 };
 
 const internationalContestScape: HistoryImage = {
-  src: "/images/history/international-contest-scape.jpg",
+  src: "/images/history/international-contest-scape.webp",
   alt: "A contest aquascape — placed at the IIAC 2021 and RFLAC 2021 international competitions",
   author: "Cho Jaesun (조재선)",
   license: "CC BY-SA 3.0",
@@ -209,7 +209,7 @@ const internationalContestScape: HistoryImage = {
 };
 
 const triangleDesign: HistoryImage = {
-  src: "/images/history/triangle-design.jpg",
+  src: "/images/history/triangle-design.webp",
   alt: "A triangular composition aquascape — a contest-style evolution of the Nature Aquarium",
   author: "Brudinho5",
   license: "CC BY-SA 4.0",
@@ -329,7 +329,7 @@ export const history = {
         "What made Amano shrimp matter was that they solved the algae problem that had blocked the spread of dense planted tanks in the West. Heavily lit, densely planted, fertilised aquariums grow plants but also grow algae, and there was no good biological control before Amano shrimp arrived. With 6 to 10 Amano shrimp per 60 litres, hair algae and biofilm stay under control without chemical intervention. Within a decade of Amano's discovery, the species became a default stocking choice for any aquarist attempting the Nature Aquarium style.",
       ],
       figure: {
-        src: "/images/atmosphere/amano-macro.jpg",
+        src: "/images/atmosphere/amano-macro.webp",
         alt: "Close-up of an Amano shrimp grazing on driftwood",
         author: "Mate Molnar",
         license: "Unsplash",

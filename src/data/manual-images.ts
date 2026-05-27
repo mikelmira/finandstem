@@ -8,7 +8,7 @@ import type { GalleryImage } from "./image-gallery";
 export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
   "amazon-frogbit": [
     {
-      url: "/images/gallery/amazon-frogbit/0.jpg",
+      url: "/images/gallery/amazon-frogbit/0.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/183946094",
       fileTitle: "iNat observation #183946094",
       license: "CC BY 4.0",
@@ -19,7 +19,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amazon-frogbit/1.jpg",
+      url: "/images/gallery/amazon-frogbit/1.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/183946094",
       fileTitle: "iNat observation #183946094",
       license: "CC BY 4.0",
@@ -30,7 +30,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amazon-frogbit/2.jpg",
+      url: "/images/gallery/amazon-frogbit/2.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/183946094",
       fileTitle: "iNat observation #183946094",
       license: "CC BY 4.0",
@@ -41,7 +41,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amazon-frogbit/3.jpg",
+      url: "/images/gallery/amazon-frogbit/3.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/183946094",
       fileTitle: "iNat observation #183946094",
       license: "CC BY 4.0",
@@ -52,7 +52,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/amazon-frogbit/4.jpg",
+      url: "/images/gallery/amazon-frogbit/4.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/183946094",
       fileTitle: "iNat observation #183946094",
       license: "CC BY 4.0",
@@ -65,7 +65,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
   ],
   "cryptocoryne-lutea": [
     {
-      url: "/images/gallery/cryptocoryne-lutea/0.jpg",
+      url: "/images/gallery/cryptocoryne-lutea/0.webp",
       descriptionUrl: "https://buceplant.com/products/cryptocoryne-lutea",
       fileTitle: "Cryptocoryne lutea (Buce Plant catalogue photo)",
       license: "\u00a9 Buce Plant \u2014 editorial use",
@@ -91,7 +91,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
   ],
   "ghost-shrimp": [
     {
-      url: "/images/gallery/ghost-shrimp/0.jpg",
+      url: "/images/gallery/ghost-shrimp/0.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/139663899",
       fileTitle: "iNat observation #139663899",
       license: "CC0",
@@ -102,7 +102,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: false,
     },
     {
-      url: "/images/gallery/ghost-shrimp/1.jpg",
+      url: "/images/gallery/ghost-shrimp/1.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/139192487",
       fileTitle: "iNat observation #139192487",
       license: "CC BY 4.0",
@@ -113,7 +113,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ghost-shrimp/2.jpg",
+      url: "/images/gallery/ghost-shrimp/2.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/139192487",
       fileTitle: "iNat observation #139192487",
       license: "CC BY 4.0",
@@ -124,7 +124,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ghost-shrimp/3.jpg",
+      url: "/images/gallery/ghost-shrimp/3.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/168296050",
       fileTitle: "iNat observation #168296050",
       license: "CC BY 4.0",
@@ -135,7 +135,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/ghost-shrimp/4.jpg",
+      url: "/images/gallery/ghost-shrimp/4.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/168296050",
       fileTitle: "iNat observation #168296050",
       license: "CC BY 4.0",
@@ -148,7 +148,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
   ],
   "java-fern": [
     {
-      url: "/images/gallery/java-fern/0.jpg",
+      url: "/images/gallery/java-fern/0.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/252101688",
       fileTitle: "iNat observation #252101688",
       license: "CC BY 4.0",
@@ -159,7 +159,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/java-fern/1.jpg",
+      url: "/images/gallery/java-fern/1.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/252101688",
       fileTitle: "iNat observation #252101688",
       license: "CC BY 4.0",
@@ -170,7 +170,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/java-fern/2.jpg",
+      url: "/images/gallery/java-fern/2.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/149961097",
       fileTitle: "iNat observation #149961097",
       license: "CC BY 4.0",
@@ -181,7 +181,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/java-fern/3.jpg",
+      url: "/images/gallery/java-fern/3.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/149961097",
       fileTitle: "iNat observation #149961097",
       license: "CC BY 4.0",
@@ -192,7 +192,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
       attributionRequired: true,
     },
     {
-      url: "/images/gallery/java-fern/4.jpg",
+      url: "/images/gallery/java-fern/4.webp",
       descriptionUrl: "https://www.inaturalist.org/observations/149961097",
       fileTitle: "iNat observation #149961097",
       license: "CC BY 4.0",
@@ -205,7 +205,7 @@ export const MANUAL_IMAGES: Record<string, GalleryImage[]> = {
   ],
   "java-fern-windelov": [
     {
-      url: "/images/gallery/java-fern-windelov/0.jpg",
+      url: "/images/gallery/java-fern-windelov/0.webp",
       descriptionUrl: "https://buceplant.com/products/microsorum-pteropus-java-fern-windelov-mat",
       fileTitle: "Java Fern 'Windelov' (Buce Plant catalogue photo)",
       license: "\u00a9 Buce Plant \u2014 editorial use",

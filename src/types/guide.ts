@@ -55,7 +55,7 @@ export interface GuideFrontmatter {
    * Used to render sideways links + populate JSON-LD related entities.
    */
   relatedSpecies: ReadonlyArray<string>;
-  /** Optional. Path under `/public`, e.g. `/images/guides/neon-cherry.jpg`. */
+  /** Optional. Path under `/public`, e.g. `/images/guides/neon-cherry.webp`. */
   heroImage?: string;
   /** Optional. Alt text for the hero image. */
   heroAlt?: string;

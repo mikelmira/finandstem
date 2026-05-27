@@ -26,7 +26,7 @@ targetQuery: "the search query this article is built to answer"
 keywords: ["keyword one", "keyword two", "keyword three"]
 pillar: "/aquarium-fish-guide" # one of the six pillar URLs
 relatedSpecies: ["fish:neon-tetra", "shrimp:cherry-shrimp", "mosses:java-moss"]
-heroImage: "/images/guides/your-slug.jpg" # optional, in public/images/guides/
+heroImage: "/images/guides/your-slug.webp" # optional, in public/images/guides/
 heroAlt: "Description of the hero image" # optional
 faqs:
   - question: "Question text?"
