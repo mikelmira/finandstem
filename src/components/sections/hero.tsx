@@ -19,7 +19,7 @@ interface HeroProps {
  * sitting directly on top. No card, no glass wrapper. Matches the
  * pattern used on every species detail page.
  *
- * The hero is intentionally tall (min-h-[78vh]) so the H1 + subtitle +
+ * The hero is intentionally tall (min-h-screen / 100vh) so the H1 + subtitle +
  * CTAs all sit comfortably with breathing room around them. Stats
  * grid sits at the bottom as a glass strip — translucent enough that
  * the photo still reads behind it, opaque enough that the numbers
@@ -40,7 +40,7 @@ export function Hero({
     <section
       className={cn(
         "relative isolate overflow-hidden",
-        hasPhoto ? "min-h-[78vh]" : "",
+        hasPhoto ? "min-h-screen" : "",
       )}
     >
       {backgroundImage && (
@@ -93,7 +93,7 @@ export function Hero({
         className={cn(
           "relative mx-auto flex w-full max-w-6xl flex-col px-6 sm:px-8",
           hasPhoto
-            ? "min-h-[78vh] pt-28 pb-16 sm:pt-32 sm:pb-20"
+            ? "min-h-screen pt-28 pb-16 sm:pt-32 sm:pb-20"
             : "pt-20 pb-32 sm:pt-28 sm:pb-40 md:pt-32 md:pb-48",
         )}
       >

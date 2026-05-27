@@ -29,7 +29,6 @@ const PILLAR_META: Record<
     count: number;
     featuredSlug: string;
     featuredAlt: string;
-    audience: string;
   }
 > = {
   fish: {
@@ -37,35 +36,30 @@ const PILLAR_META: Record<
     count: fish.length,
     featuredSlug: "neon-tetra",
     featuredAlt: "Neon Tetra",
-    audience: "For nano tanks",
   },
   plants: {
     href: "/plants",
     count: plants.length,
     featuredSlug: "anubias-nana",
     featuredAlt: "Anubias Nana",
-    audience: "Low-tech friendly",
   },
   shrimp: {
     href: "/shrimp",
     count: shrimp.length,
     featuredSlug: "cherry-shrimp",
     featuredAlt: "Cherry Shrimp",
-    audience: "Algae crew",
   },
   mosses: {
     href: "/mosses",
     count: mosses.length,
     featuredSlug: "java-moss",
     featuredAlt: "Java Moss",
-    audience: "Beginner-proof",
   },
   snails: {
     href: "/snails",
     count: snails.length,
     featuredSlug: "zebra-nerite-snail",
     featuredAlt: "Zebra Nerite Snail",
-    audience: "Algae crew",
   },
 };
 
@@ -102,9 +96,6 @@ export function Pillars({ eyebrow, title, items }: PillarsProps) {
                 <div className="flex flex-wrap gap-1.5">
                   <span className="rounded-full border border-[var(--brand)]/25 bg-[var(--brand)]/8 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
                     {m.count} species
-                  </span>
-                  <span className="rounded-full border border-foreground/10 bg-background/40 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                    {m.audience}
                   </span>
                 </div>
                 <CategoryMark className="size-6 shrink-0 text-[var(--brand)] transition-transform duration-300 group-hover:rotate-[8deg]" />
