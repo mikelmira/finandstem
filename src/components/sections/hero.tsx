@@ -113,7 +113,7 @@ export function Hero({
 
           <h1
             className={cn(
-              "text-display-tight mt-6 text-balance leading-[1.2]",
+              "text-display-tight mt-6 text-balance leading-[1em]",
               hasPhoto
                 ? "text-[2.5rem] text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.55)] sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem]"
                 : "text-[2.5rem] text-foreground sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem]",

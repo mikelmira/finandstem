@@ -72,6 +72,24 @@ export const atmosphere = {
     photographer: "Josephina Kolpachnikof",
     source: "https://unsplash.com/photos/l14vjcZBerc",
   },
+  schoolDriftwood: {
+    src: "/images/atmosphere/pexels-pinamon-16671903.jpg",
+    alt: "A small school of fish swimming over driftwood and dense aquatic plants in a planted aquarium",
+    photographer: "Pinamon",
+    source: "https://www.pexels.com/photo/16671903/",
+  },
+  cichlidsTank: {
+    src: "/images/atmosphere/pexels-tuan-vy-903011268-33593382.webp",
+    alt: "Mixed community fish, guppies, mollies and tetras in a warm-lit planted aquarium",
+    photographer: "Tuan Vy",
+    source: "https://www.pexels.com/photo/33593382/",
+  },
+  twoTetras: {
+    src: "/images/atmosphere/pexels-aradra-p-1874764-37755820.webp",
+    alt: "Two congo tetras side by side in a dark planted aquarium",
+    photographer: "Aradra P",
+    source: "https://www.pexels.com/photo/37755820/",
+  },
 } as const satisfies Record<string, AtmosphereImage>;
 
 export type AtmosphereKey = keyof typeof atmosphere;
