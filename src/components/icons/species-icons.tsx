@@ -2,155 +2,85 @@ import * as React from "react";
 
 /* ─── Category marks ─────────────────────────────────────────────────────
    Compact silhouettes for the four catalogue pillars — used as the
-   identity glyph in eyebrow rows, profile cards, hero pills, and
-   planner chips. All draw with `currentColor` so the parent controls
-   tint; `aria-hidden` because the eyebrow text supplies the name.
+   identity glyph in eyebrow rows, profile cards, hero pills, the
+   Livestock dropdown, and planner chips.
 
-   Designed to read at 16–32px against either cream or dark surfaces.
+   These render the branded PNG icons in /public via `mask-image`, so
+   the PNG's alpha channel becomes the silhouette and `currentColor`
+   from the parent paints the fill. That preserves the
+   `text-[var(--brand)]` tinting convention every consumer already uses
+   (className-only contract) without forcing each PNG to ship in a
+   pre-tinted colour.
+
+   Designed to read cleanly at 16–32px against either cream or dark
+   surfaces.
    ────────────────────────────────────────────────────────────────────── */
 
+/**
+ * Props accepted by the smaller `CATEGORY_MARK` mask icons.
+ * Span-based because they render via mask-image.
+ */
+type MarkProps = React.HTMLAttributes<HTMLSpanElement>;
+
+/**
+ * Props accepted by the larger scientific-plate SVG icons further down
+ * in this file. SVG-based — kept unchanged so all the plate components
+ * (FishPlate, PlantPlateRosette, …) compile against the original signature.
+ */
 type IconProps = React.SVGProps<SVGSVGElement>;
 
-/**
- * Slim profile-view fish — body taper into a forked tail, single dorsal
- * fin, eye dot. The default silhouette across the catalogue's fish
- * pages and chips.
- */
-export function FishMark(props: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 32 22"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-      {...props}
-    >
-      {/* Body */}
-      <path d="M5 11 C 7 6, 12 4, 18 4 C 23 4, 26 7, 27 11 C 26 15, 23 18, 18 18 C 12 18, 7 16, 5 11 Z" />
-      {/* Tail fork — left of body, two strokes meeting at the body */}
-      <path d="M5 11 L 1 6 M5 11 L 1 16" />
-      {/* Dorsal fin */}
-      <path d="M14 4 Q 15 1 18 3" />
-      {/* Eye */}
-      <circle cx="22" cy="9" r="0.9" fill="currentColor" stroke="none" />
-      {/* Gill arc */}
-      <path d="M20 6 Q 19 11 20 16" opacity="0.55" />
-    </svg>
-  );
+/** Shared base styles for every PNG-masked category icon. */
+const MARK_BASE_CLASS =
+  "inline-block shrink-0 align-middle bg-current [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain] [-webkit-mask-position:center] [-webkit-mask-repeat:no-repeat] [-webkit-mask-size:contain]";
+
+function mergeClass(className: string | undefined, extra: string): string {
+  return className ? `${extra} ${className}` : extra;
 }
 
 /**
- * Aquatic stem plant — vertical rhizome line rising from a substrate
- * mark with alternating teardrop leaves. Reads as "stem plant /
- * rosette" rather than a generic land-plant leaf.
+ * Render a category mark by masking the given PNG with `currentColor`.
+ * The alpha channel of the PNG becomes the silhouette; the parent's
+ * text colour paints the silhouette.
  */
-export function PlantMark(props: IconProps) {
+function MaskIcon({
+  src,
+  className,
+  style,
+  ...rest
+}: MarkProps & { src: string }) {
   return (
-    <svg
-      viewBox="0 0 24 32"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+    <span
       aria-hidden
-      {...props}
-    >
-      {/* Substrate */}
-      <path d="M4 28 L 20 28" opacity="0.6" />
-      {/* Substrate stipple */}
-      <path d="M7 30 L 7.5 30 M11 30 L 11.5 30 M15 30 L 15.5 30" opacity="0.45" />
-      {/* Main stem */}
-      <path d="M12 28 V 4" />
-      {/* Leaves — alternating, larger lower, smaller higher */}
-      <path
-        d="M12 24 Q 6 23, 5 18 Q 9 18, 12 22 Z"
-        fill="currentColor"
-        opacity="0.85"
-      />
-      <path
-        d="M12 18 Q 19 17, 20 12 Q 15 12, 12 16 Z"
-        fill="currentColor"
-      />
-      <path
-        d="M12 13 Q 7 12, 6.5 8 Q 10 8, 12 11 Z"
-        fill="currentColor"
-        opacity="0.9"
-      />
-      {/* Top bud */}
-      <path
-        d="M12 7 Q 15 5, 12 3 Q 9 5, 12 7 Z"
-        fill="currentColor"
-      />
-    </svg>
+      role="img"
+      className={mergeClass(className, MARK_BASE_CLASS)}
+      style={{
+        WebkitMaskImage: `url(${src})`,
+        maskImage: `url(${src})`,
+        ...style,
+      }}
+      {...rest}
+    />
   );
 }
 
-/**
- * Curved C-shape shrimp — segmented body, two long antennae sweeping
- * forward from the head, three tail fan strokes at the rear.
- */
-export function ShrimpMark(props: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 32 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-      {...props}
-    >
-      {/* Body — a hooked C lying horizontally */}
-      <path d="M7 16 Q 4 11, 9 7 Q 16 4, 22 7 Q 26 10, 25 14 Q 23 18, 18 18 Q 12 18, 9 16" />
-      {/* Segments — three short hatches across the body */}
-      <path
-        d="M13 7.5 L 13.5 11 M16 6.5 L 16.5 11 M19 7 L 19 11"
-        opacity="0.55"
-      />
-      {/* Head — slight cap */}
-      <path d="M22 7 Q 24 7, 25 9" />
-      {/* Antennae — two long curves sweeping from the head forward */}
-      <path d="M25 8 Q 29 3, 30 1" opacity="0.85" />
-      <path d="M24 6 Q 28 2, 30 3" opacity="0.7" />
-      {/* Tail fan */}
-      <path d="M9 17 L 5 19 M9 16 L 4 17 M9 15 L 5 13" />
-      {/* Eye */}
-      <circle cx="23" cy="9.5" r="0.7" fill="currentColor" stroke="none" />
-    </svg>
-  );
+/** Fish silhouette mark (line-art PNG, /fish.png). */
+export function FishMark(props: MarkProps) {
+  return <MaskIcon src="/fish.png" {...props} />;
 }
 
-/**
- * Moss tuft — clustered short fronds rising from a substrate mark.
- * Reads as "cushion of vegetation" rather than a single leaf.
- */
-export function MossMark(props: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 32 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-      {...props}
-    >
-      {/* Substrate */}
-      <path d="M3 20 L 29 20" opacity="0.55" />
-      {/* Fronds — short branching strokes */}
-      <path d="M7 20 L 7 14 M5.5 16 L 7 14 M8.5 16 L 7 14" />
-      <path d="M11 20 L 11 11 M9.5 13 L 11 11 M12.5 13 L 11 11 M10 15 L 11 13" />
-      <path d="M16 20 L 16 8 M14 11 L 16 8 M18 11 L 16 8 M14.5 14 L 16 11.5 M17.5 14 L 16 11.5" />
-      <path d="M21 20 L 21 11 M19.5 13 L 21 11 M22.5 13 L 21 11" />
-      <path d="M25 20 L 25 14 M23.5 16 L 25 14 M26.5 16 L 25 14" />
-    </svg>
-  );
+/** Plant silhouette mark — twin-leaf line-art PNG (/leaf.png). */
+export function PlantMark(props: MarkProps) {
+  return <MaskIcon src="/leaf.png" {...props} />;
+}
+
+/** Shrimp silhouette mark (line-art PNG, /shrimp.png). */
+export function ShrimpMark(props: MarkProps) {
+  return <MaskIcon src="/shrimp.png" {...props} />;
+}
+
+/** Moss silhouette mark — clustered fronds line-art PNG (/grass.png). */
+export function MossMark(props: MarkProps) {
+  return <MaskIcon src="/grass.png" {...props} />;
 }
 
 /* ─── Scientific plates ──────────────────────────────────────────────────
@@ -1394,7 +1324,7 @@ import type { CatalogueCategory, CatalogueEntry } from "@/types/catalogue";
 
 export const CATEGORY_MARK: Record<
   CatalogueCategory,
-  React.ComponentType<IconProps>
+  React.ComponentType<MarkProps>
 > = {
   fish: FishMark,
   plants: PlantMark,

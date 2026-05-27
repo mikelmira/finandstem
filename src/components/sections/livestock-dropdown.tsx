@@ -3,8 +3,14 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Fish, Sprout, Bug, Leaf } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  FishMark,
+  PlantMark,
+  ShrimpMark,
+  MossMark,
+} from "@/components/icons/species-icons";
 
 /**
  * Livestock dropdown — groups the four catalogue categories
@@ -21,7 +27,7 @@ interface LivestockItem {
   label: string;
   href: string;
   description: string;
-  Icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+  Icon: React.ComponentType<{ className?: string }>;
 }
 
 const ITEMS: ReadonlyArray<LivestockItem> = [
@@ -29,25 +35,25 @@ const ITEMS: ReadonlyArray<LivestockItem> = [
     label: "Fish",
     href: "/fish",
     description: "Schoolers, centrepieces, dwarf cichlids, algae crew.",
-    Icon: Fish,
+    Icon: FishMark,
   },
   {
     label: "Plants",
     href: "/plants",
     description: "Carpets, midground, stems, floaters and bulbs.",
-    Icon: Sprout,
+    Icon: PlantMark,
   },
   {
     label: "Shrimp",
     href: "/shrimp",
     description: "Neocaridina, Caridina, and the filter-feeders.",
-    Icon: Bug,
+    Icon: ShrimpMark,
   },
   {
     label: "Mosses",
     href: "/mosses",
     description: "Java, Christmas, Flame, Fissidens and more.",
-    Icon: Leaf,
+    Icon: MossMark,
   },
 ];
 
