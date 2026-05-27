@@ -89,3 +89,29 @@ export function cleanupCrewLabel(rating: number): string {
       return "";
   }
 }
+
+/**
+ * Map a 1–5 fish rarity score to a short human-readable tier label.
+ *   1 = Ubiquitous (every shop)
+ *   2 = Common
+ *   3 = Uncommon (specialist shops or seasonal)
+ *   4 = Rare (special-order / importer only)
+ *   5 = Very rare (collector tier, F1 imports)
+ */
+export function rarityLabel(rating: number): string {
+  const r = Math.max(1, Math.min(5, Math.round(rating)));
+  switch (r) {
+    case 5:
+      return "Very rare";
+    case 4:
+      return "Rare";
+    case 3:
+      return "Uncommon";
+    case 2:
+      return "Common";
+    case 1:
+      return "Ubiquitous";
+    default:
+      return "";
+  }
+}

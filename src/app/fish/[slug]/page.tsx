@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { fish, findFish } from "@/data";
 import { EntryDetail } from "@/components/catalogue/entry-detail";
 import type { Stat } from "@/components/catalogue/stat-grid";
+import { StarRating, rarityLabel } from "@/components/catalogue/star-rating";
 import { speciesMetadata } from "@/lib/species-metadata";
 
 interface RouteParams {
@@ -36,6 +37,15 @@ export default async function FishDetailPage({ params }: RouteParams) {
     { label: "pH", value: entry.phRange },
     { label: "Hardness", value: `${entry.dghRange} dGH` },
     { label: "Lifespan", value: `${entry.lifespan} yrs` },
+    {
+      label: "Rarity",
+      value: (
+        <StarRating
+          value={entry.rarity}
+          label={rarityLabel(entry.rarity)}
+        />
+      ),
+    },
   ];
 
   const details = [
@@ -45,6 +55,10 @@ export default async function FishDetailPage({ params }: RouteParams) {
     { heading: "Diet", body: entry.diet },
     { heading: "Feeding", body: entry.feedingNotes },
     { heading: "Breeding difficulty", body: entry.breedingDifficulty },
+    {
+      heading: "Rarity in the hobby",
+      body: `${entry.rarity}/5, ${rarityLabel(entry.rarity)}.`,
+    },
   ];
 
   const pairings = [

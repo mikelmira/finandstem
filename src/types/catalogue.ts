@@ -53,6 +53,15 @@ export interface FishEntry extends CatalogueEntryBase {
   plantSafe: string;
   shrimpSafe: string;
   breedingDifficulty: string;
+  /**
+   * Rarity in the hobby on a 1-5 scale.
+   *  1 = ubiquitous (every fish shop stocks it, e.g. neon tetra)
+   *  2 = common (mainstream shops, regular availability)
+   *  3 = uncommon (specialist shops or seasonal availability)
+   *  4 = rare (special-order, line-bred morphs, importers only)
+   *  5 = very rare (collector species, wild-caught only, F1 imports)
+   */
+  rarity: 1 | 2 | 3 | 4 | 5;
 }
 
 export interface PlantEntry extends CatalogueEntryBase {

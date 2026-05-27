@@ -6,6 +6,7 @@ import {
   PH_EFFECT_LABEL,
   AMMONIA_RELEASE_LABEL,
 } from "@/types/substrate";
+import { SubstrateVisual } from "./substrate-visual";
 
 interface SubstrateCardProps {
   entry: SubstrateEntry;
@@ -26,6 +27,10 @@ export function SubstrateCard({ entry }: SubstrateCardProps) {
       href={`/substrates/${entry.slug}`}
       className="glass glass-edge lift group relative flex h-full w-full flex-col gap-4 overflow-hidden rounded-2xl p-6 transition-colors duration-300 hover:border-[var(--brand)]/40"
     >
+      {/* Visual identity tile, colour swatch + grain texture per
+          substrate. Akadama uses a real public-domain photo. */}
+      <SubstrateVisual entry={entry} size="card" />
+
       {/* Stamp row, category + arrow */}
       <div className="flex items-center justify-between gap-3">
         <span className="inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">

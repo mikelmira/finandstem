@@ -65,7 +65,6 @@ export function SubstrateCompareTable({
       render: (e) => e.bufferingLongevity,
     },
     { label: "Recommended water", render: (e) => e.recommendedWater },
-    { label: "Typical price (USD)", render: (e) => e.typicalPriceUsd },
     {
       label: "Shrimp-safe",
       render: (e) => (

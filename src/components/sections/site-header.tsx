@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { GlobalSearch, type SearchOption } from "@/components/search/global-search";
 import { MobileNav } from "@/components/sections/mobile-nav";
 import { LivestockDropdown } from "@/components/sections/livestock-dropdown";
+import { ToolsDropdown } from "@/components/sections/tools-dropdown";
 import { allNorm } from "@/lib/catalogue/normalize";
 
 const SEARCH_OPTIONS: SearchOption[] = allNorm
@@ -32,10 +33,17 @@ const LIVESTOCK_HREFS = new Set([
 ]);
 
 /**
- * Desktop nav items that sit alongside the Livestock dropdown.
+ * Slugs grouped under the desktop "Tools" dropdown.
+ */
+const TOOLS_HREFS = new Set(["/planner", "/compare", "/compatibility"]);
+
+/**
+ * Desktop nav items that sit alongside the two dropdowns.
  * Filtered from site.nav so the source of truth stays in lib/site.ts.
  */
-const FLAT_NAV = site.nav.filter((item) => !LIVESTOCK_HREFS.has(item.href));
+const FLAT_NAV = site.nav.filter(
+  (item) => !LIVESTOCK_HREFS.has(item.href) && !TOOLS_HREFS.has(item.href),
+);
 
 export function SiteHeader() {
   return (
@@ -68,6 +76,9 @@ export function SiteHeader() {
           <ul className="flex items-center gap-1 text-sm">
             <li>
               <LivestockDropdown />
+            </li>
+            <li>
+              <ToolsDropdown />
             </li>
             {FLAT_NAV.map((item) => (
               <li key={item.href}>

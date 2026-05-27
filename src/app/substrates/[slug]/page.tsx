@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Beaker, Check, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Beaker, Check, X } from "lucide-react";
 import { findSubstrate, substrates, plants } from "@/data";
 import { PLANT_AFFINITY } from "@/data/substrate-plant-affinity";
 import { SectionShell } from "@/components/sections/section-shell";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
 import { Sources } from "@/components/seo/sources";
-import { AuthorByline } from "@/components/seo/author-byline";
 import { JsonLd } from "@/components/seo/json-ld";
+import { SubstrateVisual } from "@/components/substrate/substrate-visual";
 import { site } from "@/lib/site";
 import {
   breadcrumbsJsonLd,
@@ -94,7 +94,6 @@ function substratePageJsonLd(slug: string) {
           { "@type": "PropertyValue", name: "Nutrient content", value: entry.nutrientContent },
           { "@type": "PropertyValue", name: "Buffering longevity", value: entry.bufferingLongevity },
           { "@type": "PropertyValue", name: "Recommended water", value: entry.recommendedWater },
-          { "@type": "PropertyValue", name: "Typical price (USD)", value: entry.typicalPriceUsd },
         ],
       },
     ],
@@ -116,13 +115,10 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
       (a): a is { plant: (typeof plants)[number]; note: string } => a !== null,
     );
 
-  const wordCount =
-    entry.careSummary.split(/\s+/).length +
-    Object.values(entry.sections).reduce(
-      (acc, s) => acc + s.split(/\s+/).length,
-      0,
-    );
-  const readingTimeMin = Math.max(1, Math.round(wordCount / 220));
+  // Supplier link, the first source URL is consistently the
+  // manufacturer's official product page across all substrate entries.
+  // Surfaced as a CTA so visitors can jump straight to the supplier.
+  const supplierSource = entry.sources[0];
 
   return (
     <>
@@ -132,7 +128,9 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
       })()}
 
       {/* Hero, brand-led title block on the cream paper background.
-          No photo, substrates don't carry product imagery here. */}
+          Visual identity tile sits above the title — colour swatch
+          representing the substrate's documented colour, plus grain
+          texture. Akadama uses a real public-domain photo. */}
       <section className="relative isolate border-b border-border/60 pt-24 pb-12 sm:pt-28 sm:pb-16">
         <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
           <Breadcrumbs
@@ -143,6 +141,7 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
             ]}
             className="mb-6"
           />
+          <SubstrateVisual entry={entry} size="hero" className="mb-8" />
           <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
             <Beaker className="size-4" aria-hidden />
             {entry.brand} · {SUBSTRATE_CATEGORY_LABEL[entry.category]}
@@ -164,12 +163,31 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
               value={entry.shrimpSafe ? "Yes" : "No"}
               tone={entry.shrimpSafe ? "ok" : "warn"}
             />
-            <SpecPill label="Price" value={entry.typicalPriceUsd} />
           </div>
 
-          <div className="mt-6 border-t border-border/50 pt-5">
-            <AuthorByline updatedAt={entry.updatedAt} readingTimeMin={readingTimeMin} />
-          </div>
+          {supplierSource && (
+            <div className="mt-6 border-t border-border/50 pt-5">
+              <a
+                href={supplierSource.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="press group inline-flex items-center gap-2 rounded-full border border-[var(--brand)]/40 bg-[var(--brand)]/5 px-4 py-2 text-sm font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-[var(--brand)]/70 hover:bg-[var(--brand)]/10"
+              >
+                <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+                  Supplier
+                </span>
+                <span>Visit product page</span>
+                <ArrowUpRight
+                  className="size-4 text-[var(--brand)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden
+                />
+              </a>
+              <p className="mt-2 text-xs text-muted-foreground">
+                External link to {extractDomain(supplierSource.url)} —
+                opens in a new tab.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -195,7 +213,6 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
             <SpecRow label="Nutrient content" value={entry.nutrientContent} />
             <SpecRow label="Buffering longevity" value={entry.bufferingLongevity} />
             <SpecRow label="Recommended water" value={entry.recommendedWater} />
-            <SpecRow label="Typical price (USD)" value={entry.typicalPriceUsd} />
             <SpecRow label="Difficulty" value={`${entry.difficulty} / 5`} />
             <SpecRow label="Shrimp-safe" value={entry.shrimpSafe ? "Yes" : "No"} />
             <SpecRow
@@ -327,6 +344,18 @@ function SpecRow({
       </dd>
     </div>
   );
+}
+
+/**
+ * Strip a URL down to its bare hostname for the supplier-link helper text,
+ * e.g. `https://www.adana.co.jp/en/...` → `adana.co.jp`.
+ */
+function extractDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
 }
 
 function ProseSection({ heading, body }: { heading: string; body: string }) {
