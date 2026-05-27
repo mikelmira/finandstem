@@ -136,14 +136,17 @@ export function ToolsBand() {
     );
   }
 
+  const total = TOOLS.length;
+  // Only the cards AFTER the first need a rise window — the first
+  // card sits in its resting position from the start. So the section
+  // needs (N - 1) × 110vh of scroll room.
+  const risers = Math.max(1, total - 1);
+
   return (
     <section
       ref={sectionRef}
-      // Tall enough that each card transition has a comfortable
-      // scroll budget. 110vh per card gives a smooth rise without
-      // feeling sluggish.
       className="relative"
-      style={{ height: `${TOOLS.length * 110}vh` }}
+      style={{ height: `${risers * 110}vh` }}
       aria-label="Tools"
     >
       <div
@@ -154,33 +157,40 @@ export function ToolsBand() {
           <ToolsHeading compact />
         </div>
 
+        {/* Card stack arena. `flex-1` fills the rest of the sticky
+            pane after the heading, and the inner cards are positioned
+            absolutely with `inset-0` so they all share the *same*
+            width AND height, matching the arena exactly. */}
         <div className="relative mx-auto mt-6 w-full max-w-6xl flex-1 px-6 pb-10 sm:px-8">
-          {TOOLS.map((tool, i) => {
-            const total = TOOLS.length;
-            // Each card occupies a slice of progress, with the last
-            // card finishing right at p = 1. Card i rises during
-            // [i/N, (i+1)/N].
-            const local = Math.max(0, Math.min(1, progress * total - i));
-            // Ease-out for the rise so the card lands with weight
-            // rather than snapping.
-            const eased = 1 - Math.pow(1 - local, 2);
-            const translatePct = (1 - eased) * 110;
-            return (
-              <div
-                key={tool.href}
-                className="absolute inset-x-6 top-0 will-change-transform sm:inset-x-8"
-                style={{
-                  transform: `translate3d(0, ${translatePct}%, 0)`,
-                  zIndex: i + 1,
-                  // Slight scale-down on the resting card behind so it
-                  // peeks visually as a deck.
-                  // The rising card always at scale 1.
-                }}
-              >
-                <ToolCard tool={tool} index={i} total={total} />
-              </div>
-            );
-          })}
+          <div className="relative h-full">
+            {TOOLS.map((tool, i) => {
+              // First card has no interaction — it sits at rest from
+              // the start. Subsequent cards rise during their slice
+              // of progress, [(i-1)/risers, i/risers].
+              let translatePct = 0;
+              if (i > 0) {
+                const local = Math.max(
+                  0,
+                  Math.min(1, progress * risers - (i - 1)),
+                );
+                // Ease-out so the card lands with weight, not a snap.
+                const eased = 1 - Math.pow(1 - local, 2);
+                translatePct = (1 - eased) * 110;
+              }
+              return (
+                <div
+                  key={tool.href}
+                  className="absolute inset-0 will-change-transform"
+                  style={{
+                    transform: `translate3d(0, ${translatePct}%, 0)`,
+                    zIndex: i + 1,
+                  }}
+                >
+                  <ToolCard tool={tool} index={i} total={total} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
@@ -214,11 +224,11 @@ function ToolCard({ tool, index, total }: ToolCardProps) {
   return (
     <Link
       href={tool.href}
-      className="glass glass-edge lift group block overflow-hidden rounded-3xl shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--abyss)_45%,transparent)] transition-colors duration-300 hover:border-[var(--brand)]/40"
+      className="glass glass-edge lift group block h-full w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--abyss)_45%,transparent)] transition-colors duration-300 hover:border-[var(--brand)]/40"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
+      <div className="grid h-full grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
         {/* Image plate */}
-        <div className="relative aspect-[5/4] w-full overflow-hidden bg-muted lg:aspect-auto">
+        <div className="relative aspect-[5/4] w-full overflow-hidden bg-muted lg:aspect-auto lg:h-full">
           <Image
             src={tool.image.src}
             alt={tool.image.alt}

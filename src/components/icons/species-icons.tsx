@@ -102,22 +102,31 @@ export function SnailMark({ className, ...rest }: MarkProps) {
     >
       <svg
         viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fill="currentColor"
+        stroke="none"
         className="size-full"
       >
-        {/* Slug body, gentle arch resting on a baseline */}
-        <path d="M 2.5 18 Q 3 14 6 13.5 L 17 13.5 Q 22 13.5 22 18 L 2.5 18 Z" />
-        {/* Antennae */}
-        <path d="M 4 13.5 L 3 10" />
-        <path d="M 5.5 13.5 L 5 10.5" />
-        {/* Shell, spiral coil */}
-        <circle cx="14" cy="11" r="5.5" />
-        <path d="M 14 11 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" />
-        <path d="M 14 11 m -1 0 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0" />
+        {/* Two antennae stalks rising from the snail's head, drawn as
+            tapered tetragons */}
+        <path d="M 3.2 13 L 2.6 7.5 L 4 7.5 L 4.4 13 Z" />
+        <path d="M 5.2 13 L 4.8 9 L 6.1 9 L 6.4 13 Z" />
+        {/* Tiny tip dots */}
+        <circle cx="3.3" cy="7.2" r="0.85" />
+        <circle cx="5.45" cy="8.7" r="0.85" />
+        {/* Snail body + shell as a single filled silhouette. The
+            domed cap on the upper right reads as the coiled shell;
+            the lower arch is the foot/body resting on a baseline. */}
+        <path d="
+          M 1.5 19
+          Q 1.5 12.5 6.5 12.5
+          L 8.5 12.5
+          Q 9 4.5 14.5 4.5
+          Q 20.5 4.5 20.5 10.5
+          Q 20.5 14.5 17 16
+          L 18 16
+          Q 22.5 16 22.5 19
+          Z
+        " />
       </svg>
     </span>
   );
