@@ -79,17 +79,34 @@ export function ToolsBand() {
   const paneRef = React.useRef<HTMLDivElement>(null);
   const [progress, setProgress] = React.useState(0);
   const [reducedMotion, setReducedMotion] = React.useState(false);
+  // Scroll-jacking is heavy on phones (the tall outer section
+  // sandwiches a small viewport, and the absolute-positioned cards
+  // need horizontal headroom to read). Disable below the tablet
+  // breakpoint and fall back to a plain vertical stack.
+  const [isWide, setIsWide] = React.useState(false);
 
   React.useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mq.matches);
-    const onChange = () => setReducedMotion(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
+    const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const wideMq = window.matchMedia("(min-width: 768px)");
+    setReducedMotion(motionMq.matches);
+    setIsWide(wideMq.matches);
+    const onMotion = () => setReducedMotion(motionMq.matches);
+    const onWide = (e: MediaQueryListEvent) => setIsWide(e.matches);
+    motionMq.addEventListener("change", onMotion);
+    wideMq.addEventListener("change", onWide);
+    return () => {
+      motionMq.removeEventListener("change", onMotion);
+      wideMq.removeEventListener("change", onWide);
+    };
   }, []);
 
+  // Scroll-jacking only runs when the user is on a tablet+ viewport
+  // AND hasn't asked for reduced motion. Anything else falls back to
+  // the static stack.
+  const useScrollStack = isWide && !reducedMotion;
+
   React.useEffect(() => {
-    if (reducedMotion) return;
+    if (!useScrollStack) return;
     const section = sectionRef.current;
     if (!section) return;
     let raf = 0;
@@ -117,11 +134,11 @@ export function ToolsBand() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, [reducedMotion]);
+  }, [useScrollStack]);
 
-  // Reduced-motion fallback — render a simple static stack with the
-  // same heading + card content, no scroll-jacking.
-  if (reducedMotion) {
+  // Mobile / reduced-motion fallback — render a simple static stack
+  // with the same heading + card content, no scroll-jacking.
+  if (!useScrollStack) {
     return (
       <SectionShell className="relative">
         <ToolsHeading />
