@@ -176,12 +176,13 @@ const florestasFish: HistoryImage = {
 
 const florestasSchool: HistoryImage = {
   src: "/images/history/florestas-submersas-school.jpg",
-  alt: "A school of small fish moving through the Florestas Submersas planted aquarium",
-  author: "Pierre Goiffon",
-  license: "CC BY-SA 4.0",
-  licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
-  source: "https://commons.wikimedia.org/wiki/File:Oceanario_2018_6.jpg",
-  caption: "Yellow accent fish in front of dense plant masses — Amano's late style at its biggest scale.",
+  alt: "Silhouetted sword plants and a school of yellow-tailed fish in deep water — Florestas Submersas at the Lisbon Oceanarium",
+  author: "Andrey Filippov",
+  license: "CC BY 2.0",
+  licenseUrl: "https://creativecommons.org/licenses/by/2.0",
+  source: "https://commons.wikimedia.org/wiki/File:Lisboa,_Portugal_(48813838571).jpg",
+  caption:
+    "A deeper view — silhouetted sword plants on the left, yellow-tailed fish moving through the open water column.",
 };
 
 const dutchCommunityTank: HistoryImage = {
