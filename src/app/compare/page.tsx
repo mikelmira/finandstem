@@ -2,19 +2,28 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
-import { ComparePicker, type CompareOption } from "@/components/compare/compare-picker";
+import {
+  ComparePicker,
+  type CompareOption,
+} from "@/components/compare/compare-picker";
+import { CompareModeToggle } from "@/components/compare/compare-mode-toggle";
 import { CompareOverview } from "@/components/compare/compare-overview";
 import { CompareTable } from "@/components/compare/compare-table";
+import { SubstrateCompareTable } from "@/components/compare/substrate-compare-table";
 import { allNorm } from "@/lib/catalogue/normalize";
+import { substrates, findSubstrate } from "@/data";
 import type { CatalogueEntry } from "@/types/catalogue";
+import type { SubstrateEntry } from "@/types/substrate";
+import type { CompareMode } from "@/lib/compare-storage";
 
 export const metadata: Metadata = {
-  title: "Compare species",
+  title: "Compare species and substrates",
   description:
-    "Put up to four catalogue species side by side, temperature, pH, hardness, tank size, light, CO₂, and tank-mate safety. Spot the conflicts at a glance.",
+    "Put up to four catalogue species or substrates side by side. Livestock mode compares fish, plants, shrimp, mosses, and snails. Substrate mode compares aquasoils and inert substrates by pH effect, ammonia release, and lifespan.",
 };
 
-const OPTIONS: CompareOption[] = allNorm
+// Livestock options across fish/plants/shrimp/mosses/snails.
+const LIVESTOCK_OPTIONS: CompareOption[] = allNorm
   .map((n) => ({
     value: `${n.category}:${n.slug}`,
     label: n.commonName,
@@ -23,54 +32,127 @@ const OPTIONS: CompareOption[] = allNorm
   }))
   .sort((a, b) => a.label.localeCompare(b.label));
 
+// Substrate options.
+const SUBSTRATE_OPTIONS: CompareOption[] = substrates
+  .map((s) => ({
+    value: `substrate:${s.slug}`,
+    label: s.name,
+    scientific: s.brand,
+    category: "substrate" as const,
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
 interface PageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
+function parseMode(raw: string | string[] | undefined): CompareMode {
+  const v = Array.isArray(raw) ? raw[0] : raw;
+  return v === "substrate" ? "substrate" : "livestock";
+}
+
 export default async function ComparePage({ searchParams }: PageProps) {
   const sp = await searchParams;
-  const raw = Array.isArray(sp.ids) ? sp.ids[0] : sp.ids;
-  const ids = (raw ?? "")
+  const mode = parseMode(sp.mode);
+
+  const rawIds = Array.isArray(sp.ids) ? sp.ids[0] : sp.ids;
+  const ids = (rawIds ?? "")
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
 
-  const entries: CatalogueEntry[] = ids
-    .map((id) => {
-      const [category, slug] = id.split(":");
-      const hit = allNorm.find(
-        (n) => n.category === category && n.slug === slug,
-      );
-      return hit?.raw;
-    })
-    .filter((e): e is CatalogueEntry => Boolean(e));
+  // Hard filter, drop any id that doesn't belong to the active mode.
+  // Defensive guarantee, even if a stale URL is shared between modes
+  // the wrong-type ids are silently dropped.
+  const validIds = ids.filter((id) => {
+    if (mode === "substrate") return id.startsWith("substrate:");
+    return !id.startsWith("substrate:");
+  });
+
+  // Resolve livestock entries.
+  const livestockEntries: CatalogueEntry[] =
+    mode === "livestock"
+      ? validIds
+          .map((id) => {
+            const [category, slug] = id.split(":");
+            const hit = allNorm.find(
+              (n) => n.category === category && n.slug === slug,
+            );
+            return hit?.raw;
+          })
+          .filter((e): e is CatalogueEntry => Boolean(e))
+      : [];
+
+  // Resolve substrate entries.
+  const substrateEntries: SubstrateEntry[] =
+    mode === "substrate"
+      ? validIds
+          .map((id) => {
+            const [, slug] = id.split(":");
+            return findSubstrate(slug);
+          })
+          .filter((e): e is SubstrateEntry => Boolean(e))
+      : [];
+
+  const count =
+    mode === "substrate" ? substrateEntries.length : livestockEntries.length;
+  const activeOptions =
+    mode === "substrate" ? SUBSTRATE_OPTIONS : LIVESTOCK_OPTIONS;
 
   return (
     <>
       <PageHero
         eyebrow="Compare"
-        title="Put species side by side."
-        subtitle="Pick up to four species from any category. We score the group out of 100, stack every species' temperature, pH, and hardness on the same axis to show the overlap, and surface the conflicts you'll need to plan around."
+        title={
+          mode === "substrate"
+            ? "Put substrates side by side."
+            : "Put species side by side."
+        }
+        subtitle={
+          mode === "substrate"
+            ? "Pick up to four substrates. We line up grain size, pH effect, ammonia release, nutrient content, and shrimp safety in one row each."
+            : "Pick up to four species from any category. We score the group out of 100, stack every species' temperature, pH, and hardness on the same axis to show the overlap, and surface the conflicts you'll need to plan around."
+        }
         breadcrumb={[{ label: "Compare" }]}
       />
 
       <SectionShell>
         <Suspense fallback={null}>
+          <div className="mb-8">
+            <CompareModeToggle mode={mode} />
+          </div>
           <div className="glass glass-edge mb-10 rounded-2xl p-5 sm:p-6">
             <ComparePicker
-              options={OPTIONS}
-              selected={ids.filter((id) => OPTIONS.find((o) => o.value === id))}
+              mode={mode}
+              options={activeOptions}
+              selected={validIds.filter((id) =>
+                activeOptions.find((o) => o.value === id),
+              )}
             />
           </div>
         </Suspense>
 
-        {entries.length === 0 ? (
-          <EmptyState />
-        ) : entries.length === 1 ? (
-          <OnlyOneState />
+        {count === 0 ? (
+          <EmptyState mode={mode} />
+        ) : count === 1 ? (
+          <OnlyOneState mode={mode} />
+        ) : mode === "substrate" ? (
+          <div className="flex flex-col gap-12">
+            <section className="flex flex-col gap-4">
+              <header className="flex items-baseline justify-between gap-3">
+                <h2 className="text-display-tight text-2xl sm:text-3xl">
+                  Full specs
+                </h2>
+                <span className="text-xs text-muted-foreground">
+                  Every parameter, side by side
+                </span>
+              </header>
+              <SubstrateCompareTable entries={substrateEntries} />
+            </section>
+          </div>
         ) : (
           <div className="flex flex-col gap-12">
-            <CompareOverview entries={entries} />
+            <CompareOverview entries={livestockEntries} />
             <section className="flex flex-col gap-4">
               <header className="flex items-baseline justify-between gap-3">
                 <h2 className="text-display-tight text-2xl sm:text-3xl">
@@ -80,7 +162,7 @@ export default async function ComparePage({ searchParams }: PageProps) {
                   Every parameter, side by side
                 </span>
               </header>
-              <CompareTable entries={entries} />
+              <CompareTable entries={livestockEntries} />
             </section>
           </div>
         )}
@@ -89,26 +171,35 @@ export default async function ComparePage({ searchParams }: PageProps) {
   );
 }
 
-function EmptyState() {
+function EmptyState({ mode }: { mode: CompareMode }) {
   return (
     <div className="glass rounded-2xl p-10 text-center">
-      <p className="text-base font-medium">Pick a species to start.</p>
+      <p className="text-base font-medium">
+        {mode === "substrate"
+          ? "Pick a substrate to start."
+          : "Pick a species to start."}
+      </p>
       <p className="mt-2 text-sm text-muted-foreground">
-        Search above by common name or scientific name. Add up to four
-        species across any category, fish, plants, shrimp, or mosses.
+        {mode === "substrate"
+          ? "Search above by brand or product name. Add up to four substrates across active aquasoils, inert nutrient substrates, inert sand and gravel, or additives."
+          : "Search above by common name or scientific name. Add up to four species across any category, fish, plants, shrimp, mosses, or snails."}
       </p>
     </div>
   );
 }
 
-function OnlyOneState() {
+function OnlyOneState({ mode }: { mode: CompareMode }) {
   return (
     <div className="glass rounded-2xl p-10 text-center">
       <p className="text-base font-medium">
-        Comparison needs at least two species.
+        {mode === "substrate"
+          ? "Comparison needs at least two substrates."
+          : "Comparison needs at least two species."}
       </p>
       <p className="mt-2 text-sm text-muted-foreground">
-        Add another species to start lining up parameters side by side.
+        {mode === "substrate"
+          ? "Add another substrate to start lining up parameters side by side."
+          : "Add another species to start lining up parameters side by side."}
       </p>
     </div>
   );

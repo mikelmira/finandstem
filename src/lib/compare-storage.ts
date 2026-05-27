@@ -1,19 +1,57 @@
 /**
  * Shared client-side storage for the comparison set.
  *
- * The /compare page treats the URL `?ids=` param as canonical (so URLs stay
- * shareable), but species detail pages need to know what is *already* in the
- * comparison when the user clicks "Compare". localStorage bridges that gap.
+ * The /compare page treats the URL `?ids=` and `?mode=` params as
+ * canonical (so URLs stay shareable), but species/substrate detail
+ * pages need to know what is *already* in the comparison when the
+ * user clicks "Compare". localStorage bridges that gap.
+ *
+ * The compare tool has two mutually-exclusive modes:
+ *   · "livestock"  fish, plants, shrimp, mosses, snails
+ *   · "substrate"  substrates only
+ *
+ * Selections from one mode are never mixed with the other. Switching
+ * mode clears the selection.
  */
 
 export const COMPARE_MAX = 4;
-const STORAGE_KEY = "finstem.compare.ids";
+const IDS_KEY = "finstem.compare.ids";
+const MODE_KEY = "finstem.compare.mode";
+
+export type CompareMode = "livestock" | "substrate";
+
+const VALID_MODES: ReadonlySet<CompareMode> = new Set([
+  "livestock",
+  "substrate",
+]);
+
+/** Safe to call from SSR, returns "livestock" when window is unavailable. */
+export function readCompareMode(): CompareMode {
+  if (typeof window === "undefined") return "livestock";
+  try {
+    const v = window.localStorage.getItem(MODE_KEY);
+    return v && VALID_MODES.has(v as CompareMode)
+      ? (v as CompareMode)
+      : "livestock";
+  } catch {
+    return "livestock";
+  }
+}
+
+export function writeCompareMode(mode: CompareMode): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(MODE_KEY, mode);
+  } catch {
+    /* storage full or disabled */
+  }
+}
 
 /** Safe to call from SSR, returns [] when window is unavailable. */
 export function readCompareIds(): string[] {
   if (typeof window === "undefined") return [];
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(IDS_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
@@ -26,7 +64,7 @@ export function readCompareIds(): string[] {
 export function writeCompareIds(ids: string[]): void {
   if (typeof window === "undefined") return;
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+    window.localStorage.setItem(IDS_KEY, JSON.stringify(ids));
   } catch {
     /* storage full or disabled, comparison just won't persist */
   }
@@ -41,4 +79,21 @@ export function appendCompareId(current: string[], id: string): string[] {
   const next = [...current, id];
   if (next.length > COMPARE_MAX) next.splice(0, next.length - COMPARE_MAX);
   return next;
+}
+
+/**
+ * Which mode an id belongs to, based on its `category:slug` prefix.
+ * Livestock ids look like "fish:neon-tetra"; substrate ids look like
+ * "substrate:ada-amazonia-v2". Returns null for unparseable input.
+ */
+export function modeForId(id: string): CompareMode | null {
+  const colon = id.indexOf(":");
+  if (colon < 1) return null;
+  const prefix = id.slice(0, colon);
+  return prefix === "substrate" ? "substrate" : "livestock";
+}
+
+/** Filter an id list down to entries that match the given mode. */
+export function filterIdsByMode(ids: string[], mode: CompareMode): string[] {
+  return ids.filter((id) => modeForId(id) === mode);
 }

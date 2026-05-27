@@ -18,6 +18,7 @@ import type {
 } from "@/types/catalogue";
 
 export { fish, plants, shrimp, mosses, snails };
+export { substrates, findSubstrate } from "./substrates";
 
 function categoryForSlug(slug: string): CatalogueCategory | undefined {
   if (fish.some((f) => f.slug === slug)) return "fish";

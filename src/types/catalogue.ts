@@ -178,3 +178,17 @@ export const CATEGORY_META: Record<
       "Nerites, mystery snails, assassins, rabbits and more. Algae crew, display species, and the ones to avoid, with parameters, breeding, and tank-mate notes.",
   },
 };
+
+/* ─── Compare-tool union ──────────────────────────────────────────────
+   `CompareEntry` is the ONLY type that crosses the species/substrate
+   boundary. It exists for the compare tool, which supports two
+   mutually-exclusive modes (livestock vs substrate). Planner and
+   compatibility consume `CatalogueEntry` and therefore never see
+   substrates, the type-level lever that enforces the exclusion at
+   compile time.
+   ────────────────────────────────────────────────────────────────────── */
+
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import type { SubstrateEntry } from "./substrate";
+
+export type CompareEntry = CatalogueEntry | SubstrateEntry;

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
-import { fish, plants, shrimp, mosses, snails } from "@/data";
+import { fish, plants, shrimp, mosses, snails, substrates } from "@/data";
 import { getEntryDates } from "@/data/timestamps";
 import { listGuides } from "@/lib/guides";
 
@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/shrimp", priority: 0.9, freq: "weekly" },
     { path: "/mosses", priority: 0.9, freq: "weekly" },
     { path: "/snails", priority: 0.9, freq: "weekly" },
+    { path: "/substrates", priority: 0.9, freq: "weekly" },
 
     // Long-form guides hub
     { path: "/guides", priority: 0.9, freq: "weekly" },
@@ -70,6 +71,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...shrimp.map((s) => ({ path: `/shrimp/${s.slug}`, slug: s.slug })),
     ...mosses.map((m) => ({ path: `/mosses/${m.slug}`, slug: m.slug })),
     ...snails.map((s) => ({ path: `/snails/${s.slug}`, slug: s.slug })),
+    ...substrates.map((s) => ({
+      path: `/substrates/${s.slug}`,
+      slug: s.slug,
+    })),
   ].map(({ path, slug }) => ({
     url: `${site.url}${path}`,
     lastModified: new Date(getEntryDates(slug).updatedAt),

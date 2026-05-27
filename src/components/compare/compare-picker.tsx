@@ -5,13 +5,23 @@ import { useRouter } from "next/navigation";
 import { Plus, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CATEGORY_META, type CatalogueCategory } from "@/types/catalogue";
-import { writeCompareIds } from "@/lib/compare-storage";
+import {
+  writeCompareIds,
+  type CompareMode,
+} from "@/lib/compare-storage";
+
+export type CompareOptionCategory = CatalogueCategory | "substrate";
+
+/** Human-readable singular for any compare-option category. */
+function singularFor(cat: CompareOptionCategory): string {
+  return cat === "substrate" ? "Substrate" : CATEGORY_META[cat].singular;
+}
 
 export interface CompareOption {
   value: string;
   label: string;
   scientific: string;
-  category: CatalogueCategory;
+  category: CompareOptionCategory;
 }
 
 interface ComparePickerProps {
@@ -20,12 +30,15 @@ interface ComparePickerProps {
   selected: string[];
   /** Maximum number of species the comparison can hold. */
   max?: number;
+  /** Compare-tool mode, drives the URL we write back to. */
+  mode?: CompareMode;
 }
 
 export function ComparePicker({
   options,
   selected,
   max = 4,
+  mode = "livestock",
 }: ComparePickerProps) {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
@@ -49,23 +62,29 @@ export function ComparePicker({
 
   const selectedSet = new Set(selected);
 
+  // Build the URL keeping mode in the query string so a shared link
+  // always lands on the correct compare mode.
+  const baseQuery = `mode=${mode}`;
+
   function add(value: string) {
     if (selectedSet.has(value) || selected.length >= max) return;
     const next = [...selected, value].join(",");
-    router.replace(`/compare?ids=${encodeURIComponent(next)}`, {
-      scroll: false,
-    });
+    router.replace(
+      `/compare?${baseQuery}&ids=${encodeURIComponent(next)}`,
+      { scroll: false },
+    );
     setQuery("");
   }
 
   function remove(value: string) {
     const next = selected.filter((s) => s !== value).join(",");
     if (next) {
-      router.replace(`/compare?ids=${encodeURIComponent(next)}`, {
-        scroll: false,
-      });
+      router.replace(
+        `/compare?${baseQuery}&ids=${encodeURIComponent(next)}`,
+        { scroll: false },
+      );
     } else {
-      router.replace(`/compare`, { scroll: false });
+      router.replace(`/compare?${baseQuery}`, { scroll: false });
     }
   }
 
@@ -86,7 +105,9 @@ export function ComparePicker({
       <div className="flex flex-wrap items-center gap-2">
         {selected.length === 0 && (
           <span className="text-xs text-muted-foreground">
-            No species selected yet, add up to {max}.
+            {mode === "substrate"
+              ? `No substrate selected yet, add up to ${max}.`
+              : `No species selected yet, add up to ${max}.`}
           </span>
         )}
         {selected.map((value) => {
@@ -98,7 +119,7 @@ export function ComparePicker({
               className="press inline-flex items-center gap-1.5 rounded-full border border-[var(--brand)]/40 bg-[var(--brand)]/12 px-3 py-1 text-xs font-medium text-foreground"
             >
               <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
-                {CATEGORY_META[opt.category].singular}
+                {singularFor(opt.category)}
               </span>
               <span>·</span>
               <span>{opt.label}</span>
@@ -124,7 +145,11 @@ export function ComparePicker({
           <input
             type="search"
             autoComplete="off"
-            placeholder="Add a species, search by name or scientific…"
+            placeholder={
+              mode === "substrate"
+                ? "Add a substrate, search by brand or name…"
+                : "Add a species, search by name or scientific…"
+            }
             value={query}
             onFocus={() => setOpen(true)}
             onChange={(e) => {
@@ -159,7 +184,7 @@ export function ComparePicker({
                         </span>
                       </span>
                       <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                        {CATEGORY_META[o.category].singular}
+                        {singularFor(o.category)}
                       </span>
                     </span>
                   </button>
