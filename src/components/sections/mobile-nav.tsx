@@ -130,7 +130,7 @@ export function MobileNav({ links, primaryCta }: MobileNavProps) {
               {/* Livestock — grouped at the top, mirroring desktop dropdown */}
               <div className="px-2 pb-1 pt-2">
                 <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
-                  Livestock
+                  Species
                 </p>
               </div>
               {LIVESTOCK_ORDER.map((href, i) => {

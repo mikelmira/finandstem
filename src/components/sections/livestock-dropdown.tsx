@@ -128,7 +128,7 @@ export function LivestockDropdown() {
             : "text-muted-foreground hover:text-foreground",
         )}
       >
-        Livestock
+        Species
         <ChevronDown
           className={cn(
             "size-3.5 transition-transform duration-200",
