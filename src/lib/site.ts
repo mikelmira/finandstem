@@ -11,10 +11,9 @@ export const site = {
     name: "Mike Elmira",
     location: "South Africa",
   },
-  /** Public-facing routes for getting in touch. */
+  /** Public-facing email for corrections, image takedowns, partnerships. */
   contact: {
     email: "finandstem@gmail.com",
-    formHref: "/contact",
   },
   social: {
     youtube: "#",
@@ -60,7 +59,6 @@ export const site = {
           { label: "About", href: "/about" },
           { label: "Guides", href: "/guides" },
           { label: "Build journals", href: "/builds" },
-          { label: "Contact", href: "/contact" },
         ],
       },
       {

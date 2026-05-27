@@ -57,7 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Org / footer
     { path: "/about", priority: 0.6, freq: "monthly" },
-    { path: "/contact", priority: 0.5, freq: "monthly" },
     { path: "/legal/privacy", priority: 0.3, freq: "yearly" },
     { path: "/legal/terms", priority: 0.3, freq: "yearly" },
   ];
