@@ -3,7 +3,7 @@ export const home = {
     eyebrow: "Built to help aquascapers",
     title: "Build the planted tank you imagined.",
     subtitle:
-      "Fin & Stem is a working reference for aquascapers anywhere in the world. 80+ profiled fish, plants, shrimp, and mosses, cross-referenced for compatibility, parameters surfaced up front, photographed and attributed. From a 20 L nano on a kitchen counter to a 600 L showpiece, start here.",
+      "Fin & Stem is a working reference for aquascapers anywhere in the world. 130+ profiled fish, plants, shrimp, mosses, and snails, cross-referenced for compatibility, parameters surfaced up front, photographed and attributed. From a 20 L nano on a kitchen counter to a 600 L showpiece, start here.",
     primaryCta: { label: "Browse the catalogue", href: "/fish" },
     secondaryCta: { label: "Compatibility tool", href: "/compatibility" },
   },
@@ -14,13 +14,13 @@ export const home = {
       {
         title: "Fish",
         slug: "fish",
-        body: "34 species profiled, schoolers, micropredators, dwarf cichlids, algae crew, and surface specialists. Parameters, group sizes, water column, plant and shrimp safety, and the catch in plain English.",
+        body: "55+ species profiled, schoolers, micropredators, dwarf cichlids, algae crew, and surface specialists. Parameters, group sizes, water column, plant and shrimp safety, and the catch in plain English.",
         sources: "Parameters · group size · tank-mate safety",
       },
       {
         title: "Plants",
         slug: "plants",
-        body: "34 species profiled, foregrounds and carpets, midground rosettes, background stems and bulbs, floating cover. Light demand, CO₂, substrate, propagation, and trimming cadence.",
+        body: "45+ species profiled, foregrounds and carpets, midground rosettes, background stems and bulbs, floating cover. Light demand, CO₂, substrate, propagation, and trimming cadence.",
         sources: "Light · CO₂ · substrate · propagation",
       },
       {
@@ -48,7 +48,7 @@ export const home = {
     title: "Built for everyone who loves the underwater world.",
     body: "Most aquascaping resources profile species in isolation and leave you cross-referencing five tabs to figure out what works with what. Fin & Stem ties everything together, every fish links to plant and shrimp safety, every plant lists its real light and CO₂ demand, every shrimp tells you which fish it survives alongside. Written for the global aquascaping community, a love letter to the beauty of what we build underwater.",
     points: [
-      "88+ species profiled across four pillars, every entry shows the parameters that actually matter up front.",
+      "130+ species profiled across five pillars, every entry shows the parameters that actually matter up front.",
       "The Compatibility page cross-references any anchor species against the other three categories, see at a glance what fits in your water.",
       "Image galleries sourced from Wikimedia Commons, iNaturalist, and retailer catalogues, with full attribution and back-links to the source on every photo.",
       "Written by someone who actually keeps the tanks, and who still finds the underwater world quietly astonishing.",

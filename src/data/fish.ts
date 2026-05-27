@@ -818,7 +818,7 @@ export const fish: ReadonlyArray<FishEntry> = [
     slug: "siamese-algae-eater",
     category: "fish",
     commonName: "Siamese Algae Eater",
-    scientificName: "Crossocheilus oblongus",
+    scientificName: "Crossocheilus langei",
     family: "Cyprinidae",
     origin: "Mainland Southeast Asia (Thailand, Malaysia, Indonesia)",
     adultSize: "12–15 cm",

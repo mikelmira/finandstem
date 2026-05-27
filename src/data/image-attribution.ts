@@ -462,20 +462,20 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cryptocoryne_wendtii"
   },
-  "crystal-red-shrimp": {
-    "alt": "Crystal Red Shrimp (Caridina cantonensis 'CRS')",
-    "author": "DirkBlankenhaus",
+  "crystal-red-shrimp":   {
+    "alt": "Crystal Red Shrimp (Caridina cantonensis) \u2014 adult with distinctive red-and-white banding plus a juvenile",
+    "author": "Christophe cag\u00e9",
     "category": "shrimp",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Caridina-cf-cantonensis-crystal-red.jpg",
-    "fileTitle": "File:Caridina-cf-cantonensis-crystal-red.jpg",
-    "height": 780,
+    "credit": "",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Caridina%20cf.%20cantonensis%20-%20crystal%20red%20-%20adult%20and%20baby.JPG",
+    "fileTitle": "File:Caridina cf. cantonensis - crystal red - adult and baby.JPG",
+    "height": 1536,
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "crystal-red-shrimp",
-    "src": "/images/catalogue/shrimp/crystal-red-shrimp.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Caridina_cantonensis"
+    "src": "/images/catalogue/shrimp/crystal-red-shrimp.jpg",
+    "width": 2048,
+    "wikipediaUrl": ""
   },
   "dwarf-gourami": {
     "alt": "Dwarf Gourami (Trichogaster lalius)",
@@ -521,21 +521,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/fish/espe-rasbora.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trigonostigma_espei"
-  },
-  "flame-moss": {
-    "alt": "Flame Moss (Taxiphyllum 'Flame')",
-    "author": "HermannSchachner",
-    "category": "mosses",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
-    "fileTitle": "File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
-    "height": 800,
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "slug": "flame-moss",
-    "src": "/images/catalogue/mosses/flame-moss.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum"
   },
   "ghost-shrimp": {
     "alt": "Ghost / Glass Shrimp (Palaemonetes paludosus)",
@@ -713,21 +698,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ludwigia_repens"
   },
-  "mini-christmas-moss": {
-    "alt": "Mini Christmas Moss (Vesicularia sp.)",
-    "author": "Storm from Canada",
-    "category": "mosses",
-    "credit": "christmas moss and riccia",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Christmas_moss_and_riccia_(14441185564).jpg",
-    "fileTitle": "File:Christmas moss and riccia (14441185564).jpg",
-    "height": 676,
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "slug": "mini-christmas-moss",
-    "src": "/images/catalogue/mosses/mini-christmas-moss.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesicularia_sp."
-  },
   "neon-tetra": {
     "alt": "Neon Tetra (Paracheirodon innesi)",
     "author": "Holger Krisp",
@@ -787,21 +757,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/fish/paradise-fish.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Paradise_fish"
-  },
-  "peacock-moss": {
-    "alt": "Peacock Moss (Taxiphyllum sp. 'Peacock')",
-    "author": "HermannSchachner",
-    "category": "mosses",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
-    "fileTitle": "File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
-    "height": 800,
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "slug": "peacock-moss",
-    "src": "/images/catalogue/mosses/peacock-moss.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum"
   },
   "phoenix-moss": {
     "alt": "Phoenix Moss / Fissidens (Fissidens fontanus)",
@@ -893,20 +848,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Red-tailed_black_shark"
   },
-  "red-tiger-lotus": {
-    "alt": "Red Tiger Lotus (Nymphaea zenkeri)",
-    "author": "Unknown",
-    "category": "plants",
-    "credit": "",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nymphaea_lotus_1.jpg",
-    "fileTitle": "File:Nymphaea_lotus_1.jpg",
-    "height": 1005,
-    "license": "Public domain",
-    "slug": "red-tiger-lotus",
-    "src": "/images/catalogue/plants/red-tiger-lotus.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nymphaea_zenkeri"
-  },
   "riccia-fluitans": {
     "alt": "Riccia / Crystalwort (Riccia fluitans)",
     "author": "Unknown",
@@ -982,20 +923,20 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Salvinia_natans"
   },
-  "scarlet-badis": {
-    "alt": "Scarlet Badis (Dario dario)",
+  "scarlet-badis":   {
+    "alt": "Scarlet Badis (Dario dario) \u2014 adult male with vivid red and blue vertical bars",
     "author": "ATuin-hek at English Wikipedia",
     "category": "fish",
-    "credit": "Transferred from en.wikipedia to Commons.",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Dario_dario_male.jpg",
+    "credit": "",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Dario%20dario%20male.jpg",
     "fileTitle": "File:Dario dario male.jpg",
     "height": 1117,
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "slug": "scarlet-badis",
-    "src": "/images/catalogue/fish/scarlet-badis.webp",
+    "src": "/images/catalogue/fish/scarlet-badis.jpg",
     "width": 1233,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dario_dario"
+    "wikipediaUrl": ""
   },
   "silver-tip-tetra": {
     "alt": "Silver Tip Tetra (Hasemania nana)",
@@ -1012,20 +953,20 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "width": 940,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hasemania_nana"
   },
-  "snowball-shrimp": {
-    "alt": "Snowball Shrimp (Neocaridina palmata var.)",
+  "snowball-shrimp":   {
+    "alt": "Snowball / White Pearl Shrimp (Neocaridina davidi 'Snowball') \u2014 solid pearl-white body",
     "author": "DirkBlankenhaus",
     "category": "shrimp",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Neocaridina-palmata.jpg",
-    "fileTitle": "File:Neocaridina-palmata.jpg",
-    "height": 891,
+    "credit": "",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Neocaridina-cf-zhangjiajiensis-sp-white-pearl.jpg",
+    "fileTitle": "File:Neocaridina-cf-zhangjiajiensis-sp-white-pearl.jpg",
+    "height": 693,
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "slug": "snowball-shrimp",
-    "src": "/images/catalogue/shrimp/snowball-shrimp.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Neocaridina"
+    "src": "/images/catalogue/shrimp/snowball-shrimp.jpg",
+    "width": 1024,
+    "wikipediaUrl": ""
   },
   "sparkling-gourami": {
     "alt": "Sparkling Gourami (Trichopsis pumila)",
@@ -1041,21 +982,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/fish/sparkling-gourami.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trichopsis_pumila"
-  },
-  "spiky-moss": {
-    "alt": "Spiky Moss (Taxiphyllum sp. 'Spiky')",
-    "author": "HermannSchachner",
-    "category": "mosses",
-    "credit": "Own work",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
-    "fileTitle": "File:Taxiphyllum_wissgrillii_(b,_144820-480959)_8472.JPG",
-    "height": 800,
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "slug": "spiky-moss",
-    "src": "/images/catalogue/mosses/spiky-moss.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Taxiphyllum"
   },
   "spotted-blue-eye": {
     "alt": "Spotted Blue-eye (Pseudomugil gertrudae)",
@@ -1160,21 +1086,6 @@ export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
     "src": "/images/catalogue/plants/water-wisteria.webp",
     "width": 1200,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hygrophila_difformis"
-  },
-  "weeping-moss": {
-    "alt": "Weeping Moss (Vesicularia ferriei)",
-    "author": "阿橋 HQ",
-    "category": "mosses",
-    "credit": "爪哇莫絲 Vesicularia dubyana [香港公園 Hong Kong Park]",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%E7%88%AA%E5%93%87%E8%8E%AB%E7%B5%B2_Vesicularia_dubyana_-%E9%A6%99%E6%B8%AF%E5%85%AC%E5%9C%92_Hong_Kong_Park-_(9227115933).jpg",
-    "fileTitle": "File:爪哇莫絲 Vesicularia dubyana -香港公園 Hong Kong Park- (9227115933).jpg",
-    "height": 900,
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "slug": "weeping-moss",
-    "src": "/images/catalogue/mosses/weeping-moss.webp",
-    "width": 1200,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesicularia_ferriei"
   },
   "yellow-shrimp": {
     "alt": "Yellow Shrimp (Neocaridina davidi 'Yellow')",

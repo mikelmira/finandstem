@@ -1,5 +1,5 @@
 import { home } from "@/content/home";
-import { fish, plants, shrimp, mosses } from "@/data";
+import { fish, plants, shrimp, mosses, snails } from "@/data";
 import { atmosphere } from "@/data/atmosphere";
 import { Hero } from "@/components/sections/hero";
 import { ScrollRevealText } from "@/components/sections/scroll-reveal-text";
@@ -12,7 +12,8 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { homePageJsonLd } from "@/lib/seo";
 
 export default function Page() {
-  const total = fish.length + plants.length + shrimp.length + mosses.length;
+  const total =
+    fish.length + plants.length + shrimp.length + mosses.length + snails.length;
   return (
     <>
       <JsonLd data={homePageJsonLd()} id="home-jsonld" />
@@ -25,7 +26,7 @@ export default function Page() {
         stats={[
           {
             value: total.toString(),
-            label: "Species profiled across four pillars",
+            label: "Species profiled across five pillars",
           },
           {
             value: "3",
