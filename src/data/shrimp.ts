@@ -27,10 +27,6 @@ export const shrimp: ReadonlyArray<ShrimpEntry> = [
     careSummary: "The perfect beginner shrimp. Stable parameters matter more than perfect numbers. Calcium for moulting (cuttlebone, GH+, mineral stones) is essential.",
     imageSourceUrl: "https://en.wikipedia.org/wiki/Neocaridina_davidi",
     imageLicenseHint: "Commons (mostly CC-BY-SA)",
-    // TODO(mike): replace placeholder with real first-hand observation.
-    keptByAuthor: true,
-    firstHandNote:
-      "Started with ten unsexed cherries in a 30-litre planted nano in mid-2022 and never once dosed RO water or chased TDS — Cape Town tap (GH ~9, KH ~5, pH ~7.8) sits exactly inside their happy band. The colony tripled in eight months and stabilised around 60-80 adults, which seems to be the carrying capacity for that footprint and biofilm load. The biggest practical lesson: a piece of cuttlebone wedged behind the filter intake has done more for moult success than any of the powder supplements I tried. Placeholder for a longer write-up.",
   },
   {
     id: "shrimp-002",

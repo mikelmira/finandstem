@@ -40,7 +40,7 @@ export const home = {
   ethos: {
     eyebrow: "What this site is",
     title: "Built for everyone who loves the underwater world.",
-    body: "Most aquascaping resources profile species in isolation and leave you cross-referencing five tabs to figure out what works with what. Fin & Stem ties everything together — every fish links to plant and shrimp safety, every plant lists its real light and CO₂ demand, every shrimp tells you which fish it survives alongside. Written by a tank-keeper for the global aquascaping community — a love letter to the beauty of what we build underwater.",
+    body: "Most aquascaping resources profile species in isolation and leave you cross-referencing five tabs to figure out what works with what. Fin & Stem ties everything together — every fish links to plant and shrimp safety, every plant lists its real light and CO₂ demand, every shrimp tells you which fish it survives alongside. Written for the global aquascaping community — a love letter to the beauty of what we build underwater.",
     points: [
       "88+ species profiled across four pillars — every entry shows the parameters that actually matter up front.",
       "The Compatibility page cross-references any anchor species against the other three categories — see at a glance what fits in your water.",

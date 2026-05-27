@@ -27,17 +27,6 @@ interface CatalogueEntryBase {
   careSummary: string;
   imageSourceUrl: string;
   imageLicenseHint: string;
-  /**
-   * True when Mike has personally kept the species. Triggers the
-   * "Mike's tank" first-hand callout and adds a `reviewedBy` property
-   * to the schema.org Article — a strong E-E-A-T signal.
-   */
-  keptByAuthor?: boolean;
-  /**
-   * Optional ~100–200-word first-hand observation. Only rendered when
-   * `keptByAuthor` is true. Free-form prose, not data fields.
-   */
-  firstHandNote?: string;
 }
 
 export interface FishEntry extends CatalogueEntryBase {

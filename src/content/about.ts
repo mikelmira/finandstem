@@ -1,7 +1,7 @@
 export const about = {
   hero: {
     eyebrow: "About",
-    title: "A working reference, built by an aquascaper, for aquascapers.",
+    title: "A working reference for the planted aquarium.",
     subtitle:
       "Fin & Stem started as a frustration. Care numbers were scattered across forums and product pages. Species were profiled in isolation. Nothing connected the fish to the plants to the shrimp to the gear that made them work. So we started writing it down — and connecting it. Today it's a living reference for aquascapers anywhere in the world.",
   },
@@ -12,7 +12,7 @@ export const about = {
     points: [
       {
         title: "Original writing, sourced data.",
-        body: "Care ranges cross-reference FishBase, the IUCN Red List, Tropica's plant database, original species descriptions, and hands-on tank experience. Common-name and origin data tracks Wikipedia and Wikidata. We don't paraphrase competitor sites — if a number is from someone else, it's cited.",
+        body: "Care ranges cross-reference FishBase, the IUCN Red List, Tropica's plant database, original species descriptions, and the documented experience of working aquascapers. Common-name and origin data tracks Wikipedia and Wikidata. We don't paraphrase competitor sites — if a number is from someone else, it's cited.",
       },
       {
         title: "Connections matter.",
@@ -82,11 +82,5 @@ export const about = {
         note: "Cited on every species where conservation status matters — particularly for wild-caught fish from Southeast Asia and Amazonia.",
       },
     ],
-  },
-  founder: {
-    eyebrow: "Author",
-    title: "Run by one person — corrected by many.",
-    body: "Fin & Stem is written and maintained by the same person who scapes the reference tanks. No content farm, no rotating writer pool. Every entry is signed off by someone who has actually put the species in water. Errors are inevitable; if you spot one, the contact page is open and we read everything.",
-    location: "Based in South Africa, writing for aquascapers everywhere.",
   },
 } as const;

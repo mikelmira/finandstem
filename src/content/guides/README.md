@@ -28,7 +28,6 @@ pillar: "/aquarium-fish-guide" # one of the six pillar URLs
 relatedSpecies: ["fish:neon-tetra", "shrimp:cherry-shrimp", "mosses:java-moss"]
 heroImage: "/images/guides/your-slug.jpg" # optional, in public/images/guides/
 heroAlt: "Description of the hero image" # optional
-keptByAuthor: false # optional, set true when Mike has first-hand experience
 faqs:
   - question: "Question text?"
     answer: "Answer text in plain prose, 50 to 150 words."

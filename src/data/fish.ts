@@ -29,10 +29,6 @@ export const fish: ReadonlyArray<FishEntry> = [
     careSummary: "Hardy beginner classic. Looks dull in bright tanks — dark substrate and floating plants bring out the neon stripe. Keep in groups of 10+ for natural shoaling behaviour.",
     imageSourceUrl: "https://en.wikipedia.org/wiki/Neon_tetra",
     imageLicenseHint: "Commons (mostly CC-BY-SA)",
-    // TODO(mike): replace placeholder with real first-hand observation.
-    keptByAuthor: true,
-    firstHandNote:
-      "I've kept a 12-strong neon school in a 60-litre Amazon biotope since early 2023 — the change I didn't expect was how much darker the substrate had to be for the neon stripe to actually glow. Stock photos lie. Once I switched from beige sand to a 50/50 mix of fine black gravel and weathered Indian almond leaf litter, the colour intensity roughly doubled and the school tightened up. Placeholder for a longer write-up.",
   },
   {
     id: "fish-002",

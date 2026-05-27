@@ -50,6 +50,7 @@ export const contact = {
   direct: {
     eyebrow: "Anything else",
     title: "Other ways to reach us.",
-    body: "Both forms above land in the same inbox. Use the catalogue feedback form for care corrections and species requests, and the partnership form for brand or press inquiries. Every message gets read.",
+    body: "Both forms above land in the same inbox. Use the catalogue feedback form for care corrections and species requests, and the partnership form for brand or press inquiries. Image takedown requests and corrections are welcome and get read. Every message gets a reply.",
+    email: "finandstem@gmail.com",
   },
 } as const;

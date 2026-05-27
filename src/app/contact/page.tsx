@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Mail } from "lucide-react";
 import { contact } from "@/content/contact";
 import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
@@ -70,6 +71,13 @@ export default function ContactPage() {
         <p className="mt-3 text-pretty text-base leading-relaxed text-muted-foreground">
           {contact.direct.body}
         </p>
+        <a
+          href={`mailto:${contact.direct.email}`}
+          className="press mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2.5 text-sm font-medium backdrop-blur transition-colors hover:border-[var(--brand)]/40"
+        >
+          <Mail className="size-4 text-[var(--brand)]" aria-hidden />
+          {contact.direct.email}
+        </a>
       </SectionShell>
     </>
   );

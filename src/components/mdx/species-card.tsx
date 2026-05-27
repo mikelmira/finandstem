@@ -69,14 +69,6 @@ export function SpeciesCard({ slug, category }: SpeciesCardProps) {
       <div className="flex flex-1 flex-col justify-center gap-1.5 p-4 sm:p-5">
         <span className="inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--brand)]">
           {meta.singular}
-          {entry.keptByAuthor && (
-            <span
-              aria-label="Mike keeps this species"
-              className="rounded-full bg-[var(--brand)]/10 px-1.5 py-0.5 text-[9px] tracking-[0.18em] text-[var(--brand)]"
-            >
-              Kept
-            </span>
-          )}
         </span>
         <h3 className="text-display-tight text-lg leading-tight sm:text-xl">
           {entry.commonName}

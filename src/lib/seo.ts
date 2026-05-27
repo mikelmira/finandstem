@@ -156,9 +156,6 @@ export function speciesPageJsonLd({
         inLanguage: "en",
         author: personEntity(),
         publisher: organizationEntity(),
-        // When Mike has personally kept this species, signal first-hand
-        // review — a strong E-E-A-T cue for both Google and AI Overviews.
-        ...(entry.keptByAuthor && { reviewedBy: authorRef() }),
         about: {
           "@type": "Thing",
           name: entry.scientificName,
@@ -417,7 +414,6 @@ export function guidePageJsonLd({ guide, tldr, faqs, wordCount }: GuideSchemaInp
         publisher: organizationEntity(),
         keywords: guide.keywords.join(", "),
         articleSection: "Guides",
-        ...(guide.keptByAuthor && { reviewedBy: authorRef() }),
         ...(guide.heroImage
           ? {
               image: [

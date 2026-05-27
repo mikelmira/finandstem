@@ -65,8 +65,6 @@ export interface GuideFrontmatter {
    * Defaults to `true`.
    */
   published?: boolean;
-  /** Optional. True when Mike has first-hand experience on this topic. */
-  keptByAuthor?: boolean;
   /**
    * Optional. FAQ pairs surfaced both visually and in `FAQPage` JSON-LD.
    * Encourage 4+ per article. Authors can also add an `## FAQ` heading

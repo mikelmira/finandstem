@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { MapPin, ArrowRight } from "lucide-react";
 import { about } from "@/content/about";
 import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import {
   SectionShell,
   SectionHeading,
-  Eyebrow,
 } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import { aboutPageJsonLd } from "@/lib/seo";
@@ -91,36 +88,6 @@ export default function AboutPage() {
         </div>
       </SectionShell>
 
-      {/* Author */}
-      <SectionShell className="border-t border-border/60">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
-          <div className="glass glass-edge relative aspect-[4/5] overflow-hidden rounded-2xl">
-            <div aria-hidden className="brand-aurora absolute inset-0 opacity-70" />
-            <div className="absolute inset-0 flex items-end p-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/80 px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
-                <MapPin className="size-3.5" aria-hidden />
-                {about.founder.location}
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center">
-            <Eyebrow>{about.founder.eyebrow}</Eyebrow>
-            <h2 className="text-display-tight mt-4 text-balance text-3xl sm:text-4xl">
-              {about.founder.title}
-            </h2>
-            <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-              {about.founder.body}
-            </p>
-            <Link
-              href="/contact"
-              className="press mt-7 inline-flex w-fit items-center gap-2 rounded-full border border-border/70 bg-background/60 px-4 py-2 text-sm font-medium backdrop-blur transition-colors hover:border-[var(--brand)]/40"
-            >
-              Get in touch
-              <ArrowRight className="size-3.5" aria-hidden />
-            </Link>
-          </div>
-        </div>
-      </SectionShell>
     </>
   );
 }

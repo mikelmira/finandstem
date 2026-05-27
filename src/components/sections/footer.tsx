@@ -58,8 +58,21 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <div className="mt-14 border-t border-border/60 pt-6 text-xs text-muted-foreground">
-          <p>
+        {/* Disclaimer + contact strip — image takedown requests,
+            corrections, suggestions all funnel to one address. */}
+        <div className="mt-14 border-t border-border/60 pt-6 text-xs leading-relaxed text-muted-foreground">
+          <p className="max-w-3xl">
+            If you&rsquo;d like an image removed, spot information that needs
+            correcting, or have suggestions for the catalogue, please contact{" "}
+            <a
+              href={`mailto:${site.contact.email}`}
+              className="font-medium text-foreground transition-colors hover:text-[var(--brand)]"
+            >
+              {site.contact.email}
+            </a>
+            .
+          </p>
+          <p className="mt-4 text-muted-foreground/80">
             © {new Date().getFullYear()} {site.name}. {site.owner.location}.
           </p>
         </div>

@@ -49,7 +49,6 @@ import { Faq } from "@/components/seo/faq";
 import { Sources } from "@/components/seo/sources";
 import { AuthorByline } from "@/components/seo/author-byline";
 import { Tldr } from "@/components/seo/tldr";
-import { FirstHandNote } from "@/components/seo/first-hand-note";
 import { getEntryDates } from "@/data/timestamps";
 import { speciesPageJsonLd, type SourceItem } from "@/lib/seo";
 import { buildTldr, buildFaqs } from "@/lib/species-faq";
@@ -120,11 +119,10 @@ export function EntryDetail({
 
   // Reading time — words / 220 wpm, clamped to ≥1 min. Counts the
   // headline prose blocks readers actually scan: TL;DR, care summary,
-  // first-hand note (if present), and each themed detail section body.
+  // and each themed detail section body.
   const wordCount =
     tldr.split(/\s+/).length +
     entry.careSummary.split(/\s+/).length +
-    (entry.firstHandNote?.split(/\s+/).length ?? 0) +
     sections.reduce((acc, s) => acc + (s.body?.split(/\s+/).length ?? 0), 0);
   const readingTimeMin = Math.max(1, Math.round(wordCount / 220));
   const sources: SourceItem[] = [
@@ -249,19 +247,10 @@ export function EntryDetail({
 
       {/* ─── TL;DR — visible direct-answer paragraph ──────────────
           Lives in HTML, not just JSON-LD, so AI Overviews and answer
-          engines can extract the 150-250-word factual lead. Pairs
-          with the FirstHandNote (when present) for E-E-A-T signal. */}
+          engines can extract the 150-250-word factual lead. */}
       <section className="border-b border-border/60">
-        <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.6fr_1fr] lg:gap-8">
-            <Tldr body={tldr} subject={entry.commonName} />
-            {entry.keptByAuthor && entry.firstHandNote && (
-              <FirstHandNote
-                note={entry.firstHandNote}
-                speciesName={entry.commonName}
-              />
-            )}
-          </div>
+        <div className="mx-auto w-full max-w-3xl px-6 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16">
+          <Tldr body={tldr} subject={entry.commonName} />
         </div>
       </section>
 

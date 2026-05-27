@@ -11,8 +11,9 @@ export const site = {
     name: "Mike Elmira",
     location: "South Africa",
   },
-  /** Public-facing routes for getting in touch. Email lives behind the form. */
+  /** Public-facing routes for getting in touch. */
   contact: {
+    email: "finandstem@gmail.com",
     formHref: "/contact",
   },
   social: {
