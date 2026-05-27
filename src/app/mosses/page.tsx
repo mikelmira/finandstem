@@ -20,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Mosses",
   description:
-    "Aquatic mosses for hardscape, shrimp nurseries, and aquascaping detail work — Java, Christmas, Flame, Weeping, Phoenix, Süßwassertang and more. Filter by attachment surface, typical use, light, and CO₂. Built for aquascapers worldwide.",
+    "Aquatic mosses for hardscape, shrimp nurseries, and aquascaping detail — Java, Christmas, Flame, Weeping, Phoenix, and more. Filter by use, light, and CO₂.",
   alternates: {
     canonical: `${site.url}/mosses`,
   },

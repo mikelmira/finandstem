@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "What Fin & Stem is, how it's sourced, and who runs it. A working planted-aquarium reference, built to help aquascapers anywhere in the world stock and care for the tank they imagined.",
+    "What Fin & Stem is and how it's sourced. A working planted-aquarium reference for aquascapers anywhere in the world.",
   alternates: { canonical: `${site.url}/about` },
   openGraph: {
     type: "profile",

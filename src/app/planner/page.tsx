@@ -22,7 +22,7 @@ import { recommendFish } from "@/lib/catalogue/recommend";
 export const metadata: Metadata = {
   title: "Tank Planner",
   description:
-    "Build your tank species by species. Add fish, plants, shrimp, and mosses — we cross-reference parameters and flag every compatibility issue, plus surface the water, light, CO₂, and substrate the combined tank actually needs.",
+    "Build your tank species by species. Add fish, plants, shrimp, and mosses — we cross-reference parameters and flag every compatibility issue.",
 };
 
 const OPTIONS: BuilderOption[] = allNorm

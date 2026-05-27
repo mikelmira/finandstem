@@ -7,7 +7,7 @@ import { ArrowUpRight, Plus, Sparkles } from "lucide-react";
 import { CATEGORY_META } from "@/types/catalogue";
 import { FishMark } from "@/components/icons/species-icons";
 import { Difficulty } from "@/components/catalogue/difficulty";
-import { getImage } from "@/data";
+import { IMAGE_ATTRIBUTION } from "@/data/image-attribution";
 import type { FishRecommendation } from "@/lib/catalogue/recommend";
 
 interface RecommendedSpeciesProps {
@@ -100,7 +100,7 @@ function RecommendationCard({
 }) {
   const { fish } = rec;
   const meta = CATEGORY_META.fish;
-  const image = getImage(fish.slug);
+  const image = IMAGE_ATTRIBUTION[fish.slug];
 
   return (
     <article className="glass glass-edge animate-fade-up group relative flex h-full flex-col overflow-hidden rounded-2xl">

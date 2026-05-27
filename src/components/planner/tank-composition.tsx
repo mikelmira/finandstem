@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { CATEGORY_META, type CatalogueEntry } from "@/types/catalogue";
-import { getImage } from "@/data";
+import { IMAGE_ATTRIBUTION } from "@/data/image-attribution";
 import { cn } from "@/lib/utils";
 
 export interface TankCompositionItem {
@@ -131,7 +131,7 @@ export function TankComposition({ items }: TankCompositionProps) {
         const { entry, count, defaultCount, recommendedCount, hasCustomCount } =
           item;
         const meta = CATEGORY_META[entry.category];
-        const img = getImage(entry.slug);
+        const img = IMAGE_ATTRIBUTION[entry.slug];
         const Icon = CAT_ICON[entry.category];
         const tone = CAT_TONE[entry.category];
         const countable = COUNTABLE[entry.category];

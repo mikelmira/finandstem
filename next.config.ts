@@ -71,6 +71,9 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
+          // Explicit indexability signal — some auditors expect this
+          // header in addition to robots.txt. Mirrors metadata.robots.
+          { key: "X-Robots-Tag", value: "index, follow" },
         ],
       },
     ];

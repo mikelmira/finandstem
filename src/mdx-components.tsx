@@ -12,7 +12,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { SpeciesCard } from "@/components/mdx/species-card";
 import { PillarLink } from "@/components/mdx/pillar-link";
-import { BuildLink } from "@/components/mdx/build-link";
 import { ExternalLink } from "@/components/mdx/external-link";
 import { Faq } from "@/components/seo/faq";
 import { Sources } from "@/components/seo/sources";
@@ -24,7 +23,6 @@ export function useMDXComponents(
     // ─── Custom React components available inside MDX ──────────────
     SpeciesCard,
     PillarLink,
-    BuildLink,
     ExternalLink,
     Faq,
     Sources,

@@ -20,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Plants",
   description:
-    "Aquatic plants for every planted aquarium — foreground carpets, midground epiphytes, background stems, floating cover, and bulb plants. Filter by light, CO₂, position, growth rate, and water parameters. Built to help aquascapers worldwide find plants that thrive in their water.",
+    "Aquatic plants for every planted aquarium — carpets, epiphytes, stems, floaters, and bulbs. Filter by light, CO₂, position, and water parameters.",
   alternates: {
     canonical: `${site.url}/plants`,
   },

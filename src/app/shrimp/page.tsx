@@ -20,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Shrimp",
   description:
-    "Freshwater shrimp for the planted tank — Neocaridina colour morphs, Caridina specialists, Amano algae crew, and filter-feeding bamboo shrimp. Filter by lineage, breeding difficulty, TDS, parameters, and algae-eating capability. Helping aquascapers everywhere build healthy shrimp colonies.",
+    "Freshwater shrimp for the planted tank — Neocaridina morphs, Caridina specialists, Amano, and bamboo filter-feeders. Filter by lineage and TDS.",
   alternates: {
     canonical: `${site.url}/shrimp`,
   },

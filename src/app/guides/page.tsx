@@ -12,7 +12,7 @@ import { guidesIndexJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Guides",
   description:
-    "Long-form guides answering the questions aquascapers actually ask — compatibility, comparisons, tank-setup walkthroughs, and biotope deep-dives. Every article cross-references the catalogue.",
+    "Long-form guides answering the questions aquascapers ask — compatibility, comparisons, tank-setup walkthroughs, biotope deep-dives.",
   alternates: { canonical: `${site.url}/guides` },
   openGraph: {
     type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Guides — Fin & Stem",
     description:
-      "Long-form guides answering the questions aquascapers actually ask — compatibility, comparisons, tank-setup walkthroughs, and biotope deep-dives.",
+      "Long-form guides answering the questions aquascapers ask — compatibility, comparisons, tank-setup walkthroughs, biotope deep-dives.",
   },
 };
 

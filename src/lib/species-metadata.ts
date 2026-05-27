@@ -13,8 +13,10 @@ import { CATEGORY_META, type CatalogueEntry } from "@/types/catalogue";
 import { buildTldr } from "@/lib/species-faq";
 import { getEntryDates } from "@/data/timestamps";
 
-/** Trim text to ≤160 chars on a word boundary for meta description. */
-function trim(text: string, max = 160): string {
+/** Trim text to ≤155 chars on a word boundary for meta description.
+ *  Some audit tools (Semrush, Sitechecker) flag descriptions over 155
+ *  as truncated, so this is the safer cap. */
+function trim(text: string, max = 155): string {
   const flat = text.replace(/\s+/g, " ").trim();
   if (flat.length <= max) return flat;
   const cut = flat.slice(0, max);

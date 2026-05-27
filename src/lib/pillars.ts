@@ -34,7 +34,7 @@ export const PILLARS: ReadonlyArray<Pillar> = [
     title: "The Planted Aquarium — A Complete Guide",
     heroEyebrow: "Pillar guide",
     description:
-      "A complete reference for the planted freshwater aquarium — lighting, CO₂, substrate, dosing, plant selection, and algae control — built on top of Fin & Stem's catalogue.",
+      "A complete planted-aquarium reference: lighting, CO₂, substrate, dosing, plant selection, and algae control — built on the Fin & Stem catalogue.",
     tldr:
       "A planted tank is a system: light drives photosynthesis, CO₂ feeds the plants, substrate anchors them, and dosing fills the gaps. Get those four right and most of the so-called 'plant problems' disappear. This guide walks through each lever in plain English, then hands you straight to the catalogue so you can pick species that actually fit the parameters you can hold. Every plant profile cross-references compatible fish, shrimp, and mosses — so by the time you've stocked, the tank already works.",
     intro: [
@@ -108,7 +108,7 @@ export const PILLARS: ReadonlyArray<Pillar> = [
     title: "Freshwater Shrimp — A Complete Keeping Guide",
     heroEyebrow: "Pillar guide",
     description:
-      "Everything on keeping Neocaridina, Caridina, and other freshwater shrimp — water chemistry, colony management, breeding, tank-mate safety, and colour grading.",
+      "Everything on keeping Neocaridina and Caridina shrimp: water chemistry, colony management, breeding, tank-mate safety, and colour grading.",
     tldr:
       "Freshwater shrimp split into two main families: easy-going Neocaridina (cherry, blue dream, yellow, sakura) that breed in standard tap-water tanks, and demanding Caridina (crystal red, blue bolt, black king kong) that need re-mineralised RO and tight TDS control. Pick the right one for your water and the rest is straightforward — mature tank, no fish that eat them, copper-free food, and patience. Every Fin & Stem shrimp profile lists exact TDS, GH, KH, and temperature ranges so you can match species to water.",
     intro: [
@@ -219,7 +219,7 @@ export const PILLARS: ReadonlyArray<Pillar> = [
     title: "Aquarium Equipment — Lighting, Filtration, CO₂, Heating",
     heroEyebrow: "Pillar guide",
     description:
-      "How to size and choose aquarium equipment for the planted tank — lighting PAR, filter GPH, CO₂ regulators, heaters, and the trade-offs that actually matter.",
+      "How to size and choose planted-tank equipment: lighting PAR, filter GPH, CO₂ regulators, heaters, and the trade-offs that actually matter.",
     tldr:
       "Equipment choice is mostly about sizing — match wattage, flow, and PAR to the tank's volume and plant demand. Buy once, cry once on lights and CO₂ regulators; everything else can be upgraded later. This guide walks through each category and the floor-spec you shouldn't go below. The full equipment catalogue (with named brands and PAR/GPH numbers) launches month 3.)",
     intro: [

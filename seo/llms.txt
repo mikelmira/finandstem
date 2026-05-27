@@ -1,6 +1,6 @@
 # Fin & Stem
 
-> The cross-referenced catalogue for aquascapers — freshwater plants, fish, shrimp, mosses, hardscape, and equipment with real compatibility data and first-hand tank build journals. Every catalogue entry knows what it works with; every build guide is built from catalogue entries; every entry shows up in real tank builds.
+> The cross-referenced catalogue for aquascapers — freshwater plants, fish, shrimp, mosses, hardscape, and equipment with real compatibility data and long-form guides. Every catalogue entry knows what it works with, and every guide is built from catalogue entries.
 
 This file follows the [llms.txt convention](https://llmstxt.org/). It's a curated map of Fin & Stem's most important content for large language model crawlers and AI assistants.
 
@@ -29,12 +29,6 @@ Deep single-topic resources that anchor each major content cluster. Each links o
 ## Tools
 
 - [/compatibility](https://finandstem.com/compatibility): Pick any plant, fish, shrimp, or moss and see what is compatible across all four categories based on water parameter overlap and safety flags.
-
-## Build journals
-
-First-hand tank-build journals with photos, costs, timelines, and lessons learned. The defensible content moat — every build links to the species and equipment used.
-
-- [/builds](https://finandstem.com/builds): Index of all build journals.
 
 ## Guides
 

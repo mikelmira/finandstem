@@ -22,14 +22,14 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Compatibility — Plant + Fish + Shrimp + Moss Cross-Reference",
   description:
-    "The aquascaper's compatibility tool — cross-reference fish, plants, shrimp, and mosses by overlapping water parameters and tank-mate safety. Pick any anchor species and see what else fits in the same tank.",
+    "Cross-reference fish, plants, shrimp, and mosses by water-parameter overlap and tank-mate safety. Pick any species, see what else fits the same tank.",
   alternates: { canonical: `${site.url}/compatibility` },
   openGraph: {
     type: "website",
     url: `${site.url}/compatibility`,
     title: "Compatibility cross-reference",
     description:
-      "Pick a fish, plant, shrimp, or moss — Fin & Stem returns everything compatible across all four categories based on water-parameter overlap and safety flags.",
+      "Pick a fish, plant, shrimp, or moss — see what's compatible across all four categories by parameter overlap and safety flags.",
   },
 };
 

@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { fish, plants, shrimp, mosses } from "@/data";
-import { builds } from "@/data/builds";
 import { getEntryDates } from "@/data/timestamps";
 import { listGuides } from "@/lib/guides";
 
@@ -47,9 +46,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Long-form guides hub
     { path: "/guides", priority: 0.9, freq: "weekly" },
 
-    // Build journals hub
-    { path: "/builds", priority: 0.85, freq: "weekly" },
-
     // Tools
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },
@@ -76,13 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const buildPages = builds.map((b) => ({
-    url: `${site.url}/builds/${b.slug}`,
-    lastModified: new Date(b.updatedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.85,
-  }));
-
   const guidePages = listGuides().map((g) => ({
     url: `${site.url}/guides/${g.slug}`,
     lastModified: new Date(g.updatedAt),
@@ -98,7 +87,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: p.priority,
     })),
     ...cataloguePages,
-    ...buildPages,
     ...guidePages,
   ];
 }

@@ -4,7 +4,7 @@ export const site = {
   wordmark: ["Fin", "&", "Stem"],
   tagline: "Helping aquascapers everywhere build the planted tank they imagined.",
   description:
-    "Fin & Stem is a planted-aquarium reference for aquascapers worldwide. 80+ profiled species — fish, plants, shrimp, and mosses — cross-referenced for compatibility, photographed from Wikimedia and iNaturalist, and written by tank-keepers in plain English.",
+    "A planted-aquarium reference for aquascapers worldwide. 100+ profiled fish, plants, shrimp, and mosses, cross-referenced for compatibility.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://finandstem.com",
   owner: {
@@ -27,7 +27,6 @@ export const site = {
     { label: "Shrimp", href: "/shrimp" },
     { label: "Mosses", href: "/mosses" },
     { label: "Guides", href: "/guides" },
-    { label: "Builds", href: "/builds" },
     { label: "Planner", href: "/planner" },
     { label: "Compare", href: "/compare" },
     { label: "Compatibility", href: "/compatibility" },
@@ -58,7 +57,6 @@ export const site = {
           { label: "Home", href: "/" },
           { label: "About", href: "/about" },
           { label: "Guides", href: "/guides" },
-          { label: "Build journals", href: "/builds" },
         ],
       },
       {

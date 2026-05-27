@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { Search, X, Sparkles, ImageOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CATEGORY_META, type CatalogueCategory } from "@/types/catalogue";
-import { getImage } from "@/data";
+import { IMAGE_ATTRIBUTION } from "@/data/image-attribution";
 
 export interface SearchOption {
   category: CatalogueCategory;
@@ -233,7 +233,7 @@ function ResultRow({
   onClick: () => void;
 }) {
   const meta = CATEGORY_META[option.category];
-  const img = getImage(option.slug);
+  const img = IMAGE_ATTRIBUTION[option.slug];
   return (
     <li>
       <button
