@@ -94,14 +94,45 @@ export interface CrumbItem {
   href?: string;
 }
 
-export function breadcrumbsJsonLd(crumbs: CrumbItem[]) {
+/**
+ * Resolve a crumb's `href` to an absolute URL.
+ *
+ * Google's BreadcrumbList rich-result spec requires `item` on EVERY
+ * `ListItem` — including the last (current) breadcrumb. Previously
+ * the last crumb omitted `item` because it's the current page, but
+ * that trips a "Missing field 'item'" error in Search Console.
+ *
+ * If a crumb has no `href`, we fall back to `currentUrl` (when the
+ * caller supplied it), then to the site root.
+ */
+function resolveCrumbHref(
+  href: string | undefined,
+  currentUrl: string | undefined,
+): string {
+  if (href) {
+    return href.startsWith("http") ? href : `${site.url}${href}`;
+  }
+  if (currentUrl) {
+    return currentUrl.startsWith("http") ? currentUrl : `${site.url}${currentUrl}`;
+  }
+  return site.url;
+}
+
+/**
+ * Emit a BreadcrumbList JSON-LD block.
+ *
+ * `currentUrl` should be the page's own canonical URL, used to fill in
+ * `item` on the last (current page) crumb. Callers that don't pass it
+ * get the site-root fallback, which is valid but less useful for Google.
+ */
+export function breadcrumbsJsonLd(crumbs: CrumbItem[], currentUrl?: string) {
   return {
     "@type": "BreadcrumbList",
     itemListElement: crumbs.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      ...(c.href ? { item: c.href.startsWith("http") ? c.href : `${site.url}${c.href}` } : {}),
+      item: resolveCrumbHref(c.href, currentUrl),
     })),
   };
 }
@@ -164,11 +195,14 @@ export function speciesPageJsonLd({
         keywords: (keywords ?? defaultKeywords(entry)).join(", "),
         articleSection: meta.label,
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: meta.label, href: meta.path },
-        { name: entry.commonName },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: meta.label, href: meta.path },
+          { name: entry.commonName },
+        ],
+        url,
+      ),
       ...images.map((img) => ({
         "@type": "ImageObject",
         contentUrl: img.src.startsWith("http") ? img.src : `${site.url}${img.src}`,
@@ -261,18 +295,21 @@ export function pillarPageJsonLd({
         author: personEntity(),
         publisher: organizationEntity(),
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: title },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: title },
+        ],
+        url,
+      ),
       {
         "@type": "ItemList",
         name: `${title}, cluster pages`,
         itemListElement: cluster.map((p, i) => ({
           "@type": "ListItem",
           position: i + 1,
-          url: p.url.startsWith("http") ? p.url : `${site.url}${p.url}`,
           name: p.name,
+          item: p.url.startsWith("http") ? p.url : `${site.url}${p.url}`,
         })),
       },
       faqs.length > 0
@@ -308,17 +345,20 @@ export function categoryIndexJsonLd(category: CatalogueCategory, entries: Readon
         inLanguage: "en",
         isPartOf: { "@id": WEBSITE_ID },
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: meta.label },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: meta.label },
+        ],
+        url,
+      ),
       {
         "@type": "ItemList",
         itemListElement: entries.slice(0, 100).map((e, i) => ({
           "@type": "ListItem",
           position: i + 1,
-          url: `${site.url}${meta.path}/${e.slug}`,
           name: e.commonName,
+          item: `${site.url}${meta.path}/${e.slug}`,
         })),
       },
     ],
@@ -375,10 +415,13 @@ export function compatibilityToolJsonLd() {
           "moss",
         ].join(", "),
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: "Compatibility" },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Compatibility" },
+        ],
+        `${site.url}/compatibility`,
+      ),
     ],
   };
 }
@@ -426,11 +469,14 @@ export function guidePageJsonLd({ guide, tldr, faqs, wordCount }: GuideSchemaInp
             }
           : {}),
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: "Guides", href: "/guides" },
-        { name: guide.title },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Guides", href: "/guides" },
+          { name: guide.title },
+        ],
+        url,
+      ),
       faqs.length > 0
         ? {
             "@type": "FAQPage",
@@ -462,7 +508,10 @@ export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
         inLanguage: "en",
         isPartOf: { "@id": WEBSITE_ID },
       },
-      breadcrumbsJsonLd([{ name: "Home", href: "/" }, { name: "Guides" }]),
+      breadcrumbsJsonLd(
+        [{ name: "Home", href: "/" }, { name: "Guides" }],
+        url,
+      ),
       ...(items.length > 0
         ? [
             {
@@ -470,8 +519,8 @@ export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
               itemListElement: items.map((g, i) => ({
                 "@type": "ListItem",
                 position: i + 1,
-                url: `${site.url}/guides/${g.slug}`,
                 name: g.title,
+                item: `${site.url}/guides/${g.slug}`,
               })),
             },
           ]
@@ -514,7 +563,7 @@ export function homePageJsonLd() {
           url: `${site.url}/fin-and-stem-logo.png`,
         },
       },
-      breadcrumbsJsonLd([{ name: "Home" }]),
+      breadcrumbsJsonLd([{ name: "Home", href: "/" }], `${site.url}/`),
     ],
   };
 }

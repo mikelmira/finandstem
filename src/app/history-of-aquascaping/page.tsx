@@ -94,10 +94,13 @@ function jsonLd() {
         keywords:
           "history of aquascaping, Takashi Amano, ADA, Nature Aquarium, Iwagumi, IAPLC, Dutch aquarium, Amano shrimp",
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: "History" },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "History" },
+        ],
+        url,
+      ),
       {
         "@type": "FAQPage",
         "@id": `${url}#faq`,

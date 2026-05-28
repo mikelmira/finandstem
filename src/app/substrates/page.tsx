@@ -57,17 +57,20 @@ function substratesIndexJsonLd() {
         publisher: organizationRef(),
         inLanguage: "en",
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: "Substrates" },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Substrates" },
+        ],
+        url,
+      ),
       {
         "@type": "ItemList",
         itemListElement: substrates.map((s, i) => ({
           "@type": "ListItem",
           position: i + 1,
-          url: `${site.url}/substrates/${s.slug}`,
           name: s.name,
+          item: `${site.url}/substrates/${s.slug}`,
         })),
       },
     ],

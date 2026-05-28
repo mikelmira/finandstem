@@ -202,6 +202,7 @@ export function EntryDetail({
               { label: entry.commonName },
             ]}
             tone="light"
+            currentUrl={`${meta.path}/${entry.slug}`}
           />
 
           {/* Bottom, title block, pushed down by mt-auto */}

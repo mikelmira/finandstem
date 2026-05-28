@@ -74,11 +74,14 @@ function substratePageJsonLd(slug: string) {
         publisher: organizationEntity(),
         articleSection: "Substrates",
       },
-      breadcrumbsJsonLd([
-        { name: "Home", href: "/" },
-        { name: "Substrates", href: "/substrates" },
-        { name: entry.name },
-      ]),
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Substrates", href: "/substrates" },
+          { name: entry.name },
+        ],
+        url,
+      ),
       {
         "@type": "Product",
         "@id": `${url}#product`,

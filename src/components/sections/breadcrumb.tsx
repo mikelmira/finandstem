@@ -14,6 +14,13 @@ interface BreadcrumbProps {
   /** Render a slightly lighter set of crumb colours for use over the
    *  brand-aurora hero background. Defaults to the dark on cream tone. */
   tone?: "light" | "dark";
+  /**
+   * Absolute or root-relative URL of the current page, used to fill in
+   * `item` on the last (current-page) crumb of the BreadcrumbList
+   * JSON-LD. Google's rich-result spec requires `item` on every
+   * `ListItem`. Falls back to the site root if omitted.
+   */
+  currentUrl?: string;
   className?: string;
 }
 
@@ -29,6 +36,7 @@ interface BreadcrumbProps {
 export function Breadcrumb({
   items,
   tone = "dark",
+  currentUrl,
   className,
 }: BreadcrumbProps) {
   if (items.length === 0) return null;
@@ -39,6 +47,21 @@ export function Breadcrumb({
   ];
   const lastIndex = crumbs.length - 1;
 
+  // Google's BreadcrumbList rich-result spec requires `item` on every
+  // ListItem, including the last (current-page) crumb. Fall back to
+  // `currentUrl` (if provided by the caller) or the site root.
+  const resolveItem = (href: string | undefined): string => {
+    if (href) {
+      return href.startsWith("http") ? href : `${baseUrl}${href}`;
+    }
+    if (currentUrl) {
+      return currentUrl.startsWith("http")
+        ? currentUrl
+        : `${baseUrl}${currentUrl}`;
+    }
+    return baseUrl;
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -46,7 +69,7 @@ export function Breadcrumb({
       "@type": "ListItem",
       position: i + 1,
       name: c.label,
-      ...(c.href ? { item: `${baseUrl}${c.href}` } : {}),
+      item: resolveItem(c.href),
     })),
   };
 
