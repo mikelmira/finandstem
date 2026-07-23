@@ -68,6 +68,56 @@ export function writeCompareIds(ids: string[]): void {
   } catch {
     /* storage full or disabled, comparison just won't persist */
   }
+  emitCompareChange();
+}
+
+// ── useSyncExternalStore bridge ─────────────────────────────────────
+// Lets components subscribe to the comparison set reactively (multiple
+// CompareButtons on one page stay in sync, and cross-tab edits arrive
+// via the `storage` event).
+
+type Listener = () => void;
+const listeners = new Set<Listener>();
+
+function emitCompareChange(): void {
+  snapshotRaw = undefined; // invalidate cache
+  for (const l of listeners) l();
+}
+
+export function subscribeToCompareIds(listener: Listener): () => void {
+  listeners.add(listener);
+  const onStorage = (e: StorageEvent) => {
+    if (e.key === IDS_KEY || e.key === null) emitCompareChange();
+  };
+  window.addEventListener("storage", onStorage);
+  return () => {
+    listeners.delete(listener);
+    window.removeEventListener("storage", onStorage);
+  };
+}
+
+// getSnapshot must return a referentially-stable value while the
+// underlying data is unchanged, so cache by the raw JSON string.
+let snapshotRaw: string | null | undefined;
+let snapshotIds: string[] = [];
+const EMPTY_IDS: string[] = [];
+
+export function getCompareIdsSnapshot(): string[] {
+  let raw: string | null = null;
+  try {
+    raw = window.localStorage.getItem(IDS_KEY);
+  } catch {
+    raw = null;
+  }
+  if (raw !== snapshotRaw) {
+    snapshotRaw = raw;
+    snapshotIds = readCompareIds();
+  }
+  return snapshotIds;
+}
+
+export function getCompareIdsServerSnapshot(): string[] {
+  return EMPTY_IDS;
 }
 
 /**

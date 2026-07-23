@@ -70,6 +70,14 @@ export function LivestockDropdown() {
   const rootRef = React.useRef<HTMLDivElement>(null);
   const closeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Auto-close when the route changes — state adjustment during render
+  // (the React-documented alternative to a setState-in-effect).
+  const [prevPathname, setPrevPathname] = React.useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
+
   const isActive = ITEMS.some((item) => pathname.startsWith(item.href));
 
   // Close on Esc
@@ -100,11 +108,6 @@ export function LivestockDropdown() {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => setOpen(false), 120);
   }
-
-  // Auto-close when route changes
-  React.useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   return (
     <div

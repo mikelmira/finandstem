@@ -16,7 +16,12 @@ import { ExternalLink } from "@/components/mdx/external-link";
 import { Faq } from "@/components/seo/faq";
 import { Sources } from "@/components/seo/sources";
 
-export function useMDXComponents(
+/**
+ * Plain-function form for calling from async Server Components, where the
+ * `use`-prefixed convention name would trip the rules-of-hooks lint (it is
+ * not actually a hook — just an MDX naming convention).
+ */
+export function getMDXComponents(
   components: MDXComponents = {},
 ): MDXComponents {
   return {
@@ -180,3 +185,9 @@ export function useMDXComponents(
     ...components,
   };
 }
+
+/**
+ * Next.js convention export — both the `@next/mdx` and `next-mdx-remote`
+ * pipelines look for `useMDXComponents` in `src/mdx-components.tsx`.
+ */
+export const useMDXComponents = getMDXComponents;

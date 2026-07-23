@@ -7,7 +7,9 @@ import { cn } from "@/lib/utils";
 import type { CatalogueCategory } from "@/types/catalogue";
 import {
   appendCompareId,
-  readCompareIds,
+  getCompareIdsSnapshot,
+  getCompareIdsServerSnapshot,
+  subscribeToCompareIds,
   writeCompareIds,
   COMPARE_MAX,
 } from "@/lib/compare-storage";
@@ -27,28 +29,21 @@ export function CompareButton({
 }: CompareButtonProps) {
   const router = useRouter();
   const id = `${category}:${slug}`;
-  const [present, setPresent] = React.useState(false);
-  const [hydrated, setHydrated] = React.useState(false);
-
-  React.useEffect(() => {
-    const current = readCompareIds();
-    setPresent(current.includes(id));
-    setHydrated(true);
-  }, [id]);
+  const ids = React.useSyncExternalStore(
+    subscribeToCompareIds,
+    getCompareIdsSnapshot,
+    getCompareIdsServerSnapshot,
+  );
+  const present = ids.includes(id);
 
   function onClick() {
-    const current = readCompareIds();
-    const next = present ? current : appendCompareId(current, id);
+    const next = present ? ids : appendCompareId(ids, id);
     writeCompareIds(next);
     const qs = encodeURIComponent(next.join(","));
     router.push(next.length ? `/compare?ids=${qs}` : "/compare");
   }
 
-  const label = present
-    ? "In your compare"
-    : hydrated
-      ? "Add to compare"
-      : "Compare";
+  const label = present ? "In your compare" : "Add to compare";
 
   return (
     <button

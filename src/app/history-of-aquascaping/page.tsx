@@ -236,7 +236,7 @@ export default function HistoryOfAquascapingPage() {
             Inside Florestas Submersas
           </p>
           <h2 className="text-display-tight mt-4 text-balance text-3xl leading-[1.2] sm:text-4xl">
-            ADA's biggest Nature Aquarium, in three views
+            ADA’s biggest Nature Aquarium, in three views
           </h2>
           <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
             {florestasGallery.intro}
@@ -494,7 +494,7 @@ export default function HistoryOfAquascapingPage() {
           <p className="mt-3 text-base text-muted-foreground sm:text-lg">
             Every species in the catalogue is cross-referenced for compatibility, 
             so you can put together the Nature Aquarium, Iwagumi, or biotope
-            you've been thinking about.
+            you’ve been thinking about.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link

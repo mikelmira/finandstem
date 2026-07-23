@@ -197,7 +197,6 @@ export const CATEGORY_META: Record<
    compile time.
    ────────────────────────────────────────────────────────────────────── */
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import type { SubstrateEntry } from "./substrate";
 
 export type CompareEntry = CatalogueEntry | SubstrateEntry;

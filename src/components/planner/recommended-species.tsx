@@ -71,7 +71,7 @@ export function RecommendedSpecies({ recommendations }: RecommendedSpeciesProps)
             Recommended next
           </h2>
           <p className="text-sm text-muted-foreground sm:text-base">
-            Fish that fit your tank's parameters, stocking headroom, and
+            Fish that fit your tank’s parameters, stocking headroom, and
             already-selected species, scored against the running state.
           </p>
         </div>

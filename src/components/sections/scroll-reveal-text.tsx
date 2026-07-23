@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { usePrefersReducedMotion } from "@/lib/client-hooks";
 
 interface ScrollRevealTextProps {
   /** The full paragraph to reveal word-by-word as the user scrolls. */
@@ -31,25 +32,17 @@ export function ScrollRevealText({
   className,
 }: ScrollRevealTextProps) {
   const sectionRef = React.useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = React.useState(0);
-  const [reducedMotion, setReducedMotion] = React.useState(false);
+  const [scrollProgress, setScrollProgress] = React.useState(0);
+  const reducedMotion = usePrefersReducedMotion();
 
-  // Detect reduced-motion once on mount.
-  React.useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mq.matches);
-    const onChange = () => setReducedMotion(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
+  // Reduced-motion users see the text fully lit with no scroll driver —
+  // derived here rather than set in an effect.
+  const progress = reducedMotion ? 1 : scrollProgress;
 
   // Scroll-progress driver. Throttled via requestAnimationFrame so
   // we don't run the calculation more than once per frame.
   React.useEffect(() => {
-    if (reducedMotion) {
-      setProgress(1);
-      return;
-    }
+    if (reducedMotion) return;
     const section = sectionRef.current;
     if (!section) return;
     let raf = 0;
@@ -60,12 +53,12 @@ export function ScrollRevealText({
       if (total <= 0) {
         // Section shorter than viewport — just snap to fully revealed
         // once the section's top reaches the top of the viewport.
-        setProgress(r.top <= 0 ? 1 : 0);
+        setScrollProgress(r.top <= 0 ? 1 : 0);
         return;
       }
       const scrolled = -r.top;
       const p = Math.max(0, Math.min(1, scrolled / total));
-      setProgress(p);
+      setScrollProgress(p);
     };
     const onScroll = () => {
       if (raf) return;

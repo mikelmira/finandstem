@@ -415,28 +415,3 @@ function Conflict({ label }: { label: string }) {
   );
 }
 
-function Chip({
-  icon: Icon,
-  tone,
-  children,
-}: {
-  icon?: LucideIcon;
-  tone?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <span
-      className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium",
-        tone === "brand"
-          ? "border-[var(--brand)]/45 bg-[var(--brand)]/12 text-foreground"
-          : tone
-            ? tone
-            : "border-border bg-background/60 text-foreground/85",
-      )}
-    >
-      {Icon && <Icon className="size-3.5" strokeWidth={1.85} aria-hidden />}
-      {children}
-    </span>
-  );
-}

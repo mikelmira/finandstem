@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useHydrated } from "@/lib/client-hooks";
 import {
   FishMark,
   PlantMark,
@@ -61,11 +62,7 @@ const LIVESTOCK_ORDER = ["/fish", "/plants", "/shrimp", "/mosses", "/snails"];
 export function MobileNav({ links, primaryCta }: MobileNavProps) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useHydrated();
 
   // Lock body scroll while open
   React.useEffect(() => {

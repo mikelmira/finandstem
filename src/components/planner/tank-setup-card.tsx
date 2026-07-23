@@ -234,7 +234,7 @@ export function TankSetupCard({ tankL, filterLph }: TankSetupCardProps) {
           </div>
           {!tankL && (
             <p className="text-[11px] text-muted-foreground/70">
-              Pick a tank size first, we'll suggest a matching filter range.
+              Pick a tank size first, we’ll suggest a matching filter range.
             </p>
           )}
         </div>

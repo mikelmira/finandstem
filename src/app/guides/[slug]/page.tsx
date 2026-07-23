@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-import { useMDXComponents } from "@/mdx-components";
+import { getMDXComponents } from "@/mdx-components";
 import { listGuides, getGuide, countWords } from "@/lib/guides";
 import { guidePageJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -159,7 +159,7 @@ export default async function GuidePage({ params }: RouteParams) {
         <div className="guide-prose">
           <MDXRemote
             source={entry.raw}
-            components={useMDXComponents({})}
+            components={getMDXComponents()}
             options={{
               parseFrontmatter: false,
               mdxOptions: {

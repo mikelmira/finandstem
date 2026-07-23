@@ -7,8 +7,10 @@ import { cn } from "@/lib/utils";
 import type { CatalogueCategory } from "@/types/catalogue";
 import {
   appendPlannerId,
+  getPlannerIdsSnapshot,
+  getPlannerIdsServerSnapshot,
   plannerHasId,
-  readPlannerIds,
+  subscribeToPlannerIds,
   writePlannerIds,
 } from "@/lib/planner-storage";
 
@@ -38,28 +40,21 @@ export function PlanButton({
 }: PlanButtonProps) {
   const router = useRouter();
   const id = `${category}:${slug}`;
-  const [present, setPresent] = React.useState(false);
-  const [hydrated, setHydrated] = React.useState(false);
-
-  React.useEffect(() => {
-    const current = readPlannerIds();
-    setPresent(plannerHasId(current, id));
-    setHydrated(true);
-  }, [id]);
+  const ids = React.useSyncExternalStore(
+    subscribeToPlannerIds,
+    getPlannerIdsSnapshot,
+    getPlannerIdsServerSnapshot,
+  );
+  const present = plannerHasId(ids, id);
 
   function onClick() {
-    const current = readPlannerIds();
-    const next = present ? current : appendPlannerId(current, id);
+    const next = present ? ids : appendPlannerId(ids, id);
     writePlannerIds(next);
     const qs = encodeURIComponent(next.join(","));
     router.push(next.length ? `/planner?species=${qs}` : "/planner");
   }
 
-  const label = present
-    ? "In your tank"
-    : hydrated
-      ? "Add to tank"
-      : "Plan a tank";
+  const label = present ? "In your tank" : "Add to tank";
 
   return (
     <button

@@ -223,8 +223,8 @@ function TankTooSmallPanel({
       </header>
 
       <p className="text-sm leading-relaxed text-foreground/85">
-        The bioload would be fine, but at least one species can't physically
-        live in a {tankL} L tank. Aquarium minimums aren't about waste, they
+        The bioload would be fine, but at least one species can’t physically
+        live in a {tankL} L tank. Aquarium minimums aren’t about waste, they
         cover horizontal swimming room, schooling behaviour, and territory.
       </p>
 
@@ -295,7 +295,7 @@ function Breakdown({ stocking }: { stocking: StockingReport }) {
         ))}
       </ul>
       <p className="mt-2 px-2 text-[10px] leading-snug text-muted-foreground/70">
-        Counts default to each species' minimum responsible group
+        Counts default to each species’ minimum responsible group
         (schoolers stocked at their school minimum, shrimp at their
         colony minimum). Adjust by adding or removing species.
       </p>

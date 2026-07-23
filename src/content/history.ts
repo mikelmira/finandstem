@@ -131,18 +131,6 @@ const agaContestWinner: HistoryImage = {
     "Cho Jaesun, 2020 AGA International Aquascaping Contest, top-ten finisher. Contemporary contest scapes lean on layered planting and forced perspective.",
 };
 
-const shrimpTank: HistoryImage = {
-  src: "/images/history/planted-shrimp-tank.webp",
-  alt: "A modern planted aquarium with Neocaridina shrimp foraging across the substrate",
-  author: "Snehayan",
-  license: "CC BY 4.0",
-  licenseUrl: "https://creativecommons.org/licenses/by/4.0",
-  source:
-    "https://commons.wikimedia.org/wiki/File:Live_planted_aquarium_with_neocaridina_shrimp.jpg",
-  caption:
-    "A planted tank stocked with dwarf shrimp, the algae-control standard Amano established in the 1980s with Caridina multidentata.",
-};
-
 const iaplcEntry: HistoryImage = {
   src: "/images/history/iaplc-2021-entry.webp",
   alt: "Time, a 2021 IAPLC entry by Cho Jaesun, photographed for the contest archive",

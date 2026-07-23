@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Search, X, Sparkles, ImageOff } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useHydrated } from "@/lib/client-hooks";
 import { CATEGORY_META, type CatalogueCategory } from "@/types/catalogue";
 import { IMAGE_ATTRIBUTION } from "@/data/image-attribution";
 
@@ -27,12 +28,8 @@ export function GlobalSearch({ options }: GlobalSearchProps) {
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
   const [activeIndex, setActiveIndex] = React.useState(0);
-  const [mounted, setMounted] = React.useState(false);
+  const mounted = useHydrated();
   const inputRef = React.useRef<HTMLInputElement>(null);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Cmd+K / Ctrl+K to open, Esc to close
   React.useEffect(() => {

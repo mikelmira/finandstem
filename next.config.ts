@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // A stray lockfile higher up the filesystem can make Turbopack infer the
+  // wrong workspace root — pin it to this project explicitly.
+  turbopack: {
+    root: __dirname,
+  },
   images: {
     remotePatterns: [
       {

@@ -76,7 +76,7 @@ export function WaterColumnPanel({ report }: WaterColumnPanelProps) {
         >
           {/* Surface line */}
           <span className="absolute inset-x-0 top-1 h-px bg-foreground/15" />
-          {zones.map((z, i) => {
+          {zones.map((z) => {
             const data = report.zones[z];
             const active = data.fishCount > 0;
             const density = Math.min(1, data.fishCount / Math.max(totalFish, 1));

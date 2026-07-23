@@ -132,7 +132,7 @@ export function TankComposition({ items }: TankCompositionProps) {
   return (
     <ul className="stagger flex flex-col gap-3">
       {items.map((item, i) => {
-        const { entry, count, defaultCount, recommendedCount, hasCustomCount } =
+        const { entry, count, recommendedCount, hasCustomCount } =
           item;
         const meta = CATEGORY_META[entry.category];
         const img = IMAGE_ATTRIBUTION[entry.slug];

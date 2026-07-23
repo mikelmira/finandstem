@@ -1,17 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowUpRight,
-  ChevronDown,
-  ExternalLink,
-  MapPin,
-} from "lucide-react";
+import { ArrowUpRight, ChevronDown, MapPin } from "lucide-react";
 import { Breadcrumb } from "@/components/sections/breadcrumb";
 import { WaveMark } from "@/components/wave-mark";
-import {
-  CATEGORY_MARK,
-  getSpeciesPlate,
-} from "@/components/icons/species-icons";
+import { CATEGORY_MARK } from "@/components/icons/species-icons";
 import { PillButton } from "@/components/ui/pill-button";
 import {
   CATEGORY_META,
@@ -23,7 +15,7 @@ import { Difficulty } from "@/components/catalogue/difficulty";
 import { CompareButton } from "@/components/catalogue/compare-button";
 import { PlanButton } from "@/components/catalogue/plan-button";
 import type { Stat } from "@/components/catalogue/stat-grid";
-import { Eyebrow, SectionShell } from "@/components/sections/section-shell";
+import { SectionShell } from "@/components/sections/section-shell";
 import { EntryCard } from "@/components/catalogue/entry-card";
 import { ImageGallery } from "@/components/catalogue/image-gallery";
 import { HeroKeyFacts } from "@/components/catalogue/hero-key-facts";
@@ -833,32 +825,4 @@ function uniqueGalleryDescriptionUrls(
   return out;
 }
 
-/**
- * Margin annotation that overlaps the bottom-left corner of the hero
- * photo. Renders the scientific-plate silhouette for the species'
- * resolved body type, slim tetra, stocky perciform, gourami, eel,
- * catfish, livebearer, or the plant equivalents. Mirrors the
- * field-guide margin sketch: a hand-drawn outline beside the live
- * photograph, captioned with the body type as the field-guide would.
- */
-function SciencePlateAnnotation({ entry }: { entry: CatalogueEntry }) {
-  const { Plate, label } = getSpeciesPlate(entry);
-  return (
-    <figure
-      aria-label={`Scientific plate of ${entry.commonName}`}
-      className="glass glass-edge animate-rise pointer-events-none absolute -bottom-8 -left-4 w-52 rotate-[-3deg] rounded-2xl p-4 sm:-bottom-10 sm:-left-8 sm:w-60 sm:p-5 lg:-bottom-14 lg:-left-14 lg:w-72 lg:p-6"
-    >
-      <figcaption className="mb-2 flex items-center justify-between text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-        <span>Plate</span>
-        <span className="stamp-numeral text-base text-[var(--brand)]">01</span>
-      </figcaption>
-      <div className="flex h-32 items-center justify-center text-[var(--brand)] sm:h-36 lg:h-44">
-        <Plate className="h-full w-full" />
-      </div>
-      <p className="mt-2 text-center text-[11px] italic text-muted-foreground">
-        {label}
-      </p>
-    </figure>
-  );
-}
 

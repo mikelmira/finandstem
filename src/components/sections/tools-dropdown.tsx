@@ -46,6 +46,14 @@ export function ToolsDropdown() {
   const rootRef = React.useRef<HTMLDivElement>(null);
   const closeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Auto-close when the route changes — state adjustment during render
+  // (the React-documented alternative to a setState-in-effect).
+  const [prevPathname, setPrevPathname] = React.useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
+
   const isActive = ITEMS.some((item) => pathname.startsWith(item.href));
 
   React.useEffect(() => {
@@ -72,10 +80,6 @@ export function ToolsDropdown() {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => setOpen(false), 120);
   }
-
-  React.useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   return (
     <div

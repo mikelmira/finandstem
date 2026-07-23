@@ -7,7 +7,12 @@ export function parseRange(input: string | undefined | null): NumericRange | nul
   if (!input) return null;
   const cleaned = String(input).trim();
   if (!cleaned) return null;
-  const match = cleaned.match(/-?\d+(?:\.\d+)?/g);
+  // No aquarium parameter is negative, so we deliberately do NOT treat a
+  // leading `-` as a sign. That keeps ASCII-hyphen ranges ("22-28") parsing
+  // identically to en-dash ("22–28") and em-dash ("22—28") — otherwise the
+  // hyphen before the second number reads as a negative sign and inverts
+  // the range (min: -28, max: 22).
+  const match = cleaned.match(/\d+(?:\.\d+)?/g);
   if (!match || match.length === 0) return null;
   const nums = match.map((n) => Number(n));
   if (nums.some((n) => Number.isNaN(n))) return null;
