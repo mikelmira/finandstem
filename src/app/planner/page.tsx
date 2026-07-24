@@ -93,21 +93,27 @@ export default async function PlannerPage({ searchParams }: PageProps) {
       />
 
       <SectionShell>
-        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-10">
-          {/* Left, tank setup + species picker + composition (sticky on desktop) */}
-          <div className="flex flex-col gap-5 lg:sticky lg:top-24">
-            <Suspense fallback={null}>
-              <TankSetupCard tankL={tankL} filterLph={filterLph} />
-            </Suspense>
+        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.4fr] lg:gap-10">
+          {/* Left column. The grid item stretches to the full row height so
+              the inner controls block can stay pinned for the entire scroll;
+              the species list below it scrolls normally. Sticking an inner
+              wrapper (rather than the whole column) also keeps the picker's
+              dropdown out of any overflow container so it never gets clipped. */}
+          <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 lg:sticky lg:top-24">
+              <Suspense fallback={null}>
+                <TankSetupCard tankL={tankL} filterLph={filterLph} />
+              </Suspense>
 
-            <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
-              <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
-                Add to your tank
-              </h2>
-              <div className="mt-4">
-                <Suspense fallback={null}>
-                  <BuilderPicker options={OPTIONS} selected={ids} />
-                </Suspense>
+              <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
+                <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
+                  Add to your tank
+                </h2>
+                <div className="mt-4">
+                  <Suspense fallback={null}>
+                    <BuilderPicker options={OPTIONS} selected={ids} />
+                  </Suspense>
+                </div>
               </div>
             </div>
 
