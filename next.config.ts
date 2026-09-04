@@ -58,6 +58,22 @@ const nextConfig: NextConfig = {
    * `Strict-Transport-Security` is only honoured over a real https
    * connection — local dev (http://localhost) ignores it, which is fine.
    */
+  /**
+   * Canonical-host redirect: www → apex. Everything on the site canonicalises
+   * to https://finandstem.com, so send www traffic there with a 301 to
+   * consolidate crawl + link signals onto the one host. Matches on the Host
+   * header, so apex requests are never touched (no redirect loop).
+   */
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.finandstem.com" }],
+        destination: "https://finandstem.com/:path*",
+        statusCode: 301,
+      },
+    ];
+  },
   async headers() {
     return [
       {
