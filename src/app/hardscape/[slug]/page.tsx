@@ -12,6 +12,7 @@ import { AuthorByline } from "@/components/seo/author-byline";
 import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
 import { EffectBadges } from "@/components/hardscape/effect-badges";
+import { HardscapeVisual } from "@/components/hardscape/hardscape-visual";
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
@@ -107,6 +108,8 @@ export default async function HardscapePage({ params }: RouteParams) {
             <AuthorByline />
           </div>
         </header>
+
+        <HardscapeVisual item={item} size="hero" className="mb-10" />
 
         <Tldr body={item.tldr} subject={item.name} />
 
