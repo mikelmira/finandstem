@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "llms": "node scripts/build-llms-txt.mjs"
+    "llms": "node scripts/build-llms-txt.mjs",
+    "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
