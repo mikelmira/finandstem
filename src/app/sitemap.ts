@@ -6,6 +6,7 @@ import { listGuides } from "@/lib/guides";
 import { comparisonPairs } from "@/lib/catalogue/comparisons";
 import { generatedTanks, tankSizeSlug } from "@/lib/catalogue/tank-picks";
 import { ALGAE } from "@/data/algae";
+import { HARDSCAPE } from "@/data/hardscape";
 
 /**
  * sitemap.ts, mirror of /seo/sitemap-plan.md.
@@ -157,6 +158,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  // Hardscape database, stone and wood.
+  const hardscapePages = [
+    {
+      url: `${site.url}/hardscape`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...HARDSCAPE.map((h) => ({
+      url: `${site.url}/hardscape/${h.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -170,5 +187,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tankMatePages,
     ...tankGuidePages,
     ...algaePages,
+    ...hardscapePages,
   ];
 }

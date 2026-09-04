@@ -736,6 +736,60 @@ export function algaePageJsonLd({
   };
 }
 
+export interface HardscapeSchemaInput {
+  slug: string;
+  name: string;
+  description: string;
+  faqs: ReadonlyArray<FaqItem>;
+}
+
+/** Article + BreadcrumbList + FAQPage for a /hardscape/[slug] page. */
+export function hardscapePageJsonLd({
+  slug,
+  name,
+  description,
+  faqs,
+}: HardscapeSchemaInput) {
+  const url = `${site.url}/hardscape/${slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: `${name}: Aquascaping Uses and Effect on Water`,
+        description,
+        inLanguage: "en",
+        author: personEntity(),
+        publisher: organizationEntity(),
+        articleSection: "Hardscape",
+        about: name,
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Hardscape", href: "/hardscape" },
+          { name },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
   const url = `${site.url}/guides`;
   return {

@@ -28,6 +28,7 @@ export const site = {
     { label: "Mosses", href: "/mosses" },
     { label: "Snails", href: "/snails" },
     { label: "Substrates", href: "/substrates" },
+    { label: "Hardscape", href: "/hardscape" },
     { label: "Guides", href: "/guides" },
     { label: "Algae ID", href: "/algae" },
     { label: "History", href: "/history-of-aquascaping" },
@@ -47,6 +48,7 @@ export const site = {
           { label: "Mosses", href: "/mosses" },
           { label: "Snails", href: "/snails" },
           { label: "Substrates", href: "/substrates" },
+          { label: "Hardscape", href: "/hardscape" },
         ],
       },
       {
