@@ -54,6 +54,7 @@ export const site = {
           { label: "Tank Planner", href: "/planner" },
           { label: "Compare species", href: "/compare" },
           { label: "Compatibility", href: "/compatibility" },
+          { label: "Stocking by tank size", href: "/tanks" },
         ],
       },
       {

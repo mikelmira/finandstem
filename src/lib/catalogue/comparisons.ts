@@ -136,6 +136,21 @@ export function getComparison(versus: string): ComparisonPair | undefined {
   return byVersus.get(versus);
 }
 
+/** Comparison pairs that involve a given entry, for detail-page cross-links. */
+export function comparisonsFor(
+  category: NormalizedEntry["category"],
+  slug: string,
+  limit = 6,
+): ComparisonPair[] {
+  return comparisonPairs()
+    .filter(
+      (p) =>
+        (p.a.category === category && p.a.slug === slug) ||
+        (p.b.category === category && p.b.slug === slug),
+    )
+    .slice(0, limit);
+}
+
 /* ─── Copy, generated from the data ───────────────────────────────────── */
 
 function difficultyWord(d: number): string {

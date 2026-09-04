@@ -33,6 +33,8 @@ import { allEntries, getCategoryEntries, getImage } from "@/data";
 import { getGallery } from "@/data/image-gallery";
 import { getDetailSections } from "@/data/species-detail";
 import { groupDetailSections } from "@/lib/catalogue/detail-groups";
+import { comparisonsFor } from "@/lib/catalogue/comparisons";
+import { TANK_MATE_CATEGORIES } from "@/lib/catalogue/tank-mates";
 import { prepareImage } from "@/lib/wikimedia";
 import { cn } from "@/lib/utils";
 // SEO / AEO scaffolding — emits Article + BreadcrumbList + ImageObject +
@@ -94,6 +96,13 @@ export function EntryDetail({
     (e) => e.slug !== entry.slug,
   );
   const related = peers.slice(0, 3);
+
+  // Cross-links into the programmatic pages: a dedicated tank-mates page
+  // (animals only) and any head-to-head comparisons involving this species.
+  const hasTankMatesPage = (
+    TANK_MATE_CATEGORIES as readonly string[]
+  ).includes(entry.category);
+  const compareLinks = comparisonsFor(entry.category, entry.slug, 6);
 
   // One entry from each other category for "build the tank" cross-references
   const otherCategories: CatalogueCategory[] = (
@@ -381,6 +390,47 @@ export function EntryDetail({
                 bad={grouped.badTankMates}
                 compatHref={`/compatibility?anchor=${entry.category}:${entry.slug}`}
               />
+
+              {(hasTankMatesPage || compareLinks.length > 0) && (
+                <div className="mt-6 flex flex-col gap-5">
+                  {hasTankMatesPage && (
+                    <Link
+                      href={`${CATEGORY_META[entry.category].path}/${entry.slug}/tank-mates`}
+                      className="press inline-flex w-fit items-center gap-1.5 rounded-full border border-border bg-background/60 px-4 py-2 text-sm font-medium backdrop-blur transition-colors hover:border-[var(--brand)]/40"
+                    >
+                      See the full tank-mate list for {entry.commonName}
+                      <ArrowUpRight className="size-4" aria-hidden />
+                    </Link>
+                  )}
+                  {compareLinks.length > 0 && (
+                    <div>
+                      <p className="text-sm text-muted-foreground">
+                        Weighing it against something similar? Compare{" "}
+                        {entry.commonName} head to head:
+                      </p>
+                      <ul className="mt-3 flex flex-wrap gap-2">
+                        {compareLinks.map((p) => {
+                          const other =
+                            p.a.slug === entry.slug &&
+                            p.a.category === entry.category
+                              ? p.b
+                              : p.a;
+                          return (
+                            <li key={p.versus}>
+                              <Link
+                                href={`/compare/${p.versus}`}
+                                className="press inline-flex items-center rounded-full border border-border bg-background/60 px-3 py-1.5 text-sm backdrop-blur transition-colors hover:border-[var(--brand)]/40"
+                              >
+                                {entry.commonName} vs {other.commonName}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
             </DetailSection>
 
             {/* 3. PRO TIPS, promoted up: editorial moat */}
