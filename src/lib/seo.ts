@@ -844,6 +844,60 @@ export function equipmentPageJsonLd({
   };
 }
 
+export interface CalculatorSchemaInput {
+  slug: string;
+  name: string;
+  description: string;
+  faqs: ReadonlyArray<FaqItem>;
+}
+
+/** WebApplication + BreadcrumbList + FAQPage for a /calculators/[slug] tool. */
+export function calculatorPageJsonLd({
+  slug,
+  name,
+  description,
+  faqs,
+}: CalculatorSchemaInput) {
+  const url = `${site.url}/calculators/${slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": `${url}#app`,
+        url,
+        name,
+        description,
+        applicationCategory: "UtilitiesApplication",
+        operatingSystem: "Any",
+        inLanguage: "en",
+        isPartOf: { "@id": WEBSITE_ID },
+        publisher: organizationRef(),
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Calculators", href: "/calculators" },
+          { name },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
   const url = `${site.url}/guides`;
   return {

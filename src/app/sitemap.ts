@@ -8,6 +8,7 @@ import { generatedTanks, tankSizeSlug } from "@/lib/catalogue/tank-picks";
 import { ALGAE } from "@/data/algae";
 import { HARDSCAPE } from "@/data/hardscape";
 import { EQUIPMENT } from "@/data/equipment";
+import { CALCULATORS } from "@/data/calculators";
 
 /**
  * sitemap.ts, mirror of /seo/sitemap-plan.md.
@@ -191,6 +192,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  // Calculators.
+  const calculatorPages = [
+    {
+      url: `${site.url}/calculators`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...CALCULATORS.map((c) => ({
+      url: `${site.url}/calculators/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -206,5 +223,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...algaePages,
     ...hardscapePages,
     ...equipmentPages,
+    ...calculatorPages,
   ];
 }

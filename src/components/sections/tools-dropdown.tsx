@@ -9,6 +9,7 @@ import {
   GitCompareArrows,
   Filter,
   Container,
+  Calculator,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -49,6 +50,12 @@ const ITEMS: ReadonlyArray<ToolItem> = [
     href: "/tanks",
     description: "The best fish, shrimp and plants for each tank volume.",
     Icon: Container,
+  },
+  {
+    label: "Calculators",
+    href: "/calculators",
+    description: "Volume, substrate, CO2 and fertiliser dosing.",
+    Icon: Calculator,
   },
 ];
 
