@@ -24,12 +24,38 @@ function trim(text: string, max = 155): string {
   return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
 }
 
+/**
+ * Normalise a name for redundancy comparison: lowercase, drop infraspecific
+ * rank markers (var. / ssp. / sp. / cf.), quotes, parens and other
+ * punctuation, collapse whitespace. Lets "Anubias barteri var. nana" and the
+ * common name "Anubias Barteri Nana" compare equal.
+ */
+function normalizeName(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/\b(var|ssp|subsp|sp|cf)\.?\b/g, " ")
+    .replace(/[“”"'‘’()]/g, " ")
+    .replace(/[^a-z0-9 ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function speciesMetadata(entry: CatalogueEntry): Metadata {
   const meta = CATEGORY_META[entry.category];
   const path = `${meta.path}/${entry.slug}`;
   const canonical = `${site.url}${path}`;
 
-  const headline = `${entry.commonName} (${entry.scientificName}), Care, Tank Mates & Compatibility`;
+  // Show the scientific name in the <title> only when it is a distinct search
+  // term (e.g. fish: "Neon Tetra (Paracheirodon innesi)"). For entries whose
+  // common name already *is* the binomial (most plants, e.g. "Bacopa
+  // Caroliniana"), repeating it just truncates the title, so drop it — the
+  // scientific name still lives in the H1, description, body and keywords.
+  const sciRedundant =
+    normalizeName(entry.commonName) === normalizeName(entry.scientificName);
+  const namePart = sciRedundant
+    ? entry.commonName
+    : `${entry.commonName} (${entry.scientificName})`;
+  const headline = `${namePart} Care & Tank Mates`;
   const tldr = buildTldr(entry);
   const description = trim(tldr, 160);
 
