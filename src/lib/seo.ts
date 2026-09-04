@@ -562,6 +562,70 @@ export function comparisonPageJsonLd({
   };
 }
 
+export interface TankMatesSchemaInput {
+  anchorSlug: string;
+  anchorName: string;
+  anchorCategory: CatalogueCategory;
+  title: string;
+  description: string;
+  faqs: ReadonlyArray<FaqItem>;
+}
+
+/** Article + BreadcrumbList + FAQPage for a /{category}/[slug]/tank-mates page. */
+export function tankMatesPageJsonLd({
+  anchorSlug,
+  anchorName,
+  anchorCategory,
+  title,
+  description,
+  faqs,
+}: TankMatesSchemaInput) {
+  const cat = CATEGORY_META[anchorCategory];
+  const speciesUrl = `${site.url}${cat.path}/${anchorSlug}`;
+  const url = `${speciesUrl}/tank-mates`;
+  const { publishedAt, updatedAt } = getEntryDates(anchorSlug);
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: title,
+        description,
+        datePublished: publishedAt,
+        dateModified: updatedAt,
+        inLanguage: "en",
+        author: personEntity(),
+        publisher: organizationEntity(),
+        articleSection: "Tank mates",
+        about: anchorName,
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: cat.label, href: cat.path },
+          { name: anchorName, href: `${cat.path}/${anchorSlug}` },
+          { name: "Tank mates" },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
   const url = `${site.url}/guides`;
   return {

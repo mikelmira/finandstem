@@ -104,6 +104,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  // "Tank mates for X" pages, generated for the animal categories where the
+  // query exists (fish, shrimp, snails).
+  const tankMatePages = [
+    ...fish.map((f) => ({ path: `/fish/${f.slug}/tank-mates`, slug: f.slug })),
+    ...shrimp.map((s) => ({
+      path: `/shrimp/${s.slug}/tank-mates`,
+      slug: s.slug,
+    })),
+    ...snails.map((s) => ({
+      path: `/snails/${s.slug}/tank-mates`,
+      slug: s.slug,
+    })),
+  ].map(({ path, slug }) => ({
+    url: `${site.url}${path}`,
+    lastModified: new Date(getEntryDates(slug).updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -114,5 +133,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cataloguePages,
     ...guidePages,
     ...comparisonPages,
+    ...tankMatePages,
   ];
 }
