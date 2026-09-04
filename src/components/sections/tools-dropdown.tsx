@@ -3,7 +3,13 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Wand2, GitCompareArrows, Filter } from "lucide-react";
+import {
+  ChevronDown,
+  Wand2,
+  GitCompareArrows,
+  Filter,
+  Container,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
@@ -37,6 +43,12 @@ const ITEMS: ReadonlyArray<ToolItem> = [
     href: "/compatibility",
     description: "Pick a species, see everything it works with.",
     Icon: Filter,
+  },
+  {
+    label: "Tank sizes",
+    href: "/tanks",
+    description: "The best fish, shrimp and plants for each tank volume.",
+    Icon: Container,
   },
 ];
 

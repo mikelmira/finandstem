@@ -3,6 +3,7 @@ import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { EntryGrid } from "@/components/catalogue/entry-grid";
+import { TankMatesLinks } from "@/components/catalogue/tank-mates-links";
 import { snails } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
@@ -34,6 +35,9 @@ export default function SnailsIndexPage() {
       />
       <SectionShell>
         <EntryGrid entries={snails} />
+        <div className="mt-12">
+          <TankMatesLinks entries={snails} />
+        </div>
       </SectionShell>
     </>
   );

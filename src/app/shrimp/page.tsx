@@ -4,6 +4,7 @@ import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { EntryGrid } from "@/components/catalogue/entry-grid";
+import { TankMatesLinks } from "@/components/catalogue/tank-mates-links";
 import { ShrimpFilters } from "@/components/filters/shrimp-filters";
 import { shrimpNorm } from "@/lib/catalogue/normalize";
 import {
@@ -61,6 +62,9 @@ export default async function ShrimpIndexPage({ searchParams }: PageProps) {
             <EntryGrid entries={entries} />
           </ShrimpFilters>
         </Suspense>
+        <div className="mt-12">
+          <TankMatesLinks entries={shrimp} />
+        </div>
       </SectionShell>
     </>
   );

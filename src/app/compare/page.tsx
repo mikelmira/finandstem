@@ -10,9 +10,11 @@ import { CompareModeToggle } from "@/components/compare/compare-mode-toggle";
 import { CompareOverview } from "@/components/compare/compare-overview";
 import { CompareTable } from "@/components/compare/compare-table";
 import { SubstrateCompareTable } from "@/components/compare/substrate-compare-table";
+import Link from "next/link";
 import { allNorm } from "@/lib/catalogue/normalize";
 import { substrates, findSubstrate } from "@/data";
 import type { CatalogueEntry } from "@/types/catalogue";
+import { comparisonPairs } from "@/lib/catalogue/comparisons";
 import type { SubstrateEntry } from "@/types/substrate";
 import type { CompareMode } from "@/lib/compare-storage";
 
@@ -167,7 +169,60 @@ export default async function ComparePage({ searchParams }: PageProps) {
           </div>
         )}
       </SectionShell>
+
+      <PopularComparisons />
     </>
+  );
+}
+
+const POPULAR_CATS = [
+  { key: "fish", label: "Fish" },
+  { key: "plants", label: "Plants" },
+  { key: "shrimp", label: "Shrimp" },
+  { key: "mosses", label: "Mosses" },
+] as const;
+
+/** A browsable set of ready-made comparison pages, grouped by category. */
+function PopularComparisons() {
+  const pairs = comparisonPairs();
+  return (
+    <SectionShell>
+      <div className="max-w-3xl">
+        <h2 className="text-display-tight text-2xl sm:text-3xl">
+          Popular comparisons
+        </h2>
+        <p className="mt-3 text-pretty text-base leading-relaxed text-muted-foreground">
+          Weighing two species against each other? These ready-made head-to-heads
+          line up care, size, water and temperament for you. Every species page
+          also links to its own comparisons.
+        </p>
+      </div>
+      <div className="mt-8 flex flex-col gap-8">
+        {POPULAR_CATS.map(({ key, label }) => {
+          const group = pairs.filter((p) => p.a.category === key).slice(0, 8);
+          if (group.length === 0) return null;
+          return (
+            <section key={key}>
+              <h3 className="text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                {label}
+              </h3>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {group.map((p) => (
+                  <li key={p.versus}>
+                    <Link
+                      href={`/compare/${p.versus}`}
+                      className="press inline-flex items-center rounded-full border border-border bg-background/60 px-3 py-1.5 text-sm backdrop-blur transition-colors hover:border-[var(--brand)]/40"
+                    >
+                      {p.a.commonName} vs {p.b.commonName}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
+    </SectionShell>
   );
 }
 

@@ -4,6 +4,7 @@ import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { EntryGrid } from "@/components/catalogue/entry-grid";
+import { TankMatesLinks } from "@/components/catalogue/tank-mates-links";
 import { FishFilters } from "@/components/filters/fish-filters";
 import { fishNorm } from "@/lib/catalogue/normalize";
 import {
@@ -63,6 +64,9 @@ export default async function FishIndexPage({ searchParams }: PageProps) {
             <EntryGrid entries={entries} />
           </FishFilters>
         </Suspense>
+        <div className="mt-12">
+          <TankMatesLinks entries={fish} />
+        </div>
       </SectionShell>
     </>
   );
