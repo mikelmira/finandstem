@@ -7,6 +7,7 @@ import { comparisonPairs } from "@/lib/catalogue/comparisons";
 import { generatedTanks, tankSizeSlug } from "@/lib/catalogue/tank-picks";
 import { ALGAE } from "@/data/algae";
 import { HARDSCAPE } from "@/data/hardscape";
+import { EQUIPMENT } from "@/data/equipment";
 
 /**
  * sitemap.ts, mirror of /seo/sitemap-plan.md.
@@ -174,6 +175,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  // Equipment how-to guides.
+  const equipmentPages = [
+    {
+      url: `${site.url}/equipment`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...EQUIPMENT.map((e) => ({
+      url: `${site.url}/equipment/${e.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -188,5 +205,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tankGuidePages,
     ...algaePages,
     ...hardscapePages,
+    ...equipmentPages,
   ];
 }

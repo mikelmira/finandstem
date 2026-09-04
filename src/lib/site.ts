@@ -67,6 +67,7 @@ export const site = {
           { label: "About", href: "/about" },
           { label: "Guides", href: "/guides" },
           { label: "Algae ID", href: "/algae" },
+          { label: "Equipment", href: "/equipment" },
           { label: "History", href: "/history-of-aquascaping" },
         ],
       },

@@ -790,6 +790,60 @@ export function hardscapePageJsonLd({
   };
 }
 
+export interface EquipmentSchemaInput {
+  slug: string;
+  name: string;
+  description: string;
+  faqs: ReadonlyArray<FaqItem>;
+}
+
+/** Article + BreadcrumbList + FAQPage for an /equipment/[slug] how-to. */
+export function equipmentPageJsonLd({
+  slug,
+  name,
+  description,
+  faqs,
+}: EquipmentSchemaInput) {
+  const url = `${site.url}/equipment/${slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: `${name}: How to Choose and Size It`,
+        description,
+        inLanguage: "en",
+        author: personEntity(),
+        publisher: organizationEntity(),
+        articleSection: "Equipment",
+        about: name,
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Equipment", href: "/equipment" },
+          { name },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
   const url = `${site.url}/guides`;
   return {
