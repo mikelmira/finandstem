@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { fish, plants, shrimp, mosses, snails, substrates } from "@/data";
 import { getEntryDates } from "@/data/timestamps";
 import { listGuides } from "@/lib/guides";
+import { comparisonPairs } from "@/lib/catalogue/comparisons";
 
 /**
  * sitemap.ts, mirror of /seo/sitemap-plan.md.
@@ -89,6 +90,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // Programmatic "X vs Y" comparison pages, generated from the catalogue.
+  // Freshness tracks the more recently updated of the two species.
+  const comparisonPages = comparisonPairs().map((p) => {
+    const a = getEntryDates(p.a.slug).updatedAt;
+    const b = getEntryDates(p.b.slug).updatedAt;
+    const latest = [a, b].sort().at(-1) ?? a;
+    return {
+      url: `${site.url}/compare/${p.versus}`,
+      lastModified: new Date(latest),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    };
+  });
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -98,5 +113,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...cataloguePages,
     ...guidePages,
+    ...comparisonPages,
   ];
 }

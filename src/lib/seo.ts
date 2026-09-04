@@ -492,6 +492,76 @@ export function guidePageJsonLd({ guide, tldr, faqs, wordCount }: GuideSchemaInp
   };
 }
 
+export interface ComparisonSchemaInput {
+  title: string;
+  description: string;
+  /** versus slug, e.g. "neon-tetra-vs-ember-tetra" */
+  slug: string;
+  faqs: ReadonlyArray<FaqItem>;
+  aSlug: string;
+  bSlug: string;
+  aName: string;
+  bName: string;
+}
+
+/** Article + BreadcrumbList + FAQPage for a /compare/[versus] page. */
+export function comparisonPageJsonLd({
+  title,
+  description,
+  slug,
+  faqs,
+  aSlug,
+  bSlug,
+  aName,
+  bName,
+}: ComparisonSchemaInput) {
+  const url = `${site.url}/compare/${slug}`;
+  const a = getEntryDates(aSlug);
+  const b = getEntryDates(bSlug);
+  const datePublished =
+    [a.publishedAt, b.publishedAt].sort().at(-1) ?? a.publishedAt;
+  const dateModified = [a.updatedAt, b.updatedAt].sort().at(-1) ?? a.updatedAt;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: title,
+        description,
+        datePublished,
+        dateModified,
+        inLanguage: "en",
+        author: personEntity(),
+        publisher: organizationEntity(),
+        articleSection: "Comparisons",
+        about: [aName, bName],
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Compare", href: "/compare" },
+          { name: title },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
   const url = `${site.url}/guides`;
   return {
