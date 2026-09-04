@@ -4,6 +4,7 @@ import { fish, plants, shrimp, mosses, snails, substrates } from "@/data";
 import { getEntryDates } from "@/data/timestamps";
 import { listGuides } from "@/lib/guides";
 import { comparisonPairs } from "@/lib/catalogue/comparisons";
+import { generatedTanks, tankSizeSlug } from "@/lib/catalogue/tank-picks";
 
 /**
  * sitemap.ts, mirror of /seo/sitemap-plan.md.
@@ -123,6 +124,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // "Best fish/plants/shrimp for an N litre tank" pages plus their index.
+  const tankGuidePages = [
+    {
+      url: `${site.url}/tanks`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...generatedTanks().map((t) => ({
+      url: `${site.url}/tanks/${tankSizeSlug(t.litres)}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -134,5 +151,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guidePages,
     ...comparisonPages,
     ...tankMatePages,
+    ...tankGuidePages,
   ];
 }

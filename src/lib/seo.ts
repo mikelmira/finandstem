@@ -626,6 +626,62 @@ export function tankMatesPageJsonLd({
   };
 }
 
+export interface TankGuideSchemaInput {
+  litres: number;
+  slug: string; // e.g. "20-litres"
+  title: string;
+  description: string;
+  faqs: ReadonlyArray<FaqItem>;
+}
+
+/** Article + BreadcrumbList + FAQPage for a /tanks/[size] page. */
+export function tankGuidePageJsonLd({
+  litres,
+  slug,
+  title,
+  description,
+  faqs,
+}: TankGuideSchemaInput) {
+  const url = `${site.url}/tanks/${slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: title,
+        description,
+        inLanguage: "en",
+        author: personEntity(),
+        publisher: organizationEntity(),
+        articleSection: "Tank guides",
+        about: `${litres} litre aquarium`,
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Tank sizes", href: "/tanks" },
+          { name: `${litres} litre tank` },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export function guidesIndexJsonLd(items: ReadonlyArray<GuideFrontmatter>) {
   const url = `${site.url}/guides`;
   return {
