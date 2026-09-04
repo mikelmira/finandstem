@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SectionShell, SectionHeading } from "@/components/sections/section-shell";
+import { BackgroundVideo } from "@/components/sections/background-video";
 
 interface EthosProps {
   eyebrow: string;
@@ -33,19 +34,18 @@ export function Ethos({ eyebrow, title, body, points }: EthosProps) {
       bleed
       containerClassName="py-16 sm:py-20 lg:py-24"
     >
-      {/* Background video, covers the whole section, sits below all
-          content. Autoplays muted on loop. */}
-      <video
+      {/* Dark fallback so the white text stays legible before the video
+          loads (or when reduced-motion or a slow connection skips it). */}
+      <div
         aria-hidden
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
+        className="absolute inset-0 -z-20 bg-gradient-to-br from-[#08171f] via-[#0b2029] to-[#0d2833]"
+      />
+      {/* Background video, lazy-loaded once the section nears the viewport so
+          it never sits in the initial page load. */}
+      <BackgroundVideo
+        src="/videos/underwater-loop.mp4"
         className="absolute inset-0 -z-10 size-full object-cover motion-reduce:hidden"
-      >
-        <source src="/videos/underwater-loop.mp4" type="video/mp4" />
-      </video>
+      />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         {/* Heading column, text colour forced to white with a
