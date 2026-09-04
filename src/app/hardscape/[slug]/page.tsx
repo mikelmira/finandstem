@@ -13,6 +13,7 @@ import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
 import { EffectBadges } from "@/components/hardscape/effect-badges";
 import { HardscapeVisual } from "@/components/hardscape/hardscape-visual";
+import { HARDSCAPE_IMAGES } from "@/data/hardscape-images";
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
@@ -109,7 +110,44 @@ export default async function HardscapePage({ params }: RouteParams) {
           </div>
         </header>
 
-        <HardscapeVisual item={item} size="hero" className="mb-10" />
+        <figure className="mb-10">
+          <HardscapeVisual item={item} size="hero" />
+          {HARDSCAPE_IMAGES[item.slug] && (
+            <figcaption className="mt-2 text-xs text-muted-foreground">
+              Photo: {HARDSCAPE_IMAGES[item.slug].author}
+              {HARDSCAPE_IMAGES[item.slug].license && (
+                <>
+                  {" · "}
+                  {HARDSCAPE_IMAGES[item.slug].licenseUrl ? (
+                    <a
+                      href={HARDSCAPE_IMAGES[item.slug].licenseUrl}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="underline underline-offset-2 hover:text-foreground"
+                    >
+                      {HARDSCAPE_IMAGES[item.slug].license}
+                    </a>
+                  ) : (
+                    HARDSCAPE_IMAGES[item.slug].license
+                  )}
+                </>
+              )}
+              {HARDSCAPE_IMAGES[item.slug].descriptionUrl && (
+                <>
+                  {" · "}
+                  <a
+                    href={HARDSCAPE_IMAGES[item.slug].descriptionUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="underline underline-offset-2 hover:text-foreground"
+                  >
+                    Wikimedia Commons
+                  </a>
+                </>
+              )}
+            </figcaption>
+          )}
+        </figure>
 
         <Tldr body={item.tldr} subject={item.name} />
 
