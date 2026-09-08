@@ -81,7 +81,7 @@ export const site = {
       },
     ],
     note:
-      "Built in South Africa, written for aquascapers everywhere. Care numbers are working ranges, observe your tank, cross-check several sources, and consult a vet for anything medical. Photography sourced from Wikimedia Commons, iNaturalist, and retailer catalogues with attribution and source links on every image.",
+      "Built in South Africa, written for aquascapers everywhere. Care numbers are working ranges, observe your tank, cross-check several sources, and consult a vet for anything medical. Photography is sourced from Wikimedia Commons and iNaturalist under open licences, with attribution and a source link on every image.",
   },
 } as const;
 
