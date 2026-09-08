@@ -24,11 +24,6 @@ const PERSON_ID = `${site.url}/about#mike`;
 const ORG_ID = `${site.url}/#org`;
 const WEBSITE_ID = `${site.url}/#website`;
 
-/** Author Person (Mike). Reused everywhere we cite an author. */
-export function authorRef() {
-  return { "@id": PERSON_ID };
-}
-
 export function organizationRef() {
   return { "@id": ORG_ID };
 }
@@ -63,7 +58,6 @@ export function organizationEntity() {
       "@type": "ImageObject",
       url: `${site.url}/fin-and-stem-logo.png`,
     },
-    founder: authorRef(),
   };
 }
 
@@ -185,7 +179,7 @@ export function speciesPageJsonLd({
         datePublished: publishedAt,
         dateModified: updatedAt,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         about: {
           "@type": "Thing",
@@ -292,7 +286,7 @@ export function pillarPageJsonLd({
         datePublished: publishedAt,
         dateModified: updatedAt,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
       },
       breadcrumbsJsonLd(
@@ -455,7 +449,7 @@ export function guidePageJsonLd({ guide, tldr, faqs, wordCount }: GuideSchemaInp
         dateModified: guide.updatedAt,
         inLanguage: "en",
         wordCount,
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         keywords: guide.keywords.join(", "),
         articleSection: "Guides",
@@ -534,7 +528,7 @@ export function comparisonPageJsonLd({
         datePublished,
         dateModified,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Comparisons",
         about: [aName, bName],
@@ -597,7 +591,7 @@ export function tankMatesPageJsonLd({
         datePublished: publishedAt,
         dateModified: updatedAt,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Tank mates",
         about: anchorName,
@@ -654,7 +648,7 @@ export function tankGuidePageJsonLd({
         headline: title,
         description,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Tank guides",
         about: `${litres} litre aquarium`,
@@ -708,7 +702,7 @@ export function algaePageJsonLd({
         headline: `${name} in Aquariums: How to Identify and Fix It`,
         description,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Algae",
         about: name,
@@ -762,7 +756,7 @@ export function hardscapePageJsonLd({
         headline: `${name}: Aquascaping Uses and Effect on Water`,
         description,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Hardscape",
         about: name,
@@ -816,7 +810,7 @@ export function equipmentPageJsonLd({
         headline: `${name}: How to Choose and Size It`,
         description,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Equipment",
         about: name,

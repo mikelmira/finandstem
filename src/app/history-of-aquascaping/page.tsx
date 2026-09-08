@@ -14,7 +14,7 @@ import { site } from "@/lib/site";
 import {
   breadcrumbsJsonLd,
   organizationEntity,
-  personEntity,
+  organizationRef,
 } from "@/lib/seo";
 import { history, type HistoryImage } from "@/content/history";
 import { SectionShell } from "@/components/sections/section-shell";
@@ -87,7 +87,7 @@ function jsonLd() {
         dateModified: history.hero.updatedAt,
         inLanguage: "en",
         wordCount,
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Reference",
         image: [`${site.url}${history.hero.heroImage.src}`],

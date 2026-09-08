@@ -8,7 +8,6 @@ import { HARDSCAPE, getHardscape } from "@/data/hardscape";
 import { hardscapePageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
-import { AuthorByline } from "@/components/seo/author-byline";
 import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
 import { EffectBadges } from "@/components/hardscape/effect-badges";
@@ -104,9 +103,6 @@ export default async function HardscapePage({ params }: RouteParams) {
           )}
           <div className="mt-4">
             <EffectBadges item={item} />
-          </div>
-          <div className="mt-6 border-t border-border/50 pt-5">
-            <AuthorByline />
           </div>
         </header>
 

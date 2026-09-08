@@ -1,9 +1,5 @@
-import Link from "next/link";
-import { PenLine } from "lucide-react";
-import { site } from "@/lib/site";
-
 interface AuthorBylineProps {
-  /** ISO 8601 timestamp shown as a `<time>` element after the byline. */
+  /** ISO 8601 timestamp shown as a `<time>` element. */
   updatedAt?: string;
   /** Estimated reading time, in minutes. Shown as "N min read". */
   readingTimeMin?: number;
@@ -11,13 +7,12 @@ interface AuthorBylineProps {
 }
 
 /**
- * Author byline with `rel="author"` link to /about, optional last-updated
- * timestamp, and optional reading-time estimate.
+ * Page meta line: optional last-updated timestamp and reading-time estimate.
  *
- * Visible-DOM equivalent of the Person + Article `author` / `dateModified`
- * JSON-LD properties: Google rewards pages where the structured data and
- * the rendered text agree. The matching <Person> entity is emitted by
- * `personEntity()` in lib/seo.ts.
+ * No personal byline is shown. Article authorship is attributed to the Fin &
+ * Stem organisation in the JSON-LD (`organizationRef()` in lib/seo.ts), so the
+ * rendered text and the structured data stay in agreement. Renders nothing
+ * when there is no date or reading time to show.
  */
 export function AuthorByline({
   updatedAt,
@@ -32,6 +27,12 @@ export function AuthorByline({
       })
     : undefined;
 
+  const showReadingTime = readingTimeMin !== undefined && readingTimeMin > 0;
+
+  if (!updatedDisplay && !showReadingTime) {
+    return null;
+  }
+
   return (
     <p
       className={
@@ -39,31 +40,13 @@ export function AuthorByline({
         (className ? ` ${className}` : "")
       }
     >
-      <span className="inline-flex items-center gap-1.5">
-        <PenLine className="size-3.5" aria-hidden />
-        By{" "}
-        <Link
-          href="/about"
-          rel="author"
-          className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)] hover:decoration-[var(--brand)]"
-        >
-          {site.owner.name}
-        </Link>
-      </span>
       {updatedDisplay && (
-        <>
-          <span aria-hidden>·</span>
-          <span>
-            Updated <time dateTime={updatedAt}>{updatedDisplay}</time>
-          </span>
-        </>
+        <span>
+          Updated <time dateTime={updatedAt}>{updatedDisplay}</time>
+        </span>
       )}
-      {readingTimeMin !== undefined && readingTimeMin > 0 && (
-        <>
-          <span aria-hidden>·</span>
-          <span>{readingTimeMin} min read</span>
-        </>
-      )}
+      {updatedDisplay && showReadingTime && <span aria-hidden>·</span>}
+      {showReadingTime && <span>{readingTimeMin} min read</span>}
     </p>
   );
 }

@@ -13,7 +13,7 @@ import { SubstrateVisual } from "@/components/substrate/substrate-visual";
 import { site } from "@/lib/site";
 import {
   breadcrumbsJsonLd,
-  personEntity,
+  organizationRef,
   organizationEntity,
 } from "@/lib/seo";
 import {
@@ -70,7 +70,7 @@ function substratePageJsonLd(slug: string) {
         datePublished: entry.publishedAt,
         dateModified: entry.updatedAt,
         inLanguage: "en",
-        author: personEntity(),
+        author: organizationRef(),
         publisher: organizationEntity(),
         articleSection: "Substrates",
       },

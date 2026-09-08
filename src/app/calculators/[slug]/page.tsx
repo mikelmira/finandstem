@@ -12,7 +12,6 @@ import {
 import { calculatorPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
-import { AuthorByline } from "@/components/seo/author-byline";
 import { Faq } from "@/components/seo/faq";
 import { TankVolumeCalculator } from "@/components/calculators/tank-volume-calculator";
 import { SubstrateCalculator } from "@/components/calculators/substrate-calculator";
@@ -105,9 +104,6 @@ export default async function CalculatorPage({ params }: RouteParams) {
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
             {calc.spot}
           </p>
-          <div className="mt-6 border-t border-border/50 pt-5">
-            <AuthorByline />
-          </div>
         </header>
 
         <Tool />

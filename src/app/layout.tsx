@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     "biotope aquarium",
     "shrimp tank",
   ],
-  authors: [{ name: site.owner.name, url: site.url }],
-  creator: site.owner.name,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
   openGraph: {
     type: "website",
     url: site.url,
