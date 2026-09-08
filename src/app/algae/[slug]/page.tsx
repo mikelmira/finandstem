@@ -12,6 +12,8 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
+import { ProductNote } from "@/components/recommend/product-note";
+import { ALGAE_PRODUCTS } from "@/lib/recommendations";
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
@@ -148,6 +150,12 @@ export default async function AlgaePage({ params }: RouteParams) {
               </li>
             ))}
           </ol>
+          {ALGAE_PRODUCTS[algae.slug] && (
+            <ProductNote
+              productIds={ALGAE_PRODUCTS[algae.slug]}
+              heading="Targeted treatments"
+            />
+          )}
         </Section>
 
         <Section title="Keep it from coming back">

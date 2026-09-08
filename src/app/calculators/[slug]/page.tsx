@@ -13,6 +13,8 @@ import { calculatorPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Faq } from "@/components/seo/faq";
+import { ProductNote } from "@/components/recommend/product-note";
+import { DOSING_PRODUCTS } from "@/lib/recommendations";
 import { TankVolumeCalculator } from "@/components/calculators/tank-volume-calculator";
 import { SubstrateCalculator } from "@/components/calculators/substrate-calculator";
 import { Co2Calculator } from "@/components/calculators/co2-calculator";
@@ -112,6 +114,12 @@ export default async function CalculatorPage({ params }: RouteParams) {
           <p className="text-pretty leading-relaxed text-foreground/90">
             {calc.intro}
           </p>
+          {calc.component === "dosing" && (
+            <ProductNote
+              productIds={DOSING_PRODUCTS}
+              heading="If you'd rather not mix salts"
+            />
+          )}
         </section>
 
         <section className="mt-12">
