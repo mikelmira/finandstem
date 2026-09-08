@@ -3,6 +3,7 @@ import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { SubstrateCard } from "@/components/substrate/substrate-card";
+import { ProductNote } from "@/components/recommend/product-note";
 import { substrates } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { site } from "@/lib/site";
@@ -115,6 +116,12 @@ export default function SubstratesIndexPage() {
             </div>
           );
         })}
+        <div className="mx-auto max-w-3xl">
+          <ProductNote
+            productIds={["apt-feast"]}
+            heading="A nutrient aquasoil we rate"
+          />
+        </div>
       </SectionShell>
     </>
   );

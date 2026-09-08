@@ -10,6 +10,8 @@ import { Tldr } from "@/components/seo/tldr";
 import { Sources } from "@/components/seo/sources";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SubstrateVisual } from "@/components/substrate/substrate-visual";
+import { ProductNote } from "@/components/recommend/product-note";
+import { substrateRecommendation } from "@/lib/recommendations";
 import { site } from "@/lib/site";
 import {
   breadcrumbsJsonLd,
@@ -108,6 +110,7 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
   const entry = findSubstrate(slug);
   if (!entry) notFound();
 
+  const substrateRec = substrateRecommendation(entry.category);
   const affinityList = PLANT_AFFINITY[entry.category] ?? [];
   const affinityHits = affinityList
     .map((aff) => {
@@ -234,6 +237,12 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
           <ProseSection heading="Best use cases" body={entry.sections.bestUseCases} />
           <ProseSection heading="Common mistakes" body={entry.sections.commonMistakes} />
           <ProseSection heading="Pro tips" body={entry.sections.proTips} />
+          {substrateRec && (
+            <ProductNote
+              productIds={substrateRec.ids}
+              heading={substrateRec.heading}
+            />
+          )}
         </div>
       </SectionShell>
 

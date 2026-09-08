@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getProduct, anyLinked, type Product } from "@/data/products";
 
 interface ProductNoteProps {
@@ -11,9 +12,9 @@ interface ProductNoteProps {
 /**
  * An understated editorial note that recommends products where they genuinely
  * help with what the page is teaching. It reads as guidance, not an advert: a
- * quiet eyebrow, the product name, and a plain sentence on what it does. Links
- * appear only once a product has a real (affiliate) URL; until then the name is
- * plain text so the recommendation still stands.
+ * quiet eyebrow, a small product photo, the name, and a plain sentence on what
+ * it does. Links appear only once a product has a real (affiliate) URL; until
+ * then the name is plain text so the recommendation still stands.
  */
 export function ProductNote({
   productIds,
@@ -38,29 +39,39 @@ export function ProductNote({
       <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
         {heading}
       </p>
-      <ul className="mt-3 space-y-3">
+      <ul className="mt-4 space-y-4">
         {products.map((p) => (
-          <li
-            key={p.id}
-            className="text-sm leading-relaxed text-foreground/90"
-          >
-            {p.href ? (
-              <a
-                href={p.href}
-                target="_blank"
-                rel="sponsored nofollow noopener noreferrer"
-                className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)] hover:decoration-[var(--brand)]"
-              >
-                {p.name}
-              </a>
-            ) : (
-              <span className="font-medium text-foreground">{p.name}</span>
+          <li key={p.id} className="flex items-start gap-4">
+            {p.image && (
+              <span className="flex-none overflow-hidden rounded-lg border border-border/70 bg-white">
+                <Image
+                  src={p.image}
+                  alt={`${p.name} by ${p.brand}`}
+                  width={56}
+                  height={56}
+                  className="size-14 object-contain"
+                />
+              </span>
             )}
-            <span className="text-muted-foreground"> — {p.blurb}</span>
+            <span className="text-sm leading-relaxed text-foreground/90">
+              {p.href ? (
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="sponsored nofollow noopener noreferrer"
+                  className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)] hover:decoration-[var(--brand)]"
+                >
+                  {p.name}
+                </a>
+              ) : (
+                <span className="font-medium text-foreground">{p.name}</span>
+              )}
+              <span className="text-muted-foreground"> — {p.blurb}</span>
+            </span>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-xs text-muted-foreground">
+      <p className="mt-4 text-xs text-muted-foreground">
         {linked
           ? `${products[0].brand} products. Some links are affiliate links; they cost you nothing extra, and we only point to gear we would use ourselves.`
           : `${products[0].brand} products, listed because they fit the job.`}
