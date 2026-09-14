@@ -224,6 +224,25 @@ export function PillarPage({ pillar }: PillarPageProps) {
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
+          {pillar.clusterCategories.includes("plants") && (
+            <p className="mt-6 text-sm text-muted-foreground">
+              Troubleshooting a tank? Diagnose{" "}
+              <Link
+                href="/deficiencies"
+                className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+              >
+                plant deficiencies
+              </Link>{" "}
+              or{" "}
+              <Link
+                href="/algae"
+                className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+              >
+                identify algae
+              </Link>
+              .
+            </p>
+          )}
         </div>
       </SectionShell>
     </>

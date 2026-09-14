@@ -6,6 +6,7 @@ import { listGuides } from "@/lib/guides";
 import { comparisonPairs } from "@/lib/catalogue/comparisons";
 import { generatedTanks, tankSizeSlug } from "@/lib/catalogue/tank-picks";
 import { ALGAE } from "@/data/algae";
+import { DEFICIENCIES } from "@/data/deficiencies";
 import { HARDSCAPE } from "@/data/hardscape";
 import { EQUIPMENT } from "@/data/equipment";
 import { CALCULATORS } from "@/data/calculators";
@@ -160,6 +161,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  // Plant deficiency identification hub plus a page per deficiency.
+  const deficiencyPages = [
+    {
+      url: `${site.url}/deficiencies`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...DEFICIENCIES.map((d) => ({
+      url: `${site.url}/deficiencies/${d.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   // Hardscape database, stone and wood.
   const hardscapePages = [
     {
@@ -221,6 +238,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tankMatePages,
     ...tankGuidePages,
     ...algaePages,
+    ...deficiencyPages,
     ...hardscapePages,
     ...equipmentPages,
     ...calculatorPages,

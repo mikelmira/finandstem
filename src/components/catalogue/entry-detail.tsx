@@ -306,6 +306,19 @@ export function EntryDetail({
                   </Link>
                   .
                 </p>
+                {entry.category === "plants" && (
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Leaves yellowing, pitting, or new growth coming in pale or
+                    twisted? Work out what it&rsquo;s short of in our{" "}
+                    <Link
+                      href="/deficiencies"
+                      className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)] hover:decoration-[var(--brand)]"
+                    >
+                      plant deficiency guide
+                    </Link>
+                    .
+                  </p>
+                )}
               </div>
             </article>
 

@@ -730,6 +730,60 @@ export function algaePageJsonLd({
   };
 }
 
+export interface DeficiencySchemaInput {
+  slug: string;
+  name: string;
+  description: string;
+  faqs: ReadonlyArray<FaqItem>;
+}
+
+/** Article + BreadcrumbList + FAQPage for a /deficiencies/[slug] page. */
+export function deficiencyPageJsonLd({
+  slug,
+  name,
+  description,
+  faqs,
+}: DeficiencySchemaInput) {
+  const url = `${site.url}/deficiencies/${slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: `${name} in Aquarium Plants: How to Identify and Fix It`,
+        description,
+        inLanguage: "en",
+        author: organizationRef(),
+        publisher: organizationEntity(),
+        articleSection: "Plant deficiencies",
+        about: name,
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Plant deficiencies", href: "/deficiencies" },
+          { name },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export interface HardscapeSchemaInput {
   slug: string;
   name: string;

@@ -112,6 +112,7 @@ export const CALCULATORS: ReadonlyArray<CalculatorMeta> = [
       },
     ],
     related: [
+      { label: "Diagnose a plant deficiency", href: "/deficiencies" },
       { label: "Aquarium lighting and plant demand", href: "/equipment/lighting" },
       { label: "Browse aquarium plants", href: "/plants" },
     ],

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -74,7 +75,16 @@ export default function AlgaeHubPage() {
           still settling. Fixing the balance matters more than scrubbing, and a
           good clean-up crew keeps the last of it in check. Each type above links
           to a full fix, including what causes it and which fish, shrimp or
-          snails graze it.
+          snails graze it. If it&rsquo;s the plants themselves that look wrong,
+          yellowing, pitting or pale new growth, rather than something growing on
+          them, that is usually a nutrient shortage. See{" "}
+          <Link
+            href="/deficiencies"
+            className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+          >
+            plant deficiency ID
+          </Link>
+          .
         </p>
       </SectionShell>
     </>
