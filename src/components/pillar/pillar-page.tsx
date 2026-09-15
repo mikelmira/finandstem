@@ -224,25 +224,42 @@ export function PillarPage({ pillar }: PillarPageProps) {
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
-          {pillar.clusterCategories.includes("plants") && (
-            <p className="mt-6 text-sm text-muted-foreground">
-              Troubleshooting a tank? Diagnose{" "}
-              <Link
-                href="/deficiencies"
-                className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
-              >
-                plant deficiencies
-              </Link>{" "}
-              or{" "}
-              <Link
-                href="/algae"
-                className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
-              >
-                identify algae
-              </Link>
-              .
-            </p>
-          )}
+          {(() => {
+            const links: { href: string; label: string }[] = [];
+            if (
+              pillar.clusterCategories.includes("plants") ||
+              pillar.clusterCategories.includes("mosses")
+            ) {
+              links.push(
+                { href: "/deficiencies", label: "diagnose plant deficiencies" },
+                { href: "/algae", label: "identify algae" },
+              );
+            }
+            if (
+              pillar.clusterCategories.includes("fish") ||
+              pillar.clusterCategories.includes("shrimp")
+            ) {
+              links.push({ href: "/diseases", label: "fish & shrimp health" });
+            }
+            if (links.length === 0) return null;
+            return (
+              <p className="mt-6 text-sm text-muted-foreground">
+                Troubleshooting a tank?{" "}
+                {links.map((l, i) => (
+                  <span key={l.href}>
+                    {i > 0 && (i === links.length - 1 ? " or " : ", ")}
+                    <Link
+                      href={l.href}
+                      className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+                    >
+                      {l.label}
+                    </Link>
+                  </span>
+                ))}
+                .
+              </p>
+            );
+          })()}
         </div>
       </SectionShell>
     </>

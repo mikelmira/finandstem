@@ -7,6 +7,7 @@ import { comparisonPairs } from "@/lib/catalogue/comparisons";
 import { generatedTanks, tankSizeSlug } from "@/lib/catalogue/tank-picks";
 import { ALGAE } from "@/data/algae";
 import { DEFICIENCIES } from "@/data/deficiencies";
+import { DISEASES } from "@/data/diseases";
 import { HARDSCAPE } from "@/data/hardscape";
 import { EQUIPMENT } from "@/data/equipment";
 import { CALCULATORS } from "@/data/calculators";
@@ -177,6 +178,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  // Fish and shrimp health hub plus a page per disease.
+  const diseasePages = [
+    {
+      url: `${site.url}/diseases`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...DISEASES.map((d) => ({
+      url: `${site.url}/diseases/${d.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   // Hardscape database, stone and wood.
   const hardscapePages = [
     {
@@ -239,6 +256,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tankGuidePages,
     ...algaePages,
     ...deficiencyPages,
+    ...diseasePages,
     ...hardscapePages,
     ...equipmentPages,
     ...calculatorPages,

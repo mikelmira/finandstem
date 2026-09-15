@@ -784,6 +784,60 @@ export function deficiencyPageJsonLd({
   };
 }
 
+export interface DiseaseSchemaInput {
+  slug: string;
+  name: string;
+  description: string;
+  faqs: ReadonlyArray<FaqItem>;
+}
+
+/** Article + BreadcrumbList + FAQPage for a /diseases/[slug] page. */
+export function diseasePageJsonLd({
+  slug,
+  name,
+  description,
+  faqs,
+}: DiseaseSchemaInput) {
+  const url = `${site.url}/diseases/${slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        url,
+        headline: `${name}: Symptoms, Causes and Treatment in Aquarium Fish and Shrimp`,
+        description,
+        inLanguage: "en",
+        author: organizationRef(),
+        publisher: organizationEntity(),
+        articleSection: "Fish and shrimp health",
+        about: name,
+      },
+      breadcrumbsJsonLd(
+        [
+          { name: "Home", href: "/" },
+          { name: "Fish & shrimp health", href: "/diseases" },
+          { name },
+        ],
+        url,
+      ),
+      faqs.length > 0
+        ? {
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: faqs.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          }
+        : null,
+    ].filter(Boolean),
+  };
+}
+
 export interface HardscapeSchemaInput {
   slug: string;
   name: string;

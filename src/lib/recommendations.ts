@@ -25,6 +25,22 @@ export const DOSING_PRODUCTS = ["apt3", "apt-ei", "apt1"];
  * calcium and magnesium are a remineralisation job in soft or RO water; CO2 is
  * a gear-and-technique fix with no bottled product, so it is absent here.
  */
+/**
+ * Disease slug -> product, only where a product genuinely treats it. Most
+ * fish disease is medication and husbandry, which we don't sell, so those are
+ * absent on purpose. Shrimp molting failure is a remineralisation fix, which a
+ * shrimp remineraliser addresses directly.
+ */
+export const DISEASE_PRODUCTS: Record<
+  string,
+  { ids: string[]; heading: string }
+> = {
+  "shrimp-failed-molt": {
+    ids: ["apt-sky-plus", "apt-sky"],
+    heading: "Remineralising for healthy molts",
+  },
+};
+
 export const DEFICIENCY_PRODUCTS: Record<
   string,
   { ids: string[]; heading: string }

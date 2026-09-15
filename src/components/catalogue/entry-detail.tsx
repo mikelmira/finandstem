@@ -319,6 +319,18 @@ export function EntryDetail({
                     .
                   </p>
                 )}
+                {(entry.category === "fish" || entry.category === "shrimp") && (
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Something looking off? Spot and treat it in our{" "}
+                    <Link
+                      href="/diseases"
+                      className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)] hover:decoration-[var(--brand)]"
+                    >
+                      fish and shrimp health guide
+                    </Link>
+                    .
+                  </p>
+                )}
               </div>
             </article>
 
