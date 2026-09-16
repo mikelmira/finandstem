@@ -329,6 +329,7 @@ export default function WaterChemistryPage() {
           <ul className="mt-4 flex flex-col gap-2">
             {[
               { label: "How to cycle a tank (the nitrogen readings)", href: "/aquarium-cycling" },
+              { label: "CO2 injection and the pH drop", href: "/equipment/co2-injection" },
               { label: "CO2 and pH drop-checker calculator", href: "/calculators/co2" },
               { label: "Fertiliser dosing calculator", href: "/calculators/fertiliser-dosing" },
               { label: "Plant deficiencies (GH, calcium, magnesium)", href: "/deficiencies" },

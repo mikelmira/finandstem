@@ -97,6 +97,16 @@ export default async function EquipmentPage({ params }: RouteParams) {
 
         <Tldr body={guide.tldr} subject={guide.name} />
 
+        {guide.slug === "co2-injection" && (
+          <figure className="mt-8">
+            <Co2SystemDiagram />
+            <figcaption className="mt-2 text-center text-xs text-muted-foreground">
+              A pressurised CO2 system, in order of gas flow, from cylinder to
+              the tank.
+            </figcaption>
+          </figure>
+        )}
+
         {guide.quickRef && (
           <div className="mt-10 glass glass-edge rounded-2xl p-6">
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--brand)]">
@@ -194,5 +204,53 @@ export default async function EquipmentPage({ params }: RouteParams) {
         </div>
       </article>
     </>
+  );
+}
+
+/** Original diagram of a pressurised CO2 system, in order of gas flow. Theme-aware. */
+function Co2SystemDiagram() {
+  const nodes = [
+    { label: "Cylinder", sub: "stores CO₂" },
+    { label: "Regulator", sub: "+ solenoid" },
+    { label: "Bubble counter", sub: "+ needle valve" },
+    { label: "Check valve", sub: "one-way" },
+  ];
+  return (
+    <svg
+      viewBox="0 0 760 200"
+      role="img"
+      aria-label="A pressurised CO2 system in order: cylinder, regulator with solenoid, bubble counter with needle valve, check valve, then into the tank where a diffuser dissolves the gas and a drop checker shows the level."
+      className="w-full rounded-2xl border border-border bg-background/60 p-3"
+    >
+      {nodes.map((n, i) => {
+        const x = 12 + i * 132;
+        return (
+          <g key={n.label}>
+            <rect x={x} y={62} width={112} height={62} rx={10} fill="var(--background)" stroke="var(--brand)" strokeWidth="1.5" />
+            <text x={x + 56} y={90} textAnchor="middle" fontSize="13" fontWeight="600" fill="var(--foreground)">
+              {n.label}
+            </text>
+            <text x={x + 56} y={108} textAnchor="middle" fontSize="10.5" fill="var(--muted-foreground)">
+              {n.sub}
+            </text>
+            <line x1={x + 112} y1={93} x2={x + 132 - 4} y2={93} stroke="var(--brand)" strokeWidth="2" markerEnd="url(#co2-arrow)" />
+          </g>
+        );
+      })}
+
+      {/* tank */}
+      <rect x={540} y={40} width={208} height={120} rx={12} fill="var(--brand)" fillOpacity="0.06" stroke="var(--brand)" strokeWidth="1.5" />
+      <text x={644} y={34} textAnchor="middle" fontSize="12" fill="var(--muted-foreground)">the tank</text>
+      <circle cx={572} cy={128} r="4" fill="var(--brand)" />
+      <text x={584} y={132} fontSize="12" fill="var(--foreground)">Diffuser dissolves it</text>
+      <circle cx={572} cy={78} r="4" fill="var(--brand)" />
+      <text x={584} y={82} fontSize="12" fill="var(--foreground)">Drop checker reads it</text>
+
+      <defs>
+        <marker id="co2-arrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L6,3 L0,6 Z" fill="var(--brand)" />
+        </marker>
+      </defs>
+    </svg>
   );
 }

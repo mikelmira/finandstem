@@ -45,6 +45,10 @@ export const EQUIPMENT: ReadonlyArray<EquipmentGuide> = [
         heading: "Depth and spread",
         body: "Light falls off fast with depth, so a tall tank needs a stronger fixture to reach the same PAR at the substrate as a shallow one. Spread matters too: a single spotlight leaves dark corners where plants sulk and algae settles. Aim for even coverage across the whole footprint.",
       },
+      {
+        heading: "Colour temperature and spectrum",
+        body: "Colour temperature, measured in Kelvin, is about how the tank looks and how well plants show their colour, not really about growth. Plants grow across a wide spectrum, so this is mostly aesthetic. Around 6500K is a clean, natural daylight that suits most planted tanks and makes greens and reds pop. Warmer, lower-Kelvin light looks yellow; cooler, higher-Kelvin light looks blue and clinical. A fixture with a bit of red and blue in the mix flatters plant colour, which is why full-spectrum planted lights look richer than a plain white shop light.",
+      },
     ],
     quickRef: {
       title: "Light demand by plant type",
@@ -53,6 +57,7 @@ export const EQUIPMENT: ReadonlyArray<EquipmentGuide> = [
         { label: "Low (anubias, java fern, crypts, mosses)", value: "~15 to 30 PAR, no CO2 needed" },
         { label: "Medium (most stems, easy carpets)", value: "~30 to 50 PAR" },
         { label: "High (demanding carpets, red stems)", value: "50+ PAR, CO2 required" },
+        { label: "Colour temperature", value: "~6500K for a natural planted look" },
         { label: "Photoperiod", value: "6 to 8 hours on a timer" },
       ],
     },
@@ -90,6 +95,10 @@ export const EQUIPMENT: ReadonlyArray<EquipmentGuide> = [
       {
         heading: "Biological media is what matters",
         body: "The mechanical floss and the chemical media are secondary. The heart of a filter is the biological media, the porous surface where bacteria live and process ammonia. Never rinse all of it at once or replace it wholesale, or you knock back the colony and risk an ammonia spike. Rinse it gently in old tank water and only when flow drops.",
+      },
+      {
+        heading: "How to layer the media",
+        body: "Water should hit the coarsest mechanical stage first and the finest last, so debris is caught progressively without clogging everything at once. In a canister that means coarse sponge, then finer sponge or floss, then the bulk of the biological media, with any chemical media like carbon last and only when you actually need it. Getting the order right keeps flow up and means you can rinse the mechanical stages often while leaving the biological media undisturbed.",
       },
     ],
     quickRef: {
@@ -134,16 +143,28 @@ export const EQUIPMENT: ReadonlyArray<EquipmentGuide> = [
         body: "Pressurised CO2 from a cylinder and regulator is the proper way, steady and controllable. DIY yeast bottles are cheap but drift and run out, so they suit only small tanks. Liquid carbon products are not true CO2 and give a modest boost at best, though they double as a spot treatment for algae. For anything beyond easy plants, pressurised is the one that works.",
       },
       {
+        heading: "The parts of a CO2 system",
+        body: "A pressurised setup is a chain of parts, each doing one job. The cylinder holds the gas. The regulator steps the high tank pressure down to a usable working pressure, and its built-in solenoid is the electric valve that lets a timer switch the gas on and off. A needle valve fine-tunes the flow, and a bubble counter lets you see and set the rate in bubbles per second. A check valve stops water siphoning back up the line when the gas is off. Finally a diffuser or inline reactor dissolves the CO2 into the water, and a drop checker hangs in the tank as your gauge. Buy a regulator with the solenoid and needle valve already integrated, it saves a lot of fiddling.",
+      },
+      {
+        heading: "Setting it up, step by step",
+        body: "Screw the regulator onto the cylinder with its sealing washer and check it is snug. Fit the bubble counter and check valve in line, then run tubing to the diffuser low in the tank, under good flow so the mist spreads. Put the solenoid on the same timer as, or just ahead of, the lights. Fill the drop checker with 4 dKH reference fluid and hang it away from the diffuser so it reads the tank, not the bubbles. Open the needle valve slowly to a slow bubble rate to start, then leave it a day before adjusting. Always turn a fresh cylinder on gently and check every joint for leaks with soapy water.",
+      },
+      {
         heading: "Dialling it in",
-        body: "A drop checker with 4 dKH reference fluid is your gauge. Blue means too little CO2, green is the sweet spot, and yellow means too much, which is dangerous for livestock. Start low, raise the bubble rate a little each day, and watch the fish. If they gasp at the surface, back off at once.",
+        body: "A drop checker with 4 dKH reference fluid is your gauge, though it lags by an hour or so, so read it against the clock. Blue means too little CO2, green is the sweet spot, and yellow means too much, which is dangerous for livestock. Start low, raise the bubble rate a little each day, and watch the fish. If they gasp at the surface, back off at once and add surface agitation.",
       },
     ],
     quickRef: {
-      title: "Running CO2 safely",
+      title: "The CO2 chain, in order",
+      note: "Gas flows from the cylinder through each part to the tank.",
       rows: [
-        { label: "Drop checker blue", value: "Too little CO2, raise it slowly" },
-        { label: "Drop checker green", value: "The target" },
-        { label: "Drop checker yellow", value: "Too much, dangerous, cut it back" },
+        { label: "Cylinder", value: "Holds the pressurised CO2" },
+        { label: "Regulator + solenoid", value: "Drops pressure; the timer switches it on and off" },
+        { label: "Needle valve + bubble counter", value: "Set and see the bubble rate" },
+        { label: "Check valve", value: "Stops water siphoning back up the line" },
+        { label: "Diffuser or reactor", value: "Dissolves the gas into the water" },
+        { label: "Drop checker", value: "Blue = low, green = target, yellow = danger" },
         { label: "Timing", value: "On 1 to 2h before lights, off ~1h before lights out" },
       ],
     },
@@ -160,7 +181,9 @@ export const EQUIPMENT: ReadonlyArray<EquipmentGuide> = [
       },
     ],
     related: [
-      { label: "Browse aquarium plants", href: "/plants" },
+      { label: "CO2 and pH drop-checker calculator", href: "/calculators/co2" },
+      { label: "How KH, pH and CO2 relate", href: "/water-chemistry" },
+      { label: "Circulation and flow", href: "/equipment/circulation-and-flow" },
       { label: "Low-light plants that need no CO2", href: "/guides/low-light-aquarium-plants-no-co2" },
     ],
   },
@@ -206,6 +229,59 @@ export const EQUIPMENT: ReadonlyArray<EquipmentGuide> = [
     ],
     related: [
       { label: "Browse fish and their temperature ranges", href: "/fish" },
+      { label: "Plan a tank", href: "/planner" },
+    ],
+  },
+  {
+    slug: "circulation-and-flow",
+    name: "Circulation & Flow",
+    spot: "Why moving water to every corner matters, and how to kill dead spots.",
+    tldr: "Flow does more than the filter alone. It carries CO2, nutrients and heat to every plant and stops waste settling into dead spots where black beard algae and anaerobic pockets form. You want gentle, even movement that reaches all corners, not a wind tunnel that pins the fish and flattens the plants. A little surface agitation or a skimmer keeps the film off the top and gas exchange up, and a small powerhead fixes dead corners in a bigger tank. In a CO2 tank especially, good flow is what actually delivers the gas to the leaves.",
+    sections: [
+      {
+        heading: "Why flow matters",
+        body: "The filter's job is not just to clean, it is to move water. Even circulation spreads CO2, nutrients and warmth to every plant and keeps detritus suspended long enough to reach the filter instead of rotting in a corner. Where flow is weak, waste settles, oxygen drops, and black beard algae and cyanobacteria move in. The goal is gentle, even movement everywhere, not brute force. Too much flow is its own problem: fish fight the current, carpets lift, and delicate plants get battered.",
+      },
+      {
+        heading: "Surface agitation and skimmers",
+        body: "A little movement at the surface breaks up the oily film that can form there and drives gas exchange, pulling oxygen in, which matters most at night when plants stop producing it. A surface skimmer, or simply angling the outflow up toward the surface, handles this. The trade-off in a CO2 tank is that surface agitation also off-gasses CO2, so you balance the two: enough movement for oxygen and a clean surface, not so much that you can't hold a stable CO2 level.",
+      },
+      {
+        heading: "Finding and fixing dead spots",
+        body: "Watch where detritus settles and where algae favours one corner, those are your dead spots. Aim the filter outflow to push water along the back glass so it sweeps around the tank in a gentle loop, rather than firing straight across. A spray bar spreads flow more evenly than a single nozzle. In a larger or awkwardly shaped tank, a small powerhead or wavemaker aimed at the stagnant area clears it without cranking up the whole tank.",
+      },
+    ],
+    quickRef: {
+      title: "Reading your flow",
+      rows: [
+        { label: "The goal", value: "Gentle, even movement to every corner" },
+        { label: "Detritus or BBA in one spot", value: "A dead spot, aim flow there" },
+        { label: "Fish struggling, plants flattened", value: "Too much flow, ease it off" },
+        { label: "Oily film on the surface", value: "Add agitation or a skimmer" },
+        { label: "CO2 tanks", value: "More surface agitation off-gasses CO2, balance it" },
+      ],
+    },
+    faqs: [
+      {
+        question: "Why is algae only in one corner of my tank?",
+        answer:
+          "That corner almost certainly has weak flow. Detritus settles and black beard algae or cyanobacteria take hold where water is stagnant. Aim your outflow to sweep that area, or add a small powerhead, and it usually clears.",
+      },
+      {
+        question: "Do I need a surface skimmer?",
+        answer:
+          "It is not essential, but it keeps the surface film off and improves gas exchange, which helps oxygen levels. Angling the filter outflow up at the surface does much the same job for free.",
+      },
+      {
+        question: "Can I have too much flow?",
+        answer:
+          "Yes. If fish are pinned against the glass or struggle to swim, carpets lift, or delicate plants get battered, the flow is too strong. Aim for gentle movement everywhere rather than raw power.",
+      },
+    ],
+    related: [
+      { label: "Filtration and turnover", href: "/equipment/filtration" },
+      { label: "Running CO2 (flow delivers the gas)", href: "/equipment/co2-injection" },
+      { label: "Black beard algae in low-flow spots", href: "/algae/black-beard-algae" },
       { label: "Plan a tank", href: "/planner" },
     ],
   },
