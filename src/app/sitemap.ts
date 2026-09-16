@@ -76,6 +76,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },
     { path: "/compare", priority: 0.7, freq: "weekly" },
+    { path: "/species-finder", priority: 0.8, freq: "weekly" },
+    { path: "/species-map", priority: 0.8, freq: "weekly" },
 
     // Org / footer
     { path: "/about", priority: 0.6, freq: "monthly" },

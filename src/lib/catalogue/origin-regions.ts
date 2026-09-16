@@ -495,6 +495,46 @@ const PATTERNS: Pattern[] = [
       coords: [144, -6],
     },
   },
+  {
+    keywords: ["west papua", "mamberamo"],
+    region: {
+      id: "west-papua",
+      label: "West Papua",
+      coords: [138, -3],
+    },
+  },
+  {
+    keywords: ["congo"],
+    region: {
+      id: "congo",
+      label: "Congo Basin",
+      coords: [21, -1],
+    },
+  },
+  {
+    keywords: ["madagascar"],
+    region: {
+      id: "madagascar",
+      label: "Madagascar",
+      coords: [47, -19],
+    },
+  },
+  {
+    keywords: ["ganges", "indus"],
+    region: {
+      id: "ganges-indus",
+      label: "Ganges & Indus basins",
+      coords: [83, 25],
+    },
+  },
+  {
+    keywords: ["southeastern united states", "florida"],
+    region: {
+      id: "se-usa",
+      label: "Southeastern United States",
+      coords: [-82, 30],
+    },
+  },
 ];
 
 /**

@@ -7,6 +7,7 @@ import {
   Sprout,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { DetailSection } from "@/data/species-detail";
 import type { CatalogueEntry } from "@/types/catalogue";
@@ -58,7 +59,19 @@ export function WildSplit({ entry, sections, className }: WildSplitProps) {
 
       {/* World map, only shown when we can geo-locate the origin */}
       {mappableRegions.length > 0 && (
-        <OriginMap origin={entry.origin} className="animate-fade-up" />
+        <div className="animate-fade-up">
+          <OriginMap origin={entry.origin} />
+          <p className="mt-2 text-xs text-muted-foreground">
+            See where every species comes from on the{" "}
+            <Link
+              href="/species-map"
+              className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+            >
+              interactive world map
+            </Link>
+            .
+          </p>
+        </div>
       )}
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.45fr_1fr] lg:gap-6">

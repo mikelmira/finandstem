@@ -36,6 +36,8 @@ export const site = {
     { label: "Fish Health", href: "/diseases" },
     { label: "History", href: "/history-of-aquascaping" },
     { label: "Planner", href: "/planner" },
+    { label: "Species Finder", href: "/species-finder" },
+    { label: "Species Map", href: "/species-map" },
     { label: "Compare", href: "/compare" },
     { label: "Compatibility", href: "/compatibility" },
     { label: "About", href: "/about" },
@@ -57,6 +59,8 @@ export const site = {
       {
         title: "Tools",
         links: [
+          { label: "Species finder", href: "/species-finder" },
+          { label: "Species world map", href: "/species-map" },
           { label: "Tank Planner", href: "/planner" },
           { label: "Compare species", href: "/compare" },
           { label: "Compatibility", href: "/compatibility" },
