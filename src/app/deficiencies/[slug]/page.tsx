@@ -218,6 +218,7 @@ export default async function DeficiencyPage({ params }: RouteParams) {
           <ul className="mt-4 flex flex-col gap-2">
             {[
               { label: "Fertiliser dosing calculator", href: "/calculators/fertiliser-dosing" },
+              { label: "Water chemistry: GH, calcium and magnesium", href: "/water-chemistry" },
               { label: "Identify aquarium algae", href: "/algae" },
               { label: "Browse aquarium plants", href: "/plants" },
             ].map((r) => (

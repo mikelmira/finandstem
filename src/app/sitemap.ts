@@ -62,6 +62,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Cycling — foundational start-here reference
     { path: "/aquarium-cycling", priority: 0.85, freq: "monthly" },
 
+    // Water chemistry reference
+    { path: "/water-chemistry", priority: 0.85, freq: "monthly" },
+
     // Tools
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },

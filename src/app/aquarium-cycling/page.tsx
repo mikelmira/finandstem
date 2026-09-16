@@ -384,6 +384,7 @@ export default function AquariumCyclingPage() {
           </h2>
           <ul className="mt-4 flex flex-col gap-2">
             {[
+              { label: "Understand the numbers: pH, KH, GH and more", href: "/water-chemistry" },
               { label: "Pick fast plants that speed a silent cycle", href: "/plants" },
               { label: "Choose hardy first fish", href: "/fish" },
               { label: "Something already going wrong? Fish & shrimp health", href: "/diseases" },
