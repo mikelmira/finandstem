@@ -120,8 +120,15 @@ export default function DiseaseHubPage() {
           out of range. Match the symptom, treat the animal, then fix the cause
           so it doesn&rsquo;t return. Every guide flags which treatments are safe
           around shrimp, snails and plants, and which belong in a quarantine
-          tank. If it&rsquo;s the plants that look unwell rather than the animals,
-          see{" "}
+          tank. In a new tank, sudden losses are usually the{" "}
+          <Link
+            href="/aquarium-cycling"
+            className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+          >
+            cycle
+          </Link>
+          , not a disease. And if it&rsquo;s the plants that look unwell rather
+          than the animals, see{" "}
           <Link
             href="/deficiencies"
             className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"

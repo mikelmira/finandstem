@@ -59,6 +59,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // History feature page — single editorial reference piece
     { path: "/history-of-aquascaping", priority: 0.85, freq: "yearly" },
 
+    // Cycling — foundational start-here reference
+    { path: "/aquarium-cycling", priority: 0.85, freq: "monthly" },
+
     // Tools
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },

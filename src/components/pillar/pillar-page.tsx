@@ -225,7 +225,9 @@ export function PillarPage({ pillar }: PillarPageProps) {
             </Link>
           </div>
           {(() => {
-            const links: { href: string; label: string }[] = [];
+            const links: { href: string; label: string }[] = [
+              { href: "/aquarium-cycling", label: "cycle a new tank" },
+            ];
             if (
               pillar.clusterCategories.includes("plants") ||
               pillar.clusterCategories.includes("mosses")
@@ -244,7 +246,7 @@ export function PillarPage({ pillar }: PillarPageProps) {
             if (links.length === 0) return null;
             return (
               <p className="mt-6 text-sm text-muted-foreground">
-                Troubleshooting a tank?{" "}
+                Setting up or troubleshooting a tank?{" "}
                 {links.map((l, i) => (
                   <span key={l.href}>
                     {i > 0 && (i === links.length - 1 ? " or " : ", ")}
