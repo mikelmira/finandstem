@@ -65,6 +65,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Water chemistry reference
     { path: "/water-chemistry", priority: 0.85, freq: "monthly" },
 
+    // Aquascaping design and composition
+    { path: "/aquascaping-design", priority: 0.85, freq: "monthly" },
+
     // Tools
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },

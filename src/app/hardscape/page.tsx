@@ -64,6 +64,16 @@ export default function HardscapeHubPage() {
         <div className="mt-14">
           <HardscapeGroup title="Wood" note="Watch for tannins and floating" items={WOOD} />
         </div>
+        <p className="mt-12 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Picked your stone and wood? The next step is arranging it. See{" "}
+          <Link
+            href="/aquascaping-design"
+            className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+          >
+            aquascaping design and composition
+          </Link>{" "}
+          for the rule of thirds, layout shapes and the main styles.
+        </p>
       </SectionShell>
     </>
   );

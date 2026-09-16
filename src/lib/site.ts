@@ -72,6 +72,7 @@ export const site = {
           { label: "Guides", href: "/guides" },
           { label: "How to cycle a tank", href: "/aquarium-cycling" },
           { label: "Water chemistry", href: "/water-chemistry" },
+          { label: "Aquascaping design", href: "/aquascaping-design" },
           { label: "Algae ID", href: "/algae" },
           { label: "Deficiency ID", href: "/deficiencies" },
           { label: "Fish & shrimp health", href: "/diseases" },
