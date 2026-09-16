@@ -68,6 +68,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Aquascaping design and composition
     { path: "/aquascaping-design", priority: 0.85, freq: "monthly" },
 
+    // Maintenance routine + glossary
+    { path: "/aquarium-maintenance", priority: 0.8, freq: "monthly" },
+    { path: "/glossary", priority: 0.6, freq: "monthly" },
+
     // Tools
     { path: "/compatibility", priority: 0.7, freq: "weekly" },
     { path: "/planner", priority: 0.7, freq: "weekly" },
