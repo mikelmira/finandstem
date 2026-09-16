@@ -4,6 +4,34 @@
 import type { ImageAttribution } from "@/types/catalogue";
 
 export const IMAGE_ATTRIBUTION: Record<string, ImageAttribution> = {
+  "babaulti-shrimp": {
+    "slug": "babaulti-shrimp",
+    "category": "shrimp",
+    "src": "/images/catalogue/shrimp/babaulti-shrimp.webp",
+    "alt": "Green Babaulti Shrimp (Caridina babaulti) on a leaf",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "author": "Peter Pfeiffer",
+    "credit": "Own work, via Wikimedia Commons",
+    "fileTitle": "File:Caridina cf. babaulti.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Caridina_cf._babaulti.jpg",
+  },
+  "bladder-snail": {
+    "slug": "bladder-snail",
+    "category": "snails",
+    "src": "/images/catalogue/snails/bladder-snail.webp",
+    "alt": "Bladder Snail (Physella acuta) grazing on an aquarium plant",
+    "width": 1200,
+    "height": 1200,
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "author": "Barbalalaika",
+    "credit": "Own work, via Wikimedia Commons",
+    "fileTitle": "File:Physella acuta on an aquarium plant.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Physella_acuta_on_an_aquarium_plant.jpg",
+  },
   "alternanthera-reineckii-mini": {
     "alt": "Alternanthera Reineckii 'Mini' (Alternanthera reineckii 'Mini')",
     "author": "Drhyperlaur ( talk ) ( Uploads )",
