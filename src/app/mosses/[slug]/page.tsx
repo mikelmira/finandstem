@@ -9,6 +9,8 @@ interface RouteParams {
   params: Promise<{ slug: string }>;
 }
 
+
+export const dynamicParams = false;
 export async function generateStaticParams() {
   return mosses.map((m) => ({ slug: m.slug }));
 }

@@ -10,6 +10,8 @@ interface RouteParams {
   params: Promise<{ slug: string }>;
 }
 
+
+export const dynamicParams = false;
 export async function generateStaticParams() {
   return snails.map((s) => ({ slug: s.slug }));
 }

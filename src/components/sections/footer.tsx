@@ -2,6 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
 
+// Evaluated once at build (these pages are statically prerendered), so the
+// footer year is baked into the static output rather than being a per-render
+// `new Date()` in the ISR output, which Vercel flags as a cause of cache writes.
+const CURRENT_YEAR = new Date().getFullYear();
+
 export function SiteFooter() {
   return (
     <footer className="relative isolate mt-auto overflow-hidden border-t border-border/60">
@@ -73,7 +78,7 @@ export function SiteFooter() {
             .
           </p>
           <p className="mt-4 text-muted-foreground/80">
-            © {new Date().getFullYear()} {site.name}. {site.owner.location}.
+            © {CURRENT_YEAR} {site.name}. {site.owner.location}.
           </p>
         </div>
       </div>

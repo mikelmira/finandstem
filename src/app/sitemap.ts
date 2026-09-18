@@ -26,7 +26,13 @@ import { CALCULATORS } from "@/data/calculators";
  *  0.3  Legal
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // Stable lastmod for the reference/tool/static pages. Using a fixed date
+  // (rather than `new Date()`) keeps the sitemap byte-identical across deploys,
+  // so crawlers don't treat every page as changed on every deploy and re-crawl
+  // the whole site, which drives up Vercel ISR reads. Bump this only when these
+  // hub pages materially change. Catalogue and guide URLs already carry their
+  // own real per-entry timestamps below.
+  const now = new Date("2026-09-16T00:00:00.000Z");
 
   type Freq = MetadataRoute.Sitemap[number]["changeFrequency"];
 
