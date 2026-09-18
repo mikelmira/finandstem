@@ -2,22 +2,7 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
-import { BuilderPicker, type BuilderOption } from "@/components/planner/builder-picker";
-import { TankComposition } from "@/components/planner/tank-composition";
-import { TankRequirementsPanel } from "@/components/planner/tank-requirements";
-import { TankSetupCard } from "@/components/planner/tank-setup-card";
-import { StockingGauge } from "@/components/planner/stocking-gauge";
-import { TankWarnings } from "@/components/planner/tank-warnings";
-import { RecommendedSpecies } from "@/components/planner/recommended-species";
-import { WaterColumnPanel } from "@/components/planner/water-column-panel";
-import { allNorm } from "@/lib/catalogue/normalize";
-import {
-  buildTank,
-  dghContributions,
-  phContributions,
-  temperatureContributions,
-} from "@/lib/catalogue/tank-builder";
-import { recommendFish } from "@/lib/catalogue/recommend";
+import { PlannerClient } from "@/components/planner/planner-client";
 
 export const metadata: Metadata = {
   title: "Tank Planner",
@@ -25,64 +10,9 @@ export const metadata: Metadata = {
     "Build your tank species by species. Add fish, plants, shrimp, and mosses, we cross-reference parameters and flag every compatibility issue.",
 };
 
-const OPTIONS: BuilderOption[] = allNorm
-  .map((n) => ({
-    value: `${n.category}:${n.slug}`,
-    label: n.commonName,
-    scientific: n.scientificName,
-    category: n.category,
-  }))
-  .sort((a, b) => a.label.localeCompare(b.label));
-
-interface PageProps {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
-
-function first(v: string | string[] | undefined): string | undefined {
-  return Array.isArray(v) ? v[0] : v;
-}
-
-function numParam(v: string | string[] | undefined): number | undefined {
-  const s = first(v);
-  if (!s) return undefined;
-  const n = Number(s);
-  return Number.isNaN(n) ? undefined : n;
-}
-
-export default async function PlannerPage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const rawIds = first(sp.species) ?? "";
-  const ids = rawIds
-    .split(",")
-    .map((s) => s.trim())
-    .filter(Boolean);
-  const tankL = numParam(sp.tank);
-  const filterLph = numParam(sp.filter);
-
-  const result = buildTank({ ids, tankL, filterLph });
-  const items = result.selection.all.map((a) => ({
-    entry: a.entry,
-    count: a.count,
-    defaultCount: a.defaultCount,
-    recommendedCount: a.recommendedCount,
-    hasCustomCount: a.hasCustomCount,
-  }));
-  const hasSelection = items.length > 0;
-
-  const contributions = {
-    temp: temperatureContributions(result.selection),
-    ph: phContributions(result.selection),
-    dgh: dghContributions(result.selection),
-  };
-
-  // Only run the recommender when the user has at least one fish or
-  // shrimp — recommending into an empty tank isn't meaningful.
-  const recommendations =
-    hasSelection &&
-    (result.selection.fish.length > 0 || result.selection.shrimp.length > 0)
-      ? recommendFish(result, tankL, 4)
-      : [];
-
+// Fully static: the whole analysis runs client-side from the URL (see
+// PlannerClient), so the page is CDN-served with no per-request function cost.
+export default function PlannerPage() {
   return (
     <>
       <PageHero
@@ -93,115 +23,10 @@ export default async function PlannerPage({ searchParams }: PageProps) {
       />
 
       <SectionShell>
-        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.4fr] lg:gap-10">
-          {/* Left column. The grid item stretches to the full row height so
-              the inner controls block can stay pinned for the entire scroll;
-              the species list below it scrolls normally. Sticking an inner
-              wrapper (rather than the whole column) also keeps the picker's
-              dropdown out of any overflow container so it never gets clipped. */}
-          <div className="flex flex-col gap-5">
-            <div className="flex flex-col gap-5 lg:sticky lg:top-24">
-              <Suspense fallback={null}>
-                <TankSetupCard tankL={tankL} filterLph={filterLph} />
-              </Suspense>
-
-              <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
-                <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
-                  Add to your tank
-                </h2>
-                <div className="mt-4">
-                  <Suspense fallback={null}>
-                    <BuilderPicker options={OPTIONS} selected={ids} />
-                  </Suspense>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <div className="flex items-baseline justify-between gap-3">
-                <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                  Your tank ({items.length})
-                </h2>
-                {items.length > 0 && (
-                  <span className="text-[11px] text-muted-foreground/70">
-                    Adjust counts with − / +
-                  </span>
-                )}
-              </div>
-              <Suspense fallback={null}>
-                <TankComposition items={items} />
-              </Suspense>
-            </div>
-          </div>
-
-          {/* Right, stocking, requirements + warnings */}
-          <div className="flex flex-col gap-8">
-            {hasSelection ? (
-              <>
-                <StockingGauge stocking={result.stocking} tankL={tankL} />
-                {result.selection.fish.length > 0 && (
-                  <WaterColumnPanel report={result.waterColumn} />
-                )}
-                <TankRequirementsPanel
-                  requirements={result.requirements}
-                  tankL={tankL}
-                  contributions={contributions}
-                />
-                <TankWarnings
-                  warnings={result.warnings}
-                  hasSelection={hasSelection}
-                />
-                {recommendations.length > 0 && (
-                  <Suspense fallback={null}>
-                    <RecommendedSpecies recommendations={recommendations} />
-                  </Suspense>
-                )}
-              </>
-            ) : (
-              <EmptyState />
-            )}
-          </div>
-        </div>
+        <Suspense fallback={<div className="h-96" />}>
+          <PlannerClient />
+        </Suspense>
       </SectionShell>
     </>
-  );
-}
-
-function EmptyState() {
-  return (
-    <div className="glass glass-edge animate-rise flex flex-col items-start gap-4 rounded-2xl p-8 sm:p-10">
-      <span className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
-        Pick your inhabitants
-      </span>
-      <h2 className="text-display-tight text-2xl sm:text-3xl">
-        Add a species to start the analysis
-      </h2>
-      <p className="text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-        Every time you add a fish, plant, shrimp, or moss, we recompute
-        the parameters your tank needs to keep all of them happy.
-        You&rsquo;ll see whether your chosen tank size + filter handle
-        the combined bioload, the overlapping temperature / pH /
-        hardness, the light and CO₂ scales, what substrate to use , 
-        plus every compatibility conflict before you spend the money.
-      </p>
-      <ul className="grid grid-cols-1 gap-2 text-sm text-foreground/85 sm:grid-cols-2">
-        <li className="flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Standard tank sizes with matched filter ranges
-        </li>
-        <li className="flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Live stocking gauge, comfortable, full, overstocked
-        </li>
-        <li className="flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Light 1–5 + CO₂ 1–3 from the plants you add
-        </li>
-        <li className="flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
-          Predator / prey + plant-safety flags
-        </li>
-      </ul>
-    </div>
   );
 }

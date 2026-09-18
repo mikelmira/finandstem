@@ -1,0 +1,165 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import { BuilderPicker, type BuilderOption } from "@/components/planner/builder-picker";
+import { TankComposition } from "@/components/planner/tank-composition";
+import { TankRequirementsPanel } from "@/components/planner/tank-requirements";
+import { TankSetupCard } from "@/components/planner/tank-setup-card";
+import { StockingGauge } from "@/components/planner/stocking-gauge";
+import { TankWarnings } from "@/components/planner/tank-warnings";
+import { RecommendedSpecies } from "@/components/planner/recommended-species";
+import { WaterColumnPanel } from "@/components/planner/water-column-panel";
+import { allNorm } from "@/lib/catalogue/normalize";
+import {
+  buildTank,
+  dghContributions,
+  phContributions,
+  temperatureContributions,
+} from "@/lib/catalogue/tank-builder";
+import { recommendFish } from "@/lib/catalogue/recommend";
+
+const OPTIONS: BuilderOption[] = allNorm
+  .map((n) => ({
+    value: `${n.category}:${n.slug}`,
+    label: n.commonName,
+    scientific: n.scientificName,
+    category: n.category,
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+function numParam(s: string | null): number | undefined {
+  if (!s) return undefined;
+  const n = Number(s);
+  return Number.isNaN(n) ? undefined : n;
+}
+
+/**
+ * Client-side tank planner. The page is fully static; this reads the tank,
+ * filter and species from the URL and runs the whole analysis in the browser,
+ * so there is no per-request server work.
+ */
+export function PlannerClient() {
+  const searchParams = useSearchParams();
+  const ids = (searchParams?.get("species") ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const tankL = numParam(searchParams?.get("tank") ?? null);
+  const filterLph = numParam(searchParams?.get("filter") ?? null);
+
+  const result = buildTank({ ids, tankL, filterLph });
+  const items = result.selection.all.map((a) => ({
+    entry: a.entry,
+    count: a.count,
+    defaultCount: a.defaultCount,
+    recommendedCount: a.recommendedCount,
+    hasCustomCount: a.hasCustomCount,
+  }));
+  const hasSelection = items.length > 0;
+
+  const contributions = {
+    temp: temperatureContributions(result.selection),
+    ph: phContributions(result.selection),
+    dgh: dghContributions(result.selection),
+  };
+
+  const recommendations =
+    hasSelection &&
+    (result.selection.fish.length > 0 || result.selection.shrimp.length > 0)
+      ? recommendFish(result, tankL, 4)
+      : [];
+
+  return (
+    <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.4fr] lg:gap-10">
+      <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 lg:sticky lg:top-24">
+          <TankSetupCard tankL={tankL} filterLph={filterLph} />
+
+          <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
+            <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
+              Add to your tank
+            </h2>
+            <div className="mt-4">
+              <BuilderPicker options={OPTIONS} selected={ids} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <div className="flex items-baseline justify-between gap-3">
+            <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+              Your tank ({items.length})
+            </h2>
+            {items.length > 0 && (
+              <span className="text-[11px] text-muted-foreground/70">
+                Adjust counts with − / +
+              </span>
+            )}
+          </div>
+          <TankComposition items={items} />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        {hasSelection ? (
+          <>
+            <StockingGauge stocking={result.stocking} tankL={tankL} />
+            {result.selection.fish.length > 0 && (
+              <WaterColumnPanel report={result.waterColumn} />
+            )}
+            <TankRequirementsPanel
+              requirements={result.requirements}
+              tankL={tankL}
+              contributions={contributions}
+            />
+            <TankWarnings warnings={result.warnings} hasSelection={hasSelection} />
+            {recommendations.length > 0 && (
+              <RecommendedSpecies recommendations={recommendations} />
+            )}
+          </>
+        ) : (
+          <EmptyState />
+        )}
+      </div>
+    </div>
+  );
+}
+
+function EmptyState() {
+  return (
+    <div className="glass glass-edge animate-rise flex flex-col items-start gap-4 rounded-2xl p-8 sm:p-10">
+      <span className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
+        Pick your inhabitants
+      </span>
+      <h2 className="text-display-tight text-2xl sm:text-3xl">
+        Add a species to start the analysis
+      </h2>
+      <p className="text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+        Every time you add a fish, plant, shrimp, or moss, we recompute the
+        parameters your tank needs to keep all of them happy. You&rsquo;ll see
+        whether your chosen tank size + filter handle the combined bioload, the
+        overlapping temperature / pH / hardness, the light and CO₂ scales, what
+        substrate to use, plus every compatibility conflict before you spend the
+        money.
+      </p>
+      <ul className="grid grid-cols-1 gap-2 text-sm text-foreground/85 sm:grid-cols-2">
+        <li className="flex items-center gap-2">
+          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+          Standard tank sizes with matched filter ranges
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+          Live stocking gauge, comfortable, full, overstocked
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+          Light 1–5 + CO₂ 1–3 from the plants you add
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="size-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+          Predator / prey + plant-safety flags
+        </li>
+      </ul>
+    </div>
+  );
+}
