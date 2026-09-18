@@ -48,3 +48,6 @@ __pycache__/
 
 # Claude Code project state
 .claude/
+
+# IndexNow submission baseline (per-machine)
+scripts/.indexnow-state.json

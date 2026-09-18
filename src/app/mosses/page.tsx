@@ -4,13 +4,8 @@ import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { EntryGrid } from "@/components/catalogue/entry-grid";
-import { MossFilters } from "@/components/filters/moss-filters";
+import { MossIndexClient } from "@/components/filters/moss-index-client";
 import { mossNorm } from "@/lib/catalogue/normalize";
-import {
-  parseMossFilters,
-  applyMossFilters,
-  mossChips,
-} from "@/lib/catalogue/filters";
 import { mosses } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
@@ -26,17 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
-interface PageProps {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
-
-export default async function MossesIndexPage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const filters = parseMossFilters(sp);
-  const chips = mossChips(filters);
-  const filtered = applyMossFilters(mossNorm, filters);
-  const entries = filtered.map((n) => n.raw);
-
+// Fully static: filtering runs client-side from the URL (see MossIndexClient).
+export default function MossesIndexPage() {
   return (
     <>
       <JsonLd
@@ -51,15 +37,10 @@ export default async function MossesIndexPage({ searchParams }: PageProps) {
         breadcrumb={[{ label: "Mosses" }]}
       />
       <SectionShell>
-        <Suspense fallback={null}>
-          <MossFilters
-            filters={filters}
-            chips={chips}
-            resultCount={entries.length}
-            totalCount={mossNorm.length}
-          >
-            <EntryGrid entries={entries} />
-          </MossFilters>
+        {/* Fallback = full unfiltered grid, prerendered into the static HTML for
+            SEO; the client filter takes over on hydration. */}
+        <Suspense fallback={<EntryGrid entries={mosses} />}>
+          <MossIndexClient />
         </Suspense>
       </SectionShell>
     </>

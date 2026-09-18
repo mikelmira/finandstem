@@ -3,15 +3,10 @@ import type { Metadata } from "next";
 import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
-import { EntryGrid } from "@/components/catalogue/entry-grid";
 import { TankMatesLinks } from "@/components/catalogue/tank-mates-links";
-import { FishFilters } from "@/components/filters/fish-filters";
+import { EntryGrid } from "@/components/catalogue/entry-grid";
+import { FishIndexClient } from "@/components/filters/fish-index-client";
 import { fishNorm } from "@/lib/catalogue/normalize";
-import {
-  parseFishFilters,
-  applyFishFilters,
-  fishChips,
-} from "@/lib/catalogue/filters";
 import { fish } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
@@ -29,23 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
-interface PageProps {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
-
-export default async function FishIndexPage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const filters = parseFishFilters(sp);
-  const chips = fishChips(filters);
-  const filtered = applyFishFilters(fishNorm, filters);
-  const entries = filtered.map((n) => n.raw);
-
+// Fully static: filtering runs client-side from the URL (see FishIndexClient),
+// so this page is served from the CDN with no per-request function invocations.
+export default function FishIndexPage() {
   return (
     <>
-      <JsonLd
-        data={categoryIndexJsonLd("fish", fish)}
-        id="fish-index-jsonld"
-      />
+      <JsonLd data={categoryIndexJsonLd("fish", fish)} id="fish-index-jsonld" />
       <PageHero
         eyebrow="Fish"
         title="Fish for the planted tank."
@@ -54,15 +38,11 @@ export default async function FishIndexPage({ searchParams }: PageProps) {
         breadcrumb={[{ label: "Fish" }]}
       />
       <SectionShell>
-        <Suspense fallback={null}>
-          <FishFilters
-            filters={filters}
-            chips={chips}
-            resultCount={entries.length}
-            totalCount={fishNorm.length}
-          >
-            <EntryGrid entries={entries} />
-          </FishFilters>
+        {/* The fallback (full unfiltered grid) is what gets prerendered into the
+            static HTML, so every species link is present for SEO; the client
+            filter takes over on hydration. */}
+        <Suspense fallback={<EntryGrid entries={fish} />}>
+          <FishIndexClient />
         </Suspense>
         <div className="mt-12">
           <TankMatesLinks entries={fish} />

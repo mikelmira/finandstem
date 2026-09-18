@@ -3,15 +3,10 @@ import type { Metadata } from "next";
 import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
-import { EntryGrid } from "@/components/catalogue/entry-grid";
 import { TankMatesLinks } from "@/components/catalogue/tank-mates-links";
-import { ShrimpFilters } from "@/components/filters/shrimp-filters";
+import { EntryGrid } from "@/components/catalogue/entry-grid";
+import { ShrimpIndexClient } from "@/components/filters/shrimp-index-client";
 import { shrimpNorm } from "@/lib/catalogue/normalize";
-import {
-  parseShrimpFilters,
-  applyShrimpFilters,
-  shrimpChips,
-} from "@/lib/catalogue/filters";
 import { shrimp } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
@@ -27,17 +22,8 @@ export const metadata: Metadata = {
   },
 };
 
-interface PageProps {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
-
-export default async function ShrimpIndexPage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const filters = parseShrimpFilters(sp);
-  const chips = shrimpChips(filters);
-  const filtered = applyShrimpFilters(shrimpNorm, filters);
-  const entries = filtered.map((n) => n.raw);
-
+// Fully static: filtering runs client-side from the URL (see ShrimpIndexClient).
+export default function ShrimpIndexPage() {
   return (
     <>
       <JsonLd
@@ -52,15 +38,10 @@ export default async function ShrimpIndexPage({ searchParams }: PageProps) {
         breadcrumb={[{ label: "Shrimp" }]}
       />
       <SectionShell>
-        <Suspense fallback={null}>
-          <ShrimpFilters
-            filters={filters}
-            chips={chips}
-            resultCount={entries.length}
-            totalCount={shrimpNorm.length}
-          >
-            <EntryGrid entries={entries} />
-          </ShrimpFilters>
+        {/* Fallback = full unfiltered grid, prerendered into the static HTML for
+            SEO; the client filter takes over on hydration. */}
+        <Suspense fallback={<EntryGrid entries={shrimp} />}>
+          <ShrimpIndexClient />
         </Suspense>
         <div className="mt-12">
           <TankMatesLinks entries={shrimp} />

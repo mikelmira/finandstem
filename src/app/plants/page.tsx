@@ -4,13 +4,8 @@ import { atmosphere } from "@/data/atmosphere";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { EntryGrid } from "@/components/catalogue/entry-grid";
-import { PlantFilters } from "@/components/filters/plant-filters";
+import { PlantIndexClient } from "@/components/filters/plant-index-client";
 import { plantNorm } from "@/lib/catalogue/normalize";
-import {
-  parsePlantFilters,
-  applyPlantFilters,
-  plantChips,
-} from "@/lib/catalogue/filters";
 import { plants } from "@/data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { categoryIndexJsonLd } from "@/lib/seo";
@@ -26,17 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
-interface PageProps {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
-
-export default async function PlantsIndexPage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const filters = parsePlantFilters(sp);
-  const chips = plantChips(filters);
-  const filtered = applyPlantFilters(plantNorm, filters);
-  const entries = filtered.map((n) => n.raw);
-
+// Fully static: filtering runs client-side from the URL (see PlantIndexClient).
+export default function PlantsIndexPage() {
   return (
     <>
       <JsonLd
@@ -51,15 +37,10 @@ export default async function PlantsIndexPage({ searchParams }: PageProps) {
         breadcrumb={[{ label: "Plants" }]}
       />
       <SectionShell>
-        <Suspense fallback={null}>
-          <PlantFilters
-            filters={filters}
-            chips={chips}
-            resultCount={entries.length}
-            totalCount={plantNorm.length}
-          >
-            <EntryGrid entries={entries} />
-          </PlantFilters>
+        {/* Fallback = full unfiltered grid, prerendered into the static HTML for
+            SEO; the client filter takes over on hydration. */}
+        <Suspense fallback={<EntryGrid entries={plants} />}>
+          <PlantIndexClient />
         </Suspense>
       </SectionShell>
     </>
