@@ -11,7 +11,8 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { aboutPageJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 import Link from "next/link";
-import { GEAR_BRANDS, GEAR_RETAILERS } from "@/data/suppliers";
+import { GEAR_BRANDS, GEAR_RETAILERS, LOGO_NOTICE } from "@/data/suppliers";
+import { BrandLogo } from "@/components/gear/brand-logo";
 import { GEAR } from "@/lib/gear";
 import { GEAR_CATEGORIES } from "@/lib/gear/categories";
 import type { GearCategory } from "@/types/gear";
@@ -132,10 +133,11 @@ export default function AboutPage() {
                 key={b.brand}
                 className="glass glass-edge flex flex-col gap-2 rounded-2xl p-6"
               >
-                <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="text-base font-semibold tracking-tight">{b.brand}</h3>
+                <div className="flex min-h-10 items-center justify-between gap-3">
+                  <BrandLogo brand={b.brand} className="h-9 max-w-[9.5rem]" />
                   <span className="text-xs text-muted-foreground">{b.country}</span>
                 </div>
+                <h3 className="text-base font-semibold tracking-tight">{b.brand}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{b.note}</p>
                 <p className="text-xs text-foreground/80">
                   {stats.count} {stats.count === 1 ? "product" : "products"} in{" "}
@@ -164,6 +166,14 @@ export default function AboutPage() {
             );
           })}
         </div>
+        <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+          {LOGO_NOTICE} Logos are taken from each brand&rsquo;s own website. If you represent a brand and
+          would like yours changed or removed,{" "}
+          <a href={`mailto:${site.contact.email}`} className="underline underline-offset-2 hover:text-foreground">
+            email us
+          </a>
+          .
+        </p>
         <h3 className="text-display-tight mt-14 text-xl sm:text-2xl">Retailers we took specs from</h3>
         <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {GEAR_RETAILERS.map((r) => (

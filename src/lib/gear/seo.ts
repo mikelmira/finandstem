@@ -5,6 +5,7 @@ import type { GearCategoryMeta } from "@/lib/gear/categories";
 import { DISPLAY_LABEL, displayValue } from "@/lib/gear/fields";
 import { GEAR_UPDATED, gearPath, gearTitle } from "@/lib/gear";
 import type { Metadata } from "next";
+import { brandLogo } from "@/data/suppliers";
 import type { GearCategory } from "@/types/gear";
 
 /** The root layout appends ", Fin & Stem" (12 characters) to every title. */
@@ -216,7 +217,11 @@ export function gearProductJsonLd(
         "@type": "Product",
         "@id": `${url}#product`,
         name: gearTitle(p),
-        brand: { "@type": "Brand", name: p.brand },
+        brand: {
+          "@type": "Brand",
+          name: p.brand,
+          ...(brandLogo(p.brand) ? { logo: `${site.url}${brandLogo(p.brand)!.src}` } : {}),
+        },
         category: meta.label,
         description: p.summary,
         image: p.images.map((i) => `${site.url}${i.src}`),

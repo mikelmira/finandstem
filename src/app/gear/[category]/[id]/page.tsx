@@ -12,6 +12,8 @@ import { GearFitChecker } from "@/components/gear/gear-fit-checker";
 import { GearCompareButton } from "@/components/gear/gear-compare-button";
 import { GearCompareTray } from "@/components/gear/gear-compare-tray";
 import { GearCard } from "@/components/gear/gear-card";
+import { BrandLogo } from "@/components/gear/brand-logo";
+import { brandLogo, LOGO_NOTICE } from "@/data/suppliers";
 import { GEAR_CATEGORIES } from "@/lib/gear/categories";
 import { CATEGORY_QUERY } from "@/lib/gear/match";
 import { GEAR, GEAR_UPDATED, getGear, gearTitle, relatedGear, toCard } from "@/lib/gear";
@@ -123,6 +125,15 @@ export default async function GearProductPage({ params }: RouteParams) {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_1fr]">
             <GearGallery images={p.images} alt={title} />
             <div className="flex flex-col gap-5">
+              {brandLogo(p.brand) && (
+                <Link
+                  href={`/gear/${p.category}?brand=${encodeURIComponent(p.brand)}`}
+                  className="w-fit rounded-md transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]/55"
+                  title={`More ${p.brand} ${meta.label.toLowerCase()}`}
+                >
+                  <BrandLogo brand={p.brand} eager className="h-8 max-w-[10rem]" />
+                </Link>
+              )}
               <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
                 {p.brand} · {meta.subtypes[p.subtype] ?? p.subtype}
               </p>
@@ -294,7 +305,8 @@ export default async function GearProductPage({ params }: RouteParams) {
               : p.specSource === "retailer"
                 ? `Figures from ${p.sourceName ?? "a major retailer"}'s product listing.`
                 : "Figures from the maker's widely published specifications."}{" "}
-            Makers revise products, so check the current figures before buying. Photos supplied by the brand or its distributor.
+            Makers revise products, so check the current figures before buying. Photos supplied by the brand or its distributor.{" "}
+            {brandLogo(p.brand) ? LOGO_NOTICE : null}
           </p>
         </div>
 
