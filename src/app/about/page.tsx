@@ -135,7 +135,7 @@ export default function AboutPage() {
               >
                 <div className="flex min-h-10 items-center justify-between gap-3">
                   <BrandLogo brand={b.brand} className="h-9 max-w-[9.5rem]" />
-                  <span className="text-xs text-muted-foreground">{b.country}</span>
+                  <span className="ml-auto text-xs text-muted-foreground">{b.country}</span>
                 </div>
                 <h3 className="text-base font-semibold tracking-tight">{b.brand}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{b.note}</p>
@@ -167,7 +167,7 @@ export default function AboutPage() {
           })}
         </div>
         <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-          {LOGO_NOTICE} Logos are taken from each brand&rsquo;s own website. If you represent a brand and
+          {LOGO_NOTICE}{" "}Logos are taken from each brand&rsquo;s own website. If you represent a brand and
           would like yours changed or removed,{" "}
           <a href={`mailto:${site.contact.email}`} className="underline underline-offset-2 hover:text-foreground">
             email us
