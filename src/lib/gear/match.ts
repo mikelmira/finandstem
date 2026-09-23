@@ -41,6 +41,7 @@ export const CATEGORY_QUERY: Record<
   filters: ["tank", "flow"],
   lights: ["length"],
   co2: ["tank"],
+  fertilisers: [],
   heaters: ["tank"],
   cooling: ["tank"],
   pumps: ["flow", "tank"],

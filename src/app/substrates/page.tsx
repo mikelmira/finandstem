@@ -52,7 +52,7 @@ function substratesIndexJsonLd() {
         "@type": "CollectionPage",
         "@id": `${url}#collection`,
         url,
-        name: "Substrates — Fin & Stem catalogue",
+        name: "Substrates, Fin & Stem catalogue",
         description:
           "17 planted-aquarium substrate profiles covering active aquasoils, inert nutrient substrates, inert sand and gravel, and additives.",
         publisher: organizationRef(),

@@ -221,7 +221,7 @@ export default async function DiseasePage({ params }: RouteParams) {
                     />
                     <span className="text-sm leading-relaxed text-foreground/90">
                       <span className="font-medium text-foreground">{s.name}</span>
-                      <span className="text-muted-foreground"> — {s.note}</span>
+                      <span className="text-muted-foreground">: {s.note}</span>
                     </span>
                   </Link>
                 </li>

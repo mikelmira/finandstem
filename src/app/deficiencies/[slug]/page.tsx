@@ -198,7 +198,7 @@ export default async function DeficiencyPage({ params }: RouteParams) {
                     />
                     <span className="text-sm leading-relaxed text-foreground/90">
                       <span className="font-medium text-foreground">{p.name}</span>
-                      <span className="text-muted-foreground"> — {p.note}</span>
+                      <span className="text-muted-foreground">: {p.note}</span>
                     </span>
                   </Link>
                 </li>

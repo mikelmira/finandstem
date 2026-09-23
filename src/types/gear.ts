@@ -12,6 +12,7 @@ export type GearCategory =
   | "filters"
   | "lights"
   | "co2"
+  | "fertilisers"
   | "heaters"
   | "cooling"
   | "pumps"
@@ -86,6 +87,8 @@ export interface GearProduct {
   images: GearImage[];
   sourceUrl?: string;
   sourceName?: string;
+  /** Affiliate link (rendered with rel="sponsored" and a disclosure). */
+  affiliateUrl?: string;
   specSource: GearSpecSource;
 }
 

@@ -44,14 +44,14 @@ export async function generateMetadata({
   const canonical = `${site.url}/substrates/${entry.slug}`;
   const desc = entry.careSummary.slice(0, 150);
   return {
-    title: `${entry.name} — review and specs`,
+    title: `${entry.name}: review and specs`,
     description: desc,
     alternates: { canonical },
     openGraph: {
       type: "article",
       url: canonical,
       siteName: site.name,
-      title: `${entry.name} — Fin & Stem`,
+      title: `${entry.name}, Fin & Stem`,
       description: desc,
     },
   };
@@ -191,7 +191,7 @@ export default async function SubstrateDetailPage({ params }: RouteParams) {
                 />
               </a>
               <p className="mt-2 text-xs text-muted-foreground">
-                External link to {extractDomain(supplierSource.url)} —
+                External link to {extractDomain(supplierSource.url)},
                 opens in a new tab.
               </p>
             </div>

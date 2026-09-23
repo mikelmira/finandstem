@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getProduct, anyLinked, type Product } from "@/data/products";
 
 interface ProductNoteProps {
@@ -66,7 +67,13 @@ export function ProductNote({
               ) : (
                 <span className="font-medium text-foreground">{p.name}</span>
               )}
-              <span className="text-muted-foreground"> — {p.blurb}</span>
+              <span className="text-muted-foreground">: {p.blurb}</span>{" "}
+              <Link
+                href={`/gear/fertilisers/2hr-aquarist-${p.id}`}
+                className="whitespace-nowrap text-xs font-medium text-[var(--brand)] hover:underline"
+              >
+                Details
+              </Link>
             </span>
           </li>
         ))}

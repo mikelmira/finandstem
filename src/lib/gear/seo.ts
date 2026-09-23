@@ -27,6 +27,7 @@ export const CATEGORY_SEO_TITLE: Record<GearCategory, string> = {
   filters: "Aquarium filters compared by tank size",
   lights: "Planted tank lights compared by tank length",
   co2: "Aquarium CO2 regulators, diffusers and kits",
+  fertilisers: "Aquarium plant fertilisers and treatments compared",
   heaters: "Aquarium heaters compared by tank size",
   cooling: "Aquarium chillers and cooling fans compared",
   pumps: "Aquarium pumps and wavemakers compared",

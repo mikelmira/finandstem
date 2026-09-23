@@ -9,6 +9,7 @@ import {
   Droplets,
   Filter,
   FlaskConical,
+  FlaskRound,
   GitCompareArrows,
   Globe2,
   History,
@@ -69,6 +70,7 @@ export const NAV_GROUPS: ReadonlyArray<NavGroup> = [
     label: "Gear & Setup",
     items: [
       { label: "Gear catalogue", href: "/gear", description: "Filters, lights, CO2, tanks and more, matched to your tank.", Icon: Wrench },
+      { label: "Fertilisers", href: "/gear/fertilisers", description: "Liquid ferts, root tabs, remineralisers and treatments.", Icon: FlaskRound },
       { label: "Hardscape", href: "/hardscape", description: "Stones and wood, and what they do to your water.", Icon: Mountain },
       { label: "Substrates", href: "/substrates", description: "Aquasoils and inert substrates compared.", Icon: Layers },
       { label: "Equipment explained", href: "/equipment", description: "How to size lighting, filtration, CO2 and heating.", Icon: Sparkles },

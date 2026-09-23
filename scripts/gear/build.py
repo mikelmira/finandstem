@@ -28,6 +28,8 @@ CATEGORIES = {
     "filters": {"canister", "hang-on-back", "internal", "sponge", "top"},
     "lights": {"bar", "clip-on", "pendant", "stand", "paludarium"},
     "co2": {"kit", "regulator", "diffuser", "drop-checker", "bubble-counter", "cylinder", "controller"},
+    "fertilisers": {"all-in-one", "micro-trace", "single-nutrient", "root-feed", "supplement",
+                    "remineraliser", "bacteria", "algae-treatment", "conditioner", "foliar", "aquasoil"},
     "heaters": {"glass", "inline", "titanium", "preset", "smart"},
     "cooling": {"chiller", "fan"},
     "pumps": {"water-pump", "circulation"},
@@ -198,7 +200,7 @@ def main():
             "bestFor": p.get("bestFor", ""), "specs": p["specs"], "models": p["models"],
             "images": imgs, "specSource": p["specSource"],
         }
-        for opt in ("watchOut", "hardscapeType", "sourceUrl", "sourceName"):
+        for opt in ("watchOut", "hardscapeType", "sourceUrl", "sourceName", "affiliateUrl"):
             if p.get(opt):
                 record[opt] = p[opt]
         out.append(record)

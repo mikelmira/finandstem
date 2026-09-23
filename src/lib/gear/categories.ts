@@ -24,6 +24,7 @@ export const GEAR_CATEGORY_ORDER: ReadonlyArray<GearCategory> = [
   "filters",
   "lights",
   "co2",
+  "fertilisers",
   "heaters",
   "hardscape",
   "pumps",
@@ -239,6 +240,64 @@ export const GEAR_CATEGORIES: Record<GearCategory, GearCategoryMeta> = {
       { label: "CO2 calculator", href: "/calculators/co2" },
       { label: "Low-tech vs high-tech", href: "/guides/low-tech-vs-high-tech-planted-tank" },
       { label: "Water chemistry", href: "/water-chemistry" },
+    ],
+  },
+  fertilisers: {
+    id: "fertilisers",
+    label: "Fertilisers & treatments",
+    singular: "fertiliser or treatment",
+    tagline: "Liquid fertilisers, root tabs, remineralisers, starter bacteria and algae treatments.",
+    intro:
+      "Plants need three things in balance: light, CO2 and nutrients. Fertilisers cover the nutrients. Most tanks do best with one all-in-one liquid dosed a little and often, plus root tabs pushed under heavy root feeders like swords and crypts. Aquasoil feeds roots for its first year or so, but the water column still needs topping up. How much you dose depends on how fast the tank grows: a low-light tank without CO2 needs very little, while a high-light CO2 tank can use far more. If you start from RO water, a remineraliser puts back the calcium and magnesium plants and shrimp need. Treatments like spot algae removers and dechlorinators are here too, because they sit on the same shelf and solve the same problems. When plants show a specific symptom, check the deficiency guide before reaching for a single-nutrient bottle.",
+    howToChoose: [
+      "Start with one all-in-one liquid. Add single nutrients only when a deficiency shows up.",
+      "Match the dose to your light and CO2. Low-tech tanks need a fraction of a high-tech dose.",
+      "Use root tabs or a root feed for swords, crypts and other heavy root feeders in inert substrate.",
+      "If you use RO water, add a remineraliser to set GH before worrying about fertiliser.",
+      "Heavy fish load? Choose a fertiliser without nitrate and phosphate, the fish already supply them.",
+    ],
+    subtypes: {
+      "all-in-one": "All-in-one liquid",
+      "micro-trace": "Micro and trace",
+      "single-nutrient": "Single nutrient",
+      "root-feed": "Root feed",
+      supplement: "Supplement",
+      remineraliser: "Remineraliser",
+      bacteria: "Starter and bacteria",
+      "algae-treatment": "Algae treatment",
+      conditioner: "Water conditioner",
+      foliar: "Foliar spray",
+      aquasoil: "Nutrient aquasoil",
+    },
+    cardFields: [],
+    tableFields: [],
+    faqs: [
+      {
+        question: "Do planted tanks need fertiliser?",
+        answer:
+          "Almost always, eventually. Fish waste and aquasoil cover some needs at first, but as plants grow they use up nitrogen, potassium, iron and trace elements. A light, regular dose of an all-in-one liquid keeps growth steady and stops deficiencies before they show.",
+      },
+      {
+        question: "What is the difference between macro and micro nutrients?",
+        answer:
+          "Macros are the nutrients plants use in larger amounts: nitrogen, phosphorus and potassium. Micros and trace elements, such as iron, manganese and boron, are needed in tiny amounts but are just as essential. All-in-one fertilisers contain both.",
+      },
+      {
+        question: "Can fertiliser cause algae?",
+        answer:
+          "Rarely on its own. Algae usually comes from too much light for the amount of CO2 and nutrients, or from a nutrient running out. Dose to match your light, keep the photoperiod steady and do regular water changes, and fertiliser helps plants outcompete algae.",
+      },
+      {
+        question: "Are liquid fertilisers safe for shrimp?",
+        answer:
+          "Mainstream aquarium fertilisers are generally shrimp safe at normal doses, but avoid products with added copper and introduce any new fertiliser slowly. Shrimp tanks usually need lighter dosing anyway.",
+      },
+    ],
+    related: [
+      { label: "Plant deficiency guide", href: "/deficiencies" },
+      { label: "Fertiliser dosing calculator", href: "/calculators/fertiliser-dosing" },
+      { label: "Water chemistry", href: "/water-chemistry" },
+      { label: "Algae ID", href: "/algae" },
     ],
   },
   heaters: {

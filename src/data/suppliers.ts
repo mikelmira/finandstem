@@ -16,10 +16,16 @@ export interface Supplier {
 
 export const GEAR_BRANDS: ReadonlyArray<Supplier> = [
   {
+    brand: "2HR Aquarist",
+    url: "https://www.2hraquarist.com",
+    country: "Singapore",
+    note: "The APT fertiliser range, remineralisers, algae treatments and APT Feast aquasoil. Some of our links to 2HR are affiliate links.",
+  },
+  {
     brand: "ADA",
     url: "https://www.adana.co.jp/en/",
     country: "Japan",
-    note: "Aqua Design Amano, the company behind the Nature Aquarium style. CO2 diffusers, lily pipes, lights and decorative sands.",
+    note: "Aqua Design Amano, the company behind the Nature Aquarium style. Green Brighty fertilisers, CO2 diffusers, lily pipes, lights and decorative sands.",
   },
   {
     brand: "Boyu",

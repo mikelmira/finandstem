@@ -16,7 +16,7 @@ The catalogue is the spine of the site. Every species/product has a stable URL, 
 - [/substrates](https://finandstem.com/substrates): Aquarium substrates and aquasoils with structured comparisons by pH effect, ammonia release, nutrient content, and buffering longevity. Catalogue includes ADA (Amazonia, Amazonia Light, Malaya, Africana, Power Sand, Bacter 100), Tropica, UNS, Fluval, Dennerle, Seachem, CaribSea, Landen, Mr. Aqua, JBL, Oliver Knott, Brightwell, Aquario, Prodibio, and Aquatic Nature brands plus inert sand options.
 - [/hardscape](https://finandstem.com/hardscape): Stones and wood by type, with their effect on pH, hardness and tannins, preparation and scaping use.
 - [/equipment](https://finandstem.com/equipment): How to size lighting, filtration, CO₂ systems, heaters and circulation.
-- [/gear](https://finandstem.com/gear): Gear catalogue of real products (aquariums, filters, lights, CO₂, heaters, pumps, air pumps, UV, lily pipes, stands, paludarium, tools, feeders and supplier hardscape) with per-model specs such as flow in L/h, rated tank volume, wattage and dimensions. Each category filters by tank volume, flow or tank length. Main items only, no spare parts or consumables.
+- [/gear](https://finandstem.com/gear): Gear catalogue of real products (aquariums, filters, lights, CO₂, fertilisers and treatments, heaters, pumps, air pumps, UV, lily pipes, stands, paludarium, tools, feeders and supplier hardscape) with per-model specs such as flow in L/h, rated tank volume, wattage and dimensions. Each category filters by tank volume, flow or tank length. Main items only, no spare parts or consumables.
 
 ## Pillars
 

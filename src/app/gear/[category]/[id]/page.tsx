@@ -159,18 +159,35 @@ export default async function GearProductPage({ params }: RouteParams) {
                   All {meta.label.toLowerCase()}
                   <ArrowRight className="size-4" aria-hidden />
                 </Link>
-                {p.sourceUrl && (
+                {p.affiliateUrl ? (
                   <a
-                    href={p.sourceUrl}
+                    href={p.affiliateUrl}
                     target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="press inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-[var(--brand)]"
+                    rel="sponsored nofollow noopener noreferrer"
+                    className="press inline-flex items-center gap-1.5 rounded-full bg-[var(--brand)] px-4 py-2 text-sm font-medium text-white transition-all hover:-translate-y-0.5"
                   >
-                    Product page
+                    View at {p.sourceName ?? p.brand}
                     <ArrowUpRight className="size-4" aria-hidden />
                   </a>
+                ) : (
+                  p.sourceUrl && (
+                    <a
+                      href={p.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="press inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-[var(--brand)]"
+                    >
+                      Product page
+                      <ArrowUpRight className="size-4" aria-hidden />
+                    </a>
+                  )
                 )}
               </div>
+              {p.affiliateUrl && (
+                <p className="text-xs text-muted-foreground">
+                  This is an affiliate link: it costs you nothing extra, and we only list products we would use ourselves.
+                </p>
+              )}
               {canCheckFit && <GearFitChecker category={p.category} models={p.models} />}
             </div>
           </div>

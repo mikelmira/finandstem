@@ -192,7 +192,7 @@ export function SpeciesMap({ width, height, countriesPath, graticulePath, pins }
                     stroke="var(--background)"
                     strokeWidth={1.4 / t.k}
                   />
-                  <title>{`${p.label} — ${p.count} species`}</title>
+                  <title>{`${p.label}: ${p.count} species`}</title>
                 </g>
               );
             })}
