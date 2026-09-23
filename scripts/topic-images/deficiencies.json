@@ -1,0 +1,68 @@
+{
+ "found": {
+  "iron-deficiency": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/defic-work/iron-deficiency/0.jpg",
+    "fileTitle": "File:Chlorose ferrique sur Citrus aurantium.jpg",
+    "author": "Eiku en exil",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Chlorose_ferrique_sur_Citrus_aurantium.jpg",
+    "alt": "Pale yellow citrus leaf with the veins still dark green, a classic sign of iron deficiency (interveinal chlorosis)",
+    "context": "land-plant"
+   },
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/defic-work/iron-deficiency/12.jpg",
+    "fileTitle": "File:Iron chlorosis on young rose leaves in a garden, by baby-bear.org.jpg",
+    "author": "Natalka Ukraine",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Iron_chlorosis_on_young_rose_leaves_in_a_garden,_by_baby-bear.org.jpg",
+    "alt": "Young rose bush with pale yellow new leaves at the top and green older leaves at the bottom, showing iron chlorosis hitting new growth first",
+    "context": "land-plant"
+   }
+  ],
+  "nitrogen-deficiency": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/defic-work/nitrogen-deficiency/3.jpg",
+    "fileTitle": "File:Phaseolus vulgaris nitrogen deficiency.jpg",
+    "author": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg",
+    "alt": "Bean plant with leaves turning an even pale yellow green next to healthy dark green plants, showing nitrogen deficiency",
+    "context": "land-plant"
+   }
+  ],
+  "potassium-deficiency": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/defic-work/potassium-deficiency/0.jpg",
+    "fileTitle": "File:Tomate Blatt Kalimangel.jpg",
+    "author": "Goldlocki",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tomate_Blatt_Kalimangel.jpg",
+    "alt": "Tomato leaf yellowing from the edges inward with small brown dead patches along the margin, showing potassium deficiency",
+    "context": "land-plant"
+   }
+  ],
+  "magnesium-deficiency": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/defic-work/magnesium-deficiency/3.jpg",
+    "fileTitle": "File:Mg deficiency Vulindlela 1995-3-30 2018 01 23 2235.jpg",
+    "author": "Alandmanson",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mg_deficiency_Vulindlela_1995-3-30_2018_01_23_2235.jpg",
+    "alt": "Maize leaves with pale yellow stripes between green veins, showing magnesium deficiency",
+    "context": "land-plant"
+   }
+  ]
+ },
+ "notFound": {
+  "calcium-deficiency": "Searched \"calcium deficiency leaf/plant\", \"calcium deficiency young leaves\", \"tipburn calcium\", \"calcium deficiency leaves deformed\", \"Calciummangel\". Only tomato blossom end rot (fruit, not a leaf symptom) and a potato image attributed to aluminium toxicity turned up. No labelled photo of deformed new leaves.",
+  "co2-deficiency": "Searched \"CO2 deficiency aquarium plant\", \"carbon dioxide deficiency plant\", \"aquarium plants etiolated\", \"CO2 Mangel Aquarium\". Nothing on Commons; CO2 shortage is not a labelled land plant symptom, so there is no honest substitute.",
+  "pagoda-stone": "Searched \"pagoda stone\", \"pagoda stone aquascape/aquarium\", \"pagoda rock aquarium\", \"Chinese pagoda stone\", \"宝塔石\", \"Baota stone\", \"aquascape stone layered\", \"aquascape hardscape stone\". Results were temple pagodas, the Blue Mountains Pagoda Rock landform, and Sinoceras nautiloid fossil limestone (the Chinese collectors' \"pagoda stone\", which is not the layered aquascaping stone). No identified aquascaping pagoda stone.",
+  "texas-holey-rock": "Searched \"Texas holey rock\", \"holey limestone\", \"holey rock\", \"holey rock aquarium/cichlid\", \"Texas limestone aquarium\", \"tufa rock aquarium\", \"African cichlid tank rocks\", \"Edwards Plateau limestone holes\". Only unrelated \"holey rock\" landmarks in the UK/US and a Hawaiian cave formation. Nothing identified as Texas holey rock."
+ }
+}

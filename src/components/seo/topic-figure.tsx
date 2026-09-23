@@ -54,7 +54,10 @@ export function TopicFigure({
             />
           </div>
           <figcaption className="mt-2 text-xs leading-relaxed text-muted-foreground">
-            {img.alt}. Photo: {img.author}
+            {img.alt}.
+            {img.context === "land-plant" &&
+              " Shown on a land plant, where the leaf pattern is easiest to see; aquarium plants show the same pattern."}{" "}
+            Photo: {img.author}
             {" · "}
             {img.licenseUrl ? (
               <a

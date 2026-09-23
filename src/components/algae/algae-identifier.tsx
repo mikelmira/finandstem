@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { topicImages } from "@/components/seo/topic-figure";
 import { ArrowRight } from "lucide-react";
 import type {
   AlgaeColor,
@@ -155,6 +156,18 @@ export function AlgaeIdentifier({ items }: { items: AlgaeCard[] }) {
               href={`/algae/${a.slug}`}
               className="press group flex h-full flex-col gap-2 rounded-2xl border border-border bg-background/60 p-4 backdrop-blur transition-colors hover:border-[var(--brand)]/40"
             >
+              {(() => {
+                                const t = topicImages("algae", a.slug)[0];
+                                return t ? (
+                                  // eslint-disable-next-line @next/next/no-img-element
+                                  <img
+                                    src={t.src}
+                                    alt={t.alt}
+                                    loading="lazy"
+                                    className="mb-1 aspect-[16/9] w-full rounded-lg object-cover"
+                                  />
+                                ) : null;
+                              })()}
               <div className="flex items-start justify-between gap-2">
                 <span className="font-medium leading-tight">{a.name}</span>
                 <span className="rounded-full bg-muted px-2 py-0.5 text-[11px] font-medium text-muted-foreground">

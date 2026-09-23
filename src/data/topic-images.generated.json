@@ -1,1 +1,278 @@
-{}
+{
+ "algae:black-beard-algae": [
+  {
+   "src": "/images/topics/algae/black-beard-algae.webp",
+   "width": 873,
+   "height": 556,
+   "alt": "Dark, bushy tufts of black beard algae smothering Anubias plants on red gravel in a freshwater aquarium",
+   "author": "Emboli",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_beard_algae.png",
+   "fileTitle": "File:Black beard algae.png",
+   "context": "aquarium"
+  }
+ ],
+ "algae:hair-algae": [
+  {
+   "src": "/images/topics/algae/hair-algae.webp",
+   "width": 1000,
+   "height": 568,
+   "alt": "Masses of fine green filamentous algae tangled through submerged Callitriche plants, photographed underwater in a French river",
+   "author": "Lamiot",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Touffes_d%27algues_vertes_filamenteuses_dans_Les_Baillons_aout2017_a_06.jpg",
+   "fileTitle": "File:Touffes d'algues vertes filamenteuses dans Les Baillons aout2017 a 06.jpg",
+   "context": "nature"
+  }
+ ],
+ "algae:staghorn-algae": [
+  {
+   "src": "/images/topics/algae/staghorn-algae.webp",
+   "width": 941,
+   "height": 661,
+   "alt": "Grey-green branching tufts of Compsopogon, commonly called staghorn algae, growing on Anubias leaves in a pet shop aquarium. Cropped from the original",
+   "author": "Shing Hei Zhan, Tsai-Yin Hsieh, Lan-Wei Yeh, Ting-Chun Kuo, Shoichiro Suda, Shao-Lun Liu",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Freshwater_red_macroalgae_a_(Compsopogon_coeruleus_THU-369).jpg",
+   "fileTitle": "File:Freshwater red macroalgae a (Compsopogon coeruleus THU-369).jpg",
+   "context": "aquarium"
+  }
+ ],
+ "algae:blue-green-algae": [
+  {
+   "src": "/images/topics/algae/blue-green-algae.webp",
+   "width": 501,
+   "height": 334,
+   "alt": "A slimy blue-green sheet of cyanobacteria spreading across the substrate along the front glass of a freshwater planted aquarium",
+   "author": "Emboli",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_green_algae.png",
+   "fileTitle": "File:Blue green algae.png",
+   "context": "aquarium"
+  }
+ ],
+ "algae:green-water": [
+  {
+   "src": "/images/topics/algae/green-water.webp",
+   "width": 858,
+   "height": 572,
+   "alt": "Freshwater aquarium with bright pea-green water from suspended algae, the Anubias plants and fish barely visible",
+   "author": "Russel Leidich/dangerousfishbowl",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green_water_algae.png",
+   "fileTitle": "File:Green water algae.png",
+   "context": "aquarium"
+  }
+ ],
+ "algae:cladophora": [
+  {
+   "src": "/images/topics/algae/cladophora.webp",
+   "width": 750,
+   "height": 1000,
+   "alt": "A stiff, branching green tuft of Cladophora growing on a dark stone in a freshwater aquarium",
+   "author": "ВоєводаЯ",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cladophora_2.jpg",
+   "fileTitle": "File:Cladophora 2.jpg",
+   "context": "aquarium"
+  },
+  {
+   "src": "/images/topics/algae/cladophora-2.webp",
+   "width": 750,
+   "height": 1000,
+   "alt": "A small tuft of wiry, branching Cladophora filaments attached to a stone chip, held on a fingertip after removal from an aquarium",
+   "author": "ВоєводаЯ",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cladophora_in_aqua.jpg",
+   "fileTitle": "File:Cladophora in aqua.jpg",
+   "context": "aquarium"
+  }
+ ],
+ "deficiencies:iron-deficiency": [
+  {
+   "src": "/images/topics/deficiencies/iron-deficiency.webp",
+   "width": 562,
+   "height": 1000,
+   "alt": "Pale yellow citrus leaf with the veins still dark green, a classic sign of iron deficiency (interveinal chlorosis)",
+   "author": "Eiku en exil",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chlorose_ferrique_sur_Citrus_aurantium.jpg",
+   "fileTitle": "File:Chlorose ferrique sur Citrus aurantium.jpg",
+   "context": "land-plant"
+  },
+  {
+   "src": "/images/topics/deficiencies/iron-deficiency-2.webp",
+   "width": 750,
+   "height": 1000,
+   "alt": "Young rose bush with pale yellow new leaves at the top and green older leaves at the bottom, showing iron chlorosis hitting new growth first",
+   "author": "Natalka Ukraine",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iron_chlorosis_on_young_rose_leaves_in_a_garden,_by_baby-bear.org.jpg",
+   "fileTitle": "File:Iron chlorosis on young rose leaves in a garden, by baby-bear.org.jpg",
+   "context": "land-plant"
+  }
+ ],
+ "deficiencies:nitrogen-deficiency": [
+  {
+   "src": "/images/topics/deficiencies/nitrogen-deficiency.webp",
+   "width": 750,
+   "height": 1000,
+   "alt": "Bean plant with leaves turning an even pale yellow green next to healthy dark green plants, showing nitrogen deficiency",
+   "author": "Rasbak",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg",
+   "fileTitle": "File:Phaseolus vulgaris nitrogen deficiency.jpg",
+   "context": "land-plant"
+  }
+ ],
+ "deficiencies:potassium-deficiency": [
+  {
+   "src": "/images/topics/deficiencies/potassium-deficiency.webp",
+   "width": 1000,
+   "height": 750,
+   "alt": "Tomato leaf yellowing from the edges inward with small brown dead patches along the margin, showing potassium deficiency",
+   "author": "Goldlocki",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tomate_Blatt_Kalimangel.jpg",
+   "fileTitle": "File:Tomate Blatt Kalimangel.jpg",
+   "context": "land-plant"
+  }
+ ],
+ "deficiencies:magnesium-deficiency": [
+  {
+   "src": "/images/topics/deficiencies/magnesium-deficiency.webp",
+   "width": 1000,
+   "height": 545,
+   "alt": "Maize leaves with pale yellow stripes between green veins, showing magnesium deficiency",
+   "author": "Alandmanson",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mg_deficiency_Vulindlela_1995-3-30_2018_01_23_2235.jpg",
+   "fileTitle": "File:Mg deficiency Vulindlela 1995-3-30 2018 01 23 2235.jpg",
+   "context": "land-plant"
+  }
+ ],
+ "diseases:ich": [
+  {
+   "src": "/images/topics/diseases/ich.webp",
+   "width": 1000,
+   "height": 750,
+   "alt": "Yellow and blue cichlid covered in tiny white salt-like spots from white spot disease (ich)",
+   "author": "No machine-readable author provided. Djpalme assumed (based on copyright claims).",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ichthyophthiriasis.jpg",
+   "fileTitle": "File:Ichthyophthiriasis.jpg",
+   "context": "aquarium"
+  }
+ ],
+ "diseases:fin-rot": [
+  {
+   "src": "/images/topics/diseases/fin-rot.webp",
+   "width": 1000,
+   "height": 941,
+   "alt": "Betta with fin rot, the circled tail fin edge ragged, frayed and darkened",
+   "author": "Dizzy Respect",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fin_Rot_on_Betta_Fish.jpg",
+   "fileTitle": "File:Fin Rot on Betta Fish.jpg",
+   "context": "aquarium"
+  }
+ ],
+ "diseases:velvet": [
+  {
+   "src": "/images/topics/diseases/velvet.webp",
+   "width": 1000,
+   "height": 750,
+   "alt": "Close-up of a betta's head coated in a gold, dusty film of velvet disease (Piscinoodinium parasites)",
+   "author": "Mydigitalife",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Velvet_infection.JPG",
+   "fileTitle": "File:Velvet infection.JPG",
+   "context": "aquarium"
+  }
+ ],
+ "diseases:columnaris": [
+  {
+   "src": "/images/topics/diseases/columnaris.webp",
+   "width": 800,
+   "height": 600,
+   "alt": "Chinook salmon with the gill cover lifted to show pale, eroded columnaris lesions on the gills (Flavobacterium columnare)",
+   "author": "Unknown authorUnknown author",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Columnaris_disease.jpg",
+   "fileTitle": "File:Columnaris disease.jpg",
+   "context": "nature"
+  }
+ ],
+ "diseases:dropsy": [
+  {
+   "src": "/images/topics/diseases/dropsy.webp",
+   "width": 1000,
+   "height": 741,
+   "alt": "Neon tetra with dropsy, the arrow marking a swollen belly with raised, flared scales (photographed after death)",
+   "author": "Citron",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hydrophisie.jpg",
+   "fileTitle": "File:Hydrophisie.jpg",
+   "context": "aquarium"
+  }
+ ],
+ "diseases:fungal-infection": [
+  {
+   "src": "/images/topics/diseases/fungal-infection.webp",
+   "width": 750,
+   "height": 1000,
+   "alt": "Wild trout in a stream with large white cotton-like patches of Saprolegnia fungal infection on its head and body",
+   "author": "Hans Lauterbach Furchenstein",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Forelle_mit_Pilzerkrankung.jpg",
+   "fileTitle": "File:Forelle mit Pilzerkrankung.jpg",
+   "context": "nature"
+  }
+ ],
+ "diseases:swim-bladder-disorder": [
+  {
+   "src": "/images/topics/diseases/swim-bladder-disorder.webp",
+   "width": 1000,
+   "height": 673,
+   "alt": "Ryukin goldfish with swim bladder disorder floating tilted at the water surface, unable to stay level",
+   "author": "Humanfeather / Michelle Jo",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goldfish_with_swim_bladder_disease.JPG",
+   "fileTitle": "File:Goldfish with swim bladder disease.JPG",
+   "context": "aquarium"
+  }
+ ],
+ "diseases:shrimp-failed-molt": [
+  {
+   "src": "/images/topics/diseases/shrimp-failed-molt.webp",
+   "width": 1000,
+   "height": 666,
+   "alt": "A normal, complete Neocaridina moult left on a plant stem. In a failed moult the shrimp gets stuck partway out of this old shell",
+   "author": "Nafisathallah",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Freshwater_shrimp_molted_skin.jpg",
+   "fileTitle": "File:Freshwater shrimp molted skin.jpg",
+   "context": "aquarium"
+  }
+ ]
+}

@@ -1,0 +1,105 @@
+{
+ "found": {
+  "ich": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/ich/0.jpg",
+    "fileTitle": "File:Ichthyophthiriasis.jpg",
+    "author": "No machine-readable author provided. Djpalme assumed (based on copyright claims).",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ichthyophthiriasis.jpg",
+    "alt": "Yellow and blue cichlid covered in tiny white salt-like spots from white spot disease (ich)",
+    "context": "aquarium"
+   }
+  ],
+  "fin-rot": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/fin-rot/0.jpg",
+    "fileTitle": "File:Fin Rot on Betta Fish.jpg",
+    "author": "Dizzy Respect",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Fin_Rot_on_Betta_Fish.jpg",
+    "alt": "Betta with fin rot, the circled tail fin edge ragged, frayed and darkened",
+    "context": "aquarium"
+   }
+  ],
+  "velvet": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/velvet/1.jpg",
+    "fileTitle": "File:Velvet infection.JPG",
+    "author": "Mydigitalife",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Velvet_infection.JPG",
+    "alt": "Close-up of a betta's head coated in a gold, dusty film of velvet disease (Piscinoodinium parasites)",
+    "context": "aquarium"
+   }
+  ],
+  "columnaris": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/columnaris/0.jpg",
+    "fileTitle": "File:Columnaris disease.jpg",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Columnaris_disease.jpg",
+    "alt": "Chinook salmon with the gill cover lifted to show pale, eroded columnaris lesions on the gills (Flavobacterium columnare)",
+    "context": "nature"
+   }
+  ],
+  "dropsy": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/misc/30.jpg",
+    "fileTitle": "File:Hydrophisie.jpg",
+    "author": "Citron",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Hydrophisie.jpg",
+    "alt": "Neon tetra with dropsy, the arrow marking a swollen belly with raised, flared scales (photographed after death)",
+    "context": "aquarium"
+   }
+  ],
+  "fungal-infection": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/fungal-infection/16.jpg",
+    "fileTitle": "File:Forelle mit Pilzerkrankung.jpg",
+    "author": "Hans Lauterbach Furchenstein",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Forelle_mit_Pilzerkrankung.jpg",
+    "alt": "Wild trout in a stream with large white cotton-like patches of Saprolegnia fungal infection on its head and body",
+    "context": "nature"
+   }
+  ],
+  "swim-bladder-disorder": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/swim-bladder-disorder/0.jpg",
+    "fileTitle": "File:Goldfish with swim bladder disease.JPG",
+    "author": "Humanfeather / Michelle Jo",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Goldfish_with_swim_bladder_disease.JPG",
+    "alt": "Ryukin goldfish with swim bladder disorder floating tilted at the water surface, unable to stay level",
+    "context": "aquarium"
+   }
+  ],
+  "shrimp-failed-molt": [
+   {
+    "local": "/private/tmp/claude-502/-Users-mikeelmira-Desktop-Fin---Stem/3ae8cb14-0508-42ae-af56-f2d839c2f01c/scratchpad/topic-images/disease-work/shrimp-failed-molt/2.jpg",
+    "fileTitle": "File:Freshwater shrimp molted skin.jpg",
+    "author": "Nafisathallah",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Freshwater_shrimp_molted_skin.jpg",
+    "alt": "A normal, complete Neocaridina moult left on a plant stem. In a failed moult the shrimp gets stuck partway out of this old shell",
+    "context": "aquarium"
+   }
+  ]
+ },
+ "notFound": {
+  "shrimp-bacterial-infection": "Tried: shrimp bacterial infection milky, shrimp white muscle disease, microsporidian shrimp, Thelohania shrimp, cotton shrimp disease, infectious myonecrosis, shrimp muscle necrosis, white tail disease prawn, Macrobrachium rosenbergii nodavirus, vibriosis shrimp, shrimp disease. Only electron micrographs of viruses and a black gill disease photo came up, nothing showing milky/opaque muscle.",
+  "hole-in-the-head": "only a low-resolution, uncertain photo",
+  "shrimp-vorticella-scutariella": "only a microscope photo of the organism, not an infected shrimp"
+ }
+}

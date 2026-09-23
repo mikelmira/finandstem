@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { topicImages } from "@/components/seo/topic-figure";
 import { ArrowRight } from "lucide-react";
 
 import { PageHero } from "@/components/sections/page-hero";
@@ -96,6 +97,18 @@ export default function DiseaseHubPage() {
                         href={`/diseases/${d.slug}`}
                         className="press group flex h-full flex-col gap-1.5 rounded-xl border border-border bg-background/60 p-4 backdrop-blur transition-colors hover:border-[var(--brand)]/40"
                       >
+                        {(() => {
+                                          const t = topicImages("diseases", d.slug)[0];
+                                          return t ? (
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img
+                                              src={t.src}
+                                              alt={t.alt}
+                                              loading="lazy"
+                                              className="mb-1 aspect-[16/9] w-full rounded-lg object-cover"
+                                            />
+                                          ) : null;
+                                        })()}
                         <span className="flex items-center justify-between gap-3">
                           <span className="font-medium text-foreground transition-colors group-hover:text-[var(--brand)]">
                             {d.name}
