@@ -15,6 +15,8 @@ Usage: python3 scripts/gear/build.py [--force-images]
 """
 import glob, json, os, re, sys
 from PIL import Image, ImageOps
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ratings  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CURATED = os.path.join(ROOT, "scripts", "gear", "curated")
@@ -172,6 +174,9 @@ def main():
             p["id"] = pid
             products.append(p)
 
+    ratings.compute(products)
+    ratings.compute_tech(products)
+
     os.makedirs(CARDS_OUT, exist_ok=True)
     out = []
     for p in products:
@@ -199,6 +204,8 @@ def main():
             "summary": p.get("summary", ""), "highlights": p["highlights"],
             "bestFor": p.get("bestFor", ""), "specs": p["specs"], "models": p["models"],
             "images": imgs, "specSource": p["specSource"],
+            "ratings": p["ratings"],
+            "tech": p["tech"],
         }
         for opt in ("watchOut", "hardscapeType", "sourceUrl", "sourceName", "affiliateUrl"):
             if p.get(opt):
@@ -212,7 +219,7 @@ def main():
     by_cat = {}
     for r in out:
         card = {k: r[k] for k in ("id", "brand", "name", "category", "subtype", "summary",
-                                  "bestFor", "highlights", "specs", "models") if k in r}
+                                  "bestFor", "highlights", "specs", "models", "ratings", "tech") if k in r}
         if r.get("watchOut"):
             card["watchOut"] = r["watchOut"]
         card["image"] = r["images"][0]
@@ -220,6 +227,28 @@ def main():
     for cat in CATEGORIES:
         with open(os.path.join(CARDS_OUT, f"{cat}.json"), "w") as f:
             json.dump(by_cat.get(cat, []), f, ensure_ascii=False, separators=(",", ":"))
+
+    # Compact list for the tank planner's equipment picker.
+    PLANNER_CATS = ("filters", "lights", "heaters", "co2", "fertilisers")
+    KEEP = ("flowLph", "tankMinL", "tankMaxL", "powerW", "heaterW", "lengthCm",
+            "fitsLengthMinCm", "fitsLengthMaxCm", "hoseMm")
+    planner = []
+    for r in out:
+        if r["category"] not in PLANNER_CATS:
+            continue
+        # The planner's "Fertiliser" slot lists fertilisers only, not
+        # treatments, conditioners, bacteria or aquasoil.
+        if r["category"] == "fertilisers" and r["subtype"] not in (
+                "all-in-one", "micro-trace", "single-nutrient", "root-feed", "supplement"):
+            continue
+        planner.append({
+            "id": r["id"], "brand": r["brand"], "name": r["name"], "category": r["category"],
+            "subtype": r["subtype"], "tech": r.get("tech"), "ratings": r.get("ratings"),
+            "thumb": r["images"][0]["thumb"],
+            "models": [{k: m[k] for k in ("name",) + KEEP if k in m} for m in r["models"]],
+        })
+    with open(os.path.join(CARDS_OUT, "planner.json"), "w") as f:
+        json.dump(planner, f, ensure_ascii=False, separators=(",", ":"))
 
     # Remove webp files for products that no longer exist.
     live = {os.path.basename(i["src"]) for r in out for i in r["images"]} | \

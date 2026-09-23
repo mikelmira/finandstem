@@ -88,7 +88,13 @@ function flowWindowFit(flow: number, q: GearQuery): Fit | null {
 
 function heaterFit(m: GearModel, tankL: number): Fit | null {
   const rated = ratedVolumeFit(m, tankL);
-  if (rated) return rated;
+  if (rated) {
+    // A maker rating can cover a tank far smaller than the heater suits
+    // (a 50 W heater "up to 60 L" in a 20 L tank). Cap those at workable.
+    const small = tankL <= 30 && (m.heaterW ?? 0) <= 25;
+    if (rated === "ideal" && m.heaterW && m.heaterW / tankL > 2 && !small) return "workable";
+    return rated;
+  }
   if (!m.heaterW) return null;
   const wpl = m.heaterW / tankL;
   // Tiny tanks: small heaters are sold in 10–25 W steps, be lenient.

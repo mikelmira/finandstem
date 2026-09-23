@@ -401,7 +401,7 @@
    "Suction-cup mounting inside the tank"
   ],
   "bestFor": "Quarantine, hospital or grow-out tanks, and simple community tanks that need an easy internal filter.",
-  "watchOut": "It is large and very visible in the tank, and the maker lists the SP-2300B with the same 8 W and 300 L/h as the small model, which looks like a sheet error.",
+  "watchOut": "It is large and very visible in the tank, and the SP-2300B runs the same small 300 L/h, 8 W pump as the SP-1000C, just with a longer sponge stack.",
   "specs": {
    "Voltage": "AC 230/115 V, 50/60 Hz",
    "Media": "Biochemical sponge cartridges"
@@ -429,7 +429,10 @@
     "name": "SP-2300B",
     "lengthCm": 10,
     "widthCm": 6,
-    "heightCm": 30
+    "heightCm": 30,
+    "flowLph": 300,
+    "headM": 0.5,
+    "powerW": 8
    },
    {
     "name": "SP-2500B",
@@ -759,7 +762,7 @@
   "name": "WM Series Wavemaker",
   "category": "pumps",
   "subtype": "circulation",
-  "summary": "Round-bodied flow pumps that throw a broad, turbulent stream rather than a narrow jet, on a swivelling mount. The range covers single pumps (WM-101, WM-1, WM-2, WM-15), a 24 V magnet-mount WM-25, and multi-pump kits with a wave controller (WM-3 and WM-4).",
+  "summary": "Round-bodied flow pumps that throw a broad, turbulent stream rather than a narrow jet, on a swivelling mount. The range covers single pumps (WM-101, WM-1, WM-2, WM-15), a DC 12 to 24 V WM-25 on a suction mount, and multi-pump kits with a wave controller (WM-3 and WM-4).",
   "highlights": [
    "Broad, soft flow pattern",
    "Swivel mount points the flow any direction",
@@ -1135,7 +1138,7 @@
   },
   "models": [
    {
-    "name": "1600",
+    "name": "CW / LN-1600",
     "tankMinL": 500,
     "tankMaxL": 1200,
     "lengthCm": 51,
@@ -1148,7 +1151,7 @@
     }
    },
    {
-    "name": "2600",
+    "name": "CW / LN-2600",
     "tankMinL": 800,
     "tankMaxL": 1800,
     "lengthCm": 51,
@@ -1156,11 +1159,12 @@
     "heightCm": 41,
     "extra": {
      "Compressor": "1.0 HP",
-     "Current": "3.5-4 A"
+     "Current": "3.5-4 A",
+     "Connections": "1.5 inch"
     }
    },
    {
-    "name": "3800",
+    "name": "CW / LN-3800",
     "tankMinL": 1200,
     "tankMaxL": 2400,
     "lengthCm": 58,
@@ -1168,7 +1172,8 @@
     "heightCm": 50,
     "extra": {
      "Compressor": "1.5 HP",
-     "Current": "5-5.5 A"
+     "Current": "5-5.5 A",
+     "Connections": "1.5 inch"
     }
    },
    {
@@ -1180,7 +1185,8 @@
     "heightCm": 50,
     "extra": {
      "Compressor": "2.0 HP",
-     "Current": "6.5-7.5 A"
+     "Current": "6.5-7.5 A",
+     "Connections": "1.5 inch"
     }
    }
   ],
@@ -1410,11 +1416,11 @@
   "name": "U Series Air Pump",
   "category": "air-pumps",
   "subtype": "air-pump",
-  "summary": "Tiny, low-power air pumps for nano tanks, sponge filters and air stones. The U-9900 is a twin-outlet version in the same small body.",
+  "summary": "Tiny, low-power air pumps for nano tanks, sponge filters and air stones. The U-9900 is a larger twin-outlet model.",
   "highlights": [
    "2 to 4 L/min, or 2 x 3.2 L/min on the U-9900",
    "1.2 to 3.5 W",
-   "Very small footprint",
+   "Very small footprint on the single-outlet models",
    "Offered in 230, 115 or 12 V versions"
   ],
   "bestFor": "Nano and small tanks running a sponge filter or a single air stone.",
@@ -1452,9 +1458,6 @@
     "airLpm": 6.4,
     "outlets": 2,
     "powerW": 3.5,
-    "lengthCm": 7,
-    "widthCm": 3.95,
-    "heightCm": 3.6,
     "extra": {
      "Output": "2 x 3.2 L/min",
      "Pressure": "0.012 MPa"
@@ -1474,11 +1477,11 @@
   "name": "SC Series Air Pump",
   "category": "air-pumps",
   "subtype": "air-pump",
-  "summary": "An upright, compact air pump in single and twin outlet versions. Nothing fancy, just steady air for a sponge filter or two.",
+  "summary": "A compact, box-shaped air pump in single and twin outlet versions. Nothing fancy, just steady air for a sponge filter or two.",
   "highlights": [
    "3.2 L/min single or 2 x 3 L/min twin",
    "2.5 to 3.5 W",
-   "Stands upright to save shelf space"
+   "Offered in 230, 115 or 12 V versions"
   ],
   "bestFor": "Small to medium tanks running one or two sponge filters or air stones.",
   "specs": {
@@ -1491,20 +1494,24 @@
     "airLpm": 3.2,
     "outlets": 1,
     "powerW": 2.5,
-    "lengthCm": 7.5,
-    "widthCm": 5,
-    "heightCm": 12
+    "lengthCm": 12,
+    "widthCm": 7.5,
+    "heightCm": 5,
+    "extra": {
+     "Size (maker)": "75 x 50 x 120 mm"
+    }
    },
    {
     "name": "SC-7500",
     "airLpm": 6,
     "outlets": 2,
     "powerW": 3.5,
-    "lengthCm": 9.5,
-    "widthCm": 7,
-    "heightCm": 14.2,
+    "lengthCm": 14.2,
+    "widthCm": 9.5,
+    "heightCm": 7,
     "extra": {
-     "Output": "2 x 3 L/min"
+     "Output": "2 x 3 L/min",
+     "Size (maker)": "95 x 70 x 142 mm"
     }
    }
   ],
@@ -1521,7 +1528,7 @@
   "name": "S Series Air Pump",
   "category": "air-pumps",
   "subtype": "air-pump",
-  "summary": "An older, blue-shelled range with rubber diaphragms and no oiling needed. Single and twin outlet models, plus the S-4000B with four outlets and electronic control for multi-tank setups.",
+  "summary": "A long-running range in white shells, or translucent blue on the A models, with rubber diaphragms and no oiling needed. Single and twin outlet models, plus the S-4000B with four outlets and electronic control for multi-tank setups.",
   "highlights": [
    "4 to 4.2 L/min single, 2 x 4 L/min twin",
    "S-4000B: four outlets at 3.2 L/min each",
@@ -2448,7 +2455,7 @@
   "bestFor": "A single betta on a desk, with a few easy plants.",
   "watchOut": "Very small water volume means temperature and water quality swing quickly, and no filter is listed.",
   "specs": {
-   "Colours": "Green, red, orange, black, white, yellow"
+   "Colours": "Green, orange-red, pink, yellow, black, white"
   },
   "models": [
    {
@@ -2520,7 +2527,7 @@
   "bestFor": "A beginner nano cube for easy plants.",
   "watchOut": "The standard 9 W compact fluorescent lamp is dated and will need replacing sooner than an LED.",
   "specs": {
-   "Colours": "Pink, orange, blue and others"
+   "Colours": "Pink, orange, aqua blue, grey, black"
   },
   "models": [
    {
@@ -3154,7 +3161,8 @@
   "watchOut": "The curved front distorts the view and makes aquascaping harder.",
   "specs": {
    "Voltage": "AC 230/115 V",
-   "Colours": "Black, grey, silver"
+   "Colours": "Black, grey, silver",
+   "Dimensions": "Overall size including the hood; the litre figure is the maker's water volume"
   },
   "models": [
    {
@@ -3228,9 +3236,10 @@
    "Top biological filter"
   ],
   "bestFor": "A decorative round-style tank for easy plants and small fish.",
-  "watchOut": "Curved glass is harder to scape and photograph, and light wattage is not clearly listed.",
+  "watchOut": "Curved glass is harder to scape and photograph, and the 7 W and 10 W lamps only suit low-light plants.",
   "specs": {
-   "Voltage": "AC 230/115 V"
+   "Voltage": "AC 230/115 V",
+   "Dimensions": "Overall size including the hood; the litre figure is the maker's water volume"
   },
   "models": [
    {
@@ -3240,7 +3249,10 @@
     "heightCm": 47.3,
     "volumeL": 26,
     "flowLph": 290,
-    "powerW": 4
+    "powerW": 4,
+    "extra": {
+     "Light": "7 W"
+    }
    },
    {
     "name": "BYG-86",
@@ -3249,7 +3261,10 @@
     "heightCm": 61.3,
     "volumeL": 86,
     "flowLph": 500,
-    "powerW": 7
+    "powerW": 7,
+    "extra": {
+     "Light": "10 W"
+    }
    }
   ],
   "images": [
@@ -3275,7 +3290,8 @@
   "bestFor": "A compact display tank for a few fish and easy plants.",
   "watchOut": "The lighting is energy-saving tube based rather than modern LED.",
   "specs": {
-   "Voltage": "AC 230/115 V"
+   "Voltage": "AC 230/115 V",
+   "Dimensions": "Overall size including the hood; the litre figure is the maker's water volume"
   },
   "models": [
    {
@@ -3285,7 +3301,10 @@
     "heightCm": 44,
     "volumeL": 22,
     "flowLph": 290,
-    "powerW": 4
+    "powerW": 4,
+    "extra": {
+     "Light": "5 W"
+    }
    },
    {
     "name": "LJ-380",
@@ -3294,7 +3313,10 @@
     "heightCm": 47.5,
     "volumeL": 25,
     "flowLph": 290,
-    "powerW": 4
+    "powerW": 4,
+    "extra": {
+     "Light": "5 W"
+    }
    },
    {
     "name": "LJ-430",
@@ -3303,7 +3325,10 @@
     "heightCm": 63.9,
     "volumeL": 68,
     "flowLph": 500,
-    "powerW": 7
+    "powerW": 7,
+    "extra": {
+     "Light": "7 W"
+    }
    }
   ],
   "images": [
@@ -3552,7 +3577,8 @@
   "watchOut": "Every size uses the same 1,200 L/h pump, which is weak on the bigger tanks, and the hood limits lighting upgrades.",
   "specs": {
    "Voltage": "AC 230/115 V",
-   "Colours": "Snowy white, birch, cherry, mahogany, black"
+   "Colours": "Snowy white, birch, cherry, mahogany, black",
+   "Dimensions": "Overall size including the hood; the litre figure is the maker's water volume"
   },
   "models": [
    {
@@ -3678,7 +3704,6 @@
    {
     "name": "LZ-1500B",
     "lengthCm": 152.9,
-    "widthCm": 60,
     "heightCm": 73,
     "volumeL": 368,
     "flowLph": 1200,
@@ -3785,7 +3810,8 @@
   "watchOut": "A single 1,200 L/h pump across the whole range is underpowered for the larger tanks.",
   "specs": {
    "Voltage": "AC 230/115 V",
-   "Colours": "Snowy white, birch, cherry, mahogany, black"
+   "Colours": "Snowy white, birch, cherry, mahogany, black",
+   "Dimensions": "Overall size including the hood; the litre figure is the maker's water volume"
   },
   "models": [
    {
@@ -4007,7 +4033,8 @@
   "specs": {
    "Voltage": "AC 230/115 V",
    "Colours": "Birch, black, snowy white, cherry, mahogany",
-   "Variants": "A4 / B4 versions have 4 LED tubes and no listed pump"
+   "Variants": "A4 / B4 versions have 4 LED tubes and no listed pump",
+   "Dimensions": "Overall size including the hood; the litre figure is the maker's water volume"
   },
   "models": [
    {
@@ -4195,13 +4222,14 @@
   "highlights": [
    "235 to 341 litres",
    "Cabinet filtration, 1,500 L/h",
-   "Aluminium frame in silver, champagne gold or black"
+   "Aluminium frame in silver, drawbench gold or drawbench black"
   ],
   "bestFor": "Tall display tanks for large fish in a narrow space.",
   "watchOut": "Only 36 cm deep, which limits aquascaping depth, and the lighting is modest.",
   "specs": {
    "Voltage": "AC 230/115 V",
-   "Frame colours": "Silver, drawbench, drawbench gold, black"
+   "Frame colours": "Silver, drawbench gold, drawbench black",
+   "Edging colours": "Wine red, black, white"
   },
   "models": [
    {
@@ -4364,7 +4392,8 @@
   "watchOut": "Lighting is modest for a planted setup of this size, and the maker's table labels the widest model inconsistently.",
   "specs": {
    "Voltage": "AC 230/115 V",
-   "Frame colours": "Silver, drawbench, drawbench gold, black"
+   "Frame colours": "Silver, drawbench gold, drawbench black",
+   "Edging colours": "Wine red, black, white"
   },
   "models": [
    {

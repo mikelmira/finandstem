@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GearLinks } from "@/components/gear/gear-links";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -317,6 +318,8 @@ export default function WaterChemistryPage() {
             far better than a sudden swing toward the 'right' one.
           </p>
         </Section>
+
+        <GearLinks linkKey="page:water-chemistry" className="mt-12" />
 
         <section className="mt-12">
           <Faq items={FAQS} />

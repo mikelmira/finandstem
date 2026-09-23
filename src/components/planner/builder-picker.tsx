@@ -16,9 +16,13 @@ export interface BuilderOption {
 interface BuilderPickerProps {
   options: ReadonlyArray<BuilderOption>;
   selected: string[];
+  /** Restrict the typeahead to these catalogue categories. */
+  categories?: ReadonlyArray<CatalogueCategory>;
+  placeholder?: string;
 }
 
-export function BuilderPicker({ options, selected }: BuilderPickerProps) {
+export function BuilderPicker({ options: allOptions, selected, categories, placeholder }: BuilderPickerProps) {
+  const options = categories ? allOptions.filter((o) => categories.includes(o.category)) : allOptions;
   const router = useRouter();
   const search = useSearchParams();
   const [query, setQuery] = React.useState("");
@@ -71,7 +75,7 @@ export function BuilderPicker({ options, selected }: BuilderPickerProps) {
         <input
           type="search"
           autoComplete="off"
-          placeholder="Add a fish, plant, shrimp, or moss…"
+          placeholder={placeholder ?? "Add a fish, plant, shrimp, or moss…"}
           value={query}
           onFocus={() => setFocused(true)}
           onChange={(e) => {

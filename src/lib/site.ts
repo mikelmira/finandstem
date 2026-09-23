@@ -35,6 +35,7 @@ export const site = {
           { label: "Substrates", href: "/substrates" },
           { label: "Hardscape", href: "/hardscape" },
           { label: "Gear catalogue", href: "/gear" },
+          { label: "Fertilisers", href: "/gear/fertilisers" },
         ],
       },
       {

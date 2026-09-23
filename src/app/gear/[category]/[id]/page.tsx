@@ -20,6 +20,8 @@ import { fitTitle, gearProductJsonLd } from "@/lib/gear/seo";
 import { Sources } from "@/components/seo/sources";
 import { AuthorByline } from "@/components/seo/author-byline";
 import { formatRange } from "@/lib/gear/fields";
+import { RatingIcons } from "@/components/gear/gear-rating";
+import { METRIC, PRICE_LABEL, PRICE_WORDS, RATINGS_DISCLAIMER, TECH_HELP, techText } from "@/lib/gear/ratings";
 import { getHardscape } from "@/data/hardscape";
 import { site } from "@/lib/site";
 
@@ -131,6 +133,45 @@ export default async function GearProductPage({ params }: RouteParams) {
                 {p.summary}
               </p>
               <AuthorByline updatedAt={GEAR_UPDATED} />
+              {p.ratings && (
+                <div className="rounded-2xl border border-border/60 bg-background/60 p-4">
+                  <dl className="grid grid-cols-2 gap-4">
+                    <div>
+                      <dt className="text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                        {PRICE_LABEL}
+                      </dt>
+                      <dd className="mt-1 flex items-center gap-2">
+                        <RatingIcons value={p.ratings.price} kind="price" label={PRICE_LABEL} size="md" />
+                        <span className="text-xs text-muted-foreground">{PRICE_WORDS[p.ratings.price]}</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                        {METRIC[p.category].label}
+                      </dt>
+                      <dd className="mt-1 flex items-center gap-2">
+                        <RatingIcons value={p.ratings.metric} kind="metric" label={METRIC[p.category].label} size="md" />
+                        <span className="text-xs text-muted-foreground">{p.ratings.metric}/5</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  {p.tech && (
+                    <p className="mt-3 text-sm">
+                      <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">Suits </span>
+                      <Link href="/guides/low-tech-vs-high-tech-planted-tank" className="font-medium underline decoration-[var(--brand)]/40 underline-offset-4 hover:text-[var(--brand)]" title={TECH_HELP}>
+                        {techText(p.tech)} tanks
+                      </Link>
+                    </p>
+                  )}
+                  <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
+                    {METRIC[p.category].help}. {RATINGS_DISCLAIMER}{" "}
+                    <Link href="/about#ratings" className="underline underline-offset-2 hover:text-foreground">
+                      How we rate gear
+                    </Link>
+                    .
+                  </p>
+                </div>
+              )}
               {keyFacts.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {keyFacts.map((f) => (

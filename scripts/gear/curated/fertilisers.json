@@ -5,21 +5,21 @@
   "name": "APT3",
   "category": "fertilisers",
   "subtype": "all-in-one",
-  "summary": "A liquid fertiliser that covers macro, micro and trace nutrients in one bottle, so a single daily dose replaces mixing separate products. It is 2HR's default choice for a planted tank with CO2 and a normal fish load.",
+  "summary": "A liquid fertiliser that covers macro, micro and trace nutrients in one bottle, so a single daily dose replaces mixing separate products. The standard dose is set for CO2 tanks, and 2HR's dosage calculator scales it down for tanks without CO2 or full of slow growers.",
   "highlights": [
    "Macro, micro and trace nutrients in one bottle",
    "One product to dose, no dry salts to mix",
    "2HR's balanced ratio aimed at strong growth and good red colour"
   ],
-  "bestFor": "CO2-injected planted tanks with an average fish load that want one simple fertiliser.",
+  "bestFor": "Planted tanks with a normal fish load, with or without CO2, that want one simple fertiliser.",
   "specs": {
-   "Supplies": "Macro (N, P, K), micro and trace",
+   "Supplies": "Macro (N, P, K), magnesium, iron and traces",
    "Adds nitrate and phosphate": "Yes",
-   "Effect on KH and pH": "None",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
-   "How often": "Daily or several times a week",
-   "Suits": "CO2 tanks, normal fish load",
-   "Sizes": "Starter, Standard, 200 ml, 500 ml, 600 ml, 1000 ml"
+   "How often": "Daily",
+   "Suits": "CO2 and non-CO2 tanks, normal fish load",
+   "Sizes": "Starter (100 ml), Standard (300 ml), 200 ml, 500 ml, 600 ml, 1000 ml"
   },
   "models": [
    {
@@ -42,7 +42,7 @@
   "name": "APTe (APT EI)",
   "category": "fertilisers",
   "subtype": "all-in-one",
-  "summary": "A ready-mixed take on the Estimative Index method: generous, non-limiting doses of every nutrient, reset by a big weekly water change. It gives you the EI approach without weighing out dry salts.",
+  "summary": "A ready-mixed take on the Estimative Index method: generous, non-limiting doses of every nutrient, dosed daily. EI is traditionally paired with a big weekly water change to reset levels, and this gives you the approach without weighing out dry salts.",
   "highlights": [
    "Based on the Estimative Index dosing method",
    "Generous, non-limiting nutrient levels",
@@ -52,11 +52,11 @@
   "specs": {
    "Supplies": "Macro, micro and trace at EI levels",
    "Adds nitrate and phosphate": "Yes, generously",
-   "Effect on KH and pH": "None",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
-   "How often": "Daily, with a large weekly water change",
+   "How often": "Daily (EI usually pairs this with a large weekly water change)",
    "Suits": "High-light CO2 tanks",
-   "Sizes": "Standard, 200 ml, 500 ml, 1000 ml"
+   "Sizes": "Standard (300 ml), 200 ml, 500 ml, 1000 ml"
   },
   "models": [
    {
@@ -70,7 +70,7 @@
   "sourceUrl": "https://2hraquarist.com/products/aptei",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "EI relies on weekly water changes of about half the tank to stop nutrients building up, so it is not for low-tech tanks.",
+  "watchOut": "EI normally relies on large weekly water changes to stop nutrients building up, so it asks more upkeep than a leaner fertiliser.",
   "affiliateUrl": "https://www.2hraquarist.com/wgozz9"
  },
  {
@@ -79,21 +79,21 @@
   "name": "APT1",
   "category": "fertilisers",
   "subtype": "micro-trace",
-  "summary": "The same micro and trace nutrients as APT3, with no added nitrate or phosphate. It is for tanks where fish waste already supplies plenty of nitrogen and phosphorus.",
+  "summary": "APT3's formula with the nitrate and phosphate taken out. It is for tanks where fish food and waste already supply plenty of nitrogen and phosphorus, and 2HR also suggests it for the first one to three months of any new tank.",
   "highlights": [
-   "Micro and trace nutrients plus potassium",
+   "Potassium, magnesium, iron and traces",
    "Zero added nitrate and phosphate",
-   "Pairs with a heavy fish load"
+   "2HR's pick for the first months of a new tank"
   ],
-  "bestFor": "Well-stocked tanks where nitrate already reads high, or where you dose nitrogen separately.",
+  "bestFor": "New tanks in their first few months, and well-stocked tanks where nitrate already reads high.",
   "specs": {
-   "Supplies": "Potassium, micro and trace",
+   "Supplies": "Potassium, magnesium, iron and traces",
    "Adds nitrate and phosphate": "No",
-   "Effect on KH and pH": "None",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
-   "How often": "Daily or several times a week",
-   "Suits": "Heavily stocked tanks",
-   "Sizes": "Starter, Standard, 200 ml, 500 ml, 600 ml, 1000 ml"
+   "How often": "Daily",
+   "Suits": "New tanks and well-stocked tanks",
+   "Sizes": "Starter (100 ml), Standard (300 ml), 200 ml, 500 ml, 600 ml, 1000 ml"
   },
   "models": [
    {
@@ -116,20 +116,20 @@
   "name": "APT Jazz",
   "category": "fertilisers",
   "subtype": "root-feed",
-  "summary": "Slow-release capsules pushed into the substrate that feed roots with substrate-bound ammoniacal nitrogen and other macros. It works alongside a liquid fertiliser rather than replacing it.",
+  "summary": "Slow-release capsules pushed into the substrate that feed roots with nitrogen (mostly ammonium) plus magnesium and traces. 2HR pitches them at reviving tired, older aquasoil, used alongside a liquid fertiliser rather than instead of one.",
   "highlights": [
-   "Slow-release root capsules",
-   "Substrate-bound nitrogen and macros for root feeders",
+   "Slow-release root capsules, one per 4 x 4 cm",
+   "Mostly ammoniacal nitrogen, almost no phosphate",
    "Designed to be used with 2HR's liquid fertilisers"
   ],
-  "bestFor": "Swords, crypts, lilies and other heavy root feeders, especially in older aquasoil or inert gravel.",
+  "bestFor": "Mature or depleted aquasoil and fine-grained inert substrates, especially around heavy root feeders.",
   "specs": {
-   "Supplies": "Ammoniacal nitrogen and macros at the roots",
-   "Adds nitrate and phosphate": "Via the substrate",
-   "Effect on KH and pH": "None",
+   "Supplies": "Nitrogen (mostly ammoniacal), magnesium, iron and traces",
+   "Adds nitrate and phosphate": "Nitrogen into the substrate, almost no phosphate",
+   "Effect on KH and pH": "None stated",
    "Form": "Root capsules",
-   "How often": "Every few months",
-   "Suits": "Heavy root feeders",
+   "How often": "Replenish every 2 months",
+   "Suits": "Mature aquasoil, root feeders",
    "Sizes": "Mini (9 caps), Small (18 caps), Large (54 caps)"
   },
   "models": [
@@ -145,7 +145,7 @@
   "sourceUrl": "https://2hraquarist.com/products/2hr-aquarist-apt-jazz",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "Push capsules deep into the substrate; shallow placement can leak nutrients into the water.",
+  "watchOut": "Push capsules at least 2.5 cm deep; shallow placement can leak ammonia into the water.",
   "affiliateUrl": "https://www.2hraquarist.com/ntuwyw"
  },
  {
@@ -154,22 +154,21 @@
   "name": "APT Feast",
   "category": "fertilisers",
   "subtype": "aquasoil",
-  "summary": "A nutrient-rich aquasoil that feeds roots and softens the water. 2HR rates it for a sustained boost of up to about 12 months, with pH settling around 6.2 to 6.6.",
+  "summary": "A nutrient-rich aquasoil that feeds roots and softens the water. 2HR rates it for a sustained boost of about 12 months, with pH settling around 6.2 to 6.6, and says no substrate booster is needed on top.",
   "highlights": [
    "Organic, nutrient-rich aquasoil",
    "Softens water, pH about 6.2 to 6.6",
-   "Feeds roots for up to around a year"
+   "Feeds roots for around a year"
   ],
   "bestFor": "New planted tanks and soft-water shrimp setups that want a feeding substrate from day one.",
   "specs": {
    "Supplies": "Root nutrients from the soil",
-   "Adds nitrate and phosphate": "From the substrate",
+   "Adds nitrate and phosphate": "Some N and P from the soil",
    "Effect on KH and pH": "Lowers, pH about 6.2 to 6.6",
    "Form": "Aquasoil",
-   "How often": "Once, at setup (lasts about 12 months)",
+   "How often": "Once, at setup (about 12 months of nutrients)",
    "Suits": "New planted and soft-water tanks",
-   "Sizes": "2 L, 5 L",
-   "Nutrient life": "Up to about 12 months"
+   "Sizes": "2 L, 5 L"
   },
   "models": [
    {
@@ -183,7 +182,7 @@
   "sourceUrl": "https://2hraquarist.com/products/apt-feast",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "Like most rich aquasoils it releases ammonia at first, so cycle the tank before adding livestock.",
+  "watchOut": "Like most rich aquasoils it needs a settling-in period; 2HR advises full water changes every other day for the first two weeks in an uncycled tank.",
   "affiliateUrl": "https://www.2hraquarist.com/8rhlxr"
  },
  {
@@ -192,22 +191,21 @@
   "name": "APT Start",
   "category": "fertilisers",
   "subtype": "bacteria",
-  "summary": "A one-off booster for new tanks that combines substrate enrichment with starter bacteria. It adds organics and nutrients that help the first cycle settle faster.",
+  "summary": "A one-off booster for new tanks: a pouch of substrate fertiliser spread under the soil, plus a sachet of dormant starter bacteria poured into the water after filling. It adds ammoniacal nitrogen at the roots and helps the first cycle get going.",
   "highlights": [
-   "Substrate enrichment plus starter bacteria",
-   "Used once, at setup",
+   "Substrate fertiliser plus starter bacteria",
+   "Spread under the substrate at setup",
    "Helps a new tank cycle faster"
   ],
-  "bestFor": "Brand-new tanks at the planting stage, before the tank is flooded or filled.",
+  "bestFor": "Brand-new tanks at the build stage, before the substrate goes in, on most aquasoils other than APT Feast.",
   "specs": {
-   "Supplies": "Substrate enrichment and starter bacteria",
-   "Adds nitrate and phosphate": "No",
-   "Effect on KH and pH": "None",
-   "Form": "Powder",
+   "Supplies": "Nitrogen, potassium, calcium, magnesium and starter bacteria",
+   "Adds nitrate and phosphate": "Nitrogen (mostly ammoniacal) into the substrate, no phosphate",
+   "Effect on KH and pH": "None stated",
+   "Form": "Pouch of substrate fertiliser plus bacteria sachet",
    "How often": "Once, at setup",
    "Suits": "Brand-new tanks",
-   "Sizes": "One size",
-   "Contains": "Substrate enrichment and starter bacteria"
+   "Sizes": "45 g pouch (about 60 L or a 60 x 30 cm footprint)"
   },
   "models": [
    {
@@ -221,7 +219,7 @@
   "sourceUrl": "https://2hraquarist.com/products/2hr-aquarist-apt-start",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "It is a setup product, so it does not replace ongoing fertiliser dosing.",
+  "watchOut": "It is a setup product that releases some ammonia while cycling, and it does not replace ongoing fertiliser dosing.",
   "affiliateUrl": "https://www.2hraquarist.com/8wjgc5"
  },
  {
@@ -230,22 +228,21 @@
   "name": "APT Balance",
   "category": "fertilisers",
   "subtype": "bacteria",
-  "summary": "Beneficial bacteria designed for aquasoil tanks. Dosed into a new or unsettled tank, it speeds up nitrification so ammonia and nitrite clear faster in the early weeks.",
+  "summary": "Dry-powder bacteria made to cope with the low pH of aquasoil tanks. One sachet holds nitrifying bacteria to clear ammonia and nitrite, the other holds bacteria that break down mulm and plant waste.",
   "highlights": [
-   "Beneficial bacteria for aquasoil tanks",
-   "Speeds up nitrification",
-   "Steadies new or disturbed tanks"
+   "Bacteria chosen for low-pH aquasoil tanks",
+   "Nitrifying plus waste-digesting cultures",
+   "Dry powder, stored at room temperature"
   ],
-  "bestFor": "New aquasoil tanks during cycling, or after a big rescape or filter clean.",
+  "bestFor": "New aquasoil tanks during cycling, and monthly or after a rescape, filter clean or new livestock.",
   "specs": {
-   "Supplies": "Nitrifying bacteria",
+   "Supplies": "Nitrifying and waste-digesting bacteria",
    "Adds nitrate and phosphate": "No",
-   "Effect on KH and pH": "None",
-   "Form": "Sachets",
-   "How often": "New tanks and after disturbances",
+   "Effect on KH and pH": "None stated",
+   "Form": "Dry powder in two sachets (A and B)",
+   "How often": "Monthly, and after resets or filter cleans",
    "Suits": "New aquasoil tanks",
-   "Sizes": "One size",
-   "Contains": "Nitrifying bacteria"
+   "Sizes": "One pack size"
   },
   "models": [
    {
@@ -259,7 +256,7 @@
   "sourceUrl": "https://2hraquarist.com/products/2hr-aquarist-apt-balance",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "Bacteria still need a source of ammonia and time, so keep testing during the cycle."
+  "watchOut": "Switch off any UV steriliser for 24 hours after dosing, and keep testing during a cycle."
  },
  {
   "id": "2hr-aquarist-apt-fix",
@@ -277,12 +274,11 @@
   "specs": {
    "Supplies": "Algae spot treatment",
    "Adds nitrate and phosphate": "No",
-   "Effect on KH and pH": "None",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
    "How often": "As needed, spot dosed",
-   "Suits": "BBA and filamentous algae",
-   "Sizes": "Starter, Standard, 200 ml, 500 ml, 600 ml",
-   "Treats": "BBA, hair, string, fuzz and most filamentous algae"
+   "Suits": "BBA, hair, string and fuzz algae",
+   "Sizes": "Starter (100 ml), Standard (300 ml), 200 ml, 500 ml, 600 ml"
   },
   "models": [
    {
@@ -296,7 +292,7 @@
   "sourceUrl": "https://2hraquarist.com/products/aptfix",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "It can harm mosses, liverworts and vallisneria. Use APT FixLite in tanks with those plants, and fix the cause of the algae too.",
+  "watchOut": "Keep it off mosses and delicate plants (APT FixLite is made for those), and stay under 1 ml per 10 L; 2HR says to do an 80% water change if you go over.",
   "affiliateUrl": "https://www.2hraquarist.com/products/aptfix?bg_ref=f5HwagCc30"
  },
  {
@@ -307,21 +303,19 @@
   "subtype": "algae-treatment",
   "summary": "A gentler version of APT Fix for tanks with mosses, liverworts such as riccardia and riccia, vallisneria and other delicate plants that full-strength treatments can knock back.",
   "highlights": [
-   "Gentler algae treatment",
-   "Safer around mosses, liverworts and vallisneria",
+   "Milder algae treatment, gentler on beneficial microbes",
+   "Made for tanks with mosses, liverworts and vallisneria",
    "Biodegrades completely"
   ],
   "bestFor": "Moss-heavy and delicate-plant tanks that still need to tackle algae.",
   "specs": {
    "Supplies": "Gentle algae spot treatment",
    "Adds nitrate and phosphate": "No",
-   "Effect on KH and pH": "None",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
    "How often": "As needed, spot dosed",
-   "Suits": "Tanks with mosses and liverworts",
-   "Sizes": "Starter, Standard, 500 ml",
-   "Treats": "Filamentous algae in sensitive tanks",
-   "Safe with": "Mosses, liverworts, vallisneria"
+   "Suits": "Tanks with mosses, liverworts and vallisneria",
+   "Sizes": "Starter (100 ml), Standard (300 ml), 500 ml"
   },
   "models": [
    {
@@ -335,7 +329,7 @@
   "sourceUrl": "https://2hraquarist.com/products/2hr-aquarist-fixlite",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "Being gentler, it can take more applications than full-strength APT Fix.",
+  "watchOut": "Milder does not mean slower (2HR says it often acts faster than APT Fix), so keep circulation and oxygen up after dosing and stay under 1 ml per 10 L.",
   "affiliateUrl": "https://www.2hraquarist.com/products/2hr-aquarist-fixlite?bg_ref=f5HwagCc30"
  },
  {
@@ -344,23 +338,21 @@
   "name": "APT Pure",
   "category": "fertilisers",
   "subtype": "conditioner",
-  "summary": "A concentrated dechlorinator for water changes. It removes chlorine and chloramine and binds ammonia, nitrite and heavy metals, with aloe vera added.",
+  "summary": "A concentrated dechlorinator for water changes. It removes chlorine and chloramine and detoxifies ammonia, nitrite, nitrate and heavy metals, with aloe vera added. One ml treats 60 L.",
   "highlights": [
    "Removes chlorine and chloramine",
-   "Detoxifies ammonia, nitrite and heavy metals",
-   "Concentrated, so a bottle lasts"
+   "Detoxifies ammonia, nitrite, nitrate and heavy metals",
+   "1 ml per 60 L, so a bottle lasts"
   ],
   "bestFor": "Anyone doing water changes with tap water.",
   "specs": {
    "Supplies": "Dechlorinator and detoxifier",
    "Adds nitrate and phosphate": "No",
-   "Effect on KH and pH": "None",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
    "How often": "Every water change",
    "Suits": "Tap water changes",
-   "Sizes": "Starter, Standard, 200 ml, 500 ml",
-   "Removes": "Chlorine and chloramine",
-   "Detoxifies": "Heavy metals, ammonia, nitrite, nitrate"
+   "Sizes": "Starter (100 ml), Standard (300 ml), 200 ml, 500 ml"
   },
   "models": [
    {
@@ -373,7 +365,8 @@
   ],
   "sourceUrl": "https://2hraquarist.com/products/aptpure",
   "sourceName": "2HR Aquarist",
-  "specSource": "manufacturer"
+  "specSource": "manufacturer",
+  "watchOut": "A garlic or sulphur smell is normal; it comes from the hydrosulfite it is based on."
  },
  {
   "id": "2hr-aquarist-apt-sky",
@@ -381,7 +374,7 @@
   "name": "APT Sky",
   "category": "fertilisers",
   "subtype": "remineraliser",
-  "summary": "A remineraliser that puts calcium, magnesium and other minerals back into RO or RODI water without raising KH, pH or adding NPK. It lets shrimp and hard-water plants thrive alongside soft-water plants.",
+  "summary": "A remineraliser that puts calcium, magnesium and trace minerals back into RO or RODI water without touching KH, pH or NPK. It lets shrimp and hard-water plants do well alongside soft-water plants.",
   "highlights": [
    "Restores GH in RO and RODI water",
    "Does not raise KH or pH",
@@ -389,7 +382,7 @@
   ],
   "bestFor": "Soft-water planted tanks and Caridina shrimp tanks started from RO water.",
   "specs": {
-   "Supplies": "GH minerals (calcium, magnesium)",
+   "Supplies": "Calcium, magnesium and trace minerals",
    "Adds nitrate and phosphate": "No",
    "Effect on KH and pH": "None",
    "Form": "Powder",
@@ -417,15 +410,15 @@
   "name": "APT Sky Plus",
   "category": "fertilisers",
   "subtype": "remineraliser",
-  "summary": "Like APT Sky, it remineralises RO or RODI water without adding NPK, but it also raises KH to about 2 dKH and pH to around 7.2 to 7.6. That suits Neocaridina and harder-water plants.",
+  "summary": "Like APT Sky, it remineralises RO or RODI water without adding NPK, but it also raises KH to about 2 dKH and pH to around 7.2 to 7.6. 2HR notes that level of KH still suits most commercial aquarium plants.",
   "highlights": [
    "Restores GH in RO and RODI water",
    "Raises KH to about 2 and pH to 7.2 to 7.6",
    "No added nitrogen, phosphorus or potassium"
   ],
-  "bestFor": "RO-water tanks keeping Neocaridina shrimp or plants that prefer a little buffering.",
+  "bestFor": "RO-water tanks with Neocaridina shrimp or plants that like a little buffering.",
   "specs": {
-   "Supplies": "GH minerals plus buffer",
+   "Supplies": "Calcium, magnesium, trace minerals plus KH buffer",
    "Adds nitrate and phosphate": "No",
    "Effect on KH and pH": "Raises KH to about 2, pH to 7.2 to 7.6",
    "Form": "Powder",
@@ -445,7 +438,7 @@
   "sourceUrl": "https://2hraquarist.com/products/2hr-aquarist-apt-sky-plus",
   "sourceName": "2HR Aquarist",
   "specSource": "manufacturer",
-  "watchOut": "Not for Caridina or very soft-water setups, since it raises KH and pH."
+  "watchOut": "Caridina such as crystal shrimp usually want KH near zero and pH below 7, so plain APT Sky suits them better."
  },
  {
   "id": "2hr-aquarist-apt-dew",
@@ -453,21 +446,21 @@
   "name": "APT Dew",
   "category": "fertilisers",
   "subtype": "foliar",
-  "summary": "A balanced macro, micro and trace fertiliser in a spray bottle, applied to leaves instead of the water. For aquarium keepers it is most useful during the dry-start method, before a tank is flooded.",
+  "summary": "A balanced macro, micro and trace fertiliser in a spray bottle, applied to leaves instead of the water. For aquarium keepers it is most useful during the dry-start method, feeding a carpet while it grows in before the tank is flooded.",
   "highlights": [
    "Foliar spray with macro, micro and trace nutrients",
    "Feeds plants grown out of water",
    "Useful during a dry start"
   ],
-  "bestFor": "The dry-start phase of a carpet, and emersed mosses and plants above the waterline.",
+  "bestFor": "The dry-start phase of a carpet, and plants growing above the waterline in an open-top tank.",
   "specs": {
    "Supplies": "Macro, micro and trace",
    "Adds nitrate and phosphate": "Yes (on leaves)",
-   "Effect on KH and pH": "None",
+   "Effect on KH and pH": "None stated",
    "Form": "Foliar spray",
-   "How often": "When misting emersed plants",
+   "How often": "2 to 3 times a week",
    "Suits": "Dry start and emersed mosses",
-   "Sizes": "Starter, Standard"
+   "Sizes": "Starter (100 ml), Standard (300 ml)"
   },
   "models": [
    {
@@ -490,7 +483,7 @@
   "name": "Green Brighty Iron",
   "category": "fertilisers",
   "subtype": "single-nutrient",
-  "summary": "A liquid iron supplement from ADA's Green Brighty range, for vigorously growing plants that use a lot of iron. It is dosed alongside ADA's other Green Brighty bottles rather than on its own.",
+  "summary": "A liquid iron supplement from ADA's Green Brighty range, for vigorously growing plants that use a lot of iron. ADA intends it for daily dosing, and it is normally used as part of the Green Brighty system with the other bottles.",
   "highlights": [
    "Supplies iron",
    "Part of ADA's modular Green Brighty range",
@@ -502,7 +495,7 @@
    "Adds nitrate and phosphate": "No",
    "Effect on KH and pH": "None stated",
    "Form": "Liquid, pump bottle",
-   "How often": "Regularly, with other Green Brighty bottles",
+   "How often": "Daily",
    "Suits": "Fast-growing and red plants",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
@@ -525,7 +518,7 @@
   "name": "Green Brighty Nitrogen",
   "category": "fertilisers",
   "subtype": "single-nutrient",
-  "summary": "ADA's nitrogen supplement, used to keep leaf colour strong and growth steady in tanks where plants use up nitrogen faster than fish produce it.",
+  "summary": "ADA's nitrogen supplement, dosed daily to keep leaf colour strong and growth steady in tanks where plants use up nitrogen faster than fish produce it.",
   "highlights": [
    "Supplies nitrogen",
    "Supports leaf colour and growth",
@@ -537,7 +530,7 @@
    "Adds nitrate and phosphate": "Nitrogen only",
    "Effect on KH and pH": "None stated",
    "Form": "Liquid, pump bottle",
-   "How often": "Regularly, as plants need",
+   "How often": "Daily",
    "Suits": "Heavily planted, lightly stocked tanks",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
@@ -560,20 +553,20 @@
   "name": "Green Brighty Neutral K",
   "category": "fertilisers",
   "subtype": "single-nutrient",
-  "summary": "A potassium supplement that does not raise pH or KH. ADA recommends it where tap water is already high in pH and KH, and for plants that prefer softer conditions.",
+  "summary": "A potassium supplement that does not raise pH or KH. ADA pitches it for plants that dislike high pH and KH, and it is the neutral alternative to Brighty K, which is alkaline and adds buffering.",
   "highlights": [
    "Supplies potassium",
    "Does not raise pH or KH",
-   "Suits harder tap water and soft-water plants"
+   "Neutral alternative to the alkaline Brighty K"
   ],
-  "bestFor": "Tanks with pinholes in older leaves from low potassium, especially with hard tap water.",
+  "bestFor": "Soft-water plants, and tanks where potassium is short but pH and KH should not climb.",
   "specs": {
    "Supplies": "Potassium",
    "Adds nitrate and phosphate": "No",
    "Effect on KH and pH": "No rise",
    "Form": "Liquid, pump bottle",
-   "How often": "Regularly, as plants need",
-   "Suits": "Hard tap water and soft-water plants",
+   "How often": "Daily",
+   "Suits": "Soft-water plants, tanks that should not gain KH",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
   "models": [
@@ -600,14 +593,14 @@
    "Supports new bud growth and colour",
    "Pump bottle for measured doses"
   ],
-  "bestFor": "Planted tanks of any tech level that need trace elements topped up.",
+  "bestFor": "Planted tanks on ADA's Green Brighty system that need trace elements topped up.",
   "specs": {
    "Supplies": "Trace elements",
    "Adds nitrate and phosphate": "No",
    "Effect on KH and pH": "None stated",
    "Form": "Liquid, pump bottle",
    "How often": "Daily",
-   "Suits": "All planted tanks",
+   "Suits": "Green Brighty system tanks",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
   "models": [
@@ -628,21 +621,21 @@
   "name": "ECA Plus",
   "category": "fertilisers",
   "subtype": "single-nutrient",
-  "summary": "A concentrated iron and sulphur additive for tackling chlorosis, where new leaves turn pale or yellow. It works faster than routine dosing and is used when plants already show symptoms.",
+  "summary": "An iron and magnesium additive, with the iron in the ferrous form plants take up easily and organic acids to help absorption. ADA says it both prevents and treats chlorosis, where new leaves come in pale or yellow, and brings out green and red colour.",
   "highlights": [
-   "Concentrated ferrous iron and sulphur",
-   "Aimed at correcting chlorosis quickly",
-   "Small 50 ml bottle"
+   "Ferrous iron plus magnesium",
+   "Organic acids to aid uptake",
+   "Prevents and treats pale new growth"
   ],
-  "bestFor": "Tanks where new growth has gone pale or yellow from an iron shortage.",
+  "bestFor": "Tanks where new growth has gone pale or yellow, or red plants that need more iron.",
   "specs": {
-   "Supplies": "Ferrous iron and sulphur",
+   "Supplies": "Ferrous iron, magnesium, organic acids",
    "Adds nitrate and phosphate": "No",
    "Effect on KH and pH": "None stated",
    "Form": "Liquid",
-   "How often": "When chlorosis shows",
-   "Suits": "Correcting pale new growth",
-   "Sizes": "50 ml"
+   "How often": "Follow the label; daily for a short spell when correcting chlorosis",
+   "Suits": "Pale new growth, red plants",
+   "Sizes": "50 ml, 500 ml"
   },
   "models": [
    {
@@ -653,8 +646,9 @@
    "/Users/mikeelmira/Downloads/ADA-images/eca-plus-50ml_1.png"
   ],
   "sourceName": "ADA",
-  "specSource": "retailer",
-  "watchOut": "It is a corrective, concentrated product; dose carefully rather than as a daily fertiliser."
+  "specSource": "manufacturer",
+  "watchOut": "Too much iron can feed algae, so dose by the drop and do not stack it on top of heavy iron dosing from other products.",
+  "sourceUrl": "https://www.adana.co.jp/en/contents/products/na_liquid/detail02.html"
  },
  {
   "id": "ada-green-gain-plus",
@@ -662,7 +656,7 @@
   "name": "Green Gain Plus",
   "category": "fertilisers",
   "subtype": "supplement",
-  "summary": "A plant supplement based on seaweed-derived plant hormones, trace elements and amino acids, with boron for new buds. It is used to help plants recover from trimming and stress.",
+  "summary": "A plant supplement based on seaweed-derived plant hormones, trace elements and amino acids, with boron for new buds. ADA pitches it for easing stress after pruning or when conditions dip, and for pushing new shoots.",
   "highlights": [
    "Seaweed-derived plant hormones",
    "Trace elements, amino acids and boron",
@@ -674,10 +668,9 @@
    "Adds nitrate and phosphate": "No",
    "Effect on KH and pH": "None stated",
    "Form": "Liquid",
-   "How often": "After trimming or planting",
+   "How often": "For a few days after trimming (follow the label)",
    "Suits": "Recovery after trimming",
-   "Sizes": "50 ml",
-   "Contains": "Plant hormones, trace elements, amino acids, boron"
+   "Sizes": "50 ml, 500 ml"
   },
   "models": [
    {
@@ -688,8 +681,9 @@
    "/Users/mikeelmira/Downloads/ADA-images/green-gain-plus-50ml_1.png"
   ],
   "sourceName": "ADA",
-  "specSource": "retailer",
-  "watchOut": "It supports growth rather than supplying the main nutrients, so use it with a regular fertiliser."
+  "specSource": "manufacturer",
+  "watchOut": "It supports growth rather than supplying the main nutrients, so use it with a regular fertiliser.",
+  "sourceUrl": "https://www.adana.co.jp/en/contents/products/na_liquid/detail02.html"
  },
  {
   "id": "ada-bottom-plus",
@@ -697,19 +691,19 @@
   "name": "Bottom Plus",
   "category": "fertilisers",
   "subtype": "root-feed",
-  "summary": "Slow-release root sticks pushed into the substrate next to root-feeding plants. They release nutrients gradually over several months without affecting the water much.",
+  "summary": "Slow-release root sticks pushed into the substrate next to root-feeding plants, topping up the nitrogen and iron that run out of a substrate over time. Made mostly from the same natural soil as ADA Aqua Soil, they break down completely.",
   "highlights": [
-   "Slow-release root sticks",
-   "Feeds root feeders directly",
-   "Lasts several months"
+   "Nitrogen and iron at the roots",
+   "Made from Aqua Soil type soil, breaks down fully",
+   "Successor to ADA's Iron Bottom and Multi Bottom"
   ],
   "bestFor": "Swords, crypts, vallisneria and other root feeders, especially in older or inert substrate.",
   "specs": {
-   "Supplies": "Slow-release root nutrients",
-   "Adds nitrate and phosphate": "Via the substrate",
+   "Supplies": "Nitrogen and iron",
+   "Adds nitrate and phosphate": "Nitrogen into the substrate, phosphate not stated",
    "Effect on KH and pH": "None stated",
    "Form": "Root sticks",
-   "How often": "Every few months",
+   "How often": "Follow the label (retailers quote 1 to 6 months)",
    "Suits": "Heavy root feeders",
    "Sizes": "25 sticks"
   },
@@ -723,6 +717,7 @@
   ],
   "sourceName": "ADA",
   "specSource": "retailer",
-  "watchOut": "Push sticks fully under the substrate; exposed sticks can leach nutrients and feed algae."
+  "watchOut": "Push sticks fully under the substrate; exposed sticks can leach nutrients and feed algae.",
+  "sourceUrl": "https://www.adana.co.jp/en/release/detail?id=512"
  }
 ]

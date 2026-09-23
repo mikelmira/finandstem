@@ -72,6 +72,9 @@ const nextConfig: NextConfig = {
         destination: "https://finandstem.com/:path*",
         statusCode: 301,
       },
+      // Gear removed from the catalogue: point back to its category.
+      // (Eheim describes the miniFLAT as a terrarium/paludarium filter.)
+      { source: "/gear/filters/eheim-miniflat", destination: "/gear/filters", statusCode: 301 },
     ];
   },
   async headers() {

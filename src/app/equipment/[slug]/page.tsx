@@ -216,7 +216,7 @@ export default async function EquipmentPage({ params }: RouteParams) {
             <ul className="mt-5 grid gap-4 sm:grid-cols-3">
               {gearPicks.map((p) => (
                 <li key={p.id}>
-                  <GearCard card={toCard(p)} showCompare={false} />
+                  <GearCard card={toCard(p)} showCompare={false} showRatings={false} />
                 </li>
               ))}
             </ul>

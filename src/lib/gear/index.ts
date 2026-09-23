@@ -53,6 +53,8 @@ export function toCard(p: GearProduct): GearCard {
     specs: p.specs,
     models: p.models,
     image: p.images[0],
+    ratings: p.ratings,
+    tech: p.tech,
   };
 }
 

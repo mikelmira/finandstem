@@ -183,6 +183,47 @@ export default function AboutPage() {
           ))}
         </div>
       </SectionShell>
+
+      {/* How we rate gear */}
+      <SectionShell id="ratings" className="border-t border-border/60 bg-muted/30">
+        <SectionHeading
+          eyebrow="Ratings"
+          title="How we rate gear."
+          subtitle="Every product in the gear catalogue shows two quick 1 to 5 ratings so you can see what kind of product you are looking at. They are our estimates, not lab tests, and they are meant as a rough guide alongside the specs."
+        />
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <div className="glass glass-edge rounded-2xl p-6">
+            <h3 className="text-base font-semibold">Price (1 to 5 coins)</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Where a product sits against others in the same category, from 1 (budget) to 5
+              (premium). Where we know a typical retail price, it is blended with the brand&rsquo;s
+              positioning in the hobby; otherwise we use the brand and product line. Prices differ a
+              lot by country, retailer and size, so this shows the type of product, not what you will
+              pay.
+            </p>
+          </div>
+          <div className="glass glass-edge rounded-2xl p-6">
+            <h3 className="text-base font-semibold">The second rating (1 to 5 dots)</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Whatever matters most for that kind of product. Filters, pumps, CO2 gear and UV units
+              show build quality. Tanks, stands and lily pipes show build and finish. Lights show
+              plant growth power, worked out from watts per centimetre of fixture. Heaters show
+              control and safety features, air pumps show quietness, coolers show cooling power,
+              fertilisers show ease of use, and hardscape shows soft-water safety (5 is inert, 1
+              raises hardness and pH).
+            </p>
+          </div>
+        </div>
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+          Ratings are Fin &amp; Stem estimates based on typical retail prices, brand positioning and
+          published specs. We are not paid to rate anything higher, and we adjust ratings when readers
+          point out something we got wrong. If you think a rating is off, email{" "}
+          <a href={`mailto:${site.contact.email}`} className="underline underline-offset-2 hover:text-foreground">
+            {site.contact.email}
+          </a>
+          .
+        </p>
+      </SectionShell>
     </>
   );
 }

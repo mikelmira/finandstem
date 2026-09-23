@@ -90,6 +90,17 @@ export interface GearProduct {
   /** Affiliate link (rendered with rel="sponsored" and a disclosure). */
   affiliateUrl?: string;
   specSource: GearSpecSource;
+  /** Fin & Stem estimates, 1-5: price level and the category's metric. */
+  ratings?: GearRatings;
+  /** Planted-tank styles it suits: low tech (no CO2) and/or high tech. */
+  tech?: TechLevel[];
+}
+
+export type TechLevel = "low" | "high";
+
+export interface GearRatings {
+  price: number;
+  metric: number;
 }
 
 /**
@@ -110,4 +121,6 @@ export interface GearCard {
   specs: Record<string, string>;
   models: GearModel[];
   image?: GearImage;
+  ratings?: GearRatings;
+  tech?: TechLevel[];
 }

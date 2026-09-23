@@ -468,8 +468,8 @@
    "Flow and maintenance indicator on the head",
    "Wheels and recessed handles for moving it around"
   ],
-  "bestFor": "Very large planted displays, roughly 600 litres and up, where one filter needs to carry a lot of media.",
-  "watchOut": "Media is not included, it draws 45 W and is over 56 cm tall, so check cabinet height before you buy.",
+  "bestFor": "Very large planted displays of roughly 400 to 1,200 litres, where one filter needs to carry a lot of media.",
+  "watchOut": "Media is not included and it is over 56 cm tall, and 1,700 L/h is only about 1.4 tank turnovers an hour at the top of its range, so a big planted tank will want extra circulation.",
   "specs": {
    "Hose size": "16/22 mm (2 inlets, 1 outlet)",
    "Media": "Not included",
@@ -480,9 +480,10 @@
     "name": "1200XL (2080)",
     "sku": "2080",
     "flowLph": 1700,
-    "headM": 2.8,
+    "headM": 2.6,
+    "tankMinL": 400,
     "tankMaxL": 1200,
-    "powerW": 45,
+    "powerW": 25,
     "mediaL": 12.0,
     "hoseMm": 16,
     "extra": {
@@ -499,7 +500,7 @@
   ],
   "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-professional-3-filter-1200xl-2080",
   "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
+  "specSource": "manufacturer"
  },
  {
   "id": "eheim-classicvario-plus-e",
@@ -820,40 +821,6 @@
    "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aqua200-internal-filter_1.jpg"
   ],
   "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-aqua200-internal-filter",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
- },
- {
-  "id": "eheim-miniflat",
-  "brand": "Eheim",
-  "name": "miniFLAT",
-  "category": "filters",
-  "subtype": "internal",
-  "summary": "The miniFLAT lies flat on the bottom rather than hanging on the glass, so it works in very shallow water. It draws water in from underneath, passes it through a sponge and pushes it out of the top, which keeps a small water area moving.",
-  "highlights": [
-   "Works in water only a few centimetres deep",
-   "Sticks to the floor with suction cups",
-   "Hose connection lets you aim the outflow, for example into a small stream",
-   "5 W power draw"
-  ],
-  "bestFor": "Very shallow nano tanks and low water levels that still need a bit of filtration and movement.",
-  "watchOut": "It is a tiny sponge filter, so it will not keep up with a stocked aquarium on its own.",
-  "specs": {
-   "Mounting": "Suction cups, lies horizontally",
-   "Includes": "Filter sponge"
-  },
-  "models": [
-   {
-    "name": "miniFLAT",
-    "powerW": 5
-   }
-  ],
-  "priceFrom": 23.51,
-  "currency": "GBP",
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-miniflat-internal-filter_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-miniflat-internal-filter",
   "sourceName": "Charterhouse Aquatics",
   "specSource": "retailer"
  },
@@ -1639,7 +1606,7 @@
   "name": "powerRGB",
   "category": "lights",
   "subtype": "bar",
-  "summary": "powerRGB is a low-voltage RGB LED bar meant to sit alongside your main light and add colour. On its own it gives a fixed output. Paired with the RGBcontrol+e controller (sold separately) you can blend colours, run sunrise and sunset, and add moonlight.",
+  "summary": "powerRGB is a low-voltage RGB LED bar meant to sit alongside your main light and add colour. Paired with the RGBcontrol+e controller (sold separately) you can blend colours, run sunrise and sunset, and add moonlight.",
   "highlights": [
    "Adds red, green and blue to lift plant and fish colour",
    "Three lengths for tanks from about 79 to 125 cm",
@@ -1698,216 +1665,6 @@
   "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-powerrgb-led-aquarium-light",
   "sourceName": "Charterhouse Aquatics",
   "specSource": "manufacturer"
- },
- {
-  "id": "eheim-autofeeder-plus",
-  "brand": "Eheim",
-  "name": "autofeeder+",
-  "category": "feeders",
-  "subtype": "auto-feeder",
-  "summary": "The autofeeder+ is a mains-powered feeder you program over WiFi. It can skip a random day each week, stops you double-feeding, and e-mails you when the drum is getting low.",
-  "highlights": [
-   "Program times and portions from a browser",
-   "Low-food e-mail at 30 percent and when empty",
-   "Mains powered, no batteries to run flat",
-   "Can pause a linked Eheim filter while food sinks"
-  ],
-  "bestFor": "Keepers who travel and want to check on feeding remotely.",
-  "watchOut": "Needs a nearby socket and a lid cut-out or open top for mounting.",
-  "specs": {
-   "Power": "Mains adaptor",
-   "Control": "WiFi via web browser",
-   "Cable": "About 2 m",
-   "Warranty": "3 years"
-  },
-  "models": [
-   {
-    "name": "autofeeder+",
-    "capacityMl": 125
-   }
-  ],
-  "priceFrom": 90.2,
-  "currency": "GBP",
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-autofeeder-wifi-fish-feeder_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-autofeeder-wifi-fish-feeder",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
- },
- {
-  "id": "eheim-feedair",
-  "brand": "Eheim",
-  "name": "Feed Air",
-  "category": "feeders",
-  "subtype": "auto-feeder",
-  "summary": "Feed Air is a simple battery feeder with a single ventilated drum, mostly for flake. Programming is straightforward and it has a button for an extra snack.",
-  "highlights": [
-   "Aerated food drum helps stop flakes clumping",
-   "Double-feed program option",
-   "Low-battery warning",
-   "Bracket for open-top tanks included"
-  ],
-  "bestFor": "Holiday feeding on small to medium community tanks.",
-  "watchOut": "Runs on batteries, so swap them before you go away.",
-  "specs": {
-   "Power": "Batteries (included)",
-   "Food": "Mainly flakes"
-  },
-  "models": [
-   {
-    "name": "Feed Air",
-    "capacityMl": 100
-   }
-  ],
-  "priceFrom": 52.95,
-  "currency": "GBP",
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-feed-air-automatic-feeder_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-feed-air-automatic-feeder",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
- },
- {
-  "id": "eheim-twinfeeder",
-  "brand": "Eheim",
-  "name": "TWINfeeder",
-  "category": "feeders",
-  "subtype": "auto-feeder",
-  "summary": "The TWINfeeder has two drums you program separately, so you can offer flakes to surface fish and pellets or sticks to bottom feeders in the same tank. It runs on batteries and has a large display.",
-  "highlights": [
-   "Two separately programmable food drums",
-   "Both drums are aerated",
-   "Random dosing option",
-   "Low-battery warning"
-  ],
-  "bestFor": "Mixed community tanks where top and bottom dwellers need different foods while you are away.",
-  "watchOut": "Battery powered, and the listing does not give drum capacity.",
-  "specs": {
-   "Power": "Batteries (included)",
-   "Food": "Flakes, granules, sticks, pellets"
-  },
-  "models": [
-   {
-    "name": "TWINfeeder"
-   }
-  ],
-  "priceFrom": 64.49,
-  "currency": "GBP",
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-twin-auto-feeder_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-twin-auto-feeder",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
- },
- {
-  "id": "eheim-rapidcleaner",
-  "brand": "Eheim",
-  "name": "rapidCleaner",
-  "category": "tools",
-  "subtype": "scraper",
-  "summary": "rapidCleaner is a long-handled blade scraper for glass tanks. The 8 cm blade covers a lot of glass per stroke, and a silicone guard stops it cutting into the sealant at the corners.",
-  "highlights": [
-   "Wide 8 cm blade",
-   "Silicone guard protects corner seams",
-   "Glass-fibre handle",
-   "Tool-free blade change"
-  ],
-  "bestFor": "Clearing green spot algae off glass in deeper planted tanks without getting your arm wet.",
-  "watchOut": "Blade scrapers are for glass only. Do not use it on acrylic tanks.",
-  "specs": {
-   "Blade width": "8 cm",
-   "Water type": "Freshwater and marine"
-  },
-  "models": [
-   {
-    "name": "48 cm",
-    "lengthCm": 48
-   },
-   {
-    "name": "58 cm",
-    "lengthCm": 58
-   }
-  ],
-  "priceFrom": 11.63,
-  "currency": "GBP",
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-rapidcleaner-aquarium-scraper_2.jpg",
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-rapidcleaner-aquarium-scraper_1.jpg",
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-rapidcleaner-aquarium-scraper_3.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-rapidcleaner-aquarium-scraper",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
- },
- {
-  "id": "eheim-gravel-cleaner",
-  "brand": "Eheim",
-  "name": "Gravel Cleaner",
-  "category": "tools",
-  "subtype": "gravel-cleaner",
-  "summary": "A manual siphon gravel cleaner with a built-in priming pump and a stop button, so you do not have to suck the hose to start it. The rounded triangle nozzle gets into corners.",
-  "highlights": [
-   "Built-in priming, no mouth siphoning",
-   "Quick-stop button to pause the flow",
-   "Triangular nozzle for corners",
-   "Hose clip holds the end on the bucket"
-  ],
-  "bestFor": "Water changes on planted tanks with sand or gravel in the open areas.",
-  "watchOut": "Keep it off aqua soil, which it will suck up and break down.",
-  "specs": {
-   "Tube length": "58.2 cm",
-   "Includes": "Hose and hose clip"
-  },
-  "models": [
-   {
-    "name": "Gravel Cleaner",
-    "lengthCm": 58.2
-   }
-  ],
-  "priceFrom": 23.85,
-  "currency": "GBP",
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-gravel-cleaner_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-gravel-cleaner",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
- },
- {
-  "id": "eheim-battery-gravel-cleaner",
-  "brand": "Eheim",
-  "name": "Battery Gravel Cleaner",
-  "category": "tools",
-  "subtype": "gravel-cleaner",
-  "summary": "A battery-powered gravel vacuum that sucks up dirt and returns the water straight back into the tank through a catch filter. It is for quick tidy-ups between water changes rather than removing water.",
-  "highlights": [
-   "No water removed, so it works between water changes",
-   "Removable filter compartment catches the dirt",
-   "Gentle suction that leaves gravel in place",
-   "Batteries included"
-  ],
-  "bestFor": "Spot-cleaning mulm off sand or gravel foregrounds without doing a full water change.",
-  "watchOut": "Only for tanks up to about 60 cm deep, and it does not replace regular water changes.",
-  "specs": {
-   "Power": "Batteries (included)",
-   "Max tank depth": "60 cm"
-  },
-  "models": [
-   {
-    "name": "Battery Gravel Cleaner"
-   }
-  ],
-  "priceFrom": 58.96,
-  "currency": "GBP",
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-vacuum-cleaner-battery-powered_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-vacuum-cleaner-battery-powered",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer"
  },
  {
   "id": "eheim-aquafamily",

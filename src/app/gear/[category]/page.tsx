@@ -16,6 +16,7 @@ import { GEAR_CATEGORIES, gearCategoryMeta } from "@/lib/gear/categories";
 import { activeGearCategories, brandsIn, categoryImage, gearInCategory, toCard } from "@/lib/gear";
 import { CATEGORY_SEO_TITLE, gearCategoryJsonLd } from "@/lib/gear/seo";
 import { site } from "@/lib/site";
+import { METRIC, RATINGS_DISCLAIMER } from "@/lib/gear/ratings";
 
 interface RouteParams {
   params: Promise<{ category: string }>;
@@ -112,6 +113,13 @@ export default async function GearCategoryPage({ params }: RouteParams) {
         >
           <GearIndexClient category={meta.id} cards={cards} />
         </Suspense>
+        <p className="mt-6 text-[11px] leading-relaxed text-muted-foreground">
+          Price and {METRIC[meta.id].label.toLowerCase()} ratings: {RATINGS_DISCLAIMER}{" "}
+          <Link href="/about#ratings" className="underline underline-offset-2 hover:text-foreground">
+            How we rate gear
+          </Link>
+          .
+        </p>
       </SectionShell>
 
       <SectionShell className="!pt-0" containerClassName="max-w-4xl">

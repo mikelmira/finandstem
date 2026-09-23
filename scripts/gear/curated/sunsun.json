@@ -1235,7 +1235,7 @@
     "volumeL": 291,
     "extra": {
      "Cabinet height": "850mm",
-     "Filtration": "Small four-way + baffle",
+     "Filtration": "New tee + baffle",
      "Light": "LED 2 × 20 W"
     }
    },
@@ -1247,7 +1247,7 @@
     "volumeL": 372,
     "extra": {
      "Cabinet height": "850mm",
-     "Filtration": "Small four-way + baffle",
+     "Filtration": "New tee + baffle",
      "Light": "LED 2 × 22 W"
     }
    },
@@ -1259,7 +1259,7 @@
     "volumeL": 436,
     "extra": {
      "Cabinet height": "850mm",
-     "Filtration": "Small four-way + baffle",
+     "Filtration": "New tee + baffle",
      "Light": "LED 2 × 24 W"
     }
    },
@@ -1271,7 +1271,7 @@
     "volumeL": 483,
     "extra": {
      "Cabinet height": "850mm",
-     "Filtration": "Small four-way + baffle",
+     "Filtration": "New tee + baffle",
      "Light": "LED 2 × 30 W"
     }
    },
@@ -2176,9 +2176,9 @@
    },
    {
     "name": "HST-1200FD",
-    "lengthCm": 0.1,
-    "widthCm": 119,
-    "heightCm": 47.5,
+    "lengthCm": 119,
+    "widthCm": 47.5,
+    "heightCm": 83,
     "volumeL": 342,
     "extra": {
      "Light": "LED 2 × 20 W",
@@ -2451,7 +2451,7 @@
     }
    },
    {
-    "name": "H2TS 1500AD",
+    "name": "H2TS-1500AD",
     "lengthCm": 150.8,
     "widthCm": 60.2,
     "heightCm": 81.8,
@@ -2490,7 +2490,7 @@
   "name": "H3TS Series Barrel Filter Aquarium",
   "category": "aquariums",
   "subtype": "with-cabinet",
-  "summary": "Instead of a sump, this cabinet tank runs a pair of external barrel (pressure) filters hidden in the stand, fed by an STP pump. That closed setup loses less CO2 than a trickle sump.",
+  "summary": "Instead of a sump, this cabinet tank runs its filtration through closed barrel-style filter buckets hidden in the stand, fed by an STP-3800 pump. A sealed setup like this loses less CO2 than a trickle sump, which matters if you plan to inject.",
   "highlights": [
    "247 to 382 litres",
    "Closed barrel filters in the cabinet",
@@ -3388,8 +3388,7 @@
     "lengthCm": 38,
     "widthCm": 26,
     "heightCm": 27,
-    "glassMm": 5,
-    "volumeL": 14
+    "glassMm": 5
    },
    {
     "name": "HRK-500",
@@ -3422,15 +3421,15 @@
   "name": "HRG Series Desktop Aquarium",
   "category": "aquariums",
   "subtype": "desktop",
-  "summary": "A range of curved-corner desktop tanks with a lid light and pump, from 7 up to 135 litres. The larger sizes are really small floor tanks without a cabinet.",
+  "summary": "A range of curved-corner desktop tanks with a lid light and pump, from 29 to 80 cm long. The larger sizes are really small floor tanks without a cabinet.",
   "highlights": [
-   "Five sizes from 7 to 135 litres",
+   "Five sizes from 29 to 80 cm long",
    "Single flat front, curved side edges",
    "LED lid and pump included",
    "White finish"
   ],
   "bestFor": "Beginners who want a complete small tank.",
-  "watchOut": "Sizes are hand-measured and include the lid and base, so the glass itself is slightly smaller.",
+  "watchOut": "Sizes are hand-measured and include the lid and base, and SunSun's listed volumes for most sizes do not add up against those dimensions, so work out real capacity from the glass size.",
   "specs": {
    "Glass": "Hot-bent, flat front and curved edges",
    "Colour": "White"
@@ -3441,7 +3440,6 @@
     "lengthCm": 29,
     "widthCm": 20,
     "heightCm": 32,
-    "volumeL": 7,
     "extra": {
      "Light": "3.5 W",
      "Pump": "2.5W"
@@ -3452,7 +3450,6 @@
     "lengthCm": 38,
     "widthCm": 26,
     "heightCm": 40,
-    "volumeL": 19,
     "extra": {
      "Light": "5.5 W",
      "Pump": "2.5W"
@@ -3463,7 +3460,6 @@
     "lengthCm": 50,
     "widthCm": 30,
     "heightCm": 45,
-    "volumeL": 29,
     "extra": {
      "Light": "7 W",
      "Pump": "8W"
@@ -3485,7 +3481,6 @@
     "lengthCm": 80,
     "widthCm": 30,
     "heightCm": 64,
-    "volumeL": 135,
     "extra": {
      "Light": "14 W",
      "Pump": "12W"
@@ -4012,41 +4007,35 @@
   "models": [
    {
     "name": "ADT-110C",
-    "lengthCm": 9,
-    "widthCm": 9,
-    "heightCm": 10,
     "fitsLengthMinCm": 20,
     "fitsLengthMaxCm": 40,
     "powerW": 10,
     "extra": {
      "Glass thickness": "5-18mm",
-     "Bracket": "T1"
+     "Bracket": "T1",
+     "Head size": "9 × 9 × 10 cm"
     }
    },
    {
     "name": "ADT-120C",
-    "lengthCm": 9,
-    "widthCm": 9,
-    "heightCm": 10,
     "fitsLengthMinCm": 40,
     "fitsLengthMaxCm": 50,
     "powerW": 20,
     "extra": {
      "Glass thickness": "5-18mm",
-     "Bracket": "T1"
+     "Bracket": "T1",
+     "Head size": "9 × 9 × 10 cm"
     }
    },
    {
     "name": "ADT-130C",
-    "lengthCm": 12,
-    "widthCm": 12,
-    "heightCm": 15,
     "fitsLengthMinCm": 40,
     "fitsLengthMaxCm": 60,
     "powerW": 30,
     "extra": {
      "Glass thickness": "5-18mm",
-     "Bracket": "T2"
+     "Bracket": "T2",
+     "Head size": "12 × 12 × 15 cm"
     }
    }
   ],
@@ -4081,43 +4070,37 @@
   "models": [
    {
     "name": "ADT-220C",
-    "lengthCm": 10,
-    "widthCm": 10,
-    "heightCm": 9.5,
     "fitsLengthMinCm": 30,
     "fitsLengthMaxCm": 40,
     "powerW": 20,
     "extra": {
      "Glass thickness": "5-18mm",
-     "Bracket": "T1"
+     "Bracket": "T1",
+     "Head size": "10 × 10 × 9.5 cm"
     }
    },
    {
     "name": "ADT-240C",
-    "lengthCm": 10,
-    "widthCm": 10,
-    "heightCm": 9.5,
     "fitsLengthMinCm": 40,
     "fitsLengthMaxCm": 50,
     "powerW": 40,
     "extra": {
      "Glass thickness": "5-18mm",
      "Dimming": "Adjustable power",
-     "Bracket": "T1"
+     "Bracket": "T1",
+     "Head size": "10 × 10 × 9.5 cm"
     }
    },
    {
     "name": "ADT-260C",
-    "lengthCm": 10,
-    "widthCm": 10,
-    "heightCm": 9.5,
     "fitsLengthMinCm": 50,
     "fitsLengthMaxCm": 60,
     "powerW": 60,
     "extra": {
      "Glass thickness": "5-18mm",
      "Dimming": "Adjustable power",
-     "Bracket": "T2"
+     "Bracket": "T2",
+     "Head size": "10 × 10 × 9.5 cm"
     }
    }
   ],
@@ -4152,30 +4135,26 @@
   "models": [
    {
     "name": "ADT-350C",
-    "lengthCm": 12,
-    "widthCm": 12,
-    "heightCm": 15,
     "fitsLengthMinCm": 40,
     "fitsLengthMaxCm": 60,
     "powerW": 50,
     "extra": {
      "Glass thickness": "5-18mm",
      "Dimming": "Adjustable power",
-     "Bracket": "T3"
+     "Bracket": "T3",
+     "Head size": "12 × 12 × 15 cm"
     }
    },
    {
     "name": "ADT-380C",
-    "lengthCm": 12,
-    "widthCm": 12,
-    "heightCm": 15,
     "fitsLengthMinCm": 60,
     "fitsLengthMaxCm": 80,
     "powerW": 80,
     "extra": {
      "Glass thickness": "5-18mm",
      "Dimming": "Adjustable power",
-     "Bracket": "T3"
+     "Bracket": "T3",
+     "Head size": "12 × 12 × 15 cm"
     }
    }
   ],
@@ -4250,26 +4229,22 @@
   "models": [
    {
     "name": "ADT-50C",
-    "lengthCm": 20,
-    "widthCm": 20,
-    "heightCm": 6,
     "fitsLengthMinCm": 50,
     "fitsLengthMaxCm": 60,
     "powerW": 48,
     "extra": {
-     "Glass thickness": "5-20mm"
+     "Glass thickness": "5-20mm",
+     "Head size": "20 × 20 × 6 cm"
     }
    },
    {
     "name": "ADT-100C",
-    "lengthCm": 20,
-    "widthCm": 20,
-    "heightCm": 6,
     "fitsLengthMinCm": 60,
     "fitsLengthMaxCm": 80,
     "powerW": 80,
     "extra": {
-     "Glass thickness": "5-20mm"
+     "Glass thickness": "5-20mm",
+     "Head size": "20 × 20 × 6 cm"
     }
    }
   ],
@@ -6387,7 +6362,7 @@
   "name": "JP-F Series Internal Filter",
   "category": "filters",
   "subtype": "internal",
-  "summary": "SunSun's JP submersible pumps with tall sponge filter columns attached, from 300 to 1,600 L/h. The JP-02x/B versions are the same pumps with a short intake strainer instead.",
+  "summary": "SunSun's JP submersible pumps with tall sponge filter columns attached, from 300 to 1,600 L/h. The JP-02x/B versions are the same pump sizes sold without the filter column.",
   "highlights": [
    "300 to 1,600 L/h",
    "3 to 35 W",
@@ -6531,14 +6506,14 @@
   "name": "JP-09 Series Internal Filter",
   "category": "filters",
   "subtype": "internal",
-  "summary": "Three internal filters with a spray bar on the outlet, from 250 to 650 L/h. Low wattage (3 to 7 W).",
+  "summary": "Three small internal filters from 250 to 650 L/h, drawing only 3 to 7 W.",
   "highlights": [
    "250, 450 and 650 L/h",
    "3 to 7 W",
-   "Spray bar outlet",
-   "Removable filter box"
+   "Up to 1.2 m head",
+   "18.5 to 22.5 cm tall"
   ],
-  "bestFor": "Small tanks where you want gentle, spread-out return flow.",
+  "bestFor": "Small tanks that need low-wattage internal filtration.",
   "models": [
    {
     "name": "JP-092",
@@ -6593,7 +6568,7 @@
   "name": "HQJ-I and HQJ-S Internal Filter",
   "category": "filters",
   "subtype": "internal",
-  "summary": "Internal filters with a sponge column and pump head, from 300 to 500 L/h. S models add a taller filter section.",
+  "summary": "Internal filters with a sponge column and pump head, from 300 to 500 L/h. The S versions of the 700 and 900 carry a much taller filter section than the I versions.",
   "highlights": [
    "300 to 500 L/h",
    "3 to 12 W",
@@ -6826,7 +6801,7 @@
   "name": "CF Series Internal Filter Pump",
   "category": "filters",
   "subtype": "internal",
-  "summary": "A simple internal filter pump in three sizes, 350 to 900 L/h. The same basic design as SunSun's HQJ pumps with a filter body.",
+  "summary": "A simple internal filter pump in three sizes, 350 to 900 L/h. SunSun lists flow, head and power but no dimensions.",
   "highlights": [
    "350, 500 and 900 L/h",
    "2.5 to 12 W",
@@ -6980,11 +6955,11 @@
   "name": "CUP-800 UV Internal Filter",
   "category": "filters",
   "subtype": "internal",
-  "summary": "A compact internal filter pump with a UV-C lamp, rated for tanks from 250 to 750 litres depending on the lamp size. Flow is 700 L/h on all four models.",
+  "summary": "A compact internal filter pump with a UV-C lamp built in. SunSun rates the UV for 250 to 750 litres depending on lamp size, but every model pumps the same 700 L/h.",
   "highlights": [
    "700 L/h",
    "3, 5, 7 or 9 W UV-C",
-   "Rated for 250 to 750 litres",
+   "UV rated for 250 to 750 litres",
    "Internal, no plumbing"
   ],
   "bestFor": "Mid to large tanks with green water problems.",
@@ -7004,9 +6979,9 @@
     "widthCm": 9,
     "heightCm": 26,
     "extra": {
-     "Cable": "1.5m"
-    },
-    "tankMaxL": 250
+     "Cable": "1.5m",
+     "UV rated for": "up to 250 L"
+    }
    },
    {
     "name": "CUP-805",
@@ -7019,9 +6994,9 @@
     "widthCm": 9,
     "heightCm": 29,
     "extra": {
-     "Cable": "1.5m"
-    },
-    "tankMaxL": 350
+     "Cable": "1.5m",
+     "UV rated for": "up to 350 L"
+    }
    },
    {
     "name": "CUP-807",
@@ -7034,9 +7009,9 @@
     "widthCm": 9,
     "heightCm": 26,
     "extra": {
-     "Cable": "1.5m"
-    },
-    "tankMaxL": 500
+     "Cable": "1.5m",
+     "UV rated for": "up to 500 L"
+    }
    },
    {
     "name": "CUP-809",
@@ -7049,9 +7024,9 @@
     "widthCm": 9,
     "heightCm": 29,
     "extra": {
-     "Cable": "1.5m"
-    },
-    "tankMaxL": 750
+     "Cable": "1.5m",
+     "UV rated for": "up to 750 L"
+    }
    }
   ],
   "images": [
@@ -7818,7 +7793,7 @@
   "specs": {
    "Refrigerant": "R134a",
    "Connections": "16 to 20 mm",
-   "Bigger units": "HYH DR models cover 600 to 4,500 litres"
+   "Bigger units": "HYH DR models cover 800 to 4,500 litres"
   },
   "models": [
    {
@@ -8862,7 +8837,7 @@
   "name": "JP-G Series Submersible Pump",
   "category": "pumps",
   "subtype": "water-pump",
-  "summary": "Compact pumps from the 250 L/h JP-230G used in many SunSun desktop tanks, up to 1,800 L/h. GS versions trade a little head for more flow.",
+  "summary": "Compact pumps from the 250 L/h JP-230G used in many SunSun desktop tanks, up to 1,800 L/h. The GS versions are rated a little differently from the G pump of the same size, so compare flow and head model by model.",
   "highlights": [
    "250 to 1,800 L/h",
    "2.5 to 45 W",
@@ -10313,7 +10288,7 @@
     "extra": {
      "Outlet adapters": "20/25/32mm",
      "Cable": "2m",
-     "Variants": "CDP-3500B and CDP-3500W versions"
+     "Variants": "CDP-3500B (no controller) and CDP-3500W (WiFi)"
     }
    },
    {
@@ -10328,7 +10303,7 @@
     "extra": {
      "Outlet adapters": "20/25/32mm",
      "Cable": "2.5m",
-     "Variants": "CDP-6000B and CDP-6000W versions"
+     "Variants": "CDP-6000B (no controller) and CDP-6000W (WiFi)"
     }
    },
    {
@@ -10343,7 +10318,7 @@
     "extra": {
      "Outlet adapters": "20/25/32/38/42mm",
      "Cable": "5m",
-     "Variants": "CDP-10000B and CDP-10000W versions"
+     "Variants": "CDP-10000B (no controller) and CDP-10000W (WiFi)"
     }
    }
   ],
@@ -10499,7 +10474,7 @@
   "summary": "The larger JTP range, from 4,000 to 16,000 L/h, for big sumps and closed loops. Wattage stays reasonable for the flow.",
   "highlights": [
    "4,000 to 16,000 L/h",
-   "25 to 140 W",
+   "25 to 120 W (16000R not stated)",
    "Up to 7.5 m head",
    "Up to 38 mm outlets"
   ],
@@ -10643,8 +10618,7 @@
     "extra": {
      "Outlet adapters": "20/25/32/38mm",
      "Cable": "5m"
-    },
-    "powerW": 140
+    }
    }
   ],
   "images": [
@@ -11096,7 +11070,7 @@
   "summary": "A Zhizhen-line frequency pump from 2,500 to 14,000 L/h. Ten sizes, up to 7 m head.",
   "highlights": [
    "2,500 to 14,000 L/h",
-   "18 to 140 W",
+   "18 to 115 W (14000 not stated)",
    "Up to 7 m head",
    "Up to 45 mm outlets"
   ],
@@ -11239,8 +11213,7 @@
     "extra": {
      "Outlet adapters": "20/25/38/45mm",
      "Cable": "5m"
-    },
-    "powerW": 140
+    }
    }
   ],
   "images": [
@@ -11540,7 +11513,7 @@
   "name": "XVA Wave Pump",
   "category": "pumps",
   "subtype": "circulation",
-  "summary": "A submersible wave pump for glass up to 12 mm, from 6,000 to 10,000 L/h. E versions differ in control.",
+  "summary": "A submersible wave pump for glass up to 12 mm, from 6,000 to 10,000 L/h, with a ceramic shaft and a head that turns through 180 degrees. Each size also comes as an E version.",
   "highlights": [
    "6,000 to 10,000 L/h",
    "8 to 45 W",
@@ -11756,17 +11729,17 @@
   "name": "YT AC/DC Rechargeable Air Pump",
   "category": "air-pumps",
   "subtype": "battery",
-  "summary": "Mains air pumps with a built-in rechargeable battery that takes over for about 8 hours in a power cut. The range runs from the small twin-outlet YT-8000 to 100 L/min fish-room units.",
+  "summary": "Mains air pumps with a built-in rechargeable battery that takes over in a power cut, for about 8 hours (12 on the YT-8000). The range runs from the small twin-outlet YT-8000 to 100 L/min fish-room units.",
   "highlights": [
    "8 to 100 L/min",
-   "About 8 hours on battery",
+   "8 to 12 hours on battery",
    "Adjustable output knob",
    "Anti-slip, vibration-damping base"
   ],
   "bestFor": "Backup aeration for fish rooms and big tanks where a power cut is a real risk.",
   "watchOut": "Most sizes are far larger than a planted tank needs; the YT-8000 is the one to look at for a home aquarium.",
   "specs": {
-   "Battery": "Built in, about 8 h run time"
+   "Battery": "Built in, about 8 h run time (12 h on YT-8000)"
   },
   "models": [
    {
@@ -12314,9 +12287,6 @@
     "powerW": 16,
     "airLpm": 30,
     "outlets": 1,
-    "lengthCm": 12.3,
-    "widthCm": 6.3,
-    "heightCm": 5.5,
     "extra": {
      "Max pressure": "30 kPa",
      "Cable": "1.8m"
@@ -12772,8 +12742,9 @@
     "widthCm": 20,
     "heightCm": 14.1,
     "extra": {
-     "Max pressure": "12 kPa",
-     "Cable": "1.5m"
+     "Max pressure": "25 kPa",
+     "Cable": "1.5m",
+     "Working pressure": "12 kPa or less"
     }
    }
   ],

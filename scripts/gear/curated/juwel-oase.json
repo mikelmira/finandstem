@@ -27,7 +27,7 @@
     "widthCm": 36,
     "heightCm": 50,
     "extra": {
-     "Filter": "Bioflow M",
+     "Filter": "Bioflow M with Eccoflow 500 pump",
      "Heater": "AquaHeat 100 W",
      "Lighting": "MultiLux LED 80 (2 x 14 W tubes)"
     }
@@ -63,7 +63,7 @@
     "widthCm": 51,
     "heightCm": 66,
     "extra": {
-     "Filter": "Bioflow L",
+     "Filter": "Bioflow L with Eccoflow 1000 pump",
      "Heater": "AquaHeat 300 W",
      "Lighting": "MultiLux LED 100"
     }
@@ -87,7 +87,7 @@
     "widthCm": 51,
     "heightCm": 66,
     "extra": {
-     "Filter": "Bioflow XL",
+     "Filter": "Bioflow XL with Eccoflow 1000 pump",
      "Heater": "AquaHeat 300 W",
      "Lighting": "MultiLux LED 150"
     }
@@ -301,7 +301,7 @@
    "Two heights on the same 61 x 31 cm footprint: 57 and 70 litres",
    "Bioflow One internal filter with 300 L/h pump and AquaHeat 50 W heater hidden in the filter",
    "NovoLux LED 60 light (8 W); the lid takes up to three units",
-   "Feeding hatch in the lid fits Juwel automatic feeders"
+   "Feeding hatch in the lid works with automatic feeders"
   ],
   "bestFor": "Beginners wanting a complete 60 cm tank for low-light plants, shrimp or a small community.",
   "watchOut": "One 8 W NovoLux is only enough for undemanding plants such as Anubias, ferns and Cryptocoryne.",
@@ -608,11 +608,11 @@
   "name": "Vio Cube SBX Cabinet",
   "category": "stands",
   "subtype": "cabinet",
-  "summary": "The matching cabinet for the Juwel Vio Cube 54. It matches the tank's 41 x 36 cm footprint exactly and lifts it to a comfortable viewing height, with a shelf inside for food and spares.",
+  "summary": "The matching cabinet for the Juwel Vio Cube 54. It matches the tank's 41 x 36 cm footprint exactly and lifts it to a comfortable viewing height, with storage space inside for food and spares.",
   "highlights": [
    "Made for the Vio Cube 54 footprint",
    "41 x 36 x 73 cm",
-   "Door and internal shelf for storage",
+   "Storage compartment for food, media and spares",
    "Black or white to match the tank"
   ],
   "bestFor": "Vio Cube owners who want the tank freestanding at eye level rather than on existing furniture.",
@@ -972,7 +972,7 @@
    "IP68 waterproof, no condensation inside the housing"
   ],
   "bestFor": "Keepers with an Oase HighLine or ScaperLine who want app-controlled, adjustable-spectrum lighting.",
-  "watchOut": "It needs the Oase aquarium controller and 120 W Control transformer, both sold separately, so the real cost is higher than the bar alone.",
+  "watchOut": "Colour and segment control needs the Oase aquarium controller, and power comes from the separate 120 W Control transformer, so the real cost is higher than the bar alone.",
   "specs": {
    "Channels": "Neutral white, cool white, royal blue, red",
    "Control": "Oase aquarium controller and app (sold separately); IR control set optional",
@@ -1287,11 +1287,9 @@
     "heaterW": 100,
     "mediaL": 1.3,
     "hoseMm": 12,
-    "lengthCm": 31.2,
-    "widthCm": 19.2,
-    "heightCm": 19,
     "extra": {
-     "Pre-filter volume": "0.7 L"
+     "Pre-filter volume": "0.7 L",
+     "Dimensions": "31.2 x 19.2 x 19 cm"
     }
    },
    {
@@ -1303,11 +1301,9 @@
     "heaterW": 200,
     "mediaL": 4.2,
     "hoseMm": 16,
-    "lengthCm": 37.2,
-    "widthCm": 29.4,
-    "heightCm": 24.8,
     "extra": {
-     "Pre-filter volume": "1.5 L"
+     "Pre-filter volume": "1.5 L",
+     "Dimensions": "37.2 x 29.4 x 24.8 cm"
     }
    },
    {
@@ -1319,11 +1315,9 @@
     "heaterW": 300,
     "mediaL": 6.4,
     "hoseMm": 16,
-    "lengthCm": 46.2,
-    "widthCm": 29,
-    "heightCm": 24.6,
     "extra": {
-     "Pre-filter volume": "1.5 L"
+     "Pre-filter volume": "1.5 L",
+     "Dimensions": "46.2 x 29 x 24.6 cm"
     }
    }
   ],
@@ -2055,184 +2049,6 @@
    "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-eccoskim-surface-skimmer_2.jpg"
   ],
   "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-eccoskim-surface-skimmer",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer",
-  "currency": "GBP"
- },
- {
-  "id": "oase-plant-scissors",
-  "brand": "Oase",
-  "name": "Plant Scissors",
-  "category": "tools",
-  "subtype": "scissors",
-  "summary": "A 25 cm pair of aquarium scissors with a curved tip for trimming stem plants and carpets. The length reaches the back of a typical 45 to 50 cm deep tank without soaking your sleeve.",
-  "highlights": [
-   "25 cm long",
-   "Curved tip for trimming carpets and low plants",
-   "Freshwater use"
-  ],
-  "bestFor": "Regular trimming of stems and carpeting plants in small to mid-sized tanks.",
-  "specs": {
-   "Length": "25 cm",
-   "Tip": "Curved"
-  },
-  "models": [
-   {
-    "name": "25 cm",
-    "sku": "19280",
-    "lengthCm": 25
-   }
-  ],
-  "priceFrom": 21.95,
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-plant-scissors_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-plant-scissors",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer",
-  "currency": "GBP"
- },
- {
-  "id": "juwel-aquaclean-2",
-  "brand": "Juwel",
-  "name": "AquaClean 2.0",
-  "category": "tools",
-  "subtype": "gravel-cleaner",
-  "summary": "A siphon gravel cleaner that starts with a squeeze of the bulb, so there is no sucking on a hose. Extension tubes suit tanks up to 70 cm tall, and a special nozzle reaches into the corners of a Juwel internal filter.",
-  "highlights": [
-   "Squeeze-bulb start",
-   "Modular tube for tanks up to 70 cm tall",
-   "Attachment for cleaning Juwel internal filters",
-   "Clips to hold the hose on the bucket and tank"
-  ],
-  "bestFor": "Weekly water changes and cleaning gravel or sand in open areas of a planted tank.",
-  "watchOut": "Keep it off aqua soil, as it will pull up the soil granules.",
-  "specs": {
-   "Max tank height": "70 cm",
-   "Start": "Squeeze pump"
-  },
-  "models": [
-   {
-    "name": "2.0",
-    "sku": "207387"
-   }
-  ],
-  "priceFrom": 19.39,
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-aquaclean-20_1.jpg",
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-aquaclean-20_2.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-aquaclean-2-0",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer",
-  "currency": "GBP"
- },
- {
-  "id": "oase-fishguard",
-  "brand": "Oase",
-  "name": "FishGuard",
-  "category": "feeders",
-  "subtype": "auto-feeder",
-  "summary": "A programmable auto feeder with an LCD display, set up for up to four feeds a day and up to three portions per feed. The food drum is sealed against moisture, which matters over a humid tank.",
-  "highlights": [
-   "Up to 4 feeds a day, up to 3 portions each",
-   "Clear LCD programming",
-   "Moisture-protected food drum",
-   "Works over freshwater, saltwater or terrariums"
-  ],
-  "bestFor": "Holidays or busy weeks with a community tank that needs regular small feeds.",
-  "watchOut": "Test the portion size for a few days first; overfeeding while you are away is the usual problem.",
-  "specs": {
-   "Feeds": "Up to 4 per day, up to 3 portions per feed",
-   "Display": "LCD"
-  },
-  "models": [
-   {
-    "name": "FishGuard",
-    "sku": "19234"
-   }
-  ],
-  "priceFrom": 45.99,
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-fishguard-auto-feeder_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-fishguard-auto-feeder",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer",
-  "currency": "GBP"
- },
- {
-  "id": "juwel-smartfeed-2",
-  "brand": "Juwel",
-  "name": "SmartFeed 2.0",
-  "category": "feeders",
-  "subtype": "auto-feeder",
-  "summary": "Juwel's more capable auto feeder, using a screw feed to dispense granules or flakes in eight portion sizes. It runs on batteries or micro USB, has a large display, and the 110 ml chamber can be doubled with the supplied extension.",
-  "highlights": [
-   "Up to 3 feeds a day, 8 portion levels",
-   "Two feed screws for granules and flakes",
-   "110 ml chamber plus 110 ml extension included",
-   "Battery (4 x AA supplied) or micro USB power"
-  ],
-  "bestFor": "Longer holidays or keepers who want precise portions of flake or granules.",
-  "specs": {
-   "Feeds": "Up to 3 per day, intervals of 24/48/72 h",
-   "Power": "4 x AA or micro USB",
-   "Size": "16.5 x 13 x 7.5 cm"
-  },
-  "models": [
-   {
-    "name": "2.0",
-    "sku": "207267",
-    "capacityMl": 110,
-    "lengthCm": 16.5,
-    "widthCm": 13,
-    "heightCm": 7.5,
-    "extra": {
-     "With extension": "220 ml"
-    }
-   }
-  ],
-  "priceFrom": 61.29,
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-smartfeed-automatic-feeder-20_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-smartfeed-automatic-feeder-2-0",
-  "sourceName": "Charterhouse Aquatics",
-  "specSource": "retailer",
-  "currency": "GBP"
- },
- {
-  "id": "juwel-easy-feed",
-  "brand": "Juwel",
-  "name": "Easy Feed",
-  "category": "feeders",
-  "subtype": "auto-feeder",
-  "summary": "A simple battery auto feeder that fits Juwel lids directly and other tanks with a mount. It feeds once or twice a day and the adjustable drum holds about 60 portions, best with pellets.",
-  "highlights": [
-   "1 or 2 feeds a day",
-   "Adjustable drum holds up to 60 feeds",
-   "Drum can be ventilated with an air pump in humid setups",
-   "Batteries included"
-  ],
-  "bestFor": "Budget holiday feeding for a Juwel tank with pellet-eating fish.",
-  "watchOut": "Flake does not dispense as reliably as pellets from a drum feeder.",
-  "specs": {
-   "Feeds": "1 or 2 per day",
-   "Capacity": "Up to 60 feeds",
-   "Power": "Batteries"
-  },
-  "models": [
-   {
-    "name": "Easy Feed",
-    "sku": "207269"
-   }
-  ],
-  "priceFrom": 29.24,
-  "images": [
-   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-easy-feed-automatic-feeder_1.jpg"
-  ],
-  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-easy-feed-automatic-feeder",
   "sourceName": "Charterhouse Aquatics",
   "specSource": "retailer",
   "currency": "GBP"

@@ -46,7 +46,7 @@
   "name": "Chameleon Stone",
   "category": "hardscape",
   "subtype": "stone",
-  "summary": "A dark charcoal stone with rounded knobs and pockets, a bit like a denser take on volcanic rock. The gaps and crevices are handy for wedging in Bucephalandra, Anubias and moss.",
+  "summary": "A dark charcoal stone with rounded knobs and pockets, a good stand-in wherever you would use dark volcanic rock. The gaps and crevices are handy for wedging in Bucephalandra, Anubias and moss.",
   "highlights": [
    "30 lb (about 13.6 kg) box of mixed pieces",
    "Deep charcoal and grey colour that makes greens pop",
@@ -133,7 +133,7 @@
    "Rounded shapes with shallow crevices",
    "Pairs well with light sand, pebbles and grassy plants"
   ],
-  "bestFor": "River and stream layouts with Eleocharis or other grassy plants, and tanks with delicate-finned fish.",
+  "bestFor": "River and stream layouts with Eleocharis or other grassy plants that move in the current.",
   "specs": {
    "Effect on water": "Not stated by the seller; do a vinegar fizz test and check KH/GH before use",
    "Colour": "Jade green and bluish grey with brown and cream patches",
@@ -175,7 +175,7 @@
   "highlights": [
    "30 lb (about 13.6 kg) box",
    "Deep reddish brown with orange and cream markings",
-   "Weathered, blocky shapes",
+   "Weathered, creviced surface",
    "Useful as a support stone under driftwood"
   ],
   "bestFor": "Warm-toned canyon or rocky hillside layouts, or anyone wanting a change from grey stone.",
@@ -434,7 +434,7 @@
    "10, 20 and 30 lb lots plus a 5 lb bag of accent pieces",
    "Blue-grey with green undertones",
    "Smooth, rounded shape with natural pits and grooves",
-   "Safe for fancy goldfish and bettas thanks to soft edges"
+   "Smooth, rounded edges that are kind to long fins"
   ],
   "bestFor": "River-style scapes and calm Iwagumi with grassy plants like Dwarf Hairgrass or Blyxa.",
   "watchOut": "Very dense and pricey per kilo, so order more weight than your usual rule of thumb to get a spread of sizes.",
@@ -888,7 +888,7 @@
    "Angular, weathered forms",
    "Suits Iwagumi and nature-style scapes"
   ],
-  "bestFor": "Iwagumi keepers who like the Manten look and want a slightly darker, more angular stone.",
+  "bestFor": "Iwagumi and nature-style keepers who like the Manten or Yama look and want another grey-brown option.",
   "specs": {
    "Effect on water": "Not stated by the seller; do a vinegar fizz test and check KH/GH before use",
    "Colour": "Grey and brown",
@@ -943,7 +943,7 @@
    "Excellent for moss, Anubias, Bucephalandra and ferns",
    "Easy to break into smaller pieces"
   ],
-  "bestFor": "Budget-friendly builds, nano tanks and moss-covered scapes that need plenty of stone volume.",
+  "bestFor": "Nano tanks, moss-covered scapes and builds that need plenty of stone volume without much weight.",
   "watchOut": "Rough edges can catch long fins, and it holds debris, so rinse it thoroughly first.",
   "specs": {
    "Effect on water": "Inert",
@@ -2476,7 +2476,7 @@
   "subtype": "wood",
   "summary": "A dark, charcoal-brown spider wood that keeps getting darker over time, unlike normal spider wood which starts pale. It releases little tannin and has the same twisting, root-like branches.",
   "highlights": [
-   "Nano, S and M sizes from about 3 cm to 41 cm",
+   "Nano, S and M sizes from about 2.5 cm to 41 cm",
    "Dark charcoal-brown colour",
    "Low tannin release",
    "Twisting root-like branches for moss and epiphytes"
@@ -2494,7 +2494,7 @@
    {
     "name": "Nano",
     "extra": {
-     "Length": "3-10 cm"
+     "Length": "2.5-10 cm"
     }
    },
    {
@@ -2670,7 +2670,7 @@
    "Works well in shrimp tanks"
   ],
   "bestFor": "Filling gaps and adding detail around an existing hardscape rather than as a main piece.",
-  "watchOut": "Assorted wood types, so pieces will not always match each other.",
+  "watchOut": "Packs are assorted, so shapes and tones vary and pieces will not always match each other.",
   "specs": {
    "Effect on water": "Releases tannins, lowers pH slightly and tints the water",
    "Colour": "Mixed browns",
@@ -3660,14 +3660,14 @@
   "name": "Bonsai Driftwood Trees",
   "category": "hardscape",
   "subtype": "bonsai",
-  "summary": "Hand-built bonsai trees made from natural driftwood, each numbered design offered in two to five sizes. Tie moss onto the fine branch tips and you have a mature-looking tree scape within weeks, with no wood carving or gluing.",
+  "summary": "Hand-built bonsai trees made from natural driftwood, each numbered design offered in one to five sizes. Tie moss onto the fine branch tips and you have a mature-looking tree scape within weeks, with no wood carving or gluing.",
   "highlights": [
    "20 numbered designs, most in S, M and L",
    "Sizes run from palm-sized nano trees to a 1.2 m long display piece",
    "Fine twig canopy ready for moss or Riccia",
-   "Many designs sit on a heavy base that helps them stay put"
+   "Many designs sit on a flat base that helps them stand upright"
   ],
-  "bestFor": "Bonsai and tree-style layouts where you want a finished focal piece sized to your tank, from 20 litre nanos to large displays.",
+  "bestFor": "Bonsai and tree-style layouts where you want a finished focal piece sized to your tank, from small nano tanks to large displays.",
   "watchOut": "The wood still floats until waterlogged and releases tannins, and moss needs trimming to keep the canopy shape.",
   "specs": {
    "Effect on water": "Releases tannins, lowers pH slightly and tints the water",
@@ -4004,7 +4004,7 @@
    "Sized for UNS 5N and 45U tanks; both together suit a 60U",
    "Safe for fish, shrimp and plants"
   ],
-  "bestFor": "First Iwagumi builds in 20-40 litre tanks, and soft-water shrimp keepers who love the Seiryu look but not its effect on KH.",
+  "bestFor": "First Iwagumi builds in roughly 17-35 litre tanks (UNS 5N or 45U), and soft-water shrimp keepers who love the Seiryu look but not its effect on KH.",
   "watchOut": "It is resin, not real stone, and up close it will not have the variation of natural rock.",
   "specs": {
    "Effect on water": "None (resin)",

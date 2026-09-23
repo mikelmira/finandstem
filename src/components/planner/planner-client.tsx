@@ -9,7 +9,8 @@ import { StockingGauge } from "@/components/planner/stocking-gauge";
 import { TankWarnings } from "@/components/planner/tank-warnings";
 import { RecommendedSpecies } from "@/components/planner/recommended-species";
 import { WaterColumnPanel } from "@/components/planner/water-column-panel";
-import { GearForTank } from "@/components/planner/gear-for-tank";
+import { PlannerEquipment } from "@/components/planner/planner-equipment";
+import type { CatalogueCategory } from "@/types/catalogue";
 import { allNorm } from "@/lib/catalogue/normalize";
 import {
   buildTank,
@@ -27,6 +28,18 @@ const OPTIONS: BuilderOption[] = allNorm
     category: n.category,
   }))
   .sort((a, b) => a.label.localeCompare(b.label));
+
+/** The species pickers and the "Your tank" list are split into these groups. */
+const GROUPS: ReadonlyArray<{
+  id: string;
+  label: string;
+  placeholder: string;
+  categories: ReadonlyArray<CatalogueCategory>;
+}> = [
+  { id: "fish", label: "Fish", placeholder: "Add a fish…", categories: ["fish"] },
+  { id: "plants", label: "Plants and mosses", placeholder: "Add a plant or moss…", categories: ["plants", "mosses"] },
+  { id: "inverts", label: "Shrimp and snails", placeholder: "Add a shrimp or snail…", categories: ["shrimp", "snails"] },
+];
 
 function numParam(s: string | null): number | undefined {
   if (!s) return undefined;
@@ -75,24 +88,28 @@ export function PlannerClient() {
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-5 lg:sticky lg:top-24">
           <TankSetupCard tankL={tankL} filterLph={filterLph} />
-          <GearForTank
-            tankL={tankL}
-            filterLph={filterLph}
-            light={result.requirements.light}
-            co2={result.requirements.co2}
-          />
-
-          <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
+          <div className="glass glass-edge flex flex-col gap-4 rounded-2xl p-5 sm:p-6">
             <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
               Add to your tank
             </h2>
-            <div className="mt-4">
-              <BuilderPicker options={OPTIONS} selected={ids} />
-            </div>
+            {GROUPS.map((g) => (
+              <div key={g.id} className="flex flex-col gap-1.5">
+                <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+                  {g.label}
+                </span>
+                <BuilderPicker options={OPTIONS} selected={ids} categories={g.categories} placeholder={g.placeholder} />
+              </div>
+            ))}
           </div>
+
+          <PlannerEquipment
+            tankL={tankL}
+            light={result.requirements.light}
+            co2={result.requirements.co2}
+          />
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-5">
           <div className="flex items-baseline justify-between gap-3">
             <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
               Your tank ({items.length})
@@ -103,7 +120,22 @@ export function PlannerClient() {
               </span>
             )}
           </div>
-          <TankComposition items={items} />
+          {items.length === 0 ? (
+            <TankComposition items={items} />
+          ) : (
+            GROUPS.map((g) => {
+              const inGroup = items.filter((it) => g.categories.includes(it.entry.category));
+              if (inGroup.length === 0) return null;
+              return (
+                <div key={g.id} className="flex flex-col gap-2">
+                  <h3 className="text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--brand)]">
+                    {g.label} ({inGroup.length})
+                  </h3>
+                  <TankComposition items={inGroup} />
+                </div>
+              );
+            })
+          )}
         </div>
       </div>
 

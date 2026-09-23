@@ -202,7 +202,7 @@ export default async function TankSizePage({ params }: RouteParams) {
                 <ul className="grid gap-4 sm:grid-cols-3">
                   {k.items.map(({ product, fit, models }) => (
                     <li key={product.id}>
-                      <GearCard card={toCard(product)} fit={fit} fitModels={models} showCompare={false} />
+                      <GearCard card={toCard(product)} fit={fit} fitModels={models} showCompare={false} showRatings={false} />
                     </li>
                   ))}
                 </ul>

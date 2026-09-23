@@ -22,6 +22,7 @@ import { HeroKeyFacts } from "@/components/catalogue/hero-key-facts";
 import { TankFitPanel } from "@/components/catalogue/tank-fit-panel";
 import { StickyToc, type StickyTocItem } from "@/components/catalogue/sticky-toc";
 import { TankMatesPanel } from "@/components/catalogue/tank-mates-panel";
+import { PlantKitLinks } from "@/components/catalogue/plant-kit-links";
 import { GroupedSection } from "@/components/catalogue/grouped-section";
 import { ProTipsCallout } from "@/components/catalogue/pro-tips-callout";
 import { CareSteps } from "@/components/catalogue/sections/care-steps";
@@ -399,6 +400,14 @@ export function EntryDetail({
               subtitle={`The parameters that decide whether ${entry.commonName.toLowerCase()} fits in your tank.`}
             >
               <TankFitPanel entry={entry} />
+              {(entry.category === "plants" || entry.category === "mosses") && (
+                <PlantKitLinks
+                  name={entry.commonName}
+                  light={(entry as PlantEntry).light}
+                  co2={(entry as PlantEntry).co2}
+                  plantType={entry.category === "mosses" ? "moss" : (entry as PlantEntry).plantType}
+                />
+              )}
             </DetailSection>
 
             {/* 2. WHO IT LIVES WITH */}

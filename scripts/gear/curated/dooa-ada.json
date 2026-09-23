@@ -915,10 +915,10 @@
   "highlights": [
    "Three disc sizes: 30, 40 and 50 mm",
    "Clear glass body that disappears against the back glass",
-   "Low-profile shape sits flat on the glass",
-   "ADA pairs the 40 mm version with 90 cm Cube Gardens"
+   "Compact shape tucks into an inside corner of the tank",
+   "ADA matches sizes to tank length: 30 for 90 cm, 40 for 90 to 120 cm, 50 for 120 to 180 cm"
   ],
-  "bestFor": "Pressurised CO2 tanks where you want a neat, nearly invisible diffuser and are happy to clean glass now and then.",
+  "bestFor": "Pressurised CO2 tanks of 90 cm and up where you want a neat, nearly invisible diffuser and are happy to clean glass now and then.",
   "watchOut": "Glass is fragile, and the disc clogs over time, so expect occasional soaking in diluted bleach.",
   "specs": {
    "Material": "Glass body with ceramic diffuser disc",
@@ -927,6 +927,8 @@
   "models": [
    {
     "name": "30",
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90,
     "extra": {
      "Disc diameter": "30 mm"
     }
@@ -934,13 +936,15 @@
    {
     "name": "40",
     "fitsLengthMinCm": 90,
-    "fitsLengthMaxCm": 90,
+    "fitsLengthMaxCm": 120,
     "extra": {
      "Disc diameter": "40 mm"
     }
    },
    {
     "name": "50",
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 180,
     "extra": {
      "Disc diameter": "50 mm"
     }
@@ -959,10 +963,10 @@
   "name": "Pollen Glass Type 3",
   "category": "co2",
   "subtype": "diffuser",
-  "summary": "A classic upright glass CO2 diffuser from ADA, with the ceramic disc set into a glass cup and an inlet that curls up beside it.",
+  "summary": "A classic upright glass CO2 diffuser from ADA, with the ceramic disc set into a glass cup. The Type 3 update turned the tube inlet upright so the CO2 line connects without a tight bend.",
   "highlights": [
    "All-glass upright diffuser with ceramic disc",
-   "J-shaped inlet keeps the tubing tidy",
+   "Upright inlet, so the CO2 tube connects without bending",
    "Clear glass keeps it low-key in a scape"
   ],
   "bestFor": "Small to medium pressurised CO2 tanks where an upright glass diffuser suits the look.",
@@ -992,7 +996,7 @@
   "highlights": [
    "Knurled needle adjuster for fine control",
    "Push-fit connectors for pressure-resistant tube",
-   "Useful for balancing flow on split CO2 lines"
+   "ADA advises one per line when a CO2 supply is split, and for rates under about 1 bubble per second"
   ],
   "bestFor": "Keepers running pressurised CO2 who want finer adjustment than their regulator gives, or split lines to two tanks.",
   "watchOut": "It is a flow valve, not a full regulator, so you still need a proper pressure regulator on the cylinder.",
@@ -1050,15 +1054,15 @@
  {
   "id": "ada-metal-flow-pipe",
   "brand": "ADA",
-  "name": "Metal Flow Pipe",
+  "name": "Metal Pipe Flow",
   "category": "plumbing",
   "subtype": "lily-pipe",
   "summary": "Stainless steel versions of ADA's inflow and outflow pipes. They keep the slim lily-pipe shape but will not snap if knocked, and the outflow nozzle swivels to aim the flow.",
   "highlights": [
    "Stainless steel, far tougher than glass",
    "Outflow P-1 has a rotating nozzle to direct flow",
-   "Inflow V-1 has a slotted intake and removable end cap",
-   "Brushed finish blends in better than shiny plastic"
+   "Inflow V-1 has a removable end cap for easier cleaning",
+   "Both listed for 13 mm hose"
   ],
   "bestFor": "Keepers who like the lily-pipe look but have broken glass pipes before, or have kids and pets around the tank.",
   "watchOut": "They are not see-through, so they are more visible than glass in a bright tank.",
@@ -1067,10 +1071,12 @@
   },
   "models": [
    {
-    "name": "Outflow P-1"
+    "name": "Outflow P-1",
+    "hoseMm": 13
    },
    {
-    "name": "Inflow V-1"
+    "name": "Inflow V-1",
+    "hoseMm": 13
    }
   ],
   "images": [
@@ -1330,7 +1336,7 @@
   "subtype": "sand-gravel",
   "summary": "A natural mixed-colour gravel in browns, greys and tans. It works for streambed details, filling gaps around stones or as a coarser foreground accent.",
   "highlights": [
-   "Natural rounded gravel in mixed earthy colours",
+   "Natural river gravel in mixed earthy colours",
    "Useful for streambeds and detailing around rock",
    "Sold in 2 kg bags"
   ],
@@ -1339,7 +1345,7 @@
   "specs": {
    "Effect on water": "Inert",
    "Colour": "Mixed brown, grey and tan",
-   "Texture": "Small rounded gravel",
+   "Texture": "River gravel, about 2 to 5 mm",
    "Prep": "Rinse before use"
   },
   "models": [

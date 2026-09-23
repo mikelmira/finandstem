@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GearLinks } from "@/components/gear/gear-links";
 import Link from "next/link";
 import { ArrowRight, Beaker, Fish, Sprout } from "lucide-react";
 
@@ -373,6 +374,8 @@ export default function AquariumCyclingPage() {
             ))}
           </ul>
         </Section>
+
+        <GearLinks linkKey="page:aquarium-cycling" className="mt-12" />
 
         <section className="mt-12">
           <Faq items={FAQS} />

@@ -10,6 +10,8 @@ import { DISPLAY_LABEL, displayValue } from "@/lib/gear/fields";
 import { GEAR_COMPARE_MAX, writeGearTray } from "@/lib/gear/compare-storage";
 import { useGearTray } from "@/components/gear/gear-compare-button";
 import { cn } from "@/lib/utils";
+import { RatingIcons } from "@/components/gear/gear-rating";
+import { METRIC, PRICE_LABEL, PRICE_WORDS, RATINGS_DISCLAIMER, techText } from "@/lib/gear/ratings";
 
 const cache = new Map<GearCategory, Promise<GearCard[]>>();
 
@@ -246,6 +248,42 @@ export function GearCompareClient({ counts }: { counts: Partial<Record<GearCateg
             </thead>
             <tbody>
               <Row label="Type" cells={picked.map((c) => meta.subtypes[c.subtype] ?? c.subtype)} />
+              <Row label="Tech level" cells={picked.map((c) => techText(c.tech))} />
+              {picked.some((c) => c.ratings) && (
+                <>
+                  <tr className="border-t border-border/60 align-top">
+                    <th scope="row" className="bg-foreground/[0.02] p-4 text-left text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+                      {PRICE_LABEL}*
+                    </th>
+                    {picked.map((c) => (
+                      <td key={c.id} className="border-l border-border/60 p-4">
+                        {c.ratings ? (
+                          <span className="flex flex-col gap-1">
+                            <RatingIcons value={c.ratings.price} kind="price" label={PRICE_LABEL} size="md" />
+                            <span className="text-xs text-muted-foreground">{PRICE_WORDS[c.ratings.price]}</span>
+                          </span>
+                        ) : (
+                          <span className="text-muted-foreground/60">–</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="border-t border-border/60 align-top">
+                    <th scope="row" className="bg-foreground/[0.02] p-4 text-left text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+                      {METRIC[category].label}*
+                    </th>
+                    {picked.map((c) => (
+                      <td key={c.id} className="border-l border-border/60 p-4">
+                        {c.ratings ? (
+                          <RatingIcons value={c.ratings.metric} kind="metric" label={METRIC[category].label} size="md" />
+                        ) : (
+                          <span className="text-muted-foreground/60">–</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                </>
+              )}
               {fields.map((f) => (
                 <Row key={f} label={DISPLAY_LABEL[f]} cells={picked.map((c) => displayValue(modelOf(c), f))} highlight />
               ))}
@@ -265,7 +303,9 @@ export function GearCompareClient({ counts }: { counts: Partial<Record<GearCateg
         </div>
       )}
       <p className="text-xs leading-relaxed text-muted-foreground">
-        Figures are the makers&rsquo; or a major retailer&rsquo;s published specs. A dash means the
+        * {RATINGS_DISCLAIMER}{" "}
+        <Link href="/about#ratings" className="underline underline-offset-2 hover:text-foreground">How we rate gear</Link>.
+        {" "}Figures are the makers&rsquo; or a major retailer&rsquo;s published specs. A dash means the
         figure isn&rsquo;t published, not that it&rsquo;s zero. Rated filter and pump flow is measured
         without media or hoses.
       </p>

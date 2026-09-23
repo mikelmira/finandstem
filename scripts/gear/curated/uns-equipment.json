@@ -12,16 +12,14 @@
   "highlights": [
    "Two sizes: 3N (about 11 L) and 5N (about 17 L)",
    "5 mm low-iron glass with 45 degree mitred corners",
-   "Proportions suit a shrimp tank, betta tank or a small iwagumi",
-   "Comes with a black levelling mat"
+   "Proportions suit a shrimp tank, betta tank or a small iwagumi"
   ],
   "bestFor": "A first planted nano, a shrimp colony or a desk scape where you want a clean glass box without a rim.",
   "watchOut": "Small water volumes swing fast in temperature and parameters, so dose and top up with care.",
   "specs": {
    "Edges": "45 degree mitred corners",
    "Glass": "Low-iron (91% clarity) Diamant glass",
-   "Silicone": "Clear German silicone",
-   "Included": "Black levelling mat"
+   "Silicone": "German silicone"
   },
   "models": [
    {
@@ -73,7 +71,7 @@
   "specs": {
    "Edges": "45 degree mitred corners",
    "Glass": "Low-iron (91% clarity) Diamant glass",
-   "Silicone": "Clear German silicone",
+   "Silicone": "German silicone",
    "Included": "Black levelling mat"
   },
   "models": [
@@ -180,7 +178,7 @@
   "specs": {
    "Edges": "45 degree mitred corners",
    "Glass": "Low-iron (91% clarity) Diamant glass",
-   "Silicone": "Clear German silicone",
+   "Silicone": "German silicone",
    "Included": "Black levelling mat"
   },
   "models": [
@@ -305,7 +303,7 @@
   "specs": {
    "Edges": "45 degree mitred corners",
    "Glass": "Low-iron (91% clarity) Diamant glass",
-   "Silicone": "Clear German silicone",
+   "Silicone": "German silicone",
    "Included": "Black levelling mat"
   },
   "models": [
@@ -438,7 +436,7 @@
   "specs": {
    "Edges": "45 degree mitred corners",
    "Glass": "Low-iron (91% clarity) Diamant glass",
-   "Silicone": "Clear German silicone",
+   "Silicone": "German silicone",
    "Included": "Black levelling mat"
   },
   "models": [
@@ -544,7 +542,7 @@
   "specs": {
    "Edges": "45 degree mitred corners",
    "Glass": "Low-iron (91% clarity) Diamant glass",
-   "Silicone": "Clear German silicone",
+   "Silicone": "German silicone",
    "Included": "Black levelling mat"
   },
   "models": [
@@ -682,7 +680,6 @@
   "bestFor": "Small cube aquariums where you want a lid that disappears, such as a betta, shrimp or specimen-plant nano.",
   "watchOut": "The lid traps heat and moisture, so keep an eye on condensation and temperature under a strong light.",
   "specs": {
-   "Edges": "Mitred corners",
    "Lid": "Flush mitred glass lid with vent hole and grips",
    "Included": "Foam stabilising mat"
   },
@@ -1183,13 +1180,13 @@
   "name": "Aquarium Tank Stand",
   "category": "stands",
   "subtype": "cabinet",
-  "summary": "Pre-assembled wooden cabinets sized to match UNS tanks exactly, from the 30C cube up to the 180U. Each has a soft-close door and cut-outs in the sides and back for hoses and cables, with enough room inside for a canister and a CO2 cylinder.",
+  "summary": "Pre-assembled wooden cabinets sized to match UNS tanks exactly, from the 30C cube up to the 180U. Each has a soft-close door and cut-outs in the sides and back for hoses and cables, with room inside for a canister filter and other equipment.",
   "highlights": [
    "Sixteen sizes matched to UNS cube, U, P and L tanks",
    "All stand 80 cm tall",
    "Arrives fully assembled",
    "Four finishes: Oak, Natural Wood Grain, Jet Black and Piano White",
-   "Side and rear openings for filter tubing and CO2 line"
+   "Side and rear openings for filter tubing and cables"
   ],
   "bestFor": "A UNS tank owner who wants a stand that matches the footprint to the centimetre.",
   "watchOut": "The finish is water resistant, not waterproof, so wipe up drips and spills promptly.",
@@ -1497,8 +1494,10 @@
     "heightCm": 20.7,
     "extra": {
      "Circulation flow (at working head)": "227 L/h",
-     "Canister volume": "2.0 L"
-    }
+     "Canister volume": "2.0 L",
+     "Hose": "12/16 mm"
+    },
+    "hoseMm": 12
    },
    {
     "name": "Delta 60",
@@ -2464,7 +2463,7 @@
   "name": "Drop Checker",
   "category": "co2",
   "subtype": "drop-checker",
-  "summary": "A glass drop checker that changes colour with the CO2 level in your tank, giving you an at-a-glance check that injection is in the right range. It comes in a hang-on style for rimless tanks and a suction-cup style for anything else.",
+  "summary": "A drop checker that changes colour with the CO2 level in your tank, giving you an at-a-glance check that injection is in the right range. It comes in a hang-on style for rimless tanks and a suction-cup style for anything else.",
   "highlights": [
    "HD hangs over rimless glass up to 10 mm thick",
    "SD fixes inside the tank with a suction cup",
@@ -2474,7 +2473,6 @@
   "bestFor": "Anyone running pressurised CO2 who wants a simple visual check.",
   "watchOut": "Drop checkers lag the tank by an hour or two, so read them late in the photoperiod.",
   "specs": {
-   "Material": "Glass",
    "Included": "15 ml indicator solution"
   },
   "models": [

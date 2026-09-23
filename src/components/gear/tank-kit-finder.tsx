@@ -62,6 +62,12 @@ function rowsFor(litres: number): KitRow[] {
       query: { tankL: litres },
     },
     {
+      category: "fertilisers",
+      title: "Fertilisers",
+      detail: "Dose lightly at first; scale with light and CO2",
+      query: {},
+    },
+    {
       category: "stands",
       title: "Stands",
       detail: `A top at least ${len} cm long`,

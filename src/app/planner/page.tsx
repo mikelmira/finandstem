@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Aquarium tank planner: stocking, water and gear",
   description:
-    "Build your tank species by species. Add fish, plants, shrimp and mosses, we cross-reference parameters, flag conflicts and match filters, lights and heaters.",
+    "Plan a planted tank: add fish, plants and shrimp, choose your filter, light, heater and CO2, and we check parameters, stocking and whether the gear fits.",
   alternates: { canonical: `${site.url}/planner` },
 };
 
@@ -20,7 +20,7 @@ export default function PlannerPage() {
       <PageHero
         eyebrow="Tank Planner"
         title="Build your tank, species by species."
-        subtitle="Pick the tank, pick the filter, then add the fish, plants, shrimp, and mosses you're considering. We cross-reference every parameter, check stocking against best-practice rules, and tell you what light, CO₂, and substrate the combined tank actually needs."
+        subtitle="Pick the tank, add the fish, plants and shrimp you're considering, then choose your filter, light, heater and CO2. We cross-reference every parameter, check stocking against best-practice rules, and tell you whether your equipment suits the tank and the plants."
         breadcrumb={[{ label: "Planner" }]}
       />
 

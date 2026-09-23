@@ -5,6 +5,8 @@ import { GEAR_CATEGORIES } from "@/lib/gear/categories";
 import { DISPLAY_LABEL, displayValue, formatRange, type DisplayField } from "@/lib/gear/fields";
 import type { Fit } from "@/lib/gear/match";
 import { GearCompareButton } from "@/components/gear/gear-compare-button";
+import { RatingIcons } from "@/components/gear/gear-rating";
+import { METRIC, PRICE_LABEL, techText } from "@/lib/gear/ratings";
 import { cn } from "@/lib/utils";
 
 function cardValue(card: GearCardData, field: DisplayField): string | null {
@@ -46,12 +48,15 @@ export function GearCard({
   fit,
   fitModels,
   showCompare = true,
+  showRatings = true,
   priority = false,
 }: {
   card: GearCardData;
   fit?: Fit | null;
   fitModels?: string[];
   showCompare?: boolean;
+  /** Only show ratings where the ratings disclaimer is on the page. */
+  showRatings?: boolean;
   priority?: boolean;
 }) {
   const meta = GEAR_CATEGORIES[card.category];
@@ -94,6 +99,11 @@ export function GearCard({
         <div className="flex flex-1 flex-col gap-2 p-4">
           <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand)]">
             {card.brand} · {meta.subtypes[card.subtype] ?? card.subtype}
+            {card.tech && card.tech.length === 1 && (
+              <span className="ml-2 rounded-full bg-foreground/5 px-1.5 py-0.5 text-[9px] tracking-[0.12em] text-muted-foreground">
+                {techText(card.tech)}
+              </span>
+            )}
           </p>
           <h3 className="text-base font-semibold leading-snug text-foreground">
             {card.name}
@@ -109,6 +119,18 @@ export function GearCard({
                 </div>
               ))}
             </dl>
+          )}
+          {showRatings && card.ratings && (
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] uppercase tracking-[0.12em] text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5">
+                {PRICE_LABEL}
+                <RatingIcons value={card.ratings.price} kind="price" label={PRICE_LABEL} />
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                {METRIC[card.category].label}
+                <RatingIcons value={card.ratings.metric} kind="metric" label={METRIC[card.category].label} />
+              </span>
+            </div>
           )}
           {fitModels && fitModels.length > 0 ? (
             <p className="text-xs text-emerald-800">

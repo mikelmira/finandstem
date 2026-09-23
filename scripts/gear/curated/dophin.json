@@ -289,12 +289,12 @@
   "name": "CF688 Series Canister Filter",
   "category": "filters",
   "subtype": "canister",
-  "summary": "A round blue canister range from 800 to 1400 L/h, each size available with or without a built-in UV lamp (the UV versions add a UV suffix). The UV sits inside the canister behind a safety switch.",
+  "summary": "A round blue canister range from 800 to 1400 L/h, each size available with or without a built-in UV lamp (the UV versions add a UV suffix). On those, the lamp sits in a quartz sleeve inside the canister.",
   "highlights": [
    "Four sizes, 800 to 1400 L/h",
    "Optional internal UV lamp of 5 to 9 W",
    "Primer handle for easy start-up",
-   "Spray bar, lily-style inlet/outlet pipes and directional spout included"
+   "Spray bar, inlet and outlet pipes and a directional spout included"
   ],
   "bestFor": "A 60 to 140 litre tank that suffers green water now and then, where a UV option in the same box saves buying a separate unit.",
   "watchOut": "UV only kills free-floating algae and microbes, not algae on leaves, and running it constantly can break down some chelated trace elements, so many planted-tank keepers only switch it on when needed.",
@@ -373,7 +373,7 @@
   "name": "CF Series UV Canister Filter",
   "category": "filters",
   "subtype": "canister",
-  "summary": "A grey canister range from a 410 L/h mini up to the big 3000 L/h C2400, with most sizes offered with an internal UV lamp. The mid sizes share their ratings with the CF688 range in a different body.",
+  "summary": "A grey canister range from a 410 L/h mini up to the big 3000 L/h C2400, with most sizes offered with an internal UV lamp. The CF1200 and CF1400 share their ratings with the CF1288 and CF1488 in a different body.",
   "highlights": [
    "Seven sizes from 410 to 3000 L/h",
    "UV lamp of 5 to 9 W on UV versions",
@@ -1069,7 +1069,7 @@
   "name": "KF Internal Filter",
   "category": "filters",
   "subtype": "internal",
-  "summary": "Very small internal filters, only 8 to 9.5 cm tall, with an adjustable outlet nozzle. The KF-160 is the slimmest of the four.",
+  "summary": "Very small internal filters, only 8 to 9.5 cm tall, with an adjustable outlet nozzle. The KF-160 is a taller take on the KF-150, rated for tanks up to 30 litres.",
   "highlights": [
    "Four mini sizes, 200 to 280 L/h",
    "8 to 9.5 cm tall",
@@ -1514,7 +1514,6 @@
     "powerW": 88,
     "headM": 3.0,
     "tankMaxL": 600,
-    "lengthCm": 34,
     "widthCm": 10.5,
     "heightCm": 20
    }
@@ -1532,14 +1531,14 @@
   "name": "PH Series Submersible Pump",
   "category": "pumps",
   "subtype": "water-pump",
-  "summary": "Small black submersible pumps from 300 to 1250 L/h, the sort used to drive a small filter, a paludarium stream or a spray.",
+  "summary": "Small black submersible pumps from 300 to 1250 L/h, the sort used to drive a small DIY filter, a spray bar or water changes.",
   "highlights": [
    "Five sizes, 300 to 1250 L/h",
    "Up to 2.35 m head",
    "Compact, from 7 cm tall",
    "Suction-cup feet"
   ],
-  "bestFor": "A small paludarium water feature, a DIY sponge or box filter, or topping up from a bucket.",
+  "bestFor": "Driving a DIY sponge or box filter, adding a little extra flow, or topping up from a bucket.",
   "watchOut": "Head figures are the maximum lift with zero flow, so size up if you need to push water more than a metre.",
   "specs": {
    "Figures quoted": "230 V / 50 Hz version"

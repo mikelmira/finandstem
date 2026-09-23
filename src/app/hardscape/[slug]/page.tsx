@@ -214,7 +214,7 @@ export default async function HardscapePage({ params }: RouteParams) {
             <ul className="mt-5 grid gap-4 sm:grid-cols-2">
               {pieces.slice(0, 6).map((p) => (
                 <li key={p.id}>
-                  <GearCard card={toCard(p)} showCompare={false} />
+                  <GearCard card={toCard(p)} showCompare={false} showRatings={false} />
                 </li>
               ))}
             </ul>

@@ -195,13 +195,16 @@ export function PillarPage({ pillar }: PillarPageProps) {
 
       {/* Gear catalogue, for the equipment and hardscape pillars */}
       {(pillar.slug === "aquarium-equipment-guide" ||
-        pillar.slug === "aquarium-hardscape-guide") && (
+        pillar.slug === "aquarium-hardscape-guide" ||
+        pillar.slug === "planted-tank-guide") && (
         <SectionShell className="!pt-0">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-display-tight text-2xl sm:text-3xl">
               {pillar.slug === "aquarium-hardscape-guide"
                 ? "Real hardscape, from suppliers"
-                : "The gear catalogue"}
+                : pillar.slug === "planted-tank-guide"
+                  ? "Lights, CO2 and fertilisers, compared"
+                  : "The gear catalogue"}
             </h2>
             <p className="mt-2 text-sm text-muted-foreground sm:text-base">
               Real products with specs for every model, matched to your tank size and
@@ -210,7 +213,9 @@ export function PillarPage({ pillar }: PillarPageProps) {
             <ul className="mt-8 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {(pillar.slug === "aquarium-hardscape-guide"
                 ? (["hardscape"] as const)
-                : (["filters", "lights", "co2", "heaters", "aquariums", "pumps", "plumbing", "stands"] as const)
+                : pillar.slug === "planted-tank-guide"
+                  ? (["lights", "co2", "fertilisers", "filters"] as const)
+                  : (["filters", "lights", "co2", "fertilisers", "heaters", "aquariums", "pumps", "plumbing", "stands"] as const)
               ).map((c) => (
                 <li key={c}>
                   <Link

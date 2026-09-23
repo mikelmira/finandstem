@@ -20,11 +20,12 @@ import { fieldRange } from "@/lib/gear/fields";
 import { GearCard } from "@/components/gear/gear-card";
 import { ChipToggle } from "@/components/filters/filter-primitives";
 import { cn } from "@/lib/utils";
+import { METRIC, TECH_HELP, TECH_LABEL } from "@/lib/gear/ratings";
 
 const TANK_PRESETS = [20, 30, 45, 60, 90, 120, 180, 240, 350];
 const LENGTH_PRESETS = [30, 36, 45, 60, 75, 90, 120, 150];
 
-type Sort = "fit" | "name" | "low" | "high";
+type Sort = "fit" | "name" | "low" | "high" | "price-low" | "price-high" | "metric";
 
 function explain(category: GearCategory, q: GearQuery): string | null {
   if (!hasQuery(q)) return null;
@@ -99,6 +100,7 @@ export function GearIndexClient({
   const brands = (sp?.get("brand") ?? "").split(",").filter(Boolean);
   const types = (sp?.get("type") ?? "").split(",").filter(Boolean);
   const text = sp?.get("q") ?? "";
+  const tech = sp?.get("tech") === "low" || sp?.get("tech") === "high" ? (sp.get("tech") as "low" | "high") : null;
   const onlyFit = sp?.get("fit") !== "all";
   const sort = (sp?.get("sort") as Sort) || "fit";
 
@@ -121,11 +123,15 @@ export function GearIndexClient({
     [cards, meta.subtypes],
   );
 
+  // Only offer the tech filter where products actually differ.
+  const techSplits = cards.some((c) => c.tech && c.tech.length === 1);
+
   const querying = hasQuery(q);
   const needle = text.trim().toLowerCase();
   const rows = cards
     .filter((c) => brands.length === 0 || brands.includes(c.brand))
     .filter((c) => types.length === 0 || types.includes(c.subtype))
+    .filter((c) => !tech || !c.tech || c.tech.includes(tech))
     .filter(
       (c) =>
         !needle ||
@@ -146,6 +152,12 @@ export function GearIndexClient({
   const rank = (f: Fit | null) => (f === "ideal" ? 0 : f === "workable" ? 1 : f === null ? 2 : 3);
   visible.sort((a, b) => {
     if (sort === "name") return `${a.card.brand} ${a.card.name}`.localeCompare(`${b.card.brand} ${b.card.name}`);
+    if (sort === "price-low" || sort === "price-high") {
+      const av = a.card.ratings?.price ?? 3;
+      const bv = b.card.ratings?.price ?? 3;
+      return sort === "price-low" ? av - bv : bv - av;
+    }
+    if (sort === "metric") return (b.card.ratings?.metric ?? 0) - (a.card.ratings?.metric ?? 0);
     if (sort === "low" || sort === "high") {
       const av = sortValue(a.card, category) ?? (sort === "low" ? Infinity : -Infinity);
       const bv = sortValue(b.card, category) ?? (sort === "low" ? Infinity : -Infinity);
@@ -224,10 +236,30 @@ export function GearIndexClient({
               <option value="name">Name</option>
               <option value="low">Smallest first</option>
               <option value="high">Largest first</option>
+              <option value="price-low">Price: budget first</option>
+              <option value="price-high">Price: premium first</option>
+              <option value="metric">{METRIC[category].label}: best first</option>
             </select>
           </label>
         </div>
 
+        {techSplits && (
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="mr-1 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
+              Tech level
+            </span>
+            {(["low", "high"] as const).map((t) => (
+              <ChipToggle
+                key={t}
+                selected={tech === t}
+                onSelect={(on) => update({ tech: on ? t : null })}
+              >
+                {TECH_LABEL[t]}
+              </ChipToggle>
+            ))}
+            <span className="ml-1 text-[11px] text-muted-foreground/80">{TECH_HELP}</span>
+          </div>
+        )}
         {allTypes.length > 1 && (
           <div className="flex flex-wrap items-center gap-1.5">
             <span className="mr-1 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
@@ -299,7 +331,7 @@ export function GearIndexClient({
                 {onlyFit ? "Show everything" : "Show only matches"}
               </button>
             )}
-            {(querying || brands.length || types.length || text) && (
+            {(querying || brands.length || types.length || text || tech) && (
               <button
                 type="button"
                 onClick={() => router.replace(pathname, { scroll: false })}

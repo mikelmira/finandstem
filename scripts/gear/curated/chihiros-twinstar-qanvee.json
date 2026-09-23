@@ -158,7 +158,7 @@
     "powerW": 27,
     "lumens": 1700,
     "fitsLengthMinCm": 30,
-    "fitsLengthMaxCm": 40
+    "fitsLengthMaxCm": 36
    },
    {
     "name": "450S",
@@ -169,7 +169,7 @@
     "powerW": 40,
     "lumens": 2700,
     "fitsLengthMinCm": 45,
-    "fitsLengthMaxCm": 55
+    "fitsLengthMaxCm": 50
    },
    {
     "name": "600S",
@@ -716,7 +716,7 @@
   "name": "SM Series",
   "category": "lights",
   "subtype": "bar",
-  "summary": "The original Twinstar S light (later labelled SM), a bright fixture on fixed metal legs. It predates app control, so it is simply on or off at full output.",
+  "summary": "The original Twinstar S light (later labelled SM), a bright fixture on fixed metal legs. It predates app control, and no dimmer or timer is listed for it.",
   "highlights": [
    "Four sizes from 30 cm to 90 cm",
    "6700 K daylight output",
@@ -999,7 +999,7 @@
   "bestFor": "Nano and small low to medium light tanks where you want app control and a nearly invisible fixture.",
   "watchOut": "Clamps fit glass up to 8 mm only, and output is modest for carpets without CO2.",
   "specs": {
-   "Spectrum": "Full spectrum (white LEDs, red/blue weighted)",
+   "Spectrum": "Full spectrum, weighted to red and blue",
    "Colour temperature": "8000 K",
    "Control": "Bluetooth app (MyChihiros)",
    "Dimming": "Yes, with sunrise/sunset",
@@ -1630,7 +1630,7 @@
    "Spectrum": "WRGB",
    "Control": "Bluetooth app (MyChihiros)",
    "Dimming": "Yes",
-   "Mounting": "Hanging or stand",
+   "Mounting": "Rim brackets or hanging cables",
    "Cooling": "Magnetic fan (17 cm)",
    "Colours": "Black, white"
   },
@@ -1668,7 +1668,7 @@
   "name": "Z Light Tiny",
   "category": "lights",
   "subtype": "clip-on",
-  "summary": "A tiny spotlight on an articulated arm with a zoom lens, used to pick out a single plant, stone or focal point. The Diving Edition can even go underwater for shadow and uplighting effects.",
+  "summary": "A tiny clip-on spotlight with a zoom lens, used to pick out a single plant, stone or focal point. The Diving Edition can even go underwater for shadow and uplighting effects.",
   "highlights": [
    "Zoom lens from 15 to 60 degrees",
    "Adjustable 2800 to 8000 K",
@@ -1682,7 +1682,7 @@
    "Spectrum": "Tunable white",
    "Colour temperature": "2800 to 8000 K",
    "Control": "Bluetooth app (MyChihiros)",
-   "Mounting": "Clamp with articulated arm",
+   "Mounting": "Clip-on (extension arm and extra clip sold as accessories)",
    "Beam angle": "15 to 60 degrees"
   },
   "models": [
@@ -1768,7 +1768,7 @@
   "name": "RGB Vivid II (10th Edition)",
   "category": "lights",
   "subtype": "stand",
-  "summary": "The compact but very powerful RGB panel that made the Vivid name, here in its 10th Edition. It packs 130 W and over 12,000 lm into the same 35 cm body as the Vivid Mini. It is being phased out in favour of the Vivid Mini and Vivid 3.",
+  "summary": "The compact but very powerful RGB panel that made the Vivid name, here in its 10th Edition. It packs 130 W and over 12,000 lm into a 45.5 cm panel meant for 60 to 90 cm tanks, the same body size as the Vivid II Mate. It is being phased out in favour of the Vivid Mini and Vivid 3.",
   "highlights": [
    "12,200 lm, 130 W",
    "160 RGB LEDs",
@@ -1789,11 +1789,13 @@
    {
     "name": "RGB Vivid II 10th Edition",
     "sku": "CHSRV2B",
-    "lengthCm": 35.5,
-    "widthCm": 14.0,
-    "heightCm": 3.5,
+    "lengthCm": 45.5,
+    "widthCm": 16.2,
+    "heightCm": 3.4,
     "powerW": 130,
     "lumens": 12200,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 90,
     "extra": {
      "LEDs": "160"
     }
@@ -1924,7 +1926,7 @@
    "Shade and hanging kit available"
   ],
   "bestFor": "Everyday planted tanks where you want RGB colour tuning and a very low-profile fixture.",
-  "watchOut": "Roughly half the output of the WRGB II Pro, so it is less suited to deep high-tech tanks.",
+  "watchOut": "Only about a third to two-fifths of the output of the matching WRGB II Pro, so it is less suited to deep high-tech tanks.",
   "specs": {
    "Spectrum": "WRGB",
    "Control": "Bluetooth app (MyChihiros)",
@@ -2096,7 +2098,7 @@
    "For tanks under 125 L",
    "Three modes: plants, fish, shrimp",
    "Bluetooth app control",
-   "Compact controller and square reactor"
+   "Smaller unit than the New Doctor"
   ],
   "bestFor": "Nano and small planted tanks, including shrimp tanks, that want an algae and bacteria hedge.",
   "watchOut": "Replacement reactors are an ongoing cost.",
@@ -2142,7 +2144,7 @@
   "watchOut": "The listed unit is 110 to 120 V, so check you get the right voltage version for your region.",
   "specs": {
    "Temperature range": "10 to 35 °C",
-   "Control": "Bluetooth app (MyChihiros) + display",
+   "Control": "Bluetooth app (MyChihiros)",
    "Protection": "Overheat, dry-run, water-level shut-off",
    "Cable": "1.5 m",
    "Size": "8.1 x 6.1 x 14 cm"
@@ -2291,7 +2293,7 @@
   "specs": {
    "Install": "Canister filter outflow hose",
    "Min working pressure": "30 psi (about 2 bar)",
-   "Material": "Ceramic diffuser in a plastic body"
+   "Diffuser": "Replaceable ceramic ring"
   },
   "models": [
    {

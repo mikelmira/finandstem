@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GearLinks } from "@/components/gear/gear-links";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -123,6 +124,8 @@ export default async function CalculatorPage({ params }: RouteParams) {
             />
           )}
         </section>
+
+        <GearLinks linkKey={`calculators:${calc.slug}`} className="mt-12" />
 
         <section className="mt-12">
           <Faq items={calc.faqs} />

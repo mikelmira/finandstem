@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GearLinks } from "@/components/gear/gear-links";
 import { TopicFigure } from "@/components/seo/topic-figure";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -209,6 +210,8 @@ export default async function DeficiencyPage({ params }: RouteParams) {
             </ul>
           </Section>
         )}
+
+        <GearLinks linkKey={`deficiencies:${def.slug}`} className="mt-12" />
 
         <section className="mt-12">
           <Faq items={def.faqs} />
