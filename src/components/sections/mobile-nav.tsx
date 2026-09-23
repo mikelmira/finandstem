@@ -4,16 +4,10 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useHydrated } from "@/lib/client-hooks";
-import {
-  FishMark,
-  PlantMark,
-  ShrimpMark,
-  MossMark,
-  SnailMark,
-} from "@/components/icons/species-icons";
+import { NAV_FLAT, NAV_GROUPS, navActive } from "@/lib/nav";
 
 export interface MobileNavLink {
   label: string;
@@ -21,48 +15,21 @@ export interface MobileNavLink {
 }
 
 interface MobileNavProps {
-  links: ReadonlyArray<MobileNavLink>;
   primaryCta?: MobileNavLink;
 }
 
 /**
- * Mirrors the desktop Livestock dropdown, the four catalogue routes
- * are grouped at the top of the drawer under a "Livestock" header
- * (with the same PNG icons used on desktop), and the remaining nav
- * items render below a divider.
+ * Mobile drawer. Uses the same grouped config as the desktop dropdowns
+ * (lib/nav.ts); each group is a collapsible section, and the group holding
+ * the current page starts open.
  */
-const LIVESTOCK_META: Record<
-  string,
-  { description: string; Icon: React.ComponentType<{ className?: string }> }
-> = {
-  "/fish": {
-    description: "Schoolers, centrepieces, dwarf cichlids, algae crew.",
-    Icon: FishMark,
-  },
-  "/plants": {
-    description: "Carpets, midground, stems, floaters and bulbs.",
-    Icon: PlantMark,
-  },
-  "/shrimp": {
-    description: "Neocaridina, Caridina, and the filter-feeders.",
-    Icon: ShrimpMark,
-  },
-  "/mosses": {
-    description: "Java, Christmas, Flame, Fissidens and more.",
-    Icon: MossMark,
-  },
-  "/snails": {
-    description: "Nerites, mystery snails, assassins and the algae crew.",
-    Icon: SnailMark,
-  },
-};
-
-const LIVESTOCK_ORDER = ["/fish", "/plants", "/shrimp", "/mosses", "/snails"];
-
-export function MobileNav({ links, primaryCta }: MobileNavProps) {
+export function MobileNav({ primaryCta }: MobileNavProps) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const mounted = useHydrated();
+  const activeGroup =
+    NAV_GROUPS.find((g) => g.items.some((i) => navActive(pathname, i.href)))?.id ?? "species";
+  const [expanded, setExpanded] = React.useState<string>(activeGroup);
 
   // Lock body scroll while open
   React.useEffect(() => {
@@ -120,98 +87,84 @@ export function MobileNav({ links, primaryCta }: MobileNavProps) {
               </button>
             </div>
 
-            <nav
-              aria-label="Primary"
-              className="stagger flex flex-col gap-1 overflow-y-auto p-3"
-            >
-              {/* Livestock, grouped at the top, mirroring desktop dropdown */}
-              <div className="px-2 pb-1 pt-2">
-                <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand)]">
-                  Species
-                </p>
-              </div>
-              {LIVESTOCK_ORDER.map((href, i) => {
-                const item = links.find((l) => l.href === href);
-                if (!item) return null;
-                const meta = LIVESTOCK_META[href];
-                const active =
-                  pathname === item.href ||
-                  (item.href !== "/" && pathname?.startsWith(item.href));
-                const Icon = meta.Icon;
+            <nav aria-label="Primary" className="flex flex-col gap-1 overflow-y-auto p-3">
+              {NAV_GROUPS.map((group) => {
+                const isOpen = expanded === group.id;
+                const hasActive = group.items.some((i) => navActive(pathname, i.href));
+                return (
+                  <div key={group.id} className="rounded-xl">
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={`m-${group.id}`}
+                      onClick={() => setExpanded(isOpen ? "" : group.id)}
+                      className={cn(
+                        "press flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-medium transition-colors",
+                        hasActive ? "text-foreground" : "text-foreground/85",
+                        "hover:bg-foreground/5",
+                      )}
+                    >
+                      {group.label}
+                      <ChevronDown
+                        className={cn("size-4 text-muted-foreground transition-transform duration-200", isOpen && "rotate-180")}
+                        aria-hidden
+                      />
+                    </button>
+                    {isOpen && (
+                      <ul id={`m-${group.id}`} className="animate-fade-up flex flex-col gap-0.5 pb-2">
+                        {group.items.map(({ label, href, description, Icon }) => {
+                          const active = navActive(pathname, href);
+                          return (
+                            <li key={href}>
+                              <Link
+                                href={href}
+                                onClick={() => setOpen(false)}
+                                className={cn(
+                                  "press flex items-start gap-3 rounded-xl px-3 py-2 transition-colors duration-200",
+                                  active ? "bg-[var(--brand)]/15 text-foreground" : "text-foreground/85 hover:bg-foreground/5",
+                                )}
+                              >
+                                <span
+                                  className={cn(
+                                    "mt-0.5 inline-flex size-7 flex-none items-center justify-center rounded-lg",
+                                    active ? "bg-[var(--brand)] text-white" : "bg-[var(--brand-soft)] text-[var(--brand)]",
+                                  )}
+                                >
+                                  <Icon className="size-4" aria-hidden />
+                                </span>
+                                <span className="flex-1">
+                                  <span className="block text-sm font-medium text-foreground">{label}</span>
+                                  <span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">
+                                    {description}
+                                  </span>
+                                </span>
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
+              <div className="my-2 h-px bg-border/60" aria-hidden />
+              {NAV_FLAT.map((item) => {
+                const active = navActive(pathname, item.href);
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    style={{ ["--i" as string]: Math.min(i, 9) }}
                     className={cn(
-                      "press animate-fade-up group flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200",
-                      active
-                        ? "bg-[var(--brand)]/15 text-foreground"
-                        : "text-foreground/85 hover:bg-foreground/5",
+                      "press group inline-flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-colors duration-200",
+                      active ? "bg-[var(--brand)]/15 text-foreground" : "text-foreground/85 hover:bg-foreground/5",
                     )}
                   >
-                    <span
-                      className={cn(
-                        "mt-0.5 inline-flex size-7 flex-none items-center justify-center rounded-lg",
-                        active
-                          ? "bg-[var(--brand)] text-white"
-                          : "bg-[var(--brand-soft)] text-[var(--brand)]",
-                      )}
-                    >
-                      <Icon className="size-4" aria-hidden />
-                    </span>
-                    <span className="flex-1">
-                      <span className="block text-sm font-medium text-foreground">
-                        {item.label}
-                      </span>
-                      <span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">
-                        {meta.description}
-                      </span>
-                    </span>
+                    <span>{item.label}</span>
+                    <ArrowUpRight className="size-4 text-muted-foreground/50" aria-hidden />
                   </Link>
                 );
               })}
-
-              {/* Divider + other nav items */}
-              <div className="my-3 h-px bg-border/60" aria-hidden />
-              <div className="px-2 pb-1">
-                <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                  Explore
-                </p>
-              </div>
-              {links
-                .filter((item) => !(item.href in LIVESTOCK_META))
-                .map((item, i) => {
-                  const active =
-                    pathname === item.href ||
-                    (item.href !== "/" && pathname?.startsWith(item.href));
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      style={{ ["--i" as string]: Math.min(i + 4, 9) }}
-                      className={cn(
-                        "press animate-fade-up group inline-flex items-center justify-between gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors duration-200",
-                        active
-                          ? "bg-[var(--brand)]/15 text-foreground"
-                          : "text-foreground/85 hover:bg-foreground/5",
-                      )}
-                    >
-                      <span>{item.label}</span>
-                      <ArrowUpRight
-                        className={cn(
-                          "size-4 transition-transform duration-300",
-                          active
-                            ? "text-[var(--brand)]"
-                            : "text-muted-foreground/50 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--brand)]",
-                        )}
-                        aria-hidden
-                      />
-                    </Link>
-                  );
-                })}
             </nav>
 
             {primaryCta && (

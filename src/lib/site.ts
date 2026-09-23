@@ -21,28 +21,7 @@ export const site = {
     reddit: "#",
     rss: "/feed.xml",
   },
-  nav: [
-    { label: "Fish", href: "/fish" },
-    { label: "Plants", href: "/plants" },
-    { label: "Shrimp", href: "/shrimp" },
-    { label: "Mosses", href: "/mosses" },
-    { label: "Snails", href: "/snails" },
-    { label: "Substrates", href: "/substrates" },
-    { label: "Hardscape", href: "/hardscape" },
-    { label: "Gear", href: "/gear" },
-    { label: "Guides", href: "/guides" },
-    { label: "Cycling", href: "/aquarium-cycling" },
-    { label: "Algae ID", href: "/algae" },
-    { label: "Deficiency ID", href: "/deficiencies" },
-    { label: "Fish Health", href: "/diseases" },
-    { label: "History", href: "/history-of-aquascaping" },
-    { label: "Planner", href: "/planner" },
-    { label: "Species Finder", href: "/species-finder" },
-    { label: "Species Map", href: "/species-map" },
-    { label: "Compare", href: "/compare" },
-    { label: "Compatibility", href: "/compatibility" },
-    { label: "About", href: "/about" },
-  ],
+  // Primary navigation lives in lib/nav.ts (grouped dropdowns).
   footer: {
     columns: [
       {

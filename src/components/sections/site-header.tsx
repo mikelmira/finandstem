@@ -4,8 +4,8 @@ import { Wand2 } from "lucide-react";
 import { site } from "@/lib/site";
 import { GlobalSearch, type SearchOption } from "@/components/search/global-search";
 import { MobileNav } from "@/components/sections/mobile-nav";
-import { LivestockDropdown } from "@/components/sections/livestock-dropdown";
-import { ToolsDropdown } from "@/components/sections/tools-dropdown";
+import { NavDropdown } from "@/components/sections/nav-dropdown";
+import { NAV_FLAT, NAV_GROUPS } from "@/lib/nav";
 import { allNorm } from "@/lib/catalogue/normalize";
 
 const SEARCH_OPTIONS: SearchOption[] = allNorm
@@ -17,33 +17,6 @@ const SEARCH_OPTIONS: SearchOption[] = allNorm
     origin: n.origin,
   }))
   .sort((a, b) => a.commonName.localeCompare(b.commonName));
-
-const MOBILE_LINKS = [...site.nav];
-
-/**
- * Slugs grouped under the desktop "Livestock" dropdown, surfaced
- * individually in the mobile drawer for one-tap navigation.
- */
-const LIVESTOCK_HREFS = new Set([
-  "/fish",
-  "/plants",
-  "/shrimp",
-  "/mosses",
-  "/snails",
-]);
-
-/**
- * Slugs grouped under the desktop "Tools" dropdown.
- */
-const TOOLS_HREFS = new Set(["/planner", "/compare", "/compatibility", "/gear"]);
-
-/**
- * Desktop nav items that sit alongside the two dropdowns.
- * Filtered from site.nav so the source of truth stays in lib/site.ts.
- */
-const FLAT_NAV = site.nav.filter(
-  (item) => !LIVESTOCK_HREFS.has(item.href) && !TOOLS_HREFS.has(item.href),
-);
 
 export function SiteHeader() {
   return (
@@ -74,13 +47,15 @@ export function SiteHeader() {
         {/* Desktop nav */}
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-1 text-sm">
-            <li>
-              <LivestockDropdown />
-            </li>
-            <li>
-              <ToolsDropdown />
-            </li>
-            {FLAT_NAV.map((item) => (
+            {NAV_GROUPS.map((group, i) => (
+              <li key={group.id}>
+                <NavDropdown
+                  groupId={group.id}
+                  align={i === 0 ? "left" : i >= NAV_GROUPS.length - 2 ? "right" : "center"}
+                />
+              </li>
+            ))}
+            {NAV_FLAT.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -108,7 +83,6 @@ export function SiteHeader() {
           </Link>
 
           <MobileNav
-            links={MOBILE_LINKS}
             primaryCta={{ label: "Plan a tank", href: "/planner" }}
           />
         </div>
