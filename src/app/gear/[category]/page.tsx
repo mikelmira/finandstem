@@ -6,7 +6,7 @@ import { ArrowRight, Check } from "lucide-react";
 import type { GearCategory } from "@/types/gear";
 import { SectionShell } from "@/components/sections/section-shell";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
-import { Tldr } from "@/components/seo/tldr";
+import { AccordionSection } from "@/components/ui/accordion-section";
 import { Faq } from "@/components/seo/faq";
 import { JsonLd } from "@/components/seo/json-ld";
 import { GearIndexClient } from "@/components/gear/gear-index-client";
@@ -17,6 +17,14 @@ import { activeGearCategories, brandsIn, categoryImage, gearInCategory, toCard }
 import { CATEGORY_SEO_TITLE, gearCategoryJsonLd } from "@/lib/gear/seo";
 import { site } from "@/lib/site";
 import { METRIC, RATINGS_DISCLAIMER } from "@/lib/gear/ratings";
+
+/** Lower-case a label mid-sentence but keep acronyms like UV and CO2. */
+function sentenceCase(label: string): string {
+  return label
+    .split(" ")
+    .map((w) => (/^[A-Z0-9]+$/.test(w) ? w : w.toLowerCase()))
+    .join(" ");
+}
 
 interface RouteParams {
   params: Promise<{ category: string }>;
@@ -85,17 +93,22 @@ export default async function GearCategoryPage({ params }: RouteParams) {
       </section>
 
       <SectionShell className="!pb-8 !pt-10" containerClassName="max-w-4xl">
-        <Tldr body={meta.intro} subject={`choosing aquarium ${meta.label.toLowerCase()}`} />
-        <div className="mt-8 rounded-2xl border border-border/60 bg-background/60 p-6">
-          <h2 className="text-display-tight text-xl sm:text-2xl">How to choose</h2>
-          <ul className="mt-4 flex flex-col gap-2.5">
-            {meta.howToChoose.map((t) => (
-              <li key={t} className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground/90 sm:text-base">
-                <Check className="mt-1 size-4 flex-none text-[var(--brand)]" aria-hidden />
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="flex flex-col gap-3">
+          <AccordionSection eyebrow="The short answer" title={`Choosing ${sentenceCase(meta.label)}`}>
+            <p id="tldr" className="text-sm leading-relaxed text-foreground/90 sm:text-base">
+              {meta.intro}
+            </p>
+          </AccordionSection>
+          <AccordionSection eyebrow="Checklist" title="How to choose">
+            <ul className="flex flex-col gap-2.5">
+              {meta.howToChoose.map((t) => (
+                <li key={t} className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground/90 sm:text-base">
+                  <Check className="mt-1 size-4 flex-none text-[var(--brand)]" aria-hidden />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </AccordionSection>
         </div>
       </SectionShell>
 

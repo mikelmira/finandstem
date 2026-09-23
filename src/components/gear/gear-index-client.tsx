@@ -19,6 +19,7 @@ import {
 import { GearCard } from "@/components/gear/gear-card";
 import { SORT_FIELDS, sortKey } from "@/lib/gear/sorts";
 import { ChipToggle } from "@/components/filters/filter-primitives";
+import { AccordionSection } from "@/components/ui/accordion-section";
 import { cn } from "@/lib/utils";
 import { METRIC, TECH_HELP, TECH_LABEL } from "@/lib/gear/ratings";
 
@@ -160,13 +161,41 @@ export function GearIndexClient({
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Controls */}
-      <div className="glass glass-edge flex flex-col gap-5 rounded-2xl p-5 sm:p-6">
+      {/* Controls: search and sort always visible, the rest in accordions */}
+      <div className="flex flex-col gap-3">
+        <div className="glass glass-edge rounded-2xl p-4 sm:p-5">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-8">
+            <SearchField
+              key={text}
+              initial={text}
+              placeholder={`Search ${meta.label.toLowerCase()} or model`}
+              onCommit={(v) => update({ q: v || null })}
+            />
+            <label className="flex items-center gap-2 text-xs text-muted-foreground">
+              Sort
+              <select
+                value={sort}
+                onChange={(e) => update({ sort: e.target.value === "fit" ? null : e.target.value })}
+                className="rounded-lg border border-border bg-background/70 px-2 py-1.5 text-sm text-foreground"
+              >
+                <option value="fit">Best match</option>
+                <option value="name">Name (A to Z)</option>
+                <option value="price-low">Price: budget first</option>
+                <option value="price-high">Price: premium first</option>
+                <option value="metric">{METRIC[category].label}: best first</option>
+                {SORT_FIELDS[category].map((f) => (
+                  <optgroup key={f.field} label={f.label}>
+                    <option value={`${f.field}-asc`}>{f.words[0]}</option>
+                    <option value={`${f.field}-desc`}>{f.words[1]}</option>
+                  </optgroup>
+                ))}
+              </select>
+            </label>
+          </div>
+
+        </div>
         {inputs.length > 0 && (
-          <div className="flex flex-col gap-4">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">
-              Match to your tank
-            </p>
+          <AccordionSection eyebrow="Fit check" title="Match to your tank" defaultOpen={querying}>
             <div className="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-8">
               {inputs.includes("tank") && (
                 <NumberField
@@ -205,38 +234,15 @@ export function GearIndexClient({
                 />
               )}
             </div>
-          </div>
+          </AccordionSection>
         )}
-
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-8">
-          <SearchField
-            key={text}
-            initial={text}
-            placeholder={`Search ${meta.label.toLowerCase()} or model`}
-            onCommit={(v) => update({ q: v || null })}
-          />
-          <label className="flex items-center gap-2 text-xs text-muted-foreground">
-            Sort
-            <select
-              value={sort}
-              onChange={(e) => update({ sort: e.target.value === "fit" ? null : e.target.value })}
-              className="rounded-lg border border-border bg-background/70 px-2 py-1.5 text-sm text-foreground"
-            >
-              <option value="fit">Best match</option>
-              <option value="name">Name (A to Z)</option>
-              <option value="price-low">Price: budget first</option>
-              <option value="price-high">Price: premium first</option>
-              <option value="metric">{METRIC[category].label}: best first</option>
-              {SORT_FIELDS[category].map((f) => (
-                <optgroup key={f.field} label={f.label}>
-                  <option value={`${f.field}-asc`}>{f.words[0]}</option>
-                  <option value={`${f.field}-desc`}>{f.words[1]}</option>
-                </optgroup>
-              ))}
-            </select>
-          </label>
-        </div>
-
+        {(techSplits || allTypes.length > 1 || allBrands.length > 1) && (
+          <AccordionSection
+            eyebrow="Filters"
+            title={techSplits ? "Type, brand and tech level" : "Type and brand"}
+            defaultOpen={Boolean(tech || types.length || brands.length)}
+          >
+            <div className="flex flex-col gap-4">
         {techSplits && (
           <div className="flex flex-wrap items-center gap-1.5">
             <span className="mr-1 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
@@ -293,6 +299,9 @@ export function GearIndexClient({
               </ChipToggle>
             ))}
           </div>
+        )}
+            </div>
+          </AccordionSection>
         )}
       </div>
 
