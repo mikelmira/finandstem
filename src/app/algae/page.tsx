@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/page-hero";
+import { atmosphere } from "@/data/atmosphere";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
@@ -60,6 +61,7 @@ export default function AlgaeHubPage() {
       />
 
       <PageHero
+        backgroundImage={atmosphere.plantMacro}
         eyebrow="Algae ID"
         title="What algae have you got?"
         subtitle="Green fuzz, black tufts, brown dust, a slimy sheet, they all mean different things and want different fixes. Tell us the colour, the texture and where it's growing, and we'll narrow it down, then give you the fix that works and the clean-up crew that helps."

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { IMAGE_ATTRIBUTION } from "@/data/image-attribution";
+import { atmosphere } from "@/data/atmosphere";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,7 +62,12 @@ export async function generateMetadata({
               alt: fm.heroAlt ?? fm.title,
             },
           ]
-        : undefined,
+        : (() => {
+            const lead = (fm.heroSpecies ?? fm.relatedSpecies)
+              .map((id) => IMAGE_ATTRIBUTION[id.split(":")[1] ?? ""])
+              .find(Boolean);
+            return lead ? [{ url: `${site.url}${lead.src}`, alt: lead.alt }] : undefined;
+          })(),
     },
     twitter: {
       card: "summary_large_image",
@@ -142,17 +149,77 @@ export default async function GuidePage({ params }: RouteParams) {
           </div>
         </header>
 
-        {fm.heroImage && (
-          <div className="relative my-8 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-border/60">
-            <Image
-              src={fm.heroImage}
-              alt={fm.heroAlt ?? fm.title}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 768px"
-              className="object-cover"
-            />
-          </div>
+        {fm.heroImage ? (
+          <figure className="my-8">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-border/60">
+              <Image
+                src={fm.heroImage}
+                alt={fm.heroAlt ?? fm.title}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 768px"
+                className="object-cover"
+              />
+            </div>
+            {(() => {
+              const credit = Object.values(atmosphere).find((a) => a.src === fm.heroImage);
+              return credit ? (
+                <figcaption className="mt-2 text-xs text-muted-foreground">
+                  Photo:{" "}
+                  <a href={credit.source} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-2 hover:text-foreground">
+                    {credit.photographer}
+                  </a>{" "}
+                  · Unsplash
+                </figcaption>
+              ) : null;
+            })()}
+          </figure>
+        ) : (
+          (() => {
+            const ids =
+              fm.heroSpecies ??
+              (fm.kind === "comparison" ? fm.relatedSpecies.slice(0, 2) : fm.relatedSpecies);
+            const shots = ids
+              .map((id) => IMAGE_ATTRIBUTION[id.split(":")[1] ?? ""])
+              .filter((a): a is NonNullable<typeof a> => Boolean(a))
+              .slice(0, fm.kind === "comparison" || fm.heroSpecies ? 2 : 1);
+            if (shots.length === 0) return null;
+            return (
+              <div className={shots.length > 1 ? "my-8 grid gap-4 sm:grid-cols-2" : "my-8"}>
+                {shots.map((a, i) => (
+                  <figure key={a.src}>
+                    <div
+                      className={
+                        "relative w-full overflow-hidden rounded-3xl border border-border/60 " +
+                        (shots.length > 1 ? "aspect-[4/3]" : "aspect-[16/9]")
+                      }
+                    >
+                      <Image
+                        src={a.src}
+                        alt={a.alt}
+                        fill
+                        priority={i === 0}
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="mt-2 text-xs text-muted-foreground">
+                      {a.alt}. Photo: {a.author}
+                      {a.license ? ` · ${a.license}` : ""}
+                      {a.descriptionUrl && (
+                        <>
+                          {" · "}
+                          <a href={a.descriptionUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-2 hover:text-foreground">
+                            source
+                          </a>
+                        </>
+                      )}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            );
+          })()
         )}
 
         {/* The article body, MDX compiled at request time, with our shared

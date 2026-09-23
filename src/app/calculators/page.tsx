@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { PageHero } from "@/components/sections/page-hero";
+import { atmosphere } from "@/data/atmosphere";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import { site } from "@/lib/site";
@@ -48,6 +49,7 @@ export default function CalculatorsHubPage() {
       />
 
       <PageHero
+        backgroundImage={atmosphere.nanoTank}
         eyebrow="Calculators"
         title="The numbers, worked out for you."
         subtitle="Four quick planted-tank calculators. Get your tank's true volume, how much substrate to buy, your dissolved CO2 from pH and KH, and how dry salts turn into ppm. All free, all in your browser, nothing to sign up for."

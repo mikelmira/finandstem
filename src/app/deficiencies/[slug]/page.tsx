@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TopicFigure } from "@/components/seo/topic-figure";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Leaf } from "lucide-react";
@@ -127,6 +128,8 @@ export default async function DeficiencyPage({ params }: RouteParams) {
             )}
           </dl>
         </header>
+
+        <TopicFigure group="deficiencies" slug={def.slug} className="mb-10" />
 
         <Tldr body={def.tldr} subject={def.name} />
 

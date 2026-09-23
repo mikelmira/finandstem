@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TopicFigure } from "@/components/seo/topic-figure";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
@@ -113,6 +114,8 @@ export default async function AlgaePage({ params }: RouteParams) {
             {algae.spot}
           </p>
         </header>
+
+        <TopicFigure group="algae" slug={algae.slug} className="mb-10" />
 
         <Tldr body={algae.tldr} subject={algae.name} />
 

@@ -119,3 +119,37 @@ export function categoryImage(category: GearCategory) {
   const pool = gearInCategory(category);
   return (pool.find((p) => p.images.length > 1) ?? pool[0])?.images[0];
 }
+
+/** Supplier product whose name best matches each hardscape type. */
+const TYPE_PHOTO_PRODUCT: Record<string, string> = {
+  "spider-wood": "Spider Wood",
+  "lava-rock": "Black Lava Rock",
+  "seiryu-stone": "Seiryu Stone",
+  slate: "Black Slate",
+  "dragon-stone": "Ohko Dragon Stone",
+  manzanita: "Manzanita Wood",
+};
+
+/**
+ * A correctly identified photo for a hardscape type, taken from the supplier
+ * product of the same material, with the product it came from.
+ */
+/** Types whose supplier photo doesn't clearly show the material. */
+const TYPE_PHOTO_SKIP = new Set(["cholla-wood"]);
+
+export function hardscapeTypePhoto(typeSlug: string) {
+  if (TYPE_PHOTO_SKIP.has(typeSlug)) return null;
+  const pool = hardscapeProductsFor(typeSlug);
+  const wanted = TYPE_PHOTO_PRODUCT[typeSlug];
+  const product = (wanted && pool.find((p) => p.name === wanted)) || pool[0];
+  const image = product?.images[0];
+  if (!product || !image) return null;
+  return {
+    src: image.src,
+    width: image.width,
+    height: image.height,
+    alt: `${product.name} from ${product.brand}`,
+    productHref: gearPath(product),
+    productName: `${product.brand} ${product.name}`,
+  };
+}

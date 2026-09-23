@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { topicImages } from "@/components/seo/topic-figure";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -10,7 +11,7 @@ import { organizationRef } from "@/lib/seo";
 import { HARDSCAPE, type HardscapeType } from "@/data/hardscape";
 import { EffectBadges } from "@/components/hardscape/effect-badges";
 import { HardscapeVisual } from "@/components/hardscape/hardscape-visual";
-import { gearCount } from "@/lib/gear";
+import { gearCount, hardscapeTypePhoto } from "@/lib/gear";
 
 export const metadata: Metadata = {
   title: "Aquascaping Hardscape: Stones & Wood and What They Do to Your Water",
@@ -119,7 +120,7 @@ function HardscapeGroup({
               href={`/hardscape/${h.slug}`}
               className="press group flex h-full flex-col gap-3 rounded-2xl border border-border bg-background/60 p-3 backdrop-blur transition-colors hover:border-[var(--brand)]/40"
             >
-              <HardscapeVisual item={h} size="card" />
+              <HardscapeVisual item={h} size="card" photo={hardscapeTypePhoto(h.slug) ?? topicImages("hardscape", h.slug)[0]} />
               <div className="flex flex-col gap-3 px-2 pb-2">
                 <div className="flex items-start justify-between gap-2">
                   <span className="font-medium leading-tight">{h.name}</span>

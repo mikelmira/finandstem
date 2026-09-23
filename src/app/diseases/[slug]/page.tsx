@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TopicFigure } from "@/components/seo/topic-figure";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ShieldAlert } from "lucide-react";
@@ -134,6 +135,8 @@ export default async function DiseasePage({ params }: RouteParams) {
             />
           </dl>
         </header>
+
+        <TopicFigure group="diseases" slug={disease.slug} className="mb-10" />
 
         <Tldr body={disease.tldr} subject={disease.name} />
 

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { atmosphere } from "@/data/atmosphere";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -187,6 +189,31 @@ export default function AquariumMaintenancePage() {
             or two habits that quietly cause most problems.
           </p>
         </header>
+
+        <figure className="mb-10">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-border/60">
+            <Image
+              src={atmosphere.aquascapeWide.src}
+              alt={atmosphere.aquascapeWide.alt}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 768px"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="mt-2 text-xs text-muted-foreground">
+            Photo:{" "}
+            <a
+              href={atmosphere.aquascapeWide.source}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="underline underline-offset-2 hover:text-foreground"
+            >
+              {atmosphere.aquascapeWide.photographer}
+            </a>{" "}
+            · Unsplash
+          </figcaption>
+        </figure>
 
         <Tldr body={TLDR} subject="Aquarium maintenance" />
 

@@ -11,9 +11,18 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
 import { GearCard } from "@/components/gear/gear-card";
-import { featuredGear, gearCount, toCard } from "@/lib/gear";
+import { featuredGear, gearCount, gearPath, getGear, toCard } from "@/lib/gear";
 import { GEAR_CATEGORIES } from "@/lib/gear/categories";
 import type { GearCategory } from "@/types/gear";
+
+/** A representative catalogue product pictured at the top of each guide. */
+const GUIDE_HERO: Record<string, string> = {
+  lighting: "twinstar-s-series-ver5",
+  filtration: "eheim-professionel-5e",
+  "co2-injection": "uns-pro-co2-kit",
+  heaters: "eheim-thermocontrol",
+  "circulation-and-flow": "eheim-streamon-plus",
+};
 
 /** Which gear catalogue category backs each equipment guide. */
 const GUIDE_GEAR: Record<string, GearCategory> = {
@@ -79,6 +88,7 @@ export default async function EquipmentPage({ params }: RouteParams) {
   const others = EQUIPMENT.filter((e) => e.slug !== guide.slug);
   const gearCat = GUIDE_GEAR[guide.slug];
   const gearPicks = gearCat ? featuredGear(gearCat, 3) : [];
+  const hero = GUIDE_HERO[guide.slug] ? getGear(GUIDE_HERO[guide.slug]) : undefined;
 
   return (
     <>
@@ -113,6 +123,28 @@ export default async function EquipmentPage({ params }: RouteParams) {
             {guide.spot}
           </p>
         </header>
+
+        {hero && hero.images[0] && (
+          <figure className="mb-10">
+            <div className="overflow-hidden rounded-2xl border border-border/60 bg-white">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={hero.images[0].src}
+                alt={`${hero.brand} ${hero.name}`}
+                width={hero.images[0].width}
+                height={hero.images[0].height}
+                className="mx-auto aspect-[16/9] w-full object-contain p-4"
+              />
+            </div>
+            <figcaption className="mt-2 text-xs text-muted-foreground">
+              Pictured:{" "}
+              <Link href={gearPath(hero)} className="underline underline-offset-2 hover:text-foreground">
+                {hero.brand} {hero.name}
+              </Link>
+              , one of the {guide.name.toLowerCase()} options in our gear catalogue.
+            </figcaption>
+          </figure>
+        )}
 
         <Tldr body={guide.tldr} subject={guide.name} />
 

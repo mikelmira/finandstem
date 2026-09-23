@@ -13,8 +13,12 @@
   ],
   "bestFor": "CO2-injected planted tanks with an average fish load that want one simple fertiliser.",
   "specs": {
-   "Nutrients": "Macro (N, P, K), micro and trace",
-   "Form": "Liquid, pump bottle",
+   "Supplies": "Macro (N, P, K), micro and trace",
+   "Adds nitrate and phosphate": "Yes",
+   "Effect on KH and pH": "None",
+   "Form": "Liquid",
+   "How often": "Daily or several times a week",
+   "Suits": "CO2 tanks, normal fish load",
    "Sizes": "Starter, Standard, 200 ml, 500 ml, 600 ml, 1000 ml"
   },
   "models": [
@@ -46,8 +50,12 @@
   ],
   "bestFor": "Fast-growing, high-light CO2 tanks where you do a large water change every week.",
   "specs": {
-   "Nutrients": "Macro, micro and trace at EI levels",
+   "Supplies": "Macro, micro and trace at EI levels",
+   "Adds nitrate and phosphate": "Yes, generously",
+   "Effect on KH and pH": "None",
    "Form": "Liquid",
+   "How often": "Daily, with a large weekly water change",
+   "Suits": "High-light CO2 tanks",
    "Sizes": "Standard, 200 ml, 500 ml, 1000 ml"
   },
   "models": [
@@ -79,8 +87,12 @@
   ],
   "bestFor": "Well-stocked tanks where nitrate already reads high, or where you dose nitrogen separately.",
   "specs": {
-   "Nutrients": "Macro and micro, no nitrate or phosphate",
-   "Form": "Liquid, pump bottle",
+   "Supplies": "Potassium, micro and trace",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None",
+   "Form": "Liquid",
+   "How often": "Daily or several times a week",
+   "Suits": "Heavily stocked tanks",
    "Sizes": "Starter, Standard, 200 ml, 500 ml, 600 ml, 1000 ml"
   },
   "models": [
@@ -112,8 +124,12 @@
   ],
   "bestFor": "Swords, crypts, lilies and other heavy root feeders, especially in older aquasoil or inert gravel.",
   "specs": {
-   "Nutrients": "Ammoniacal nitrogen and macro nutrients",
+   "Supplies": "Ammoniacal nitrogen and macros at the roots",
+   "Adds nitrate and phosphate": "Via the substrate",
+   "Effect on KH and pH": "None",
    "Form": "Root capsules",
+   "How often": "Every few months",
+   "Suits": "Heavy root feeders",
    "Sizes": "Mini (9 caps), Small (18 caps), Large (54 caps)"
   },
   "models": [
@@ -146,10 +162,14 @@
   ],
   "bestFor": "New planted tanks and soft-water shrimp setups that want a feeding substrate from day one.",
   "specs": {
-   "Type": "Active aquasoil",
-   "pH effect": "Lowers to about 6.2 to 6.6",
-   "Nutrient life": "Up to about 12 months",
-   "Sizes": "2 L, 5 L"
+   "Supplies": "Root nutrients from the soil",
+   "Adds nitrate and phosphate": "From the substrate",
+   "Effect on KH and pH": "Lowers, pH about 6.2 to 6.6",
+   "Form": "Aquasoil",
+   "How often": "Once, at setup (lasts about 12 months)",
+   "Suits": "New planted and soft-water tanks",
+   "Sizes": "2 L, 5 L",
+   "Nutrient life": "Up to about 12 months"
   },
   "models": [
    {
@@ -180,9 +200,14 @@
   ],
   "bestFor": "Brand-new tanks at the planting stage, before the tank is flooded or filled.",
   "specs": {
-   "Use": "Once, when setting up a new tank",
-   "Contains": "Substrate enrichment and starter bacteria",
-   "Sizes": "One size"
+   "Supplies": "Substrate enrichment and starter bacteria",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None",
+   "Form": "Powder",
+   "How often": "Once, at setup",
+   "Suits": "Brand-new tanks",
+   "Sizes": "One size",
+   "Contains": "Substrate enrichment and starter bacteria"
   },
   "models": [
    {
@@ -213,9 +238,14 @@
   ],
   "bestFor": "New aquasoil tanks during cycling, or after a big rescape or filter clean.",
   "specs": {
-   "Use": "New tanks and after disturbances",
-   "Contains": "Nitrifying bacteria",
-   "Sizes": "One size"
+   "Supplies": "Nitrifying bacteria",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None",
+   "Form": "Sachets",
+   "How often": "New tanks and after disturbances",
+   "Suits": "New aquasoil tanks",
+   "Sizes": "One size",
+   "Contains": "Nitrifying bacteria"
   },
   "models": [
    {
@@ -245,9 +275,14 @@
   ],
   "bestFor": "Planted tanks with patches of black beard algae or hair algae on hardscape and slow plants.",
   "specs": {
-   "Treats": "BBA, hair, string, fuzz and most filamentous algae",
-   "Application": "Spot dose with the filter off",
-   "Sizes": "Starter, Standard, 200 ml, 500 ml, 600 ml"
+   "Supplies": "Algae spot treatment",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None",
+   "Form": "Liquid",
+   "How often": "As needed, spot dosed",
+   "Suits": "BBA and filamentous algae",
+   "Sizes": "Starter, Standard, 200 ml, 500 ml, 600 ml",
+   "Treats": "BBA, hair, string, fuzz and most filamentous algae"
   },
   "models": [
    {
@@ -278,9 +313,15 @@
   ],
   "bestFor": "Moss-heavy and delicate-plant tanks that still need to tackle algae.",
   "specs": {
+   "Supplies": "Gentle algae spot treatment",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None",
+   "Form": "Liquid",
+   "How often": "As needed, spot dosed",
+   "Suits": "Tanks with mosses and liverworts",
+   "Sizes": "Starter, Standard, 500 ml",
    "Treats": "Filamentous algae in sensitive tanks",
-   "Safe with": "Mosses, liverworts, vallisneria",
-   "Sizes": "Starter, Standard, 500 ml"
+   "Safe with": "Mosses, liverworts, vallisneria"
   },
   "models": [
    {
@@ -311,9 +352,15 @@
   ],
   "bestFor": "Anyone doing water changes with tap water.",
   "specs": {
+   "Supplies": "Dechlorinator and detoxifier",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None",
+   "Form": "Liquid",
+   "How often": "Every water change",
+   "Suits": "Tap water changes",
+   "Sizes": "Starter, Standard, 200 ml, 500 ml",
    "Removes": "Chlorine and chloramine",
-   "Detoxifies": "Heavy metals, ammonia, nitrite, nitrate",
-   "Sizes": "Starter, Standard, 200 ml, 500 ml"
+   "Detoxifies": "Heavy metals, ammonia, nitrite, nitrate"
   },
   "models": [
    {
@@ -342,9 +389,12 @@
   ],
   "bestFor": "Soft-water planted tanks and Caridina shrimp tanks started from RO water.",
   "specs": {
-   "Raises": "GH (calcium, magnesium and minerals)",
-   "KH and pH": "Unchanged",
+   "Supplies": "GH minerals (calcium, magnesium)",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None",
    "Form": "Powder",
+   "How often": "Every water change with RO water",
+   "Suits": "Soft-water and Caridina tanks",
    "Sizes": "Mini (70 g), Small (150 g), Large (800 g)"
   },
   "models": [
@@ -375,8 +425,12 @@
   ],
   "bestFor": "RO-water tanks keeping Neocaridina shrimp or plants that prefer a little buffering.",
   "specs": {
-   "Raises": "GH, KH to about 2 dKH, pH to 7.2 to 7.6",
+   "Supplies": "GH minerals plus buffer",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "Raises KH to about 2, pH to 7.2 to 7.6",
    "Form": "Powder",
+   "How often": "Every water change with RO water",
+   "Suits": "Neocaridina and buffered RO tanks",
    "Sizes": "Small (150 g), Large (800 g)"
   },
   "models": [
@@ -407,8 +461,12 @@
   ],
   "bestFor": "The dry-start phase of a carpet, and emersed mosses and plants above the waterline.",
   "specs": {
-   "Nutrients": "Macro, micro and trace",
+   "Supplies": "Macro, micro and trace",
+   "Adds nitrate and phosphate": "Yes (on leaves)",
+   "Effect on KH and pH": "None",
    "Form": "Foliar spray",
+   "How often": "When misting emersed plants",
+   "Suits": "Dry start and emersed mosses",
    "Sizes": "Starter, Standard"
   },
   "models": [
@@ -441,7 +499,11 @@
   "bestFor": "Fast-growing and red plants showing pale new growth from low iron.",
   "specs": {
    "Supplies": "Iron",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid, pump bottle",
+   "How often": "Regularly, with other Green Brighty bottles",
+   "Suits": "Fast-growing and red plants",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
   "models": [
@@ -472,7 +534,11 @@
   "bestFor": "Heavily planted, lightly stocked tanks where older leaves yellow from low nitrogen.",
   "specs": {
    "Supplies": "Nitrogen",
+   "Adds nitrate and phosphate": "Nitrogen only",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid, pump bottle",
+   "How often": "Regularly, as plants need",
+   "Suits": "Heavily planted, lightly stocked tanks",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
   "models": [
@@ -503,8 +569,11 @@
   "bestFor": "Tanks with pinholes in older leaves from low potassium, especially with hard tap water.",
   "specs": {
    "Supplies": "Potassium",
-   "pH and KH": "No rise",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "No rise",
    "Form": "Liquid, pump bottle",
+   "How often": "Regularly, as plants need",
+   "Suits": "Hard tap water and soft-water plants",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
   "models": [
@@ -534,7 +603,11 @@
   "bestFor": "Planted tanks of any tech level that need trace elements topped up.",
   "specs": {
    "Supplies": "Trace elements",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid, pump bottle",
+   "How often": "Daily",
+   "Suits": "All planted tanks",
    "Sizes": "180 ml, 300 ml, 5,000 ml"
   },
   "models": [
@@ -564,8 +637,12 @@
   "bestFor": "Tanks where new growth has gone pale or yellow from an iron shortage.",
   "specs": {
    "Supplies": "Ferrous iron and sulphur",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
-   "Size": "50 ml"
+   "How often": "When chlorosis shows",
+   "Suits": "Correcting pale new growth",
+   "Sizes": "50 ml"
   },
   "models": [
    {
@@ -593,9 +670,14 @@
   ],
   "bestFor": "Freshly trimmed or newly planted tanks where you want faster regrowth of new shoots.",
   "specs": {
-   "Contains": "Plant hormones, trace elements, amino acids, boron",
+   "Supplies": "Plant hormones, amino acids, trace, boron",
+   "Adds nitrate and phosphate": "No",
+   "Effect on KH and pH": "None stated",
    "Form": "Liquid",
-   "Size": "50 ml"
+   "How often": "After trimming or planting",
+   "Suits": "Recovery after trimming",
+   "Sizes": "50 ml",
+   "Contains": "Plant hormones, trace elements, amino acids, boron"
   },
   "models": [
    {
@@ -623,8 +705,13 @@
   ],
   "bestFor": "Swords, crypts, vallisneria and other root feeders, especially in older or inert substrate.",
   "specs": {
+   "Supplies": "Slow-release root nutrients",
+   "Adds nitrate and phosphate": "Via the substrate",
+   "Effect on KH and pH": "None stated",
    "Form": "Root sticks",
-   "Pack": "25 sticks"
+   "How often": "Every few months",
+   "Suits": "Heavy root feeders",
+   "Sizes": "25 sticks"
   },
   "models": [
    {

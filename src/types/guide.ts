@@ -60,6 +60,12 @@ export interface GuideFrontmatter {
   /** Optional. Alt text for the hero image. */
   heroAlt?: string;
   /**
+   * Optional. "category:slug" species whose catalogue photos lead the article
+   * when there is no heroImage (two side by side for comparisons). Defaults
+   * to the first related species, or the first two for comparison guides.
+   */
+  heroSpecies?: ReadonlyArray<string>;
+  /**
    * Optional. Set `false` to keep the file in the repo (e.g. drafts,
    * templates) but exclude it from /guides listing, sitemap, and llms.txt.
    * Defaults to `true`.

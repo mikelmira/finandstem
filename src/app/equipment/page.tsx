@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { PageHero } from "@/components/sections/page-hero";
+import { atmosphere } from "@/data/atmosphere";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import { site } from "@/lib/site";
@@ -48,6 +49,7 @@ export default function EquipmentHubPage() {
       />
 
       <PageHero
+        backgroundImage={atmosphere.schoolDriftwood}
         eyebrow="Equipment"
         title="Choosing gear, without the guesswork."
         subtitle="You don't need to memorise product specs to kit out a tank. You need a few rules that hold across every brand: how much light your plants can use, how much filter flow to aim for, whether you actually need CO2, and what size heater to run. That's what these cover."

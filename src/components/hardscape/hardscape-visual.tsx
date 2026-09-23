@@ -82,12 +82,29 @@ export function HardscapeVisual({
   item,
   size = "card",
   className,
+  photo,
 }: {
   item: HardscapeType;
   size?: "card" | "hero";
   className?: string;
+  /** A verified supplier photo of this material (see hardscapeTypePhoto). */
+  photo?: { src: string; alt: string } | null;
 }) {
   const aspect = size === "card" ? "aspect-[5/3]" : "aspect-[16/7]";
+
+  if (photo) {
+    return (
+      <div className={cn("relative overflow-hidden rounded-2xl bg-[#f6f3ec]", aspect, className)}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={photo.src}
+          alt={photo.alt}
+          loading={size === "hero" ? "eager" : "lazy"}
+          className="h-full w-full object-contain"
+        />
+      </div>
+    );
+  }
 
   if (PHOTOS.slugs.has(item.slug)) {
     const ext = PHOTOS.ext[item.slug] ?? "webp";

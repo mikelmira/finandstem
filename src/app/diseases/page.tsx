@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { PageHero } from "@/components/sections/page-hero";
+import { atmosphere } from "@/data/atmosphere";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
@@ -66,6 +67,7 @@ export default function DiseaseHubPage() {
       />
 
       <PageHero
+        backgroundImage={atmosphere.dwarfGourami}
         eyebrow="Fish & shrimp health"
         title="What's wrong with your fish or shrimp?"
         subtitle="Salt-like spots, ragged fins, a gold dusting, a shrimp stuck in its shell. Each points somewhere different. Find the match below, then treat it the planted-tank way, without copper or harsh meds that wipe out your shrimp, snails and beneficial bacteria."

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { PageHero } from "@/components/sections/page-hero";
+import { atmosphere } from "@/data/atmosphere";
 import { SectionShell } from "@/components/sections/section-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
@@ -60,6 +61,7 @@ export default function DeficiencyHubPage() {
       />
 
       <PageHero
+        backgroundImage={atmosphere.carpetSchool}
         eyebrow="Plant deficiency ID"
         title="Why does your plant look like that?"
         subtitle="Yellow old leaves, pale new tips, pinholes, twisted growth, fading reds. Each one points at a different nutrient. The first question is always where the damage shows, on the old leaves or the new, so start there and narrow it down."

@@ -257,7 +257,9 @@ export function GearCompareClient({ counts }: { counts: Partial<Record<GearCateg
               ))}
               <Row label="Best for" cells={picked.map((c) => c.bestFor)} prose />
               <Row label="Worth knowing" cells={picked.map((c) => c.watchOut ?? null)} prose />
-              <Row label="Sizes" cells={picked.map((c) => c.models.map((m) => m.name).join(", "))} prose />
+              {picked.some((c) => c.models.length > 1) && (
+                <Row label="Models" cells={picked.map((c) => c.models.map((m) => m.name).join(", "))} prose />
+              )}
             </tbody>
           </table>
         </div>

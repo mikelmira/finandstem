@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { topicImages } from "@/components/seo/topic-figure";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -14,7 +15,7 @@ import { EffectBadges } from "@/components/hardscape/effect-badges";
 import { HardscapeVisual, SHOW_HARDSCAPE_PHOTOS } from "@/components/hardscape/hardscape-visual";
 import { HARDSCAPE_IMAGES } from "@/data/hardscape-images";
 import { GearCard } from "@/components/gear/gear-card";
-import { hardscapeProductsFor, toCard } from "@/lib/gear";
+import { hardscapeProductsFor, hardscapeTypePhoto, toCard } from "@/lib/gear";
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
@@ -72,6 +73,8 @@ export default async function HardscapePage({ params }: RouteParams) {
     (h) => h.slug !== item.slug && h.category === item.category,
   );
   const pieces = hardscapeProductsFor(item.slug);
+  const photo = hardscapeTypePhoto(item.slug);
+  const commons = photo ? undefined : topicImages("hardscape", item.slug)[0];
 
   return (
     <>
@@ -113,7 +116,29 @@ export default async function HardscapePage({ params }: RouteParams) {
         </header>
 
         <figure className="mb-10">
-          <HardscapeVisual item={item} size="hero" />
+          <HardscapeVisual item={item} size="hero" photo={photo ?? commons} />
+          {commons && (
+            <figcaption className="mt-2 text-xs text-muted-foreground">
+              {commons.alt}. Photo: {commons.author} · {commons.license}
+              {commons.sourceUrl && (
+                <>
+                  {" · "}
+                  <a href={commons.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-2 hover:text-foreground">
+                    Wikimedia Commons
+                  </a>
+                </>
+              )}
+            </figcaption>
+          )}
+          {photo && (
+            <figcaption className="mt-2 text-xs text-muted-foreground">
+              Photo:{" "}
+              <Link href={photo.productHref} className="underline underline-offset-2 hover:text-foreground">
+                {photo.productName}
+              </Link>
+              , supplier product photo
+            </figcaption>
+          )}
           {SHOW_HARDSCAPE_PHOTOS && HARDSCAPE_IMAGES[item.slug] && (
             <figcaption className="mt-2 text-xs text-muted-foreground">
               Photo: {HARDSCAPE_IMAGES[item.slug].author}
