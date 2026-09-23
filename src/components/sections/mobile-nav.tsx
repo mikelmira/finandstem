@@ -20,16 +20,14 @@ interface MobileNavProps {
 
 /**
  * Mobile drawer. Uses the same grouped config as the desktop dropdowns
- * (lib/nav.ts); each group is a collapsible section, and the group holding
- * the current page starts open.
+ * (lib/nav.ts); each group is a collapsible section, all closed whenever
+ * the drawer opens.
  */
 export function MobileNav({ primaryCta }: MobileNavProps) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const mounted = useHydrated();
-  const activeGroup =
-    NAV_GROUPS.find((g) => g.items.some((i) => navActive(pathname, i.href)))?.id ?? "species";
-  const [expanded, setExpanded] = React.useState<string>(activeGroup);
+  const [expanded, setExpanded] = React.useState<string>("");
 
   // Lock body scroll while open
   React.useEffect(() => {
@@ -190,7 +188,10 @@ export function MobileNav({ primaryCta }: MobileNavProps) {
     <>
       <button
         type="button"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setExpanded("");
+          setOpen(true);
+        }}
         aria-label="Open menu"
         aria-expanded={open}
         aria-controls="mobile-nav-drawer"
