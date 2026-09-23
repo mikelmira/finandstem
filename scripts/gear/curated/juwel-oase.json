@@ -1,0 +1,2240 @@
+[
+ {
+  "id": "juwel-rio-led",
+  "brand": "Juwel",
+  "name": "Rio LED",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "Juwel's classic rectangular tank, sold with the filter, heater and lighting already fitted. Every size comes with a Bioflow internal filter tucked into a rear corner, an AquaHeat heater inside that filter and a MultiLux LED unit in the lid. It is a framed, lidded tank, so it suits community planted tanks more than open, rimless aquascapes.",
+  "highlights": [
+   "Six sizes from 125 to 450 litres, all with filter, heater and light included",
+   "Bioflow internal filter sits in the back corner, so there are no hoses or canister to house",
+   "MultiLux LED lid with two replaceable tubes; HeliaLux Spectrum is a direct upgrade",
+   "Matching cabinet available for every size in black, white, grey or light wood"
+  ],
+  "bestFor": "Keepers who want a complete, matched setup in one box and are happy with a lidded, framed look.",
+  "watchOut": "The stock two-tube MultiLux suits easy plants; a demanding carpet in the deeper sizes will want a stronger light and CO2.",
+  "specs": {
+   "Included": "Bioflow internal filter, AquaHeat heater, MultiLux LED lighting",
+   "Cabinet": "Optional matching cabinet (73 cm tall for 125/180/240, 80 cm for 290/350/450)",
+   "Colours": "Black, white, grey, light wood"
+  },
+  "models": [
+   {
+    "name": "125",
+    "volumeL": 125,
+    "lengthCm": 81,
+    "widthCm": 36,
+    "heightCm": 50,
+    "extra": {
+     "Filter": "Bioflow M",
+     "Heater": "AquaHeat 100 W",
+     "Lighting": "MultiLux LED 80 (2 x 14 W tubes)"
+    }
+   },
+   {
+    "name": "180",
+    "volumeL": 180,
+    "lengthCm": 101,
+    "widthCm": 41,
+    "heightCm": 50,
+    "extra": {
+     "Filter": "Bioflow M with Eccoflow 600 pump",
+     "Heater": "AquaHeat 200 W",
+     "Lighting": "MultiLux LED 100"
+    }
+   },
+   {
+    "name": "240",
+    "volumeL": 240,
+    "lengthCm": 121,
+    "widthCm": 41,
+    "heightCm": 55,
+    "extra": {
+     "Filter": "Bioflow M with Eccoflow 600 pump",
+     "Heater": "AquaHeat 200 W",
+     "Lighting": "MultiLux LED 120"
+    }
+   },
+   {
+    "name": "290",
+    "volumeL": 290,
+    "lengthCm": 101,
+    "widthCm": 51,
+    "heightCm": 66,
+    "extra": {
+     "Filter": "Bioflow L",
+     "Heater": "AquaHeat 300 W",
+     "Lighting": "MultiLux LED 100"
+    }
+   },
+   {
+    "name": "350",
+    "volumeL": 350,
+    "lengthCm": 121,
+    "widthCm": 51,
+    "heightCm": 66,
+    "extra": {
+     "Filter": "Bioflow L with Eccoflow 1000 pump",
+     "Heater": "AquaHeat 300 W",
+     "Lighting": "MultiLux LED 120"
+    }
+   },
+   {
+    "name": "450",
+    "volumeL": 450,
+    "lengthCm": 151,
+    "widthCm": 51,
+    "heightCm": 66,
+    "extra": {
+     "Filter": "Bioflow XL",
+     "Heater": "AquaHeat 300 W",
+     "Lighting": "MultiLux LED 150"
+    }
+   }
+  ],
+  "priceFrom": 309.0,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-rio-350-led-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-rio-125-led-aquarium-only_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-rio-350-led-aquarium-only_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-rio-240-led-aquarium-only_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-rio-350-led-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-lido-led",
+  "brand": "Juwel",
+  "name": "Lido LED",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "A taller, deeper take on the Rio, with a near-cube footprint that gives you more front-to-back room for layering plants and hardscape. Like the rest of the Juwel range it arrives with a Bioflow internal filter, AquaHeat heater and MultiLux LED lid. The extra height looks great but makes light reach the substrate a bit harder.",
+  "highlights": [
+   "Two sizes, 120 and 200 litres, with a deep, tall footprint",
+   "Bioflow M internal filter and AquaHeat heater fitted in the rear corner",
+   "MultiLux LED lighting in the lid, upgradeable to HeliaLux Spectrum",
+   "Optional matching cabinet in black, white, grey or light wood"
+  ],
+  "bestFor": "Anyone with limited wall length who still wants depth for a layered scape or taller stem plants.",
+  "watchOut": "At 58 to 65 cm tall, the stock light struggles to grow demanding foreground plants at the bottom.",
+  "specs": {
+   "Included": "Bioflow M internal filter, AquaHeat heater, MultiLux LED lighting",
+   "Cabinet": "Optional matching cabinet (73 cm tall for 120, 80 cm for 200)",
+   "Colours": "Black, white, grey, light wood"
+  },
+  "models": [
+   {
+    "name": "120",
+    "volumeL": 120,
+    "lengthCm": 61,
+    "widthCm": 41,
+    "heightCm": 58,
+    "extra": {
+     "Filter": "Bioflow M with Eccoflow 500 pump",
+     "Heater": "AquaHeat 100 W",
+     "Lighting": "MultiLux LED 60"
+    }
+   },
+   {
+    "name": "200",
+    "volumeL": 200,
+    "lengthCm": 71,
+    "widthCm": 51,
+    "heightCm": 65,
+    "extra": {
+     "Filter": "Bioflow M with Eccoflow 600 pump",
+     "Heater": "AquaHeat 200 W",
+     "Lighting": "MultiLux LED 70"
+    }
+   }
+  ],
+  "priceFrom": 259.0,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-lido-200-led-aquarium-only_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-lido-200-led-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-lido-120-led-aquarium-only_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-lido-200-led-aquarium-and-cabinet_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-lido-200-led-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-vision-led",
+  "brand": "Juwel",
+  "name": "Vision LED",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "Juwel's bow-front tank, where a curved front pane gives the scape a wider, more immersive look from the sofa. It comes as a set with a matching cabinet, plus the usual Bioflow internal filter, AquaHeat heater and MultiLux LED lighting. The curve adds drama but also some distortion when you view from an angle.",
+  "highlights": [
+   "Curved front glass for a panoramic view of the layout",
+   "Three sizes: 180, 260 and 450 litres",
+   "Supplied with matching cabinet, Bioflow filter, heater and MultiLux LED",
+   "Deeper 46 to 61 cm footprint on the larger models leaves room for layering"
+  ],
+  "bestFor": "Living-room display tanks where the tank is a feature piece and you like the bow-front look.",
+  "watchOut": "Curved glass bends the view at the edges, which some aquascapers find distracting for photos.",
+  "specs": {
+   "Included": "Matching cabinet (73 cm tall), Bioflow internal filter, AquaHeat heater, MultiLux LED lighting",
+   "Glass": "Curved front pane",
+   "Colours": "Black, white, light wood"
+  },
+  "models": [
+   {
+    "name": "180",
+    "volumeL": 180,
+    "lengthCm": 92,
+    "widthCm": 41,
+    "heightCm": 55,
+    "extra": {
+     "Filter": "Bioflow M with Eccoflow 600 pump",
+     "Heater": "AquaHeat 200 W",
+     "Lighting": "MultiLux LED 92 (2 x 19 W tubes)"
+    }
+   },
+   {
+    "name": "260",
+    "volumeL": 260,
+    "lengthCm": 121,
+    "widthCm": 46,
+    "heightCm": 64,
+    "extra": {
+     "Filter": "Bioflow L with Eccoflow 1000 pump",
+     "Heater": "AquaHeat 300 W",
+     "Lighting": "MultiLux LED 120 (2 x 29 W tubes)"
+    }
+   },
+   {
+    "name": "450",
+    "volumeL": 450,
+    "lengthCm": 151,
+    "widthCm": 61,
+    "heightCm": 64,
+    "extra": {
+     "Filter": "Bioflow XL with Eccoflow 1000 pump",
+     "Heater": "AquaHeat 300 W",
+     "Lighting": "MultiLux LED 150 (4-tube unit, 31 W tubes)"
+    }
+   }
+  ],
+  "priceFrom": 664.0,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vision-180-led-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vision-260-led-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vision-450-led-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vision-180-led-aquarium-and-cabinet_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-vision-180-led-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-trigon-led",
+  "brand": "Juwel",
+  "name": "Trigon LED",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "A corner aquarium with a curved front, designed to tuck into the corner of a room and still show off a lot of water. It ships with a matching corner cabinet, a Bioflow internal filter, AquaHeat heater and MultiLux LED lighting. The triangular footprint gives real depth, but it is an awkward shape for a classic aquascape layout.",
+  "highlights": [
+   "Corner shape makes use of space most tanks cannot",
+   "Two sizes: 190 and 350 litres",
+   "Supplied with matching corner cabinet, Bioflow filter, heater and MultiLux LED",
+   "Depth of 70 to 87 cm gives a strong sense of perspective"
+  ],
+  "bestFor": "Rooms where a corner is the only spot for a sizeable tank and you want a complete, matched set.",
+  "watchOut": "Deep water and a wide triangular lid make even lighting and reaching the back for planting and trimming harder.",
+  "specs": {
+   "Included": "Matching corner cabinet (73 cm tall), Bioflow internal filter, AquaHeat heater, MultiLux LED lighting",
+   "Shape": "Corner tank with curved front",
+   "Colours": "Black, white, light wood"
+  },
+  "models": [
+   {
+    "name": "190",
+    "volumeL": 190,
+    "lengthCm": 98.5,
+    "widthCm": 70,
+    "heightCm": 60,
+    "extra": {
+     "Filter": "Bioflow M with Eccoflow 600 pump",
+     "Heater": "AquaHeat 200 W",
+     "Lighting": "MultiLux LED (2 x 14 W tubes)"
+    }
+   },
+   {
+    "name": "350",
+    "volumeL": 350,
+    "lengthCm": 123,
+    "widthCm": 87,
+    "heightCm": 65,
+    "extra": {
+     "Filter": "Bioflow XL with Eccoflow 1000 pump",
+     "Heater": "AquaHeat 300 W",
+     "Lighting": "MultiLux LED (12 W and 23 W tubes)"
+    }
+   }
+  ],
+  "priceFrom": 845.0,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-trigon-190-led-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-trigon-350-led-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-trigon-190-led-aquarium-and-cabinet_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-trigon-350-led-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-primo-led",
+  "brand": "Juwel",
+  "name": "Primo LED",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "Juwel's entry-level 60 cm tank, with a lid, LED light, small internal filter and heater all included. It sits on a built-in safety base frame, so it goes straight onto a sturdy surface without a mat. A sensible first planted tank for easy species, though the single small LED limits what you can grow.",
+  "highlights": [
+   "Two heights on the same 61 x 31 cm footprint: 57 and 70 litres",
+   "Bioflow One internal filter with 300 L/h pump and AquaHeat 50 W heater hidden in the filter",
+   "NovoLux LED 60 light (8 W); the lid takes up to three units",
+   "Feeding hatch in the lid fits Juwel automatic feeders"
+  ],
+  "bestFor": "Beginners wanting a complete 60 cm tank for low-light plants, shrimp or a small community.",
+  "watchOut": "One 8 W NovoLux is only enough for undemanding plants such as Anubias, ferns and Cryptocoryne.",
+  "specs": {
+   "Included": "Bioflow One filter with Eccoflow 300 pump (4.4 W), AquaHeat 50 W heater, NovoLux LED 60 (8 W)",
+   "Colours": "Black, white (Primo 70); black (Primo 60)",
+   "Base": "Integrated safety base frame"
+  },
+  "models": [
+   {
+    "name": "60",
+    "volumeL": 57,
+    "lengthCm": 61,
+    "widthCm": 31,
+    "heightCm": 37,
+    "glassMm": 4
+   },
+   {
+    "name": "70",
+    "volumeL": 70,
+    "lengthCm": 61,
+    "widthCm": 31,
+    "heightCm": 44,
+    "glassMm": 5
+   }
+  ],
+  "priceFrom": 115.95,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-primo-led-aquarium_3.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-primo-led-aquarium_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-primo-led-aquarium_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-primo-led-aquarium",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-vio-cube",
+  "brand": "Juwel",
+  "name": "Vio Cube",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "A compact 54 litre cube from Juwel that comes ready to run with filter, heater and LED lighting. The cube shape suits an iwagumi or a small jungle scape viewed from the front, and it fits on a desk or sideboard. A matching SBX cabinet is sold separately if you want it at viewing height.",
+  "highlights": [
+   "54 litres in a 41 x 36 x 47 cm cube with 5 mm glass",
+   "Bioflow S filter with a 300 L/h Eccoflow pump and AquaHeat 50 W heater included",
+   "NovoLux LED 40 Neo lighting in the cover, with a feeding opening",
+   "Built-in base frame, so no separate mat is needed"
+  ],
+  "bestFor": "Small-space keepers wanting a tidy, complete nano setup for shrimp, small fish and easy plants.",
+  "watchOut": "The lidded design and small included light suit low-tech planting rather than a high-light CO2 scape.",
+  "specs": {
+   "Included": "Bioflow S filter with Eccoflow 300 pump (4.4 W), AquaHeat 50 W heater, NovoLux LED 40 Neo",
+   "Colours": "Black, white",
+   "Cabinet": "Optional Vio Cube SBX cabinet (73 cm tall)",
+   "Weight": "12.4 kg empty"
+  },
+  "models": [
+   {
+    "name": "54",
+    "volumeL": 54,
+    "lengthCm": 41,
+    "widthCm": 36,
+    "heightCm": 47,
+    "glassMm": 5,
+    "weightKg": 12.4
+   }
+  ],
+  "priceFrom": 135.0,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vio-cube-freshwater-aquarium_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vio-cube-freshwater-aquarium_3.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vio-cube-freshwater-aquarium_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-vio-cube-freshwater-aquarium",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-highline-optiwhite",
+  "brand": "Oase",
+  "name": "HighLine Optiwhite",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "Oase's large furniture-style aquarium sets, pairing a low-iron Optiwhite tank with a flush, handle-free cabinet. Unlike the Juwel sets, lighting and filtration are not included: you choose your own lights and an external filter, which sits on a pull-out shelf inside the cabinet. That makes it a good blank canvas for a serious planted tank, at a serious price.",
+  "highlights": [
+   "Optiwhite glass for a clear view without the green tint",
+   "Four sizes from 202 to 580 litres, 10 to 12 mm glass",
+   "Pull-out cabinet shelf and dry duct for an external filter and tidy cables",
+   "Removable aluminium lid with feeding flap; lighting chosen separately"
+  ],
+  "bestFor": "Keepers planning a large, long-term display who want to pick their own canister filter and lights.",
+  "watchOut": "The price covers only tank and cabinet; budget separately for lights, filter and heater.",
+  "specs": {
+   "Included": "Aquarium, base cabinet and connections; no light, filter or heater",
+   "Glass": "Optiwhite (low iron)",
+   "Lighting": "Sold separately (Oase Classic LED or Premium LED)",
+   "Finishes": "Anthracite, white, wild oak",
+   "Cabinet": "Push-to-open doors, adjustable feet, pull-out filter shelf, optional drawers"
+  },
+  "models": [
+   {
+    "name": "200",
+    "volumeL": 202,
+    "lengthCm": 90,
+    "widthCm": 50,
+    "heightCm": 49,
+    "glassMm": 10,
+    "extra": {
+     "Height with cabinet": "125 cm",
+     "Set weight": "123.5 kg"
+    }
+   },
+   {
+    "name": "300",
+    "volumeL": 302,
+    "lengthCm": 115,
+    "widthCm": 50,
+    "heightCm": 56,
+    "glassMm": 10,
+    "extra": {
+     "Height with cabinet": "132 cm",
+     "Set weight": "145.5 kg"
+    }
+   },
+   {
+    "name": "400",
+    "volumeL": 413,
+    "lengthCm": 140,
+    "widthCm": 50,
+    "heightCm": 63,
+    "glassMm": 12,
+    "extra": {
+     "Height with cabinet": "139 cm",
+     "Set weight": "196 kg"
+    }
+   },
+   {
+    "name": "600",
+    "volumeL": 580,
+    "lengthCm": 160,
+    "widthCm": 60,
+    "heightCm": 65,
+    "glassMm": 12,
+    "extra": {
+     "Height with cabinet": "142 cm"
+    }
+   }
+  ],
+  "priceFrom": 1346.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-highline-200-optiwhite-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-highline-400-optiwhite-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-highline-600-optiwhite-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-highline-400-optiwhite-aquarium-and-cabinet_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-highline-200-optiwhite-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-scaperline",
+  "brand": "Oase",
+  "name": "ScaperLine",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "A rimless, mitre-cut Optiwhite tank built for aquascaping, sold as a set with a flush matching cabinet. The cabinet is laid out for a scaper, with a pull-out shelf for an external filter, magnetic tool holders and a hidden cable port. No light or filter is included, so you build the tech around it yourself.",
+  "highlights": [
+   "Rimless Optiwhite glass with hand-glued mitred edges",
+   "Three sizes: 75, 180 and 250 litres",
+   "Cabinet has a pull-out filter shelf, magnetic tool and towel holders",
+   "Handle-free, push-to-open doors keep the lines clean"
+  ],
+  "bestFor": "Aquascapers who want an open-top, show-quality tank and cabinet that match, and already know which light and filter they want.",
+  "watchOut": "Open-top tanks lose more water to evaporation and need a light that hangs or mounts on the rim.",
+  "specs": {
+   "Included": "Aquarium and matching cabinet; no light, filter or heater",
+   "Glass": "Optiwhite, mitre-cut, rimless",
+   "Colours": "Black or grey (white cabinet also offered)",
+   "Cabinet": "Also sold on its own (see ScaperLine Cabinet)"
+  },
+  "models": [
+   {
+    "name": "60",
+    "volumeL": 75,
+    "lengthCm": 60,
+    "widthCm": 35,
+    "heightCm": 35,
+    "glassMm": 6,
+    "extra": {
+     "Height with cabinet": "116 cm"
+    }
+   },
+   {
+    "name": "90",
+    "volumeL": 180,
+    "lengthCm": 90,
+    "widthCm": 45,
+    "heightCm": 45,
+    "glassMm": 8,
+    "extra": {
+     "Height with cabinet": "126 cm"
+    }
+   },
+   {
+    "name": "100",
+    "volumeL": 250,
+    "lengthCm": 100,
+    "widthCm": 50,
+    "heightCm": 50,
+    "glassMm": 10,
+    "extra": {
+     "Height with cabinet": "131 cm"
+    }
+   }
+  ],
+  "priceFrom": 764.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-scaperline-100-grey-optiwhite-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-scaperline-60-optiwhite-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-scaperline-90-black-optiwhite-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-scaperline-100-grey-optiwhite-aquarium-and-cabinet_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-scaperline-100-grey-optiwhite-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-styleline",
+  "brand": "Oase",
+  "name": "StyleLine",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "Oase's complete starter sets: tank, cabinet, BioPlus Thermo internal filter with built-in heater, and a pair of Classic LED daylight tubes. A removable glass sliding cover and aluminium trim along the bottom hide the waterline and substrate edge. It is a tidy, modern-looking all-in-one for someone who does not want to piece a system together.",
+  "highlights": [
+   "Three sizes: 75, 115 and 160 litres",
+   "BioPlus Thermo corner filter with integrated heater included",
+   "Two Classic LED daylight (6,500 K) tubes supplied",
+   "Push-to-open cabinet with internal shelf"
+  ],
+  "bestFor": "Beginners after a complete, good-looking tank and cabinet set for a low-tech planted community tank.",
+  "watchOut": "The two daylight tubes are enough for easy plants, but a high-light setup would need a lighting upgrade.",
+  "specs": {
+   "Included": "Aquarium, cabinet, BioPlus Thermo internal filter, 2 x Classic LED daylight",
+   "Cover": "Removable opaque glass sliding cover",
+   "Colours": "Black, white"
+  },
+  "models": [
+   {
+    "name": "85",
+    "volumeL": 75,
+    "lengthCm": 50,
+    "widthCm": 36,
+    "heightCm": 42,
+    "glassMm": 6,
+    "extra": {
+     "Filter": "BioPlus Thermo 100",
+     "Height with cabinet": "145 cm"
+    }
+   },
+   {
+    "name": "125",
+    "volumeL": 115,
+    "lengthCm": 70,
+    "widthCm": 36,
+    "heightCm": 50,
+    "glassMm": 6,
+    "extra": {
+     "Filter": "BioPlus Thermo 200",
+     "Height with cabinet": "122 cm"
+    }
+   },
+   {
+    "name": "175",
+    "volumeL": 160,
+    "lengthCm": 80,
+    "widthCm": 40,
+    "heightCm": 55,
+    "glassMm": 8,
+    "extra": {
+     "Filter": "BioPlus Thermo corner filter"
+    }
+   }
+  ],
+  "priceFrom": 315.95,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-styleline-175-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-styleline-125-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-styleline-85-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-styleline-175-aquarium-and-cabinet_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-styleline-175-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-vio-cube-sbx-cabinet",
+  "brand": "Juwel",
+  "name": "Vio Cube SBX Cabinet",
+  "category": "stands",
+  "subtype": "cabinet",
+  "summary": "The matching cabinet for the Juwel Vio Cube 54. It matches the tank's 41 x 36 cm footprint exactly and lifts it to a comfortable viewing height, with a shelf inside for food and spares.",
+  "highlights": [
+   "Made for the Vio Cube 54 footprint",
+   "41 x 36 x 73 cm",
+   "Door and internal shelf for storage",
+   "Black or white to match the tank"
+  ],
+  "bestFor": "Vio Cube owners who want the tank freestanding at eye level rather than on existing furniture.",
+  "specs": {
+   "Fits": "Juwel Vio Cube 54",
+   "Colours": "Black, white"
+  },
+  "models": [
+   {
+    "name": "SBX",
+    "lengthCm": 41,
+    "widthCm": 36,
+    "heightCm": 73
+   }
+  ],
+  "priceFrom": 99.0,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vio-cube-sbx-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vio-cube-sbx-cabinet_3.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-vio-cube-sbx-cabinet_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-vio-cube-sbx-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-scaperline-cabinet",
+  "brand": "Oase",
+  "name": "ScaperLine Cabinet",
+  "category": "stands",
+  "subtype": "cabinet",
+  "summary": "The base cabinet from the ScaperLine set, sold on its own. It sits flush with the ScaperLine 100 tank and has the scaper-friendly details: a pull-out shelf for an external filter, a magnetic tool holder, towel holder and a sealable cable channel.",
+  "highlights": [
+   "Sized to sit flush under the ScaperLine 100 aquarium",
+   "Pull-out shelf for an external filter",
+   "Magnetic holder for scissors and tweezers, plus a towel rail",
+   "Optional back panel turns it into a room divider"
+  ],
+  "bestFor": "Anyone buying a ScaperLine 100 tank separately, or replacing the cabinet.",
+  "watchOut": "It is made for the ScaperLine 100 footprint, so check dimensions before using it with another tank.",
+  "specs": {
+   "Fits": "Oase ScaperLine 100",
+   "Finish": "Grey (black and white also made)",
+   "Doors": "Push-to-open, no handles"
+  },
+  "models": [
+   {
+    "name": "100"
+   }
+  ],
+  "priceFrom": 350.0,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-scaperline-100-grey-cabinet_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-scaperline-100-grey-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-helialux-spectrum",
+  "brand": "Juwel",
+  "name": "HeliaLux Spectrum",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "Juwel's step-up LED bar, with white LEDs at 9,000 K and 6,500 K plus red, green and blue channels. It drops into any Juwel tank with a fixed top frame, and a UniversalFit holder lets it sit on other tanks too. Compared with the stock MultiLux it adds colour channels and, with the SmartControl or AppControl added, dimming and scheduling.",
+  "highlights": [
+   "Eight lengths from 55 to 150 cm to match Juwel tanks",
+   "White plus RGB LEDs for plant growth and better colour rendering",
+   "About 140 lumens per watt, with aluminium honeycomb heat sinks",
+   "Scratch-resistant safety glass over the LEDs"
+  ],
+  "bestFor": "Juwel tank owners who want to grow a wider range of plants than the stock MultiLux allows.",
+  "watchOut": "Dimming, sunrise and colour control need the HeliaLux SmartControl or AppControl, sold separately.",
+  "specs": {
+   "LEDs": "White 9,000 K and 6,500 K plus red, green and blue",
+   "Efficacy": "About 140 lm/W",
+   "Mounting": "Juwel tanks with fixed top frame; UniversalFit holder for other tanks",
+   "Control": "Optional HeliaLux SmartControl / AppControl"
+  },
+  "models": [
+   {
+    "name": "550",
+    "lengthCm": 53.4,
+    "powerW": 27,
+    "extra": {
+     "Fits": "Trigon 350, Lido 100"
+    }
+   },
+   {
+    "name": "600",
+    "lengthCm": 59.3,
+    "powerW": 29,
+    "extra": {
+     "Fits": "Lido 120"
+    }
+   },
+   {
+    "name": "700",
+    "lengthCm": 69.3,
+    "powerW": 32,
+    "extra": {
+     "Fits": "Trigon 190, Lido 200"
+    }
+   },
+   {
+    "name": "800",
+    "lengthCm": 79.3,
+    "powerW": 32,
+    "extra": {
+     "Fits": "Rio 125"
+    }
+   },
+   {
+    "name": "920",
+    "lengthCm": 91.3,
+    "powerW": 40,
+    "extra": {
+     "Fits": "Vision 180"
+    }
+   },
+   {
+    "name": "1000",
+    "lengthCm": 99.3,
+    "powerW": 48,
+    "extra": {
+     "Fits": "Rio 180, Rio 200, Trigon 350"
+    }
+   },
+   {
+    "name": "1200",
+    "lengthCm": 119.2,
+    "powerW": 60,
+    "extra": {
+     "Fits": "Rio 240, Rio 300, Rio 350, Vision 260"
+    }
+   },
+   {
+    "name": "1500",
+    "lengthCm": 149.2,
+    "powerW": 60,
+    "extra": {
+     "Fits": "Rio 400, Rio 450, Vision 450"
+    }
+   }
+  ],
+  "priceFrom": 179.95,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-helialux-spectrum-freshwater-led-light_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-helialux-spectrum-freshwater-led-light",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-multilux-led",
+  "brand": "Juwel",
+  "name": "MultiLux LED",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "The standard light unit fitted to Juwel's LED aquariums, holding two replaceable glass LED tubes (one DAY, one NATURE). It is sealed against moisture and lets you work in the tank with the light on. Buying one on its own makes sense for replacing a T5 unit or a broken lid light.",
+  "highlights": [
+   "Eight lengths from 55 to 150 cm to fit Juwel tanks",
+   "Two replaceable LED tubes, 9,000 K and 6,500 K",
+   "Moisture-blocking membrane keeps the unit dry",
+   "Roughly half the energy of the old T5 units"
+  ],
+  "bestFor": "Juwel owners converting from T5 or replacing a lid light for a low-light planted or community tank.",
+  "watchOut": "There is no dimming or scheduling built in, so plan on a plug-in timer, or look at the HeliaLux Spectrum if you want control.",
+  "specs": {
+   "Tubes": "2 x replaceable Juwel LED tubes (DAY and NATURE fitted)",
+   "Colour temperature": "9,000 K and 6,500 K",
+   "Mounting": "Juwel aquariums"
+  },
+  "models": [
+   {
+    "name": "55",
+    "lengthCm": 53.3,
+    "powerW": 24,
+    "extra": {
+     "Tubes": "2 x 438 mm",
+     "Fits": "Trigon 350"
+    }
+   },
+   {
+    "name": "60",
+    "lengthCm": 59.3,
+    "powerW": 24,
+    "extra": {
+     "Tubes": "2 x 438 mm",
+     "Fits": "Lido 120"
+    }
+   },
+   {
+    "name": "70",
+    "lengthCm": 69.3,
+    "powerW": 28,
+    "extra": {
+     "Tubes": "2 x 590 mm",
+     "Fits": "Trigon 190, Lido 200"
+    }
+   },
+   {
+    "name": "80",
+    "lengthCm": 79.3,
+    "powerW": 28,
+    "extra": {
+     "Tubes": "2 x 590 mm",
+     "Fits": "Rio 125"
+    }
+   },
+   {
+    "name": "92",
+    "lengthCm": 91.3,
+    "powerW": 38,
+    "extra": {
+     "Tubes": "2 x 742 mm",
+     "Fits": "Vision 180"
+    }
+   },
+   {
+    "name": "100",
+    "lengthCm": 99.3,
+    "powerW": 46,
+    "extra": {
+     "Tubes": "2 x 895 mm",
+     "Fits": "Rio 180, Trigon 350"
+    }
+   },
+   {
+    "name": "120",
+    "lengthCm": 119.2,
+    "powerW": 58,
+    "extra": {
+     "Tubes": "2 x 1047 mm",
+     "Fits": "Rio 240, Rio 300, Vision 260"
+    }
+   },
+   {
+    "name": "150",
+    "lengthCm": 149.2,
+    "extra": {
+     "Tubes": "2 x 1200 mm",
+     "Fits": "Rio 450, Vision 450"
+    }
+   }
+  ],
+  "priceFrom": 124.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-multilux-led-light-unit_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-multilux-led-light-unit_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-multilux-led-light-unit",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-highline-classic-led",
+  "brand": "Oase",
+  "name": "HighLine Classic LED",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "A slim, fully waterproof LED tube in a 6,500 K daylight tone, made as the lighting for Oase HighLine aquariums. Each tube has its own on/off switch and is IP68 rated, and it fits other tanks with compatible holders. HighLine tanks are usually lit with two of these side by side.",
+  "highlights": [
+   "Five lengths from 40 to 120 cm",
+   "900 to 2,950 lumens per tube",
+   "IP68 waterproof with inline toggle switch",
+   "Daylight spectrum suited to plants and natural colours"
+  ],
+  "bestFor": "HighLine owners, or anyone wanting simple, waterproof daylight tubes for a low to medium-light tank.",
+  "watchOut": "No dimming or scheduling on its own; you will want a plug-in timer.",
+  "specs": {
+   "Colour": "Daylight (6,500 K)",
+   "Protection": "IP68",
+   "Diameter": "24 mm",
+   "Switch": "Inline toggle"
+  },
+  "models": [
+   {
+    "name": "Daylight 40",
+    "sku": "70182",
+    "lengthCm": 40,
+    "powerW": 8,
+    "lumens": 900,
+    "extra": {
+     "LEDs": "42",
+     "Fits": "HighLine 125"
+    }
+   },
+   {
+    "name": "Daylight 60",
+    "sku": "70184",
+    "lengthCm": 60,
+    "powerW": 12,
+    "lumens": 1300,
+    "extra": {
+     "LEDs": "42"
+    }
+   },
+   {
+    "name": "Daylight 70",
+    "sku": "48257",
+    "lengthCm": 70,
+    "powerW": 16,
+    "lumens": 1650,
+    "extra": {
+     "LEDs": "45",
+     "Fits": "HighLine 200"
+    }
+   },
+   {
+    "name": "Daylight 100",
+    "sku": "48258",
+    "lengthCm": 101.5,
+    "powerW": 18,
+    "lumens": 1820,
+    "extra": {
+     "LEDs": "45",
+     "Fits": "HighLine 300"
+    }
+   },
+   {
+    "name": "Daylight 120",
+    "sku": "48259",
+    "lengthCm": 120,
+    "powerW": 28,
+    "lumens": 2950,
+    "extra": {
+     "LEDs": "90",
+     "Fits": "HighLine 400"
+    }
+   }
+  ],
+  "priceFrom": 39.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-highline-classic-led_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-highline-classic-led",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-motioncontrol-led",
+  "brand": "Oase",
+  "name": "MotionControl LED",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "Oase's controllable LED bar with four channels: neutral white, cool white, royal blue and red. Through the Oase aquarium controller and app you can set colour and intensity by segment and run sunrise and sunset effects. It is freshwater only and IP68 sealed, with a thin 15 mm profile.",
+  "highlights": [
+   "Five lengths from 44 to 133 cm",
+   "Neutral white, cool white, royal blue and red LEDs",
+   "Segment-by-segment colour and brightness control via app",
+   "IP68 waterproof, no condensation inside the housing"
+  ],
+  "bestFor": "Keepers with an Oase HighLine or ScaperLine who want app-controlled, adjustable-spectrum lighting.",
+  "watchOut": "It needs the Oase aquarium controller and 120 W Control transformer, both sold separately, so the real cost is higher than the bar alone.",
+  "specs": {
+   "Channels": "Neutral white, cool white, royal blue, red",
+   "Control": "Oase aquarium controller and app (sold separately); IR control set optional",
+   "Power supply": "Oase Control Aquarium Transformer 120 W (sold separately)",
+   "Protection": "IP68",
+   "Water type": "Freshwater only"
+  },
+  "models": [
+   {
+    "name": "45",
+    "sku": "96446",
+    "lengthCm": 44,
+    "widthCm": 10,
+    "heightCm": 1.5,
+    "weightKg": 0.8
+   },
+   {
+    "name": "65",
+    "sku": "96447",
+    "lengthCm": 64,
+    "widthCm": 10,
+    "heightCm": 1.5,
+    "weightKg": 1.29
+   },
+   {
+    "name": "80",
+    "sku": "96448",
+    "lengthCm": 83,
+    "widthCm": 10,
+    "heightCm": 1.5,
+    "weightKg": 1.3
+   },
+   {
+    "name": "100",
+    "sku": "96449",
+    "lengthCm": 104,
+    "widthCm": 10,
+    "heightCm": 1.5,
+    "weightKg": 1.5
+   },
+   {
+    "name": "120",
+    "sku": "96450",
+    "lengthCm": 133,
+    "widthCm": 10,
+    "heightCm": 1.5,
+    "weightKg": 1.8
+   }
+  ],
+  "priceFrom": 129.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-motioncontrol-45-led_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-motioncontrol-120-led_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-motioncontrol-45-led",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-biomaster-2",
+  "brand": "Oase",
+  "name": "BioMaster 2",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "Oase's main canister filter, built around a pre-filter module you lift out and rinse without opening the whole canister. Water passes through foam first, so the Hel-X biological media behind it stays clean for much longer. A heater can be retrofitted later, and there is a Thermo version with one already fitted.",
+  "highlights": [
+   "Five sizes for tanks from 150 to 850 litres",
+   "Pre-filter lifts out for a quick rinse without opening the canister",
+   "3 to 8 litres of media including Hel-X",
+   "Priming button and auto shut-off valves make restarts easy"
+  ],
+  "bestFor": "Medium to large planted tanks where you want long gaps between full cleans and easy weekly pre-filter rinses.",
+  "watchOut": "Rated flow drops once hoses, lily pipes and media are fitted, so size up for a heavily planted tank.",
+  "specs": {
+   "Hose size": "12/16 mm (150), 16/22 mm (250 to 850)",
+   "Pre-filter": "EasyClean removable pre-filter module, 30/45 ppi sponges",
+   "Biological media": "Hel-X plus filter sponges",
+   "Priming": "Priming/venting button",
+   "Safety": "Automatic shut-off valve when the pre-filter is removed",
+   "Thermo versions": "Available with a built-in heater (models marked Thermo), which keeps the heater out of the tank"
+  },
+  "models": [
+   {
+    "name": "150",
+    "sku": "99161",
+    "flowLph": 650,
+    "tankMaxL": 150,
+    "powerW": 10,
+    "mediaL": 3.0,
+    "hoseMm": 12,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 31.5
+   },
+   {
+    "name": "250",
+    "sku": "94717",
+    "flowLph": 945,
+    "tankMaxL": 250,
+    "powerW": 15,
+    "mediaL": 4.4,
+    "hoseMm": 16,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 31.5
+   },
+   {
+    "name": "350",
+    "sku": "94709",
+    "flowLph": 1100,
+    "tankMaxL": 350,
+    "powerW": 18,
+    "mediaL": 5.6,
+    "hoseMm": 16
+   },
+   {
+    "name": "600",
+    "sku": "94701",
+    "flowLph": 1400,
+    "tankMaxL": 600,
+    "powerW": 22,
+    "mediaL": 6.8,
+    "hoseMm": 16,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 48
+   },
+   {
+    "name": "850",
+    "sku": "94695",
+    "flowLph": 1550,
+    "tankMaxL": 850,
+    "powerW": 28,
+    "mediaL": 8.0,
+    "hoseMm": 16,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 53.5
+   },
+   {
+    "name": "150 Thermo",
+    "sku": "99165",
+    "flowLph": 650,
+    "tankMaxL": 150,
+    "powerW": 10,
+    "heaterW": 150,
+    "mediaL": 3.0,
+    "hoseMm": 12,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 31.5
+   },
+   {
+    "name": "250 Thermo",
+    "sku": "94690",
+    "flowLph": 945,
+    "tankMaxL": 250,
+    "powerW": 15,
+    "heaterW": 150,
+    "mediaL": 4.4,
+    "hoseMm": 16,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 31.5
+   },
+   {
+    "name": "350 Thermo",
+    "sku": "94685",
+    "flowLph": 1100,
+    "tankMaxL": 350,
+    "powerW": 18,
+    "heaterW": 200,
+    "mediaL": 5.6,
+    "hoseMm": 16
+   },
+   {
+    "name": "600 Thermo",
+    "sku": "94680",
+    "flowLph": 1400,
+    "tankMaxL": 600,
+    "powerW": 22,
+    "heaterW": 300,
+    "mediaL": 6.8,
+    "hoseMm": 16,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 48
+   },
+   {
+    "name": "850 Thermo",
+    "sku": "94675",
+    "flowLph": 1550,
+    "tankMaxL": 850,
+    "powerW": 28,
+    "heaterW": 400,
+    "mediaL": 8.0,
+    "hoseMm": 16,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 53.5
+   }
+  ],
+  "priceFrom": 174.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-biomaster-2-external-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-biomaster-2-external-filter_3.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-biomaster-2-external-filter_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-biomaster-2-external-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-filtosmart",
+  "brand": "Oase",
+  "name": "FiltoSmart",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A compact, budget-friendly canister from Oase for small and mid-sized tanks. It has a self-venting start, shut-off valves on the connectors and an EasyClick lid, and it comes complete with media, hoses and pipes. The smallest model is a genuinely tiny canister that suits nano tanks.",
+  "highlights": [
+   "Four sizes for tanks from 60 to 300 litres",
+   "FiltoSmart 60 is small enough for a nano cabinet or beside the tank",
+   "Self-venting start-up and shut-off valves for spill-free cleaning",
+   "Flow adjustable at the inlet and outlet adapters"
+  ],
+  "bestFor": "Nano to mid-sized planted tanks where you want a quiet canister without paying BioMaster money.",
+  "watchOut": "Media volume is modest on the 60 and 100, so they need cleaning more often than bigger canisters.",
+  "specs": {
+   "Hose size": "8/12 mm (60), 12/16 mm (100), 16/22 mm (200, 300)",
+   "Opening": "EasyClick lid",
+   "Supplied with": "Media, hoses, adapters, intake and outflow pipes, spray diffuser",
+   "Cable length": "1.5 m",
+   "Thermo versions": "Available with a built-in heater (models marked Thermo), which keeps the heater out of the tank"
+  },
+  "models": [
+   {
+    "name": "60",
+    "sku": "42680",
+    "flowLph": 300,
+    "headM": 0.7,
+    "tankMaxL": 60,
+    "powerW": 5,
+    "mediaL": 0.5,
+    "hoseMm": 8,
+    "lengthCm": 15,
+    "widthCm": 9,
+    "heightCm": 16.4,
+    "weightKg": 0.85,
+    "extra": {
+     "Pre-filter volume": "0.28 L"
+    }
+   },
+   {
+    "name": "100",
+    "sku": "42681",
+    "flowLph": 600,
+    "headM": 1.1,
+    "tankMaxL": 100,
+    "powerW": 11,
+    "mediaL": 1.3,
+    "hoseMm": 12,
+    "lengthCm": 20.5,
+    "widthCm": 13.9,
+    "heightCm": 26,
+    "weightKg": 2.0,
+    "extra": {
+     "Pre-filter volume": "0.7 L"
+    }
+   },
+   {
+    "name": "200",
+    "sku": "42682",
+    "flowLph": 800,
+    "headM": 1.1,
+    "tankMaxL": 200,
+    "powerW": 17,
+    "mediaL": 4.2,
+    "hoseMm": 16,
+    "lengthCm": 28.8,
+    "widthCm": 17.9,
+    "heightCm": 33.7,
+    "weightKg": 4.13,
+    "extra": {
+     "Pre-filter volume": "1.5 L"
+    }
+   },
+   {
+    "name": "300",
+    "sku": "42683",
+    "flowLph": 1000,
+    "headM": 1.3,
+    "tankMaxL": 300,
+    "powerW": 23,
+    "mediaL": 6.4,
+    "hoseMm": 16,
+    "lengthCm": 28.8,
+    "widthCm": 17.9,
+    "heightCm": 42.8,
+    "weightKg": 4.82,
+    "extra": {
+     "Pre-filter volume": "1.5 L"
+    }
+   },
+   {
+    "name": "100 Thermo",
+    "sku": "42684",
+    "flowLph": 600,
+    "tankMaxL": 100,
+    "powerW": 11,
+    "heaterW": 100,
+    "mediaL": 1.3,
+    "hoseMm": 12,
+    "lengthCm": 31.2,
+    "widthCm": 19.2,
+    "heightCm": 19,
+    "extra": {
+     "Pre-filter volume": "0.7 L"
+    }
+   },
+   {
+    "name": "200 Thermo",
+    "sku": "42695",
+    "flowLph": 800,
+    "tankMaxL": 200,
+    "powerW": 17,
+    "heaterW": 200,
+    "mediaL": 4.2,
+    "hoseMm": 16,
+    "lengthCm": 37.2,
+    "widthCm": 29.4,
+    "heightCm": 24.8,
+    "extra": {
+     "Pre-filter volume": "1.5 L"
+    }
+   },
+   {
+    "name": "300 Thermo",
+    "sku": "42697",
+    "flowLph": 1000,
+    "tankMaxL": 300,
+    "powerW": 23,
+    "heaterW": 300,
+    "mediaL": 6.4,
+    "hoseMm": 16,
+    "lengthCm": 46.2,
+    "widthCm": 29,
+    "heightCm": 24.6,
+    "extra": {
+     "Pre-filter volume": "1.5 L"
+    }
+   }
+  ],
+  "priceFrom": 65.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-filtosmart-external-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-filtosmart-external-filter_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-filtosmart-external-filter_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-filtosmart-external-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-biostyle",
+  "brand": "Oase",
+  "name": "BioStyle",
+  "category": "filters",
+  "subtype": "hang-on-back",
+  "summary": "A hang-on-back filter from Oase that hooks over the rim, so there are no hoses and nothing takes up space inside the tank. It uses a drop-in cartridge with foam, fleece and carbon, and a telescopic clear intake adjusts to your tank depth. Flow is generous for the size, which suits small tanks with light fish loads.",
+  "highlights": [
+   "Three sizes for tanks up to 70, 115 or 180 litres",
+   "350 to 900 L/h from 3.5 to 4.5 W",
+   "Cartridge change indicator and simple swap-out media",
+   "Adjustable spacers for a secure fit on the rim"
+  ],
+  "bestFor": "Small planted tanks or shrimp tanks where you want easy filtration without a canister or an internal box.",
+  "watchOut": "Hang-on filters splash at the surface, which drives off some CO2 in an injected tank.",
+  "specs": {
+   "Media": "Foam, fleece and carbon cartridge",
+   "Intake": "Clear telescopic intake pipe",
+   "Mounting": "Hangs on the tank rim, adjustable spacers"
+  },
+  "models": [
+   {
+    "name": "75",
+    "sku": "89600",
+    "flowLph": 350,
+    "tankMaxL": 70,
+    "powerW": 3.5,
+    "mediaL": 1.1,
+    "lengthCm": 15.4,
+    "widthCm": 15.6,
+    "heightCm": 21.2
+   },
+   {
+    "name": "115",
+    "sku": "89601",
+    "flowLph": 550,
+    "tankMaxL": 115,
+    "powerW": 4,
+    "mediaL": 1.9,
+    "lengthCm": 15.4,
+    "widthCm": 23,
+    "heightCm": 21.2
+   },
+   {
+    "name": "180",
+    "sku": "89602",
+    "flowLph": 900,
+    "tankMaxL": 180,
+    "powerW": 4.5,
+    "mediaL": 2.7,
+    "lengthCm": 15.4,
+    "widthCm": 30.4,
+    "heightCm": 21.2
+   }
+  ],
+  "priceFrom": 30.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-biostyle-hang-on-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-biostyle-hang-on-filter_4.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-biostyle-hang-on-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-biocompact",
+  "brand": "Oase",
+  "name": "BioCompact",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "A very small internal filter for nano and quarantine tanks. It can be mounted upright or on its side, which makes it handy in shallow water, and the flow is adjustable at the outlet. The 50 has a media chamber you can refill with whatever you like.",
+  "highlights": [
+   "Two sizes for tanks up to 25 or 50 litres",
+   "Adjustable flow of roughly 120 to 240 L/h",
+   "Can be installed horizontally for shallow water",
+   "5 W pump"
+  ],
+  "bestFor": "Nano tanks, shrimp tanks and quarantine tanks where space is tight.",
+  "watchOut": "Tiny media capacity means frequent rinsing, and it is visible in the tank.",
+  "specs": {
+   "Flow range": "120 to 240 L/h, adjustable",
+   "Mounting": "Vertical or horizontal"
+  },
+  "models": [
+   {
+    "name": "25",
+    "sku": "19236",
+    "flowLph": 240,
+    "headM": 0.4,
+    "tankMaxL": 25,
+    "powerW": 5,
+    "extra": {
+     "Media": "Fine activated carbon foam"
+    }
+   },
+   {
+    "name": "50",
+    "sku": "19235",
+    "flowLph": 240,
+    "headM": 0.4,
+    "tankMaxL": 50,
+    "powerW": 5,
+    "mediaL": 0.18,
+    "extra": {
+     "Media": "Refillable chamber, supplied with carbon"
+    }
+   }
+  ],
+  "priceFrom": 20.49,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-biocompact-25-internal-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-biocompact-50-internal-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-biocompact-50-internal-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-bioplus",
+  "brand": "Oase",
+  "name": "BioPlus",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "A corner internal filter with a built-in, adjustable outlet nozzle instead of a separate spray bar. The media unit unclips and lifts out while the pump stays put, which makes cleaning quick. Foam plus a fine fleece stage gives decent polishing for its size.",
+  "highlights": [
+   "Three sizes for tanks up to 50, 100 or 200 litres",
+   "350 to 650 L/h from 5 to 7 W",
+   "Media unit lifts out for cleaning, pump stays in place",
+   "Fits neatly in a rear corner with suction cups"
+  ],
+  "bestFor": "Small to mid-sized tanks where you want a simple internal filter that is easy to service.",
+  "watchOut": "It sits inside the tank, so it takes up scaping space and needs hiding behind plants or hardscape.",
+  "specs": {
+   "Media": "Filter foams and fine fleece",
+   "Outlet": "Integrated adjustable nozzle",
+   "Mounting": "Corner, suction holders",
+   "Thermo versions": "Available with a built-in heater (models marked Thermo), which keeps the heater out of the tank"
+  },
+  "models": [
+   {
+    "name": "50",
+    "sku": "19237",
+    "flowLph": 350,
+    "headM": 0.4,
+    "tankMaxL": 50,
+    "powerW": 5,
+    "mediaL": 0.3,
+    "lengthCm": 12,
+    "widthCm": 11,
+    "heightCm": 21
+   },
+   {
+    "name": "100",
+    "sku": "19239",
+    "flowLph": 500,
+    "headM": 0.6,
+    "tankMaxL": 100,
+    "powerW": 6,
+    "mediaL": 0.48,
+    "lengthCm": 12,
+    "widthCm": 11,
+    "heightCm": 27
+   },
+   {
+    "name": "200",
+    "sku": "19241",
+    "flowLph": 650,
+    "headM": 0.9,
+    "tankMaxL": 200,
+    "powerW": 7,
+    "mediaL": 0.66,
+    "lengthCm": 12,
+    "widthCm": 11,
+    "heightCm": 33
+   },
+   {
+    "name": "50 Thermo",
+    "sku": "19238",
+    "flowLph": 350,
+    "headM": 0.4,
+    "tankMaxL": 50,
+    "powerW": 5,
+    "heaterW": 50,
+    "mediaL": 0.3,
+    "lengthCm": 12,
+    "widthCm": 11,
+    "heightCm": 21
+   },
+   {
+    "name": "100 Thermo",
+    "sku": "19240",
+    "flowLph": 500,
+    "headM": 0.6,
+    "tankMaxL": 100,
+    "powerW": 6,
+    "heaterW": 100,
+    "mediaL": 0.48,
+    "lengthCm": 12,
+    "widthCm": 11,
+    "heightCm": 27
+   },
+   {
+    "name": "200 Thermo",
+    "sku": "19242",
+    "flowLph": 650,
+    "headM": 0.9,
+    "tankMaxL": 200,
+    "powerW": 7,
+    "heaterW": 200,
+    "mediaL": 0.66,
+    "lengthCm": 12,
+    "widthCm": 11,
+    "heightCm": 33
+   }
+  ],
+  "priceFrom": 34.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-bioplus-50-internal-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-bioplus-100-internal-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-bioplus-200-internal-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-bioplus-50-internal-thermo-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-bioplus-50-internal-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-bioflow",
+  "brand": "Juwel",
+  "name": "Bioflow",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "The large internal box filter built into Juwel aquariums, also sold on its own. Water runs down through stacked sponges and media baskets, with space for a Juwel heater inside the housing and an Eccoflow pump on top. There are no hoses, so nothing can leak outside the tank.",
+  "highlights": [
+   "Three sizes: M (3.5 L media), L (8 L), XL (11 L)",
+   "600 or 1,000 L/h Eccoflow pump using 7 to 8 W",
+   "Room for a Juwel AquaHeat heater inside the filter",
+   "Five media stages supplied: poly pad, carbon, Nitrax, coarse and fine sponges"
+  ],
+  "bestFor": "Juwel owners replacing or upgrading a filter, or anyone happy with a big internal box in exchange for no hoses.",
+  "watchOut": "It takes up a noticeable slice of the back corner and needs a tank at least 42.5 cm (M) or 60 cm (L, XL) tall.",
+  "specs": {
+   "Pump": "Juwel Eccoflow (included)",
+   "Heater": "Takes a Juwel heater (sold separately)",
+   "Cable length": "2.38 m"
+  },
+  "models": [
+   {
+    "name": "M",
+    "sku": "2073582",
+    "flowLph": 600,
+    "tankMaxL": 300,
+    "powerW": 7,
+    "mediaL": 3.5,
+    "lengthCm": 15.5,
+    "widthCm": 10.2,
+    "heightCm": 41.7,
+    "extra": {
+     "Minimum tank height": "42.5 cm",
+     "Pump": "Eccoflow 600"
+    }
+   },
+   {
+    "name": "L",
+    "sku": "2073584",
+    "flowLph": 1000,
+    "tankMaxL": 400,
+    "powerW": 8,
+    "mediaL": 8,
+    "lengthCm": 20,
+    "widthCm": 13.2,
+    "heightCm": 53.2,
+    "extra": {
+     "Minimum tank height": "60 cm",
+     "Pump": "Eccoflow 1000"
+    }
+   },
+   {
+    "name": "XL",
+    "sku": "2073586",
+    "flowLph": 1000,
+    "tankMaxL": 500,
+    "powerW": 8,
+    "mediaL": 11,
+    "lengthCm": 22.5,
+    "widthCm": 15.5,
+    "heightCm": 53.2,
+    "extra": {
+     "Minimum tank height": "60 cm",
+     "Pump": "Eccoflow 1000"
+    }
+   }
+  ],
+  "priceFrom": 75.83,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-bioflow-filter-m_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-bioflow-filter-m",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-heatup",
+  "brand": "Oase",
+  "name": "HeatUp",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "An adjustable glass heater with a bimetal thermostat, available from 25 W to 400 W. It is the same heater Oase builds into its Thermo filters, and it can be fitted into a FiltoSmart or BioMaster later, or used in the tank with the supplied holder. A plain, dependable choice if you just want a heater that holds temperature.",
+  "highlights": [
+   "Nine wattages from 25 to 400 W",
+   "Bimetal thermostat with adjustable setting",
+   "Retrofits into FiltoSmart and BioMaster filters",
+   "Mounting holder included for in-tank use"
+  ],
+  "bestFor": "Oase filter owners who want to add heating later, or anyone after a simple adjustable heater.",
+  "watchOut": "A 25 to 50 W unit is still 20 cm long, so check it fits a shallow nano.",
+  "specs": {
+   "Thermostat": "Bimetal, adjustable",
+   "Diameter": "23 mm",
+   "Mounting": "In-tank holder, or inside FiltoSmart/BioMaster"
+  },
+  "models": [
+   {
+    "name": "25",
+    "sku": "45446",
+    "heaterW": 25,
+    "lengthCm": 20.5
+   },
+   {
+    "name": "50",
+    "sku": "42724",
+    "heaterW": 50,
+    "lengthCm": 20.5
+   },
+   {
+    "name": "75",
+    "sku": "42725",
+    "heaterW": 75,
+    "lengthCm": 24.3
+   },
+   {
+    "name": "100",
+    "sku": "42726",
+    "heaterW": 100,
+    "lengthCm": 24.3
+   },
+   {
+    "name": "150",
+    "sku": "42727",
+    "heaterW": 150,
+    "lengthCm": 31.5
+   },
+   {
+    "name": "200",
+    "sku": "42728",
+    "heaterW": 200,
+    "lengthCm": 31.5
+   },
+   {
+    "name": "250",
+    "sku": "42729",
+    "heaterW": 250,
+    "lengthCm": 37
+   },
+   {
+    "name": "300",
+    "sku": "42730",
+    "heaterW": 300,
+    "lengthCm": 37
+   },
+   {
+    "name": "400",
+    "sku": "77120",
+    "heaterW": 400,
+    "lengthCm": 44
+   }
+  ],
+  "priceFrom": 23.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-heatup-aquarium-heater_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-heatup-aquarium-heater",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-aquaheat",
+  "brand": "Juwel",
+  "name": "AquaHeat",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "Juwel's adjustable glass heaters, made in borosilicate glass with TÜV/GS safety certification. They are shaped to sit inside the Bioflow filter housing in Juwel aquariums, where they stay out of sight and heat the water as it passes through. They work in any tank, but they make most sense in a Juwel.",
+  "highlights": [
+   "50 W AquaHeat and 100, 200, 300 W AquaHeat Pro",
+   "Adjustable thermostat, borosilicate glass",
+   "Fits inside Juwel Bioflow filter housings",
+   "TÜV/GS certified"
+  ],
+  "bestFor": "Juwel aquarium owners replacing or upgrading the heater inside their Bioflow filter.",
+  "specs": {
+   "Glass": "Borosilicate",
+   "Certification": "TÜV/GS",
+   "Fits": "Juwel Bioflow filter housings, or any tank"
+  },
+  "models": [
+   {
+    "name": "AquaHeat 50",
+    "sku": "207270",
+    "heaterW": 50,
+    "lengthCm": 19,
+    "extra": {
+     "Diameter": "25 mm"
+    }
+   },
+   {
+    "name": "AquaHeat Pro 100",
+    "sku": "207272",
+    "heaterW": 100,
+    "lengthCm": 30.5,
+    "extra": {
+     "Diameter": "30 mm"
+    }
+   },
+   {
+    "name": "AquaHeat Pro 200",
+    "sku": "207274",
+    "heaterW": 200,
+    "lengthCm": 34,
+    "extra": {
+     "Diameter": "30 mm"
+    }
+   },
+   {
+    "name": "AquaHeat Pro 300",
+    "sku": "207275",
+    "heaterW": 300,
+    "lengthCm": 37.5,
+    "extra": {
+     "Diameter": "30 mm"
+    }
+   }
+  ],
+  "priceFrom": 25.95,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-aquaheat-pro-aquarium-heater_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-aquaheat-pro-aquarium-heater",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-optimax",
+  "brand": "Oase",
+  "name": "OptiMax",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "A range of adjustable water pumps from 300 to 5,000 L/h, for circulation, running a DIY filter or returning water from a sump. The smaller models are submersible only, while the 800 and up can also run dry outside the tank. Flow is adjustable on every model.",
+  "highlights": [
+   "Eight sizes from 300 to 5,000 L/h",
+   "Adjustable flow on all models",
+   "800 and larger can be installed dry (inline) or submerged",
+   "Suction feet for secure placement"
+  ],
+  "bestFor": "Sump returns, DIY filters, water changes or extra circulation in a larger planted tank.",
+  "watchOut": "The 2000 and up draw 30 to 80 W, which adds up on your bill and adds heat to the water if submerged.",
+  "specs": {
+   "Connections": "13 mm (300, 500), 17 mm (800 and up)",
+   "Installation": "Submersible; 800 and up also dry",
+   "Cable length": "1.5 m"
+  },
+  "models": [
+   {
+    "name": "300",
+    "sku": "42670",
+    "flowLph": 300,
+    "headM": 0.6,
+    "powerW": 5,
+    "extra": {
+     "Installation": "Underwater only"
+    }
+   },
+   {
+    "name": "500",
+    "sku": "42671",
+    "flowLph": 500,
+    "headM": 0.8,
+    "powerW": 5,
+    "extra": {
+     "Installation": "Underwater only"
+    }
+   },
+   {
+    "name": "800",
+    "sku": "42672",
+    "flowLph": 800,
+    "headM": 1.0,
+    "powerW": 7
+   },
+   {
+    "name": "1000",
+    "sku": "42673",
+    "flowLph": 1000,
+    "headM": 1.3,
+    "powerW": 12
+   },
+   {
+    "name": "2000",
+    "sku": "42674",
+    "flowLph": 2000,
+    "headM": 2.4,
+    "powerW": 31.5
+   },
+   {
+    "name": "3000",
+    "sku": "42675",
+    "flowLph": 2800,
+    "headM": 3.0,
+    "powerW": 55
+   },
+   {
+    "name": "4000",
+    "sku": "42676",
+    "flowLph": 4400,
+    "headM": 3.0,
+    "powerW": 80
+   },
+   {
+    "name": "5000",
+    "sku": "42677",
+    "flowLph": 5000,
+    "headM": 3.0,
+    "powerW": 82
+   }
+  ],
+  "priceFrom": 23.61,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-optimax-return-pump_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-optimax-return-pump_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-optimax-return-pump_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-optimax-return-pump",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-oxymax",
+  "brand": "Oase",
+  "name": "OxyMax",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "Small mains air pumps from Oase with adjustable output, supplied with airline and air stones. They can stand or hang, and run quietly on 3.5 to 4 W. Handy for overnight aeration in a CO2 tank, sponge filters or a hospital tank.",
+  "highlights": [
+   "Three sizes: 100, 200 or 360 L/h",
+   "One or two outlets, adjustable output",
+   "3.5 to 4 W power draw",
+   "Hose and air stones included"
+  ],
+  "bestFor": "Running sponge filters or night-time aeration in small to mid-sized planted tanks.",
+  "specs": {
+   "Pressure": "200 mbar",
+   "Hose": "4 x 6 mm, 2 m per outlet",
+   "Cable length": "1.6 m",
+   "Mounting": "Standing or hanging"
+  },
+  "models": [
+   {
+    "name": "100",
+    "sku": "41851",
+    "airLpm": 1.7,
+    "outlets": 1,
+    "powerW": 3.5,
+    "lengthCm": 15,
+    "widthCm": 9,
+    "heightCm": 7,
+    "extra": {
+     "Air output": "100 L/h"
+    }
+   },
+   {
+    "name": "200",
+    "sku": "41852",
+    "airLpm": 3.3,
+    "outlets": 2,
+    "powerW": 3.5,
+    "lengthCm": 15,
+    "widthCm": 9,
+    "heightCm": 7,
+    "extra": {
+     "Air output": "200 L/h"
+    }
+   },
+   {
+    "name": "400",
+    "sku": "41853",
+    "airLpm": 6.0,
+    "outlets": 2,
+    "powerW": 4,
+    "lengthCm": 15,
+    "widthCm": 9,
+    "heightCm": 7,
+    "extra": {
+     "Air output": "360 L/h"
+    }
+   }
+  ],
+  "priceFrom": 26.43,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-oxymax-aquarium-air-pump_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-oxymax-aquarium-air-pump_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-oxymax-aquarium-air-pump",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-cleartronic",
+  "brand": "Oase",
+  "name": "ClearTronic",
+  "category": "sterilisers",
+  "subtype": "uv",
+  "summary": "An inline UV-C clarifier that plumbs into your filter outlet hose and clears green water and free-floating bacteria. The ballast is built into the body, so there is no separate box to find room for in the cabinet. The lamp and quartz sleeve come out with a quick-release for cleaning.",
+  "highlights": [
+   "7, 9 or 11 W UV-C for tanks up to 250, 400 or 600 litres",
+   "Integrated ballast, compact 33 cm body",
+   "Quick-release for lamp changes and quartz cleaning",
+   "Connection accessories included"
+  ],
+  "bestFor": "Canister-filtered tanks prone to green water, or keepers who want an extra safeguard against outbreaks.",
+  "watchOut": "UV lamps lose strength over time and need replacing roughly yearly, and UV does not fix the nutrient or light imbalance behind algae.",
+  "specs": {
+   "Connection": "17 mm",
+   "Max operating pressure": "0.5 bar",
+   "Max water temperature": "35 °C",
+   "Protection": "IP24"
+  },
+  "models": [
+   {
+    "name": "7 W",
+    "sku": "19244",
+    "uvW": 7,
+    "powerW": 11,
+    "tankMaxL": 250,
+    "lengthCm": 33,
+    "widthCm": 12,
+    "heightCm": 10
+   },
+   {
+    "name": "9 W",
+    "sku": "19258",
+    "uvW": 9,
+    "powerW": 12,
+    "tankMaxL": 400,
+    "lengthCm": 33,
+    "widthCm": 12,
+    "heightCm": 10
+   },
+   {
+    "name": "11 W",
+    "sku": "19245",
+    "uvW": 11,
+    "powerW": 14,
+    "tankMaxL": 600,
+    "lengthCm": 33,
+    "widthCm": 12,
+    "heightCm": 10
+   }
+  ],
+  "priceFrom": 73.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-cleartronic-7w_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-cleartronic-7w",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-eccoskim",
+  "brand": "Juwel",
+  "name": "EccoSkim",
+  "category": "plumbing",
+  "subtype": "surface-skimmer",
+  "summary": "A powered surface skimmer that pulls the oily film off the water surface. It clips straight onto a Juwel internal filter, sending the skimmed water into it, or mounts with suction cups in other glass tanks. A float keeps the inlet at the waterline as levels drop.",
+  "highlights": [
+   "300 L/h at 4.4 W, adjustable",
+   "Clips onto Juwel Bioflow filters or mounts with suction cups",
+   "Floating inlet follows the water level",
+   "Clears surface film that blocks light and gas exchange"
+  ],
+  "bestFor": "Planted tanks, especially CO2 injected ones, that build up surface film.",
+  "watchOut": "It sits inside the tank, so it adds another bit of kit to hide.",
+  "specs": {
+   "Mounting": "Juwel filter mount or suction holder"
+  },
+  "models": [
+   {
+    "name": "EccoSkim",
+    "sku": "33847",
+    "flowLph": 300,
+    "powerW": 4.4
+   }
+  ],
+  "priceFrom": 34.39,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-eccoskim-surface-skimmer_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-eccoskim-surface-skimmer_3.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-eccoskim-surface-skimmer_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-eccoskim-surface-skimmer",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-plant-scissors",
+  "brand": "Oase",
+  "name": "Plant Scissors",
+  "category": "tools",
+  "subtype": "scissors",
+  "summary": "A 25 cm pair of aquarium scissors with a curved tip for trimming stem plants and carpets. The length reaches the back of a typical 45 to 50 cm deep tank without soaking your sleeve.",
+  "highlights": [
+   "25 cm long",
+   "Curved tip for trimming carpets and low plants",
+   "Freshwater use"
+  ],
+  "bestFor": "Regular trimming of stems and carpeting plants in small to mid-sized tanks.",
+  "specs": {
+   "Length": "25 cm",
+   "Tip": "Curved"
+  },
+  "models": [
+   {
+    "name": "25 cm",
+    "sku": "19280",
+    "lengthCm": 25
+   }
+  ],
+  "priceFrom": 21.95,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-plant-scissors_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-plant-scissors",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-aquaclean-2",
+  "brand": "Juwel",
+  "name": "AquaClean 2.0",
+  "category": "tools",
+  "subtype": "gravel-cleaner",
+  "summary": "A siphon gravel cleaner that starts with a squeeze of the bulb, so there is no sucking on a hose. Extension tubes suit tanks up to 70 cm tall, and a special nozzle reaches into the corners of a Juwel internal filter.",
+  "highlights": [
+   "Squeeze-bulb start",
+   "Modular tube for tanks up to 70 cm tall",
+   "Attachment for cleaning Juwel internal filters",
+   "Clips to hold the hose on the bucket and tank"
+  ],
+  "bestFor": "Weekly water changes and cleaning gravel or sand in open areas of a planted tank.",
+  "watchOut": "Keep it off aqua soil, as it will pull up the soil granules.",
+  "specs": {
+   "Max tank height": "70 cm",
+   "Start": "Squeeze pump"
+  },
+  "models": [
+   {
+    "name": "2.0",
+    "sku": "207387"
+   }
+  ],
+  "priceFrom": 19.39,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-aquaclean-20_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-aquaclean-20_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-aquaclean-2-0",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "oase-fishguard",
+  "brand": "Oase",
+  "name": "FishGuard",
+  "category": "feeders",
+  "subtype": "auto-feeder",
+  "summary": "A programmable auto feeder with an LCD display, set up for up to four feeds a day and up to three portions per feed. The food drum is sealed against moisture, which matters over a humid tank.",
+  "highlights": [
+   "Up to 4 feeds a day, up to 3 portions each",
+   "Clear LCD programming",
+   "Moisture-protected food drum",
+   "Works over freshwater, saltwater or terrariums"
+  ],
+  "bestFor": "Holidays or busy weeks with a community tank that needs regular small feeds.",
+  "watchOut": "Test the portion size for a few days first; overfeeding while you are away is the usual problem.",
+  "specs": {
+   "Feeds": "Up to 4 per day, up to 3 portions per feed",
+   "Display": "LCD"
+  },
+  "models": [
+   {
+    "name": "FishGuard",
+    "sku": "19234"
+   }
+  ],
+  "priceFrom": 45.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/oase/oase-fishguard-auto-feeder_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/oase-fishguard-auto-feeder",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-smartfeed-2",
+  "brand": "Juwel",
+  "name": "SmartFeed 2.0",
+  "category": "feeders",
+  "subtype": "auto-feeder",
+  "summary": "Juwel's more capable auto feeder, using a screw feed to dispense granules or flakes in eight portion sizes. It runs on batteries or micro USB, has a large display, and the 110 ml chamber can be doubled with the supplied extension.",
+  "highlights": [
+   "Up to 3 feeds a day, 8 portion levels",
+   "Two feed screws for granules and flakes",
+   "110 ml chamber plus 110 ml extension included",
+   "Battery (4 x AA supplied) or micro USB power"
+  ],
+  "bestFor": "Longer holidays or keepers who want precise portions of flake or granules.",
+  "specs": {
+   "Feeds": "Up to 3 per day, intervals of 24/48/72 h",
+   "Power": "4 x AA or micro USB",
+   "Size": "16.5 x 13 x 7.5 cm"
+  },
+  "models": [
+   {
+    "name": "2.0",
+    "sku": "207267",
+    "capacityMl": 110,
+    "lengthCm": 16.5,
+    "widthCm": 13,
+    "heightCm": 7.5,
+    "extra": {
+     "With extension": "220 ml"
+    }
+   }
+  ],
+  "priceFrom": 61.29,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-smartfeed-automatic-feeder-20_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-smartfeed-automatic-feeder-2-0",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ },
+ {
+  "id": "juwel-easy-feed",
+  "brand": "Juwel",
+  "name": "Easy Feed",
+  "category": "feeders",
+  "subtype": "auto-feeder",
+  "summary": "A simple battery auto feeder that fits Juwel lids directly and other tanks with a mount. It feeds once or twice a day and the adjustable drum holds about 60 portions, best with pellets.",
+  "highlights": [
+   "1 or 2 feeds a day",
+   "Adjustable drum holds up to 60 feeds",
+   "Drum can be ventilated with an air pump in humid setups",
+   "Batteries included"
+  ],
+  "bestFor": "Budget holiday feeding for a Juwel tank with pellet-eating fish.",
+  "watchOut": "Flake does not dispense as reliably as pellets from a drum feeder.",
+  "specs": {
+   "Feeds": "1 or 2 per day",
+   "Capacity": "Up to 60 feeds",
+   "Power": "Batteries"
+  },
+  "models": [
+   {
+    "name": "Easy Feed",
+    "sku": "207269"
+   }
+  ],
+  "priceFrom": 29.24,
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/juwel/juwel-easy-feed-automatic-feeder_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/juwel-easy-feed-automatic-feeder",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer",
+  "currency": "GBP"
+ }
+]

@@ -35,7 +35,7 @@ const LIVESTOCK_HREFS = new Set([
 /**
  * Slugs grouped under the desktop "Tools" dropdown.
  */
-const TOOLS_HREFS = new Set(["/planner", "/compare", "/compatibility"]);
+const TOOLS_HREFS = new Set(["/planner", "/compare", "/compatibility", "/gear"]);
 
 /**
  * Desktop nav items that sit alongside the two dropdowns.

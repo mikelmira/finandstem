@@ -5,11 +5,24 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { site } from "@/lib/site";
 import { EQUIPMENT, getEquipmentGuide } from "@/data/equipment";
-import { equipmentPageJsonLd } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, equipmentPageJsonLd, longDescription } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
+import { GearCard } from "@/components/gear/gear-card";
+import { featuredGear, gearCount, toCard } from "@/lib/gear";
+import { GEAR_CATEGORIES } from "@/lib/gear/categories";
+import type { GearCategory } from "@/types/gear";
+
+/** Which gear catalogue category backs each equipment guide. */
+const GUIDE_GEAR: Record<string, GearCategory> = {
+  lighting: "lights",
+  filtration: "filters",
+  "co2-injection": "co2",
+  heaters: "heaters",
+  "circulation-and-flow": "pumps",
+};
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
@@ -28,7 +41,10 @@ export async function generateMetadata({
   const guide = getEquipmentGuide(slug);
   if (!guide) return {};
   const title = `${guide.name}: How to Choose and Size It`;
-  const description = guide.spot;
+  const description = longDescription(guide.spot, guide.tldr);
+  const gc = GUIDE_GEAR[slug];
+  const pick = gc ? featuredGear(gc, 1)[0]?.images[0] : undefined;
+  const ogImage = pick ? `${site.url}${pick.src}` : DEFAULT_OG_IMAGE;
   const canonical = `${site.url}/equipment/${slug}`;
   return {
     title,
@@ -42,8 +58,9 @@ export async function generateMetadata({
       description,
       locale: "en",
       authors: [`${site.url}/about`],
+      images: [ogImage],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     keywords: [
       guide.name.toLowerCase(),
       `aquarium ${guide.name.toLowerCase()}`,
@@ -60,6 +77,8 @@ export default async function EquipmentPage({ params }: RouteParams) {
   if (!guide) notFound();
 
   const others = EQUIPMENT.filter((e) => e.slug !== guide.slug);
+  const gearCat = GUIDE_GEAR[guide.slug];
+  const gearPicks = gearCat ? featuredGear(gearCat, 3) : [];
 
   return (
     <>
@@ -145,6 +164,32 @@ export default async function EquipmentPage({ params }: RouteParams) {
             </p>
           </section>
         ))}
+
+        {gearCat && gearPicks.length > 0 && (
+          <section className="mt-12">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h2 className="text-display-tight text-2xl sm:text-3xl">
+                Compare real {GEAR_CATEGORIES[gearCat].label.toLowerCase()}
+              </h2>
+              <Link
+                href={`/gear/${gearCat}`}
+                className="text-sm font-medium text-[var(--brand)] hover:underline"
+              >
+                All {gearCount(gearCat)} in the catalogue
+              </Link>
+            </div>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Our gear catalogue lists specs for every model and filters by your tank size.
+            </p>
+            <ul className="mt-5 grid gap-4 sm:grid-cols-3">
+              {gearPicks.map((p) => (
+                <li key={p.id}>
+                  <GearCard card={toCard(p)} showCompare={false} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <section className="mt-12">
           <Faq items={guide.faqs} />

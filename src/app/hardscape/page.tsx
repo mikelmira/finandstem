@@ -10,6 +10,7 @@ import { organizationRef } from "@/lib/seo";
 import { HARDSCAPE, type HardscapeType } from "@/data/hardscape";
 import { EffectBadges } from "@/components/hardscape/effect-badges";
 import { HardscapeVisual } from "@/components/hardscape/hardscape-visual";
+import { gearCount } from "@/lib/gear";
 
 export const metadata: Metadata = {
   title: "Aquascaping Hardscape: Stones & Wood and What They Do to Your Water",
@@ -63,6 +64,23 @@ export default function HardscapeHubPage() {
         <HardscapeGroup title="Stone" note="Watch for calcareous stones" items={STONES} />
         <div className="mt-14">
           <HardscapeGroup title="Wood" note="Watch for tannins and floating" items={WOOD} />
+        </div>
+        <div className="mt-14 flex flex-col gap-3 rounded-2xl border border-[var(--brand)]/25 bg-[var(--brand)]/5 p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-display-tight text-xl sm:text-2xl">
+              See real pieces before you buy
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {gearCount("hardscape")} stones, woods and bonsai trees from suppliers, with photos,
+              sizes and what each does to your water.
+            </p>
+          </div>
+          <Link
+            href="/gear/hardscape"
+            className="press inline-flex flex-none items-center gap-1.5 rounded-full bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-white"
+          >
+            Browse hardscape
+          </Link>
         </div>
         <p className="mt-12 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           Picked your stone and wood? The next step is arranging it. See{" "}

@@ -3,6 +3,8 @@ import type { FaqItem } from "@/lib/species-faq";
 interface FaqProps {
   items: ReadonlyArray<FaqItem>;
   heading?: string;
+  /** Line under the heading; defaults to the species wording. */
+  intro?: string;
 }
 
 /**
@@ -13,7 +15,11 @@ interface FaqProps {
  * rich-result requires both, and AI assistants score pages much higher when
  * the answers are present verbatim in the HTML.
  */
-export function Faq({ items, heading = "Frequently asked questions" }: FaqProps) {
+export function Faq({
+  items,
+  heading = "Frequently asked questions",
+  intro = "Direct answers to the questions search engines and AI assistants surface most often about this species.",
+}: FaqProps) {
   if (items.length === 0) return null;
   return (
     <section
@@ -27,8 +33,7 @@ export function Faq({ items, heading = "Frequently asked questions" }: FaqProps)
         {heading}
       </h2>
       <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-        Direct answers to the questions search engines and AI assistants surface
-        most often about this species.
+        {intro}
       </p>
       <div className="mt-6 divide-y divide-border/60 rounded-xl border border-border/60 bg-background/60">
         {items.map((item, i) => (

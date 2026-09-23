@@ -1,0 +1,2012 @@
+[
+ {
+  "id": "eheim-classic",
+  "brand": "Eheim",
+  "name": "Classic",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "The Classic is the round green canister that has been running on aquariums for decades. It is one open chamber you fill with whatever media you like, with no prefilter tray, electronics or clever valves to go wrong. Simple, quiet and very hard to kill.",
+  "highlights": [
+   "Single open canister, so you choose and layer the media yourself",
+   "Low running costs: 8 to 20 W depending on size",
+   "Very few moving parts, so long-term reliability is its strong point",
+   "Spare parts and replacement pads are easy to find almost anywhere"
+  ],
+  "bestFor": "Keepers who want a no-fuss, long-lived canister for a planted tank and are happy to do a slightly messier clean now and then.",
+  "watchOut": "Priming is manual on the basic version and there is no quick-release tap block, so cleaning takes more effort than on newer Eheim lines.",
+  "specs": {
+   "Canister shape": "Round, single chamber",
+   "Water type": "Freshwater and marine",
+   "Media": "Supplied with pads or loose media depending on pack"
+  },
+  "models": [
+   {
+    "name": "250",
+    "sku": "2213",
+    "flowLph": 440,
+    "headM": 1.5,
+    "tankMaxL": 250,
+    "powerW": 8,
+    "mediaL": 3.0,
+    "hoseMm": 12,
+    "extra": {
+     "Hose size": "12/16 mm in and out",
+     "Canister volume": "3.5 L",
+     "Dimensions": "16 x 35.5 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "350",
+    "sku": "2215",
+    "flowLph": 620,
+    "headM": 1.8,
+    "tankMaxL": 350,
+    "powerW": 15,
+    "mediaL": 4.0,
+    "hoseMm": 12,
+    "extra": {
+     "Hose size": "12/16 mm in and out",
+     "Canister volume": "4.8 L",
+     "Dimensions": "18.5 x 37 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "600",
+    "sku": "2217",
+    "flowLph": 1000,
+    "headM": 2.3,
+    "tankMaxL": 600,
+    "powerW": 20,
+    "mediaL": 6.0,
+    "hoseMm": 16,
+    "extra": {
+     "Hose size": "16/22 mm inlet, 12/16 mm outlet",
+     "Canister volume": "6.6 L",
+     "Dimensions": "20.5 x 40 cm (diameter x height)"
+    }
+   }
+  ],
+  "priceFrom": 99.99,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-classic-external-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-classic-external-filter_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-classic-external-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-ecco-pro",
+  "brand": "Eheim",
+  "name": "Ecco Pro",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "Ecco Pro is Eheim's compact entry canister, sized for small and mid-sized tanks. The carry handle doubles as the lever that locks the head and primes the filter, and media sits in stacked baskets, so cleaning is tidy. Power draw is very low.",
+  "highlights": [
+   "Built-in priming via the handle lever, no sucking on hoses",
+   "Stacked media baskets plus a small prefilter make cleaning quick",
+   "Only 5 to 8 W running power",
+   "12/16 mm hoses on all three sizes, which suits slim lily pipes"
+  ],
+  "bestFor": "Planted tanks from about 60 to 300 litres where you want an easy canister that tucks into a small cabinet.",
+  "watchOut": "Flow is modest for the rated tank sizes, so on a heavily planted CO2 tank choose a size up or add a circulation pump.",
+  "specs": {
+   "Hose size": "12/16 mm",
+   "Water type": "Freshwater and marine",
+   "Media": "Supplied complete with pads, SUBSTRATpro and hoses"
+  },
+  "models": [
+   {
+    "name": "130",
+    "sku": "2032",
+    "flowLph": 500,
+    "headM": 1.4,
+    "tankMinL": 60,
+    "tankMaxL": 130,
+    "powerW": 5,
+    "mediaL": 1.2,
+    "hoseMm": 12,
+    "extra": {
+     "Prefilter": "0.3 L",
+     "Canister volume": "3.0 L",
+     "Dimensions": "20.5 x 29.8 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "200",
+    "sku": "2034",
+    "flowLph": 600,
+    "headM": 1.4,
+    "tankMinL": 100,
+    "tankMaxL": 200,
+    "powerW": 5,
+    "mediaL": 2.0,
+    "hoseMm": 12,
+    "extra": {
+     "Prefilter": "0.3 L",
+     "Canister volume": "4.0 L",
+     "Dimensions": "20.5 x 35.5 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "300",
+    "sku": "2036",
+    "flowLph": 750,
+    "headM": 1.9,
+    "tankMinL": 160,
+    "tankMaxL": 300,
+    "powerW": 8,
+    "mediaL": 2.8,
+    "hoseMm": 12,
+    "extra": {
+     "Prefilter": "0.3 L",
+     "Canister volume": "5.0 L",
+     "Dimensions": "20.5 x 41.6 cm (diameter x height)"
+    }
+   }
+  ],
+  "priceFrom": 99.99,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-ecco-pro-external-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-ecco-pro-external-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-experience",
+  "brand": "Eheim",
+  "name": "Experience",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "The Experience range sits between the Classic and the Professionel. You get a square canister with media baskets and a double-tap hose block with a single release lever, so you can close both valves and lift the filter out without spilling.",
+  "highlights": [
+   "Square canister is stable and packs neatly into a cabinet",
+   "Two adjustable shut-off valves on a quick-release adaptor",
+   "Supplied with mechanical and biological media, ready to run",
+   "350 model steps up to 16/22 mm hoses and over 1,000 L/h"
+  ],
+  "bestFor": "Mid-sized planted tanks where you want easier maintenance than a Classic without paying Professionel money.",
+  "watchOut": "The 150 and 250 are fairly gentle on flow, so on a high-tech tank you may want the next size up.",
+  "specs": {
+   "Canister shape": "Square",
+   "Water type": "Freshwater and marine",
+   "Taps": "Double tap adaptor with release lever"
+  },
+  "models": [
+   {
+    "name": "150",
+    "sku": "2422",
+    "flowLph": 500,
+    "headM": 1.3,
+    "tankMinL": 80,
+    "tankMaxL": 150,
+    "powerW": 8,
+    "mediaL": 2.3,
+    "hoseMm": 12,
+    "extra": {
+     "Hose size": "12/16 mm",
+     "Canister volume": "5.0 L",
+     "Dimensions": "17.8 x 17.8 x 29 cm"
+    }
+   },
+   {
+    "name": "250",
+    "sku": "2424",
+    "flowLph": 700,
+    "headM": 1.5,
+    "tankMinL": 120,
+    "tankMaxL": 250,
+    "powerW": 8,
+    "mediaL": 3.0,
+    "hoseMm": 12,
+    "extra": {
+     "Hose size": "12/16 mm",
+     "Canister volume": "6.0 L",
+     "Dimensions": "17.8 x 17.8 x 34 cm"
+    }
+   },
+   {
+    "name": "350",
+    "sku": "2426",
+    "flowLph": 1050,
+    "headM": 2.0,
+    "tankMinL": 180,
+    "tankMaxL": 350,
+    "powerW": 24,
+    "mediaL": 4.9,
+    "hoseMm": 16,
+    "extra": {
+     "Hose size": "16/22 mm",
+     "Canister volume": "9.0 L",
+     "Dimensions": "21 x 21 x 37.5 cm"
+    }
+   }
+  ],
+  "priceFrom": 112.31,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-experience-external-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-experience-external-aquarium-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-professionel-4-plus",
+  "brand": "Eheim",
+  "name": "Professionel 4+",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "The Professionel 4+ is Eheim's mechanical flagship canister, with a lift-out prefilter under the head, separate media baskets and a self-priming pump. The Xtender button reroutes water past clogged fine pads so the biology keeps running until you get round to cleaning. The 250T and 350T versions add a 210 W heater inside the canister.",
+  "highlights": [
+   "Top prefilter catches debris so the main media stays cleaner for longer",
+   "Xtender button buys a few extra days when flow starts to drop",
+   "Thermo versions (250T, 350T) hide a 210 W heater in the filter, freshwater only",
+   "16/22 mm hoses on every model, with a safety tap adaptor",
+   "Quiet ceramic shaft and adjustable flow"
+  ],
+  "bestFor": "Planted tanks from about 120 to 600 litres where you want solid flow, long service intervals and, if you like, no heater in the display.",
+  "watchOut": "It is a tall, fairly heavy canister, so measure your cabinet, and the thermo models are not for marine use.",
+  "specs": {
+   "Hose size": "16/22 mm",
+   "Canister shape": "Square",
+   "Water type": "Freshwater and marine (thermo models freshwater only)",
+   "Media": "Supplied complete with Eheim media and fittings"
+  },
+  "models": [
+   {
+    "name": "250",
+    "sku": "2271",
+    "flowLph": 950,
+    "headM": 1.5,
+    "tankMinL": 120,
+    "tankMaxL": 250,
+    "powerW": 12,
+    "mediaL": 3.5,
+    "hoseMm": 16,
+    "extra": {
+     "Prefilter": "0.5 L",
+     "Canister volume": "6.1 L",
+     "Dimensions": "23.8 x 35.8 x 24.4 cm (w x h x d)"
+    }
+   },
+   {
+    "name": "350",
+    "sku": "2273",
+    "flowLph": 1050,
+    "headM": 1.8,
+    "tankMinL": 180,
+    "tankMaxL": 350,
+    "powerW": 16,
+    "mediaL": 5.0,
+    "hoseMm": 16,
+    "extra": {
+     "Prefilter": "0.5 L",
+     "Canister volume": "7.4 L",
+     "Dimensions": "23.8 x 39.8 x 24.4 cm (w x h x d)"
+    }
+   },
+   {
+    "name": "600",
+    "sku": "2275",
+    "flowLph": 1250,
+    "headM": 1.8,
+    "tankMinL": 240,
+    "tankMaxL": 600,
+    "powerW": 16,
+    "mediaL": 6.5,
+    "hoseMm": 16,
+    "extra": {
+     "Prefilter": "0.5 L",
+     "Canister volume": "9.2 L",
+     "Dimensions": "23.8 x 45.3 x 24.4 cm (w x h x d)"
+    }
+   },
+   {
+    "name": "250T (thermo)",
+    "sku": "2371",
+    "flowLph": 950,
+    "headM": 1.5,
+    "tankMinL": 120,
+    "tankMaxL": 250,
+    "powerW": 12,
+    "heaterW": 210,
+    "mediaL": 3.5,
+    "hoseMm": 16,
+    "extra": {
+     "Prefilter": "0.5 L",
+     "Canister volume": "7.1 L",
+     "Dimensions": "23.8 x 39.8 x 24.4 cm (w x h x d)",
+     "Heater": "Built in, with display"
+    }
+   },
+   {
+    "name": "350T (thermo)",
+    "sku": "2373",
+    "flowLph": 1050,
+    "headM": 1.5,
+    "tankMinL": 180,
+    "tankMaxL": 350,
+    "powerW": 16,
+    "heaterW": 210,
+    "mediaL": 5.0,
+    "hoseMm": 16,
+    "extra": {
+     "Prefilter": "0.5 L",
+     "Canister volume": "8.9 L",
+     "Dimensions": "23.8 x 45.3 x 24.4 cm (w x h x d)",
+     "Heater": "Built in, with display"
+    }
+   }
+  ],
+  "priceFrom": 172.49,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-professionel-4-external-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-professionel-4-thermo-external-filter_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-professionel-4-external-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-professionel-5e",
+  "brand": "Eheim",
+  "name": "Professionel 5e",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "The 5e is the electronic version of the Professionel, with a brushless pump you set up over WiFi from a browser. It can hold a constant flow as the media clogs, run a pulse mode, or drop to a quieter night flow. The 600T adds a built-in 210 W heater for freshwater tanks.",
+  "highlights": [
+   "Constant-flow mode tops up pump speed as the media gets dirty",
+   "Day and night flow settings, plus pulse mode, all via WiFi in a browser",
+   "Up to 1,850 L/h with 8 L of media plus a 0.6 L prefilter on the big models",
+   "Links with Eheim's other digital kit, for example pausing flow at feeding time",
+   "600T thermo version has a 210 W heater inside, freshwater only"
+  ],
+  "bestFor": "Larger high-tech planted tanks where you want strong, adjustable flow and like the idea of tuning it from your phone.",
+  "watchOut": "It costs a lot more than the 4+, and the WiFi setup is web-based rather than a polished app, which not everyone enjoys.",
+  "specs": {
+   "Hose size": "16/22 mm",
+   "Control": "WiFi via web browser, no app needed",
+   "Pump": "Electronic, adjustable",
+   "Water type": "Freshwater and marine (600T freshwater only)",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "350",
+    "flowLph": 1500,
+    "headM": 2.2,
+    "tankMinL": 180,
+    "tankMaxL": 350,
+    "powerW": 35,
+    "mediaL": 4.5,
+    "hoseMm": 16,
+    "extra": {
+     "Power range": "10 to 35 W",
+     "Prefilter": "0.5 L",
+     "Canister volume": "7.4 L",
+     "Dimensions": "23.8 x 39.8 x 24.4 cm (w x h x d)"
+    }
+   },
+   {
+    "name": "450",
+    "flowLph": 1700,
+    "headM": 2.4,
+    "tankMinL": 240,
+    "tankMaxL": 450,
+    "powerW": 35,
+    "mediaL": 6.0,
+    "hoseMm": 16,
+    "extra": {
+     "Power range": "10 to 35 W",
+     "Minimum flow": "350 L/h",
+     "Prefilter": "0.6 L",
+     "Canister volume": "12.5 L",
+     "Dimensions": "26.4 x 47.4 x 26.4 cm (w x h x d)"
+    }
+   },
+   {
+    "name": "700",
+    "flowLph": 1850,
+    "headM": 2.6,
+    "tankMinL": 300,
+    "tankMaxL": 700,
+    "powerW": 35,
+    "mediaL": 8.0,
+    "hoseMm": 16,
+    "extra": {
+     "Power range": "10 to 35 W",
+     "Minimum flow": "400 L/h",
+     "Prefilter": "0.6 L",
+     "Canister volume": "14.2 L",
+     "Dimensions": "26.4 x 53.4 x 26.4 cm (w x h x d)"
+    }
+   },
+   {
+    "name": "600T (thermo)",
+    "flowLph": 1850,
+    "headM": 2.6,
+    "tankMinL": 240,
+    "tankMaxL": 450,
+    "powerW": 35,
+    "heaterW": 210,
+    "mediaL": 8.0,
+    "hoseMm": 16,
+    "extra": {
+     "Power range": "10 to 35 W (pump)",
+     "Prefilter": "0.6 L",
+     "Canister volume": "14.2 L",
+     "Dimensions": "26.4 x 53.4 x 26.4 cm (w x h x d)",
+     "Heater": "Built in"
+    }
+   }
+  ],
+  "priceFrom": 304.99,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-professionel-5e-external-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-professionel-5e-external-filter_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-professionel-5e-external-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-professionel-3-1200xl",
+  "brand": "Eheim",
+  "name": "Professionel 3 1200XL",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "The 1200XL (type 2080) is Eheim's big canister for very large tanks. It holds 12 litres of media plus a 1.5 litre prefilter, has two intake connections and one outlet, and rolls on built-in wheels because it is heavy once full.",
+  "highlights": [
+   "12 L of media plus a large 1.5 L prefilter",
+   "Two inlet connections and one outlet, all 16/22 mm",
+   "Flow and maintenance indicator on the head",
+   "Wheels and recessed handles for moving it around"
+  ],
+  "bestFor": "Very large planted displays, roughly 600 litres and up, where one filter needs to carry a lot of media.",
+  "watchOut": "Media is not included, it draws 45 W and is over 56 cm tall, so check cabinet height before you buy.",
+  "specs": {
+   "Hose size": "16/22 mm (2 inlets, 1 outlet)",
+   "Media": "Not included",
+   "Flow": "Adjustable"
+  },
+  "models": [
+   {
+    "name": "1200XL (2080)",
+    "sku": "2080",
+    "flowLph": 1700,
+    "headM": 2.8,
+    "tankMaxL": 1200,
+    "powerW": 45,
+    "mediaL": 12.0,
+    "hoseMm": 16,
+    "extra": {
+     "Prefilter": "1.5 L",
+     "Canister volume": "25 L",
+     "Dimensions": "33 x 33 x 56.7 cm"
+    }
+   }
+  ],
+  "priceFrom": 377.27,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-professional-3-filter-1200xl-2080_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-professional-3-filter-1200xl-2080",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-classicvario-plus-e",
+  "brand": "Eheim",
+  "name": "classicVARIO+e",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "This is the old Classic canister rebuilt with a brushless, WiFi-controlled pump. You set the flow from a browser, and it can ramp down at night or during feeding if paired with other Eheim digital kit. It is quiet and sips power.",
+  "highlights": [
+   "Brushless DC pump, adjustable in fine steps",
+   "Manual and pulse modes, set over WiFi",
+   "Uses as little as 1.7 W at low flow",
+   "Maintenance reminder by e-mail when cleaning is due"
+  ],
+  "bestFor": "Planted tanks of about 50 to 250 litres where you want a silent, simple canister with adjustable flow and do not need a big media load.",
+  "watchOut": "Flow tops out around 510 L/h, which is modest for a high-tech tank at the top of its size range.",
+  "specs": {
+   "Hose size": "12/16 mm",
+   "Control": "WiFi via web browser",
+   "Water type": "Freshwater and marine",
+   "Warranty": "2 years"
+  },
+  "models": [
+   {
+    "name": "250",
+    "flowLph": 510,
+    "headM": 1.8,
+    "tankMinL": 50,
+    "tankMaxL": 250,
+    "powerW": 9.8,
+    "mediaL": 3.0,
+    "hoseMm": 12,
+    "extra": {
+     "Power range": "1.7 to 9.8 W",
+     "Canister volume": "3.5 L",
+     "Dimensions": "17 x 35.5 cm (width x height)"
+    }
+   }
+  ],
+  "priceFrom": 189.11,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-classicvarioe-250-external-filter_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-classicvarioe-250-external-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-classicvario-e-250-external-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-pick-up",
+  "brand": "Eheim",
+  "name": "Pick-up",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "Pick-up filters are small sponge internals that stick to the glass with suckers. The motor stays put while the sponge housing slides off for rinsing, so you do not have to unclip the whole thing or wrestle the cable.",
+  "highlights": [
+   "Filter body slides off the motor for cleaning",
+   "Adjustable flow on every size",
+   "Only 3.5 to 6 W",
+   "Carbon sponge available if you want it"
+  ],
+  "bestFor": "Nano and small planted tanks, quarantine or shrimp tanks where a canister would be overkill.",
+  "watchOut": "Media volume is tiny, so biological capacity is limited and the sponge needs rinsing often on a well-fed tank.",
+  "specs": {
+   "Mounting": "Suction cups",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "45",
+    "sku": "2006",
+    "flowLph": 180,
+    "headM": 0.35,
+    "tankMaxL": 45,
+    "powerW": 3.5,
+    "mediaL": 0.08,
+    "extra": {
+     "Flow range": "50 to 180 L/h",
+     "Dimensions": "6.3 x 5 x 13.5 cm"
+    }
+   },
+   {
+    "name": "60",
+    "sku": "2008",
+    "flowLph": 300,
+    "headM": 0.35,
+    "tankMinL": 30,
+    "tankMaxL": 60,
+    "powerW": 4,
+    "mediaL": 0.2,
+    "extra": {
+     "Flow range": "150 to 300 L/h",
+     "Dimensions": "9.6 x 7.5 x 16.3 cm"
+    }
+   },
+   {
+    "name": "160",
+    "sku": "2010",
+    "flowLph": 500,
+    "headM": 0.4,
+    "tankMinL": 60,
+    "tankMaxL": 160,
+    "powerW": 6,
+    "mediaL": 0.33,
+    "extra": {
+     "Flow range": "220 to 500 L/h",
+     "Dimensions": "9.6 x 7.5 x 22.8 cm"
+    }
+   },
+   {
+    "name": "200",
+    "sku": "2012",
+    "flowLph": 570,
+    "headM": 0.4,
+    "tankMinL": 150,
+    "tankMaxL": 200,
+    "powerW": 6,
+    "mediaL": 0.47,
+    "extra": {
+     "Flow range": "220 to 570 L/h",
+     "Dimensions": "9.6 x 7.5 x 28.5 cm"
+    }
+   }
+  ],
+  "priceFrom": 22.32,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-pick-up-internal-filters_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-pick-up-internal-filters_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-pick-up-internal-filters",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-aquaball",
+  "brand": "Eheim",
+  "name": "Aquaball",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "The Aquaball is an internal filter with a ball-joint pump head, so you can point the outflow wherever you want surface movement. Foam cartridges handle mechanical and biological filtration, and there is a venturi if you want to add air.",
+  "highlights": [
+   "Swivelling ball head for aiming the outflow",
+   "Adjustable flow, 480 to 650 L/h at the top end",
+   "Modular baskets, one to three depending on size",
+   "Venturi diffuser for extra oxygen when you need it"
+  ],
+  "bestFor": "Small to medium low-tech planted tanks, or as a backup filter and circulation boost on a bigger tank.",
+  "watchOut": "Switch the venturi off on a CO2 tank, as the bubbles will drive off the gas you are paying for.",
+  "specs": {
+   "Mounting": "Suction cups",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "60",
+    "flowLph": 480,
+    "headM": 0.37,
+    "tankMinL": 30,
+    "tankMaxL": 60,
+    "powerW": 5,
+    "mediaL": 0.18,
+    "extra": {
+     "Flow range": "150 to 480 L/h",
+     "Filter baskets": "1",
+     "Dimensions": "9.6 x 16 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "130",
+    "flowLph": 550,
+    "headM": 0.43,
+    "tankMinL": 60,
+    "tankMaxL": 130,
+    "powerW": 6,
+    "mediaL": 0.32,
+    "extra": {
+     "Flow range": "180 to 550 L/h",
+     "Filter baskets": "2",
+     "Dimensions": "9.6 x 21.4 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "180",
+    "flowLph": 650,
+    "headM": 0.43,
+    "tankMinL": 80,
+    "tankMaxL": 180,
+    "powerW": 6,
+    "mediaL": 0.45,
+    "extra": {
+     "Flow range": "210 to 650 L/h",
+     "Filter baskets": "3",
+     "Dimensions": "9.6 x 27 cm (diameter x height)"
+    }
+   }
+  ],
+  "priceFrom": 39.35,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aquaball-series-internal-filters_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aquaball-series-internal-filters_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aquaball-series-internal-filters_4.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-aquaball-series-internal-filters",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-biopower",
+  "brand": "Eheim",
+  "name": "Biopower",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "Biopower takes the Aquaball pump head and adds closed baskets filled with SUBSTRATpro, so it behaves more like a small canister hung inside the tank. It comes with a spray bar and a venturi, and the flow is adjustable.",
+  "highlights": [
+   "Closed baskets of SUBSTRATpro for more biological capacity than a sponge filter",
+   "Spray bar included for gentle surface movement",
+   "Swivelling, adjustable pump head",
+   "6 to 8 W running power"
+  ],
+  "bestFor": "Medium planted tanks without room for a canister, or tanks with a heavier fish load that need more biology than a basic internal.",
+  "watchOut": "It is a tall column inside the tank, so plan your hardscape to hide it.",
+  "specs": {
+   "Mounting": "Suction cup holder",
+   "Water type": "Freshwater and marine",
+   "Includes": "Spray bar and venturi diffuser"
+  },
+  "models": [
+   {
+    "name": "160",
+    "flowLph": 550,
+    "headM": 0.43,
+    "tankMinL": 80,
+    "tankMaxL": 160,
+    "powerW": 6,
+    "mediaL": 0.38,
+    "extra": {
+     "Flow range": "180 to 550 L/h",
+     "Dimensions": "9.6 x 21.5 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "200",
+    "flowLph": 650,
+    "headM": 0.43,
+    "tankMinL": 100,
+    "tankMaxL": 200,
+    "powerW": 6,
+    "mediaL": 0.53,
+    "extra": {
+     "Flow range": "210 to 650 L/h",
+     "Dimensions": "9.6 x 27 cm (diameter x height)"
+    }
+   },
+   {
+    "name": "240",
+    "flowLph": 750,
+    "headM": 0.6,
+    "tankMinL": 160,
+    "tankMaxL": 240,
+    "powerW": 8,
+    "mediaL": 0.68,
+    "extra": {
+     "Flow range": "280 to 750 L/h",
+     "Dimensions": "9.6 x 32.5 cm (diameter x height)"
+    }
+   }
+  ],
+  "priceFrom": 49.91,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-biopower-200-internal-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-biopower-160-internal-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-biopower-160-internal-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-aqua-corner-filter",
+  "brand": "Eheim",
+  "name": "aqua Corner Filter",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "The aqua is a slim internal filter shaped to sit in a back corner, which leaves more open space for the scape. Filter modules clip together, so you can add another cartridge later if you need more capacity, and there is a small media box for carbon or bio media.",
+  "highlights": [
+   "Corner shape keeps it out of the way of your layout",
+   "Clip-in modules, expandable with extra cartridges",
+   "Media box takes carbon, SUBSTRATpro or similar",
+   "Adjustable output and a diffuser included"
+  ],
+  "bestFor": "Beginner planted tanks of roughly 100 to 200 litres where you want something simple that hides in a corner.",
+  "watchOut": "The listing does not give a flow figure, so on a CO2 tank you may want a separate circulation pump to be safe.",
+  "specs": {
+   "Mounting": "4 suction cups",
+   "Water type": "Freshwater and marine",
+   "Includes": "Foam cartridges, 20 g carbon, diffuser and hose"
+  },
+  "models": [
+   {
+    "name": "200",
+    "tankMinL": 100,
+    "tankMaxL": 200,
+    "heightCm": 24.3,
+    "widthCm": 6.6,
+    "extra": {
+     "Dimensions": "6.6 x 6.6 x 24.3 cm"
+    }
+   }
+  ],
+  "priceFrom": 42.71,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aqua200-internal-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-aqua200-internal-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-miniflat",
+  "brand": "Eheim",
+  "name": "miniFLAT",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "The miniFLAT lies flat on the bottom rather than hanging on the glass, so it works in very shallow water. It draws water in from underneath, passes it through a sponge and pushes it out of the top, which keeps a small water area moving.",
+  "highlights": [
+   "Works in water only a few centimetres deep",
+   "Sticks to the floor with suction cups",
+   "Hose connection lets you aim the outflow, for example into a small stream",
+   "5 W power draw"
+  ],
+  "bestFor": "Very shallow nano tanks and low water levels that still need a bit of filtration and movement.",
+  "watchOut": "It is a tiny sponge filter, so it will not keep up with a stocked aquarium on its own.",
+  "specs": {
+   "Mounting": "Suction cups, lies horizontally",
+   "Includes": "Filter sponge"
+  },
+  "models": [
+   {
+    "name": "miniFLAT",
+    "powerW": 5
+   }
+  ],
+  "priceFrom": 23.51,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-miniflat-internal-filter_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-miniflat-internal-filter",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-thermocontrol",
+  "brand": "Eheim",
+  "name": "ThermoControl",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "ThermoControl is Eheim's standard adjustable glass heater, and it is the one many keepers have running for years without a second thought. You set it between 20 and 32 °C on the dial, and the electronics hold it within about half a degree.",
+  "highlights": [
+   "Adjustable 20 to 32 °C, held to about ±0.5 °C",
+   "Red and green lamp shows when it is heating",
+   "Dry-run protection switches it off if the water drops",
+   "Ten sizes from 25 to 400 W"
+  ],
+  "bestFor": "Almost any planted tank, from nano to very large, where you want a proven heater you can set and forget.",
+  "watchOut": "It is glass with no guard, so keep it clear of big digging fish and never lift it out while it is hot.",
+  "specs": {
+   "Temperature range": "20 to 32 °C",
+   "Accuracy": "±0.5 °C",
+   "Cable": "1.7 m",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "25 W",
+    "heaterW": 25,
+    "tankMinL": 20,
+    "tankMaxL": 25,
+    "lengthCm": 23.3
+   },
+   {
+    "name": "50 W",
+    "heaterW": 50,
+    "tankMinL": 25,
+    "tankMaxL": 60,
+    "lengthCm": 23.3
+   },
+   {
+    "name": "75 W",
+    "heaterW": 75,
+    "tankMinL": 60,
+    "tankMaxL": 100,
+    "lengthCm": 26.0
+   },
+   {
+    "name": "100 W",
+    "heaterW": 100,
+    "tankMinL": 100,
+    "tankMaxL": 150,
+    "lengthCm": 30.9
+   },
+   {
+    "name": "125 W",
+    "heaterW": 125,
+    "tankMinL": 150,
+    "tankMaxL": 200,
+    "lengthCm": 30.9
+   },
+   {
+    "name": "150 W",
+    "heaterW": 150,
+    "tankMinL": 200,
+    "tankMaxL": 300,
+    "lengthCm": 33.5
+   },
+   {
+    "name": "200 W",
+    "heaterW": 200,
+    "tankMinL": 300,
+    "tankMaxL": 400,
+    "lengthCm": 39.6
+   },
+   {
+    "name": "250 W",
+    "heaterW": 250,
+    "tankMinL": 400,
+    "tankMaxL": 600,
+    "lengthCm": 44.2
+   },
+   {
+    "name": "300 W",
+    "heaterW": 300,
+    "tankMinL": 600,
+    "tankMaxL": 1000,
+    "lengthCm": 49.6
+   },
+   {
+    "name": "400 W",
+    "heaterW": 400,
+    "tankMinL": 1000,
+    "tankMaxL": 1200,
+    "lengthCm": 49.6
+   }
+  ],
+  "priceFrom": 29.57,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-thermocontrol-electronic-aquarium-heater_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-thermocontrol-electronic-aquarium-heater_9.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-thermocontrol-electronic-aquarium-heater",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-thermopreset",
+  "brand": "Eheim",
+  "name": "ThermoPreset",
+  "category": "heaters",
+  "subtype": "preset",
+  "summary": "ThermoPreset is fixed at 25 °C with nothing to adjust. It is slim, around 2.8 cm across, and wrapped in a plastic sleeve, so it is a sensible pick for a simple community tank or a first aquarium.",
+  "highlights": [
+   "Factory set to 25 °C, no dial to knock",
+   "Plastic casing, tougher than a bare glass tube",
+   "Dry-run protection and an LED heating lamp",
+   "Slim 2.8 cm diameter"
+  ],
+  "bestFor": "Beginners and community planted tanks that are happy at 25 °C.",
+  "watchOut": "You cannot change the temperature, so it is no good for cooler-water species or shrimp that prefer low 20s.",
+  "specs": {
+   "Temperature": "Fixed 25 °C",
+   "Diameter": "2.8 cm",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "50 W",
+    "heaterW": 50,
+    "tankMinL": 25,
+    "tankMaxL": 60,
+    "lengthCm": 16.9
+   },
+   {
+    "name": "100 W",
+    "heaterW": 100,
+    "tankMinL": 100,
+    "tankMaxL": 150,
+    "lengthCm": 18.4
+   },
+   {
+    "name": "150 W",
+    "heaterW": 150,
+    "tankMinL": 200,
+    "tankMaxL": 300,
+    "lengthCm": 22.4
+   },
+   {
+    "name": "200 W",
+    "heaterW": 200,
+    "tankMinL": 300,
+    "tankMaxL": 400,
+    "lengthCm": 25.4
+   }
+  ],
+  "priceFrom": 21.77,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-thermopreset-aquarium-heater_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-thermopreset-aquarium-heater_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-thermopreset-aquarium-heater",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-thermocontrol-plus-e",
+  "brand": "Eheim",
+  "name": "thermocontrol+e",
+  "category": "heaters",
+  "subtype": "smart",
+  "summary": "The thermocontrol+e is a glass heater with WiFi built in. You set the temperature from a browser, and it e-mails you if the water drifts more than 2 °C from target. It can also link to Eheim filters and lights to run a slightly cooler night.",
+  "highlights": [
+   "Set 18 to 32 °C from a phone, tablet or computer",
+   "E-mail alert if temperature drifts by ±2 °C",
+   "Expert mode lets you calibrate against your own thermometer",
+   "Day and night temperature via Eheim's digital family"
+  ],
+  "bestFor": "Larger tanks where you want remote alerts about temperature, especially if you are away a lot.",
+  "watchOut": "Smallest size is 150 W for 200 litres and up, and it must be mounted upright, which can be awkward in some sumps.",
+  "specs": {
+   "Temperature range": "18 to 32 °C",
+   "Accuracy": "±0.5 °C",
+   "Control": "WiFi via web browser",
+   "Cable": "1.7 m",
+   "Diameter": "3.2 cm",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "150 W",
+    "heaterW": 150,
+    "tankMinL": 200,
+    "tankMaxL": 300,
+    "lengthCm": 32.7
+   },
+   {
+    "name": "200 W",
+    "heaterW": 200,
+    "tankMinL": 300,
+    "tankMaxL": 400,
+    "lengthCm": 38.6
+   },
+   {
+    "name": "300 W",
+    "heaterW": 300,
+    "tankMinL": 600,
+    "tankMaxL": 1000,
+    "lengthCm": 48.6
+   }
+  ],
+  "priceFrom": 51.49,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-thermocontrole-wifi-aquarium-heater_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-thermocontrol-e-wifi-aquarium-heater",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-climacontrol-plus",
+  "brand": "Eheim",
+  "name": "climacontrol+",
+  "category": "cooling",
+  "subtype": "chiller",
+  "summary": "climacontrol+ is an inline unit that both chills and heats, controlled over WiFi. It sits on the return line after your canister, holds a set temperature anywhere from 5 to 35 °C and e-mails you if things go wrong.",
+  "highlights": [
+   "Cools and heats in one inline box",
+   "Set and monitor temperature over WiFi",
+   "Warning e-mail if the water is off target for 5 minutes",
+   "Uses R290, an ozone-safe refrigerant"
+  ],
+  "bestFor": "Big planted tanks in warm rooms or hot climates where summer temperatures push past 28 °C.",
+  "watchOut": "It is expensive, needs 500 to 800 L/h of clean filtered water through it and wants 5 cm of clear space around it for airflow.",
+  "specs": {
+   "Temperature range": "5 to 35 °C",
+   "Hose size": "16/22 mm or 19/27 mm",
+   "Water flow needed": "500 to 800 L/h",
+   "Control": "WiFi",
+   "Ambient range": "10 to 38 °C",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "S",
+    "tankMaxL": 500,
+    "powerW": 260,
+    "heaterW": 300,
+    "hoseMm": 16,
+    "extra": {
+     "Noise (80 cm, cooling)": "47 to 50 dB",
+     "Dimensions": "31 x 31 x 44.7 cm"
+    }
+   },
+   {
+    "name": "M",
+    "tankMaxL": 1000,
+    "powerW": 300,
+    "heaterW": 300,
+    "hoseMm": 16,
+    "extra": {
+     "Noise (80 cm, cooling)": "50 to 53 dB",
+     "Dimensions": "31 x 31 x 48.9 cm"
+    }
+   },
+   {
+    "name": "L",
+    "tankMaxL": 2000,
+    "powerW": 400,
+    "heaterW": 300,
+    "hoseMm": 16,
+    "extra": {
+     "Noise (80 cm, cooling)": "51 to 54 dB",
+     "Dimensions": "31 x 31 x 53.1 cm"
+    }
+   }
+  ],
+  "priceFrom": 1142.99,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-climacontrol-aquarium-chillerheater_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-climacontrol-aquarium-chillerheater_5.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-climacontrol-aquarium-temperature-monitor-and-controller",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-compacton",
+  "brand": "Eheim",
+  "name": "compactON",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "compactON is a family of small, quiet water pumps for moving water around a tank, a sump or a DIY filter. The smaller ones stick to the glass with suckers, and most sizes have a flow dial.",
+  "highlights": [
+   "Six sizes from 300 to 5,000 L/h",
+   "Adjustable flow on all but the 5000",
+   "Ceramic shaft for quiet running",
+   "2100 and up can run outside the water as well"
+  ],
+  "bestFor": "Return pumps for sumps, DIY filters or water features in a planted setup.",
+  "watchOut": "Output drops quickly with head height, so check the pump curve if you are lifting water a long way.",
+  "specs": {
+   "Cable": "2 m",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "300",
+    "flowLph": 300,
+    "headM": 0.6,
+    "powerW": 7,
+    "hoseMm": 12,
+    "extra": {
+     "Flow range": "170 to 300 L/h",
+     "Outlet": "12/16 mm",
+     "Dimensions": "6.2 x 3.8 x 7.2 cm"
+    }
+   },
+   {
+    "name": "600",
+    "flowLph": 600,
+    "headM": 1.0,
+    "powerW": 7,
+    "hoseMm": 12,
+    "extra": {
+     "Flow range": "250 to 600 L/h",
+     "Outlet": "12/16 mm",
+     "Dimensions": "6.2 x 3.8 x 7.2 cm"
+    }
+   },
+   {
+    "name": "1000",
+    "flowLph": 1000,
+    "headM": 1.4,
+    "powerW": 15,
+    "hoseMm": 16,
+    "extra": {
+     "Flow range": "400 to 1000 L/h",
+     "Outlet": "16/22 mm or 19/27 mm",
+     "Dimensions": "7.3 x 4.7 x 7.9 cm"
+    }
+   },
+   {
+    "name": "2100",
+    "flowLph": 2100,
+    "headM": 2.4,
+    "powerW": 38,
+    "hoseMm": 19,
+    "extra": {
+     "Flow range": "1400 to 2100 L/h",
+     "Inlet and outlet": "19/27 mm",
+     "Dimensions": "10.9 x 7 x 14.2 cm"
+    }
+   },
+   {
+    "name": "3000",
+    "flowLph": 3000,
+    "headM": 2.7,
+    "powerW": 55,
+    "hoseMm": 19,
+    "extra": {
+     "Flow range": "1800 to 3000 L/h",
+     "Inlet and outlet": "19/27 mm",
+     "Dimensions": "10.9 x 7 x 14.2 cm"
+    }
+   },
+   {
+    "name": "5000",
+    "flowLph": 5000,
+    "headM": 3.6,
+    "powerW": 70,
+    "hoseMm": 25,
+    "extra": {
+     "Flow": "Fixed",
+     "Inlet and outlet": "25/34 mm",
+     "Dimensions": "14.2 x 9.2 x 15.4 cm"
+    }
+   }
+  ],
+  "priceFrom": 16.36,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-compacton-return-pump_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-compacton-return-pump_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-compacton-return-pump_7.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-compacton-pump",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-universal",
+  "brand": "Eheim",
+  "name": "Universal",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "The Universal pumps are the long-running workhorses of the Eheim range, used in sumps, trickle filters and fish houses. They can sit in the water or outside it, and a built-in prefilter protects the impeller.",
+  "highlights": [
+   "Run submerged or inline outside the tank",
+   "Integrated prefilter on the intake",
+   "Four sizes from 600 to 3,400 L/h",
+   "Mounting plate included"
+  ],
+  "bestFor": "Sump returns or external plumbing on larger planted systems where you want a very durable pump.",
+  "watchOut": "The bigger sizes draw 65 to 80 W, far more than a modern DC pump of similar output.",
+  "specs": {
+   "Cable": "1.7 m",
+   "Water type": "Freshwater and marine",
+   "Use": "Indoor, submerged or external"
+  },
+  "models": [
+   {
+    "name": "600",
+    "flowLph": 600,
+    "headM": 1.5,
+    "powerW": 10,
+    "hoseMm": 12,
+    "extra": {
+     "Hose size": "12/16 mm in and out",
+     "Dimensions": "14.7 x 7.5 x 11.8 cm"
+    }
+   },
+   {
+    "name": "1200",
+    "flowLph": 1200,
+    "headM": 2.0,
+    "powerW": 28,
+    "hoseMm": 16,
+    "extra": {
+     "Hose size": "16/22 mm inlet, 12/16 mm outlet",
+     "Dimensions": "18 x 9.5 x 12 cm"
+    }
+   },
+   {
+    "name": "2400",
+    "sku": "1260",
+    "flowLph": 2400,
+    "headM": 3.7,
+    "powerW": 65,
+    "hoseMm": 25,
+    "extra": {
+     "Hose size": "25/34 mm inlet, 16/22 mm outlet",
+     "Dimensions": "21.8 x 11.6 x 16.1 cm"
+    }
+   },
+   {
+    "name": "3400",
+    "flowLph": 3400,
+    "headM": 3.6,
+    "powerW": 80,
+    "hoseMm": 25,
+    "extra": {
+     "Hose size": "25/34 mm inlet, 16/22 mm outlet",
+     "Dimensions": "21.8 x 11.6 x 16.1 cm"
+    }
+   }
+  ],
+  "priceFrom": 82.55,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-universal-return-pump_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-universal-return-pump",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-streamon-plus",
+  "brand": "Eheim",
+  "name": "streamON+",
+  "category": "pumps",
+  "subtype": "circulation",
+  "summary": "streamON+ is a compact propeller pump on a magnetic mount, used to push water around the tank rather than through a filter. It swivels on a ball joint and has a slider to throttle the outflow, and it is very frugal with power.",
+  "highlights": [
+   "Magnet mount, easy to move and angle",
+   "Ball joint for full 3D positioning",
+   "Slider to reduce outflow",
+   "Only 2.5 to 12 W"
+  ],
+  "bestFor": "High-tech planted tanks that need extra circulation to push CO2 and nutrients into dense stem groups.",
+  "watchOut": "Even the smallest moves a lot of water, so on a nano or with delicate fish, start on the lowest setting and aim it at the glass.",
+  "specs": {
+   "Cable": "2 m",
+   "Mount": "Magnetic holder",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "3500",
+    "flowLph": 3500,
+    "tankMinL": 35,
+    "tankMaxL": 200,
+    "powerW": 2.5,
+    "extra": {
+     "Glass thickness": "3 to 8 mm",
+     "Dimensions": "11 x 4.7 x 5.5 cm"
+    }
+   },
+   {
+    "name": "6500",
+    "flowLph": 6500,
+    "tankMinL": 150,
+    "tankMaxL": 350,
+    "powerW": 6,
+    "extra": {
+     "Glass thickness": "6 to 12 mm",
+     "Dimensions": "13.1 x 5.9 x 7.2 cm"
+    }
+   },
+   {
+    "name": "9500",
+    "flowLph": 9500,
+    "tankMinL": 350,
+    "tankMaxL": 500,
+    "powerW": 12,
+    "extra": {
+     "Glass thickness": "6 to 12 mm",
+     "Dimensions": "13.8 x 7 x 8.8 cm"
+    }
+   }
+  ],
+  "priceFrom": 60.04,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-streamon-powerhead_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-streamon-powerhead",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-air",
+  "brand": "Eheim",
+  "name": "air",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "Eheim's air pumps are small, quiet mains units with rubber feet and a hook for hanging on the tank. Each outlet has its own flow control, and the kit comes with airline, check valves and diffusers.",
+  "highlights": [
+   "Individually adjustable outlets",
+   "Rubber feet to cut vibration hum",
+   "Supplied with airline, check valve and diffuser",
+   "Only 3.5 to 4 W"
+  ],
+  "bestFor": "Running sponge filters in shrimp tanks, or adding air overnight on a CO2 planted tank.",
+  "watchOut": "Keep it off during the CO2 photoperiod, since surface agitation from the bubbles will strip out CO2.",
+  "specs": {
+   "Airline": "4 mm",
+   "Max depth": "About 2 m",
+   "Dimensions": "15 x 9.2 x 7.6 cm",
+   "Water type": "Freshwater and marine"
+  },
+  "models": [
+   {
+    "name": "air100",
+    "airLpm": 1.7,
+    "outlets": 1,
+    "powerW": 3.5,
+    "extra": {
+     "Air output": "100 L/h"
+    }
+   },
+   {
+    "name": "air200",
+    "airLpm": 3.3,
+    "outlets": 2,
+    "powerW": 3.5,
+    "extra": {
+     "Air output": "200 L/h (2 x 100)"
+    }
+   },
+   {
+    "name": "air400",
+    "airLpm": 6.7,
+    "outlets": 2,
+    "powerW": 4,
+    "extra": {
+     "Air output": "400 L/h (2 x 200)"
+    }
+   }
+  ],
+  "priceFrom": 28.71,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-air-aquarium-air-pump_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-air-aquarium-air-pump",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-reeflexuv",
+  "brand": "Eheim",
+  "name": "reeflexUV",
+  "category": "sterilisers",
+  "subtype": "uv",
+  "summary": "reeflexUV is an inline UV clarifier that goes on your canister's return hose. A reflector inside bounces the UV back through the water, so it gets more done per watt than a plain unit, and it kills free-floating algae that turns water green.",
+  "highlights": [
+   "Fits inline on the filter return",
+   "Internal reflector boosts effective UV dose",
+   "Clears green water from suspended algae",
+   "Three sizes to match tank volume and filter flow"
+  ],
+  "bestFor": "Planted tanks prone to green water, or anyone wanting a bit of extra clarity and pathogen control.",
+  "watchOut": "It does nothing for algae growing on plants or glass, and the lamp needs replacing about once a year.",
+  "specs": {
+   "Max pressure": "0.8 bar",
+   "Water type": "Freshwater and marine"
+  },
+  "models": [
+   {
+    "name": "350",
+    "tankMinL": 80,
+    "tankMaxL": 350,
+    "powerW": 9,
+    "uvW": 7,
+    "hoseMm": 12,
+    "extra": {
+     "Flow range": "200 to 400 L/h",
+     "Hose size": "12/16 mm",
+     "Dimensions": "13 x 35 x 11.5 cm"
+    }
+   },
+   {
+    "name": "500",
+    "tankMinL": 300,
+    "tankMaxL": 500,
+    "powerW": 10,
+    "uvW": 9,
+    "hoseMm": 16,
+    "extra": {
+     "Flow range": "400 to 800 L/h",
+     "Hose size": "16/22 mm",
+     "Dimensions": "13 x 38 x 11.5 cm"
+    }
+   },
+   {
+    "name": "800",
+    "tankMinL": 400,
+    "tankMaxL": 800,
+    "powerW": 13,
+    "uvW": 11,
+    "hoseMm": 16,
+    "extra": {
+     "Flow range": "600 to 1200 L/h",
+     "Hose size": "16/22 mm",
+     "Dimensions": "13 x 50 x 11.5 cm"
+    }
+   }
+  ],
+  "priceFrom": 102.23,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-reeflexuv-uv-sterilizer_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-reeflexuv-uv-sterilizer_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-reeflexuv-uv-sterilizer",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-reeflexuv-plus-e",
+  "brand": "Eheim",
+  "name": "reeflexUV+e",
+  "category": "sterilisers",
+  "subtype": "uv",
+  "summary": "The reeflexUV+e is the WiFi version of the reeflexUV. You can run it constantly, on a daily schedule or linked to other Eheim devices, and it tells you by e-mail when the lamp is due for a change.",
+  "highlights": [
+   "Constant, daily cycle or coupled modes over WiFi",
+   "Booster mode for a short, intense treatment",
+   "Lamp change reminder by e-mail",
+   "Switches off automatically when you open it to change the lamp"
+  ],
+  "bestFor": "Larger planted tanks where you want UV only for set hours, or want it tied into an Eheim digital setup.",
+  "watchOut": "It costs about twice as much as the standard reeflexUV for the same job, so only worth it if you will use the scheduling.",
+  "specs": {
+   "Hose size": "16/22 mm",
+   "Max pressure": "0.8 bar",
+   "Control": "WiFi",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "500",
+    "tankMinL": 300,
+    "tankMaxL": 500,
+    "powerW": 10,
+    "hoseMm": 16,
+    "extra": {
+     "Flow range": "400 to 800 L/h",
+     "Dimensions": "13 x 38 x 11.5 cm"
+    }
+   },
+   {
+    "name": "800",
+    "tankMinL": 400,
+    "tankMaxL": 800,
+    "powerW": 14,
+    "hoseMm": 16,
+    "extra": {
+     "Dimensions": "13 x 47 x 11.5 cm"
+    }
+   },
+   {
+    "name": "1500",
+    "tankMinL": 700,
+    "tankMaxL": 1500,
+    "powerW": 18,
+    "hoseMm": 16,
+    "extra": {
+     "Flow range": "1000 to 2000 L/h",
+     "Dimensions": "13 x 50 x 11.5 cm"
+    }
+   },
+   {
+    "name": "2000",
+    "tankMinL": 1200,
+    "tankMaxL": 2000,
+    "powerW": 24,
+    "hoseMm": 16,
+    "extra": {
+     "Flow range": "1500 to 3000 L/h",
+     "Dimensions": "13 x 56 x 11.5 cm"
+    }
+   }
+  ],
+  "priceFrom": 224.21,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-reeflexuve-wifi-uv-clarifier_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-reeflexuve-wifi-uv-clarifier_2.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-reeflexuv-e-wifi-uv-clarifier",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-skim350",
+  "brand": "Eheim",
+  "name": "skim350",
+  "category": "plumbing",
+  "subtype": "surface-skimmer",
+  "summary": "The skim350 is a small powered surface skimmer that clips to the glass and sucks the oily film off the top of the water into a sponge. It runs on its own pump, so it does not need to be plumbed into your filter.",
+  "highlights": [
+   "Clears surface film for better gas exchange",
+   "Self-contained, no filter connection needed",
+   "Sponge catches the debris, rinse and reuse",
+   "5 W power draw"
+  ],
+  "bestFor": "Planted tanks up to 350 litres that get a stubborn protein film on the surface, which is common with CO2 and heavy feeding.",
+  "watchOut": "It is a visible box in the tank, and the sponge needs rinsing often or it stops skimming.",
+  "specs": {
+   "Mounting": "Suction cups",
+   "Water type": "Freshwater and marine"
+  },
+  "models": [
+   {
+    "name": "skim350",
+    "tankMaxL": 350,
+    "powerW": 5
+   }
+  ],
+  "priceFrom": 33.11,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-skim350_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-skim350",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-powerrgb",
+  "brand": "Eheim",
+  "name": "powerRGB",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "powerRGB is a low-voltage RGB LED bar meant to sit alongside your main light and add colour. On its own it gives a fixed output. Paired with the RGBcontrol+e controller (sold separately) you can blend colours, run sunrise and sunset, and add moonlight.",
+  "highlights": [
+   "Adds red, green and blue to lift plant and fish colour",
+   "Three lengths for tanks from about 79 to 125 cm",
+   "Roughly 1,550 to 2,170 lumens",
+   "Low-voltage, 21.9 to 30.7 W"
+  ],
+  "bestFor": "Tanks that already have a white main light and where you want richer reds and greens, or smooth dawn and dusk.",
+  "watchOut": "It is a supplementary light, not a full planted-tank light on its own, and the colour control needs an extra controller.",
+  "specs": {
+   "Voltage": "Low voltage",
+   "Control": "Optional RGBcontrol+e (sold separately)",
+   "Water type": "Freshwater and marine",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "771 mm",
+    "lengthCm": 77.1,
+    "fitsLengthMinCm": 78.7,
+    "fitsLengthMaxCm": 95.1,
+    "powerW": 21.9,
+    "lumens": 1553,
+    "extra": {
+     "Rated colour temperature": "4900 K"
+    }
+   },
+   {
+    "name": "953 mm",
+    "lengthCm": 95.3,
+    "fitsLengthMinCm": 97.3,
+    "fitsLengthMaxCm": 113.3,
+    "powerW": 26.3,
+    "lumens": 1863,
+    "extra": {
+     "Rated colour temperature": "4900 K"
+    }
+   },
+   {
+    "name": "1074 mm",
+    "lengthCm": 107.4,
+    "fitsLengthMinCm": 109.4,
+    "fitsLengthMaxCm": 125.4,
+    "powerW": 30.7,
+    "lumens": 2174,
+    "extra": {
+     "Rated colour temperature": "4900 K"
+    }
+   }
+  ],
+  "priceFrom": 185.99,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-powerrgb-led-light_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-powerrgb-led-light_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-powerrgb-led-aquarium-light",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "eheim-autofeeder-plus",
+  "brand": "Eheim",
+  "name": "autofeeder+",
+  "category": "feeders",
+  "subtype": "auto-feeder",
+  "summary": "The autofeeder+ is a mains-powered feeder you program over WiFi. It can skip a random day each week, stops you double-feeding, and e-mails you when the drum is getting low.",
+  "highlights": [
+   "Program times and portions from a browser",
+   "Low-food e-mail at 30 percent and when empty",
+   "Mains powered, no batteries to run flat",
+   "Can pause a linked Eheim filter while food sinks"
+  ],
+  "bestFor": "Keepers who travel and want to check on feeding remotely.",
+  "watchOut": "Needs a nearby socket and a lid cut-out or open top for mounting.",
+  "specs": {
+   "Power": "Mains adaptor",
+   "Control": "WiFi via web browser",
+   "Cable": "About 2 m",
+   "Warranty": "3 years"
+  },
+  "models": [
+   {
+    "name": "autofeeder+",
+    "capacityMl": 125
+   }
+  ],
+  "priceFrom": 90.2,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-autofeeder-wifi-fish-feeder_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-autofeeder-wifi-fish-feeder",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-feedair",
+  "brand": "Eheim",
+  "name": "Feed Air",
+  "category": "feeders",
+  "subtype": "auto-feeder",
+  "summary": "Feed Air is a simple battery feeder with a single ventilated drum, mostly for flake. Programming is straightforward and it has a button for an extra snack.",
+  "highlights": [
+   "Aerated food drum helps stop flakes clumping",
+   "Double-feed program option",
+   "Low-battery warning",
+   "Bracket for open-top tanks included"
+  ],
+  "bestFor": "Holiday feeding on small to medium community tanks.",
+  "watchOut": "Runs on batteries, so swap them before you go away.",
+  "specs": {
+   "Power": "Batteries (included)",
+   "Food": "Mainly flakes"
+  },
+  "models": [
+   {
+    "name": "Feed Air",
+    "capacityMl": 100
+   }
+  ],
+  "priceFrom": 52.95,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-feed-air-automatic-feeder_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-feed-air-automatic-feeder",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-twinfeeder",
+  "brand": "Eheim",
+  "name": "TWINfeeder",
+  "category": "feeders",
+  "subtype": "auto-feeder",
+  "summary": "The TWINfeeder has two drums you program separately, so you can offer flakes to surface fish and pellets or sticks to bottom feeders in the same tank. It runs on batteries and has a large display.",
+  "highlights": [
+   "Two separately programmable food drums",
+   "Both drums are aerated",
+   "Random dosing option",
+   "Low-battery warning"
+  ],
+  "bestFor": "Mixed community tanks where top and bottom dwellers need different foods while you are away.",
+  "watchOut": "Battery powered, and the listing does not give drum capacity.",
+  "specs": {
+   "Power": "Batteries (included)",
+   "Food": "Flakes, granules, sticks, pellets"
+  },
+  "models": [
+   {
+    "name": "TWINfeeder"
+   }
+  ],
+  "priceFrom": 64.49,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-twin-auto-feeder_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-twin-auto-feeder",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-rapidcleaner",
+  "brand": "Eheim",
+  "name": "rapidCleaner",
+  "category": "tools",
+  "subtype": "scraper",
+  "summary": "rapidCleaner is a long-handled blade scraper for glass tanks. The 8 cm blade covers a lot of glass per stroke, and a silicone guard stops it cutting into the sealant at the corners.",
+  "highlights": [
+   "Wide 8 cm blade",
+   "Silicone guard protects corner seams",
+   "Glass-fibre handle",
+   "Tool-free blade change"
+  ],
+  "bestFor": "Clearing green spot algae off glass in deeper planted tanks without getting your arm wet.",
+  "watchOut": "Blade scrapers are for glass only. Do not use it on acrylic tanks.",
+  "specs": {
+   "Blade width": "8 cm",
+   "Water type": "Freshwater and marine"
+  },
+  "models": [
+   {
+    "name": "48 cm",
+    "lengthCm": 48
+   },
+   {
+    "name": "58 cm",
+    "lengthCm": 58
+   }
+  ],
+  "priceFrom": 11.63,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-rapidcleaner-aquarium-scraper_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-rapidcleaner-aquarium-scraper_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-rapidcleaner-aquarium-scraper_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-rapidcleaner-aquarium-scraper",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-gravel-cleaner",
+  "brand": "Eheim",
+  "name": "Gravel Cleaner",
+  "category": "tools",
+  "subtype": "gravel-cleaner",
+  "summary": "A manual siphon gravel cleaner with a built-in priming pump and a stop button, so you do not have to suck the hose to start it. The rounded triangle nozzle gets into corners.",
+  "highlights": [
+   "Built-in priming, no mouth siphoning",
+   "Quick-stop button to pause the flow",
+   "Triangular nozzle for corners",
+   "Hose clip holds the end on the bucket"
+  ],
+  "bestFor": "Water changes on planted tanks with sand or gravel in the open areas.",
+  "watchOut": "Keep it off aqua soil, which it will suck up and break down.",
+  "specs": {
+   "Tube length": "58.2 cm",
+   "Includes": "Hose and hose clip"
+  },
+  "models": [
+   {
+    "name": "Gravel Cleaner",
+    "lengthCm": 58.2
+   }
+  ],
+  "priceFrom": 23.85,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-gravel-cleaner_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-gravel-cleaner",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-battery-gravel-cleaner",
+  "brand": "Eheim",
+  "name": "Battery Gravel Cleaner",
+  "category": "tools",
+  "subtype": "gravel-cleaner",
+  "summary": "A battery-powered gravel vacuum that sucks up dirt and returns the water straight back into the tank through a catch filter. It is for quick tidy-ups between water changes rather than removing water.",
+  "highlights": [
+   "No water removed, so it works between water changes",
+   "Removable filter compartment catches the dirt",
+   "Gentle suction that leaves gravel in place",
+   "Batteries included"
+  ],
+  "bestFor": "Spot-cleaning mulm off sand or gravel foregrounds without doing a full water change.",
+  "watchOut": "Only for tanks up to about 60 cm deep, and it does not replace regular water changes.",
+  "specs": {
+   "Power": "Batteries (included)",
+   "Max tank depth": "60 cm"
+  },
+  "models": [
+   {
+    "name": "Battery Gravel Cleaner"
+   }
+  ],
+  "priceFrom": 58.96,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-vacuum-cleaner-battery-powered_1.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-vacuum-cleaner-battery-powered",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-aquafamily",
+  "brand": "Eheim",
+  "name": "aquafamily",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "aquafamily is a 66 litre starter set with a lid-mounted RGBW LED you can program over WiFi, plus a corner filter, a preset heater and a thermometer. The app guides families through feeding and maintenance.",
+  "highlights": [
+   "RGBW LED with sunrise, sunset, clouds and moonlight, set via app or browser",
+   "Comes with aqua 160 corner filter and 100 W thermopreset heater",
+   "Polished glass edges and a base frame",
+   "App reminders for feeding, water changes and filter cleaning"
+  ],
+  "bestFor": "A first aquarium for a family, or a tidy low-tech planted tank on a sturdy sideboard.",
+  "watchOut": "The lid light is aimed at general viewing, so demanding carpeting plants will struggle without extra light.",
+  "specs": {
+   "Colours": "Black or white",
+   "Includes": "LED lid, aqua 160 filter, thermopreset 100 W heater, thermometer",
+   "Control": "EHEIM Connect app or browser"
+  },
+  "models": [
+   {
+    "name": "aquafamily",
+    "volumeL": 66,
+    "lengthCm": 60.7,
+    "widthCm": 31,
+    "heightCm": 35
+   }
+  ],
+  "priceFrom": 199.99,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aquafamily-aquarium_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aquafamily-aquarium_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-aquafamily-aquarium_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-aquafamily-aquarium",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ },
+ {
+  "id": "eheim-vivaline-led",
+  "brand": "Eheim",
+  "name": "vivaline LED",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "vivaline LED is a complete aquarium and cabinet set with a lid, LED light, Biopower internal filter and heater. A swappable decorative panel on the cabinet lets you change the look to match your room.",
+  "highlights": [
+   "Tank, cabinet, LED lid, filter and heater all included",
+   "126 L comes with a Biopower 160, 180 L with a Biopower 200",
+   "Cabinet front panel can be swapped even with the tank full",
+   "Pine, oak grey, white or anthracite finishes"
+  ],
+  "bestFor": "Low-tech community planted tanks where you want everything matched and ready to set up.",
+  "watchOut": "The single 13 or 17 W LED is fine for easy plants, but a stem-heavy or carpeted scape will want a stronger light and a canister.",
+  "specs": {
+   "Finishes": "Pine, oak grey, white, anthracite",
+   "Cabinet height (overall)": "119 cm"
+  },
+  "models": [
+   {
+    "name": "126",
+    "volumeL": 126,
+    "lengthCm": 80,
+    "widthCm": 35,
+    "heightCm": 45,
+    "glassMm": 8,
+    "extra": {
+     "Light": "1 x 13 W LED",
+     "Filter": "Biopower 160",
+     "Heater": "100 W",
+     "Overall size": "81 x 36 x 119 cm"
+    }
+   },
+   {
+    "name": "180",
+    "volumeL": 180,
+    "lengthCm": 100,
+    "widthCm": 40,
+    "heightCm": 45,
+    "glassMm": 10,
+    "extra": {
+     "Light": "1 x 17 W LED",
+     "Filter": "Biopower 200",
+     "Heater": "150 W",
+     "Overall size": "101 x 41 x 119 cm"
+    }
+   }
+  ],
+  "priceFrom": 425.95,
+  "currency": "GBP",
+  "images": [
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-vivaline-180-aquarium-and-cabinet_1.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-vivaline-126-aquarium-and-cabinet_2.jpg",
+   "/Users/mikeelmira/Downloads/eheim-juwel-oase/images/eheim/eheim-vivaline-180-aquarium-and-cabinet_3.jpg"
+  ],
+  "sourceUrl": "https://www.charterhouse-aquatics.com/products/eheim-vivaline-126-aquarium-and-cabinet",
+  "sourceName": "Charterhouse Aquatics",
+  "specSource": "retailer"
+ }
+]

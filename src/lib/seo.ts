@@ -1075,3 +1075,27 @@ export function homePageJsonLd() {
     ],
   };
 }
+
+/**
+ * Build a 110–160 character meta description from a short lead line plus
+ * the first sentence(s) of a longer body, cut on a sentence or word.
+ */
+export function longDescription(lead: string, body: string, max = 158): string {
+  let out = lead.trim();
+  const sentences = body.replace(/\s+/g, " ").match(/[^.!?]+[.!?]+/g) ?? [];
+  for (const sent of sentences) {
+    const next = `${out} ${sent.trim()}`;
+    if (next.length > max) break;
+    out = next;
+    if (out.length >= 110) break;
+  }
+  const first = sentences[0];
+  if (out.length < 110 && first && out === lead.trim()) {
+    const cut = `${out} ${first.trim()}`.slice(0, max);
+    out = `${cut.slice(0, cut.lastIndexOf(" "))}…`;
+  }
+  return out;
+}
+
+/** Site-wide default share image (app/opengraph-image.tsx). */
+export const DEFAULT_OG_IMAGE = `${site.url}/opengraph-image`;

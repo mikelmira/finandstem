@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import { site } from "@/lib/site";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
@@ -9,7 +10,8 @@ import { comparisonPairs } from "@/lib/catalogue/comparisons";
 export const metadata: Metadata = {
   title: "Compare species and substrates",
   description:
-    "Put up to four catalogue species or substrates side by side. Livestock mode compares fish, plants, shrimp, mosses, and snails. Substrate mode compares aquasoils and inert substrates by pH effect, ammonia release, and lifespan.",
+    "Put up to four fish, plants, shrimp, mosses, snails or substrates side by side and compare temperature, pH, hardness, tank size and compatibility.",
+  alternates: { canonical: `${site.url}/compare` },
 };
 
 // Fully static: the comparison is resolved client-side from the URL (see

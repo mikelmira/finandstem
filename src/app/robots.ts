@@ -32,7 +32,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin/", "/api/", "/*?_payload=*"],
+        disallow: ["/admin/", "/api/", "/*?_payload=*", "/gear-data/"],
       },
       ...aiCrawlers.map((userAgent) => ({
         userAgent,

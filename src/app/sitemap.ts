@@ -11,6 +11,7 @@ import { DISEASES } from "@/data/diseases";
 import { HARDSCAPE } from "@/data/hardscape";
 import { EQUIPMENT } from "@/data/equipment";
 import { CALCULATORS } from "@/data/calculators";
+import { GEAR, GEAR_UPDATED, activeGearCategories } from "@/lib/gear";
 
 /**
  * sitemap.ts, mirror of /seo/sitemap-plan.md.
@@ -263,6 +264,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  // Gear catalogue: hub, compare tool, categories and products.
+  const gearDate = new Date(`${GEAR_UPDATED}T00:00:00.000Z`);
+  const gearPages = [
+    { url: `${site.url}/gear`, lastModified: gearDate, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${site.url}/gear/compare`, lastModified: gearDate, changeFrequency: "monthly" as const, priority: 0.7 },
+    ...activeGearCategories().map((c) => ({
+      url: `${site.url}/gear/${c}`,
+      lastModified: gearDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    })),
+    ...GEAR.map((g) => ({
+      url: `${site.url}/gear/${g.category}/${g.id}`,
+      lastModified: gearDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ];
+
   return [
     ...staticPaths.map((p) => ({
       url: `${site.url}${p.path}`,
@@ -281,5 +301,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...hardscapePages,
     ...equipmentPages,
     ...calculatorPages,
+    ...gearPages,
   ];
 }

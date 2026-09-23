@@ -1,0 +1,4474 @@
+[
+ {
+  "id": "boyu-dgn-410-canister-filter",
+  "brand": "Boyu",
+  "name": "DGN-410 / 460 / 520 Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A 24 V canister with a brushless DC pump, so you can wind the flow up or down instead of choking it with a tap. All three sizes share the same pump and footprint; the bigger numbers just add height and media space. The plain versions carry a 3 W UV lamp, the A versions leave it out.",
+  "highlights": [
+   "Variable pump: 300 to 1,610 L/h at 4 to 30 W",
+   "Self-priming with automatic air purge",
+   "Runs off an external 24 V adaptor",
+   "Same 24 x 24 cm footprint across all three sizes",
+   "3 W UV lamp on non-A models"
+  ],
+  "bestFor": "Mid to large planted tanks where you want to tune flow to the scape without swapping filters.",
+  "watchOut": "The flow figure is shared across the range, so the larger bodies buy you media volume rather than extra flow.",
+  "specs": {
+   "Voltage": "DC 24 V (external adaptor)",
+   "Flow control": "Multi-step variable output",
+   "Head (max)": "0.5 to 3 m depending on setting",
+   "Variants": "Standard (with 3 W UV) or A (no UV)"
+  },
+  "models": [
+   {
+    "name": "DGN-410",
+    "powerW": 30,
+    "flowLph": 1610,
+    "uvW": 3,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 41.1,
+    "extra": {
+     "Power range": "4-30 W",
+     "Flow range": "300-1,610 L/h",
+     "Head range": "0.5-3 m"
+    }
+   },
+   {
+    "name": "DGN-460",
+    "powerW": 30,
+    "flowLph": 1610,
+    "uvW": 3,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 46.5,
+    "extra": {
+     "Power range": "4-30 W",
+     "Flow range": "300-1,610 L/h",
+     "Head range": "0.5-3 m"
+    }
+   },
+   {
+    "name": "DGN-520",
+    "powerW": 30,
+    "flowLph": 1610,
+    "uvW": 3,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 52.1,
+    "extra": {
+     "Power range": "4-30 W",
+     "Flow range": "300-1,610 L/h",
+     "Head range": "0.5-3 m"
+    }
+   },
+   {
+    "name": "DGN-410A",
+    "powerW": 30,
+    "flowLph": 1610,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 41.1,
+    "extra": {
+     "Power range": "4-30 W",
+     "Flow range": "300-1,610 L/h",
+     "UV": "None"
+    }
+   },
+   {
+    "name": "DGN-460A",
+    "powerW": 30,
+    "flowLph": 1610,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 46.5,
+    "extra": {
+     "Power range": "4-30 W",
+     "Flow range": "300-1,610 L/h",
+     "UV": "None"
+    }
+   },
+   {
+    "name": "DGN-520A",
+    "powerW": 30,
+    "flowLph": 1610,
+    "lengthCm": 24,
+    "widthCm": 24,
+    "heightCm": 52.1,
+    "extra": {
+     "Power range": "4-30 W",
+     "Flow range": "300-1,610 L/h",
+     "UV": "None"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-external-filter-canister-5_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-external-filter-canister_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_27_id_73.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-dgn-80-canister-filter",
+  "brand": "Boyu",
+  "name": "DGN-80 / 120 UVC Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A newer, white-bodied canister with a UVC lamp built in and a one-button prime. It comes in two sizes, each offered with or without the A suffix. Handy if green water has been a recurring headache, though a planted tank with good balance rarely needs UV running all the time.",
+  "highlights": [
+   "Built-in UVC lamp with its own on/off switch",
+   "One-button air purge and siphon start",
+   "Clamp-lock lid and hidden carry handle",
+   "800 or 1,200 L/h rated flow"
+  ],
+  "bestFor": "Medium to large community tanks where the owner wants mechanical, biological and UV treatment in one box.",
+  "watchOut": "Power draw is high for the flow (35 W and 55 W including the UV), and Boyu does not publish a recommended tank size.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Priming": "Button-operated auto siphon",
+   "Media": "Multi-layer trays (sponges, bio balls, carbon)"
+  },
+  "models": [
+   {
+    "name": "DGN-80 / 80A",
+    "flowLph": 800,
+    "powerW": 35,
+    "uvW": 7,
+    "lengthCm": 27,
+    "widthCm": 28.6,
+    "heightCm": 40.4
+   },
+   {
+    "name": "DGN-120 / 120A",
+    "flowLph": 1200,
+    "powerW": 55,
+    "uvW": 13,
+    "lengthCm": 27,
+    "widthCm": 28.6,
+    "heightCm": 52.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-dgn-series-canister-filter_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-dgn-series-canister-filter_10.jpg"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_27_id_151.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-wf-waterfall-filter",
+  "brand": "Boyu",
+  "name": "WF Waterfall Hang-on Filter",
+  "category": "filters",
+  "subtype": "hang-on-back",
+  "summary": "A simple hang-on-back filter that returns water as a wide waterfall, which keeps the surface moving and breaks up oily film. There are five sizes, from a tiny 150 L/h unit up to 720 L/h. Cheap and easy to service, but the splash does drive off CO2.",
+  "highlights": [
+   "Five sizes from 150 to 720 L/h",
+   "Adjustable flow",
+   "Layered media basket in the hang-on box",
+   "Surface skimming built in on the larger WF-2035 to 2055"
+  ],
+  "bestFor": "Small to medium low-tech tanks and shrimp or betta setups on a budget.",
+  "watchOut": "The waterfall return gases off CO2, so it is not ideal on an injected tank, and Boyu gives no recommended tank sizes.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Mounting": "Hangs on the tank rim"
+  },
+  "models": [
+   {
+    "name": "WF-2015",
+    "flowLph": 150,
+    "powerW": 6,
+    "lengthCm": 8.5,
+    "widthCm": 9.7,
+    "heightCm": 19
+   },
+   {
+    "name": "WF-2025",
+    "flowLph": 300,
+    "powerW": 11,
+    "lengthCm": 12,
+    "widthCm": 10.4,
+    "heightCm": 28.2
+   },
+   {
+    "name": "WF-2035",
+    "flowLph": 300,
+    "powerW": 4.6,
+    "lengthCm": 18.4,
+    "widthCm": 9.8,
+    "heightCm": 30.1
+   },
+   {
+    "name": "WF-2045",
+    "flowLph": 500,
+    "powerW": 6.5,
+    "lengthCm": 23.5,
+    "widthCm": 11.8,
+    "heightCm": 32.5
+   },
+   {
+    "name": "WF-2055",
+    "flowLph": 720,
+    "powerW": 8.6,
+    "lengthCm": 26.9,
+    "widthCm": 16.2,
+    "heightCm": 36.3
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-waterfall-biochemical-filter_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-waterfall-biochemical-filter-2_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_27_id_82.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-ef-canister-filter",
+  "brand": "Boyu",
+  "name": "EF / EFU Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A no-frills external canister in six sizes, with shut-off valves built into the in and out ports so you can disconnect it for cleaning without draining hoses. The EFU versions are the same bodies with a 5 W UV lamp added. Flow ratings are modest, so treat the maker's tank ranges as generous.",
+  "highlights": [
+   "Six sizes rated 300 to 1,100 L/h",
+   "Integrated shut-off valves on the head",
+   "Four-clip lid with seal",
+   "EFU models add a 5 W UV lamp",
+   "Rubber feet to damp vibration"
+  ],
+  "bestFor": "Budget-minded keepers with 100 to 650 litre tanks who want canister filtration and optional UV.",
+  "watchOut": "The rated tank ranges are optimistic for a planted tank; size up if you want strong circulation.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Valves": "Built-in taps on inlet and outlet",
+   "Variants": "EF (standard) or EFU (with 5 W UV)"
+  },
+  "models": [
+   {
+    "name": "EF-10 / EFU-10",
+    "flowLph": 300,
+    "tankMinL": 100,
+    "tankMaxL": 300,
+    "powerW": 11,
+    "lengthCm": 22.3,
+    "widthCm": 22.3,
+    "heightCm": 30.4,
+    "extra": {
+     "EFU power": "16 W incl. UV"
+    }
+   },
+   {
+    "name": "EF-15 / EFU-15",
+    "flowLph": 350,
+    "tankMinL": 150,
+    "tankMaxL": 350,
+    "powerW": 13,
+    "lengthCm": 22.3,
+    "widthCm": 22.3,
+    "heightCm": 35.4,
+    "extra": {
+     "EFU power": "18 W incl. UV"
+    }
+   },
+   {
+    "name": "EF-20 / EFU-20",
+    "flowLph": 400,
+    "tankMinL": 200,
+    "tankMaxL": 400,
+    "powerW": 15,
+    "lengthCm": 22.3,
+    "widthCm": 22.3,
+    "heightCm": 40.4,
+    "extra": {
+     "EFU power": "20 W incl. UV"
+    }
+   },
+   {
+    "name": "EF-25 / EFU-25",
+    "flowLph": 750,
+    "tankMinL": 250,
+    "tankMaxL": 450,
+    "powerW": 22,
+    "lengthCm": 29,
+    "widthCm": 29,
+    "heightCm": 38.7,
+    "extra": {
+     "EFU power": "32 W incl. UV"
+    }
+   },
+   {
+    "name": "EF-35 / EFU-35",
+    "flowLph": 950,
+    "tankMinL": 350,
+    "tankMaxL": 550,
+    "powerW": 24,
+    "lengthCm": 29,
+    "widthCm": 29,
+    "heightCm": 44.5,
+    "extra": {
+     "EFU power": "34 W incl. UV"
+    }
+   },
+   {
+    "name": "EF-45 / EFU-45",
+    "flowLph": 1100,
+    "tankMinL": 450,
+    "tankMaxL": 650,
+    "powerW": 26,
+    "lengthCm": 29,
+    "widthCm": 29,
+    "heightCm": 44.5,
+    "extra": {
+     "EFU power": "36 W incl. UV"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-external-filter-canister-3_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-external-filter-canister-2_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-external-filter-canister-3_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_27_id_75.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-fef-canister-filter",
+  "brand": "Boyu",
+  "name": "FEF-230 / 280 Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A squarer canister with a built-in UV steriliser on its own switch and a valve block on the head for easy disconnection. Two sizes, each in two finishes. Flow is healthy for the power it uses.",
+  "highlights": [
+   "800 or 1,000 L/h with 1.2 m head",
+   "Built-in UV with a separate switch",
+   "Valve block on the lid for quick disconnection",
+   "Lift-lock clamps and rubber feet"
+  ],
+  "bestFor": "Medium tanks around 150 to 300 litres where a budget UV canister makes sense.",
+  "watchOut": "Boyu does not state the UV wattage or a recommended tank size.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "UV": "Built in, separately switched",
+   "Finishes": "Standard and A versions (different colours)"
+  },
+  "models": [
+   {
+    "name": "FEF-230 / 230A",
+    "flowLph": 800,
+    "headM": 1.2,
+    "powerW": 15,
+    "lengthCm": 22.5,
+    "widthCm": 26.5,
+    "heightCm": 39.6
+   },
+   {
+    "name": "FEF-280 / 280A",
+    "flowLph": 1000,
+    "headM": 1.2,
+    "powerW": 18,
+    "lengthCm": 22.5,
+    "widthCm": 26.5,
+    "heightCm": 44.8
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-external-filter-canister-4_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-external-filter-canister-4_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_27_id_74.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-sp-internal-filter",
+  "brand": "Boyu",
+  "name": "SP-C / SP-B Internal Filter",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "A submersible pump head sitting on one or two slotted sponge cartridges, which makes a simple internal filter that also aerates through a venturi. It is the classic cheap internal: effective at mechanical cleaning, easy to rinse, but bulky in a small scape.",
+  "highlights": [
+   "Pump plus one or two sponge cylinders",
+   "Venturi air intake for extra oxygen",
+   "Stainless steel shaft, resin-sealed motor",
+   "Suction-cup mounting inside the tank"
+  ],
+  "bestFor": "Quarantine, hospital or grow-out tanks, and simple community tanks that need an easy internal filter.",
+  "watchOut": "It is large and very visible in the tank, and the maker lists the SP-2300B with the same 8 W and 300 L/h as the small model, which looks like a sheet error.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Media": "Biochemical sponge cartridges"
+  },
+  "models": [
+   {
+    "name": "SP-1000C",
+    "flowLph": 300,
+    "headM": 0.5,
+    "powerW": 8,
+    "lengthCm": 10.1,
+    "widthCm": 5,
+    "heightCm": 15.4
+   },
+   {
+    "name": "SP-1300C",
+    "flowLph": 400,
+    "headM": 0.5,
+    "powerW": 9,
+    "lengthCm": 10.1,
+    "widthCm": 6,
+    "heightCm": 19.6
+   },
+   {
+    "name": "SP-2300B",
+    "lengthCm": 10,
+    "widthCm": 6,
+    "heightCm": 30
+   },
+   {
+    "name": "SP-2500B",
+    "flowLph": 1400,
+    "headM": 2,
+    "powerW": 34,
+    "lengthCm": 14.9,
+    "widthCm": 8.5,
+    "heightCm": 34.3
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-sp-series-diving-filter_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-sp-series-diving-filter_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_27_id_64.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-sp-101-powerhead",
+  "brand": "Boyu",
+  "name": "SP-100 / SP-101 Series Powerhead",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "A long-running range of small submersible powerheads with a venturi tube, a flow adjuster and an optional spray nozzle. Nine sizes run from a tiny 300 L/h unit to 1,850 L/h. Useful as a return pump, for driving an undergravel plate or just adding surface movement.",
+  "highlights": [
+   "Nine sizes, 300 to 1,850 L/h",
+   "Venturi air injection and adjustable flow",
+   "Ceramic shaft, fully sealed motor",
+   "Clip-off intake strainer for cleaning"
+  ],
+  "bestFor": "Anyone needing a cheap general-purpose pump for circulation, a DIY filter or a small sump return.",
+  "watchOut": "The venturi and spray bar add a lot of surface agitation, which is not what you want on a CO2-injected tank.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Shaft": "Ceramic"
+  },
+  "models": [
+   {
+    "name": "SP-100",
+    "flowLph": 300,
+    "headM": 0.5,
+    "powerW": 4.5,
+    "lengthCm": 7.3,
+    "widthCm": 5.3,
+    "heightCm": 7.3
+   },
+   {
+    "name": "SP-101-400",
+    "flowLph": 480,
+    "headM": 0.5,
+    "powerW": 5,
+    "lengthCm": 17.8,
+    "widthCm": 10,
+    "heightCm": 23.7
+   },
+   {
+    "name": "SP-101-600",
+    "flowLph": 550,
+    "headM": 0.7,
+    "powerW": 6,
+    "lengthCm": 17.8,
+    "widthCm": 10,
+    "heightCm": 23.7
+   },
+   {
+    "name": "SP-101-800",
+    "flowLph": 630,
+    "headM": 0.9,
+    "powerW": 7.5,
+    "lengthCm": 17.8,
+    "widthCm": 10,
+    "heightCm": 23.7
+   },
+   {
+    "name": "SP-101-1000",
+    "flowLph": 720,
+    "headM": 1,
+    "powerW": 9.5,
+    "lengthCm": 17.8,
+    "widthCm": 10,
+    "heightCm": 23.7
+   },
+   {
+    "name": "SP-102-1200",
+    "flowLph": 1200,
+    "headM": 1,
+    "powerW": 19,
+    "lengthCm": 21.6,
+    "widthCm": 10,
+    "heightCm": 26.2
+   },
+   {
+    "name": "SP-102-1600",
+    "flowLph": 1400,
+    "headM": 1.2,
+    "powerW": 20,
+    "lengthCm": 21.6,
+    "widthCm": 10,
+    "heightCm": 26.2
+   },
+   {
+    "name": "SP-103-2000",
+    "flowLph": 1700,
+    "headM": 1.5,
+    "powerW": 25,
+    "lengthCm": 23.4,
+    "widthCm": 10,
+    "heightCm": 28.1
+   },
+   {
+    "name": "SP-103-2400",
+    "flowLph": 1850,
+    "headM": 2,
+    "powerW": 35,
+    "lengthCm": 23.4,
+    "widthCm": 10,
+    "heightCm": 28.1
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-sp-series-submersible-pump_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-sp-series-submersible-pump_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_26_id_60.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-sp-1000-submersible-pump",
+  "brand": "Boyu",
+  "name": "SP-1000 Series Submersible Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "Compact multi-purpose submersible pumps that can push water, drive a fountain outlet or power a small filter. Five sizes from 300 to 1,400 L/h, with stainless steel shafts and resin-potted motors.",
+  "highlights": [
+   "Five sizes, 300 to 1,400 L/h",
+   "Up to 2 m head on the largest",
+   "Stainless steel shaft, resin-sealed motor",
+   "Works as pump, fountain or filter pump"
+  ],
+  "bestFor": "Small sump returns, DIY filters and general water moving jobs around the fish room.",
+  "watchOut": "Power use is on the high side for the flow on the bigger models (34 W for 1,400 L/h).",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Shaft": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "SP-1000",
+    "flowLph": 300,
+    "headM": 0.5,
+    "powerW": 8,
+    "lengthCm": 10,
+    "widthCm": 5.5,
+    "heightCm": 14.6
+   },
+   {
+    "name": "SP-1300",
+    "flowLph": 400,
+    "headM": 0.5,
+    "powerW": 9,
+    "lengthCm": 10,
+    "widthCm": 5.5,
+    "heightCm": 14.6
+   },
+   {
+    "name": "SP-1800",
+    "flowLph": 700,
+    "headM": 1,
+    "powerW": 13,
+    "lengthCm": 11.6,
+    "widthCm": 6.4,
+    "heightCm": 15.8
+   },
+   {
+    "name": "SP-2300",
+    "flowLph": 1200,
+    "headM": 1.6,
+    "powerW": 23,
+    "lengthCm": 12.5,
+    "widthCm": 7.5,
+    "heightCm": 16.4
+   },
+   {
+    "name": "SP-2500",
+    "flowLph": 1400,
+    "headM": 2,
+    "powerW": 34,
+    "lengthCm": 14.9,
+    "widthCm": 8.8,
+    "heightCm": 17.6
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-sp-series-submersible-pump-2_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_26_id_58.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-fp-submersible-pump",
+  "brand": "Boyu",
+  "name": "FP Series Submersible Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "Slim internal pumps supplied with a perforated spray bar, so they can filter, circulate or feed a fountain. Four sizes from 300 to 1,350 L/h, with permanent-magnet motors and stainless shafts.",
+  "highlights": [
+   "Four sizes, 300 to 1,350 L/h",
+   "Spray bar included for even flow along the tank",
+   "Stainless steel shaft, resin-potted motor",
+   "Suction-cup mounting"
+  ],
+  "bestFor": "Adding gentle, spread-out circulation to a medium tank or powering a simple internal filter.",
+  "watchOut": "Spray bars sit high by design, so expect surface movement and some CO2 loss.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Included": "Spray bar outlet"
+  },
+  "models": [
+   {
+    "name": "FP-08E",
+    "flowLph": 300,
+    "headM": 0.35,
+    "powerW": 5,
+    "lengthCm": 30,
+    "widthCm": 4.9,
+    "heightCm": 13.5
+   },
+   {
+    "name": "FP-18E",
+    "flowLph": 750,
+    "headM": 0.5,
+    "powerW": 7.5,
+    "lengthCm": 30.2,
+    "widthCm": 6.9,
+    "heightCm": 16.6
+   },
+   {
+    "name": "FP-28E",
+    "flowLph": 950,
+    "headM": 1,
+    "powerW": 11.5,
+    "lengthCm": 30.2,
+    "widthCm": 6.9,
+    "heightCm": 16.6
+   },
+   {
+    "name": "FP-38E",
+    "flowLph": 1350,
+    "headM": 1,
+    "powerW": 19,
+    "lengthCm": 31.4,
+    "widthCm": 7.5,
+    "heightCm": 23
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-fp-series-submersible-pump_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-fp-series-submersible-pump_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_26_id_59.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-pgb-submersible-pump",
+  "brand": "Boyu",
+  "name": "PGB Series Submersible Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "Tall, narrow submersible pumps with a long intake tube, built to sit upright in a corner or on an undergravel uplift. Three sizes from 740 to 1,565 L/h with up to 2.4 m of head.",
+  "highlights": [
+   "740 to 1,565 L/h",
+   "Up to 2.4 m head",
+   "Ceramic shaft, resin-sealed motor",
+   "IPX8 rated"
+  ],
+  "bestFor": "Undergravel plates, sump returns or DIY top filters that need decent head in a narrow space.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Shaft": "Ceramic",
+   "Protection": "IPX8"
+  },
+  "models": [
+   {
+    "name": "PGB-750",
+    "flowLph": 740,
+    "headM": 1.2,
+    "powerW": 12.5,
+    "lengthCm": 9.6,
+    "widthCm": 4.7,
+    "heightCm": 33.3
+   },
+   {
+    "name": "PGB-1000",
+    "flowLph": 960,
+    "headM": 1.68,
+    "powerW": 15,
+    "lengthCm": 11.1,
+    "widthCm": 5.4,
+    "heightCm": 34.4
+   },
+   {
+    "name": "PGB-1500",
+    "flowLph": 1565,
+    "headM": 2.4,
+    "powerW": 28,
+    "lengthCm": 12.3,
+    "widthCm": 6,
+    "heightCm": 33.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-pgb-series-submersible-pump_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-pgb-series-submersible-pump_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_26_id_57.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-wm-wavemaker",
+  "brand": "Boyu",
+  "name": "WM Series Wavemaker",
+  "category": "pumps",
+  "subtype": "circulation",
+  "summary": "Round-bodied flow pumps that throw a broad, turbulent stream rather than a narrow jet, on a swivelling mount. The range covers single pumps (WM-101, WM-1, WM-2, WM-15), a 24 V magnet-mount WM-25, and multi-pump kits with a wave controller (WM-3 and WM-4).",
+  "highlights": [
+   "Broad, soft flow pattern",
+   "Swivel mount points the flow any direction",
+   "Single pumps for 20 to 350 litres",
+   "WM-3 and WM-4 kits add a wave timer controller",
+   "WM-25 runs on DC 12 to 24 V, 5,500 L/h"
+  ],
+  "bestFor": "Medium and large planted tanks with dead spots behind hardscape, where you want circulation without a blasting jet.",
+  "watchOut": "Boyu only gives flow for the WM-25; the others are rated by tank size, and the marketing leans towards marine use.",
+  "specs": {
+   "Mounting": "Suction cup / rim bracket, adjustable angle"
+  },
+  "models": [
+   {
+    "name": "WM-101",
+    "powerW": 7,
+    "tankMinL": 20,
+    "tankMaxL": 120,
+    "lengthCm": 8.5,
+    "widthCm": 7.8,
+    "heightCm": 8.4
+   },
+   {
+    "name": "WM-1",
+    "powerW": 28,
+    "tankMinL": 40,
+    "tankMaxL": 300,
+    "lengthCm": 11.3,
+    "widthCm": 10.8,
+    "heightCm": 11
+   },
+   {
+    "name": "WM-2",
+    "powerW": 18,
+    "tankMinL": 40,
+    "tankMaxL": 260,
+    "lengthCm": 11.3,
+    "widthCm": 10.8,
+    "heightCm": 11,
+    "extra": {
+     "Included": "Controller"
+    }
+   },
+   {
+    "name": "WM-15",
+    "powerW": 16.5,
+    "tankMinL": 80,
+    "tankMaxL": 350,
+    "lengthCm": 11.3,
+    "widthCm": 10.8,
+    "heightCm": 11
+   },
+   {
+    "name": "WM-25",
+    "flowLph": 5500,
+    "powerW": 25,
+    "lengthCm": 13.7,
+    "widthCm": 7.8,
+    "heightCm": 10.4,
+    "extra": {
+     "Voltage": "DC 12-24 V"
+    }
+   },
+   {
+    "name": "WM-3",
+    "tankMinL": 100,
+    "tankMaxL": 600,
+    "extra": {
+     "Power": "4 x 28 W",
+     "Included": "4 pumps + wave controller"
+    }
+   },
+   {
+    "name": "WM-4",
+    "tankMinL": 80,
+    "tankMaxL": 500,
+    "extra": {
+     "Power": "2 x 18 W",
+     "Included": "2 pumps + wave controller"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-wm-series-flow-pump_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-wm-series-flow-pump_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-wm-series-flow-pump_11.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_49_id_84.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-wm-50-dc-wavemaker",
+  "brand": "Boyu",
+  "name": "WM-50 / WM-102 DC Wavemaker",
+  "category": "pumps",
+  "subtype": "circulation",
+  "summary": "DC-driven wavemakers with an external digital controller that stores custom wave and flow programmes. WM-102 is a twin-pump set; WM-50 is a single, much stronger pump. Both run on a safe 24 V supply.",
+  "highlights": [
+   "Programmable wave and flow modes",
+   "Digital display controller",
+   "DC 24 V external adaptor",
+   "Vibration-isolating mounts",
+   "WM-50 moves up to 13,000 L/h"
+  ],
+  "bestFor": "Large tanks where you want adjustable, pulsed circulation from a controller.",
+  "watchOut": "These are very strong pumps; most planted tanks will run them well below maximum.",
+  "specs": {
+   "Voltage": "DC 24 V",
+   "Control": "External digital controller"
+  },
+  "models": [
+   {
+    "name": "WM-102",
+    "lengthCm": 14.1,
+    "widthCm": 15.1,
+    "heightCm": 12.6,
+    "extra": {
+     "Flow": "2 x 5,500 L/h",
+     "Power": "2 x 25 W"
+    }
+   },
+   {
+    "name": "WM-50",
+    "flowLph": 13000,
+    "powerW": 40,
+    "lengthCm": 18.3,
+    "widthCm": 11.1,
+    "heightCm": 13.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-wm-series-flow-pump-2_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_49_id_83.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-hl-crossflow-pump",
+  "brand": "Boyu",
+  "name": "HL Crossflow Wave Pump",
+  "category": "pumps",
+  "subtype": "circulation",
+  "summary": "A tube-shaped crossflow pump that pushes a wide sheet of water along the tank, a bit like a gyre, and can also aerate. It uses a DC variable-speed drive with a digital display. Sizes run from a 20 cm unit to a 70 cm bar for very large aquariums.",
+  "highlights": [
+   "Wide, laminar sheet of flow",
+   "DC variable speed with LED display",
+   "Can aerate as well as circulate",
+   "Lengths from about 20 to 70 cm"
+  ],
+  "bestFor": "Long tanks where you want even flow across the whole front-to-back depth.",
+  "watchOut": "Boyu does not publish flow figures, and the two big models draw 100 to 200 W.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Drive": "DC variable frequency"
+  },
+  "models": [
+   {
+    "name": "HL-200",
+    "powerW": 25,
+    "lengthCm": 20.3,
+    "widthCm": 5.9,
+    "heightCm": 6.7
+   },
+   {
+    "name": "HL-300",
+    "powerW": 50,
+    "lengthCm": 29.4,
+    "widthCm": 5.9,
+    "heightCm": 6.7
+   },
+   {
+    "name": "HL-10000",
+    "powerW": 100,
+    "lengthCm": 59.4,
+    "widthCm": 10.5,
+    "heightCm": 16.5
+   },
+   {
+    "name": "HL-25000",
+    "powerW": 200,
+    "lengthCm": 69.5,
+    "widthCm": 12.3,
+    "heightCm": 19.3
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-aeration-cross-flow-pump_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-aeration-cross-flow-pump_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_50_id_85.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-c-series-chiller",
+  "brand": "Boyu",
+  "name": "C Series Chiller",
+  "category": "cooling",
+  "subtype": "chiller",
+  "summary": "Compact inline chillers for home aquariums, using R-134a refrigerant and a microprocessor thermostat. Three sizes cover roughly 50 to 600 litres. Worth a look if summer heat pushes your tank past what fans can handle.",
+  "highlights": [
+   "Three sizes for about 50 to 600 L",
+   "Microprocessor temperature control",
+   "Over-current and overheat protection",
+   "13, 16 or 19 mm hose fittings"
+  ],
+  "bestFor": "Planted tanks and shrimp tanks in hot climates that regularly creep above safe temperatures.",
+  "watchOut": "Chillers dump heat into the room and need a pump or canister to push water through them.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Refrigerant": "R-134a",
+   "Fittings": "13 / 16 / 19 mm"
+  },
+  "models": [
+   {
+    "name": "C-150",
+    "tankMinL": 50,
+    "tankMaxL": 350,
+    "lengthCm": 38,
+    "widthCm": 25,
+    "heightCm": 44,
+    "extra": {
+     "Compressor": "1/10 HP",
+     "Flow through": "300-1,200 L/h"
+    }
+   },
+   {
+    "name": "C-160",
+    "tankMinL": 80,
+    "tankMaxL": 400,
+    "lengthCm": 38,
+    "widthCm": 25,
+    "heightCm": 44,
+    "extra": {
+     "Compressor": "1/8 HP",
+     "Flow through": "600-2,000 L/h"
+    }
+   },
+   {
+    "name": "C-250",
+    "tankMinL": 100,
+    "tankMaxL": 600,
+    "lengthCm": 38,
+    "widthCm": 25,
+    "heightCm": 44,
+    "extra": {
+     "Compressor": "1/4 HP",
+     "Flow through": "1,000-2,500 L/h"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-c-series-chiller_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-c-series-chiller_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_54_id_95.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-ls-series-chiller",
+  "brand": "Boyu",
+  "name": "LS Series Chiller",
+  "category": "cooling",
+  "subtype": "chiller",
+  "summary": "A vertical chiller with a titanium heat exchanger and a digital temperature display. The plain models also include a heater, so one unit can hold temperature both ways; the A versions are cooling only.",
+  "highlights": [
+   "Titanium heat exchanger",
+   "Digital display and push-button set point",
+   "Non-A models add a 300 to 450 W heater",
+   "Three sizes, 1/6 to 1/3 HP"
+  ],
+  "bestFor": "Keepers who want year-round temperature control from one box on a medium to large tank.",
+  "watchOut": "Rated flow through the unit is low (400 to 600 L/h), so check it matches your pump.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Refrigerant": "R-134a",
+   "Heat exchanger": "Titanium"
+  },
+  "models": [
+   {
+    "name": "LS-5",
+    "heaterW": 300,
+    "lengthCm": 32,
+    "widthCm": 33.3,
+    "heightCm": 41,
+    "extra": {
+     "Compressor": "1/6 HP",
+     "Flow through": "400 L/h"
+    }
+   },
+   {
+    "name": "LS-5A",
+    "lengthCm": 32,
+    "widthCm": 33.3,
+    "heightCm": 41,
+    "extra": {
+     "Compressor": "1/6 HP",
+     "Flow through": "400 L/h"
+    }
+   },
+   {
+    "name": "LS-10",
+    "heaterW": 350,
+    "lengthCm": 32,
+    "widthCm": 33.3,
+    "heightCm": 46,
+    "extra": {
+     "Compressor": "1/4 HP",
+     "Flow through": "500 L/h"
+    }
+   },
+   {
+    "name": "LS-10A",
+    "lengthCm": 32,
+    "widthCm": 33.3,
+    "heightCm": 46,
+    "extra": {
+     "Compressor": "1/4 HP",
+     "Flow through": "500 L/h"
+    }
+   },
+   {
+    "name": "LS-20",
+    "heaterW": 450,
+    "lengthCm": 32,
+    "widthCm": 33.3,
+    "heightCm": 51,
+    "extra": {
+     "Compressor": "1/3 HP",
+     "Flow through": "600 L/h"
+    }
+   },
+   {
+    "name": "LS-20A",
+    "lengthCm": 32,
+    "widthCm": 33.3,
+    "heightCm": 51,
+    "extra": {
+     "Compressor": "1/3 HP",
+     "Flow through": "600 L/h"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ls-series-chiller_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ls-series-chiller_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_54_id_94.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-cw-ln-series-chiller",
+  "brand": "Boyu",
+  "name": "CW / LN Series Chiller",
+  "category": "cooling",
+  "subtype": "chiller",
+  "summary": "Big box chillers for very large aquariums and fish rooms, rated from 500 up to 3,000 litres. Boyu lists the CW and LN codes with identical specs, and the LN range adds a 2 HP model.",
+  "highlights": [
+   "0.75 to 2 HP compressors",
+   "Rated for 500 to 3,000 L",
+   "Microprocessor control",
+   "1 to 1.5 inch connections"
+  ],
+  "bestFor": "Very large display tanks or multi-tank systems in warm climates.",
+  "watchOut": "They use R-22 refrigerant, which is phased out in many countries, so check local servicing rules before buying.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Refrigerant": "R-22"
+  },
+  "models": [
+   {
+    "name": "1600",
+    "tankMinL": 500,
+    "tankMaxL": 1200,
+    "lengthCm": 51,
+    "widthCm": 45,
+    "heightCm": 41,
+    "extra": {
+     "Compressor": "0.75 HP",
+     "Current": "2-2.5 A",
+     "Connections": "1 inch"
+    }
+   },
+   {
+    "name": "2600",
+    "tankMinL": 800,
+    "tankMaxL": 1800,
+    "lengthCm": 51,
+    "widthCm": 45,
+    "heightCm": 41,
+    "extra": {
+     "Compressor": "1.0 HP",
+     "Current": "3.5-4 A"
+    }
+   },
+   {
+    "name": "3800",
+    "tankMinL": 1200,
+    "tankMaxL": 2400,
+    "lengthCm": 58,
+    "widthCm": 52.5,
+    "heightCm": 50,
+    "extra": {
+     "Compressor": "1.5 HP",
+     "Current": "5-5.5 A"
+    }
+   },
+   {
+    "name": "LN-5800",
+    "tankMinL": 2000,
+    "tankMaxL": 3000,
+    "lengthCm": 58,
+    "widthCm": 52.5,
+    "heightCm": 50,
+    "extra": {
+     "Compressor": "2.0 HP",
+     "Current": "6.5-7.5 A"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ln-series-chiller_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_54_id_96.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-fs-cooling-fan",
+  "brand": "Boyu",
+  "name": "FS Series Cooling Fan",
+  "category": "cooling",
+  "subtype": "fan",
+  "summary": "Clip-on fans that blow across the water surface to cool the tank by evaporation. The range runs from the small FS-55 and single 120 mm FS-120 to the FS-600 bars with two to six fans in a row.",
+  "highlights": [
+   "Adjustable-angle clamp mount",
+   "Guard over the blades",
+   "Mostly 12 V DC; FS-120 also in mains",
+   "Multi-fan bars (FS-602 to 606) for long tanks"
+  ],
+  "bestFor": "Cheap, low-power summer cooling for small and medium tanks that only run a couple of degrees too warm.",
+  "watchOut": "Evaporative cooling means you will top up water more often, and fans only knock off a few degrees.",
+  "specs": {
+   "Mounting": "Rim clamp, adjustable angle"
+  },
+  "models": [
+   {
+    "name": "FS-55",
+    "lengthCm": 9.5,
+    "widthCm": 8.6,
+    "heightCm": 16.7,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Current": "0.43 A"
+    }
+   },
+   {
+    "name": "FS-120",
+    "lengthCm": 17.2,
+    "widthCm": 12,
+    "heightCm": 12,
+    "extra": {
+     "Voltage": "AC 230/115 V",
+     "Current": "0.14 A"
+    }
+   },
+   {
+    "name": "FS-120A",
+    "lengthCm": 17.2,
+    "widthCm": 12,
+    "heightCm": 12,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Current": "0.23 A"
+    }
+   },
+   {
+    "name": "FS-602",
+    "lengthCm": 17.1,
+    "widthCm": 4.8,
+    "heightCm": 11.8,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Current": "0.24 A"
+    }
+   },
+   {
+    "name": "FS-603",
+    "lengthCm": 23.1,
+    "widthCm": 4.8,
+    "heightCm": 11.8,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Current": "0.36 A"
+    }
+   },
+   {
+    "name": "FS-604",
+    "lengthCm": 29.1,
+    "widthCm": 4.8,
+    "heightCm": 11.8,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Current": "0.48 A"
+    }
+   },
+   {
+    "name": "FS-605",
+    "lengthCm": 35.1,
+    "widthCm": 4.8,
+    "heightCm": 11.8,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Current": "0.60 A"
+    }
+   },
+   {
+    "name": "FS-606",
+    "lengthCm": 41.1,
+    "widthCm": 4.8,
+    "heightCm": 11.8,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Current": "0.72 A"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cooling-fan-machine-3_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cooling-fan-machine-2_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cooling-fan-machine_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_59_id_121.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-cjy-air-pump",
+  "brand": "Boyu",
+  "name": "CJY Series Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "A rounded, modern-looking air pump range with a stepless electronic output control and an internal baffle to quieten the pulse. Seven sizes run from 1 to 15 L/min.",
+  "highlights": [
+   "1 to 15 L/min across seven sizes",
+   "Electronic stepless output adjustment",
+   "Internal labyrinth baffle for quieter running",
+   "Low power, 1.7 to 12 W"
+  ],
+  "bestFor": "Anyone wanting adjustable aeration, from a nano sponge filter up to a multi-tank air line.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Control": "Stepless electronic"
+  },
+  "models": [
+   {
+    "name": "CJY-1000",
+    "airLpm": 1,
+    "powerW": 1.7,
+    "lengthCm": 10.7,
+    "widthCm": 6.5,
+    "heightCm": 6.4,
+    "extra": {
+     "Pressure": "0.012 MPa"
+    }
+   },
+   {
+    "name": "CJY-1500",
+    "airLpm": 1.5,
+    "powerW": 2.2,
+    "lengthCm": 12.1,
+    "widthCm": 7.4,
+    "heightCm": 7,
+    "extra": {
+     "Pressure": "0.012 MPa"
+    }
+   },
+   {
+    "name": "CJY-2000",
+    "airLpm": 2,
+    "powerW": 2.7,
+    "lengthCm": 15.6,
+    "widthCm": 8.3,
+    "heightCm": 7.8,
+    "extra": {
+     "Pressure": "0.015 MPa"
+    }
+   },
+   {
+    "name": "CJY-3500",
+    "airLpm": 3.5,
+    "powerW": 3.3,
+    "lengthCm": 17.1,
+    "widthCm": 9.1,
+    "heightCm": 8.5,
+    "extra": {
+     "Pressure": "0.015 MPa"
+    }
+   },
+   {
+    "name": "CJY-4500",
+    "airLpm": 4.5,
+    "powerW": 4.8,
+    "lengthCm": 17,
+    "widthCm": 10.4,
+    "heightCm": 9.6,
+    "extra": {
+     "Pressure": "0.015 MPa"
+    }
+   },
+   {
+    "name": "CJY-7500",
+    "airLpm": 7.5,
+    "powerW": 6,
+    "lengthCm": 20.8,
+    "widthCm": 11.6,
+    "heightCm": 10.5,
+    "extra": {
+     "Pressure": "0.015 MPa"
+    }
+   },
+   {
+    "name": "CJY-15000",
+    "airLpm": 15,
+    "powerW": 12,
+    "lengthCm": 25.9,
+    "widthCm": 17.3,
+    "heightCm": 13.2,
+    "extra": {
+     "Pressure": "0.015 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cjy-series-air-pump_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_55_id_98.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-u-series-air-pump",
+  "brand": "Boyu",
+  "name": "U Series Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "Tiny, low-power air pumps for nano tanks, sponge filters and air stones. The U-9900 is a twin-outlet version in the same small body.",
+  "highlights": [
+   "2 to 4 L/min, or 2 x 3.2 L/min on the U-9900",
+   "1.2 to 3.5 W",
+   "Very small footprint",
+   "Offered in 230, 115 or 12 V versions"
+  ],
+  "bestFor": "Nano and small tanks running a sponge filter or a single air stone.",
+  "watchOut": "Low pressure (0.009 to 0.012 MPa) limits it to shallow tanks and short air lines.",
+  "specs": {
+   "Voltage": "AC 230/115 V or 12 V versions"
+  },
+  "models": [
+   {
+    "name": "U-2800",
+    "airLpm": 2,
+    "outlets": 1,
+    "powerW": 1.2,
+    "lengthCm": 7,
+    "widthCm": 3.95,
+    "heightCm": 3.6,
+    "extra": {
+     "Pressure": "0.009 MPa"
+    }
+   },
+   {
+    "name": "U-3600",
+    "airLpm": 4,
+    "outlets": 1,
+    "powerW": 2.5,
+    "lengthCm": 10,
+    "widthCm": 5.5,
+    "heightCm": 5.15,
+    "extra": {
+     "Pressure": "0.012 MPa"
+    }
+   },
+   {
+    "name": "U-9900",
+    "airLpm": 6.4,
+    "outlets": 2,
+    "powerW": 3.5,
+    "lengthCm": 7,
+    "widthCm": 3.95,
+    "heightCm": 3.6,
+    "extra": {
+     "Output": "2 x 3.2 L/min",
+     "Pressure": "0.012 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-low-power-consumption-air-pump_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_55_id_104.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-sc-series-air-pump",
+  "brand": "Boyu",
+  "name": "SC Series Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "An upright, compact air pump in single and twin outlet versions. Nothing fancy, just steady air for a sponge filter or two.",
+  "highlights": [
+   "3.2 L/min single or 2 x 3 L/min twin",
+   "2.5 to 3.5 W",
+   "Stands upright to save shelf space"
+  ],
+  "bestFor": "Small to medium tanks running one or two sponge filters or air stones.",
+  "specs": {
+   "Voltage": "AC 230/115 V or 12 V versions",
+   "Pressure": "0.012 MPa"
+  },
+  "models": [
+   {
+    "name": "SC-3500",
+    "airLpm": 3.2,
+    "outlets": 1,
+    "powerW": 2.5,
+    "lengthCm": 7.5,
+    "widthCm": 5,
+    "heightCm": 12
+   },
+   {
+    "name": "SC-7500",
+    "airLpm": 6,
+    "outlets": 2,
+    "powerW": 3.5,
+    "lengthCm": 9.5,
+    "widthCm": 7,
+    "heightCm": 14.2,
+    "extra": {
+     "Output": "2 x 3 L/min"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-low-power-consumption-air-pump-2_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_55_id_103.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-s-series-air-pump",
+  "brand": "Boyu",
+  "name": "S Series Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "An older, blue-shelled range with rubber diaphragms and no oiling needed. Single and twin outlet models, plus the S-4000B with four outlets and electronic control for multi-tank setups.",
+  "highlights": [
+   "4 to 4.2 L/min single, 2 x 4 L/min twin",
+   "S-4000B: four outlets at 3.2 L/min each",
+   "Low running power, 2.8 to 9 W",
+   "Oil-free diaphragm design"
+  ],
+  "bestFor": "Budget aeration for one tank, or the S-4000B for a small rack of breeder tanks.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz"
+  },
+  "models": [
+   {
+    "name": "S-500 / S-500A",
+    "airLpm": 4,
+    "outlets": 1,
+    "powerW": 2.8,
+    "lengthCm": 11.6,
+    "widthCm": 7,
+    "heightCm": 5.6,
+    "extra": {
+     "Pressure": "0.010 MPa"
+    }
+   },
+   {
+    "name": "S-1000 / S-1000A",
+    "airLpm": 4.2,
+    "outlets": 1,
+    "powerW": 3,
+    "lengthCm": 13.8,
+    "widthCm": 8,
+    "heightCm": 5.9,
+    "extra": {
+     "Pressure": "0.014 MPa"
+    }
+   },
+   {
+    "name": "S-2000 / S-2000A",
+    "airLpm": 8,
+    "outlets": 2,
+    "powerW": 3,
+    "lengthCm": 16.3,
+    "widthCm": 10.5,
+    "heightCm": 8.8,
+    "extra": {
+     "Output": "2 x 4 L/min",
+     "Pressure": "0.012 MPa"
+    }
+   },
+   {
+    "name": "S-4000B",
+    "airLpm": 12.8,
+    "outlets": 4,
+    "powerW": 9,
+    "lengthCm": 20.6,
+    "widthCm": 14.9,
+    "heightCm": 9.6,
+    "extra": {
+     "Output": "4 x 3.2 L/min",
+     "Pressure": "0.012 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-low-noise-aquarium-air-pump_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_55_id_102.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-se-series-air-pump",
+  "brand": "Boyu",
+  "name": "SE Series Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "Small, quiet air pumps in four sizes, the larger two with twin outlets. A sensible cheap choice for a bedroom tank where noise matters.",
+  "highlights": [
+   "2 to 2 x 3.5 L/min",
+   "1.2 to 3 W",
+   "Compact rounded housing",
+   "Twin outlets on SE-314 and SE-315"
+  ],
+  "bestFor": "Nano to medium tanks where a quiet, low-power pump is the priority.",
+  "specs": {
+   "Voltage": "AC 230/115 V or 12 V versions"
+  },
+  "models": [
+   {
+    "name": "SE-312",
+    "airLpm": 2,
+    "outlets": 1,
+    "powerW": 1.2,
+    "lengthCm": 6.1,
+    "widthCm": 3.3,
+    "heightCm": 4.6,
+    "extra": {
+     "Pressure": "0.009 MPa"
+    }
+   },
+   {
+    "name": "SE-313",
+    "airLpm": 2.5,
+    "outlets": 1,
+    "powerW": 2.2,
+    "lengthCm": 8.15,
+    "widthCm": 5.3,
+    "heightCm": 6.25,
+    "extra": {
+     "Pressure": "0.01 MPa"
+    }
+   },
+   {
+    "name": "SE-314",
+    "airLpm": 6,
+    "outlets": 2,
+    "powerW": 2.5,
+    "lengthCm": 9.05,
+    "widthCm": 5.9,
+    "heightCm": 7.2,
+    "extra": {
+     "Output": "2 x 3 L/min",
+     "Pressure": "0.012 MPa"
+    }
+   },
+   {
+    "name": "SE-315",
+    "airLpm": 7,
+    "outlets": 2,
+    "powerW": 3,
+    "lengthCm": 10,
+    "widthCm": 6.7,
+    "heightCm": 7.8,
+    "extra": {
+     "Output": "2 x 3.5 L/min",
+     "Pressure": "0.012 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ultra-quiet-air-pump_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_55_id_101.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-s-1800-ac-dc-air-pump",
+  "brand": "Boyu",
+  "name": "S-1800 AC/DC Air Pump",
+  "category": "air-pumps",
+  "subtype": "battery",
+  "summary": "A twin-outlet air pump that switches automatically to its internal rechargeable battery, or an external 6 V DC source, when the mains goes off. Keeps oxygen flowing through a power cut.",
+  "highlights": [
+   "Automatic switch between mains, internal battery and external DC",
+   "2 x 4 L/min",
+   "Battery charge protection",
+   "10 W"
+  ],
+  "bestFor": "Keepers in areas with regular power outages who want aeration to carry on without them.",
+  "watchOut": "Boyu does not state battery run time for this model.",
+  "specs": {
+   "Voltage": "AC 230/115 V / DC 6 V",
+   "Pressure": "0.012 MPa"
+  },
+  "models": [
+   {
+    "name": "S-1800",
+    "airLpm": 8,
+    "outlets": 2,
+    "powerW": 10,
+    "lengthCm": 20.6,
+    "widthCm": 14.9,
+    "heightCm": 9.6,
+    "extra": {
+     "Output": "2 x 4 L/min"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-microcomputer-controlled-ac-and-dc-air-pump_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_55_id_100.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-s-1801-ac-dc-air-pump",
+  "brand": "Boyu",
+  "name": "S-1801 Lithium AC/DC Air Pump",
+  "category": "air-pumps",
+  "subtype": "battery",
+  "summary": "A slim twin-outlet air pump with a built-in lithium battery that takes over automatically if the mains fails. Comes in several bright colours.",
+  "highlights": [
+   "Built-in lithium battery backup",
+   "Automatic AC/DC changeover",
+   "2 x 4 L/min",
+   "Slim, flat body"
+  ],
+  "bestFor": "Load-shedding and power-cut backup for a single tank.",
+  "watchOut": "Run time on battery is not published.",
+  "specs": {
+   "Pressure": "0.012 MPa",
+   "Colours": "Apple green, pink, orange, yellow"
+  },
+  "models": [
+   {
+    "name": "S-1801",
+    "airLpm": 8,
+    "outlets": 2,
+    "powerW": 10,
+    "lengthCm": 17.9,
+    "widthCm": 12.5,
+    "heightCm": 4.9,
+    "extra": {
+     "Output": "2 x 4 L/min"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-acdc-air-pump-2_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-acdc-air-pump-2_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-acdc-air-pump-2_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_55_id_99.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-dr-digital-heater",
+  "brand": "Boyu",
+  "name": "DR Digital Heater",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "A newer glass heater with a small LED readout of the water temperature built into the tube, plus dry-run and overheat protection. Six sizes from 50 to 300 W.",
+  "highlights": [
+   "Built-in LED temperature display",
+   "Shatter-resistant glass tube",
+   "Dry-run and overheat cut-out",
+   "50 to 300 W"
+  ],
+  "bestFor": "Everyday tropical tanks where you want to see the temperature without a separate thermometer.",
+  "watchOut": "Glass heaters sit inside the tank, so plan a spot with good flow and hide it behind hardscape.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Diameter": "38 mm"
+  },
+  "models": [
+   {
+    "name": "DR-50",
+    "heaterW": 50,
+    "extra": {
+     "Length": "301 mm"
+    }
+   },
+   {
+    "name": "DR-100",
+    "heaterW": 100,
+    "extra": {
+     "Length": "301 mm"
+    }
+   },
+   {
+    "name": "DR-150",
+    "heaterW": 150,
+    "extra": {
+     "Length": "301 mm"
+    }
+   },
+   {
+    "name": "DR-200",
+    "heaterW": 200,
+    "extra": {
+     "Length": "361 mm"
+    }
+   },
+   {
+    "name": "DR-250",
+    "heaterW": 250,
+    "extra": {
+     "Length": "361 mm"
+    }
+   },
+   {
+    "name": "DR-300",
+    "heaterW": 300,
+    "extra": {
+     "Length": "361 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-dr-series-heater_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-dr-series-heater_10.jpg"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_57_id_163.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-ht-heater",
+  "brand": "Boyu",
+  "name": "HT Adjustable Heater",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "A basic adjustable glass heater with a dial on top and a printed thermometer strip on the tube. Six sizes from 50 to 300 W.",
+  "highlights": [
+   "Dial temperature adjustment",
+   "Printed temperature scale on the tube",
+   "50 to 300 W",
+   "Fresh or salt water"
+  ],
+  "bestFor": "Budget heating for community and planted tanks.",
+  "watchOut": "Dial-type heaters drift; check with a separate thermometer.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz"
+  },
+  "models": [
+   {
+    "name": "HT-650",
+    "heaterW": 50,
+    "extra": {
+     "Length": "271 mm"
+    }
+   },
+   {
+    "name": "HT-6100",
+    "heaterW": 100,
+    "extra": {
+     "Length": "271 mm"
+    }
+   },
+   {
+    "name": "HT-6150",
+    "heaterW": 150,
+    "extra": {
+     "Length": "326 mm"
+    }
+   },
+   {
+    "name": "HT-6200",
+    "heaterW": 200,
+    "extra": {
+     "Length": "326 mm"
+    }
+   },
+   {
+    "name": "HT-6250",
+    "heaterW": 250,
+    "extra": {
+     "Length": "366 mm"
+    }
+   },
+   {
+    "name": "HT-6300",
+    "heaterW": 300,
+    "extra": {
+     "Length": "366 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ht-series-heater_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ht-series-heater_10.jpg"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_57_id_162.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-ptc-digital-heater",
+  "brand": "Boyu",
+  "name": "PTC Digital Heater",
+  "category": "heaters",
+  "subtype": "smart",
+  "summary": "A plastic-shelled PTC heater with an external controller, digital display and several probes. PTC elements heat quickly and run cooler on the surface than a glass element. High-wattage models for big tanks.",
+  "highlights": [
+   "External digital controller",
+   "PTC element in an industrial plastic shell",
+   "Low-water and overheat protection",
+   "300 to 1,000 W"
+  ],
+  "bestFor": "Large aquariums that need serious heating with accurate control.",
+  "watchOut": "Overkill for most home planted tanks; the smallest model is 300 W.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Control": "External controller with LED display"
+  },
+  "models": [
+   {
+    "name": "HT-300W",
+    "heaterW": 300,
+    "extra": {
+     "Body": "20.7 x 7 cm"
+    }
+   },
+   {
+    "name": "HT-500W",
+    "heaterW": 500,
+    "extra": {
+     "Body": "26.3 x 7 cm"
+    }
+   },
+   {
+    "name": "HT-800W",
+    "heaterW": 800,
+    "extra": {
+     "Body": "26.3 x 7 cm"
+    }
+   },
+   {
+    "name": "HT-1000W",
+    "heaterW": 1000,
+    "extra": {
+     "Body": "26.3 x 7 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ptc-digital-heater_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ptc-digital-heater_10.jpg"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_57_id_156.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-tr-titanium-heater",
+  "brand": "Boyu",
+  "name": "TR Titanium Heater",
+  "category": "heaters",
+  "subtype": "titanium",
+  "summary": "A thin titanium tube heater run from an external controller with an LED temperature readout. Titanium will not shatter, which is reassuring with large fish or in a sump.",
+  "highlights": [
+   "Unbreakable titanium tube",
+   "External controller with LED display",
+   "Slim 12 mm tube",
+   "100 to 300 W"
+  ],
+  "bestFor": "Sumps, large tanks or tanks with boisterous fish where a glass heater could crack.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Tube size": "12 x 270 mm"
+  },
+  "models": [
+   {
+    "name": "TR-100A",
+    "heaterW": 100
+   },
+   {
+    "name": "TR-150A",
+    "heaterW": 150
+   },
+   {
+    "name": "TR-200A",
+    "heaterW": 200
+   },
+   {
+    "name": "TR-250A",
+    "heaterW": 250
+   },
+   {
+    "name": "TR-300A",
+    "heaterW": 300
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-titanium-heater_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_57_id_109.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-gr-heater",
+  "brand": "Boyu",
+  "name": "GR Glass Heater",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "A glass heater with a separate controller box showing the temperature on an LED display. Same concept as the titanium TR, in a cheaper glass tube.",
+  "highlights": [
+   "External controller with LED display",
+   "Heat-resistant glass tube",
+   "100 to 300 W"
+  ],
+  "bestFor": "Medium tanks where you want an easy-to-read set point on the outside of the tank.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Tube size": "23 x 276 mm"
+  },
+  "models": [
+   {
+    "name": "GR-100",
+    "heaterW": 100
+   },
+   {
+    "name": "GR-150",
+    "heaterW": 150
+   },
+   {
+    "name": "GR-200",
+    "heaterW": 200
+   },
+   {
+    "name": "GR-250",
+    "heaterW": 250
+   },
+   {
+    "name": "GR-300",
+    "heaterW": 300
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-gr-series-heater_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_57_id_108.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-dr-9-heater",
+  "brand": "Boyu",
+  "name": "DR-9 Series Heater",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "The older DR heater range, a glass tube with a built-in controller and LED display, plus dry-run and overheat protection. Seven sizes from 50 to 300 W.",
+  "highlights": [
+   "50 to 300 W",
+   "Built-in LED temperature display",
+   "Dry-run and overheat protection"
+  ],
+  "bestFor": "General tropical tanks on a budget.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Tube size": "35 x 289 mm"
+  },
+  "models": [
+   {
+    "name": "DR-950",
+    "heaterW": 50
+   },
+   {
+    "name": "DR-975",
+    "heaterW": 75
+   },
+   {
+    "name": "DR-9100",
+    "heaterW": 100
+   },
+   {
+    "name": "DR-9150",
+    "heaterW": 150
+   },
+   {
+    "name": "DR-9200",
+    "heaterW": 200
+   },
+   {
+    "name": "DR-9250",
+    "heaterW": 250
+   },
+   {
+    "name": "DR-9300",
+    "heaterW": 300
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-dr-series-heater-2_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_57_id_107.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-submersible-uv-lamp",
+  "brand": "Boyu",
+  "name": "Submersible UV Steriliser",
+  "category": "sterilisers",
+  "subtype": "uv",
+  "summary": "A UVC lamp in a quartz sleeve that sits inside the tank or sump rather than inline on a hose. Six sizes from 4 to 20 W.",
+  "highlights": [
+   "4 to 20 W UVC",
+   "Quartz glass sleeve",
+   "Goes directly in the tank or sump"
+  ],
+  "bestFor": "Knocking out a green water bloom or running in a sump on a larger system.",
+  "watchOut": "An open UV lamp in the display tank needs care, and it will not fix the nutrient imbalance behind an algae bloom.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz"
+  },
+  "models": [
+   {
+    "name": "UV-4W",
+    "uvW": 4,
+    "lengthCm": 28
+   },
+   {
+    "name": "UV-6W",
+    "uvW": 6,
+    "lengthCm": 35
+   },
+   {
+    "name": "UV-8W",
+    "uvW": 8,
+    "lengthCm": 43
+   },
+   {
+    "name": "UV-10W",
+    "uvW": 10,
+    "lengthCm": 47
+   },
+   {
+    "name": "UV-15W",
+    "uvW": 15,
+    "lengthCm": 58
+   },
+   {
+    "name": "UV-20W",
+    "uvW": 20,
+    "lengthCm": 82
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-diving-uv-sterilization-lamp_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_58_id_119.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-cl-clamp-lamp",
+  "brand": "Boyu",
+  "name": "CL Clamp Lamp",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "Small clamp-on lamps with an adjustable aluminium head. The P models take PL compact fluorescent tubes, the L models use LEDs. Old-school but fine for a nano.",
+  "highlights": [
+   "PL fluorescent (5 to 13 W) or LED (1.2 to 2.2 W)",
+   "Adjustable-height aluminium shade",
+   "Rim clamp mount"
+  ],
+  "bestFor": "Nano and small tanks with low-light plants.",
+  "watchOut": "The LED versions are very low wattage and will only grow the easiest plants.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz"
+  },
+  "models": [
+   {
+    "name": "CL-P5",
+    "powerW": 5,
+    "lengthCm": 20.8,
+    "widthCm": 6,
+    "heightCm": 12.1,
+    "extra": {
+     "Lamp": "PL fluorescent"
+    }
+   },
+   {
+    "name": "CL-P7",
+    "powerW": 7,
+    "lengthCm": 23.2,
+    "widthCm": 6,
+    "heightCm": 12.1,
+    "extra": {
+     "Lamp": "PL fluorescent"
+    }
+   },
+   {
+    "name": "CL-P9",
+    "powerW": 9,
+    "lengthCm": 26.2,
+    "widthCm": 6,
+    "heightCm": 12.1,
+    "extra": {
+     "Lamp": "PL fluorescent"
+    }
+   },
+   {
+    "name": "CL-P13",
+    "powerW": 13,
+    "lengthCm": 28.6,
+    "widthCm": 6,
+    "heightCm": 12.1,
+    "extra": {
+     "Lamp": "PL fluorescent"
+    }
+   },
+   {
+    "name": "CL-L01",
+    "powerW": 1.2,
+    "lengthCm": 20.8,
+    "widthCm": 6,
+    "heightCm": 12.1,
+    "extra": {
+     "Lamp": "LED"
+    }
+   },
+   {
+    "name": "CL-L32",
+    "powerW": 1.2,
+    "lengthCm": 23.2,
+    "widthCm": 6,
+    "heightCm": 12.1,
+    "extra": {
+     "Lamp": "LED"
+    }
+   },
+   {
+    "name": "CL-L02",
+    "powerW": 2.2,
+    "lengthCm": 26.2,
+    "widthCm": 6,
+    "heightCm": 12.1,
+    "extra": {
+     "Lamp": "LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cl-series-clamp-lamp_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cl-series-clamp-lamp_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cl-series-clamp-lamp_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_58_id_116.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-zn-wifi-led",
+  "brand": "Boyu",
+  "name": "ZN WiFi LED",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "A slim aluminium LED bar with app control over timing, brightness and colour, including a 24-hour sunrise-to-sunset cycle. There is also an IR remote.",
+  "highlights": [
+   "App control of timer, brightness and colour",
+   "24-hour natural light simulation",
+   "IR remote included",
+   "DC 24 V supply",
+   "40 to 72 W"
+  ],
+  "bestFor": "Planted tanks from 45 to 90 cm where you want scheduling and colour control on a budget.",
+  "watchOut": "Boyu gives no PAR or lumen data, and lists the ZN-60 at the same length as the ZN-45, which looks like a sheet error.",
+  "specs": {
+   "Voltage": "DC 24 V",
+   "Control": "Mobile app (WiFi) and IR remote"
+  },
+  "models": [
+   {
+    "name": "ZN-45",
+    "powerW": 40,
+    "lengthCm": 47.3,
+    "fitsLengthMinCm": 45
+   },
+   {
+    "name": "ZN-50",
+    "powerW": 40,
+    "lengthCm": 52.3
+   },
+   {
+    "name": "ZN-60",
+    "powerW": 50,
+    "fitsLengthMinCm": 60
+   },
+   {
+    "name": "ZN-90",
+    "powerW": 72,
+    "lengthCm": 92.3,
+    "fitsLengthMinCm": 90
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-wifi-smart-led-light_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_58_id_115.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-cm-10-led-clip-light",
+  "brand": "Boyu",
+  "name": "CM-10 LED Clip Light",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "A compact clip-on LED panel with touch control and several lighting modes. Runs on a low-voltage adaptor.",
+  "highlights": [
+   "Touch control with multiple modes",
+   "Slim aluminium housing",
+   "10 W, DC 24 V"
+  ],
+  "bestFor": "Nano tanks and desktop scapes with easy plants.",
+  "watchOut": "No spectrum or PAR data published.",
+  "specs": {
+   "Voltage": "DC 24 V"
+  },
+  "models": [
+   {
+    "name": "CM-10",
+    "powerW": 10,
+    "lengthCm": 22.3,
+    "widthCm": 25,
+    "heightCm": 13.7
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-led-clipped-light_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_58_id_114.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-cb-ultrathin-led",
+  "brand": "Boyu",
+  "name": "CB Ultrathin LED",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "A basic, very thin white LED bar with extendable brackets that rest on the tank rim. Five lengths from 50 to 140 cm.",
+  "highlights": [
+   "Ultra-slim aluminium body",
+   "Extendable rim brackets",
+   "26 to 55 W",
+   "External 12 V adaptor"
+  ],
+  "bestFor": "Low-tech planted and community tanks where you just need decent white light.",
+  "watchOut": "No dimming, timer or published PAR, and wattage per length drops off on the longest bars.",
+  "specs": {
+   "Voltage": "DC 12 V"
+  },
+  "models": [
+   {
+    "name": "CB-50",
+    "powerW": 26,
+    "lengthCm": 50,
+    "fitsLengthMinCm": 50
+   },
+   {
+    "name": "CB-60",
+    "powerW": 32,
+    "lengthCm": 60,
+    "fitsLengthMinCm": 60
+   },
+   {
+    "name": "CB-90",
+    "powerW": 45,
+    "lengthCm": 90,
+    "fitsLengthMinCm": 90
+   },
+   {
+    "name": "CB-120",
+    "powerW": 50,
+    "lengthCm": 110
+   },
+   {
+    "name": "CB-150",
+    "powerW": 55,
+    "lengthCm": 140
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cb-ultrathin-led-light_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_58_id_112.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-zn-800-led",
+  "brand": "Boyu",
+  "name": "ZN-800 / ZN-1600 Arm LED",
+  "category": "lights",
+  "subtype": "stand",
+  "summary": "Fan-cooled LED spots on a gooseneck arm that clamps to the tank edge. The ZN-800 is a single puck, the ZN-1600 a twin-lens bar with app control. Knobs let you dim and shift the colour temperature.",
+  "highlights": [
+   "80 W or 160 W",
+   "Rim-clamp gooseneck arm",
+   "Dimming and colour temperature knobs",
+   "App control on ZN-1600",
+   "Quartz optical lenses"
+  ],
+  "bestFor": "Open-top tanks where you want a hanging-style look without a ceiling mount.",
+  "watchOut": "The colour dial runs between blue and white, which hints at a marine focus, and there is no PAR data.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Cooling": "Built-in fans"
+  },
+  "models": [
+   {
+    "name": "ZN-800",
+    "powerW": 80,
+    "lengthCm": 13,
+    "widthCm": 28.7,
+    "heightCm": 34.9
+   },
+   {
+    "name": "ZN-1600",
+    "powerW": 160,
+    "lengthCm": 52.9,
+    "widthCm": 28.5,
+    "heightCm": 30.7,
+    "extra": {
+     "Control": "Mobile app"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-smart-led-light_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_58_id_111.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-cornucopia-betta-cube",
+  "brand": "Boyu",
+  "name": "Cornucopia Betta Cube (DY-150)",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A tiny betta cube with an LED in the lid, offered in several pastel colours. It is about 20 cm on each side, so very small.",
+  "highlights": [
+   "About 20 x 20 x 18.5 cm",
+   "LED lighting in the lid",
+   "Six colour options"
+  ],
+  "bestFor": "A single betta on a desk, with a few easy plants.",
+  "watchOut": "Very small water volume means temperature and water quality swing quickly, and no filter is listed.",
+  "specs": {
+   "Colours": "Green, red, orange, black, white, yellow"
+  },
+  "models": [
+   {
+    "name": "DY-150",
+    "lengthCm": 20.7,
+    "widthCm": 20.7,
+    "heightCm": 18.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-cornucopia-betta-cube_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_137.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-accord-led-aquarium",
+  "brand": "Boyu",
+  "name": "Accord LED Desk Aquarium (BG-29)",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A novelty office aquarium that combines a small tank with a pen holder, digital calendar and gooseneck LED. It runs on low voltage and has an undergravel filter.",
+  "highlights": [
+   "Pen holder and digital clock/calendar built in",
+   "Undergravel filtration with small pump",
+   "Gooseneck LED, 24 V"
+  ],
+  "bestFor": "A desk ornament with a couple of easy plants or a few shrimp.",
+  "watchOut": "The tank is only 12.8 cm tall and the pump and light are tiny, so treat it as a novelty.",
+  "specs": {
+   "Voltage": "AC 230/115 V (24 V to pump and light)"
+  },
+  "models": [
+   {
+    "name": "BG-29",
+    "lengthCm": 29.2,
+    "widthCm": 11.6,
+    "heightCm": 12.8,
+    "flowLph": 120,
+    "powerW": 1.5,
+    "extra": {
+     "Light": "0.8 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-accord-led-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-accord-led-aquarium_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-accord-led-aquarium_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_135.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-refinement-aquarium",
+  "brand": "Boyu",
+  "name": "Refinement Aquarium (JDG-270)",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A small cube tank with a coloured frame, a swivelling lamp arm and built-in filtration. It ships with a 9 W energy-saving lamp, though Boyu says LED options exist.",
+  "highlights": [
+   "27 cm cube footprint",
+   "Built-in filter pump, 300 L/h",
+   "Swivelling lamp arm",
+   "Several frame colours"
+  ],
+  "bestFor": "A beginner nano cube for easy plants.",
+  "watchOut": "The standard 9 W compact fluorescent lamp is dated and will need replacing sooner than an LED.",
+  "specs": {
+   "Colours": "Pink, orange, blue and others"
+  },
+  "models": [
+   {
+    "name": "JDG-270",
+    "lengthCm": 27,
+    "widthCm": 27,
+    "heightCm": 35,
+    "flowLph": 300,
+    "powerW": 11,
+    "extra": {
+     "Light": "9 W energy-saving lamp"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-refinement-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-refinement-aquarium_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-refinement-aquarium_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_133.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-arts-led-aquarium",
+  "brand": "Boyu",
+  "name": "Arts LED Aquarium (ME-175)",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A small framed desktop tank with a built-in filter and clip LED. Two slightly different heights, several frame colours.",
+  "highlights": [
+   "About 17.5 x 23 x 23.5 cm",
+   "Internal filter, 150 L/h",
+   "2 W LED lamp"
+  ],
+  "bestFor": "Office desks and first nano tanks with low-light plants.",
+  "watchOut": "The 2 W LED is only enough for undemanding plants like mosses and Anubias.",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "ME-175A",
+    "lengthCm": 17.5,
+    "widthCm": 23,
+    "heightCm": 23.5,
+    "flowLph": 150,
+    "powerW": 2.5,
+    "extra": {
+     "Light": "2 W LED"
+    }
+   },
+   {
+    "name": "ME-175",
+    "lengthCm": 17.5,
+    "widthCm": 23,
+    "heightCm": 23.8,
+    "flowLph": 150,
+    "powerW": 2.5,
+    "extra": {
+     "Light": "2 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-arts-led-aquarium_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-arts-led-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-arts-led-aquarium_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-arts-led-aquarium_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_131.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-magic-led-aquarium",
+  "brand": "Boyu",
+  "name": "Magic LED Aquarium (ME-213 / ME-270)",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A compact cube tank with a lid-mounted multi-mode LED and touch controls, running on 12 V. The ME-270H and 270RH are taller, with an external filter; the RH adds ultra-clear glass and an IR remote.",
+  "highlights": [
+   "Touch-controlled multi-mode LED",
+   "Feeding and ventilation holes in the lid",
+   "12 V low-voltage supply",
+   "ME-270RH: ultra-clear glass and IR remote"
+  ],
+  "bestFor": "A tidy nano on a desk or shelf with easy plants.",
+  "watchOut": "The lid covers the top fully, which limits emersed growth and plant choice.",
+  "specs": {
+   "Voltage": "DC 12 V",
+   "Colours": "Black or white"
+  },
+  "models": [
+   {
+    "name": "ME-213",
+    "lengthCm": 21.3,
+    "widthCm": 21.3,
+    "heightCm": 26.2,
+    "flowLph": 200,
+    "powerW": 6,
+    "extra": {
+     "Light": "5 W LED"
+    }
+   },
+   {
+    "name": "ME-270H",
+    "lengthCm": 20,
+    "widthCm": 27,
+    "heightCm": 28,
+    "flowLph": 210,
+    "powerW": 3.5,
+    "extra": {
+     "Light": "5 W LED",
+     "Filter": "External"
+    }
+   },
+   {
+    "name": "ME-270RH",
+    "lengthCm": 20,
+    "widthCm": 27,
+    "heightCm": 28,
+    "flowLph": 210,
+    "powerW": 3.5,
+    "extra": {
+     "Light": "5 W LED",
+     "Filter": "External",
+     "Glass": "Ultra-clear"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-magic-led-aquarium_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_130.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-mia-led-aquarium",
+  "brand": "Boyu",
+  "name": "Mia LED Aquarium (DSN-315)",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A small curved-lid desktop tank with a submersible filter and LED. About 32 cm long.",
+  "highlights": [
+   "About 32 x 23 x 30 cm",
+   "Submersible filter, 300 L/h",
+   "LED in the lid"
+  ],
+  "bestFor": "A simple starter nano.",
+  "watchOut": "The 0.6 W LED is a display light; plants beyond mosses and Anubias will struggle.",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "DSN-315",
+    "lengthCm": 32.2,
+    "widthCm": 23.35,
+    "heightCm": 30,
+    "flowLph": 300,
+    "powerW": 5,
+    "extra": {
+     "Light": "0.6 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-mia-led-aquarium_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_126.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-ms-series-aquarium",
+  "brand": "Boyu",
+  "name": "MS Series Aquarium",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A tidy lidded nano range with a top biological filter and a touch-controlled multi-mode LED. Three sizes from 20 to 45 litres.",
+  "highlights": [
+   "20, 31 or 45 litres",
+   "Top-mounted biological filter",
+   "Touch control, multi-mode LED"
+  ],
+  "bestFor": "Beginners wanting a complete small tank for easy plants, shrimp or a betta.",
+  "watchOut": "Low light output (5 to 7 W) suits low-light plants only.",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "MS-320M",
+    "lengthCm": 32,
+    "widthCm": 21,
+    "heightCm": 40,
+    "volumeL": 20,
+    "flowLph": 290,
+    "powerW": 4,
+    "extra": {
+     "Light": "5 W LED"
+    }
+   },
+   {
+    "name": "MS-420M",
+    "lengthCm": 40,
+    "widthCm": 23,
+    "heightCm": 45,
+    "volumeL": 31,
+    "flowLph": 290,
+    "powerW": 4,
+    "extra": {
+     "Light": "7 W LED"
+    }
+   },
+   {
+    "name": "MS-520M",
+    "lengthCm": 48,
+    "widthCm": 25,
+    "heightCm": 49,
+    "volumeL": 45,
+    "flowLph": 500,
+    "powerW": 7,
+    "extra": {
+     "Light": "7 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-ms-series-aquarium_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_125.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-dy-series-tabletop-tank",
+  "brand": "Boyu",
+  "name": "DY Series Tabletop Tank",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "Small tabletop tanks with the pump in the base, so water and electrics are kept apart, plus a multi-stage bottom filter and surface skimmer. Round and rectangular shapes, with or without A styling.",
+  "highlights": [
+   "Motor sits in the base, separated from the water",
+   "Bottom filter with surface skimmer",
+   "Flow valve to cut water noise",
+   "2 W LED"
+  ],
+  "bestFor": "A betta or a few shrimp on a desk.",
+  "watchOut": "Very small volume, so it needs regular small water changes.",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "DY-1",
+    "lengthCm": 21.5,
+    "widthCm": 14.5,
+    "heightCm": 20.3,
+    "flowLph": 100,
+    "powerW": 4,
+    "extra": {
+     "Light": "2 W LED"
+    }
+   },
+   {
+    "name": "DY-2",
+    "heightCm": 20.4,
+    "flowLph": 100,
+    "powerW": 4,
+    "extra": {
+     "Diameter": "236 mm",
+     "Light": "2 W LED"
+    }
+   },
+   {
+    "name": "DY-3",
+    "lengthCm": 22.7,
+    "widthCm": 14,
+    "heightCm": 20.3,
+    "flowLph": 100,
+    "powerW": 4,
+    "extra": {
+     "Light": "2 W LED"
+    }
+   },
+   {
+    "name": "DY-1A",
+    "lengthCm": 21.5,
+    "widthCm": 14.5,
+    "heightCm": 20.8,
+    "flowLph": 100,
+    "powerW": 4,
+    "extra": {
+     "Light": "2 W LED"
+    }
+   },
+   {
+    "name": "DY-2A",
+    "heightCm": 22.6,
+    "flowLph": 100,
+    "powerW": 4,
+    "extra": {
+     "Diameter": "236 mm",
+     "Light": "2 W LED"
+    }
+   },
+   {
+    "name": "DY-3A",
+    "lengthCm": 23,
+    "widthCm": 14.3,
+    "heightCm": 21.6,
+    "flowLph": 100,
+    "powerW": 4,
+    "extra": {
+     "Light": "2 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-dy-series-tabletop-fish-tank_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_28_id_124.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-mez-intelligent-aquarium",
+  "brand": "Boyu",
+  "name": "MEZ Intelligent Aquarium",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A tall, lidded nano with a multi-mode LED whose brightness and colour you can adjust. The A versions use touch control; the standard versions add app control with a 24-hour natural light cycle. It runs an external filter.",
+  "highlights": [
+   "36, 56 or 76 litres",
+   "Adjustable brightness and colour, app control on non-A models",
+   "DC 12 V",
+   "External filter, 750 to 1,000 L/h"
+  ],
+  "bestFor": "A compact planted or community tank with some lighting control built in.",
+  "watchOut": "Tall, narrow tanks are harder to light well at the bottom and to aquascape.",
+  "specs": {
+   "Voltage": "DC 12 V",
+   "Control": "Touch (A models) or app"
+  },
+  "models": [
+   {
+    "name": "MEZ-36 / 36A",
+    "lengthCm": 40.1,
+    "widthCm": 31.2,
+    "heightCm": 37.3,
+    "volumeL": 36,
+    "flowLph": 750,
+    "powerW": 12,
+    "extra": {
+     "Light": "10 W LED"
+    }
+   },
+   {
+    "name": "MEZ-56 / 56A",
+    "lengthCm": 41.2,
+    "widthCm": 36.2,
+    "heightCm": 44.9,
+    "volumeL": 56,
+    "flowLph": 1000,
+    "powerW": 16,
+    "extra": {
+     "Light": "15 W LED"
+    }
+   },
+   {
+    "name": "MEZ-76 / 76A",
+    "lengthCm": 46.4,
+    "widthCm": 41.3,
+    "heightCm": 47.5,
+    "volumeL": 76,
+    "flowLph": 1000,
+    "powerW": 16,
+    "extra": {
+     "Light": "20 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-mez-series-intelligent-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-mez-series-intelligent-aquarium_12.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-mez-series-intelligent-aquarium-2_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_142.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-happy-family-aquarium",
+  "brand": "Boyu",
+  "name": "Happy Family Aquarium",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "A rounded all-in-one tank with filtration hidden in the hood and back. The fuller versions come loaded with a protein skimmer, UV, heater and night LED; the B versions keep it to pump, media and light, which is what a freshwater keeper needs.",
+  "highlights": [
+   "65 L (HS-45) or 128 L (HS-60)",
+   "Internal biological filter included",
+   "A versions add heater, UV and protein skimmer",
+   "Several colours"
+  ],
+  "bestFor": "Someone wanting a complete, ready-to-go medium tank without piecing together equipment.",
+  "watchOut": "The skimmer on the A models is pointless in fresh water, and the HS-60 standard model uses a 150 W halogen lamp.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Colours": "Black, silver, grey"
+  },
+  "models": [
+   {
+    "name": "HS-45A / 45B",
+    "lengthCm": 40.3,
+    "widthCm": 46.2,
+    "heightCm": 46.8,
+    "volumeL": 65,
+    "flowLph": 720,
+    "powerW": 9.5,
+    "extra": {
+     "Light": "2 x 6 W LED"
+    }
+   },
+   {
+    "name": "HS-45LED",
+    "lengthCm": 40.3,
+    "widthCm": 46.2,
+    "heightCm": 46.8,
+    "volumeL": 65,
+    "flowLph": 720,
+    "powerW": 9.5,
+    "extra": {
+     "Light": "16 W LED"
+    }
+   },
+   {
+    "name": "HS-60",
+    "lengthCm": 52,
+    "widthCm": 58,
+    "heightCm": 63,
+    "volumeL": 128,
+    "flowLph": 1400,
+    "powerW": 20,
+    "extra": {
+     "Light": "150 W halogen"
+    }
+   },
+   {
+    "name": "HS-60A / 60B",
+    "lengthCm": 52,
+    "widthCm": 58,
+    "heightCm": 63,
+    "volumeL": 128,
+    "flowLph": 1400,
+    "powerW": 20,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   },
+   {
+    "name": "HS-60LED",
+    "lengthCm": 52,
+    "widthCm": 58,
+    "heightCm": 63,
+    "volumeL": 128,
+    "flowLph": 1400,
+    "powerW": 20,
+    "extra": {
+     "Light": "60 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-boyu-happy-family-aquarium_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-boyu-happy-family-aquarium-2_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-boyu-happy-family-aquarium-2_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_139.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-fy-10-aquarium",
+  "brand": "Boyu",
+  "name": "FY-10 Aquarium",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A clean, rimless-look glass tank with a lift-off lid carrying a detachable LED and an internal filter box. Designed to look good viewed from above as well as the front.",
+  "highlights": [
+   "About 46 x 29 cm footprint",
+   "Detachable LED on a removable lid",
+   "Internal filter assembly"
+  ],
+  "bestFor": "A starter planted or shrimp tank that looks neater than most kit tanks.",
+  "watchOut": "Boyu does not publish volume, flow or light wattage.",
+  "specs": {},
+  "models": [
+   {
+    "name": "FY-10",
+    "lengthCm": 45.7,
+    "widthCm": 28.7,
+    "heightCm": 40.9
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-fy-aquarium_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_161.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-fg-series-aquarium",
+  "brand": "Boyu",
+  "name": "FG Series Aquarium",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "Simple glass tanks with a separate LED unit and an optional hang-on waterfall filter. Three sizes from 41 to 62 cm long.",
+  "highlights": [
+   "41, 51 or 62 cm long",
+   "Separate LED unit",
+   "Optional hang-on waterfall filter"
+  ],
+  "bestFor": "A basic glass tank for a budget planted or community setup.",
+  "watchOut": "Filter is optional and specs beyond dimensions are not given.",
+  "specs": {},
+  "models": [
+   {
+    "name": "FG-5",
+    "lengthCm": 41.2,
+    "widthCm": 21.4,
+    "heightCm": 28.3
+   },
+   {
+    "name": "FG-10",
+    "lengthCm": 51.4,
+    "widthCm": 26.7,
+    "heightCm": 33.9
+   },
+   {
+    "name": "FG-15",
+    "lengthCm": 61.6,
+    "widthCm": 31.8,
+    "heightCm": 34.9
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-fg-series-aquarium_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_159.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-hg-series-aquarium",
+  "brand": "Boyu",
+  "name": "HG Series Aquarium",
+  "category": "aquariums",
+  "subtype": "framed",
+  "summary": "A glossy, colourful lidded tank with a top biological filter, digital clock, water temperature readout and a touch-controlled LED. Three sizes from 32 to 80 cm long, in seven colours.",
+  "highlights": [
+   "Built-in temperature display and clock",
+   "Top biological filter",
+   "Touch-controlled multi-mode LED",
+   "Seven lid colours"
+  ],
+  "bestFor": "A bright, family-friendly tank with easy plants.",
+  "watchOut": "Light output is low for the size, especially on the HG-800 (2 x 10 W).",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Colours": "White, black, orange, green, yellow, red, pink"
+  },
+  "models": [
+   {
+    "name": "HG-300",
+    "lengthCm": 32,
+    "widthCm": 22.1,
+    "heightCm": 31.3,
+    "flowLph": 290,
+    "powerW": 13.5,
+    "extra": {
+     "Light": "3 W LED"
+    }
+   },
+   {
+    "name": "HG-500",
+    "lengthCm": 48,
+    "widthCm": 25,
+    "heightCm": 49,
+    "flowLph": 500,
+    "powerW": 27,
+    "extra": {
+     "Light": "5 W LED"
+    }
+   },
+   {
+    "name": "HG-800",
+    "lengthCm": 80,
+    "widthCm": 36.5,
+    "heightCm": 79.5,
+    "flowLph": 740,
+    "powerW": 47,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-hg-series-aquarium_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_150.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-mt-mini-aquarium",
+  "brand": "Boyu",
+  "name": "MT Mini Aquarium",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A curved-front kit tank with an internal biological filter, LED tubes and small cooling fans in the hood. Three sizes from 25 to 80 litres.",
+  "highlights": [
+   "25, 32 or 80 litres",
+   "Internal bio filter with sponge, balls, carbon and ceramic",
+   "LED tubes plus 12 V hood fans"
+  ],
+  "bestFor": "Beginners after a complete kit for easy plants and small fish.",
+  "watchOut": "The curved front distorts the view and makes aquascaping harder.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Colours": "Black, grey, silver"
+  },
+  "models": [
+   {
+    "name": "MT-308A",
+    "lengthCm": 30,
+    "widthCm": 34,
+    "heightCm": 37,
+    "volumeL": 25,
+    "flowLph": 340,
+    "powerW": 6,
+    "extra": {
+     "Light": "1 x 6 W LED"
+    }
+   },
+   {
+    "name": "MT-408 / 408A",
+    "lengthCm": 35.3,
+    "widthCm": 40,
+    "heightCm": 41,
+    "volumeL": 32,
+    "flowLph": 340,
+    "powerW": 6,
+    "extra": {
+     "Light": "2 x 6 W LED"
+    }
+   },
+   {
+    "name": "MT-508",
+    "lengthCm": 45.5,
+    "widthCm": 49,
+    "heightCm": 50.6,
+    "volumeL": 80,
+    "flowLph": 700,
+    "powerW": 13,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   },
+   {
+    "name": "MT-508A",
+    "lengthCm": 45.5,
+    "widthCm": 49,
+    "heightCm": 50.6,
+    "volumeL": 80,
+    "flowLph": 700,
+    "powerW": 13,
+    "extra": {
+     "Light": "1 x 10 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-boyu-mini-aquarium_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-boyu-mini-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-boyu-mini-aquarium_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_136.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-byg-series-aquarium",
+  "brand": "Boyu",
+  "name": "BYG Series Aquarium",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "A cylinder-look tank with a split, flip-up lid made of two half-circles, a top biological filter and built-in lighting. Two sizes, 26 and 86 litres.",
+  "highlights": [
+   "26 or 86 litres",
+   "Two-part flip-up lid",
+   "Top biological filter"
+  ],
+  "bestFor": "A decorative round-style tank for easy plants and small fish.",
+  "watchOut": "Curved glass is harder to scape and photograph, and light wattage is not clearly listed.",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "BYG-26",
+    "lengthCm": 38.2,
+    "widthCm": 25.7,
+    "heightCm": 47.3,
+    "volumeL": 26,
+    "flowLph": 290,
+    "powerW": 4
+   },
+   {
+    "name": "BYG-86",
+    "lengthCm": 61.2,
+    "widthCm": 36.8,
+    "heightCm": 61.3,
+    "volumeL": 86,
+    "flowLph": 500,
+    "powerW": 7
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-byg-series-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-byg-series-aquarium_11.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_134.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-lj-series-aquarium",
+  "brand": "Boyu",
+  "name": "LJ Series Aquarium",
+  "category": "aquariums",
+  "subtype": "desktop",
+  "summary": "Hexagonal-fronted tanks with a flip-up ABS hood, top biological filter and tube lighting. Three sizes from 22 to 68 litres. Boyu lists these on its Chinese pages only.",
+  "highlights": [
+   "22, 25 or 68 litres",
+   "Flip-up hood for maintenance",
+   "Top biological filter"
+  ],
+  "bestFor": "A compact display tank for a few fish and easy plants.",
+  "watchOut": "The lighting is energy-saving tube based rather than modern LED.",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "LJ-300",
+    "lengthCm": 33,
+    "widthCm": 30,
+    "heightCm": 44,
+    "volumeL": 22,
+    "flowLph": 290,
+    "powerW": 4
+   },
+   {
+    "name": "LJ-380",
+    "lengthCm": 40.1,
+    "widthCm": 21.4,
+    "heightCm": 47.5,
+    "volumeL": 25,
+    "flowLph": 290,
+    "powerW": 4
+   },
+   {
+    "name": "LJ-430",
+    "lengthCm": 45.3,
+    "widthCm": 41.3,
+    "heightCm": 63.9,
+    "volumeL": 68,
+    "flowLph": 500,
+    "powerW": 7
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_132.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-zj-series-aquarium",
+  "brand": "Boyu",
+  "name": "ZJ Series Aquarium",
+  "category": "aquariums",
+  "subtype": "framed",
+  "summary": "Curved-front lidded tanks with an internal pump feeding a top filter and a lid LED. Sizes from 20 to 84 litres; the A versions are taller.",
+  "highlights": [
+   "20 to 84 litres",
+   "Top filter fed by an internal pump",
+   "LED in the lid",
+   "Silver, grey or black"
+  ],
+  "bestFor": "Beginners after a complete medium kit tank.",
+  "watchOut": "Lighting is weak for the size (6 to 10 W).",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "ZJ-201",
+    "lengthCm": 38.1,
+    "widthCm": 26.1,
+    "heightCm": 32.5,
+    "volumeL": 20,
+    "flowLph": 290,
+    "powerW": 4,
+    "extra": {
+     "Light": "7 W LED"
+    }
+   },
+   {
+    "name": "ZJ-401",
+    "lengthCm": 53.5,
+    "widthCm": 32.3,
+    "heightCm": 35.2,
+    "volumeL": 40,
+    "flowLph": 500,
+    "powerW": 7,
+    "extra": {
+     "Light": "6 W LED"
+    }
+   },
+   {
+    "name": "ZJ-401A",
+    "lengthCm": 53.5,
+    "widthCm": 32.3,
+    "heightCm": 42,
+    "volumeL": 48,
+    "flowLph": 500,
+    "powerW": 7,
+    "extra": {
+     "Light": "6 W LED"
+    }
+   },
+   {
+    "name": "ZJ-601",
+    "lengthCm": 62.8,
+    "widthCm": 37,
+    "heightCm": 37.5,
+    "volumeL": 60,
+    "flowLph": 500,
+    "powerW": 7,
+    "extra": {
+     "Light": "10 W LED"
+    }
+   },
+   {
+    "name": "ZJ-601A",
+    "lengthCm": 62.8,
+    "widthCm": 37,
+    "heightCm": 51.6,
+    "volumeL": 84,
+    "flowLph": 500,
+    "powerW": 7,
+    "extra": {
+     "Light": "10 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-zj-series-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-zj-series-aquarium_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-zj-series-aquarium_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_29_id_127.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-e-series-cabinet-aquarium",
+  "brand": "Boyu",
+  "name": "E Series Cabinet Aquarium (EAF / EAZ / EAM / EDM / EHM / ELM)",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "An open-top-look cabinet aquarium with a partitioned sump-style filter in the base, LED tubes and a wireless touch-screen controller. Boyu sells the same tank under six series codes that differ only in cabinet and trim styling.",
+  "highlights": [
+   "280, 330 or 420 litres",
+   "Multi-chamber bottom filtration",
+   "Wireless large-screen controller",
+   "Feeding hatch that takes an auto feeder",
+   "Titanium-gold trim (EAF, EAZ) or wood-finish cabinets (EAM, EDM, EHM, ELM)"
+  ],
+  "bestFor": "Large community or planted displays where you want filtration and lighting built into the furniture.",
+  "watchOut": "The included LED tubes (2 x 15 to 2 x 20 W) are well short of what a demanding planted tank needs.",
+  "specs": {
+   "Voltage": "AC 230/115 V, 50/60 Hz",
+   "Series codes": "EAF, EAZ, EAM, EDM, EHM, ELM (P and D suffixes on some)"
+  },
+  "models": [
+   {
+    "name": "1000",
+    "lengthCm": 100,
+    "widthCm": 40,
+    "volumeL": 280,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "2 x 15 W LED",
+     "Height incl. cabinet": "1,530 mm"
+    }
+   },
+   {
+    "name": "1200",
+    "lengthCm": 120,
+    "widthCm": 40,
+    "volumeL": 330,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "2 x 16 W LED",
+     "Height incl. cabinet": "1,530 mm"
+    }
+   },
+   {
+    "name": "1500",
+    "lengthCm": 150,
+    "widthCm": 40,
+    "volumeL": 420,
+    "flowLph": 2000,
+    "powerW": 43,
+    "extra": {
+     "Light": "2 x 20 W LED",
+     "Height incl. cabinet": "1,530 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-eaz-series-aquarium_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-eam-series-aquarium_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-edm-series-aquarium_9.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-eaf-series-aquarium_9.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_67.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-xf-suspension-aquarium",
+  "brand": "Boyu",
+  "name": "XF Suspension Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "An 80 cm tank on a matching cabinet with a multi-stage bottom filter, surface skimmer and a flow valve to keep the water noise down. The JE version is taller.",
+  "highlights": [
+   "128 or 189 litres",
+   "Multi-stage bottom filter with surface skimmer",
+   "18 W LED lid"
+  ],
+  "bestFor": "A medium planted or community display with everything included.",
+  "watchOut": "The 18 W light is only enough for low to medium light plants.",
+  "specs": {
+   "Voltage": "AC 230/115 V"
+  },
+  "models": [
+   {
+    "name": "XF-80",
+    "lengthCm": 80,
+    "widthCm": 36.4,
+    "heightCm": 57,
+    "volumeL": 128,
+    "flowLph": 960,
+    "powerW": 15,
+    "extra": {
+     "Light": "18 W LED"
+    }
+   },
+   {
+    "name": "XF-80J",
+    "lengthCm": 80,
+    "widthCm": 36.4,
+    "heightCm": 57,
+    "volumeL": 128,
+    "flowLph": 2500,
+    "powerW": 25,
+    "extra": {
+     "Light": "18 W LED"
+    }
+   },
+   {
+    "name": "XF-80JE",
+    "lengthCm": 80,
+    "widthCm": 36.4,
+    "heightCm": 80,
+    "volumeL": 189,
+    "flowLph": 1565,
+    "powerW": 28,
+    "extra": {
+     "Light": "18 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-suspension-aquarium_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-suspension-aquarium_12.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-suspension-aquarium_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_81.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-lz-modern-aquarium",
+  "brand": "Boyu",
+  "name": "LZ Modern Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "A large curved-front tank on a cabinet with a top filter and LED lighting in the hood. The single piece of bent front glass gives an uninterrupted view. A big range from 84 cm to 3 m.",
+  "highlights": [
+   "Bent front glass, no corner seams",
+   "Top filtration system",
+   "198 to 1,164 litres",
+   "Several lid and trim colours"
+  ],
+  "bestFor": "Large community displays where a seamless front matters more than aquascaping flexibility.",
+  "watchOut": "Every size uses the same 1,200 L/h pump, which is weak on the bigger tanks, and the hood limits lighting upgrades.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Colours": "Snowy white, birch, cherry, mahogany, black"
+  },
+  "models": [
+   {
+    "name": "LZ-810",
+    "lengthCm": 83.9,
+    "widthCm": 43.4,
+    "heightCm": 73,
+    "volumeL": 198,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   },
+   {
+    "name": "LZ-810A",
+    "lengthCm": 83.9,
+    "widthCm": 43.4,
+    "heightCm": 85,
+    "volumeL": 236,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   },
+   {
+    "name": "LZ-1000",
+    "lengthCm": 106.9,
+    "widthCm": 43.4,
+    "heightCm": 73,
+    "volumeL": 255,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 15 W LED"
+    }
+   },
+   {
+    "name": "LZ-1000A",
+    "lengthCm": 106.9,
+    "widthCm": 43.4,
+    "heightCm": 85,
+    "volumeL": 305,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 15 W LED"
+    }
+   },
+   {
+    "name": "LZ-1200",
+    "lengthCm": 122.9,
+    "widthCm": 43.4,
+    "heightCm": 73,
+    "volumeL": 294,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 16 W LED"
+    }
+   },
+   {
+    "name": "LZ-1200A",
+    "lengthCm": 122.9,
+    "widthCm": 43.4,
+    "heightCm": 85,
+    "volumeL": 352,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 16 W LED"
+    }
+   },
+   {
+    "name": "LZ-1380",
+    "lengthCm": 138.9,
+    "widthCm": 43.4,
+    "heightCm": 73,
+    "volumeL": 334,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 20 W LED"
+    }
+   },
+   {
+    "name": "LZ-1380A",
+    "lengthCm": 138.9,
+    "widthCm": 43.4,
+    "heightCm": 85,
+    "volumeL": 399,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 20 W LED"
+    }
+   },
+   {
+    "name": "LZ-1500",
+    "lengthCm": 152.9,
+    "widthCm": 60,
+    "heightCm": 73,
+    "volumeL": 520,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "4 x 20 W LED"
+    }
+   },
+   {
+    "name": "LZ-1500A",
+    "lengthCm": 152.9,
+    "widthCm": 60,
+    "heightCm": 85,
+    "volumeL": 621,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "4 x 20 W LED"
+    }
+   },
+   {
+    "name": "LZ-1500B",
+    "lengthCm": 152.9,
+    "widthCm": 60,
+    "heightCm": 73,
+    "volumeL": 368,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 20 W LED"
+    }
+   },
+   {
+    "name": "LZ-1800",
+    "lengthCm": 182.9,
+    "widthCm": 60,
+    "heightCm": 85,
+    "volumeL": 747,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "4 x 20 W LED"
+    }
+   },
+   {
+    "name": "LZ-2000",
+    "lengthCm": 202.9,
+    "widthCm": 60,
+    "heightCm": 85,
+    "volumeL": 830,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 15 W LED"
+    }
+   },
+   {
+    "name": "LZ-2300",
+    "lengthCm": 232.9,
+    "widthCm": 60,
+    "heightCm": 85,
+    "volumeL": 955,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 16 W LED"
+    }
+   },
+   {
+    "name": "LZ-2500",
+    "lengthCm": 252.9,
+    "widthCm": 60,
+    "heightCm": 85,
+    "volumeL": 1038,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 16 W LED"
+    }
+   },
+   {
+    "name": "LZ-2800",
+    "lengthCm": 282.9,
+    "widthCm": 60,
+    "heightCm": 85,
+    "volumeL": 1150,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 20 W LED"
+    }
+   },
+   {
+    "name": "LZ-3000",
+    "lengthCm": 301.8,
+    "widthCm": 60,
+    "heightCm": 85,
+    "volumeL": 1164,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 20 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-modern-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-modern-aquarium_11.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_80.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-lh-overlord-aquarium",
+  "brand": "Boyu",
+  "name": "LH Overlord Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "A deeper take on the LZ, with bent front glass, a top filter and hood LEDs, on a matching cabinet. From 85 cm up to 2.8 m.",
+  "highlights": [
+   "Bent front glass",
+   "Deeper tanks than the LZ (50 to 67 cm front to back)",
+   "235 to 1,270 litres",
+   "Top filtration"
+  ],
+  "bestFor": "Big community or cichlid displays that suit extra depth.",
+  "watchOut": "A single 1,200 L/h pump across the whole range is underpowered for the larger tanks.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Colours": "Snowy white, birch, cherry, mahogany, black"
+  },
+  "models": [
+   {
+    "name": "LH-810",
+    "lengthCm": 85.2,
+    "widthCm": 50.4,
+    "heightCm": 75,
+    "volumeL": 235,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   },
+   {
+    "name": "LH-810A",
+    "lengthCm": 85.2,
+    "widthCm": 50.4,
+    "heightCm": 85,
+    "volumeL": 256,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   },
+   {
+    "name": "LH-1000",
+    "lengthCm": 108.2,
+    "widthCm": 50.4,
+    "heightCm": 75,
+    "volumeL": 302,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 15 W LED"
+    }
+   },
+   {
+    "name": "LH-1000A",
+    "lengthCm": 108.2,
+    "widthCm": 50.4,
+    "heightCm": 85,
+    "volumeL": 349,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 15 W LED"
+    }
+   },
+   {
+    "name": "LH-1200",
+    "lengthCm": 124.2,
+    "widthCm": 50.4,
+    "heightCm": 75,
+    "volumeL": 341,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 16 W LED"
+    }
+   },
+   {
+    "name": "LH-1200A",
+    "lengthCm": 124.2,
+    "widthCm": 50.4,
+    "heightCm": 85,
+    "volumeL": 394,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 16 W LED"
+    }
+   },
+   {
+    "name": "LH-1380",
+    "lengthCm": 140.2,
+    "widthCm": 50.4,
+    "heightCm": 75,
+    "volumeL": 395,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 20 W LED"
+    }
+   },
+   {
+    "name": "LH-1380A",
+    "lengthCm": 140.2,
+    "widthCm": 50.4,
+    "heightCm": 85,
+    "volumeL": 457,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 20 W LED"
+    }
+   },
+   {
+    "name": "LH-1500",
+    "lengthCm": 154.2,
+    "widthCm": 67,
+    "heightCm": 75,
+    "volumeL": 596,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "4 x 20 W LED"
+    }
+   },
+   {
+    "name": "LH-1500A",
+    "lengthCm": 154.2,
+    "widthCm": 67,
+    "heightCm": 85,
+    "volumeL": 688,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "4 x 20 W LED"
+    }
+   },
+   {
+    "name": "LH-1500B",
+    "lengthCm": 154.2,
+    "widthCm": 50.4,
+    "heightCm": 75,
+    "volumeL": 413,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 20 W LED"
+    }
+   },
+   {
+    "name": "LH-1800",
+    "lengthCm": 184.2,
+    "widthCm": 67,
+    "heightCm": 85,
+    "volumeL": 806,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "4 x 20 W LED"
+    }
+   },
+   {
+    "name": "LH-2000",
+    "lengthCm": 204.2,
+    "widthCm": 67,
+    "heightCm": 85,
+    "volumeL": 901,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 15 W LED"
+    }
+   },
+   {
+    "name": "LH-2300",
+    "lengthCm": 234.2,
+    "widthCm": 67,
+    "heightCm": 85,
+    "volumeL": 1040,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 16 W LED"
+    }
+   },
+   {
+    "name": "LH-2500",
+    "lengthCm": 254.2,
+    "widthCm": 67,
+    "heightCm": 85,
+    "volumeL": 1132,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 16 W LED"
+    }
+   },
+   {
+    "name": "LH-2800",
+    "lengthCm": 284.2,
+    "widthCm": 67,
+    "heightCm": 85,
+    "volumeL": 1270,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "8 x 20 W LED"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-overlord-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-overlord-aquarium_11.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_79.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-zdt-classic-aquarium",
+  "brand": "Boyu",
+  "name": "ZDT Classic Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "A traditional curved-front aquarium and cabinet set with lighting in the hood and a choice of filter systems. Boyu pitches the red and blue LED mix as plant and colour friendly. Sizes from about 80 cm to 1.5 m.",
+  "highlights": [
+   "202 to 391 litres",
+   "Red and blue enhanced LED lighting, some models add an 11 W PL tube",
+   "Several filter options in the range",
+   "Five cabinet colours"
+  ],
+  "bestFor": "A classic furniture-style community tank for the living room.",
+  "watchOut": "Hood lighting is modest and hard to upgrade; the A4 and B4 variants come without a listed pump.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Colours": "Birch, black, snowy white, cherry, mahogany",
+   "Variants": "A4 / B4 versions have 4 LED tubes and no listed pump"
+  },
+  "models": [
+   {
+    "name": "ZDT-815",
+    "lengthCm": 81.5,
+    "widthCm": 45,
+    "heightCm": 75,
+    "volumeL": 202,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 10 W LED"
+    }
+   },
+   {
+    "name": "ZDT-1015",
+    "lengthCm": 101.5,
+    "widthCm": 45,
+    "heightCm": 75,
+    "volumeL": 258,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 15 W LED"
+    }
+   },
+   {
+    "name": "ZDT-1215",
+    "lengthCm": 121.5,
+    "widthCm": 45,
+    "heightCm": 75,
+    "volumeL": 341,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 16 W LED"
+    }
+   },
+   {
+    "name": "ZDT-1515",
+    "lengthCm": 151.5,
+    "widthCm": 45,
+    "heightCm": 75,
+    "volumeL": 391,
+    "flowLph": 1200,
+    "powerW": 19,
+    "extra": {
+     "Light": "2 x 20 W LED"
+    }
+   },
+   {
+    "name": "ZDT-840A",
+    "lengthCm": 84,
+    "widthCm": 47.2,
+    "heightCm": 68,
+    "volumeL": 207,
+    "flowLph": 740,
+    "powerW": 12.5,
+    "extra": {
+     "Light": "2 x 8 W LED + 11 W PL"
+    }
+   },
+   {
+    "name": "ZDT-1040A",
+    "lengthCm": 104,
+    "widthCm": 47.2,
+    "heightCm": 68,
+    "volumeL": 257,
+    "flowLph": 960,
+    "powerW": 15,
+    "extra": {
+     "Light": "2 x 10 W LED + 11 W PL"
+    }
+   },
+   {
+    "name": "ZDT-1240A",
+    "lengthCm": 124,
+    "widthCm": 47.2,
+    "heightCm": 68,
+    "volumeL": 307,
+    "flowLph": 1565,
+    "powerW": 28,
+    "extra": {
+     "Light": "2 x 15 W LED + 11 W PL"
+    }
+   },
+   {
+    "name": "ZDT-856B",
+    "lengthCm": 85.6,
+    "widthCm": 51.1,
+    "heightCm": 81,
+    "volumeL": 252,
+    "flowLph": 740,
+    "powerW": 12.5,
+    "extra": {
+     "Light": "2 x 8 W LED + 11 W PL"
+    }
+   },
+   {
+    "name": "ZDT-1056B",
+    "lengthCm": 105.6,
+    "widthCm": 51.1,
+    "heightCm": 81,
+    "volumeL": 312,
+    "flowLph": 960,
+    "powerW": 15,
+    "extra": {
+     "Light": "2 x 10 W LED + 11 W PL"
+    }
+   },
+   {
+    "name": "ZDT-1256B",
+    "lengthCm": 125.6,
+    "widthCm": 51.1,
+    "heightCm": 81,
+    "volumeL": 374,
+    "flowLph": 1565,
+    "powerW": 28,
+    "extra": {
+     "Light": "2 x 15 W LED + 11 W PL"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-classic-aquarium_10.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-classic-aquarium_11.png",
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-classic-aquarium_12.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_77.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-le-yahuan-aquarium",
+  "brand": "Boyu",
+  "name": "LE Yahuan Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "A tall, dark arowana-style display tank on a cabinet with a filtration system in the base, touch panel and remote. Seven sizes, including wider L versions.",
+  "highlights": [
+   "Cabinet sump-style filtration",
+   "Touch panel with remote control",
+   "Standard and wider L versions"
+  ],
+  "bestFor": "Big fish displays, or a large planted tank if you replace the lighting.",
+  "watchOut": "Boyu does not publish dimensions or specs for this series, so check with a dealer.",
+  "specs": {},
+  "models": [
+   {
+    "name": "LE-1000"
+   },
+   {
+    "name": "LE-1200"
+   },
+   {
+    "name": "LE-1500"
+   },
+   {
+    "name": "LE-2000"
+   },
+   {
+    "name": "LE-1500L"
+   },
+   {
+    "name": "LE-1800L"
+   },
+   {
+    "name": "LE-2000L"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-yahuan-aquariumle-1000-1200-1500-2000-1500l-1800l-2000l_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_71.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-la-yayue-aquarium",
+  "brand": "Boyu",
+  "name": "LA Yayue Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "An aluminium-framed tank and cabinet aimed at arowana keepers, with cabinet filtration, a touch panel and remote. Narrow at 36 cm front to back.",
+  "highlights": [
+   "235 to 341 litres",
+   "Cabinet filtration, 1,500 L/h",
+   "Aluminium frame in silver, champagne gold or black"
+  ],
+  "bestFor": "Tall display tanks for large fish in a narrow space.",
+  "watchOut": "Only 36 cm deep, which limits aquascaping depth, and the lighting is modest.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Frame colours": "Silver, drawbench, drawbench gold, black"
+  },
+  "models": [
+   {
+    "name": "LA-1000H",
+    "lengthCm": 105.5,
+    "widthCm": 36,
+    "volumeL": 235,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "2 x 15 W LED",
+     "Height incl. cabinet": "1,550 mm"
+    }
+   },
+   {
+    "name": "LA-1200H",
+    "lengthCm": 125.5,
+    "widthCm": 36,
+    "volumeL": 281,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "2 x 16 W LED",
+     "Height incl. cabinet": "1,550 mm"
+    }
+   },
+   {
+    "name": "LA-1500H",
+    "lengthCm": 151.5,
+    "widthCm": 36,
+    "volumeL": 341,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "2 x 20 W LED",
+     "Height incl. cabinet": "1,550 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-yayue-aquarium_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_70.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-lk-series-aquarium",
+  "brand": "Boyu",
+  "name": "LK Series Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "A slim black or white tank and cabinet with filtration in the base. The A versions get a stronger pump.",
+  "highlights": [
+   "120 to 180 litres",
+   "Cabinet filtration, 740 to 1,500 L/h",
+   "Black or white"
+  ],
+  "bestFor": "A medium display for a hallway or narrow room.",
+  "watchOut": "Only 32 cm deep, and a single 10 to 16 W LED is weak for plants.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Colours": "Black, white"
+  },
+  "models": [
+   {
+    "name": "LK-800",
+    "lengthCm": 80,
+    "widthCm": 32,
+    "volumeL": 120,
+    "flowLph": 740,
+    "powerW": 12.5,
+    "extra": {
+     "Light": "10 W LED",
+     "Height incl. cabinet": "1,480 mm"
+    }
+   },
+   {
+    "name": "LK-800A",
+    "lengthCm": 80,
+    "widthCm": 32,
+    "volumeL": 120,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "10 W LED",
+     "Height incl. cabinet": "1,480 mm"
+    }
+   },
+   {
+    "name": "LK-1000",
+    "lengthCm": 100,
+    "widthCm": 32,
+    "volumeL": 150,
+    "flowLph": 960,
+    "powerW": 15,
+    "extra": {
+     "Light": "15 W LED",
+     "Height incl. cabinet": "1,480 mm"
+    }
+   },
+   {
+    "name": "LK-1000A",
+    "lengthCm": 100,
+    "widthCm": 32,
+    "volumeL": 150,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "15 W LED",
+     "Height incl. cabinet": "1,480 mm"
+    }
+   },
+   {
+    "name": "LK-1200",
+    "lengthCm": 120,
+    "widthCm": 32,
+    "volumeL": 180,
+    "flowLph": 960,
+    "powerW": 15,
+    "extra": {
+     "Light": "16 W LED",
+     "Height incl. cabinet": "1,480 mm"
+    }
+   },
+   {
+    "name": "LK-1200A",
+    "lengthCm": 120,
+    "widthCm": 32,
+    "volumeL": 180,
+    "flowLph": 1500,
+    "powerW": 25,
+    "extra": {
+     "Light": "16 W LED",
+     "Height incl. cabinet": "1,480 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-lk-series-aquarium_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_69.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "boyu-lb-yapin-aquarium",
+  "brand": "Boyu",
+  "name": "LB Yapin Aquarium",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "Boyu's bigger arowana-style tank and cabinet, with stronger cabinet filtration than the LA and LK and three LED tubes. Standard 48 cm deep or wider 60 cm L versions.",
+  "highlights": [
+   "270 to 630 litres",
+   "Cabinet filtration, 2,500 to 3,500 L/h",
+   "Three LED tubes",
+   "Aluminium frame, several colours"
+  ],
+  "bestFor": "Large fish displays or a big community tank.",
+  "watchOut": "Lighting is modest for a planted setup of this size, and the maker's table labels the widest model inconsistently.",
+  "specs": {
+   "Voltage": "AC 230/115 V",
+   "Frame colours": "Silver, drawbench, drawbench gold, black"
+  },
+  "models": [
+   {
+    "name": "LB-1000",
+    "lengthCm": 103.5,
+    "widthCm": 47.7,
+    "volumeL": 270,
+    "flowLph": 2500,
+    "powerW": 20,
+    "extra": {
+     "Light": "3 x 15 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   },
+   {
+    "name": "LB-1200",
+    "lengthCm": 122.5,
+    "widthCm": 47.7,
+    "volumeL": 325,
+    "flowLph": 3000,
+    "powerW": 23,
+    "extra": {
+     "Light": "3 x 16 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   },
+   {
+    "name": "LB-1500",
+    "lengthCm": 148.5,
+    "widthCm": 47.7,
+    "volumeL": 375,
+    "flowLph": 3500,
+    "powerW": 25,
+    "extra": {
+     "Light": "3 x 20 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   },
+   {
+    "name": "LB-1800",
+    "lengthCm": 174.5,
+    "widthCm": 47.7,
+    "volumeL": 460,
+    "flowLph": 3500,
+    "powerW": 25,
+    "extra": {
+     "Light": "3 x 20 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   },
+   {
+    "name": "LB-2000",
+    "lengthCm": 196.4,
+    "widthCm": 47.7,
+    "volumeL": 510,
+    "flowLph": 3500,
+    "powerW": 25,
+    "extra": {
+     "Light": "3 x 20 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   },
+   {
+    "name": "LB-1500L",
+    "lengthCm": 148.5,
+    "widthCm": 60,
+    "volumeL": 470,
+    "flowLph": 3500,
+    "powerW": 25,
+    "extra": {
+     "Light": "3 x 20 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   },
+   {
+    "name": "LB-1800L",
+    "lengthCm": 174.5,
+    "widthCm": 60,
+    "volumeL": 560,
+    "flowLph": 3500,
+    "powerW": 25,
+    "extra": {
+     "Light": "3 x 20 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   },
+   {
+    "name": "LB-2000L",
+    "lengthCm": 196.4,
+    "widthCm": 60,
+    "volumeL": 630,
+    "flowLph": 3500,
+    "powerW": 25,
+    "extra": {
+     "Light": "3 x 20 W LED",
+     "Height incl. cabinet": "1,540 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/boyu/images/boyu/boyu-yapin-aquarium_10.png"
+  ],
+  "sourceUrl": "http://www.boyuaquarium.com/En_Pr_d_gci_60_id_68.html",
+  "sourceName": "Boyu",
+  "specSource": "manufacturer"
+ }
+]

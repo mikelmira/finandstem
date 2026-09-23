@@ -1,0 +1,2459 @@
+[
+ {
+  "id": "twinstar-e-series-ver5",
+  "brand": "Twinstar",
+  "name": "E Series Ver.5",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "Twinstar's mid-power line, sitting under the S Series in output but using the same fifth-generation LED mix of six colour channels plus dedicated plant-growth diodes. It suits planted tanks with a mix of easy and moderately demanding plants, and it comes in seven sizes from a 20 cm nano up to a 120 cm show tank.",
+  "highlights": [
+   "Seven sizes covering 20 cm to 130 cm tanks",
+   "RGB plus plant-growth LEDs for strong colour rendering, especially on red plants",
+   "Bluetooth app control with timer, 100-step dimming, sunrise/sunset and a 25-day ramp-up planner",
+   "Draws roughly 20% less power than the matching S Series model",
+   "Slim metal body on legs that rest on rimless glass"
+  ],
+  "bestFor": "Medium-light planted tanks where you want good colour and app scheduling without paying for the S Series' extra punch.",
+  "watchOut": "Buy the LightControl Pro version if you want to adjust the colour channels; the Standard controller only does brightness and timing.",
+  "specs": {
+   "Spectrum": "RGB + plant-growth LEDs (6 colour channels)",
+   "Control": "Bluetooth app (LightControl Pro with 4-channel colour, or LightControl Standard)",
+   "Dimming": "100 steps, sunrise/sunset up to 60 min",
+   "Mounting": "Rim legs",
+   "LED lifespan": "20,000 h",
+   "Finish": "Metal"
+  },
+  "models": [
+   {
+    "name": "200E",
+    "sku": "TWSEV200",
+    "lengthCm": 18,
+    "widthCm": 7,
+    "heightCm": 13,
+    "powerW": 13,
+    "lumens": 900,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 25
+   },
+   {
+    "name": "300E",
+    "sku": "TWSEV300",
+    "lengthCm": 28,
+    "widthCm": 7,
+    "heightCm": 13,
+    "powerW": 19,
+    "lumens": 1200,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 36
+   },
+   {
+    "name": "450E",
+    "sku": "TWSEV450",
+    "lengthCm": 43,
+    "widthCm": 7,
+    "heightCm": 13,
+    "powerW": 31,
+    "lumens": 2100,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 50
+   },
+   {
+    "name": "600E",
+    "sku": "TWSEV600",
+    "lengthCm": 57,
+    "widthCm": 10,
+    "heightCm": 15,
+    "powerW": 49,
+    "lumens": 3000,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 70
+   },
+   {
+    "name": "750E",
+    "sku": "TWSEV750",
+    "lengthCm": 75,
+    "widthCm": 10,
+    "heightCm": 15,
+    "powerW": 60,
+    "lumens": 3700,
+    "fitsLengthMinCm": 75,
+    "fitsLengthMaxCm": 80
+   },
+   {
+    "name": "900E",
+    "sku": "TWSEV900",
+    "lengthCm": 87,
+    "widthCm": 10,
+    "heightCm": 15,
+    "powerW": 69,
+    "lumens": 4000,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 100
+   },
+   {
+    "name": "1200E",
+    "sku": "TWSEV1200",
+    "lengthCm": 110,
+    "widthCm": 10,
+    "heightCm": 15,
+    "powerW": 79,
+    "lumens": 4600,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 130
+   }
+  ],
+  "priceFrom": 55.0,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-e-series-v_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-e-series-v_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-e-series-v_5.jpg"
+  ],
+  "sourceUrl": "https://twinstarstore.kr/products/twinstar-600e-pro-ver-5-0-premium-aquarium-led-light-for-60cm-24-tank",
+  "sourceName": "Twinstar official store",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "twinstar-s-series-ver5",
+  "brand": "Twinstar",
+  "name": "S Series Ver.5",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "The strongest Twinstar line, built for high-tech tanks with CO2 and light-hungry plants like carpets and red stems. Version 5 pairs six colour channels with plant-growth LEDs and phone control, and the 600S and larger can be hung from a wire kit instead of sitting on legs.",
+  "highlights": [
+   "Six sizes for 20 cm to 130 cm tanks",
+   "Highest output in the Twinstar range, up to 7,600 lm on the 1200S",
+   "Bluetooth app with timer, 100-step dimming, boost mode and sunrise/sunset",
+   "600S and up can be suspended with the optional wire kit",
+   "Titanium-finish housing"
+  ],
+  "bestFor": "High-tech planted tanks running pressurised CO2 where you want plenty of headroom and fine control over colour.",
+  "watchOut": "There is enough output here to cause algae in a tank without CO2 and good fertilising, so start well below full power.",
+  "specs": {
+   "Spectrum": "RGB + plant-growth LEDs (6 colour channels), 400 to 780 nm",
+   "Control": "Bluetooth app (LightControl Pro with 4-channel colour, or LightControl Standard)",
+   "Dimming": "100 steps, sunrise/sunset up to 60 min, boost mode",
+   "Mounting": "Rim legs; wire hanging kit for 600S and larger",
+   "LED lifespan": "20,000 h",
+   "Finish": "Titanium"
+  },
+  "models": [
+   {
+    "name": "200S",
+    "sku": "TWSSV200",
+    "lengthCm": 18,
+    "widthCm": 10,
+    "heightCm": 15,
+    "powerW": 17,
+    "lumens": 1000,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 25
+   },
+   {
+    "name": "300S",
+    "sku": "TWSSV300",
+    "lengthCm": 28,
+    "widthCm": 10,
+    "heightCm": 15,
+    "powerW": 27,
+    "lumens": 1700,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 40
+   },
+   {
+    "name": "450S",
+    "sku": "TWSSV450",
+    "lengthCm": 43,
+    "widthCm": 10,
+    "heightCm": 15,
+    "powerW": 40,
+    "lumens": 2700,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 55
+   },
+   {
+    "name": "600S",
+    "sku": "TWSSV600",
+    "lengthCm": 57,
+    "widthCm": 12,
+    "heightCm": 17,
+    "powerW": 67,
+    "lumens": 4100,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 70
+   },
+   {
+    "name": "900S",
+    "sku": "TWSSV900",
+    "lengthCm": 87,
+    "widthCm": 12,
+    "heightCm": 17,
+    "powerW": 100,
+    "lumens": 6200,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 100
+   },
+   {
+    "name": "1200S",
+    "sku": "TWSSV1200",
+    "lengthCm": 114,
+    "widthCm": 12,
+    "heightCm": 17,
+    "powerW": 125,
+    "lumens": 7600,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 130
+   }
+  ],
+  "priceFrom": 65.0,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-s-series-v_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-s-series-v_5.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-s-series-v_4.jpg"
+  ],
+  "sourceUrl": "https://twinstarstore.kr/products/twinstar-600s-line-v-high-brightness-premium-aquarium-led-light",
+  "sourceName": "Twinstar official store",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "twinstar-b-series-ver3",
+  "brand": "Twinstar",
+  "name": "B Series Ver.3",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "Twinstar's budget WRGB line, now in its third version with Bluetooth control included. It gives clean whites and decent colour for low to medium light planted tanks, and it is a sensible pick for a first scape or a second tank.",
+  "highlights": [
+   "Seven sizes from 20 cm to 130 cm",
+   "WRGB LEDs for natural colour on plants and fish",
+   "LightControl Standard Bluetooth controller included (timer, dimming, sunrise/sunset, Light Planner)",
+   "Low power draw, 10 W on the smallest to 52 W on the 120B",
+   "Slim 5.5 cm deep metal body"
+  ],
+  "bestFor": "Low-tech tanks with Anubias, ferns, mosses, Cryptocorynes and easy stems, or anyone after an affordable app-controlled light.",
+  "watchOut": "Twinstar itself says one 75B, 90B or 120B may be too weak for a planted tank of that length, and suggests running two.",
+  "specs": {
+   "Spectrum": "WRGB",
+   "Control": "Bluetooth app (LightControl Standard included, no colour channel control)",
+   "Dimming": "Yes, with timer and sunrise/sunset",
+   "Mounting": "Rim legs",
+   "Finish": "Metal"
+  },
+  "models": [
+   {
+    "name": "20B",
+    "lengthCm": 18,
+    "widthCm": 5.5,
+    "heightCm": 13,
+    "powerW": 10,
+    "lumens": 750,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 25
+   },
+   {
+    "name": "30B",
+    "lengthCm": 27,
+    "widthCm": 5.5,
+    "heightCm": 13,
+    "powerW": 11,
+    "lumens": 820,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 36
+   },
+   {
+    "name": "45B",
+    "lengthCm": 42,
+    "widthCm": 5.5,
+    "heightCm": 13,
+    "powerW": 19,
+    "lumens": 1550,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 55
+   },
+   {
+    "name": "60B",
+    "lengthCm": 56,
+    "widthCm": 5.5,
+    "heightCm": 13,
+    "powerW": 29,
+    "lumens": 2300,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 70
+   },
+   {
+    "name": "75B",
+    "lengthCm": 74,
+    "widthCm": 5.5,
+    "heightCm": 13,
+    "powerW": 39,
+    "lumens": 3200,
+    "fitsLengthMinCm": 75,
+    "fitsLengthMaxCm": 85
+   },
+   {
+    "name": "90B",
+    "lengthCm": 85,
+    "widthCm": 5.5,
+    "heightCm": 13,
+    "powerW": 46,
+    "lumens": 3750,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 100
+   },
+   {
+    "name": "120B",
+    "lengthCm": 110,
+    "widthCm": 5.5,
+    "heightCm": 13,
+    "powerW": 52,
+    "lumens": 4100,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 130
+   }
+  ],
+  "priceFrom": 30.0,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/twinstar-official/images/twinstar/twinstar-60b-ver-30_1.png"
+  ],
+  "sourceUrl": "https://twinstarstore.kr/products/twinstar-60b-ver-3-0-wrgb-aquarium-lighting-for-60cm-24-tank-사본",
+  "sourceName": "Twinstar official store",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "twinstar-a-series",
+  "brand": "Twinstar",
+  "name": "A Series",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "Twinstar's entry-level light, a thin WRGB bar on an adjustable bracket so one unit can span a range of tank lengths. Output is modest, which makes it a fair match for fish-first tanks and easy plants rather than carpets.",
+  "highlights": [
+   "Six sizes, each covering a range of tank lengths",
+   "Balanced WRGB output at 6500 K",
+   "Inline controller with 3 timer settings, 7 brightness levels and sunrise/sunset (version 2)",
+   "Fits glass up to 10 mm",
+   "Very low running cost"
+  ],
+  "bestFor": "Beginners and low-tech tanks with hardy plants where a simple timer and dimmer is all you need.",
+  "watchOut": "Not bright enough for demanding stem plants or carpets; version 1 units shipped without the controller.",
+  "specs": {
+   "Spectrum": "WRGB",
+   "Colour temperature": "6500 K",
+   "Control": "Inline controller (timer, 7-step dimming, sunrise/sunset)",
+   "Mounting": "Adjustable rim bracket",
+   "Max glass thickness": "10 mm",
+   "LED lifespan": "30,000 h"
+  },
+  "models": [
+   {
+    "name": "20A",
+    "sku": "TWSA20",
+    "powerW": 11,
+    "lumens": 770,
+    "kelvin": 6500,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 30
+   },
+   {
+    "name": "30A",
+    "sku": "TWSA30",
+    "powerW": 11,
+    "lumens": 770,
+    "kelvin": 6500,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 45
+   },
+   {
+    "name": "45A",
+    "sku": "TWSA45",
+    "powerW": 13.5,
+    "lumens": 837,
+    "kelvin": 6500,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 55
+   },
+   {
+    "name": "60A",
+    "sku": "TWSA60",
+    "powerW": 22,
+    "lumens": 1390,
+    "kelvin": 6500,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 75
+   },
+   {
+    "name": "90A",
+    "sku": "TWSA90",
+    "powerW": 33,
+    "lumens": 2050,
+    "kelvin": 6500,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 100
+   },
+   {
+    "name": "120A",
+    "sku": "TWSA120",
+    "powerW": 44,
+    "lumens": 2500,
+    "kelvin": 6500,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 130
+   }
+  ],
+  "priceFrom": 29.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-a-series_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-a-series_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-a-series_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/twinstar-led-a-series-aquarium-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "twinstar-c-series",
+  "brand": "Twinstar",
+  "name": "C Series",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "A lightweight RGB-W bar with telescopic legs that stretch up to about 15 cm, so one fixture can cover several tank lengths. Brightness is set with buttons on the light itself across 15 steps. The line has been discontinued, so you will mostly find it second hand or as remaining stock.",
+  "highlights": [
+   "Six sizes with extendable legs",
+   "15 brightness levels from on-light buttons",
+   "RGB-W at 7050 K",
+   "Fits rimless glass up to 12 mm",
+   "30,000 h LED life"
+  ],
+  "bestFor": "Low to medium light tanks where you want flexible fitting across tank sizes and don't need an app.",
+  "watchOut": "Discontinued, and there is no built-in timer mentioned, so plan on a plug timer.",
+  "specs": {
+   "Spectrum": "RGB-W",
+   "Colour temperature": "7050 K",
+   "Control": "On-light buttons",
+   "Dimming": "15 levels",
+   "Mounting": "Extendable rim legs",
+   "Max glass thickness": "12 mm",
+   "Status": "Discontinued"
+  },
+  "models": [
+   {
+    "name": "200C",
+    "sku": "TWS200C",
+    "lengthCm": 19.8,
+    "powerW": 16,
+    "lumens": 1028,
+    "kelvin": 7050,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 36.8
+   },
+   {
+    "name": "300C",
+    "sku": "TWS300C",
+    "lengthCm": 30.0,
+    "powerW": 16,
+    "lumens": 1028,
+    "kelvin": 7050,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 40.0
+   },
+   {
+    "name": "450C",
+    "sku": "TWS450C",
+    "lengthCm": 45.0,
+    "powerW": 24,
+    "lumens": 1542,
+    "kelvin": 7050,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 55.0
+   },
+   {
+    "name": "600C",
+    "sku": "TWS600C",
+    "lengthCm": 60.0,
+    "powerW": 32,
+    "lumens": 2056,
+    "kelvin": 7050,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 75.0
+   },
+   {
+    "name": "900C",
+    "sku": "TWS900C",
+    "lengthCm": 90.0,
+    "powerW": 45,
+    "lumens": 2891,
+    "kelvin": 7050,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 105.2
+   },
+   {
+    "name": "1200C",
+    "sku": "TWS1200C",
+    "lengthCm": 120.0,
+    "powerW": 62,
+    "lumens": 3984,
+    "kelvin": 7050,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 135.1
+   }
+  ],
+  "priceFrom": 63.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-c-series_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-c-series_3.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-c-series_5.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-c-series_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/twinstar-led-c-series-adjustable-leg-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "twinstar-ea-series",
+  "brand": "Twinstar",
+  "name": "EA Series (E IV)",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "The fourth-generation E line, also sold as E IV. It added orange LEDs to the RGB mix, which makes green plants look particularly rich, and has adjustable legs plus a built-in dimmer. It is an older model now, replaced by E Series Ver.5.",
+  "highlights": [
+   "Six sizes from 20 cm to 120 cm",
+   "RGB plus orange LEDs at 8300 K",
+   "Built-in dimmer",
+   "Adjustable legs for rimless tanks",
+   "30,000 h LED life"
+  ],
+  "bestFor": "Medium-light rimless tanks where you like the look of a very thin fixture and want a simple dimmer.",
+  "watchOut": "No app or timer; superseded by the Ver.5 E Series with Bluetooth control.",
+  "specs": {
+   "Spectrum": "RGB + orange LEDs, 400 to 700 nm",
+   "Colour temperature": "8300 K",
+   "Control": "Built-in dimmer",
+   "Mounting": "Adjustable rim legs",
+   "LED lifespan": "30,000 h"
+  },
+  "models": [
+   {
+    "name": "200E IV",
+    "sku": "TWSEAIV2",
+    "lengthCm": 20.0,
+    "widthCm": 7.5,
+    "powerW": 17,
+    "lumens": 850,
+    "kelvin": 8300,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 20
+   },
+   {
+    "name": "300E IV",
+    "sku": "TWSEAIV3",
+    "lengthCm": 30.0,
+    "widthCm": 7.5,
+    "powerW": 21,
+    "lumens": 1050,
+    "kelvin": 8300,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30
+   },
+   {
+    "name": "450E IV",
+    "sku": "TWSEAIV4",
+    "lengthCm": 45.0,
+    "widthCm": 7.5,
+    "powerW": 30,
+    "lumens": 1500,
+    "kelvin": 8300,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 45
+   },
+   {
+    "name": "600E IV",
+    "sku": "TWSEAIV6",
+    "lengthCm": 60.0,
+    "widthCm": 7.5,
+    "powerW": 40,
+    "lumens": 2100,
+    "kelvin": 8300,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60
+   },
+   {
+    "name": "900E IV",
+    "sku": "TWSEAIV9",
+    "lengthCm": 90.0,
+    "widthCm": 7.5,
+    "powerW": 58,
+    "lumens": 2900,
+    "kelvin": 8300,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90
+   },
+   {
+    "name": "1200E IV",
+    "sku": "TWSEAIV0",
+    "lengthCm": 120.0,
+    "widthCm": 7.5,
+    "powerW": 74,
+    "lumens": 3700,
+    "kelvin": 8300,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 120
+   }
+  ],
+  "priceFrom": 73.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-ea-series_8.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-ea-series_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/twinstar-led-ea-iv-series-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "twinstar-sa-series",
+  "brand": "Twinstar",
+  "name": "SA Series (S IV)",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "The fourth-generation S Series, a high-output bar that can sit on the rim or hang as a pendant with Twinstar's wire kit. It has a manual dimmer rather than an app, and packs enough light for demanding plants.",
+  "highlights": [
+   "Six sizes from 20 cm to 120 cm",
+   "Up to 6,750 lm on the 1200 model",
+   "Rim mount or pendant with the optional wire kit",
+   "Manual dimmer included",
+   "Legs adjust by about 10 cm"
+  ],
+  "bestFor": "High-light planted tanks where you want strong output and are happy to schedule it with a plug timer.",
+  "watchOut": "No app or built-in timer, and the wire kit for hanging is sold separately.",
+  "specs": {
+   "Spectrum": "Full spectrum, 380 to 780 nm",
+   "Control": "Manual dimmer",
+   "Mounting": "Rim legs or wire kit (pendant)"
+  },
+  "models": [
+   {
+    "name": "200SA IV",
+    "sku": "TWSA200",
+    "lengthCm": 18.3,
+    "widthCm": 12.3,
+    "heightCm": 11.2,
+    "powerW": 17,
+    "lumens": 1100,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 20
+   },
+   {
+    "name": "300SA IV",
+    "sku": "TWSA300",
+    "lengthCm": 28.3,
+    "widthCm": 12.3,
+    "heightCm": 11.2,
+    "powerW": 29,
+    "lumens": 1750,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30
+   },
+   {
+    "name": "450SA IV",
+    "sku": "TWSSA450",
+    "lengthCm": 44.3,
+    "widthCm": 12.3,
+    "heightCm": 11.2,
+    "powerW": 42,
+    "lumens": 2300,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 45
+   },
+   {
+    "name": "600SA IV",
+    "sku": "TWSA600",
+    "lengthCm": 58.5,
+    "widthCm": 12.3,
+    "heightCm": 11.2,
+    "powerW": 59,
+    "lumens": 3620,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60
+   },
+   {
+    "name": "900SA IV",
+    "sku": "TWSA900",
+    "lengthCm": 85.3,
+    "widthCm": 12.3,
+    "heightCm": 11.2,
+    "powerW": 88,
+    "lumens": 5400,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90
+   },
+   {
+    "name": "1200SA IV",
+    "sku": "TWSSA1200",
+    "lengthCm": 110.0,
+    "widthCm": 12.3,
+    "heightCm": 11.2,
+    "powerW": 110,
+    "lumens": 6750,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 120
+   }
+  ],
+  "priceFrom": 77.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-sa-series_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-sa-series_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/twinstar-led-s-iv-series-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "twinstar-sm-series",
+  "brand": "Twinstar",
+  "name": "SM Series",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "The original Twinstar S light (later labelled SM), a bright fixture on fixed metal legs. It predates app control, so it is simply on or off at full output.",
+  "highlights": [
+   "Four sizes from 30 cm to 90 cm",
+   "6700 K daylight output",
+   "Fixed metal legs for rimless tanks",
+   "Strong output for its era, up to 5,250 lm"
+  ],
+  "bestFor": "Rimless tanks matched to the exact light length where you run CO2 and use a plug timer.",
+  "watchOut": "Legs don't adjust and there is no dimming mentioned, so it must match your tank length.",
+  "specs": {
+   "Spectrum": "400 to 700 nm",
+   "Colour temperature": "6700 K",
+   "Mounting": "Fixed metal rim legs"
+  },
+  "models": [
+   {
+    "name": "300SM",
+    "sku": "TWSS300",
+    "lengthCm": 30.0,
+    "widthCm": 9.5,
+    "heightCm": 8.3,
+    "powerW": 23,
+    "lumens": 1200,
+    "kelvin": 6700,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30
+   },
+   {
+    "name": "450SM",
+    "sku": "TWSS450",
+    "lengthCm": 45.0,
+    "widthCm": 9.5,
+    "heightCm": 8.3,
+    "powerW": 31,
+    "lumens": 1750,
+    "kelvin": 6700,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 45
+   },
+   {
+    "name": "600SM",
+    "sku": "TWSS600",
+    "lengthCm": 59.7,
+    "widthCm": 12.5,
+    "heightCm": 10.1,
+    "powerW": 52,
+    "lumens": 3250,
+    "kelvin": 6700,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60
+   },
+   {
+    "name": "900SM",
+    "sku": "TWSS900",
+    "lengthCm": 89.9,
+    "widthCm": 12.5,
+    "heightCm": 10.1,
+    "powerW": 84,
+    "lumens": 5250,
+    "kelvin": 6700,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90
+   }
+  ],
+  "priceFrom": 144.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-sm-series_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-sm-series_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-sm-series_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/twinstar-led-s-series-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "twinstar-sp-series",
+  "brand": "Twinstar",
+  "name": "SP Series",
+  "category": "lights",
+  "subtype": "pendant",
+  "summary": "The suspended version of the older S Series, hung from above so the top of the tank stays open for maintenance. It has been discontinued but still turns up on larger display tanks.",
+  "highlights": [
+   "Three sizes for 60, 90 and 120 cm tanks",
+   "RGB-W at 6700 K",
+   "Up to 7,500 lm on the 1200SP",
+   "Hangs above the tank for an open top"
+  ],
+  "bestFor": "Larger high-tech tanks where you want a pendant look and room to reach in.",
+  "watchOut": "Discontinued, and you need a ceiling or bracket to hang it from.",
+  "specs": {
+   "Spectrum": "RGB-W, 400 to 700 nm",
+   "Colour temperature": "6700 K",
+   "Mounting": "Suspended (pendant)",
+   "LED lifespan": "30,000 h",
+   "Status": "Discontinued"
+  },
+  "models": [
+   {
+    "name": "600SP",
+    "sku": "TWSSP600",
+    "lengthCm": 58.2,
+    "widthCm": 12.5,
+    "powerW": 52,
+    "lumens": 3250,
+    "kelvin": 6700,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60
+   },
+   {
+    "name": "900SP",
+    "sku": "TWSSP900",
+    "lengthCm": 87.4,
+    "widthCm": 12.5,
+    "powerW": 84,
+    "lumens": 5250,
+    "kelvin": 6700,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90
+   },
+   {
+    "name": "1200SP",
+    "sku": "TWSSP1200",
+    "lengthCm": 117.6,
+    "widthCm": 12.5,
+    "powerW": 110,
+    "lumens": 7500,
+    "kelvin": 6700,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 120
+   }
+  ],
+  "priceFrom": 229.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-sp-series_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-aquarium-light-sp-series_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/twinstar-led-sp-series-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "twinstar-nano-sterilizer",
+  "brand": "Twinstar",
+  "name": "Nano Sterilizer / Algae Inhibitor",
+  "category": "sterilisers",
+  "subtype": "electrolytic",
+  "summary": "Twinstar's electrolytic steriliser: a small controller outside the tank powers a reactor disc on the glass that produces short-lived oxidising radicals. The idea is to knock back algae spores and bacteria before they take hold, without a UV lamp or plumbing into the filter.",
+  "highlights": [
+   "Four sizes: M3, M5, Nano and Nano Plus",
+   "Reactor mounts inside the tank, no filter plumbing",
+   "Maker states it is safe for fish, shrimp, plants and filter bacteria",
+   "Best started on a new tank before algae appears"
+  ],
+  "bestFor": "Planted tanks up to about 250 L where you want an extra hedge against green water and algae, especially during the first months.",
+  "watchOut": "It supports, not replaces, balanced light, CO2 and nutrients, and the reactor disc needs replacing and descaling over time.",
+  "specs": {
+   "Method": "Electrolysis (free radicals)",
+   "Install": "Reactor disc on glass, controller outside the tank"
+  },
+  "models": [
+   {
+    "name": "M3",
+    "sku": "TWSM3",
+    "tankMinL": 19,
+    "tankMaxL": 49,
+    "extra": {
+     "Tank size": "5 to 13 US gal"
+    }
+   },
+   {
+    "name": "M5",
+    "sku": "TWSM5",
+    "tankMinL": 19,
+    "tankMaxL": 117,
+    "extra": {
+     "Tank size": "5 to 31 US gal"
+    }
+   },
+   {
+    "name": "Nano",
+    "sku": "TWSNANO",
+    "tankMinL": 30,
+    "tankMaxL": 120,
+    "extra": {
+     "Reactor": "M5"
+    }
+   },
+   {
+    "name": "Nano Plus",
+    "sku": "TWSNANOPLUS",
+    "tankMinL": 50,
+    "tankMaxL": 250,
+    "extra": {
+     "Reactor": "M9"
+    }
+   }
+  ],
+  "priceFrom": 70.0,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/twinstar-official/images/twinstar/twinstar-nano_1.jpg",
+   "/Users/mikeelmira/Downloads/twinstar-official/images/twinstar/twinstar-nano_4.jpg"
+  ],
+  "sourceUrl": "https://twinstarstore.kr/products/twinstar-nano-aquarium-sterilizer",
+  "sourceName": "Twinstar official store",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "twinstar-co2-diffuser",
+  "brand": "Twinstar",
+  "name": "CO2 Diffuser",
+  "category": "co2",
+  "subtype": "diffuser",
+  "summary": "A clear acrylic CO2 diffuser with a fine ceramic disc and a bubble counter built into the stem. Acrylic means it survives a knock during maintenance far better than glass.",
+  "highlights": [
+   "Three sizes matched to tank volume",
+   "Built-in bubble counter",
+   "Shatter-resistant acrylic body",
+   "Works with pressurised or DIY CO2"
+  ],
+  "bestFor": "Small to large planted tanks where you want a tough, tidy in-tank diffuser with the bubble counter included.",
+  "watchOut": "Soak it before first use for finer bubbles, and expect to clean the disc every so often as it clogs.",
+  "specs": {
+   "Material": "Acrylic with ceramic disc",
+   "Bubble counter": "Built in",
+   "Mounting": "Suction cup"
+  },
+  "models": [
+   {
+    "name": "Small",
+    "sku": "TWSCO2S",
+    "tankMaxL": 49,
+    "extra": {
+     "Tank size": "Up to 13 US gal"
+    }
+   },
+   {
+    "name": "Medium",
+    "sku": "TWSCO2M",
+    "tankMaxL": 121,
+    "extra": {
+     "Tank size": "Up to 32 US gal"
+    }
+   },
+   {
+    "name": "Large",
+    "sku": "TWSCO2L",
+    "tankMinL": 121,
+    "extra": {
+     "Tank size": "32 US gal and up"
+    }
+   }
+  ],
+  "priceFrom": 12.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-co2-diffuser_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-co2-diffuser_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/twinstar/twinstar-co2-diffuser_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/twinstar-acrylic-co2-diffuser",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-a-ii-series",
+  "brand": "Chihiros",
+  "name": "A II Series",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "A very slim Chihiros bar on clear acrylic clamp legs that can swivel, so you can angle the light toward one part of the scape. Output is moderate and the spectrum leans toward red and blue, with Bluetooth app control built in.",
+  "highlights": [
+   "Four sizes for 30, 36, 45 and 60 cm tanks",
+   "8000 K full spectrum weighted to red and blue",
+   "Bluetooth app: timer, dimming, sunrise/sunset",
+   "Swivelling acrylic clamp legs",
+   "Only about 1 cm thick"
+  ],
+  "bestFor": "Nano and small low to medium light tanks where you want app control and a nearly invisible fixture.",
+  "watchOut": "Clamps fit glass up to 8 mm only, and output is modest for carpets without CO2.",
+  "specs": {
+   "Spectrum": "Full spectrum (white LEDs, red/blue weighted)",
+   "Colour temperature": "8000 K",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes, with sunrise/sunset",
+   "Mounting": "Swivelling acrylic clamp legs",
+   "Max glass thickness": "8 mm"
+  },
+  "models": [
+   {
+    "name": "AII 301",
+    "sku": "CHSA2301",
+    "lengthCm": 28.5,
+    "widthCm": 6.7,
+    "powerW": 14,
+    "lumens": 1400,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30,
+    "extra": {
+     "LEDs": "30"
+    }
+   },
+   {
+    "name": "AII 361",
+    "sku": "CHSA2361",
+    "lengthCm": 34.5,
+    "widthCm": 6.7,
+    "powerW": 15,
+    "lumens": 1700,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 36,
+    "fitsLengthMaxCm": 36,
+    "extra": {
+     "LEDs": "40"
+    }
+   },
+   {
+    "name": "AII 451",
+    "sku": "CHSA2451",
+    "lengthCm": 43.5,
+    "widthCm": 6.7,
+    "powerW": 21,
+    "lumens": 1950,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 45,
+    "extra": {
+     "LEDs": "50"
+    }
+   },
+   {
+    "name": "AII 601",
+    "sku": "CHSA2601",
+    "lengthCm": 58.5,
+    "widthCm": 6.7,
+    "powerW": 26,
+    "lumens": 2450,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60,
+    "extra": {
+     "LEDs": "60"
+    }
+   }
+  ],
+  "priceFrom": 97.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-a-ii-series-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-a-ii-series-led-aquarium-light_3.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-a-ii-series-led-aquarium-light_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-a-ii-series-led-aquarium-light_7.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-aii-series",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-a-ii-max",
+  "brand": "Chihiros",
+  "name": "A II Max",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "A brighter, bigger sibling of the A II with nearly double the output per size and a wider size range up to 140 cm tanks. It ships on metal legs, and Chihiros sells acrylic legs and a hanging kit if you want a different look.",
+  "highlights": [
+   "Six sizes covering 30 cm to 140 cm tanks",
+   "Up to 8,100 lm on the 1201 Max",
+   "Bluetooth app: brightness, timer and schedules",
+   "Metal legs as standard; hanging kit and acrylic legs available",
+   "IP43 splash rating"
+  ],
+  "bestFor": "Medium-light planted tanks from nano to large that want a simple, bright, app-controlled bar at a fair price.",
+  "watchOut": "The retailer pitches its spectrum at low-tech scapes, so it is less suited to showing off red plants than an RGB light.",
+  "specs": {
+   "Spectrum": "Full spectrum",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes",
+   "Mounting": "Metal rim legs (acrylic legs and hanging kit optional)",
+   "IP rating": "IP43"
+  },
+  "models": [
+   {
+    "name": "AII 301 Max",
+    "sku": "CHSA2301M",
+    "powerW": 32,
+    "lumens": 2600,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 45,
+    "extra": {
+     "LEDs": "33"
+    }
+   },
+   {
+    "name": "AII 451 Max",
+    "sku": "CHSA2451M",
+    "powerW": 45,
+    "lumens": 3400,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 60,
+    "extra": {
+     "LEDs": "55"
+    }
+   },
+   {
+    "name": "AII 601 Max",
+    "sku": "CHSA2601M",
+    "powerW": 64,
+    "lumens": 4700,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 80,
+    "extra": {
+     "LEDs": "66"
+    }
+   },
+   {
+    "name": "AII 801 Max",
+    "sku": "CHSA2801M",
+    "powerW": 80,
+    "lumens": 5500,
+    "fitsLengthMinCm": 80,
+    "fitsLengthMaxCm": 90,
+    "extra": {
+     "LEDs": "88"
+    }
+   },
+   {
+    "name": "AII 901 Max",
+    "sku": "CHSA2901M",
+    "powerW": 85,
+    "lumens": 6500,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 110,
+    "extra": {
+     "LEDs": "99"
+    }
+   },
+   {
+    "name": "AII 1201 Max",
+    "sku": "CHSA2120M",
+    "powerW": 96,
+    "lumens": 8100,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 140,
+    "extra": {
+     "LEDs": "132"
+    }
+   }
+  ],
+  "priceFrom": 120.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-a-ii-max-series-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-a-ii-max-series-led-aquarium-light_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-a-ii-max-series-led-aquarium-light_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-aii-max-series",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-b-series",
+  "brand": "Chihiros",
+  "name": "B Series",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "Chihiros' straightforward WRGB bar: white LEDs with a few RGB diodes mixed in, adjustable legs and Bluetooth control. It is a no-fuss light for everyday planted tanks, available in seven lengths.",
+  "highlights": [
+   "Seven sizes from 20 cm to 120 cm",
+   "White plus RGB LEDs for natural colour",
+   "Bluetooth app for brightness and timers",
+   "Adjustable legs; shade and hanging kit sold separately",
+   "Light, 1.2 cm thin body"
+  ],
+  "bestFor": "Low to medium demand planted tanks and beginners who want app scheduling without spending much.",
+  "watchOut": "Models up to B60 only clamp glass up to 8 mm (12 mm for larger ones), and B80 specs weren't listed by the retailer.",
+  "specs": {
+   "Spectrum": "WRGB (white + RGB)",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes",
+   "Mounting": "Adjustable rim legs",
+   "Max glass thickness": "8 mm (B20 to B60), 12 mm (larger)"
+  },
+  "models": [
+   {
+    "name": "B20",
+    "sku": "CHSB201",
+    "lengthCm": 17.6,
+    "widthCm": 5.6,
+    "powerW": 12.7,
+    "lumens": 813,
+    "extra": {
+     "LEDs": "6 RGB, 24 white"
+    },
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 20
+   },
+   {
+    "name": "B30",
+    "sku": "CHSB301",
+    "lengthCm": 27.6,
+    "widthCm": 5.6,
+    "powerW": 20.9,
+    "lumens": 1292,
+    "extra": {
+     "LEDs": "6 RGB, 24 white"
+    },
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30
+   },
+   {
+    "name": "B45",
+    "sku": "CHSB451",
+    "lengthCm": 42.6,
+    "widthCm": 5.6,
+    "powerW": 28.9,
+    "lumens": 1747,
+    "extra": {
+     "LEDs": "9 RGB, 36 white"
+    },
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 45
+   },
+   {
+    "name": "B60",
+    "sku": "CHSB601",
+    "lengthCm": 57.6,
+    "widthCm": 5.6,
+    "powerW": 37.1,
+    "lumens": 2214,
+    "extra": {
+     "LEDs": "12 RGB, 48 white"
+    },
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60
+   },
+   {
+    "name": "B80",
+    "sku": "CHSB801",
+    "fitsLengthMinCm": 80,
+    "fitsLengthMaxCm": 80
+   },
+   {
+    "name": "B90",
+    "sku": "CHSB901",
+    "lengthCm": 87.6,
+    "widthCm": 5.6,
+    "powerW": 46.8,
+    "lumens": 2881,
+    "extra": {
+     "LEDs": "18 RGB, 72 white"
+    },
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90
+   },
+   {
+    "name": "B120",
+    "sku": "CHSB1201",
+    "lengthCm": 117.6,
+    "widthCm": 5.6,
+    "powerW": 51.3,
+    "lumens": 3256,
+    "extra": {
+     "LEDs": "21 RGB, 84 white"
+    },
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 120
+   }
+  ],
+  "priceFrom": 48.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-b-series-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-b-series-led-aquarium-light_7.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-b-series-led-aquarium-light_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-b-series",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-c-ii-series",
+  "brand": "Chihiros",
+  "name": "C II Series",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "A compact clamp-on light on a vertical pole, so you can set both height and angle over a nano tank. It comes in a white version or an RGB version.",
+  "highlights": [
+   "White (1,500 lm) or RGB (1,580 lm) versions",
+   "Adjustable height and swivel on a pole clamp",
+   "Bluetooth app for brightness, schedule, sunrise/sunset and colour (RGB model)",
+   "Optional base for use away from a tank",
+   "IP43 rated"
+  ],
+  "bestFor": "Small nano tanks and open-top bowls where one compact, adjustable light is enough.",
+  "watchOut": "The clamp fits glass up to 8 mm only, and the display base is an extra purchase.",
+  "specs": {
+   "Spectrum": "White or RGB (two versions)",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes, with sunrise/sunset",
+   "Mounting": "Pole clamp (base optional)",
+   "Max glass thickness": "8 mm",
+   "IP rating": "IP43",
+   "LED lifespan": "50,000 h+"
+  },
+  "models": [
+   {
+    "name": "CII White",
+    "sku": "CHSCII1",
+    "lengthCm": 24.0,
+    "widthCm": 4.5,
+    "powerW": 16,
+    "lumens": 1500,
+    "extra": {
+     "LEDs": "60"
+    }
+   },
+   {
+    "name": "CII RGB",
+    "sku": "CHSCIIR1",
+    "lengthCm": 24.0,
+    "widthCm": 5.0,
+    "powerW": 20,
+    "lumens": 1580,
+    "extra": {
+     "LEDs": "40"
+    }
+   }
+  ],
+  "priceFrom": 108.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-ii-series-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-ii-series-led-aquarium-light_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-ii-series-led-aquarium-light_3.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-ii-series-led-aquarium-light_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-cii-led-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-c-series",
+  "brand": "Chihiros",
+  "name": "C Series",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "A simple clip-on nano light that hangs over the tank on a short arm. It is inexpensive, easy to fit and bright enough for small planted tanks.",
+  "highlights": [
+   "Four sizes for 20 to 36 cm tanks",
+   "8000 K white output",
+   "Clip-on arm for rimless glass up to 6 mm",
+   "Water resistant body"
+  ],
+  "bestFor": "Nano tanks from roughly 8 to 38 L with easy to moderate plants.",
+  "watchOut": "Only fits glass up to 6 mm thick, and it has no app control.",
+  "specs": {
+   "Spectrum": "White",
+   "Colour temperature": "8000 K",
+   "Mounting": "Clip-on arm",
+   "Max glass thickness": "6 mm",
+   "Tank size": "2 to 10 US gal (about 8 to 38 L)"
+  },
+  "models": [
+   {
+    "name": "C201",
+    "sku": "CHSC2011",
+    "lengthCm": 17.0,
+    "widthCm": 5.5,
+    "powerW": 7,
+    "lumens": 750,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 20,
+    "extra": {
+     "LEDs": "18"
+    }
+   },
+   {
+    "name": "C251",
+    "sku": "CHSC2511",
+    "lengthCm": 21.0,
+    "widthCm": 5.5,
+    "powerW": 10,
+    "lumens": 1150,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 25,
+    "fitsLengthMaxCm": 25,
+    "extra": {
+     "LEDs": "27"
+    }
+   },
+   {
+    "name": "C301",
+    "sku": "CHSC3011",
+    "lengthCm": 25.0,
+    "widthCm": 5.5,
+    "powerW": 14,
+    "lumens": 1500,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30,
+    "extra": {
+     "LEDs": "36"
+    }
+   },
+   {
+    "name": "C361",
+    "sku": "CHSC3611",
+    "lengthCm": 31.0,
+    "widthCm": 5.5,
+    "powerW": 18,
+    "lumens": 1850,
+    "kelvin": 8000,
+    "fitsLengthMinCm": 36,
+    "fitsLengthMaxCm": 36,
+    "extra": {
+     "LEDs": "45"
+    }
+   }
+  ],
+  "priceFrom": 42.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-series-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-series-led-aquarium-light_5.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-series-led-aquarium-light_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-c-series-led-aquarium-light_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-c-series-led-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-rgb-vivid-ii-mate",
+  "brand": "Chihiros",
+  "name": "RGB Vivid II Mate",
+  "category": "lights",
+  "subtype": "pendant",
+  "summary": "A pared-back version of the Vivid II with fewer LEDs, keeping the same shape, app and full RGB channel control. At 125 W it still has far more output than most 60 to 90 cm tanks need, and it comes with a hanging kit.",
+  "highlights": [
+   "One fixture for 60 to 90 cm tanks",
+   "10,000 lm, 125 W",
+   "Individual RGB channel control in the MyChihiros app",
+   "Hanging kit included",
+   "Black or silver"
+  ],
+  "bestFor": "High-tech 60 to 90 cm tanks, especially deeper ones, where you want a pendant with lots of headroom.",
+  "watchOut": "Expensive, and you will rarely run it near full power without inviting algae.",
+  "specs": {
+   "Spectrum": "RGB",
+   "Control": "Bluetooth app (MyChihiros), per-channel RGB",
+   "Dimming": "Yes, with sunrise/sunset",
+   "Mounting": "Pendant (hanging kit included)",
+   "Colours": "Black, silver"
+  },
+  "models": [
+   {
+    "name": "RGB Vivid II Mate",
+    "sku": "CHS543180",
+    "lengthCm": 45.5,
+    "widthCm": 16.2,
+    "heightCm": 3.4,
+    "powerW": 125,
+    "lumens": 10000,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 90
+   }
+  ],
+  "priceFrom": 449.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-rgb-vivid-ii-mate-led-aquarium-light_7.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-rgb-vivid-ii-mate-led-aquarium-light_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-rgb-vivid-2-mate",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-magnetic-light-2",
+  "brand": "Chihiros",
+  "name": "Magnetic Light 2",
+  "category": "lights",
+  "subtype": "stand",
+  "summary": "A palm-sized round puck light with a magnetic back, meant to stick to a metal stand or the included adhesive plate. It has a small cooling fan and mixes RGB and white LEDs, with control through the Chihiros app.",
+  "highlights": [
+   "9 cm puck, 15 W, 600 to 800 lm",
+   "RGB 3-in-1 plus white LEDs",
+   "App control of brightness, colour channels and sunrise/sunset",
+   "Magnetic mounting with adhesive metal pad included",
+   "Built-in fan"
+  ],
+  "bestFor": "Tiny tanks, or spotlighting a single plant or stone where a bar light won't fit.",
+  "watchOut": "You need a metal stand or surface to mount it, and at around 800 lm it only lights a small footprint.",
+  "specs": {
+   "Spectrum": "WRGB",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes, with sunrise/sunset",
+   "Mounting": "Magnetic",
+   "Cooling": "Built-in fan"
+  },
+  "models": [
+   {
+    "name": "Magnetic Light 2",
+    "sku": "CHS543036",
+    "lengthCm": 9.0,
+    "powerW": 15,
+    "lumens": 800,
+    "extra": {
+     "Lumens range": "600 to 800 lm",
+     "LEDs": "8 RGB, 16 white"
+    }
+   }
+  ],
+  "priceFrom": 65.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-magnetic-light-2_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-magnetic-light-2_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-magnetic-light-2_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-magnetic-light-2",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-nano-universal-rgb",
+  "brand": "Chihiros",
+  "name": "Nano Universal RGB",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "A clip-on RGB nano light in two sizes, made for 20 to 36 cm tanks. It is fully waterproof to IP67 and has Bluetooth control, so it handles a humid open-top nano without complaint.",
+  "highlights": [
+   "Nano 20 and Nano 30 sizes for 20 to 36 cm tanks",
+   "RGB 3-in-1 LEDs",
+   "Bluetooth app: brightness, timer, spectrum and effects",
+   "IP67 waterproof",
+   "Clips on glass up to 10 mm"
+  ],
+  "bestFor": "Shrimp tanks, betta tanks and small planted nanos that want colour control in a compact clip-on.",
+  "watchOut": "Two sizes only, so anything past 36 cm needs a different light.",
+  "specs": {
+   "Spectrum": "RGB",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes",
+   "Mounting": "Clip-on",
+   "Max glass thickness": "10 mm",
+   "IP rating": "IP67"
+  },
+  "models": [
+   {
+    "name": "Nano 20",
+    "sku": "CHS480001",
+    "lengthCm": 18.0,
+    "widthCm": 4.8,
+    "heightCm": 6.3,
+    "powerW": 13,
+    "lumens": 850,
+    "fitsLengthMinCm": 20,
+    "fitsLengthMaxCm": 25,
+    "extra": {
+     "LEDs": "12"
+    }
+   },
+   {
+    "name": "Nano 30",
+    "sku": "CHS480002",
+    "lengthCm": 28.0,
+    "widthCm": 4.8,
+    "heightCm": 6.3,
+    "powerW": 18,
+    "lumens": 1200,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 36,
+    "extra": {
+     "LEDs": "18"
+    }
+   }
+  ],
+  "priceFrom": 97.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-nano-led-light-universal-rgb_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-nano-led-light-universal-rgb_4.png",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-nano-led-light-universal-rgb_5.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-nano-led-light-universal-rgb_2.png"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-nano-led-light-universal-rgb",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-wrgb-vivid-3",
+  "brand": "Chihiros",
+  "name": "WRGB Vivid 3",
+  "category": "lights",
+  "subtype": "pendant",
+  "summary": "Chihiros' flagship planted-tank light, a wide flat panel only 23 mm thick with a snap-on magnetic fan. Output now goes up to 180 W and 16,600 lm, which is serious light for tall or large high-tech scapes.",
+  "highlights": [
+   "Up to 16,600 lm at 180 W",
+   "WRGB with white plus RGB 3-in-1 LEDs",
+   "Magnetic snap-on cooling fan",
+   "App control of brightness, colour, timing and fan",
+   "Two mounting options including hanging"
+  ],
+  "bestFor": "Large or deep high-tech tanks with CO2 where you want maximum light and colour tuning from one fixture.",
+  "watchOut": "Very expensive and very powerful; smaller or low-tech tanks will struggle to use it well.",
+  "specs": {
+   "Spectrum": "WRGB",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes",
+   "Mounting": "Hanging or stand",
+   "Cooling": "Magnetic fan (17 cm)",
+   "Colours": "Black, white"
+  },
+  "models": [
+   {
+    "name": "WRGB Vivid 3",
+    "sku": "CHSV3B01",
+    "lengthCm": 52.0,
+    "widthCm": 24.0,
+    "heightCm": 2.3,
+    "powerW": 180,
+    "lumens": 16600,
+    "extra": {
+     "Power range": "130 to 180 W",
+     "Lumens range": "10,000 to 16,600 lm",
+     "Height with fan": "4.2 cm"
+    }
+   }
+  ],
+  "priceFrom": 659.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-vivid-3-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-vivid-3-led-aquarium-light_6.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-vivid-3-led-aquarium-light_5.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-vivid-3-led-aquarium-light_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-wrgb-vivid-3",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-z-light-tiny",
+  "brand": "Chihiros",
+  "name": "Z Light Tiny",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "A tiny spotlight on an articulated arm with a zoom lens, used to pick out a single plant, stone or focal point. The Diving Edition can even go underwater for shadow and uplighting effects.",
+  "highlights": [
+   "Zoom lens from 15 to 60 degrees",
+   "Adjustable 2800 to 8000 K",
+   "6 W, 400 lm",
+   "Bluetooth app control",
+   "Diving Edition is IP67 and submersible"
+  ],
+  "bestFor": "Adding highlights or accent lighting to a nano or display tank alongside a main light.",
+  "watchOut": "It is an accent light, not a main light for growing plants; only the Diving Edition may be submerged.",
+  "specs": {
+   "Spectrum": "Tunable white",
+   "Colour temperature": "2800 to 8000 K",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Mounting": "Clamp with articulated arm",
+   "Beam angle": "15 to 60 degrees"
+  },
+  "models": [
+   {
+    "name": "Normal Edition",
+    "sku": "CHSZLT01",
+    "powerW": 6,
+    "lumens": 400
+   },
+   {
+    "name": "Diving Edition",
+    "sku": "CHSZLTDE01",
+    "powerW": 6,
+    "lumens": 400,
+    "extra": {
+     "IP rating": "IP67 (submersible)"
+    }
+   }
+  ],
+  "priceFrom": 54.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-z-light-tiny_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-z-light-tiny_5.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-z-light-tiny_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-z-light-tiny_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-z-light-tiny",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-rgb-vivid-mini",
+  "brand": "Chihiros",
+  "name": "RGB Vivid Mini",
+  "category": "lights",
+  "subtype": "stand",
+  "summary": "A compact 35 cm RGB panel with 75 W of output, sold either with a rim-mounted bar or as a pendant with a hanging kit. It brings Vivid-level colour and punch to smaller high-tech tanks.",
+  "highlights": [
+   "5,000 lm from a 35.5 cm body",
+   "RGB LEDs with full app control of colour and effects",
+   "Standard rim bar or pendant version",
+   "Optional WiFi hub for remote control"
+  ],
+  "bestFor": "Smaller high-tech tanks, or deeper nanos, where you want strong RGB colour from a compact panel.",
+  "watchOut": "The shade is sold separately, and the pendant version comes without the rim-mount bar.",
+  "specs": {
+   "Spectrum": "RGB",
+   "Control": "Bluetooth app (MyChihiros), optional WiFi hub",
+   "Dimming": "Yes, with sunrise/sunset",
+   "Mounting": "Rim bar (standard) or hanging kit (pendant)"
+  },
+  "models": [
+   {
+    "name": "RGB Vivid Mini",
+    "sku": "CHSRVM01",
+    "lengthCm": 35.5,
+    "widthCm": 14.0,
+    "heightCm": 3.5,
+    "powerW": 75,
+    "lumens": 5000,
+    "extra": {
+     "LEDs": "80",
+     "Versions": "Standard, Pendant"
+    }
+   }
+  ],
+  "priceFrom": 344.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-rgb-vivid-mini-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-rgb-vivid-mini-led-aquarium-light_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-rgb-vivid-mini-led-aquarium-light_7.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-rgb-vivid-mini-led-aquarium-light_9.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-rgb-vivid-mini",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-rgb-vivid-ii",
+  "brand": "Chihiros",
+  "name": "RGB Vivid II (10th Edition)",
+  "category": "lights",
+  "subtype": "stand",
+  "summary": "The compact but very powerful RGB panel that made the Vivid name, here in its 10th Edition. It packs 130 W and over 12,000 lm into the same 35 cm body as the Vivid Mini. It is being phased out in favour of the Vivid Mini and Vivid 3.",
+  "highlights": [
+   "12,200 lm, 130 W",
+   "160 RGB LEDs",
+   "App control of colour, brightness and sunrise/sunset",
+   "Optional WiFi hub",
+   "Black or silver"
+  ],
+  "bestFor": "Tall or demanding high-tech tanks where one small panel has to deliver a lot of light.",
+  "watchOut": "Discontinued, and the stand or hanging kit shown in photos is sold separately.",
+  "specs": {
+   "Spectrum": "RGB",
+   "Control": "Bluetooth app (MyChihiros), optional WiFi hub",
+   "Dimming": "Yes, with sunrise/sunset",
+   "Mounting": "Stand or hanging kit (sold separately)",
+   "Status": "Discontinued"
+  },
+  "models": [
+   {
+    "name": "RGB Vivid II 10th Edition",
+    "sku": "CHSRV2B",
+    "lengthCm": 35.5,
+    "widthCm": 14.0,
+    "heightCm": 3.5,
+    "powerW": 130,
+    "lumens": 12200,
+    "extra": {
+     "LEDs": "160"
+    }
+   }
+  ],
+  "priceFrom": 516.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-rgb-vivid-ii-led-aquarium-light-10th-edition_8.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-rgb-vivid-ii-10th-edition",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-wrgb-ii-pro",
+  "brand": "Chihiros",
+  "name": "WRGB II Pro",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "The high-output member of the WRGB II family, with a dedicated white channel on top of full RGB and a higher LED count. It is still slim, and gives strong light and colour for demanding scapes.",
+  "highlights": [
+   "Six sizes from 30 cm to 120 cm",
+   "Up to 11,170 lm on the Pro 120",
+   "White plus RGB channels, each adjustable in the app",
+   "Slim 1.8 cm profile",
+   "Shade and hanging kit available"
+  ],
+  "bestFor": "High-tech planted tanks and deeper aquariums where you want lots of output and control over colour.",
+  "watchOut": "More light than a low-tech tank can use; dim it right down if you don't run CO2.",
+  "specs": {
+   "Spectrum": "WRGB (dedicated white channel + RGB)",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes, per channel",
+   "Mounting": "Rim legs (hanging kit optional)"
+  },
+  "models": [
+   {
+    "name": "Pro 30",
+    "sku": "CHSWP301",
+    "lengthCm": 30.0,
+    "widthCm": 14.0,
+    "heightCm": 1.8,
+    "powerW": 37,
+    "lumens": 3260,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30
+   },
+   {
+    "name": "Pro 45",
+    "sku": "CHSWP451",
+    "lengthCm": 45.0,
+    "widthCm": 14.0,
+    "heightCm": 1.8,
+    "powerW": 56,
+    "lumens": 5000,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 45
+   },
+   {
+    "name": "Pro 60",
+    "sku": "CHSWP601",
+    "lengthCm": 60.0,
+    "widthCm": 14.0,
+    "heightCm": 1.8,
+    "powerW": 74,
+    "lumens": 6630,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60
+   },
+   {
+    "name": "Pro 80",
+    "sku": "CHSWP801",
+    "lengthCm": 80.0,
+    "widthCm": 14.0,
+    "heightCm": 1.8,
+    "powerW": 100,
+    "lumens": 8170,
+    "fitsLengthMinCm": 80,
+    "fitsLengthMaxCm": 80
+   },
+   {
+    "name": "Pro 90",
+    "sku": "CHSWP901",
+    "lengthCm": 90.0,
+    "widthCm": 14.0,
+    "heightCm": 1.8,
+    "powerW": 110,
+    "lumens": 9250,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90
+   },
+   {
+    "name": "Pro 120",
+    "sku": "CHSWP1201",
+    "lengthCm": 120.0,
+    "widthCm": 14.0,
+    "heightCm": 1.8,
+    "powerW": 138,
+    "lumens": 11170,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 120
+   }
+  ],
+  "priceFrom": 251.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-pro-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-pro-led-aquarium-light_3.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-pro-led-aquarium-light_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-pro-led-aquarium-light_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-led-light-wrgb-ii-pro",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-wrgb-ii-slim",
+  "brand": "Chihiros",
+  "name": "WRGB II Slim",
+  "category": "lights",
+  "subtype": "bar",
+  "summary": "A thinner, lower-output take on the WRGB II with full colour control in the app. At about 1.5 cm thick, it disappears over a rimless tank and suits most planted setups from low to fairly demanding.",
+  "highlights": [
+   "Five sizes from 30 cm to 120 cm",
+   "WRGB with app control of colour and brightness",
+   "About 1.5 cm thick",
+   "Shade and hanging kit available"
+  ],
+  "bestFor": "Everyday planted tanks where you want RGB colour tuning and a very low-profile fixture.",
+  "watchOut": "Roughly half the output of the WRGB II Pro, so it is less suited to deep high-tech tanks.",
+  "specs": {
+   "Spectrum": "WRGB",
+   "Control": "Bluetooth app (MyChihiros)",
+   "Dimming": "Yes, with timers and effects",
+   "Mounting": "Rim legs (hanging kit optional)"
+  },
+  "models": [
+   {
+    "name": "Slim 30",
+    "sku": "CHSS301",
+    "lengthCm": 28.4,
+    "widthCm": 12.8,
+    "heightCm": 1.5,
+    "powerW": 23,
+    "lumens": 1200,
+    "fitsLengthMinCm": 30,
+    "fitsLengthMaxCm": 30
+   },
+   {
+    "name": "Slim 45",
+    "sku": "CHSS451",
+    "lengthCm": 43.4,
+    "widthCm": 12.8,
+    "heightCm": 1.5,
+    "powerW": 35,
+    "lumens": 1800,
+    "fitsLengthMinCm": 45,
+    "fitsLengthMaxCm": 45
+   },
+   {
+    "name": "Slim 60",
+    "sku": "CHSS601",
+    "lengthCm": 58.4,
+    "widthCm": 12.8,
+    "heightCm": 1.5,
+    "powerW": 45,
+    "lumens": 2400,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60
+   },
+   {
+    "name": "Slim 90",
+    "sku": "CHSS901",
+    "lengthCm": 88.4,
+    "widthCm": 12.8,
+    "heightCm": 1.5,
+    "powerW": 69,
+    "lumens": 3600,
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90
+   },
+   {
+    "name": "Slim 120",
+    "sku": "CHSS1201",
+    "lengthCm": 118.4,
+    "widthCm": 12.8,
+    "heightCm": 1.5,
+    "powerW": 90,
+    "lumens": 4800,
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 120
+   }
+  ],
+  "priceFrom": 145.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-slim-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-slim-led-aquarium-light_3.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-slim-led-aquarium-light_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-wrgb-ii-slim-led-aquarium-light_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-wrgb-ii-slim-led-aquarium-light",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-doctor-5",
+  "brand": "Chihiros",
+  "name": "Doctor 5",
+  "category": "sterilisers",
+  "subtype": "electrolytic",
+  "summary": "Chihiros' latest electrolytic water-care unit. A reactor in the tank produces short-lived oxidisers to hold back algae and harmful bacteria, while the controller also watches temperature and shows it on a small screen and in the app.",
+  "highlights": [
+   "Micro-electrolysis reactor with magnetic connections",
+   "Three modes; you enter your tank size during setup",
+   "Temperature monitoring with app and on-screen alerts",
+   "Bluetooth control via MyChihiros",
+   "Maker states it is safe for fish, shrimp and filter bacteria"
+  ],
+  "bestFor": "Freshwater planted tanks where you want algae prevention and a temperature alarm in one small gadget.",
+  "watchOut": "Only for water under 500 ppm TDS, and the reactor is a consumable that needs replacing.",
+  "specs": {
+   "Method": "Micro-electrolysis",
+   "Control": "Bluetooth app + display",
+   "Modes": "3",
+   "Water": "Freshwater, TDS below 500 ppm"
+  },
+  "models": [
+   {
+    "name": "Doctor 5",
+    "sku": "CHS543166"
+   }
+  ],
+  "priceFrom": 139.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-doctor-5_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-doctor-5_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-doctor-5",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-new-doctor",
+  "brand": "Chihiros",
+  "name": "New Doctor",
+  "category": "sterilisers",
+  "subtype": "electrolytic",
+  "summary": "The standard-size Chihiros Doctor, an electrolytic unit with separate plant, fish and shrimp modes. The plant mode targets algae, and the fish and shrimp modes aim at harmful bacteria. It comes with either Bluetooth app control or touch buttons.",
+  "highlights": [
+   "Three modes: plants, fish, shrimp",
+   "Bluetooth or touch-control versions",
+   "Reactor sits on the glass, controller outside",
+   "Suited to tanks from about 75 L up"
+  ],
+  "bestFor": "Mid-size and larger planted tanks where you want an extra tool against algae alongside good maintenance.",
+  "watchOut": "It won't fix a light or nutrient imbalance, and the reactor needs periodic replacement.",
+  "specs": {
+   "Method": "Electrolysis",
+   "Modes": "3 (plants, fish, shrimp)",
+   "Tank size": "About 20 to 30 US gal (75 to 115 L) and up"
+  },
+  "models": [
+   {
+    "name": "Bluetooth Edition",
+    "sku": "CHSNDB01",
+    "extra": {
+     "Control": "Bluetooth app (MyChihiros)"
+    }
+   },
+   {
+    "name": "Touch Control",
+    "sku": "CHSND01",
+    "extra": {
+     "Control": "Touch buttons"
+    }
+   }
+  ],
+  "priceFrom": 93.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-new-doctor-bluetooth_3.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-new-doctor-bluetooth_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-new-doctor-bluetooth_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-new-doctor-bluetooth",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-doctor-mate",
+  "brand": "Chihiros",
+  "name": "Doctor Mate",
+  "category": "sterilisers",
+  "subtype": "electrolytic",
+  "summary": "The small Doctor, sized for nano and small tanks up to about 125 L. It runs the same three plant, fish and shrimp modes as the larger unit, with Bluetooth control.",
+  "highlights": [
+   "For tanks under 125 L",
+   "Three modes: plants, fish, shrimp",
+   "Bluetooth app control",
+   "Compact controller and square reactor"
+  ],
+  "bestFor": "Nano and small planted tanks, including shrimp tanks, that want an algae and bacteria hedge.",
+  "watchOut": "Replacement reactors are an ongoing cost.",
+  "specs": {
+   "Method": "Electrolysis",
+   "Modes": "3 (plants, fish, shrimp)",
+   "Control": "Bluetooth app (MyChihiros)"
+  },
+  "models": [
+   {
+    "name": "Doctor Mate",
+    "sku": "CHSDMB01",
+    "tankMaxL": 125
+   }
+  ],
+  "priceFrom": 49.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-doctor-mate_3.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-doctor-mate_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-doctor-mate_6.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-doctor-mate_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-doctor-mate",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-heater-pro",
+  "brand": "Chihiros",
+  "name": "Heater Pro",
+  "category": "heaters",
+  "subtype": "inline",
+  "summary": "An app-controlled inline heater that sits on your canister filter's outflow hose, so there is no glass tube in the tank. It shifts between high and low power to hold temperature and has overheat, dry-run and water-level cut-outs.",
+  "highlights": [
+   "Inline on the filter hose, nothing inside the tank",
+   "Set 10 to 35 °C from the app",
+   "Two hose sizes: 12/16 mm and 16/22 mm",
+   "Overheat, dry-run and auto shut-off protection",
+   "Suits tanks from about 38 to 435 L"
+  ],
+  "bestFor": "Rimless and show tanks with a canister filter where you want clean glass and precise, app-set temperature.",
+  "watchOut": "The listed unit is 110 to 120 V, so check you get the right voltage version for your region.",
+  "specs": {
+   "Temperature range": "10 to 35 °C",
+   "Control": "Bluetooth app (MyChihiros) + display",
+   "Protection": "Overheat, dry-run, water-level shut-off",
+   "Cable": "1.5 m",
+   "Size": "8.1 x 6.1 x 14 cm"
+  },
+  "models": [
+   {
+    "name": "12/16 mm",
+    "sku": "CHSHP1216",
+    "hoseMm": 12,
+    "tankMinL": 38,
+    "tankMaxL": 435,
+    "extra": {
+     "Hose": "12/16 mm",
+     "Rated power (as listed)": "10 to 800 W, auto-shifting"
+    }
+   },
+   {
+    "name": "16/22 mm",
+    "sku": "CHSHP1622",
+    "hoseMm": 16,
+    "tankMinL": 38,
+    "tankMaxL": 435,
+    "extra": {
+     "Hose": "16/22 mm",
+     "Rated power (as listed)": "10 to 800 W, auto-shifting"
+    }
+   }
+  ],
+  "priceFrom": 106.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-heater-pro-inline-aquarium-heater_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-heater-pro-inline-aquarium-heater_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-heater-pro-inline-aquarium-heater_6.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-heater-pro-inline-aquarium-heater_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-heater-pro-inline-aquarium-heater",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-cooling-fan-bluetooth",
+  "brand": "Chihiros",
+  "name": "Cooling Fan (Bluetooth Edition)",
+  "category": "cooling",
+  "subtype": "fan",
+  "summary": "A clamp-on stainless fan that blows across the water surface to pull temperature down by evaporation. The Bluetooth version lets you set speed, a target temperature and a schedule from your phone.",
+  "highlights": [
+   "Bluetooth control of speed, temperature and schedule",
+   "Stainless steel housing",
+   "Clamps on glass up to 19 mm",
+   "Draws under 3 W"
+  ],
+  "bestFor": "Planted and shrimp tanks that creep too warm in summer or under strong lights.",
+  "watchOut": "Evaporative cooling means topping up more often, and it only shaves a few degrees compared with a chiller.",
+  "specs": {
+   "Control": "Bluetooth app",
+   "Mounting": "Rim clamp, glass up to 19 mm",
+   "Material": "Stainless steel",
+   "Voltage": "DC 9 V"
+  },
+  "models": [
+   {
+    "name": "Cooling Fan Bluetooth",
+    "sku": "CHSFBT1",
+    "powerW": 2.8,
+    "lengthCm": 10.0,
+    "widthCm": 8.3,
+    "heightCm": 7.5,
+    "extra": {
+     "Fan speed": "3800 rpm"
+    }
+   }
+  ],
+  "priceFrom": 54.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-cooling-fan-bluetooth-edition_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-cooling-fan-bluetooth-edition_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-cooling-fan-bluetooth-edition_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-cooling-fan-bluetooth-edition_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-cooling-fan-bluetooth-edition",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "chihiros-spray-system-tiny",
+  "brand": "Chihiros",
+  "name": "Spray System Tiny",
+  "category": "paludarium",
+  "subtype": "misting",
+  "summary": "A small automatic mister for terrariums, paludariums and moss walls. It pumps from a water container through two adjustable nozzles on a programmable schedule, and stops itself if the water runs out.",
+  "highlights": [
+   "Two adjustable misting nozzles and 5 m of tubing",
+   "Programmable spray intervals",
+   "Low-water sensor prevents dry running",
+   "Under 5 W, 12 V"
+  ],
+  "bestFor": "Small paludariums, wabi-kusa enclosures and moss walls that need regular humidity without hand misting.",
+  "watchOut": "Designed for smaller enclosures; big vivariums will want more nozzles.",
+  "specs": {
+   "Nozzles": "2",
+   "Tubing": "5 m",
+   "Voltage": "12 V",
+   "Protection": "Low-water shut-off"
+  },
+  "models": [
+   {
+    "name": "Spray System Tiny",
+    "sku": "CHS543371",
+    "lengthCm": 9.8,
+    "widthCm": 7.5,
+    "heightCm": 5.4,
+    "extra": {
+     "Power": "Under 5 W"
+    }
+   }
+  ],
+  "priceFrom": 99.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-spray-system-tiny_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-spray-system-tiny_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/chihiros/chihiros-spray-system-tiny_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/chihiros-spray-system-tiny",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "qanvee-inline-co2-atomizer",
+  "brand": "Qanvee",
+  "name": "Inline CO2 Atomizer",
+  "category": "co2",
+  "subtype": "diffuser",
+  "summary": "An inline CO2 diffuser that fits on the outflow hose of a canister filter, so the fine mist enters with the return flow and no diffuser sits in the tank. It comes apart fully for cleaning and the ceramic can be replaced.",
+  "highlights": [
+   "M1 for 12/16 mm hose, M2 for 16/22 mm hose",
+   "Very fine mist, good for larger tanks",
+   "Fully dismantles for cleaning",
+   "Replacement ceramic available"
+  ],
+  "bestFor": "Planted tanks with a canister filter, especially 190 L and up, where you want hidden CO2 hardware.",
+  "watchOut": "Needs at least 30 psi working pressure, must go on the outflow (never the inflow) and needs pressure-rated tubing.",
+  "specs": {
+   "Install": "Canister filter outflow hose",
+   "Min working pressure": "30 psi (about 2 bar)",
+   "Material": "Ceramic diffuser in a plastic body"
+  },
+  "models": [
+   {
+    "name": "M1",
+    "sku": "QVM1",
+    "hoseMm": 12,
+    "extra": {
+     "Hose": "12/16 mm"
+    }
+   },
+   {
+    "name": "M2",
+    "sku": "QVM2",
+    "hoseMm": 16,
+    "extra": {
+     "Hose": "16/22 mm"
+    }
+   }
+  ],
+  "priceFrom": 27.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-co2-inline-atomizer-diffuser_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-co2-inline-atomizer-diffuser_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/inline-co2-atomizer",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "qanvee-algae-scraper",
+  "brand": "Qanvee",
+  "name": "Algae Scraper",
+  "category": "tools",
+  "subtype": "scraper",
+  "summary": "A razor-blade glass scraper for clearing algae film, in three lengths. The larger two have a swivelling head for awkward corners, and all come with ten spare blades.",
+  "highlights": [
+   "Nano-Q (41 cm, fixed), X-1 (55 cm) and X-3 (66 cm, swivel)",
+   "10 replacement blades included",
+   "Swivel head on X-1 and X-3",
+   "Also handy for straightening substrate lines"
+  ],
+  "bestFor": "Keeping the glass of rimless planted tanks clear, from nanos to standard 60 to 90 cm tanks.",
+  "watchOut": "Blades are very sharp and never for acrylic tanks; keep them clear of silicone seams.",
+  "specs": {
+   "Blade": "Razor, 10 spares included",
+   "Extension": "7-inch rod available for X-3 only"
+  },
+  "models": [
+   {
+    "name": "Nano-Q",
+    "sku": "QVNQFS",
+    "lengthCm": 40.6,
+    "extra": {
+     "Head": "Fixed"
+    }
+   },
+   {
+    "name": "X-1",
+    "sku": "QVX1AS",
+    "lengthCm": 54.9,
+    "extra": {
+     "Head": "Angle swivel"
+    }
+   },
+   {
+    "name": "X-3",
+    "sku": "QVX3AS",
+    "lengthCm": 65.8,
+    "extra": {
+     "Head": "Angle swivel"
+    }
+   }
+  ],
+  "priceFrom": 15.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-algae-scraper_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-algae-scraper_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-algae-scraper_4.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-algae-scraper_9.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/adjustable-algae-scraper",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ },
+ {
+  "id": "qanvee-gravel-vacuum-siphon",
+  "brand": "Qanvee",
+  "name": "Gravel Vacuum Siphon",
+  "category": "tools",
+  "subtype": "gravel-cleaner",
+  "summary": "A pump-started siphon for water changes and cleaning the substrate surface, with an extendable tube. It comes as a handheld version, a clip-on version that holds itself on the rim, and a fully manual version for tight spots.",
+  "highlights": [
+   "Handheld (E), clip-on (S) and manual (C) styles",
+   "Extendable siphon tube",
+   "Squeeze-bulb start, no mouth siphoning",
+   "Gentle enough not to disturb a scape"
+  ],
+  "bestFor": "Weekly water changes on planted tanks from around 40 cm upward.",
+  "watchOut": "Go gently over aqua soil, which is light and easy to suck up.",
+  "specs": {
+   "Start": "Squeeze bulb",
+   "Included": "Hose, extendable tube, handheld or hang-on unit"
+  },
+  "models": [
+   {
+    "name": "E3",
+    "sku": "QVCE31",
+    "extra": {
+     "Tube length": "36 to 48 cm",
+     "Hose length": "152 cm",
+     "Style": "Handheld"
+    }
+   },
+   {
+    "name": "E6",
+    "sku": "QVCE61",
+    "extra": {
+     "Tube length": "46 to 58 cm",
+     "Hose length": "183 cm",
+     "Style": "Handheld"
+    }
+   },
+   {
+    "name": "S3",
+    "sku": "QVCS31",
+    "extra": {
+     "Tube length": "36 to 48 cm",
+     "Hose length": "152 cm",
+     "Style": "Clip-on"
+    }
+   },
+   {
+    "name": "S6",
+    "sku": "QVCS61",
+    "extra": {
+     "Tube length": "46 to 58 cm",
+     "Hose length": "183 cm",
+     "Style": "Clip-on"
+    }
+   },
+   {
+    "name": "C6",
+    "sku": "QVC600",
+    "extra": {
+     "Tube length": "33 to 48 cm",
+     "Hose length": "152 cm",
+     "Style": "Manual"
+    }
+   }
+  ],
+  "priceFrom": 29.99,
+  "currency": "USD",
+  "images": [
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-aquarium-gravel-vacuum-siphon_1.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-aquarium-gravel-vacuum-siphon_2.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-aquarium-gravel-vacuum-siphon_7.jpg",
+   "/Users/mikeelmira/Downloads/chihiros-twinstar-qanvee/images/qanvee/qanvee-aquarium-gravel-vacuum-siphon_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/aquarium-gravel-vacuum-siphon",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer"
+ }
+]

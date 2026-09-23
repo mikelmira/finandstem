@@ -9,6 +9,7 @@ import { StockingGauge } from "@/components/planner/stocking-gauge";
 import { TankWarnings } from "@/components/planner/tank-warnings";
 import { RecommendedSpecies } from "@/components/planner/recommended-species";
 import { WaterColumnPanel } from "@/components/planner/water-column-panel";
+import { GearForTank } from "@/components/planner/gear-for-tank";
 import { allNorm } from "@/lib/catalogue/normalize";
 import {
   buildTank,
@@ -74,6 +75,12 @@ export function PlannerClient() {
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-5 lg:sticky lg:top-24">
           <TankSetupCard tankL={tankL} filterLph={filterLph} />
+          <GearForTank
+            tankL={tankL}
+            filterLph={filterLph}
+            light={result.requirements.light}
+            co2={result.requirements.co2}
+          />
 
           <div className="glass glass-edge rounded-2xl p-5 sm:p-6">
             <h2 className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--brand)]">

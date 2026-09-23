@@ -29,6 +29,7 @@ export const site = {
     { label: "Snails", href: "/snails" },
     { label: "Substrates", href: "/substrates" },
     { label: "Hardscape", href: "/hardscape" },
+    { label: "Gear", href: "/gear" },
     { label: "Guides", href: "/guides" },
     { label: "Cycling", href: "/aquarium-cycling" },
     { label: "Algae ID", href: "/algae" },
@@ -54,6 +55,7 @@ export const site = {
           { label: "Snails", href: "/snails" },
           { label: "Substrates", href: "/substrates" },
           { label: "Hardscape", href: "/hardscape" },
+          { label: "Gear catalogue", href: "/gear" },
         ],
       },
       {
@@ -63,6 +65,8 @@ export const site = {
           { label: "Species world map", href: "/species-map" },
           { label: "Tank Planner", href: "/planner" },
           { label: "Compare species", href: "/compare" },
+          { label: "Compare gear", href: "/gear/compare" },
+          { label: "Kit finder", href: "/gear" },
           { label: "Compatibility", href: "/compatibility" },
           { label: "Stocking by tank size", href: "/tanks" },
           { label: "Calculators", href: "/calculators" },
@@ -95,7 +99,7 @@ export const site = {
       },
     ],
     note:
-      "Built in South Africa, written for aquascapers everywhere. Care numbers are working ranges, observe your tank, cross-check several sources, and consult a vet for anything medical. Photography is sourced from Wikimedia Commons and iNaturalist under open licences, with attribution and a source link on every image.",
+      "Built in South Africa, written for aquascapers everywhere. Care numbers are working ranges, observe your tank, cross-check several sources, and consult a vet for anything medical. Species photography is sourced from Wikimedia Commons and iNaturalist under open licences, with attribution and a source link on every image. Gear and hardscape product photos are supplied by the brands and their distributors.",
   },
 } as const;
 

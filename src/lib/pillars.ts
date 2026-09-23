@@ -184,9 +184,9 @@ export const PILLARS: ReadonlyArray<Pillar> = [
     description:
       "How to choose stone, wood, and substrate for the planted aquarium, chemistry effects on pH and KH, sizing, buoyancy, and scaping principles.",
     tldr:
-      "Hardscape is the bone structure of every planted tank, and the only element you can't easily change after setup. Get it right by understanding the three things stone and wood do beyond looking good: they shift pH and KH (or shouldn't), they release tannins (or shouldn't), and they take up tank volume that's now unavailable for plants and swim space. This guide covers the major stones and woods, their chemistry, and how to pick for the scape you actually want. (Full catalogue coming month 3.)",
+      "Hardscape is the bone structure of every planted tank, and the only element you can't easily change after setup. Get it right by understanding the three things stone and wood do beyond looking good: they shift pH and KH (or shouldn't), they release tannins (or shouldn't), and they take up tank volume that's now unavailable for plants and swim space. This guide covers the major stones and woods, their chemistry, and how to pick for the scape you actually want, then points you to real supplier pieces with photos and sizes.",
     intro: [
-      "Hardscape catalogue pages are still being authored, until then, this guide is the working reference for which stones and woods to choose and which to avoid.",
+      "Use this guide for which stones and woods to choose and which to avoid, the hardscape type pages for the chemistry of each material, and the hardscape catalogue to see real pieces from suppliers before you buy.",
       "Two principles dominate. First: rocks containing calcium carbonate (Seiryu, Frodo Stone, Texas holey rock) raise KH and pH; inert rocks (Dragon Stone, Ohko, Lava Rock, Seiryu's inert cousins) don't. Second: every piece of wood floats until it's waterlogged, soak for 2–4 weeks or weight it down through the early months.",
     ],
     faqs: [
@@ -221,9 +221,9 @@ export const PILLARS: ReadonlyArray<Pillar> = [
     description:
       "How to size and choose planted-tank equipment: lighting PAR, filter GPH, CO₂ regulators, heaters, and the trade-offs that actually matter.",
     tldr:
-      "Equipment choice is mostly about sizing, match wattage, flow, and PAR to the tank's volume and plant demand. Buy once, cry once on lights and CO₂ regulators; everything else can be upgraded later. This guide walks through each category and the floor-spec you shouldn't go below. The full equipment catalogue (with named brands and PAR/GPH numbers) launches month 3.)",
+      "Equipment choice is mostly about sizing, match wattage, flow, and PAR to the tank's volume and plant demand. Buy once, cry once on lights and CO₂ regulators; everything else can be upgraded later. This guide walks through each category and the floor-spec you shouldn't go below, and the gear catalogue lists real filters, lights, CO2 gear and heaters with their specs, filtered to your tank size so you can compare the ones that fit.",
     intro: [
-      "Equipment catalogue pages are still being authored. Until then, this guide is the working reference for sizing each component.",
+      "Use this guide for the sizing rules, then open the gear catalogue to see which real products meet them. Every category has a tank-size matcher and a side-by-side compare table.",
       "Two rules apply to every category. First: oversize, then dial down. A larger filter run slow beats a smaller filter run hot. Second: redundancy on anything that fails silently, two heaters with independent thermostats, two CO₂ check valves, dual water-change buckets in case the kitchen tap is busy.",
     ],
     faqs: [

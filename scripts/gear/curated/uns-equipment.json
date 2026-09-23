@@ -1,0 +1,2754 @@
+[
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-rimless-nano-aquarium",
+  "name": "Rimless Nano Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "The 3N and 5N are the small UNS tanks a lot of people start with. They are low-iron rimless boxes with mitred corners, sized for a desk or shelf, and the 5N in particular has become a standard nano size that plenty of lights and filters are built around.",
+  "highlights": [
+   "Two sizes: 3N (about 11 L) and 5N (about 17 L)",
+   "5 mm low-iron glass with 45 degree mitred corners",
+   "Proportions suit a shrimp tank, betta tank or a small iwagumi",
+   "Comes with a black levelling mat"
+  ],
+  "bestFor": "A first planted nano, a shrimp colony or a desk scape where you want a clean glass box without a rim.",
+  "watchOut": "Small water volumes swing fast in temperature and parameters, so dose and top up with care.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Glass": "Low-iron (91% clarity) Diamant glass",
+   "Silicone": "Clear German silicone",
+   "Included": "Black levelling mat"
+  },
+  "models": [
+   {
+    "name": "3N",
+    "sku": "UNS3N",
+    "volumeL": 11.0,
+    "lengthCm": 31,
+    "widthCm": 19,
+    "heightCm": 19,
+    "glassMm": 5
+   },
+   {
+    "name": "5N",
+    "sku": "UNS5N",
+    "volumeL": 17.4,
+    "lengthCm": 36,
+    "widthCm": 22,
+    "heightCm": 22,
+    "glassMm": 5
+   }
+  ],
+  "priceFrom": 49.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-nano-glass-aquarium-tank_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-nano-glass-aquarium-tank_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-nano-glass-aquarium-tank_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-nano-glass-aquarium-tank_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-rimless-nano-glass-aquarium-tank"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-rimless-cube-aquarium",
+  "name": "Rimless Cube Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "Equal sides on every face, from a tiny 16 cm cube up to a 60 cm cube that holds over 200 litres. Cubes pull the eye to the centre of the layout, so they work well for a single strong focal point or a row of matching tanks.",
+  "highlights": [
+   "Eight sizes from 16C (about 4 L) to 60C (about 216 L)",
+   "Glass steps up from 5 mm to 10 mm on the bigger sizes",
+   "45 degree mitred corners on low-iron glass",
+   "Levelling mat included"
+  ],
+  "bestFor": "Betta and shrimp tanks, centre-focused layouts, or a gallery of small cubes side by side.",
+  "watchOut": "Cubes are deep for their width, so the larger ones need a strong light to reach the substrate and long tools to reach the back.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Glass": "Low-iron (91% clarity) Diamant glass",
+   "Silicone": "Clear German silicone",
+   "Included": "Black levelling mat"
+  },
+  "models": [
+   {
+    "name": "16C",
+    "sku": "UNS16C",
+    "volumeL": 3.8,
+    "lengthCm": 16,
+    "widthCm": 16,
+    "heightCm": 16,
+    "glassMm": 5
+   },
+   {
+    "name": "20C",
+    "sku": "UNS20C",
+    "volumeL": 7.9,
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 20,
+    "glassMm": 5
+   },
+   {
+    "name": "25C",
+    "sku": "UNS25C",
+    "volumeL": 15.5,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 25,
+    "glassMm": 5
+   },
+   {
+    "name": "30C",
+    "sku": "UNS30C",
+    "volumeL": 27,
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 30,
+    "glassMm": 5
+   },
+   {
+    "name": "40C",
+    "sku": "UNS40C",
+    "volumeL": 64,
+    "lengthCm": 40,
+    "widthCm": 40,
+    "heightCm": 40,
+    "glassMm": 6
+   },
+   {
+    "name": "45C",
+    "sku": "UNS45C",
+    "volumeL": 91,
+    "lengthCm": 45,
+    "widthCm": 45,
+    "heightCm": 45,
+    "glassMm": 6
+   },
+   {
+    "name": "50C",
+    "sku": "UNS50C",
+    "volumeL": 125,
+    "lengthCm": 50,
+    "widthCm": 50,
+    "heightCm": 50,
+    "glassMm": 8
+   },
+   {
+    "name": "60C",
+    "sku": "UNS60C",
+    "volumeL": 216,
+    "lengthCm": 60,
+    "widthCm": 60,
+    "heightCm": 60,
+    "glassMm": 10
+   }
+  ],
+  "priceFrom": 29.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-cube-glass-aquarium-tank_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-cube-glass-aquarium-tank_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-cube-glass-aquarium-tank_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-rimless-cube-glass-aquarium-tank"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-rimless-standard-aquarium",
+  "name": "Rimless Standard Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "The core UNS range, running from the 45U through the very popular 60U up to a 180 cm show tank. These are classic rectangular proportions for a full foreground to background layout, with glass thickness that scales properly as the tanks get bigger.",
+  "highlights": [
+   "Ten sizes from 45U (about 35 L) to 180U (about 648 L)",
+   "60U (60 x 36 x 36 cm, about 78 L) is the go-to mid-size planted tank",
+   "Glass from 5 mm up to 15 mm on the largest models",
+   "P, U and M suffixes give different depth and height options at 90 and 120 cm",
+   "Matching UNS stands exist for most sizes"
+  ],
+  "bestFor": "Nature-style and Dutch layouts where you want room for a proper foreground, midground and background.",
+  "watchOut": "From 75P upwards these are heavy tanks, so plan the stand and floor loading before you buy.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Glass": "Low-iron (91% clarity) Diamant glass",
+   "Silicone": "Clear German silicone",
+   "Included": "Black levelling mat"
+  },
+  "models": [
+   {
+    "name": "45U",
+    "sku": "UNS45U",
+    "volumeL": 35,
+    "lengthCm": 45,
+    "widthCm": 28,
+    "heightCm": 28,
+    "glassMm": 5
+   },
+   {
+    "name": "60U",
+    "sku": "UNS60U",
+    "volumeL": 78,
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 36,
+    "glassMm": 6
+   },
+   {
+    "name": "75P",
+    "sku": "UNS75P",
+    "volumeL": 152,
+    "lengthCm": 75,
+    "widthCm": 45,
+    "heightCm": 45,
+    "glassMm": 8
+   },
+   {
+    "name": "90P",
+    "sku": "UNS90P",
+    "volumeL": 182,
+    "lengthCm": 90,
+    "widthCm": 45,
+    "heightCm": 45,
+    "glassMm": 10
+   },
+   {
+    "name": "90U",
+    "sku": "UNS90U",
+    "volumeL": 282,
+    "lengthCm": 90,
+    "widthCm": 56,
+    "heightCm": 56,
+    "glassMm": 10
+   },
+   {
+    "name": "120P",
+    "sku": "UNS120P",
+    "volumeL": 300,
+    "lengthCm": 120,
+    "widthCm": 50,
+    "heightCm": 50,
+    "glassMm": 12
+   },
+   {
+    "name": "120M",
+    "sku": "UNS120M",
+    "volumeL": 324,
+    "lengthCm": 120,
+    "widthCm": 60,
+    "heightCm": 45,
+    "glassMm": 12
+   },
+   {
+    "name": "120U",
+    "sku": "UNS120U",
+    "volumeL": 432,
+    "lengthCm": 120,
+    "widthCm": 60,
+    "heightCm": 60,
+    "glassMm": 12
+   },
+   {
+    "name": "150U",
+    "sku": "UNS150U",
+    "volumeL": 540,
+    "lengthCm": 150,
+    "widthCm": 60,
+    "heightCm": 60,
+    "glassMm": 15
+   },
+   {
+    "name": "180U",
+    "sku": "UNS180U",
+    "volumeL": 648,
+    "lengthCm": 180,
+    "widthCm": 60,
+    "heightCm": 60,
+    "glassMm": 15
+   }
+  ],
+  "priceFrom": 104.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-standard-glass-aquarium-tank_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-standard-glass-aquarium-tank_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-standard-glass-aquarium-tank_8.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-standard-glass-aquarium-tank_9.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-rimless-standard-glass-aquarium-tank"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-rimless-shallow-aquarium",
+  "name": "Rimless Shallow Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "Low-profile tanks that put the focus on rockwork, carpets and negative space. Light reaches the substrate easily and top-down viewing becomes part of the display.",
+  "highlights": [
+   "Eleven sizes from 16S (about 2 L) up to 120S (about 259 L)",
+   "SS models at 90 and 120 cm are extra shallow (25 cm tall)",
+   "Low height means carpets need less light and are easy to reach",
+   "5 mm to 12 mm glass depending on size"
+  ],
+  "bestFor": "Iwagumi, carpet-heavy layouts and open-top scapes viewed from above as well as the front.",
+  "watchOut": "Less water column means less room for tall stems and fewer fish, and evaporation shows quickly.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Glass": "Low-iron (91% clarity) Diamant glass",
+   "Silicone": "Clear German silicone",
+   "Included": "Black levelling mat"
+  },
+  "models": [
+   {
+    "name": "16S",
+    "sku": "UNS16S",
+    "volumeL": 1.9,
+    "lengthCm": 16,
+    "widthCm": 16,
+    "heightCm": 8,
+    "glassMm": 5
+   },
+   {
+    "name": "25S",
+    "sku": "UNS25S",
+    "volumeL": 7.9,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 13,
+    "glassMm": 5
+   },
+   {
+    "name": "5S",
+    "sku": "UNS5S",
+    "volumeL": 9.5,
+    "lengthCm": 36,
+    "widthCm": 22,
+    "heightCm": 12,
+    "glassMm": 5
+   },
+   {
+    "name": "45S",
+    "sku": "UNS45S",
+    "volumeL": 22,
+    "lengthCm": 45,
+    "widthCm": 28,
+    "heightCm": 18,
+    "glassMm": 5
+   },
+   {
+    "name": "60S",
+    "sku": "UNS60S",
+    "volumeL": 39,
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 18,
+    "glassMm": 6
+   },
+   {
+    "name": "60CS",
+    "sku": "UNS60CS",
+    "volumeL": 108,
+    "lengthCm": 60,
+    "widthCm": 60,
+    "heightCm": 30,
+    "glassMm": 10
+   },
+   {
+    "name": "75S",
+    "sku": "UNS75S",
+    "volumeL": 101,
+    "lengthCm": 75,
+    "widthCm": 45,
+    "heightCm": 30,
+    "glassMm": 8
+   },
+   {
+    "name": "90SS",
+    "sku": "UNS90SS",
+    "volumeL": 126,
+    "lengthCm": 90,
+    "widthCm": 56,
+    "heightCm": 25,
+    "glassMm": 10
+   },
+   {
+    "name": "90S",
+    "sku": "UNS90S",
+    "volumeL": 181,
+    "lengthCm": 90,
+    "widthCm": 56,
+    "heightCm": 36,
+    "glassMm": 10
+   },
+   {
+    "name": "120SS",
+    "sku": "UNS120SS",
+    "volumeL": 180,
+    "lengthCm": 120,
+    "widthCm": 60,
+    "heightCm": 25,
+    "glassMm": 12
+   },
+   {
+    "name": "120S",
+    "sku": "UNS120S",
+    "volumeL": 259,
+    "lengthCm": 120,
+    "widthCm": 60,
+    "heightCm": 36,
+    "glassMm": 12
+   }
+  ],
+  "priceFrom": 29.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-shallow-glass-aquarium-tank_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-shallow-glass-aquarium-tank_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-shallow-glass-aquarium-tank_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-shallow-glass-aquarium-tank_7.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-rimless-low-shallow-glass-aquarium-tank"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-rimless-tall-aquarium",
+  "name": "Rimless Tall Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "Taller versions of the familiar UNS footprints, built for vertical layouts. Extra height gives stem plants room to grow and lets branches or rock reach up and out of the water.",
+  "highlights": [
+   "Eight sizes from 16T (about 6 L) to 60T (about 97 L)",
+   "Same footprints as the cube, nano and standard tanks, just taller",
+   "5 mm or 6 mm low-iron glass"
+  ],
+  "bestFor": "Jungle or forest-style layouts, tall stem plants and hardscape that breaks the surface.",
+  "watchOut": "Height costs light at the substrate, so pair the taller models with a stronger fixture or low-light plants at the bottom.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Glass": "Low-iron (91% clarity) Diamant glass",
+   "Silicone": "Clear German silicone",
+   "Included": "Black levelling mat"
+  },
+  "models": [
+   {
+    "name": "16T",
+    "sku": "UNS16T",
+    "volumeL": 6.1,
+    "lengthCm": 16,
+    "widthCm": 16,
+    "heightCm": 24,
+    "glassMm": 5
+   },
+   {
+    "name": "20T",
+    "sku": "UNS20T",
+    "volumeL": 11.7,
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 30,
+    "glassMm": 5
+   },
+   {
+    "name": "25T",
+    "sku": "UNS25T",
+    "volumeL": 22,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 36,
+    "glassMm": 5
+   },
+   {
+    "name": "3T",
+    "sku": "UNS3T",
+    "volumeL": 14.0,
+    "lengthCm": 31,
+    "widthCm": 19,
+    "heightCm": 24,
+    "glassMm": 5
+   },
+   {
+    "name": "5T",
+    "sku": "UNS5T",
+    "volumeL": 22,
+    "lengthCm": 36,
+    "widthCm": 22,
+    "heightCm": 28,
+    "glassMm": 5
+   },
+   {
+    "name": "30T",
+    "sku": "UNS30T",
+    "volumeL": 40,
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 45,
+    "glassMm": 5
+   },
+   {
+    "name": "45T",
+    "sku": "UNS45T",
+    "volumeL": 45,
+    "lengthCm": 45,
+    "widthCm": 28,
+    "heightCm": 36,
+    "glassMm": 5
+   },
+   {
+    "name": "60T",
+    "sku": "UNS60T",
+    "volumeL": 97,
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 45,
+    "glassMm": 6
+   }
+  ],
+  "priceFrom": 39.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-tall-glass-aquarium-tank_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-tall-glass-aquarium-tank_7.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-tall-glass-aquarium-tank_8.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-rimless-tall-glass-aquarium-tank"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-rimless-long-aquarium",
+  "name": "Rimless Long Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "Long, narrow tanks that trade depth for a panoramic view. They give schooling nano fish a good run of open water and suit layouts that flow from one end to the other.",
+  "highlights": [
+   "Four sizes: 45L, 60L, 90B and 90L (about 13 L to 81 L)",
+   "Narrow depth keeps them shelf and sideboard friendly",
+   "Good swimming length for tetras and rasboras",
+   "5 mm to 8 mm glass"
+  ],
+  "bestFor": "Sideboard or shelf setups and river-style layouts built for a shoal of small fish.",
+  "watchOut": "The shallow depth makes it harder to create a sense of perspective, so plan the layout carefully.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Glass": "Low-iron (91% clarity) Diamant glass",
+   "Silicone": "Clear German silicone",
+   "Included": "Black levelling mat"
+  },
+  "models": [
+   {
+    "name": "45L",
+    "sku": "UNS45L",
+    "volumeL": 12.9,
+    "lengthCm": 45,
+    "widthCm": 17,
+    "heightCm": 17,
+    "glassMm": 5
+   },
+   {
+    "name": "60L",
+    "sku": "UNS60L",
+    "volumeL": 24,
+    "lengthCm": 60,
+    "widthCm": 20,
+    "heightCm": 20,
+    "glassMm": 5
+   },
+   {
+    "name": "90B",
+    "sku": "UNS90B",
+    "volumeL": 45,
+    "lengthCm": 90,
+    "widthCm": 20,
+    "heightCm": 25,
+    "glassMm": 6
+   },
+   {
+    "name": "90L",
+    "sku": "UNS90L",
+    "volumeL": 81,
+    "lengthCm": 90,
+    "widthCm": 30,
+    "heightCm": 30,
+    "glassMm": 8
+   }
+  ],
+  "priceFrom": 48.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-long-glass-aquarium-tank_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-long-glass-aquarium-tank_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-long-glass-aquarium-tank_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-rimless-long-glass-aquarium-tank_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-rimless-long-glass-aquarium-tank"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-limited-edition-rimless-aquarium",
+  "name": "Limited Edition Rimless Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "Four popular UNS sizes with a frosted blue back panel and a heat-fused white bottom. The dimensions and build match the standard tanks; the difference is a built-in backdrop that makes plants and fish stand out without adding a separate background.",
+  "highlights": [
+   "Available as 5N, 45U, 60U and 90L",
+   "Satin frosted blue background panel",
+   "White fused bottom panel",
+   "Same glass thickness and sizes as the regular UNS range"
+  ],
+  "bestFor": "Someone who wants a clean backdrop without fitting a film or light panel behind the tank.",
+  "watchOut": "The backdrop is permanent, and the white base will show through anywhere the substrate is thin.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Background": "Frosted blue, satin finish",
+   "Bottom": "Heat-fused white",
+   "Glass": "Low-iron glass"
+  },
+  "models": [
+   {
+    "name": "5N",
+    "sku": "UNS5NB",
+    "volumeL": 17.4,
+    "lengthCm": 36,
+    "widthCm": 22,
+    "heightCm": 22,
+    "glassMm": 5
+   },
+   {
+    "name": "45U",
+    "sku": "UNS45UB",
+    "volumeL": 35,
+    "lengthCm": 45,
+    "widthCm": 28,
+    "heightCm": 28,
+    "glassMm": 5
+   },
+   {
+    "name": "60U",
+    "sku": "UNS60UB",
+    "volumeL": 78,
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 36,
+    "glassMm": 6
+   },
+   {
+    "name": "90L",
+    "sku": "UNS90LB",
+    "volumeL": 81,
+    "lengthCm": 90,
+    "widthCm": 30,
+    "heightCm": 30,
+    "glassMm": 8
+   }
+  ],
+  "priceFrom": 79.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-limited-edition-rimless-aquarium-tank_3.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-limited-edition-rimless-aquarium-tank_8.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-limited-edition-rimless-aquarium-tank"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-prism-glass-tank",
+  "name": "Prism Glass Tank with Flush Lid",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "Tall rimless cubes that come with a mitred glass lid sitting flush with the top. The lid has a vent hole and grips, and it cuts evaporation and keeps jumpy fish in.",
+  "highlights": [
+   "Three sizes: 20TM, 25TM and 30TM (about 12 L to 37 L)",
+   "Flush-fitting glass lid with a central vent hole included",
+   "Tall proportions for vertical planting",
+   "5 mm glass with a stabilising foam mat included"
+  ],
+  "bestFor": "Small cube aquariums where you want a lid that disappears, such as a betta, shrimp or specimen-plant nano.",
+  "watchOut": "The lid traps heat and moisture, so keep an eye on condensation and temperature under a strong light.",
+  "specs": {
+   "Edges": "Mitred corners",
+   "Lid": "Flush mitred glass lid with vent hole and grips",
+   "Included": "Foam stabilising mat"
+  },
+  "models": [
+   {
+    "name": "20TM",
+    "sku": "UNS20TM",
+    "volumeL": 12.1,
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 30,
+    "glassMm": 5
+   },
+   {
+    "name": "25TM",
+    "sku": "UNS25TM",
+    "volumeL": 22,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 36,
+    "glassMm": 5
+   },
+   {
+    "name": "30TM",
+    "sku": "UNS30TM",
+    "volumeL": 37,
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 45,
+    "glassMm": 5
+   }
+  ],
+  "priceFrom": 69.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-prism-glass-tank-with-flush-lid_8.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-prism-glass-tank-with-flush-lid_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-prism-glass-tank-with-flush-lid_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-prism-glass-tank-with-flush-lid"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-all-in-one-aquarium",
+  "name": "All-In-One Aquarium 30A",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "A 30 cm rimless cube with a filter chamber built into the back behind a white panel. It hides the pump and media, so you avoid a canister and external pipes on a small tank.",
+  "highlights": [
+   "30 x 30 x 30 cm with about 21 L of display water",
+   "Rear filter chamber holds about 5.7 L",
+   "White background panel hides the equipment",
+   "Outflow nozzle included; pump and media are separate"
+  ],
+  "bestFor": "A tidy desktop nano where you do not want tubing or a canister on show.",
+  "watchOut": "The pump is not included (UNS suggests the Sigma 5), and the chamber leaves less room for media than a canister would.",
+  "specs": {
+   "Edges": "45 degree mitred corners",
+   "Glass": "Low-iron (91% clarity) Diamant glass",
+   "Colour": "White background",
+   "Included": "Levelling mat, Aquario Neo outlet"
+  },
+  "models": [
+   {
+    "name": "30A",
+    "sku": "UNS30AW",
+    "volumeL": 20.8,
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 30,
+    "glassMm": 5,
+    "extra": {
+     "Filter chamber": "About 5.7 L"
+    }
+   }
+  ],
+  "priceFrom": 159.5,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-all-in-one-aquarium-tank-white_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-all-in-one-aquarium-tank-white_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-all-in-one-aquarium-tank-white_3.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-all-in-one-aquarium-tank-white_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-all-in-one-aquarium-tank-white"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-90-degree-rimless-aquarium",
+  "name": "90-Degree Rimless Aquarium",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "The budget side of the UNS range: rimless tanks with plain 90 degree joins instead of mitred corners. The glass is clear and the sizes cover common cube, nano and 45 to 60 cm footprints for noticeably less money.",
+  "highlights": [
+   "Cube, nano and standard sizes from 16 cm to 60 cm",
+   "Butt-joined 90 degree corners rather than mitred edges",
+   "5 mm glass (6 mm on the 60 cm tanks)",
+   "Levelling mat included"
+  ],
+  "bestFor": "A first planted tank or a shrimp and betta setup where cost matters more than seamless corners.",
+  "watchOut": "The glass edges are visible at the corners, which some people notice once the tank is scaped.",
+  "specs": {
+   "Edges": "90 degree butt joints",
+   "Glass": "Ultra-clear glass",
+   "Included": "Black levelling mat"
+  },
+  "models": [
+   {
+    "name": "16 cm cube",
+    "sku": "CFHL16",
+    "volumeL": 3.8,
+    "lengthCm": 16,
+    "widthCm": 16,
+    "heightCm": 16,
+    "glassMm": 5
+   },
+   {
+    "name": "20 cm cube",
+    "sku": "CFHL20",
+    "volumeL": 7.6,
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 20,
+    "glassMm": 5
+   },
+   {
+    "name": "25 cm cube",
+    "sku": "CFHL25",
+    "volumeL": 15.1,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 25,
+    "glassMm": 5
+   },
+   {
+    "name": "30 cm cube",
+    "sku": "CFHL30",
+    "volumeL": 26,
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 30,
+    "glassMm": 5
+   },
+   {
+    "name": "30 cm nano",
+    "sku": "CFHL31",
+    "volumeL": 12.0,
+    "lengthCm": 30,
+    "widthCm": 18,
+    "heightCm": 24,
+    "glassMm": 5
+   },
+   {
+    "name": "31 cm nano",
+    "sku": "CFHL312",
+    "volumeL": 11.4,
+    "lengthCm": 31,
+    "widthCm": 19,
+    "heightCm": 19,
+    "glassMm": 5
+   },
+   {
+    "name": "36 cm nano",
+    "sku": "CFHL362",
+    "volumeL": 15.1,
+    "lengthCm": 36,
+    "widthCm": 22,
+    "heightCm": 22,
+    "glassMm": 5
+   },
+   {
+    "name": "36 cm nano tall",
+    "sku": "CFHL36",
+    "volumeL": 21,
+    "lengthCm": 36,
+    "widthCm": 22,
+    "heightCm": 26,
+    "glassMm": 5
+   },
+   {
+    "name": "45 cm",
+    "sku": "CFHL45",
+    "volumeL": 35,
+    "lengthCm": 45,
+    "widthCm": 28,
+    "heightCm": 28,
+    "glassMm": 5
+   },
+   {
+    "name": "45 cm tall",
+    "sku": "CFHL452",
+    "volumeL": 36,
+    "lengthCm": 45,
+    "widthCm": 27,
+    "heightCm": 30,
+    "glassMm": 5
+   },
+   {
+    "name": "60 cm slim",
+    "sku": "CFHL602",
+    "volumeL": 64,
+    "lengthCm": 60,
+    "widthCm": 30,
+    "heightCm": 36,
+    "glassMm": 6
+   },
+   {
+    "name": "60 cm",
+    "sku": "CFHL60",
+    "volumeL": 76,
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 36,
+    "glassMm": 6
+   }
+  ],
+  "priceFrom": 21.59,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-cube-rimless-aquarium_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-standard-rimless-aquarium_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-nano-rimless-aquarium_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-cube-rimless-aquarium_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/standard-rimless-aquarium"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-foresta-integrated-paludarium",
+  "name": "Foresta Integrated Paludarium",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A complete paludarium in one glass box: a waterfall back wall covered in fibre mats, a hidden rear filter chamber with a pump, and an ultrasonic mister for the fog effect. You can grow mosses and rhizome plants on the wall and aquatic plants in the pool below.",
+  "highlights": [
+   "Four sizes: 35E, 60E, 75E and 90E",
+   "Waterfall wall keeps the plant mats wet for mosses, ferns and Bucephalandra",
+   "Rear chamber with USB pump and bio sponges included",
+   "One Atomizer mister on the 35E and 60E, two on the 75E and 90E",
+   "6 mm glass on the smaller two, 8 mm on the larger two"
+  ],
+  "bestFor": "Anyone who wants a living moss wall or a land-and-water display without building the plumbing themselves.",
+  "watchOut": "Constant misting and flowing water need regular top-ups and cleaning, and the rear chamber eats into display depth.",
+  "specs": {
+   "Included": "Pump, bio sponges, Atomizer mist maker, plant pad mats, Foresta LINE thread, chamber lid, foam mat",
+   "Pump rating": "IPX8 submersible"
+  },
+  "models": [
+   {
+    "name": "35E",
+    "sku": "UNSF35E",
+    "volumeL": 24,
+    "lengthCm": 35,
+    "widthCm": 35,
+    "heightCm": 45,
+    "glassMm": 6,
+    "flowLph": 178,
+    "headM": 0.99,
+    "extra": {
+     "Water volume": "Display 11.4 L, rear chamber 12.5 L",
+     "Pump power": "DC 5 V",
+     "Plant pad mats": "6",
+     "Atomizer misters": "1"
+    }
+   },
+   {
+    "name": "60E",
+    "sku": "UNSF60E",
+    "volumeL": 47,
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 45,
+    "glassMm": 6,
+    "flowLph": 600,
+    "headM": 1.5,
+    "extra": {
+     "Water volume": "Display 20 L, rear chamber 26 L",
+     "Pump power": "DC 5 V",
+     "Plant pad mats": "12",
+     "Atomizer misters": "1"
+    }
+   },
+   {
+    "name": "75E",
+    "sku": "UNSF75E",
+    "volumeL": 82,
+    "lengthCm": 75,
+    "widthCm": 45,
+    "heightCm": 60,
+    "glassMm": 8,
+    "flowLph": 600,
+    "headM": 1.1,
+    "extra": {
+     "Water volume": "Display 45 L, rear chamber 37 L",
+     "Pump power": "DC 12 V",
+     "Plant pad mats": "18",
+     "Atomizer misters": "2"
+    }
+   },
+   {
+    "name": "90E",
+    "sku": "UNSF90E",
+    "volumeL": 116,
+    "lengthCm": 90,
+    "widthCm": 56,
+    "heightCm": 60,
+    "glassMm": 8,
+    "flowLph": 600,
+    "headM": 1.1,
+    "extra": {
+     "Water volume": "Display 71 L, rear chamber 44 L",
+     "Pump power": "DC 12 V",
+     "Plant pad mats": "24",
+     "Atomizer misters": "2"
+    }
+   }
+  ],
+  "priceFrom": 324.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-foresta-35e-integrated-paludarium_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-foresta-60e-integrated-paludarium_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-foresta-60e-integrated-paludarium_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-foresta-75e-integrated-paludarium_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-foresta-integrated-paludarium-60e"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-paludarium-tank",
+  "name": "Paludarium Tank",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A rimless tank with a tall back and a low front, so you get a pool of water at the front and room for land and emersed plants behind it. Two 20 mm holes in the back panel take UNS bulkheads, letting a Delta canister run the water section.",
+  "highlights": [
+   "Three sizes: 5E, 45E and 60E (about 8 L to 26 L of water)",
+   "Stepped glass: tall back panel, low front panel",
+   "Two pre-drilled 20 mm holes for bulkhead fittings",
+   "Also sold as an Enclosure Kit with two glass lids, clips and bulkheads to raise humidity"
+  ],
+  "bestFor": "Wabi-kusa and riparian layouts where you want to plumb in a canister filter and a mister.",
+  "watchOut": "It is an open build; you need to add your own filter, mister and light, and the enclosure lids are not airtight.",
+  "specs": {
+   "Edges": "Mitred corners",
+   "Options": "Tank only, tank with bulkhead set, or Enclosure Kit with lids and clips"
+  },
+  "models": [
+   {
+    "name": "5E",
+    "sku": "UNS5E",
+    "volumeL": 7.9,
+    "lengthCm": 36,
+    "widthCm": 22,
+    "heightCm": 22,
+    "glassMm": 5,
+    "extra": {
+     "Front panel height": "10 cm",
+     "Bulkhead holes": "2 x 20 mm in the back panel"
+    }
+   },
+   {
+    "name": "45E",
+    "sku": "UNS45E",
+    "volumeL": 14.4,
+    "lengthCm": 45,
+    "widthCm": 28,
+    "heightCm": 28,
+    "glassMm": 5,
+    "extra": {
+     "Front panel height": "12 cm",
+     "Bulkhead holes": "2 x 20 mm in the back panel"
+    }
+   },
+   {
+    "name": "60E",
+    "sku": "UNS60E",
+    "volumeL": 26,
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 36,
+    "glassMm": 6,
+    "extra": {
+     "Front panel height": "14 cm",
+     "Bulkhead holes": "2 x 20 mm in the back panel"
+    }
+   }
+  ],
+  "priceFrom": 74.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-paludarium-tank-system_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-paludarium-tank-system_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-paludarium-tank-system_3.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-paludarium-tank-enclosure-kit_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-paludarium-tank-system"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-atomizer-mister-set",
+  "name": "Atomizer Mister Set",
+  "category": "paludarium",
+  "subtype": "misting",
+  "summary": "A small ultrasonic fogger that sits just under the water and sends a low layer of mist across the surface. It raises humidity for emersed plants and looks good doing it.",
+  "highlights": [
+   "Compact unit, about 5 x 4 x 4 cm",
+   "Needs at least 1.3 cm of water above it and cuts out if the level drops",
+   "Comes with a splash guard and three spare diffusion plates",
+   "Included with every Foresta paludarium"
+  ],
+  "bestFor": "Open shallow tanks and paludariums with emersed growth that likes humid air.",
+  "watchOut": "Diffusion plates wear and scale up over time, and hard water makes that happen faster.",
+  "specs": {
+   "Type": "Ultrasonic mist maker",
+   "Included": "Mist maker, power plug, 3 diffusion plates, plate key, splash guard",
+   "Colour": "Black"
+  },
+  "models": [
+   {
+    "name": "Atomizer",
+    "sku": "UNSAS01",
+    "lengthCm": 5,
+    "widthCm": 3.8,
+    "heightCm": 3.8
+   }
+  ],
+  "priceFrom": 44.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-atomizer-mister-set_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-atomizer-mister-set_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-atomizer-mister-set_11.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-atomizer-mister-set_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/ultum-nature-systems-atomizer-mister-set"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-nimbus",
+  "name": "Nimbus",
+  "category": "paludarium",
+  "subtype": "misting",
+  "summary": "A programmable misting system with its own reservoir, pump and nozzles. You set the interval, duration and frequency, and it sprays a fine mist through up to five nozzles to keep enclosed plants from drying out.",
+  "highlights": [
+   "About 12 L reservoir",
+   "Four spray nozzles supplied, supports up to five",
+   "Programmable interval, duration and frequency",
+   "Comes with 10 m of tubing, connectors and a tube cutter"
+  ],
+  "bestFor": "Enclosed paludariums and terrariums where plants need regular misting while you are away.",
+  "watchOut": "Nozzle clips are sold separately, and fine nozzles clog with hard water, so use RO or distilled water.",
+  "specs": {
+   "Colour": "Frost white",
+   "Build": "ABS and PC",
+   "Included": "Nimbus unit, 2 x 10 m tubing, 4 nozzles, connectors, plugs, clamps, tube cutter, power supply"
+  },
+  "models": [
+   {
+    "name": "Nimbus",
+    "sku": "UNSNMB1",
+    "powerW": 20,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 38,
+    "weightKg": 3.7,
+    "extra": {
+     "Reservoir": "About 12 L",
+     "Nozzles": "4 included, 5 max"
+    }
+   }
+  ],
+  "priceFrom": 189.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-nimbus_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-nimbus_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-nimbus_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-nimbus_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-nimbus"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-aquarium-stand",
+  "name": "Aquarium Tank Stand",
+  "category": "stands",
+  "subtype": "cabinet",
+  "summary": "Pre-assembled wooden cabinets sized to match UNS tanks exactly, from the 30C cube up to the 180U. Each has a soft-close door and cut-outs in the sides and back for hoses and cables, with enough room inside for a canister and a CO2 cylinder.",
+  "highlights": [
+   "Sixteen sizes matched to UNS cube, U, P and L tanks",
+   "All stand 80 cm tall",
+   "Arrives fully assembled",
+   "Four finishes: Oak, Natural Wood Grain, Jet Black and Piano White",
+   "Side and rear openings for filter tubing and CO2 line"
+  ],
+  "bestFor": "A UNS tank owner who wants a stand that matches the footprint to the centimetre.",
+  "watchOut": "The finish is water resistant, not waterproof, so wipe up drips and spills promptly.",
+  "specs": {
+   "Construction": "Wood with satin water-resistant finish",
+   "Finishes": "Oak, Natural Wood Grain, Jet Black, Piano White",
+   "Door": "Soft-close"
+  },
+  "models": [
+   {
+    "name": "30C",
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 30C, 30T, 30A AIO"
+    }
+   },
+   {
+    "name": "35C",
+    "lengthCm": 35,
+    "widthCm": 35,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 35E Foresta, 35A Dual AIO"
+    }
+   },
+   {
+    "name": "40C",
+    "lengthCm": 40,
+    "widthCm": 40,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 40C"
+    }
+   },
+   {
+    "name": "45C",
+    "lengthCm": 45,
+    "widthCm": 45,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 45C"
+    }
+   },
+   {
+    "name": "50C",
+    "lengthCm": 50,
+    "widthCm": 50,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 50C"
+    }
+   },
+   {
+    "name": "60C",
+    "lengthCm": 60,
+    "widthCm": 60,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 60C, 60CS"
+    }
+   },
+   {
+    "name": "45U",
+    "lengthCm": 45,
+    "widthCm": 28,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 45U, 45T, 45S, 45E Paludarium"
+    }
+   },
+   {
+    "name": "60U",
+    "lengthCm": 60,
+    "widthCm": 36,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 60U, 60T, 60S, 60E Paludarium, 60E Foresta"
+    }
+   },
+   {
+    "name": "75P",
+    "lengthCm": 75,
+    "widthCm": 45,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 75P, 75S"
+    }
+   },
+   {
+    "name": "90L",
+    "lengthCm": 90,
+    "widthCm": 30,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 90L"
+    }
+   },
+   {
+    "name": "90P",
+    "lengthCm": 90,
+    "widthCm": 45,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 90P"
+    }
+   },
+   {
+    "name": "90U",
+    "lengthCm": 90,
+    "widthCm": 56,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 90U, 90S"
+    }
+   },
+   {
+    "name": "120P",
+    "lengthCm": 120,
+    "widthCm": 50,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 120P"
+    }
+   },
+   {
+    "name": "120U",
+    "lengthCm": 120,
+    "widthCm": 60,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 120U, 120S"
+    }
+   },
+   {
+    "name": "150U",
+    "lengthCm": 150,
+    "widthCm": 60,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 150U"
+    }
+   },
+   {
+    "name": "180U",
+    "lengthCm": 180,
+    "widthCm": 60,
+    "heightCm": 80,
+    "extra": {
+     "Fits": "UNS 180U"
+    }
+   }
+  ],
+  "priceFrom": 318.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquarium-tank-stand-oak_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquarium-tank-stand-jet-black_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquarium-tank-stand-piano-white_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquarium-tank-stand-natural-wood-grain_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/ultum-nature-systems-aquarium-tank-stand-oak"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-aluminium-aquarium-stand",
+  "name": "Aluminium Aquarium Stand",
+  "category": "stands",
+  "subtype": "cabinet",
+  "summary": "An aluminium cabinet for the larger UNS tanks, borrowed from the brand's reef systems. There are no steel hinges to rust; the doors are magnetic and lift off completely, which makes working on a filter or CO2 setup inside much easier.",
+  "highlights": [
+   "Seven sizes from 60C to 180U",
+   "Fully removable magnetic doors (3 to 5 depending on size)",
+   "Levelling feet included",
+   "Grey or white finish",
+   "83 cm tall"
+  ],
+  "bestFor": "Large planted tanks where rust-free construction and full access to the cabinet matter.",
+  "watchOut": "It needs assembling, and it costs noticeably more than the wooden stands.",
+  "specs": {
+   "Construction": "Aluminium frame and panels",
+   "Finishes": "Grey, White",
+   "Included": "Levelling feet, anti-scratch bumper pads, assembly hardware",
+   "Warranty": "1 year"
+  },
+  "models": [
+   {
+    "name": "60C",
+    "lengthCm": 60,
+    "widthCm": 60,
+    "heightCm": 83,
+    "extra": {
+     "Fits": "UNS 60C, 60CS",
+     "Removable doors": "3"
+    }
+   },
+   {
+    "name": "75P",
+    "lengthCm": 75,
+    "widthCm": 45,
+    "heightCm": 83,
+    "extra": {
+     "Fits": "UNS 75P, 75S",
+     "Removable doors": "4"
+    }
+   },
+   {
+    "name": "90U",
+    "lengthCm": 90,
+    "widthCm": 56,
+    "heightCm": 83,
+    "extra": {
+     "Fits": "UNS 90U, 90S",
+     "Removable doors": "4"
+    }
+   },
+   {
+    "name": "120P",
+    "lengthCm": 120,
+    "widthCm": 50,
+    "heightCm": 83,
+    "extra": {
+     "Fits": "UNS 120P",
+     "Removable doors": "4"
+    }
+   },
+   {
+    "name": "120U",
+    "lengthCm": 120,
+    "widthCm": 60,
+    "heightCm": 83,
+    "extra": {
+     "Fits": "UNS 120U, 120S",
+     "Removable doors": "4"
+    }
+   },
+   {
+    "name": "150U",
+    "lengthCm": 150,
+    "widthCm": 60,
+    "heightCm": 83,
+    "extra": {
+     "Fits": "UNS 150U",
+     "Removable doors": "5"
+    }
+   },
+   {
+    "name": "180U",
+    "lengthCm": 180,
+    "widthCm": 60,
+    "heightCm": 83,
+    "extra": {
+     "Fits": "UNS 180U",
+     "Removable doors": "5"
+    }
+   }
+  ],
+  "priceFrom": 749.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aluminum-aquarium-stand_11.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aluminum-aquarium-stand_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aluminum-aquarium-stand_7.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/ultum-nature-systems-aluminum-aquarium-stand"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-delta-canister-filter",
+  "name": "Delta Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A compact white canister range that covers everything from a 5N nano to a 120 cm tank. Version 2 ships with Aquario Neo Flow lily pipes and media, it self-primes, and the baskets lift out separately for cleaning.",
+  "highlights": [
+   "Four sizes: Delta 30, 60, 90 and 120",
+   "Rated for tanks up to about 61 L, 102 L, 250 L and 348 L",
+   "Low power draw: 7 W to 24 W",
+   "Aquario Neo Flow inflow and outflow pipes included (V2)",
+   "Neo Flow add-ons (skimmer, CO2 mixer, gentle outlet) fit straight on"
+  ],
+  "bestFor": "Nano to mid-size planted tanks where you want a small, tidy canister with clear lily pipes out of the box.",
+  "watchOut": "Real flow at working height is roughly half the headline figure, so size up if you run CO2 in a densely planted tank.",
+  "specs": {
+   "Build": "ABS and PC",
+   "Priming": "Self-priming",
+   "Included": "Aquario Neo Flow lily pipes, filter media (V2)",
+   "Mains": "110 V 60 Hz (US listing)"
+  },
+  "models": [
+   {
+    "name": "Delta 30",
+    "sku": "UNSDTA30",
+    "flowLph": 454,
+    "headM": 0.71,
+    "tankMaxL": 61,
+    "powerW": 7,
+    "mediaL": 1.0,
+    "lengthCm": 18.2,
+    "widthCm": 12.2,
+    "heightCm": 20.7,
+    "extra": {
+     "Circulation flow (at working head)": "227 L/h",
+     "Canister volume": "2.0 L"
+    }
+   },
+   {
+    "name": "Delta 60",
+    "sku": "UNSDTA60",
+    "flowLph": 568,
+    "headM": 1.12,
+    "tankMaxL": 102,
+    "powerW": 8,
+    "mediaL": 1.5,
+    "lengthCm": 18.2,
+    "widthCm": 12.2,
+    "heightCm": 26.0,
+    "extra": {
+     "Circulation flow (at working head)": "341 L/h",
+     "Canister volume": "2.5 L",
+     "Hose": "12/16 mm"
+    },
+    "hoseMm": 12
+   },
+   {
+    "name": "Delta 90",
+    "sku": "UNSDTA90",
+    "flowLph": 946,
+    "headM": 1.6,
+    "tankMaxL": 250,
+    "powerW": 16,
+    "mediaL": 3.2,
+    "lengthCm": 22.5,
+    "widthCm": 20.6,
+    "heightCm": 40.7,
+    "extra": {
+     "Circulation flow (at working head)": "454 L/h",
+     "Canister volume": "5.7 L",
+     "Hose": "12/16 mm"
+    },
+    "hoseMm": 12
+   },
+   {
+    "name": "Delta 120",
+    "sku": "UNSDTA120",
+    "flowLph": 1325,
+    "headM": 1.6,
+    "tankMaxL": 348,
+    "powerW": 24,
+    "mediaL": 4.5,
+    "lengthCm": 24.5,
+    "widthCm": 22.1,
+    "heightCm": 46.6,
+    "extra": {
+     "Circulation flow (at working head)": "757 L/h",
+     "Canister volume": "8.5 L",
+     "Hose": "16/22 mm"
+    },
+    "hoseMm": 16
+   }
+  ],
+  "priceFrom": 114.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-delta-30-aquarium-tank-canister-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-delta-90-aquarium-tank-canister-filter_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/ultum-nature-systems-delta-60-aquarium-tank-canister-filter"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-blitz-stainless-steel-filter",
+  "name": "Blitz Stainless Steel Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A tiny canister filter with a brushed stainless steel body and matching steel pipes. It is made for nano tanks where a plastic canister would look out of place, and it runs quietly on low wattage.",
+  "highlights": [
+   "Two sizes: 6 oz (tanks up to about 10 L) and 32 oz (up to about 45 L)",
+   "Stainless steel canister with matching inflow and outflow pipes",
+   "6 oz runs from USB; 32 oz uses a 12 V supply",
+   "Only 2 W and 5 W"
+  ],
+  "bestFor": "Nano and desktop tanks where the filter sits on show next to the aquarium.",
+  "watchOut": "Media capacity is small, especially on the 6 oz, so expect to clean it more often than a bigger canister.",
+  "specs": {
+   "Build": "Stainless steel and ABS",
+   "Colour": "Stainless steel",
+   "Included": "Canister, steel inflow and outflow pipes, clear tubing, power cable, tool, foam mat"
+  },
+  "models": [
+   {
+    "name": "6 oz",
+    "sku": "UNSBF61",
+    "flowLph": 57,
+    "headM": 0.51,
+    "tankMaxL": 9.8,
+    "powerW": 2,
+    "lengthCm": 8.7,
+    "widthCm": 7.5,
+    "heightCm": 15,
+    "extra": {
+     "Canister volume": "0.2 L",
+     "Power": "5 V USB"
+    }
+   },
+   {
+    "name": "32 oz",
+    "sku": "UNSBF321",
+    "flowLph": 208,
+    "headM": 2.01,
+    "tankMaxL": 45,
+    "powerW": 5,
+    "hoseMm": 12,
+    "lengthCm": 12,
+    "widthCm": 14,
+    "heightCm": 22,
+    "extra": {
+     "Canister volume": "1 L",
+     "Power": "12 V",
+     "Hose": "12/16 mm"
+    }
+   }
+  ],
+  "priceFrom": 199.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-blitz-stainless-steel-filter_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-blitz-stainless-steel-filter_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-blitz-stainless-steel-filter_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-blitz-stainless-steel-filter_13.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-blitz-stainless-steel-filter"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-sigma-water-pump",
+  "name": "Sigma Water Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "Small submersible DC pumps with an adjustable flow dial. They are the return pumps UNS pairs with its all-in-one tanks, and they also work as a general-purpose pump in a sump or DIY build.",
+  "highlights": [
+   "Four sizes from about 300 L/h to 1,500 L/h",
+   "Flow is adjustable on the pump",
+   "Low-voltage DC (5 V on the Sigma 5, 12 V on the others)",
+   "IPX8 fully submersible"
+  ],
+  "bestFor": "Powering the rear chamber of an all-in-one tank, or a small custom filter or sump.",
+  "watchOut": "Pick the size to match your tank's chamber; the listed flow drops quickly as head height goes up.",
+  "specs": {
+   "Rating": "IPX8 submersible",
+   "Control": "Adjustable flow"
+  },
+  "models": [
+   {
+    "name": "Sigma 5",
+    "sku": "UNSSG05",
+    "flowLph": 299,
+    "headM": 0.79,
+    "powerW": 5,
+    "lengthCm": 5.0,
+    "widthCm": 5.0,
+    "heightCm": 4.7,
+    "extra": {
+     "Voltage": "DC 5 V",
+     "Outlet size": "3/8 in, 1/2 in"
+    }
+   },
+   {
+    "name": "Sigma 10",
+    "sku": "UNSSG10",
+    "flowLph": 600,
+    "headM": 1.1,
+    "powerW": 10,
+    "lengthCm": 4.5,
+    "widthCm": 6.7,
+    "heightCm": 7.3,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Outlet size": "3/8 in, 1/2 in"
+    }
+   },
+   {
+    "name": "Sigma 15",
+    "sku": "UNSSG15",
+    "flowLph": 900,
+    "headM": 1.58,
+    "powerW": 15,
+    "lengthCm": 5.1,
+    "widthCm": 7.5,
+    "heightCm": 9.5,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Outlet size": "1/2 in"
+    }
+   },
+   {
+    "name": "Sigma 20",
+    "sku": "UNSSG20",
+    "flowLph": 1499,
+    "headM": 2.5,
+    "powerW": 20,
+    "lengthCm": 6.2,
+    "widthCm": 10.0,
+    "heightCm": 10.5,
+    "extra": {
+     "Voltage": "DC 12 V",
+     "Outlet size": "1/2 in, 5/8 in"
+    }
+   }
+  ],
+  "priceFrom": 12.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-sigma-aquarium-water-pump_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-sigma-aquarium-water-pump_3.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-sigma-aquarium-water-pump_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-sigma-aquarium-water-pump"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-delta-mini-surface-skimmer",
+  "name": "Delta Mini Surface Skimmer",
+  "category": "plumbing",
+  "subtype": "surface-skimmer",
+  "summary": "A small stand-alone skimmer that pulls oily film and floating debris off the surface. The outlet sits below the waterline, so it clears the surface without splashing away the CO2 you are paying for.",
+  "highlights": [
+   "Up to about 250 L/h, adjustable",
+   "Only 3.5 W",
+   "Suits tanks of roughly 30 to 180 L",
+   "Works as a tiny extra filter as well as a skimmer"
+  ],
+  "bestFor": "CO2-injected planted tanks that keep getting a protein film on the surface.",
+  "watchOut": "It is white and sits in the tank, so it is visible in a minimal layout.",
+  "specs": {
+   "Colour": "White",
+   "Flow control": "Adjustable"
+  },
+  "models": [
+   {
+    "name": "Delta Mini",
+    "sku": "UNSDTAMINI",
+    "flowLph": 250,
+    "powerW": 3.5,
+    "tankMinL": 30,
+    "tankMaxL": 182,
+    "lengthCm": 5.6,
+    "widthCm": 6.6,
+    "heightCm": 13.7
+   }
+  ],
+  "priceFrom": 21.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-delta-mini-surface-skimmer_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-delta-mini-surface-skimmer_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-delta-mini-surface-skimmer_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-delta-mini-surface-skimmer_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/ultum-nature-systems-delta-mini-surface-skimmer"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-micro-aquarium-heater",
+  "name": "Micro Aquarium Heater",
+  "category": "heaters",
+  "subtype": "smart",
+  "summary": "A very small heater for pico and nano tanks, with the thermostat and display on an external controller on the cable. The heating element is tiny enough to hide behind a rock, and it switches itself off if the water drops too low.",
+  "highlights": [
+   "10 W for about 4 to 8 L, 20 W for about 8 to 19 L",
+   "External digital controller on the cable",
+   "Low-water auto shut-off",
+   "10 W runs from USB; 20 W uses a mains plug"
+  ],
+  "bestFor": "Betta tanks and nano cubes under 20 litres where a normal glass heater would dominate the tank.",
+  "watchOut": "The 20 W version has a US mains plug and 110 V rating, so check it suits your country's supply.",
+  "specs": {
+   "Control": "External digital thermostat",
+   "Safety": "Auto shut-off when water level is low",
+   "Mains": "110 V"
+  },
+  "models": [
+   {
+    "name": "10 W",
+    "sku": "MAH10W",
+    "heaterW": 10,
+    "powerW": 10,
+    "tankMinL": 3.8,
+    "tankMaxL": 7.6,
+    "extra": {
+     "Power": "USB"
+    }
+   },
+   {
+    "name": "20 W",
+    "sku": "MAH20W",
+    "heaterW": 20,
+    "powerW": 20,
+    "tankMinL": 7.6,
+    "tankMaxL": 18.9,
+    "extra": {
+     "Power": "US mains plug"
+    }
+   }
+  ],
+  "priceFrom": 19.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-aquarium-heater_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-aquarium-heater_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-aquarium-heater_3.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-aquarium-heater_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/micro-aquarium-heater"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-titan-1-rgb-led",
+  "name": "Titan 1 RGB LED",
+  "category": "lights",
+  "subtype": "pendant",
+  "summary": "A 90 W hanging LED with 200 RGB diodes in a wide aluminium body. One unit covers a 60 to 90 cm tank, and the wide spread keeps the light even across the footprint rather than hot in the middle.",
+  "highlights": [
+   "90 W with 200 RGB LEDs",
+   "One unit covers a 60 to 90 cm tank; use two or more for bigger tanks",
+   "About 300 PAR directly under the light at 30 cm",
+   "Exposed heat-sink fins to shed heat",
+   "Brushed black or silver aluminium"
+  ],
+  "bestFor": "Mid-size high-tech planted tanks where you want a pendant hung above an open-top rimless tank.",
+  "watchOut": "It is designed to hang at least 30 cm above the water; the ceiling or hanging kit is sold separately.",
+  "specs": {
+   "LEDs": "200 RGB",
+   "Body": "Aircraft-grade aluminium",
+   "Colours": "Brushed black, brushed silver",
+   "Mounting": "Suspension wires (97 cm) included; hanging kit sold separately"
+  },
+  "models": [
+   {
+    "name": "Titan 1",
+    "sku": "UNSTITAN2",
+    "powerW": 90,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 90,
+    "weightKg": 2.4,
+    "extra": {
+     "PAR at 30 cm (centre)": "300",
+     "PAR at 46 cm (centre)": "202",
+     "PAR at 61 cm (centre)": "170",
+     "Recommended hanging height": "30 cm or more above the tank"
+    }
+   }
+  ],
+  "priceFrom": 424.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-titan-1-rgb-led-aquarium-light_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-titan-1-rgb-led-aquarium-light_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-titan-1-rgb-led-aquarium-light_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-titan-1-rgb-led-aquarium-light_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/ultum-nature-systems-titan-1-led-rgb-aquarium-light"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-micro-co2-kit",
+  "name": "Micro CO2 Kit",
+  "category": "co2",
+  "subtype": "kit",
+  "summary": "The smallest complete pressurised CO2 setup UNS makes. It pairs the Micro regulator, solenoid and bubble counter with a 95 g disposable cartridge on a stand, so a nano tank can run on a timer without a big cylinder in sight.",
+  "highlights": [
+   "Micro regulator, Micro solenoid and bubble counter included",
+   "Runs on 95 g disposable CO2 cartridges",
+   "Cartridge stand, tubing and diffuser included",
+   "Small enough to sit beside a desktop tank"
+  ],
+  "bestFor": "Nano and desktop planted tanks where you want timed, pressurised CO2 on a small budget.",
+  "watchOut": "Disposable cartridges cost more per gram than a refillable cylinder, so it gets expensive on bigger tanks.",
+  "specs": {
+   "Regulator": "UNS Micro CO2 Regulator",
+   "Solenoid": "Yes (Micro Solenoid)",
+   "Cylinder": "95 g disposable cartridge",
+   "Included": "Regulator, solenoid, bubble counter, cartridge, stand, tubing, diffuser"
+  },
+  "models": [
+   {
+    "name": "Micro CO2 Kit",
+    "sku": "UNSMCKC01"
+   }
+  ],
+  "priceFrom": 136.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-kit_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-kit_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/micro-co2-bundle"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-nano-co2-kit",
+  "name": "Nano CO2 Kit",
+  "category": "co2",
+  "subtype": "kit",
+  "summary": "A cartridge-based kit built around the Mini Dual Stage regulator. You get the stability of a dual-stage regulator with a built-in solenoid, but in a size that fits beside a small tank.",
+  "highlights": [
+   "Mini Dual Stage regulator with built-in solenoid",
+   "95 g disposable cartridge on a stand",
+   "Tubing and diffuser included",
+   "Regulator can later move to a paintball or full-size cylinder"
+  ],
+  "bestFor": "Tanks of roughly 4 to 40 litres where you want dual-stage stability without a large cylinder.",
+  "watchOut": "A cartridge lasts around two to three months on a small tank, so running costs add up compared with refilling.",
+  "specs": {
+   "Regulator": "UNS Mini CO2 Dual Stage",
+   "Stage": "Dual",
+   "Solenoid": "Built in",
+   "Cylinder": "95 g disposable cartridge",
+   "Included": "Regulator, cartridge, stand, CO2 tubing, diffuser"
+  },
+  "models": [
+   {
+    "name": "Nano CO2 Kit",
+    "sku": "UNSCO2-KIT-MINI3"
+   }
+  ],
+  "priceFrom": 197.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-nano-co2-kit_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/nano-co2-kit"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-paintball-co2-kit",
+  "name": "Paintball CO2 Kit",
+  "category": "co2",
+  "subtype": "kit",
+  "summary": "The Mini Dual Stage regulator paired with a refillable paintball cylinder. It holds a lot more gas than a cartridge but still fits in a small cabinet, which makes it a sensible middle step.",
+  "highlights": [
+   "Mini Dual Stage regulator with built-in solenoid",
+   "16 oz or 24 oz refillable paintball cylinder",
+   "Cylinder has its own on/off valve",
+   "Tubing and diffuser included"
+  ],
+  "bestFor": "Small to medium planted tanks where cartridges run out too fast but a full-size cylinder will not fit.",
+  "watchOut": "The cylinder ships empty, so you need a local refill source before you can start.",
+  "specs": {
+   "Regulator": "UNS Mini CO2 Dual Stage",
+   "Stage": "Dual",
+   "Solenoid": "Built in",
+   "Cylinder": "Refillable paintball (ships empty)",
+   "Included": "Regulator, cylinder, CO2 tubing, diffuser"
+  },
+  "models": [
+   {
+    "name": "16 oz",
+    "sku": "UNSCPB16K"
+   },
+   {
+    "name": "24 oz",
+    "sku": "UNSCPB24K"
+   }
+  ],
+  "priceFrom": 199.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-paintball-cylinder-kit_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-co2-paintball-cylinder-kit"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-pro-co2-kit",
+  "name": "Pro CO2 Kit",
+  "category": "co2",
+  "subtype": "kit",
+  "summary": "A full-size refillable CO2 system: a UNS Pro cylinder with the Pro Dual Stage regulator (the 2.5 lb kit uses the Mini regulator). It is the long-term option, with fewer refills and room to split gas across several tanks.",
+  "highlights": [
+   "Cylinder sizes: 2.5, 5, 10 or 20 lb",
+   "Pro Dual Stage regulator with two gauges and bubble counter manifolds",
+   "Standard CGA-320 fittings, refillable at gas and welding suppliers",
+   "Tubing and diffuser included"
+  ],
+  "bestFor": "Medium to large high-tech tanks, or several tanks fed from one cylinder.",
+  "watchOut": "Cylinders ship empty and need hydrostatic testing every five years in many regions.",
+  "specs": {
+   "Regulator": "UNS Pro CO2 Dual Stage (Mini Dual Stage on the 2.5 lb kit)",
+   "Stage": "Dual",
+   "Solenoid": "Built in",
+   "Cylinder": "Refillable CGA-320 aluminium (ships empty)",
+   "Included": "Regulator, cylinder, CO2 tubing, diffuser"
+  },
+  "models": [
+   {
+    "name": "2.5 lb",
+    "sku": "UNSPCK25"
+   },
+   {
+    "name": "5 lb",
+    "sku": "UNSPCK05"
+   },
+   {
+    "name": "10 lb",
+    "sku": "UNSPCK10"
+   },
+   {
+    "name": "20 lb",
+    "sku": "UNSPCK20"
+   }
+  ],
+  "priceFrom": 256.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-co2-kit_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-co2-dual-stage-regulator_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-cylinder-pro_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/pro-co2-kit"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-micro-co2-regulator",
+  "name": "Micro CO2 Regulator",
+  "category": "co2",
+  "subtype": "regulator",
+  "summary": "A pocket-sized aluminium regulator that screws onto UNS disposable cartridges. On its own it is a manual regulator; add the Micro solenoid and bubble counter (sold together as the Regulator Kit) to put it on a timer.",
+  "highlights": [
+   "Tiny gunmetal aluminium body",
+   "Made for UNS 95 g disposable cartridges",
+   "Modular: add the Micro solenoid and bubble counter",
+   "Also sold as a Regulator Kit with solenoid and bubble counter"
+  ],
+  "bestFor": "Desktop nanos where every centimetre of space around the tank counts.",
+  "watchOut": "It only takes disposable cartridges, so you cannot move it to a refillable cylinder later.",
+  "specs": {
+   "Solenoid": "Not built in (Micro Solenoid add-on)",
+   "Cylinder": "UNS 95 g disposable cartridges",
+   "Finish": "Gunmetal aluminium"
+  },
+  "models": [
+   {
+    "name": "Regulator only",
+    "sku": "UNSMCR01"
+   },
+   {
+    "name": "Regulator Kit",
+    "sku": "UNSMCK01",
+    "extra": {
+     "Includes": "Micro regulator, Micro solenoid, Micro bubble counter"
+    }
+   }
+  ],
+  "priceFrom": 64.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-regulator_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-regulator-kit_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-regulator_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-regulator_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-micro-co2-regulator"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-micro-co2-solenoid",
+  "name": "Micro CO2 Solenoid",
+  "category": "co2",
+  "subtype": "regulator",
+  "summary": "The add-on solenoid for the Micro regulator. Plug it into a timer and your CO2 switches on and off with the lights instead of running all night.",
+  "highlights": [
+   "Fits the UNS Micro CO2 Regulator",
+   "Allows timer-controlled CO2",
+   "Compact block that keeps the Micro setup small"
+  ],
+  "bestFor": "Anyone already running the Micro regulator who wants CO2 on a schedule.",
+  "watchOut": "It only fits the Micro regulator; the Mini and Pro regulators already have a solenoid built in.",
+  "specs": {
+   "Compatible with": "UNS Micro CO2 Regulator"
+  },
+  "models": [
+   {
+    "name": "Micro Solenoid",
+    "sku": "UNSMCS01"
+   }
+  ],
+  "priceFrom": 24.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-solenoid_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-solenoid_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-micro-co2-solenoid"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-micro-co2-bubble-counter",
+  "name": "Micro CO2 Bubble Counter",
+  "category": "co2",
+  "subtype": "bubble-counter",
+  "summary": "A small detachable bubble counter with a check valve built in. It lets you see and set your bubble rate while stopping water from running back into the regulator.",
+  "highlights": [
+   "Built-in check valve",
+   "Fits the UNS Micro, Mini and Pro regulators",
+   "Clear body for easy bubble counting"
+  ],
+  "bestFor": "Fine-tuning bubble rate on any UNS regulator, or as a spare.",
+  "specs": {
+   "Compatible with": "UNS Micro, Mini Dual Stage and Pro Dual Stage regulators",
+   "Check valve": "Built in"
+  },
+  "models": [
+   {
+    "name": "Micro Bubble Counter",
+    "sku": "UNSMBC01"
+   }
+  ],
+  "priceFrom": 8.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-bubble-counter_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-micro-co2-bubble-counter_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-micro-co2-bubble-counter"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-mini-co2-dual-stage-regulator",
+  "name": "Mini CO2 Dual Stage Regulator",
+  "category": "co2",
+  "subtype": "regulator",
+  "summary": "A compact dual-stage regulator with a built-in solenoid that works with three gas sources out of the box: disposable cartridges, paintball cylinders and full-size CGA-320 cylinders. It grows with you if you move to a bigger tank.",
+  "highlights": [
+   "Dual stage, so no end-of-tank dump as the cylinder empties",
+   "Built-in solenoid with power adapter",
+   "CGA-320 adapter fitted, paintball adapter included",
+   "Bubble counter included"
+  ],
+  "bestFor": "Nano and small tanks, especially if you might switch from cartridges to a refillable cylinder later.",
+  "watchOut": "It has a single gauge, so you get less warning of an empty cylinder than with the Pro's two gauges.",
+  "specs": {
+   "Stage": "Dual",
+   "Solenoid": "Built in",
+   "Cylinder": "CGA-320, paintball (adapter included) and UNS disposable cartridges",
+   "Included": "CGA-320 adapter, paintball adapter, bubble counter, power adapter, spare o-rings, tools"
+  },
+  "models": [
+   {
+    "name": "Mini Dual Stage",
+    "sku": "CO2J004"
+   }
+  ],
+  "priceFrom": 157.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-mini-co2-dual-stage-regulator_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-mini-co2-dual-stage-regulator_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-mini-co2-dual-stage-regulator_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-mini-co2-dual-stage-regulator_7.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-mini-co2-dual-stage-regulator"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-pro-co2-dual-stage-regulator",
+  "name": "Pro CO2 Dual Stage Regulator",
+  "category": "co2",
+  "subtype": "regulator",
+  "summary": "A full-size dual-stage regulator with two gauges, a built-in solenoid and two bubble counter manifolds. Add more manifolds and one cylinder can feed several tanks.",
+  "highlights": [
+   "Dual stage with working and cylinder pressure gauges",
+   "Built-in solenoid",
+   "Two bubble counter manifolds included, expandable to about eight outputs",
+   "For CGA-320 cylinders from 2.5 to 20 lb",
+   "Anodised space grey finish"
+  ],
+  "bestFor": "Medium to large planted tanks and fish rooms running refillable cylinders.",
+  "watchOut": "It is bulky and only takes CGA-320 cylinders, so it is overkill for a single nano.",
+  "specs": {
+   "Stage": "Dual",
+   "Gauges": "2 (working and cylinder pressure)",
+   "Solenoid": "Built in",
+   "Cylinder": "CGA-320, 2.5 to 20 lb",
+   "Included": "CGA-320 adapter, 2 bubble counter manifolds, power adapter, spare o-rings, tools"
+  },
+  "models": [
+   {
+    "name": "Pro Dual Stage",
+    "sku": "CO2J005"
+   }
+  ],
+  "priceFrom": 219.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-co2-dual-stage-regulator_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-co2-dual-stage-regulator_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-co2-dual-stage-regulator_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-co2-dual-stage-regulator_6.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-pro-co2-dual-stage-regulator"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-co2-cylinder-pro",
+  "name": "CO2 Cylinder Pro",
+  "category": "co2",
+  "subtype": "cylinder",
+  "summary": "Refillable aluminium CO2 cylinders with standard CGA-320 valves, from a cabinet-friendly 2.5 lb up to 20 lb. Bigger cylinders mean fewer trips to the refill station.",
+  "highlights": [
+   "Four sizes: 2.5, 5, 10 and 20 lb",
+   "DOT 3AL certified aluminium",
+   "Standard CGA-320 valve for Pro and Mini regulators",
+   "White finish with UNS branding"
+  ],
+  "bestFor": "Anyone running a Pro or Mini regulator who wants the lowest running cost per fill.",
+  "watchOut": "Ships empty, and must be hydrostatically tested every five years before it can be refilled in the US.",
+  "specs": {
+   "Material": "DOT 3AL aluminium",
+   "Valve": "CGA-320",
+   "Supplied": "Empty"
+  },
+  "models": [
+   {
+    "name": "2.5 lb",
+    "sku": "UNSC2P25",
+    "heightCm": 28.0,
+    "weightKg": 1.75,
+    "extra": {
+     "Cylinder volume": "1.68 L",
+     "Working pressure": "139 bar",
+     "Height": "280 mm without valve"
+    }
+   },
+   {
+    "name": "5 lb",
+    "sku": "UNSC2P5",
+    "heightCm": 36.9,
+    "weightKg": 3.0,
+    "extra": {
+     "Cylinder volume": "3.35 L",
+     "Working pressure": "124 bar",
+     "Height": "369 mm without valve"
+    }
+   },
+   {
+    "name": "10 lb",
+    "sku": "UNSC2P10",
+    "heightCm": 43.0,
+    "weightKg": 6.0,
+    "extra": {
+     "Cylinder volume": "6.7 L",
+     "Working pressure": "124 bar",
+     "Height": "430 mm without valve"
+    }
+   },
+   {
+    "name": "20 lb",
+    "sku": "UNSC2P20",
+    "heightCm": 60.0,
+    "weightKg": 10.8,
+    "extra": {
+     "Cylinder volume": "13.4 L",
+     "Working pressure": "124 bar",
+     "Height": "600 mm without valve"
+    }
+   }
+  ],
+  "priceFrom": 84.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-cylinder-pro_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-co2-cylinder-pro"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-co2-paintball-cylinder",
+  "name": "CO2 Paintball Cylinder",
+  "category": "co2",
+  "subtype": "cylinder",
+  "summary": "Small refillable aluminium cylinders that sit between disposable cartridges and full-size bottles. The built-in on/off valve makes swapping them safer than a pin-valve paintball tank.",
+  "highlights": [
+   "16 oz or 24 oz capacity",
+   "Integrated on/off valve",
+   "Pairs with the UNS Mini Dual Stage regulator",
+   "About 22 cm and 28 cm tall"
+  ],
+  "bestFor": "Small to medium tanks where a full-size cylinder will not fit in the cabinet.",
+  "watchOut": "Needs a paintball adapter on the regulator (one comes with the Mini Dual Stage).",
+  "specs": {
+   "Material": "AA6061 aluminium",
+   "Valve": "Paintball thread with on/off valve",
+   "Working pressure": "1800 psi"
+  },
+  "models": [
+   {
+    "name": "16 oz",
+    "sku": "UNSCPB16",
+    "heightCm": 21.5,
+    "weightKg": 0.82
+   },
+   {
+    "name": "24 oz",
+    "sku": "UNSCPB24",
+    "heightCm": 27.5
+   }
+  ],
+  "priceFrom": 29.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-paintball-cylinder_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-paintball-cylinder_3.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-co2-paintball-cylinder"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-co2-diffuser",
+  "name": "CO2 Diffuser",
+  "category": "co2",
+  "subtype": "diffuser",
+  "summary": "A clear acrylic in-tank diffuser with a white ceramic disc that breaks CO2 into a fine mist of bubbles. Acrylic makes it harder to break than the usual glass diffusers.",
+  "highlights": [
+   "Three sizes by tank volume: Small, Medium, Large",
+   "Ceramic disc diameters of 12, 17 and 24 mm",
+   "Transparent acrylic, less fragile than glass",
+   "Suction cup included"
+  ],
+  "bestFor": "Any pressurised CO2 tank where you want a simple, low-cost in-tank diffuser.",
+  "watchOut": "Discs clog over time and need a soak in diluted bleach to restore fine bubbles.",
+  "specs": {
+   "Body": "Clear acrylic",
+   "Disc": "Ceramic"
+  },
+  "models": [
+   {
+    "name": "Small",
+    "sku": "UNSCDS01",
+    "tankMaxL": 98,
+    "extra": {
+     "Disc diameter": "12 mm"
+    }
+   },
+   {
+    "name": "Medium",
+    "sku": "UNSCDM01",
+    "tankMaxL": 197,
+    "extra": {
+     "Disc diameter": "17 mm"
+    }
+   },
+   {
+    "name": "Large",
+    "sku": "UNSCDL01",
+    "tankMinL": 197,
+    "extra": {
+     "Disc diameter": "24 mm"
+    }
+   }
+  ],
+  "priceFrom": 12.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-diffuser_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-diffuser_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-diffuser_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-co2-diffuser_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-co2-diffuser"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-pro-inline-co2-diffuser",
+  "name": "Pro Inline CO2 Diffuser",
+  "category": "co2",
+  "subtype": "diffuser",
+  "summary": "An inline diffuser that fits in your canister's outflow hose, so CO2 is dissolved before the water reaches the tank and nothing extra sits in the scape. The ceramic disc is side-mounted, which keeps flow restriction down and makes it easy to swap.",
+  "highlights": [
+   "Three hose sizes: 12/16, 16/22 and 20/25 mm",
+   "Side-mounted replaceable ceramic disc",
+   "Keeps diffuser clutter out of the tank",
+   "12 mm fits Delta 60/90 and Blitz 32 oz; 16 mm fits Delta 120"
+  ],
+  "bestFor": "Canister-filtered CO2 tanks where you want a clean, equipment-free look inside the glass.",
+  "watchOut": "It needs a canister with enough flow, and the disc will need cleaning or replacing now and then.",
+  "specs": {
+   "Disc": "Replaceable ceramic, side-mounted",
+   "Install": "Canister filter outflow tubing"
+  },
+  "models": [
+   {
+    "name": "12 mm",
+    "sku": "UNSID1201",
+    "hoseMm": 12,
+    "extra": {
+     "Hose": "12/16 mm (1/2 in)"
+    }
+   },
+   {
+    "name": "16 mm",
+    "sku": "UNSID1601",
+    "hoseMm": 16,
+    "extra": {
+     "Hose": "16/22 mm (5/8 in)"
+    }
+   },
+   {
+    "name": "20 mm",
+    "sku": "UNSID2001",
+    "hoseMm": 20,
+    "extra": {
+     "Hose": "20/25 mm (1 in)"
+    }
+   }
+  ],
+  "priceFrom": 31.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-inline-co2-diffuser_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-inline-co2-diffuser_7.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-inline-co2-diffuser_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-inline-co2-diffuser_5.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-pro-inline-co2-diffuser"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-drop-checker",
+  "name": "Drop Checker",
+  "category": "co2",
+  "subtype": "drop-checker",
+  "summary": "A glass drop checker that changes colour with the CO2 level in your tank, giving you an at-a-glance check that injection is in the right range. It comes in a hang-on style for rimless tanks and a suction-cup style for anything else.",
+  "highlights": [
+   "HD hangs over rimless glass up to 10 mm thick",
+   "SD fixes inside the tank with a suction cup",
+   "15 ml indicator solution included",
+   "30 ml refills sold separately"
+  ],
+  "bestFor": "Anyone running pressurised CO2 who wants a simple visual check.",
+  "watchOut": "Drop checkers lag the tank by an hour or two, so read them late in the photoperiod.",
+  "specs": {
+   "Material": "Glass",
+   "Included": "15 ml indicator solution"
+  },
+  "models": [
+   {
+    "name": "HD (hang-on)",
+    "sku": "UNSDHD01",
+    "extra": {
+     "Fits": "Rimless tanks with glass up to 10 mm"
+    }
+   },
+   {
+    "name": "SD (suction cup)",
+    "sku": "UNSDCS01",
+    "extra": {
+     "Fits": "Any aquarium"
+    }
+   }
+  ],
+  "priceFrom": 13.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-drop-checker_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-drop-checker_6.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-drop-checker_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-drop-checker_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-drop-checker"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-aquascaping-scissors",
+  "name": "Aquascaping Scissors",
+  "category": "tools",
+  "subtype": "scissors",
+  "summary": "Stainless steel aquascaping scissors in the four shapes most planted tanks need: straight for stems, curved for shaping, wave for carpets and short spring scissors for nano detail work.",
+  "highlights": [
+   "Straight, curved and wave at 25 cm long",
+   "Straight and curved spring scissors at 15 cm",
+   "Rust-resistant stainless steel",
+   "Black or grey finish on the long scissors"
+  ],
+  "bestFor": "Anyone putting together a basic trimming kit for a planted tank.",
+  "watchOut": "Dry them after use; even stainless tools will spot if left wet.",
+  "specs": {
+   "Material": "Stainless steel",
+   "Finishes": "Black, grey (long scissors)"
+  },
+  "models": [
+   {
+    "name": "Straight",
+    "sku": "UNSSS10",
+    "lengthCm": 25
+   },
+   {
+    "name": "Curved",
+    "sku": "UNSCS10",
+    "lengthCm": 25
+   },
+   {
+    "name": "Wave",
+    "sku": "UNSWS10",
+    "lengthCm": 25
+   },
+   {
+    "name": "Straight spring",
+    "sku": "UNSSSS",
+    "lengthCm": 15
+   },
+   {
+    "name": "Curved spring",
+    "sku": "UNSSCV",
+    "lengthCm": 15
+   }
+  ],
+  "priceFrom": 25.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquascaping-tools-straight-scissors_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquascaping-tools-curved-scissors_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquascaping-tools-wave-scissors_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquascaping-tools-spring-scissors_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-aquascaping-tools-straight-scissors"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-aquascaping-tweezers",
+  "name": "Aquascaping Tweezers",
+  "category": "tools",
+  "subtype": "tweezers",
+  "summary": "25 cm stainless steel planting tweezers in straight and curved versions. Straight is the all-rounder for stems and general work; curved reaches in behind rocks and wood.",
+  "highlights": [
+   "Straight and curved tips",
+   "25 cm long",
+   "Rust-resistant stainless steel",
+   "Black or grey finish"
+  ],
+  "bestFor": "Planting stems, tucking in epiphytes and general tidying in small to mid-size tanks.",
+  "watchOut": "At 25 cm they are short for deep tanks over about 45 cm tall.",
+  "specs": {
+   "Material": "Stainless steel",
+   "Finishes": "Black, grey"
+  },
+  "models": [
+   {
+    "name": "Straight",
+    "sku": "UNSST10",
+    "lengthCm": 25
+   },
+   {
+    "name": "Curved",
+    "sku": "UNSCT10",
+    "lengthCm": 25
+   }
+  ],
+  "priceFrom": 19.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquascaping-tools-straight-tweezers-pinsettes_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquascaping-tools-curved-tweezers-pinsettes_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-aquascaping-tools-straight-tweezers"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-pro-aquascaping-scissors",
+  "name": "Pro Aquascaping Scissors",
+  "category": "tools",
+  "subtype": "scissors",
+  "summary": "The upgraded UNS scissors, with a stabilising tail on the handle so your hand has more support during long trimming sessions. Available as straight scissors for stems and wave scissors for carpets.",
+  "highlights": [
+   "Straight and wave blades",
+   "25 cm long",
+   "Stabilising tail grip for comfort and control",
+   "Black or grey satin finish"
+  ],
+  "bestFor": "Regular trimmers with dense stem or carpet layouts who spend a while at the tank each week.",
+  "watchOut": "Only two blade shapes in the Pro line, so you may still want a curved pair from the standard range.",
+  "specs": {
+   "Material": "Stainless steel",
+   "Finishes": "Black, grey"
+  },
+  "models": [
+   {
+    "name": "Straight",
+    "sku": "UNPTSSB01",
+    "lengthCm": 25
+   },
+   {
+    "name": "Wave",
+    "sku": "UNPTWSB01",
+    "lengthCm": 25
+   }
+  ],
+  "priceFrom": 27.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-straight-scissors_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-wave-scissors_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-straight-scissors_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-wave-scissors_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-pro-aquascaping-tools-straight-scissors"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-pro-aquascaping-tweezers",
+  "name": "Pro Aquascaping Tweezers",
+  "category": "tools",
+  "subtype": "tweezers",
+  "summary": "Straight planting tweezers with a wider body for grip and slim, lightly serrated tips. They hold fine-rooted carpet plants firmly without crushing them.",
+  "highlights": [
+   "Straight tips, 25 cm long",
+   "Wider body for better control",
+   "Light serration grips without tearing",
+   "Black or grey satin finish"
+  ],
+  "bestFor": "Planting carpets and fine-rooted plants where precision matters.",
+  "specs": {
+   "Material": "Stainless steel",
+   "Finishes": "Black, grey"
+  },
+  "models": [
+   {
+    "name": "Straight",
+    "sku": "UNPTSPB01",
+    "lengthCm": 25
+   }
+  ],
+  "priceFrom": 25.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-straight-tweezers-pinsettes_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-straight-tweezers-pinsettes_4.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-straight-tweezers-pinsettes_5.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-pro-aquascaping-tools-straight-tweezers-pinsettes_2.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-pro-aquascaping-tools-straight-tweezers"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-sand-flattener",
+  "name": "Sand Flattener",
+  "category": "tools",
+  "subtype": "substrate-tool",
+  "summary": "A double-ended stainless steel spatula for levelling and shaping substrate. Use the wide end to smooth a foreground and the narrow end for tight spots around rocks.",
+  "highlights": [
+   "Dual-ended: wide and narrow heads",
+   "25 cm long",
+   "Works with sand, gravel and aquasoil",
+   "Stainless steel"
+  ],
+  "bestFor": "Neat sand foregrounds, slopes and tidying soil between hardscape.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "Sand Flattener",
+    "sku": "UNSSF",
+    "lengthCm": 25
+   }
+  ],
+  "priceFrom": 17.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-aquascaping-tools-sand-flattener_1.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-stainless-steel-sand-flattener-aquascaping-tool"
+ },
+ {
+  "brand": "UNS",
+  "currency": "USD",
+  "sourceName": "Glass Aqua",
+  "specSource": "retailer",
+  "id": "uns-algae-scraper",
+  "name": "Algae Scraper",
+  "category": "tools",
+  "subtype": "scraper",
+  "summary": "A 30 cm stainless steel scraper with a replaceable razor blade for getting algae and film off the glass. Two blades come in the box.",
+  "highlights": [
+   "30 cm reach",
+   "Replaceable blades, two included",
+   "Stainless steel handle"
+  ],
+  "bestFor": "Keeping the front glass of a rimless tank clear of spot algae.",
+  "watchOut": "Razor blades will scratch acrylic, so use it on glass only and keep sand grains out from under the blade.",
+  "specs": {
+   "Material": "Stainless steel",
+   "Blades": "Replaceable, 2 included"
+  },
+  "models": [
+   {
+    "name": "Algae Scraper",
+    "sku": "UNSAS",
+    "lengthCm": 30
+   }
+  ],
+  "priceFrom": 21.99,
+  "images": [
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-algae-scraper_1.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-algae-scraper_2.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-algae-scraper_3.jpg",
+   "/Users/mikeelmira/Downloads/uns/images/ultum-nature-systems/uns-algae-scraper_4.jpg"
+  ],
+  "sourceUrl": "https://shop.glassaqua.com/products/uns-algae-scraper"
+ }
+]

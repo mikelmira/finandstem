@@ -1,0 +1,2603 @@
+[
+ {
+  "id": "dophin-gtr-curved-glass-tank-kit",
+  "brand": "Dophin",
+  "name": "GTR Curved Glass Tank Kit",
+  "category": "aquariums",
+  "subtype": "with-cabinet",
+  "summary": "A curved-front glass tank sold as a full kit on a matching black cabinet, with a lid, LED lighting and a top filter box driven by a powerhead. Three footprints from 27 to 81 litres, all at the same 76 cm cabinet height.",
+  "highlights": [
+   "Curved front glass on a matching cabinet",
+   "Lid with white and blue LEDs on a 3-way touch switch",
+   "Top filter box and powerhead included",
+   "27, 48 and 81 litre sizes"
+  ],
+  "bestFor": "Someone who wants a complete tank-and-stand package for a low-tech planted community tank without piecing parts together.",
+  "watchOut": "The curved front bends the view slightly and is awkward to scrape, and the included lid light and top filter are basic, so a serious planted tank will need upgrades.",
+  "specs": {
+   "Front glass": "Curved",
+   "Included": "Cabinet, lid, white/blue LED light, top filter box with powerhead",
+   "Light control": "3-way touch switch"
+  },
+  "models": [
+   {
+    "name": "GTR-1350",
+    "volumeL": 27,
+    "lengthCm": 35.5,
+    "widthCm": 25.5,
+    "extra": {
+     "Cabinet height": "76 cm"
+    }
+   },
+   {
+    "name": "GTR-1450",
+    "volumeL": 48,
+    "lengthCm": 45.5,
+    "widthCm": 28.5,
+    "extra": {
+     "Cabinet height": "76 cm"
+    }
+   },
+   {
+    "name": "GTR-1600",
+    "volumeL": 81,
+    "lengthCm": 60.5,
+    "widthCm": 30.5,
+    "extra": {
+     "Cabinet height": "76 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-curved-glass-tank-gtr-1350-gtr-1450-gtr-1600_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-glass-tank-4/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-gt3000-glass-tank",
+  "brand": "Dophin",
+  "name": "GT3000 Series Glass Tank",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "Plain frameless glass tanks in five sizes from about 15 to 57 litres, offered with either bent-glass round front corners or square corners with black silicone. They are sold bare, which is exactly what many scapers want as a starting point.",
+  "highlights": [
+   "Five sizes from 30 to 50 cm long",
+   "4 mm glass on the two smallest, 5 mm on the rest",
+   "Round-corner (R) or square-corner (S) versions",
+   "Nested value sets of 3 or 5 tanks available"
+  ],
+  "bestFor": "A budget nano or small scape where you plan to choose your own light, filter and CO2.",
+  "watchOut": "Glass is on the thin side for the 45 and 50 cm sizes, so sit them on a levelling mat on a flat, solid surface; no lid, light or filter is included.",
+  "specs": {
+   "Corners": "Round (bent glass) or square with black silicone",
+   "Nested sets": "GTS3004 (3001, 3002, 3003) and GTS3007 (3001, 3002, 3003, 3005, 3006)"
+  },
+  "models": [
+   {
+    "name": "GT3001",
+    "volumeL": 14.8,
+    "lengthCm": 30,
+    "widthCm": 19,
+    "heightCm": 26,
+    "glassMm": 4
+   },
+   {
+    "name": "GT3002",
+    "volumeL": 21,
+    "lengthCm": 35,
+    "widthCm": 22,
+    "heightCm": 28,
+    "glassMm": 4
+   },
+   {
+    "name": "GT3003",
+    "volumeL": 31,
+    "lengthCm": 40,
+    "widthCm": 26,
+    "heightCm": 30,
+    "glassMm": 5
+   },
+   {
+    "name": "GT3005",
+    "volumeL": 43,
+    "lengthCm": 45,
+    "widthCm": 30,
+    "heightCm": 32,
+    "glassMm": 5
+   },
+   {
+    "name": "GT3006",
+    "volumeL": 57,
+    "lengthCm": 50,
+    "widthCm": 34,
+    "heightCm": 34,
+    "glassMm": 5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-glass-tank-square-corner-gt-3001s-gt-3002s-gt-3003s-gt-3005s-gt-3006s-gts_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-glass-tank-round-corner-2/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-gt6000-cube-tank",
+  "brand": "Dophin",
+  "name": "GT6000 Cube Glass Tank",
+  "category": "aquariums",
+  "subtype": "rimless",
+  "summary": "A 25 cm glass cube in two heights, 15 and 18 litres, with silver or black silicone. It is a simple, cheap way into a nano cube scape.",
+  "highlights": [
+   "25 x 25 cm footprint, 25 or 30 cm tall",
+   "4 mm glass",
+   "Silver or black silicone",
+   "Sold as a bare tank"
+  ],
+  "bestFor": "A shrimp or nano cube with mosses, small epiphytes and a carpet, where the taller GT-6002 gives a little more room for stem plants.",
+  "watchOut": "Cubes this small swing in temperature and water chemistry quickly, so they need steady maintenance.",
+  "specs": {
+   "Silicone": "Silver or black",
+   "Glass": "4 mm"
+  },
+  "models": [
+   {
+    "name": "GT-6001",
+    "volumeL": 15,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 25,
+    "glassMm": 4
+   },
+   {
+    "name": "GT-6002",
+    "volumeL": 18,
+    "lengthCm": 25,
+    "widthCm": 25,
+    "heightCm": 30,
+    "glassMm": 4
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-glass-tank-gt-6001-gt-6002_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-glass-tank/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-bt-mini-tank",
+  "brand": "Dophin",
+  "name": "BT Mini Tank",
+  "category": "aquariums",
+  "subtype": "all-in-one",
+  "summary": "Two tiny desktop all-in-ones of about 5 litres, one squared off (BT-111) and one round (BT-112). Each has a small internal filter with a replaceable cartridge and a 2 W white LED running off a 12 V transformer.",
+  "highlights": [
+   "Around 5 litres, built for desks and shelves",
+   "Built-in cartridge filter (FC-602 or FC-700)",
+   "3-LED white light, 2 W, low-voltage",
+   "Square BT-111 or round BT-112"
+  ],
+  "bestFor": "A moss, Anubias or shrimp display on a desk where you want everything in one box.",
+  "watchOut": "At around 5 litres this is too small for most fish, a betta included, and the light is only good for low-light plants.",
+  "specs": {
+   "Lighting": "3 white LEDs, 2 W, 12 V transformer",
+   "Filter pump": "P-130"
+  },
+  "models": [
+   {
+    "name": "BT-111",
+    "sku": "64 0043",
+    "volumeL": 5.6,
+    "lengthCm": 21.4,
+    "widthCm": 15,
+    "heightCm": 25,
+    "extra": {
+     "Filter": "FC-602 internal"
+    }
+   },
+   {
+    "name": "BT-112",
+    "sku": "64 0045",
+    "volumeL": 5.2,
+    "heightCm": 23.5,
+    "extra": {
+     "Shape": "Round, 20 cm diameter",
+     "Filter": "FC-700 internal"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-mini-tank-bt-111_1.jpg",
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-mini-tank-bt-112_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-mini-tank/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-cf11008-co2-canister-filter",
+  "brand": "Dophin",
+  "name": "CF11008 Series CO2 Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A squared-off canister with two planted-tank extras built in: a CO2 inlet that mixes gas from your cylinder into the filter flow, and a bay that holds a standard glass heater inside the head. Three sizes rated 950 to 1450 L/h.",
+  "highlights": [
+   "CO2 inlet and mixing chamber in the filter, cylinder not included",
+   "Internal bay for a 22 to 24 mm heater keeps the tank clear of kit",
+   "3 or 4 media trays",
+   "Touch-switch or pull-primer versions"
+  ],
+  "bestFor": "A budget planted tank of roughly 60 to 140 litres where you want CO2 and heating hidden inside the filter.",
+  "watchOut": "The maker warns to turn the CO2 off before unplugging, or water can back up out of the CO2 tube; as with any filter-mixed CO2, some gas can collect in the canister.",
+  "specs": {
+   "CO2": "Built-in inlet and mixing system; connect your own cylinder and regulator",
+   "Heater bay": "Takes a 22 to 24 mm diameter heater (not included)",
+   "Media supplied": "Coarse sponge and filter wool",
+   "Priming": "Touch switch (version 1) or pull primer (version 2)"
+  },
+  "models": [
+   {
+    "name": "CF11008",
+    "flowLph": 950,
+    "powerW": 10,
+    "tankMaxL": 90,
+    "lengthCm": 18,
+    "widthCm": 25,
+    "heightCm": 39,
+    "extra": {
+     "Media trays": "3"
+    }
+   },
+   {
+    "name": "CF11308",
+    "flowLph": 1200,
+    "powerW": 14,
+    "tankMaxL": 120,
+    "lengthCm": 18,
+    "widthCm": 25,
+    "heightCm": 44,
+    "extra": {
+     "Media trays": "4"
+    }
+   },
+   {
+    "name": "CF11508",
+    "flowLph": 1450,
+    "powerW": 15,
+    "tankMaxL": 140,
+    "lengthCm": 20,
+    "widthCm": 27,
+    "heightCm": 50,
+    "extra": {
+     "Media trays": "4"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-co2-canister-filter-cf11008-cf11308-cf11508_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-co2-canister-filter-cf11008-cf11308-cf11508/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-cf688-canister-filter",
+  "brand": "Dophin",
+  "name": "CF688 Series Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A round blue canister range from 800 to 1400 L/h, each size available with or without a built-in UV lamp (the UV versions add a UV suffix). The UV sits inside the canister behind a safety switch.",
+  "highlights": [
+   "Four sizes, 800 to 1400 L/h",
+   "Optional internal UV lamp of 5 to 9 W",
+   "Primer handle for easy start-up",
+   "Spray bar, lily-style inlet/outlet pipes and directional spout included"
+  ],
+  "bestFor": "A 60 to 140 litre tank that suffers green water now and then, where a UV option in the same box saves buying a separate unit.",
+  "watchOut": "UV only kills free-floating algae and microbes, not algae on leaves, and running it constantly can break down some chelated trace elements, so many planted-tank keepers only switch it on when needed.",
+  "specs": {
+   "UV": "Optional; UV models are CF688UV, CF888UV, CF1288UV, CF1488UV (uvW applies to these)",
+   "Media supplied": "Coarse sponge and filter wool"
+  },
+  "models": [
+   {
+    "name": "CF688",
+    "flowLph": 800,
+    "powerW": 10,
+    "uvW": 5,
+    "tankMaxL": 80,
+    "lengthCm": 19,
+    "widthCm": 19,
+    "heightCm": 29,
+    "extra": {
+     "Power with UV": "20 W",
+     "Media trays": "1"
+    }
+   },
+   {
+    "name": "CF888",
+    "flowLph": 1000,
+    "powerW": 10,
+    "uvW": 7,
+    "tankMaxL": 100,
+    "lengthCm": 19,
+    "widthCm": 19,
+    "heightCm": 41,
+    "extra": {
+     "Power with UV": "21.5 W",
+     "Media trays": "3"
+    }
+   },
+   {
+    "name": "CF1288",
+    "flowLph": 1200,
+    "powerW": 13.2,
+    "uvW": 9,
+    "tankMaxL": 110,
+    "lengthCm": 23,
+    "widthCm": 23,
+    "heightCm": 41,
+    "extra": {
+     "Power with UV": "25.5 W",
+     "Media trays": "2"
+    }
+   },
+   {
+    "name": "CF1488",
+    "flowLph": 1400,
+    "powerW": 17,
+    "uvW": 9,
+    "tankMaxL": 140,
+    "lengthCm": 23,
+    "widthCm": 23,
+    "heightCm": 48.5,
+    "extra": {
+     "Power with UV": "29.3 W",
+     "Media trays": "3"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-canister-filter-cf688-cf888-cf1288-cf1488_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-canister-filter-cf688-cf888-cf1288-cf1488/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-cf-uv-canister-filter",
+  "brand": "Dophin",
+  "name": "CF Series UV Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A grey canister range from a 410 L/h mini up to the big 3000 L/h C2400, with most sizes offered with an internal UV lamp. The mid sizes share their ratings with the CF688 range in a different body.",
+  "highlights": [
+   "Seven sizes from 410 to 3000 L/h",
+   "UV lamp of 5 to 9 W on UV versions",
+   "Self-priming head with flow control",
+   "CF300 mini canister for small tanks"
+  ],
+  "bestFor": "Anyone wanting a cheap canister with optional UV, from a 40 litre shrimp tank (CF300) to a large display (C2400).",
+  "watchOut": "UV does nothing for algae growing on plants and can reduce some chelated trace elements if left on all the time; the C2400 is a big unit that needs cabinet space.",
+  "specs": {
+   "UV": "Optional on CF600 to C2400 (UV suffix models); CF300 has no UV",
+   "Media supplied": "Coarse sponge and filter wool"
+  },
+  "models": [
+   {
+    "name": "CF300",
+    "flowLph": 410,
+    "powerW": 6.7,
+    "tankMaxL": 40,
+    "lengthCm": 18,
+    "widthCm": 10.5,
+    "heightCm": 22,
+    "extra": {
+     "Type": "Mini canister, no UV"
+    }
+   },
+   {
+    "name": "CF600",
+    "flowLph": 650,
+    "powerW": 9.3,
+    "uvW": 5,
+    "tankMaxL": 70,
+    "lengthCm": 19,
+    "widthCm": 19,
+    "heightCm": 29,
+    "extra": {
+     "Power with UV": "20 W",
+     "Media trays": "1"
+    }
+   },
+   {
+    "name": "CF700",
+    "flowLph": 750,
+    "powerW": 9.3,
+    "uvW": 7,
+    "tankMaxL": 80,
+    "lengthCm": 19,
+    "widthCm": 19,
+    "heightCm": 35,
+    "extra": {
+     "Power with UV": "20.8 W",
+     "Media trays": "2"
+    }
+   },
+   {
+    "name": "CF800",
+    "flowLph": 850,
+    "powerW": 9.3,
+    "uvW": 7,
+    "tankMaxL": 90,
+    "lengthCm": 19,
+    "widthCm": 19,
+    "heightCm": 41,
+    "extra": {
+     "Power with UV": "20.8 W",
+     "Media trays": "3"
+    }
+   },
+   {
+    "name": "CF1200",
+    "flowLph": 1200,
+    "powerW": 13.2,
+    "uvW": 9,
+    "tankMaxL": 110,
+    "lengthCm": 23,
+    "widthCm": 23,
+    "heightCm": 41,
+    "extra": {
+     "Power with UV": "25.5 W",
+     "Media trays": "2"
+    }
+   },
+   {
+    "name": "CF1400",
+    "flowLph": 1400,
+    "powerW": 17,
+    "uvW": 9,
+    "tankMaxL": 140,
+    "lengthCm": 23,
+    "widthCm": 23,
+    "heightCm": 48.5,
+    "extra": {
+     "Power with UV": "29.3 W",
+     "Media trays": "3"
+    }
+   },
+   {
+    "name": "C2400",
+    "flowLph": 3000,
+    "powerW": 40,
+    "uvW": 9,
+    "tankMaxL": 500,
+    "lengthCm": 38,
+    "widthCm": 41,
+    "heightCm": 60,
+    "extra": {
+     "Power with UV": "50 W",
+     "Media trays": "4"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-canister-filter-uv-cf300-cf600-cf700-cf800-cf1200-cf1400-cf2400_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-canister-filter-uv/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-c-series-canister-filter",
+  "brand": "Dophin",
+  "name": "C Series Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A tall, square brown canister line from C-500 to C-1600 with a push-button primer and double valve taps. The number of media baskets grows from two to five as you go up the range.",
+  "highlights": [
+   "Five sizes, 1130 to 2540 L/h rated",
+   "Push-button primer and double shut-off taps",
+   "2 to 5 media baskets",
+   "Spray bar and intake strainer included"
+  ],
+  "bestFor": "A 100 to 190 litre planted tank on a budget where you want room for plenty of your own media.",
+  "watchOut": "The flow ratings are for the bare pump; packed with media and hoses the real flow is well below that, though still generous for the listed tank sizes.",
+  "specs": {
+   "Priming": "Push-button primer",
+   "Taps": "Double valve taps",
+   "Media supplied": "Carbon, quartz rings, black sponge, white wool (varies by size)"
+  },
+  "models": [
+   {
+    "name": "C-500",
+    "sku": "50 0024",
+    "flowLph": 1130,
+    "powerW": 12.4,
+    "headM": 1.2,
+    "tankMaxL": 100,
+    "lengthCm": 21,
+    "widthCm": 17,
+    "heightCm": 31.5,
+    "extra": {
+     "Media baskets": "2"
+    }
+   },
+   {
+    "name": "C-700",
+    "sku": "50 0025",
+    "flowLph": 1520,
+    "powerW": 13.4,
+    "headM": 1.6,
+    "tankMaxL": 120,
+    "lengthCm": 23.5,
+    "widthCm": 19,
+    "heightCm": 34.5,
+    "extra": {
+     "Media baskets": "2"
+    }
+   },
+   {
+    "name": "C-1000",
+    "sku": "50 0026",
+    "flowLph": 1650,
+    "powerW": 16.8,
+    "headM": 1.6,
+    "tankMaxL": 140,
+    "lengthCm": 23.5,
+    "widthCm": 19.5,
+    "heightCm": 39.5,
+    "extra": {
+     "Media baskets": "3"
+    }
+   },
+   {
+    "name": "C-1300",
+    "sku": "50 0027",
+    "flowLph": 2300,
+    "powerW": 24.6,
+    "headM": 1.9,
+    "tankMaxL": 160,
+    "lengthCm": 26,
+    "widthCm": 21,
+    "heightCm": 44,
+    "extra": {
+     "Media baskets": "4"
+    }
+   },
+   {
+    "name": "C-1600",
+    "sku": "50 0028",
+    "flowLph": 2540,
+    "powerW": 27.5,
+    "headM": 2.1,
+    "tankMaxL": 190,
+    "lengthCm": 26,
+    "widthCm": 21,
+    "heightCm": 48.5,
+    "extra": {
+     "Media baskets": "5"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-canister-filter-c-500-c-700-c-1000-c-1300-c-1600_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-canister-filter-c/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-cf2000-pre-canister-filter",
+  "brand": "Dophin",
+  "name": "CF2000 Pre-Canister Filter",
+  "category": "filters",
+  "subtype": "canister",
+  "summary": "A small canister that sits in the intake line before your main filter and catches the muck first. It has its own media holder and a drain valve, so you empty the pre-filter often and open the main canister far less.",
+  "highlights": [
+   "Traps debris before it reaches the main canister",
+   "Drain valve that rotates 360 degrees",
+   "Integrated media holder",
+   "145 x 145 x 400 mm"
+  ],
+  "bestFor": "A planted tank with lots of leaf litter or trimmings where you are tired of stripping down the main canister.",
+  "watchOut": "It has no pump of its own, adds another hose run and some flow resistance, and must be kept clean or it will choke the main filter's flow.",
+  "specs": {
+   "Pump": "None, runs on your main canister's flow",
+   "Drain": "Built-in drain valve"
+  },
+  "models": [
+   {
+    "name": "CF2000",
+    "lengthCm": 14.5,
+    "widthCm": 14.5,
+    "heightCm": 40
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-pre-canister-filter-cf2000_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-pre-canister-filter-cf2000/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-power-head-top-filter",
+  "brand": "Dophin",
+  "name": "Power Head Top Filter",
+  "category": "filters",
+  "subtype": "top",
+  "summary": "A long plastic filter tray that sits across the top of the tank, fed by a submersible powerhead. Four lengths fit tanks from about 47 cm up to 127 cm.",
+  "highlights": [
+   "Tray lengths to suit 47 to 127 cm tanks",
+   "Powerhead pump included",
+   "Large, easy-to-reach media trays",
+   "Rated 1100 to 1550 L/h"
+  ],
+  "bestFor": "An older-style framed tank without a lid where you want a lot of cheap, easy-to-clean media.",
+  "watchOut": "A top filter blocks part of the tank top, clashing with most planted-tank lights, and its trickle return drives off CO2.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "P-708",
+    "sku": "54 0095",
+    "flowLph": 1100,
+    "powerW": 16,
+    "tankMaxL": 220,
+    "fitsLengthMinCm": 47,
+    "fitsLengthMaxCm": 73
+   },
+   {
+    "name": "P-808",
+    "sku": "54 0096",
+    "flowLph": 1100,
+    "powerW": 16,
+    "tankMaxL": 220,
+    "fitsLengthMinCm": 54,
+    "fitsLengthMaxCm": 80
+   },
+   {
+    "name": "P-1008",
+    "sku": "54 0023",
+    "flowLph": 1550,
+    "powerW": 29,
+    "tankMaxL": 300,
+    "fitsLengthMinCm": 92,
+    "fitsLengthMaxCm": 96
+   },
+   {
+    "name": "P-1108",
+    "sku": "54 0024",
+    "flowLph": 1550,
+    "powerW": 29,
+    "tankMaxL": 300,
+    "fitsLengthMinCm": 122,
+    "fitsLengthMaxCm": 127
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-top-filter-p-708-p-808_1.jpg",
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-top-filter-p-1108_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-top-filter-p708-808/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-fc-filter-box",
+  "brand": "Dophin",
+  "name": "FC Filter Box",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "Slim box-shaped internal filters with the pump at the bottom and a waterfall-style outlet at the top. Most use a drop-in sponge and carbon cartridge, and the range runs from tiny nano sizes up to the tall FC-601.",
+  "highlights": [
+   "Five sizes, 180 to 670 L/h",
+   "Low-mounted pump pulls from near the substrate",
+   "Drop-in cartridge, so no wet hands",
+   "Suits shallow tanks"
+  ],
+  "bestFor": "A small desktop or nano tank that needs a compact, cheap internal filter.",
+  "watchOut": "Cartridges are an ongoing cost, and the waterfall outlet splashes, which is poor for CO2; for planted tanks swap the carbon for plain sponge once it is spent.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version",
+   "Media": "Sponge and carbon cartridge (FC-601 uses layered media)"
+  },
+  "models": [
+   {
+    "name": "FC-601",
+    "sku": "58 0019",
+    "flowLph": 670,
+    "powerW": 6.3,
+    "tankMaxL": 130,
+    "lengthCm": 20,
+    "widthCm": 6.5,
+    "heightCm": 39
+   },
+   {
+    "name": "FC-602",
+    "sku": "52 0128",
+    "flowLph": 200,
+    "powerW": 3.0,
+    "tankMaxL": 30,
+    "extra": {
+     "Flow": "170 to 200 L/h"
+    }
+   },
+   {
+    "name": "FC-603",
+    "sku": "52 0134",
+    "flowLph": 280,
+    "powerW": 4.2,
+    "tankMaxL": 55,
+    "lengthCm": 8,
+    "widthCm": 4,
+    "heightCm": 16
+   },
+   {
+    "name": "FC-604",
+    "sku": "52 0135",
+    "flowLph": 380,
+    "powerW": 5.0,
+    "tankMaxL": 75,
+    "lengthCm": 13,
+    "widthCm": 4.8,
+    "heightCm": 19
+   },
+   {
+    "name": "FC-700",
+    "sku": "52 0132",
+    "flowLph": 180,
+    "powerW": 3.0,
+    "tankMaxL": 35,
+    "lengthCm": 6,
+    "widthCm": 4.8,
+    "heightCm": 14
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-filter-box-fc-601-fc-602-fc-603-fc-604-fc-700_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-filter-box/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-sh-slim-hanging-filter",
+  "brand": "Dophin",
+  "name": "SH Slim Hanging Filter",
+  "category": "filters",
+  "subtype": "hang-on-back",
+  "summary": "A slim hang-on-back filter only 5 cm deep, with the motor down on the intake tube and a floating surface skimmer built into the intake. Sizes differ mainly in how many standard carbon cartridges they hold.",
+  "highlights": [
+   "Only 5 cm deep behind the tank",
+   "Built-in floating surface skimmer clears surface film",
+   "Uses 1 to 4 identical cartridges",
+   "Flow control on the outlet"
+  ],
+  "bestFor": "A 20 to 80 litre tank with a lid-free top where you want surface film gone without a separate skimmer.",
+  "watchOut": "The cartridges contain carbon, which you may prefer to replace with sponge in a fertilised planted tank, and the spill-over outlet gasses off some CO2.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version",
+   "Surface skimming": "Floating de-oiler on the intake",
+   "Cartridges": "One standard size across the range"
+  },
+  "models": [
+   {
+    "name": "SH-200",
+    "sku": "51 0143",
+    "flowLph": 150,
+    "powerW": 2.8,
+    "tankMaxL": 20,
+    "lengthCm": 16,
+    "widthCm": 5,
+    "heightCm": 20,
+    "extra": {
+     "Cartridges": "1"
+    }
+   },
+   {
+    "name": "SH-250",
+    "sku": "51 0144",
+    "flowLph": 250,
+    "powerW": 4,
+    "tankMaxL": 40,
+    "lengthCm": 18,
+    "widthCm": 5,
+    "heightCm": 22,
+    "extra": {
+     "Cartridges": "2"
+    }
+   },
+   {
+    "name": "SH-280",
+    "sku": "51 0145",
+    "flowLph": 280,
+    "powerW": 4.1,
+    "tankMaxL": 60,
+    "lengthCm": 22,
+    "widthCm": 5,
+    "heightCm": 24,
+    "extra": {
+     "Cartridges": "3"
+    }
+   },
+   {
+    "name": "SH-380",
+    "sku": "51 0146",
+    "flowLph": 380,
+    "powerW": 4,
+    "tankMaxL": 80,
+    "lengthCm": 28.8,
+    "widthCm": 5,
+    "heightCm": 24.3,
+    "extra": {
+     "Cartridges": "4"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-slim-hanging-filter-sh-200-sh-250-sh-280-sh-380_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-slim-hanging-filter/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-a-series-hanging-filter",
+  "brand": "Dophin",
+  "name": "A Series Hanging Filter",
+  "category": "filters",
+  "subtype": "hang-on-back",
+  "summary": "A chunky hang-on-back filter with adjustable flow, an extendable intake and a media-change reminder dial. It comes either with an open media box (sponge, carbon, bio balls) or a carbon cartridge.",
+  "highlights": [
+   "Four sizes, 300 to 500 L/h",
+   "Choice of open media box or carbon cartridge version",
+   "Adjustable flow and extendable intake",
+   "Date and media-change indicator"
+  ],
+  "bestFor": "A 40 to 100 litre tank where you want a simple hang-on filter you can fill with your own media.",
+  "watchOut": "Get the media box version for a planted tank, so you can skip carbon; like all hang-on filters the waterfall return drives off some CO2.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz, media box version",
+   "Versions": "Media box (sponge, carbon, bio balls) or carbon cartridge"
+  },
+  "models": [
+   {
+    "name": "A-2000",
+    "sku": "51 0147",
+    "flowLph": 300,
+    "powerW": 3.1,
+    "tankMaxL": 40,
+    "lengthCm": 14,
+    "widthCm": 13.8,
+    "heightCm": 19.5
+   },
+   {
+    "name": "A-3000",
+    "sku": "51 0148",
+    "flowLph": 350,
+    "powerW": 3.1,
+    "tankMaxL": 60,
+    "lengthCm": 15,
+    "widthCm": 14,
+    "heightCm": 20.5
+   },
+   {
+    "name": "A-5000",
+    "sku": "51 0149",
+    "flowLph": 400,
+    "powerW": 4.5,
+    "tankMaxL": 80,
+    "lengthCm": 18.5,
+    "widthCm": 15.5,
+    "heightCm": 22
+   },
+   {
+    "name": "A-6000",
+    "sku": "51 0150",
+    "flowLph": 500,
+    "powerW": 4.5,
+    "tankMaxL": 100,
+    "lengthCm": 20.5,
+    "widthCm": 15.5,
+    "heightCm": 23.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-hanging-filter-a-2000-a-3000-a-5000-a-6000_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-hanging-filter-2/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-h-series-hanging-filter",
+  "brand": "Dophin",
+  "name": "H Series Hanging Filter",
+  "category": "filters",
+  "subtype": "hang-on-back",
+  "summary": "A classic smoked-grey hang-on-back range from the tiny H-80 to the 1000 L/h H-800. Each uses a bio cartridge plus a carbon cartridge that needs changing periodically.",
+  "highlights": [
+   "Six sizes, 190 to 1000 L/h",
+   "Bio cartridge and carbon cartridge",
+   "Extendable intake with strainer",
+   "Dust cover on top"
+  ],
+  "bestFor": "A beginner tank from 25 to 200 litres where a familiar, easy hang-on filter is enough.",
+  "watchOut": "The carbon cartridge is a running cost and strips some liquid fertiliser, so planted-tank keepers often swap it for sponge.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version",
+   "Media": "Bio cartridge and carbon cartridge"
+  },
+  "models": [
+   {
+    "name": "H-80",
+    "sku": "51 0001",
+    "flowLph": 190,
+    "powerW": 2.7,
+    "tankMaxL": 25,
+    "lengthCm": 9.5,
+    "widthCm": 8,
+    "heightCm": 18
+   },
+   {
+    "name": "H-100",
+    "sku": "51 0002",
+    "flowLph": 350,
+    "powerW": 3.4,
+    "tankMaxL": 50,
+    "lengthCm": 11.5,
+    "widthCm": 9,
+    "heightCm": 16
+   },
+   {
+    "name": "H-200",
+    "sku": "51 0003",
+    "flowLph": 370,
+    "powerW": 3.4,
+    "tankMaxL": 75,
+    "lengthCm": 13,
+    "widthCm": 10,
+    "heightCm": 18
+   },
+   {
+    "name": "H-300",
+    "sku": "51 0004",
+    "flowLph": 440,
+    "powerW": 5.2,
+    "tankMaxL": 100,
+    "lengthCm": 15,
+    "widthCm": 12,
+    "heightCm": 19.5
+   },
+   {
+    "name": "H-500",
+    "sku": "51 0005",
+    "flowLph": 580,
+    "powerW": 6.2,
+    "tankMaxL": 150,
+    "lengthCm": 18.5,
+    "widthCm": 12.5,
+    "heightCm": 21
+   },
+   {
+    "name": "H-800",
+    "sku": "51 0006",
+    "flowLph": 1000,
+    "powerW": 8.1,
+    "tankMaxL": 200,
+    "lengthCm": 18.5,
+    "widthCm": 12.5,
+    "heightCm": 24
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-hanging-filter-h-80-h-100-h-200-h-300-h-500-h-800_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-hanging-filter/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-tf-internal-filter",
+  "brand": "Dophin",
+  "name": "TF Internal Filter",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "A tall corner-style internal filter that comes with a spray bar, so the return can be spread along the back of the tank instead of blasting one spot.",
+  "highlights": [
+   "Three sizes, 300 to 650 L/h",
+   "Spray bar included",
+   "Slim profile for the back corner",
+   "Suction-cup mounting"
+  ],
+  "bestFor": "A 50 to 150 litre tank where you want gentle, spread-out flow without a canister.",
+  "watchOut": "Internal filters take up visible space in the scape, and the media capacity is small next to a canister.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "TF-300",
+    "sku": "52 0018",
+    "flowLph": 300,
+    "powerW": 4.5,
+    "tankMaxL": 50,
+    "heightCm": 21.5,
+    "extra": {
+     "Spray bar": "16 cm"
+    }
+   },
+   {
+    "name": "TF-500",
+    "sku": "52 0019",
+    "flowLph": 450,
+    "powerW": 6,
+    "tankMaxL": 100,
+    "heightCm": 24,
+    "extra": {
+     "Spray bar": "18 cm"
+    }
+   },
+   {
+    "name": "TF-800",
+    "sku": "52 0020",
+    "flowLph": 650,
+    "powerW": 12,
+    "tankMaxL": 150,
+    "heightCm": 28,
+    "extra": {
+     "Spray bar": "18 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-internal-filter-tf-300-tf-500-tf-800_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-internal-filter-tf800/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-kf-internal-filter",
+  "brand": "Dophin",
+  "name": "KF Internal Filter",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "Very small internal filters, only 8 to 9.5 cm tall, with an adjustable outlet nozzle. The KF-160 is the slimmest of the four.",
+  "highlights": [
+   "Four mini sizes, 200 to 280 L/h",
+   "8 to 9.5 cm tall",
+   "Adjustable outlet nozzle",
+   "Under 5 W"
+  ],
+  "bestFor": "A nano or shrimp tank of 30 to 70 litres that needs a tiny, cheap internal filter.",
+  "watchOut": "The intake is not shrimp-safe as supplied, so cover it with a sponge in a breeding tank.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "KF-150",
+    "sku": "52 0015",
+    "flowLph": 200,
+    "powerW": 2.8,
+    "tankMaxL": 50,
+    "lengthCm": 4.3,
+    "widthCm": 3,
+    "heightCm": 8
+   },
+   {
+    "name": "KF-160",
+    "sku": "52 0126",
+    "flowLph": 200,
+    "powerW": 2.8,
+    "tankMaxL": 30,
+    "lengthCm": 4.3,
+    "widthCm": 3,
+    "heightCm": 9.5
+   },
+   {
+    "name": "KF-200",
+    "sku": "52 0016",
+    "flowLph": 240,
+    "powerW": 3,
+    "tankMaxL": 50,
+    "lengthCm": 4.7,
+    "widthCm": 3,
+    "heightCm": 8
+   },
+   {
+    "name": "KF-350",
+    "sku": "52 0017",
+    "flowLph": 280,
+    "powerW": 4.5,
+    "tankMaxL": 70,
+    "lengthCm": 4.8,
+    "widthCm": 3.8,
+    "heightCm": 9.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-internal-filter-kf-150-kf-200-kf-350-kf160_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-internal-filter-kf350/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-fb-internal-filter",
+  "brand": "Dophin",
+  "name": "FB Internal Filter",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "A plain rectangular internal filter with a sponge body and a side outlet that can take a rain bar. Four sizes cover roughly 50 to 140 litres.",
+  "highlights": [
+   "Four sizes, 300 to 760 L/h",
+   "Rain bar option for spread flow",
+   "Simple sponge-based media",
+   "Compact footprint"
+  ],
+  "bestFor": "A basic community or planted tank where a simple sponge internal filter is enough.",
+  "watchOut": "Media volume is small, so it needs rinsing often in a heavily stocked tank.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "FB-1000F",
+    "sku": "52 0004",
+    "flowLph": 300,
+    "powerW": 3.3,
+    "tankMaxL": 50,
+    "lengthCm": 5,
+    "widthCm": 4.2,
+    "heightCm": 14.8
+   },
+   {
+    "name": "FB-2000F",
+    "sku": "52 0005",
+    "flowLph": 400,
+    "powerW": 5,
+    "tankMaxL": 80,
+    "lengthCm": 6,
+    "widthCm": 5.2,
+    "heightCm": 18.5
+   },
+   {
+    "name": "FB-3000F",
+    "sku": "52 0006",
+    "flowLph": 480,
+    "powerW": 7.2,
+    "tankMaxL": 110,
+    "lengthCm": 6.7,
+    "widthCm": 5.7,
+    "heightCm": 21.5
+   },
+   {
+    "name": "FB-4000F",
+    "sku": "52 0007",
+    "flowLph": 760,
+    "powerW": 13.8,
+    "tankMaxL": 140,
+    "lengthCm": 7.7,
+    "widthCm": 6.2,
+    "heightCm": 28
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-internal-filter-fb-1000f-fb-2000f-fb-3000f-fb-4000f_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-internal-filter-fb-3000f/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-950f-internal-filter",
+  "brand": "Dophin",
+  "name": "950F Series Internal Filter",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "A powerhead sitting on top of a slotted strainer tube packed with sponge. The bigger 970F and 980F push a lot of water for an internal filter.",
+  "highlights": [
+   "Four sizes, 470 to 1550 L/h",
+   "Powerhead-over-strainer design",
+   "Directional outlet",
+   "Tall models reach deep tanks"
+  ],
+  "bestFor": "A larger tank that needs strong extra circulation plus some mechanical filtration.",
+  "watchOut": "The larger sizes are bulky and strong for a planted tank; they can flatten stem plants and are hard to hide.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "950F",
+    "sku": "52 0021",
+    "flowLph": 470,
+    "powerW": 7,
+    "tankMaxL": 90,
+    "heightCm": 21.5,
+    "extra": {
+     "Head width": "6.8 cm"
+    }
+   },
+   {
+    "name": "960F",
+    "sku": "52 0022",
+    "flowLph": 1030,
+    "powerW": 16,
+    "tankMaxL": 180,
+    "heightCm": 24.5,
+    "extra": {
+     "Head width": "8.1 cm"
+    }
+   },
+   {
+    "name": "970F",
+    "sku": "52 0023",
+    "flowLph": 1500,
+    "powerW": 24.8,
+    "tankMaxL": 180,
+    "heightCm": 37.5,
+    "extra": {
+     "Head width": "9.2 cm"
+    }
+   },
+   {
+    "name": "980F",
+    "sku": "52 0024",
+    "flowLph": 1550,
+    "powerW": 29.3,
+    "tankMaxL": 300,
+    "heightCm": 38,
+    "extra": {
+     "Head width": "9.2 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-internal-filter-950f-960f-970f-980f_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-internal-filter-980f/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-f-series-internal-filter",
+  "brand": "Dophin",
+  "name": "F Series Internal Filter",
+  "category": "filters",
+  "subtype": "internal",
+  "summary": "A tall, slim internal filter in three sizes with a blue flow-adjust knob on top; the small F-800 can take a rain bar.",
+  "highlights": [
+   "Three sizes, 360 to 800 L/h",
+   "Adjustable flow",
+   "Rain bar option on F-800",
+   "Suits tanks from 80 to 160 litres"
+  ],
+  "bestFor": "A mid-sized tank where you want an internal filter that tucks into a back corner.",
+  "watchOut": "Like any internal box it takes up room in the scape and holds less media than a canister.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "F-800",
+    "sku": "52 0001",
+    "flowLph": 360,
+    "powerW": 5.3,
+    "tankMaxL": 80,
+    "lengthCm": 6.5,
+    "widthCm": 5.5,
+    "heightCm": 14.8
+   },
+   {
+    "name": "F-1200",
+    "sku": "52 0002",
+    "flowLph": 500,
+    "powerW": 5.8,
+    "tankMaxL": 120,
+    "lengthCm": 7,
+    "widthCm": 6.2,
+    "heightCm": 23.8
+   },
+   {
+    "name": "F-2000",
+    "sku": "52 0003",
+    "flowLph": 800,
+    "powerW": 16,
+    "tankMaxL": 160,
+    "lengthCm": 7.5,
+    "widthCm": 6.5,
+    "heightCm": 27.8
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-internal-filter-f-800-f-1200-f-2000_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-internal-filter-f-2000/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-pc-submersible-pump",
+  "brand": "Dophin",
+  "name": "PC Series Submersible Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "Compact square submersible pumps from 300 to 5000 L/h. The three largest get a carry handle and a flow controller.",
+  "highlights": [
+   "Seven sizes, 300 to 5000 L/h",
+   "Up to 3 m head on the largest",
+   "Flow controller on PC-3000, PC-4000, PC-5000",
+   "Suction-cup feet"
+  ],
+  "bestFor": "A return pump for a sump, a DIY filter or water changes, sized to your head height.",
+  "watchOut": "Watts climb steeply on the bigger models (120 W for the PC-5000), so check running cost if it will run all day.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "PC-300",
+    "flowLph": 300,
+    "powerW": 4.5,
+    "headM": 0.5,
+    "tankMaxL": 50,
+    "lengthCm": 7,
+    "widthCm": 4.4,
+    "heightCm": 5.5
+   },
+   {
+    "name": "PC-500",
+    "flowLph": 500,
+    "powerW": 6,
+    "headM": 0.5,
+    "tankMaxL": 100,
+    "lengthCm": 7,
+    "widthCm": 4.4,
+    "heightCm": 5.5
+   },
+   {
+    "name": "PC-1000",
+    "flowLph": 1000,
+    "powerW": 10,
+    "headM": 1.0,
+    "tankMaxL": 300,
+    "lengthCm": 8,
+    "widthCm": 5,
+    "heightCm": 6
+   },
+   {
+    "name": "PC-2000",
+    "flowLph": 2000,
+    "powerW": 36,
+    "headM": 1.8,
+    "tankMaxL": 400,
+    "lengthCm": 11,
+    "widthCm": 6,
+    "heightCm": 10
+   },
+   {
+    "name": "PC-3000",
+    "flowLph": 3000,
+    "powerW": 45,
+    "headM": 2.0,
+    "tankMaxL": 500,
+    "lengthCm": 14,
+    "widthCm": 6.5,
+    "heightCm": 11
+   },
+   {
+    "name": "PC-4000",
+    "flowLph": 4000,
+    "powerW": 84,
+    "headM": 2.8,
+    "tankMaxL": 600,
+    "lengthCm": 16,
+    "widthCm": 8,
+    "heightCm": 12.5
+   },
+   {
+    "name": "PC-5000",
+    "flowLph": 5000,
+    "powerW": 120,
+    "headM": 3.0,
+    "tankMaxL": 800,
+    "lengthCm": 16,
+    "widthCm": 8,
+    "heightCm": 12.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-submersible-pump-pc-300-pc-500-pc-1000-pc-2000-pc-3000-pc-4000-pc-5000_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-submersible-pump-pc-300-pc-500-pc-1000-pc-2000-pc-3000-pc-4000-pc-5000/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-p-series-submersible-pump",
+  "brand": "Dophin",
+  "name": "P Series Submersible Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "A long-running range of grey and black submersible pumps from 320 to 3000 L/h with a blue flow dial on the smaller models.",
+  "highlights": [
+   "Seven sizes, 320 to 3000 L/h",
+   "Up to 3 m head",
+   "Flow adjustment dial on small and mid sizes",
+   "Suction-cup feet"
+  ],
+  "bestFor": "Driving a DIY filter, a sump return or a water-change setup on a budget.",
+  "watchOut": "The large models draw 66 to 88 W, which is a lot for a pump running around the clock.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "P-300",
+    "sku": "53 0003",
+    "flowLph": 320,
+    "powerW": 5.1,
+    "headM": 0.78,
+    "tankMaxL": 50,
+    "lengthCm": 5,
+    "widthCm": 6,
+    "heightCm": 4
+   },
+   {
+    "name": "PA-500",
+    "sku": "53 0005",
+    "flowLph": 380,
+    "powerW": 5.9,
+    "headM": 0.83,
+    "tankMaxL": 80,
+    "lengthCm": 6,
+    "widthCm": 4.5,
+    "heightCm": 7
+   },
+   {
+    "name": "P-2000",
+    "sku": "53 0006",
+    "flowLph": 700,
+    "powerW": 14.6,
+    "headM": 2.0,
+    "tankMaxL": 150,
+    "lengthCm": 12.5,
+    "widthCm": 7,
+    "heightCm": 12.5
+   },
+   {
+    "name": "P-2500",
+    "sku": "53 0007",
+    "flowLph": 1250,
+    "powerW": 30,
+    "headM": 2.35,
+    "tankMaxL": 250,
+    "lengthCm": 12.5,
+    "widthCm": 7,
+    "heightCm": 15
+   },
+   {
+    "name": "P-3000",
+    "sku": "53 0008",
+    "flowLph": 1950,
+    "powerW": 42,
+    "headM": 3.0,
+    "tankMaxL": 390,
+    "lengthCm": 24.5,
+    "widthCm": 9,
+    "heightCm": 16
+   },
+   {
+    "name": "P-3500",
+    "sku": "53 0009",
+    "flowLph": 2400,
+    "powerW": 66,
+    "headM": 3.0,
+    "tankMaxL": 480,
+    "lengthCm": 24.5,
+    "widthCm": 9,
+    "heightCm": 18
+   },
+   {
+    "name": "P-4500",
+    "sku": "53 0010",
+    "flowLph": 3000,
+    "powerW": 88,
+    "headM": 3.0,
+    "tankMaxL": 600,
+    "lengthCm": 34,
+    "widthCm": 10.5,
+    "heightCm": 20
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-submersible-pump-p-300-pa-500-p-2000-p-2500-p-3000-p-3500-p-4500_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-submersible-pump-p-300-pa-500-p-2000-p-2500-p-3000-p-3500-p-4500/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ph-submersible-pump",
+  "brand": "Dophin",
+  "name": "PH Series Submersible Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "Small black submersible pumps from 300 to 1250 L/h, the sort used to drive a small filter, a paludarium stream or a spray.",
+  "highlights": [
+   "Five sizes, 300 to 1250 L/h",
+   "Up to 2.35 m head",
+   "Compact, from 7 cm tall",
+   "Suction-cup feet"
+  ],
+  "bestFor": "A small paludarium water feature, a DIY sponge or box filter, or topping up from a bucket.",
+  "watchOut": "Head figures are the maximum lift with zero flow, so size up if you need to push water more than a metre.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "PH-500",
+    "sku": "53 0015",
+    "flowLph": 300,
+    "powerW": 3.3,
+    "headM": 0.66,
+    "tankMaxL": 50,
+    "lengthCm": 7.5,
+    "widthCm": 4.3,
+    "heightCm": 7
+   },
+   {
+    "name": "PH-1000",
+    "sku": "53 0016",
+    "flowLph": 400,
+    "powerW": 5,
+    "headM": 0.8,
+    "tankMaxL": 80,
+    "lengthCm": 7,
+    "widthCm": 5.3,
+    "heightCm": 8.8
+   },
+   {
+    "name": "PH-1500",
+    "sku": "53 0017",
+    "flowLph": 480,
+    "powerW": 7.2,
+    "headM": 1.07,
+    "tankMaxL": 110,
+    "lengthCm": 8,
+    "widthCm": 5.8,
+    "heightCm": 9.8
+   },
+   {
+    "name": "PH-2000",
+    "sku": "53 0018",
+    "flowLph": 700,
+    "powerW": 14.6,
+    "headM": 2.0,
+    "tankMaxL": 140,
+    "lengthCm": 10.5,
+    "widthCm": 7,
+    "heightCm": 10.8
+   },
+   {
+    "name": "PH-2500",
+    "sku": "53 0019",
+    "flowLph": 1250,
+    "powerW": 30,
+    "headM": 2.35,
+    "tankMaxL": 270,
+    "lengthCm": 11,
+    "widthCm": 8,
+    "heightCm": 13.8
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-submersible-pump-ph-500-ph-1000-ph-1500-ph-2000-ph-2500_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-submersible-pump/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-aa-submersible-pump",
+  "brand": "Dophin",
+  "name": "AA Series Submersible Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "Grey and blue submersible pumps with a carry handle on the bigger sizes, running from 300 to 4300 L/h. Sold as \"power liquid filter\" pumps, they are general-purpose water movers.",
+  "highlights": [
+   "Eight sizes, 300 to 4300 L/h",
+   "Up to 4 m head on the AA9000",
+   "Carry handle on larger models",
+   "Suction-cup feet"
+  ],
+  "bestFor": "A sump return or water-transfer pump where you need decent head height for the money.",
+  "watchOut": "Power draw is high on the big models (116 to 125 W for AA6000 and AA9000); an efficient DC pump costs more upfront but less to run.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "AA300",
+    "sku": "53 0207",
+    "flowLph": 300,
+    "powerW": 4.3,
+    "headM": 0.64,
+    "tankMaxL": 50
+   },
+   {
+    "name": "AA500",
+    "sku": "53 0208",
+    "flowLph": 500,
+    "powerW": 8.2,
+    "headM": 0.93,
+    "tankMaxL": 100
+   },
+   {
+    "name": "AA1000",
+    "sku": "53 0201",
+    "flowLph": 1100,
+    "powerW": 15,
+    "headM": 1.0,
+    "tankMaxL": 200,
+    "lengthCm": 9.5,
+    "widthCm": 6,
+    "heightCm": 12
+   },
+   {
+    "name": "AA2000",
+    "sku": "53 0202",
+    "flowLph": 1700,
+    "powerW": 28,
+    "headM": 1.75,
+    "tankMaxL": 300,
+    "lengthCm": 11,
+    "widthCm": 7,
+    "heightCm": 13
+   },
+   {
+    "name": "AA3000",
+    "sku": "53 0203",
+    "flowLph": 2000,
+    "powerW": 41,
+    "headM": 2.15,
+    "tankMaxL": 400,
+    "lengthCm": 15,
+    "widthCm": 7.5,
+    "heightCm": 16
+   },
+   {
+    "name": "AA4000",
+    "sku": "53 0204",
+    "flowLph": 2700,
+    "powerW": 75,
+    "headM": 3.5,
+    "tankMaxL": 500,
+    "lengthCm": 18,
+    "widthCm": 9,
+    "heightCm": 17.5
+   },
+   {
+    "name": "AA6000",
+    "sku": "53 0205",
+    "flowLph": 3600,
+    "powerW": 116,
+    "headM": 3.5,
+    "tankMaxL": 600,
+    "lengthCm": 19,
+    "widthCm": 11,
+    "heightCm": 18.5
+   },
+   {
+    "name": "AA9000",
+    "sku": "53 0206",
+    "flowLph": 4300,
+    "powerW": 125,
+    "headM": 4.0,
+    "tankMaxL": 800,
+    "lengthCm": 19,
+    "widthCm": 11,
+    "heightCm": 18.5
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-power-liquid-filter-aa300-a500-aa1000-aa2000-aa3000-aa4000-aa6000-aa9000-_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-power-liquid-filter/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-eco-dc-variable-pump",
+  "brand": "Dophin",
+  "name": "ECO DC Variable Pump",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "A 24 V DC pump with a digital remote that gives 20 steps of steady flow, two wave modes and a feed pause. It also cuts out and alarms if it runs dry.",
+  "highlights": [
+   "6000 to 10000 L/h maximum",
+   "20-step flow control plus fast and slow wave modes",
+   "Feed pause of 10, 20 or 30 minutes",
+   "Dry-run alarm and automatic cut-off"
+  ],
+  "bestFor": "A sump return on a large tank where turning the flow down precisely matters more than raw price.",
+  "watchOut": "Even at its lowest setting it is a big pump, sized for large systems rather than a normal planted tank.",
+  "specs": {
+   "Motor": "24 V DC, accepts 100 to 240 V AC input",
+   "Control": "Digital controller with 4 modes",
+   "Use": "Submerged or inline"
+  },
+  "models": [
+   {
+    "name": "ECO6008",
+    "flowLph": 6000,
+    "headM": 5,
+    "powerW": 70,
+    "lengthCm": 21,
+    "widthCm": 8.5,
+    "heightCm": 11,
+    "extra": {
+     "Min power": "20 W",
+     "Outlet / inlet": "25 / 32 mm"
+    }
+   },
+   {
+    "name": "ECO8008",
+    "flowLph": 8000,
+    "headM": 6,
+    "powerW": 85,
+    "lengthCm": 21,
+    "widthCm": 8.5,
+    "heightCm": 11,
+    "extra": {
+     "Min power": "20 W",
+     "Outlet / inlet": "25 / 32 mm"
+    }
+   },
+   {
+    "name": "ECO12008",
+    "flowLph": 10000,
+    "headM": 6,
+    "powerW": 115,
+    "lengthCm": 25,
+    "widthCm": 10,
+    "heightCm": 13,
+    "extra": {
+     "Min power": "30 W",
+     "Outlet / inlet": "32 / 40 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-eco-ec-variable-pump-eco-6008-eco-8008-eco-12008_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-eco-ec-variable-pump-eco-6008-eco-8008-eco-12008/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-wp-wave-pump",
+  "brand": "Dophin",
+  "name": "WP Wave Pump",
+  "category": "pumps",
+  "subtype": "circulation",
+  "summary": "A compact circulation pump on a suction-cup mount that tilts 100 degrees and swivels 360. Two sizes, rated 2000 and 5000 L/h.",
+  "highlights": [
+   "2000 or 5000 L/h",
+   "Very low power, 3.8 or 6 W",
+   "Tilting, swivelling suction mount",
+   "Small body, 11.5 or 15.5 cm long"
+  ],
+  "bestFor": "Adding gentle circulation to a larger planted tank to move CO2 and nutrients into dead spots.",
+  "watchOut": "It gives steady flow only, no wave controller, and the WP-3000 can be too strong for tanks under about 200 litres.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version",
+   "Mount": "Suction cup, 100 degree tilt, 360 degree rotation"
+  },
+  "models": [
+   {
+    "name": "WP-1000",
+    "sku": "53 0178",
+    "flowLph": 2000,
+    "powerW": 3.8,
+    "tankMinL": 30,
+    "tankMaxL": 190,
+    "lengthCm": 11.5,
+    "widthCm": 5,
+    "heightCm": 8
+   },
+   {
+    "name": "WP-3000",
+    "sku": "53 0179",
+    "flowLph": 5000,
+    "powerW": 6.0,
+    "tankMinL": 190,
+    "tankMaxL": 380,
+    "lengthCm": 15.5,
+    "widthCm": 7,
+    "heightCm": 8
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-wave-pump-wp-1000-wp-3000_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/wave-pump-1000-3000/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-p608-power-head",
+  "brand": "Dophin",
+  "name": "P-608 / P-908 Power Head",
+  "category": "pumps",
+  "subtype": "water-pump",
+  "summary": "A classic square aquarium powerhead, the same pump used on Dophin top filters. Fitted with its sponge it doubles as a basic internal filter.",
+  "highlights": [
+   "1080 or 1550 L/h",
+   "Can run a top filter or undergravel setup",
+   "Sponge attachment shown on the box",
+   "Adjustable outlet"
+  ],
+  "bestFor": "Driving a top filter or giving an old-school tank extra flow.",
+  "watchOut": "At 16 to 29 W these are thirsty next to modern DC circulation pumps.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "P-608",
+    "sku": "53 0164",
+    "flowLph": 1080,
+    "powerW": 16,
+    "tankMaxL": 220
+   },
+   {
+    "name": "P-908",
+    "sku": "53 0054",
+    "flowLph": 1550,
+    "powerW": 29,
+    "tankMaxL": 300
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-power-head-p-608-p-908_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-power-head/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ap2500-air-pump",
+  "brand": "Dophin",
+  "name": "AP2500 Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "A tiny single-outlet air pump drawing just 1.2 W. Fine for a sponge filter or an air stone in a small tank.",
+  "highlights": [
+   "0.8 L/min from one outlet",
+   "1.2 W",
+   "10 x 5.5 x 7 cm",
+   "Rated for 30 to 60 litres"
+  ],
+  "bestFor": "Running a sponge filter in a shrimp or nano tank.",
+  "watchOut": "Output is modest, so it struggles with deeper tanks or more than one air device.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "AP2500",
+    "airLpm": 0.8,
+    "powerW": 1.2,
+    "outlets": 1,
+    "tankMinL": 30,
+    "tankMaxL": 60,
+    "lengthCm": 10,
+    "widthCm": 5.5,
+    "heightCm": 7,
+    "extra": {
+     "Pressure": "0.014 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-air-pump-ap2500_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-air-pump-ap2500/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ap1500-air-pump",
+  "brand": "Dophin",
+  "name": "AP1500 Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "A low, compact single-outlet air pump putting out 0.6 L/min for under 2 W.",
+  "highlights": [
+   "0.6 L/min, single outlet",
+   "1.9 W",
+   "Low 4.5 cm profile",
+   "Rated for 30 to 60 litres"
+  ],
+  "bestFor": "A single small sponge filter or air stone in a nano tank.",
+  "watchOut": "Low pressure (0.008 MPa), so keep it to shallow tanks.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "AP1500",
+    "sku": "55 0102",
+    "airLpm": 0.6,
+    "powerW": 1.9,
+    "outlets": 1,
+    "tankMinL": 30,
+    "tankMaxL": 60,
+    "lengthCm": 10,
+    "widthCm": 6,
+    "heightCm": 4.5,
+    "extra": {
+     "Pressure": "0.008 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-air-pump-ap1500_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-air-pump-ap1500/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ap1301-air-pump",
+  "brand": "Dophin",
+  "name": "AP1301 / AP1302 Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "A white, drum-shaped air pump in single (AP1301) and double outlet (AP1302) versions.",
+  "highlights": [
+   "1.6 or 2 L/min",
+   "Single or double outlet",
+   "1.8 or 2.5 W",
+   "Covers 40 to 200 litres"
+  ],
+  "bestFor": "Running one or two sponge filters in small to medium tanks.",
+  "watchOut": "The double outlet splits a modest 2 L/min, so two devices each get only about 1 L/min.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "AP1301",
+    "sku": "55 0091",
+    "airLpm": 1.6,
+    "powerW": 1.8,
+    "outlets": 1,
+    "tankMinL": 40,
+    "tankMaxL": 80,
+    "lengthCm": 10,
+    "widthCm": 6,
+    "heightCm": 7,
+    "extra": {
+     "Pressure": "0.01 MPa"
+    }
+   },
+   {
+    "name": "AP1302",
+    "sku": "55 0092",
+    "airLpm": 2.0,
+    "powerW": 2.5,
+    "outlets": 2,
+    "tankMinL": 120,
+    "tankMaxL": 200,
+    "lengthCm": 13,
+    "widthCm": 7.5,
+    "heightCm": 8.5,
+    "extra": {
+     "Pressure": "0.01 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-air-pump-ap1301-ap1302_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-air-pump/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ap1501-air-pump",
+  "brand": "Dophin",
+  "name": "AP1501 / AP1502 Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "A dome-shaped air pump with an adjustable air-flow dial on top, in single and double outlet versions. Ratings match the AP1301/AP1302.",
+  "highlights": [
+   "1.6 or 2 L/min",
+   "Adjustable air flow",
+   "Single or double outlet",
+   "1.8 or 2.5 W"
+  ],
+  "bestFor": "A sponge filter in a shrimp tank where you want to turn the bubbles down.",
+  "watchOut": "Tubing and check valve are optional extras, and output is modest for deeper tanks.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "AP1501",
+    "airLpm": 1.6,
+    "powerW": 1.8,
+    "outlets": 1,
+    "tankMinL": 40,
+    "tankMaxL": 80,
+    "widthCm": 7,
+    "heightCm": 10,
+    "extra": {
+     "Pressure": "0.01 MPa"
+    }
+   },
+   {
+    "name": "AP1502",
+    "airLpm": 2.0,
+    "powerW": 2.5,
+    "outlets": 2,
+    "tankMinL": 120,
+    "tankMaxL": 200,
+    "widthCm": 8.5,
+    "heightCm": 11,
+    "extra": {
+     "Pressure": "0.01 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-air-pump-ap1501-ap1502_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-air-pump-ap1501-1502/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-fish-air-pump",
+  "brand": "Dophin",
+  "name": "FISH-1 / FISH-2 Air Pump",
+  "category": "air-pumps",
+  "subtype": "air-pump",
+  "summary": "A fish-shaped novelty air pump in two sizes, putting out 1 or 2.4 L/min.",
+  "highlights": [
+   "1 or 2.4 L/min",
+   "1.2 or 2.6 W",
+   "Rated for 30 or 150 litres",
+   "Fish-shaped housing"
+  ],
+  "bestFor": "A simple aeration or sponge-filter pump where the look appeals.",
+  "watchOut": "The shape is a matter of taste; performance is ordinary budget-pump level.",
+  "specs": {
+   "Figures quoted": "230 V / 50 Hz version"
+  },
+  "models": [
+   {
+    "name": "FISH-1",
+    "sku": "55 0097",
+    "airLpm": 1.0,
+    "powerW": 1.2,
+    "outlets": 1,
+    "tankMaxL": 30
+   },
+   {
+    "name": "FISH-2",
+    "sku": "55 0098",
+    "airLpm": 2.4,
+    "powerW": 2.6,
+    "tankMaxL": 150
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-air-pump-fish-1-fish-2_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-air-pump-fish-1-fish-2/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-bp-1-battery-air-pump",
+  "brand": "Dophin",
+  "name": "BP-1 Battery Air Pump",
+  "category": "air-pumps",
+  "subtype": "battery",
+  "summary": "A portable 1.5 V battery air pump in a blue case, supplied with tubing and an air stone. It is for transport and emergencies rather than daily use.",
+  "highlights": [
+   "Runs on a 1.5 V battery",
+   "0.4 L/min",
+   "Tubing and air stone included",
+   "Hanging lug on the case"
+  ],
+  "bestFor": "Keeping fish or shrimp oxygenated in a bag or bucket on the way home, or during a power cut.",
+  "watchOut": "Output is very low and it does not switch on by itself when the power fails.",
+  "specs": {
+   "Power": "1.5 V DC battery"
+  },
+  "models": [
+   {
+    "name": "BP-1",
+    "sku": "55 0013",
+    "airLpm": 0.4,
+    "tankMinL": 30,
+    "tankMaxL": 60,
+    "lengthCm": 14.9,
+    "widthCm": 7.9,
+    "heightCm": 4.8,
+    "extra": {
+     "Pressure": "0.01 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-battery-pump-bp-1_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-battery-pump-bp-1/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-bp-189-ac-dc-air-pump",
+  "brand": "Dophin",
+  "name": "BP-189 AC/DC Air Pump",
+  "category": "air-pumps",
+  "subtype": "battery",
+  "summary": "A small mains air pump with battery backup, so the air keeps running if the power cuts out. Output is 0.5 L/min.",
+  "highlights": [
+   "AC mains with DC battery backup",
+   "0.5 L/min",
+   "1.5 W",
+   "Rated up to 120 litres"
+  ],
+  "bestFor": "Keeping a sponge filter running through short power cuts in a small tank.",
+  "watchOut": "Only 0.3 m maximum depth, so it will not push air to the bottom of tall tanks.",
+  "specs": {
+   "Power": "230 V AC, DC battery backup"
+  },
+  "models": [
+   {
+    "name": "BP-189",
+    "sku": "55 0097",
+    "airLpm": 0.5,
+    "powerW": 1.5,
+    "tankMinL": 30,
+    "tankMaxL": 120,
+    "lengthCm": 10,
+    "widthCm": 7,
+    "heightCm": 5,
+    "extra": {
+     "Max depth": "0.3 m",
+     "Pressure": "0.008 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-battery-pump-bp-189_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-battery-pump-bp-189/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-bp-188-ac-dc-air-pump",
+  "brand": "Dophin",
+  "name": "BP-188 AC/DC Air Pump",
+  "category": "air-pumps",
+  "subtype": "battery",
+  "summary": "A rescue air pump with a rechargeable 6 V 4.0 Ah battery. It switches to battery by itself when the mains fails and recharges once power returns.",
+  "highlights": [
+   "Automatic switch to battery on power failure",
+   "Recharges itself when mains returns",
+   "2 L/min on mains",
+   "Can also take 4 dry cells"
+  ],
+  "bestFor": "Anyone in an area with regular power cuts who wants filters and livestock kept oxygenated.",
+  "watchOut": "It is bulky (18 x 16.5 x 7.7 cm) and the sealed battery will need replacing eventually.",
+  "specs": {
+   "Battery": "6 V 4.0 Ah rechargeable, or 4 dry cells",
+   "Switchover": "Automatic"
+  },
+  "models": [
+   {
+    "name": "BP-188",
+    "sku": "55 0012",
+    "airLpm": 2.0,
+    "powerW": 6.1,
+    "tankMinL": 120,
+    "tankMaxL": 230,
+    "lengthCm": 18,
+    "widthCm": 16.5,
+    "heightCm": 7.7,
+    "extra": {
+     "Max depth": "0.5 m",
+     "Pressure": "0.016 MPa"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-battery-pump-bp-188_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-battery-pump-bp-188/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ah-1010-mini-heater",
+  "brand": "Dophin",
+  "name": "AH-1010 Mini Heater",
+  "category": "heaters",
+  "subtype": "preset",
+  "summary": "A tiny quartz heater with a switch for 23, 25 or 27 °C. The three wattages each suit a nano of 5, 10 or 15 litres.",
+  "highlights": [
+   "Switchable 23, 25 or 27 °C",
+   "Quartz tube, 7 to 9 cm long",
+   "Indicator light",
+   "5, 10 or 15 W"
+  ],
+  "bestFor": "A small shrimp or betta tank where you just want a stable, sensible temperature.",
+  "watchOut": "No fine control between the three settings, so check with a thermometer.",
+  "specs": {
+   "Temperature": "23, 25 or 27 °C, stated accuracy ±1 °C",
+   "Tube": "Quartz"
+  },
+  "models": [
+   {
+    "name": "5W",
+    "heaterW": 5,
+    "tankMaxL": 5,
+    "lengthCm": 7
+   },
+   {
+    "name": "10W",
+    "heaterW": 10,
+    "tankMaxL": 10,
+    "lengthCm": 8
+   },
+   {
+    "name": "15W",
+    "heaterW": 15,
+    "tankMaxL": 15,
+    "lengthCm": 9
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-mini-temperature-fixed-heater-ah-1010-5w-10w-15w_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-mini-temperature-fixed-heater-ah-1010-5w-10w-15w/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ah-1000-plastic-mini-heater",
+  "brand": "Dophin",
+  "name": "AH-1000 Plastic Mini Heater",
+  "category": "heaters",
+  "subtype": "preset",
+  "summary": "A fully submersible plastic-cased mini heater preset to 25 °C, in 10 and 25 W sizes.",
+  "highlights": [
+   "Preset to 25 °C",
+   "Plastic case, fully submersible",
+   "10 W or 25 W",
+   "For tanks up to 30 litres"
+  ],
+  "bestFor": "A nano or small shrimp tank that just needs taking off the chill.",
+  "watchOut": "No adjustment, so it will not suit fish that want cooler or warmer water; unplug before lifting it out.",
+  "specs": {
+   "Temperature": "Fixed at 25 °C",
+   "Case": "Plastic"
+  },
+  "models": [
+   {
+    "name": "AH-1002",
+    "sku": "57 0024",
+    "heaterW": 10,
+    "tankMaxL": 20,
+    "lengthCm": 10.5,
+    "extra": {
+     "Width": "1.8 x 1.5 cm"
+    }
+   },
+   {
+    "name": "AH-1000",
+    "sku": "52 0022",
+    "heaterW": 10,
+    "tankMaxL": 15,
+    "lengthCm": 13.5,
+    "extra": {
+     "Width": "2.5 x 1.5 cm"
+    }
+   },
+   {
+    "name": "AH-1001",
+    "sku": "52 0023",
+    "heaterW": 25,
+    "tankMaxL": 30,
+    "lengthCm": 15,
+    "extra": {
+     "Width": "3.2 x 2 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-plastic-mini-heater-ah-1000-ah-1001-ah-1002_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-plastic-mini-heater/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ah-1008-glass-heater",
+  "brand": "Dophin",
+  "name": "AH-1008 Glass Heater",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "A standard glass thermostat heater from 25 to 500 W, rated at roughly one watt per litre.",
+  "highlights": [
+   "Seven wattages, 25 to 500 W",
+   "Submersible glass tube",
+   "Rated about 1 W per litre",
+   "Suction-cup mounting"
+  ],
+  "bestFor": "A budget heater for a tropical planted tank, sized to your volume.",
+  "watchOut": "Budget glass heaters can drift, so keep a thermometer in the tank and never run it out of water.",
+  "specs": {
+   "Type": "Submersible glass thermostat heater"
+  },
+  "models": [
+   {
+    "name": "25W",
+    "sku": "12 0313",
+    "heaterW": 25,
+    "tankMaxL": 25
+   },
+   {
+    "name": "50W",
+    "sku": "12 0314",
+    "heaterW": 50,
+    "tankMaxL": 50
+   },
+   {
+    "name": "100W",
+    "sku": "12 0316",
+    "heaterW": 100,
+    "tankMaxL": 100
+   },
+   {
+    "name": "150W",
+    "sku": "12 0317",
+    "heaterW": 150,
+    "tankMaxL": 150
+   },
+   {
+    "name": "200W",
+    "sku": "12 0318",
+    "heaterW": 200,
+    "tankMaxL": 200
+   },
+   {
+    "name": "300W",
+    "sku": "12 0319",
+    "heaterW": 300,
+    "tankMaxL": 300
+   },
+   {
+    "name": "500W",
+    "sku": "12 0320",
+    "heaterW": 500,
+    "tankMaxL": 500
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-glass-heater-ah-1008-25w-50w-100w-150w-200w-300w-500w_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-glass-heater-3/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-ah-1006-glass-heater",
+  "brand": "Dophin",
+  "name": "AH-1006 Glass Heater",
+  "category": "heaters",
+  "subtype": "glass",
+  "summary": "A glass thermostat heater with a printed temperature scale and a perforated lower sleeve, in the same 25 to 500 W steps as the AH-1008.",
+  "highlights": [
+   "Seven wattages, 25 to 500 W",
+   "Printed temperature scale on the tube",
+   "Perforated protective sleeve",
+   "Rated about 1 W per litre"
+  ],
+  "bestFor": "A tropical tank where you want a cheap heater with a visible scale.",
+  "watchOut": "Treat the scale as a guide and confirm with a separate thermometer.",
+  "specs": {
+   "Type": "Submersible glass thermostat heater"
+  },
+  "models": [
+   {
+    "name": "25W",
+    "sku": "57 0025",
+    "heaterW": 25,
+    "tankMaxL": 25
+   },
+   {
+    "name": "50W",
+    "sku": "57 0026",
+    "heaterW": 50,
+    "tankMaxL": 50
+   },
+   {
+    "name": "100W",
+    "sku": "57 0027",
+    "heaterW": 100,
+    "tankMaxL": 100
+   },
+   {
+    "name": "150W",
+    "sku": "57 0028",
+    "heaterW": 150,
+    "tankMaxL": 150
+   },
+   {
+    "name": "200W",
+    "sku": "57 0029",
+    "heaterW": 200,
+    "tankMaxL": 200
+   },
+   {
+    "name": "300W",
+    "sku": "57 0030",
+    "heaterW": 300,
+    "tankMaxL": 300
+   },
+   {
+    "name": "500W",
+    "sku": "57 0031",
+    "heaterW": 500,
+    "tankMaxL": 500
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-glass-heater-ah-1006-25w-50w-100w-150w-200w-300w-500w_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-glass-heater/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-led-109-clip-light",
+  "brand": "Dophin",
+  "name": "LED 109 Clip Light",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "A slim 3.4 W clip-on LED with 12 white and 3 blue diodes on an arched arm. It clamps to glass up to 5 mm thick.",
+  "highlights": [
+   "3.4 W, 12 white + 3 blue LEDs",
+   "Clamps glass up to 5 mm",
+   "120 degree spread",
+   "Ultra-thin arched head"
+  ],
+  "bestFor": "A small nano with low-light plants such as Anubias, Bucephalandra, Java fern and mosses.",
+  "watchOut": "Too weak for carpeting plants or red stems; treat it as a viewing light that keeps easy plants ticking over.",
+  "specs": {
+   "Voltage": "230 V / 50 Hz",
+   "Clamp": "Glass up to 5 mm"
+  },
+  "models": [
+   {
+    "name": "LED 109",
+    "powerW": 3.4,
+    "extra": {
+     "LEDs": "12 white, 3 blue",
+     "Beam angle": "120°"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-led-light-led-109_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-led-light-led-109/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-mini-led-clip-light",
+  "brand": "Dophin",
+  "name": "Mini LED Clip Light",
+  "category": "lights",
+  "subtype": "clip-on",
+  "summary": "Small clip-on lights for tiny tanks: a gooseneck 8-LED spot and flat 10, 14 and 20 LED panels on a swivel clamp.",
+  "highlights": [
+   "Four sizes, 8 to 20 LEDs",
+   "Panels 13, 16 or 19 cm long",
+   "Swivel or gooseneck clamp",
+   "Clips to the tank rim"
+  ],
+  "bestFor": "Lighting a desktop tank or betta setup with a few low-light plants.",
+  "watchOut": "Wattage and spectrum are not published; expect only enough light for the hardiest plants.",
+  "specs": {
+   "Mount": "Clip-on (gooseneck on 8 LED, swivel clamp on the others)"
+  },
+  "models": [
+   {
+    "name": "8 LED",
+    "sku": "58 0002",
+    "lengthCm": 8,
+    "extra": {
+     "Height": "28 cm gooseneck"
+    }
+   },
+   {
+    "name": "10 LED",
+    "sku": "58 0003",
+    "lengthCm": 13
+   },
+   {
+    "name": "14 LED",
+    "sku": "58 0004",
+    "lengthCm": 16
+   },
+   {
+    "name": "20 LED",
+    "sku": "58 0005",
+    "lengthCm": 19
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-led-light-10led-14led-20led_1.jpg",
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-led-light-8led_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-led-light-3/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dophin-sk200-surface-skimmer",
+  "brand": "Dophin",
+  "name": "SK200 Surface Skimmer",
+  "category": "plumbing",
+  "subtype": "surface-skimmer",
+  "summary": "A small self-powered surface skimmer with its own 3 W pump. It pulls the oily film off the surface and returns the water, improving gas exchange.",
+  "highlights": [
+   "Built-in 200 L/h pump",
+   "3 W",
+   "For tanks around 30 litres",
+   "Adjustable float at the top"
+  ],
+  "bestFor": "A small planted tank with a surface film problem that has no skimmer on the filter intake.",
+  "watchOut": "At 200 L/h it is sized for small tanks, and the surface agitation it creates will drive off some CO2.",
+  "specs": {
+   "Voltage": "230 V / 50 Hz",
+   "Pump": "Built in"
+  },
+  "models": [
+   {
+    "name": "SK200",
+    "flowLph": 200,
+    "powerW": 3.0,
+    "headM": 0.33,
+    "tankMaxL": 30
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dophin/images/dophin/dophin-sk200-aquarium-surface-skimmer_1.jpg"
+  ],
+  "sourceUrl": "https://kwzone.com/product/dophin-sk200-aquarium-surface-skimmer/",
+  "sourceName": "KW Zone",
+  "specSource": "manufacturer"
+ }
+]

@@ -9,7 +9,7 @@ import {
   getCalculator,
   type CalculatorComponent,
 } from "@/data/calculators";
-import { calculatorPageJsonLd } from "@/lib/seo";
+import { calculatorPageJsonLd, DEFAULT_OG_IMAGE, longDescription } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Faq } from "@/components/seo/faq";
@@ -44,19 +44,21 @@ export async function generateMetadata({
   const calc = getCalculator(slug);
   if (!calc) return {};
   const canonical = `${site.url}/calculators/${slug}`;
+  const description = longDescription(calc.spot, calc.intro);
   return {
     title: calc.name,
-    description: calc.spot,
+    description,
     alternates: { canonical },
     openGraph: {
       type: "website",
       url: canonical,
       siteName: site.name,
       title: calc.name,
-      description: calc.spot,
+      description,
       locale: "en",
+      images: [DEFAULT_OG_IMAGE],
     },
-    twitter: { card: "summary_large_image", title: calc.name, description: calc.spot },
+    twitter: { card: "summary_large_image", title: calc.name, description, images: [DEFAULT_OG_IMAGE] },
     keywords: [
       calc.name.toLowerCase(),
       `${calc.name.toLowerCase()} free`,

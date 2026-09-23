@@ -1,0 +1,1359 @@
+[
+ {
+  "id": "dooa-system-paluda",
+  "brand": "DOOA",
+  "name": "System Paluda",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A complete paludarium in a box: glass tank, a black wabi-kusa wall with a small pump that keeps it wet, a Mistflow fogger and a circulation fan. You add the plants, a light and water. It takes most of the guesswork out of building a planted wall that stays damp.",
+  "highlights": [
+   "Two footprints: 30 x 30 cm or 60 x 30 cm, both 45 cm tall",
+   "Includes a 3 L/min USB circulation pump that trickles water down the wabi-kusa wall",
+   "Mistflow fogger and Circulation Fan 40 come in the box",
+   "Wall is built from wabi-kusa mats (9 on the 30, 18 on the 60) you plant straight into",
+   "Sliding glass top, top plate and a stainless mesh cover for adjusting humidity"
+  ],
+  "bestFor": "Someone who wants a mossy, misty rainforest wall or a jewel orchid display without designing the plumbing and airflow from scratch.",
+  "watchOut": "No light is included, so budget for a Paluda Light II or similar, and the USB adapter is missing from the C-plug version.",
+  "specs": {
+   "Included": "Tank, Mistflow box and Mistflow, wabi-kusa mats, circulation pump, pump stand, outflow pipe, Circulation Fan 40, sliding glass top, top glass plate, stainless mesh cover, drainage piece, sponges, Paluda Clean PC, cascade brush",
+   "Circulation pump": "3 L/min, USB Type-A",
+   "Plug options": "With USB power adapter, or C-plug version without the adapter"
+  },
+  "models": [
+   {
+    "name": "30",
+    "sku": "151-401",
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 45,
+    "extra": {
+     "Wabi-kusa mats": "9",
+     "SKU without adapter": "151-403"
+    }
+   },
+   {
+    "name": "60",
+    "sku": "151-402",
+    "lengthCm": 60,
+    "widthCm": 30,
+    "heightCm": 45,
+    "extra": {
+     "Wabi-kusa mats": "18",
+     "SKU without adapter": "151-404"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-system-paluda_4.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-system-paluda_3.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/04/system-paluda/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-neo-glass-paluda",
+  "brand": "DOOA",
+  "name": "Neo Glass Paluda",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "The glass box from the System Paluda sold on its own, with the sliding top and top plate but none of the wall, pump or fogger. It suits people who want to design their own layout, or who already own misting and fan gear.",
+  "highlights": [
+   "Same 30 x 30 x 45 cm and 60 x 30 x 45 cm sizes as the System Paluda",
+   "Sliding glass top and fixed top plate included",
+   "Drainage piece and one 40 mm hole cap for adding a fan or plumbing",
+   "Accepts DOOA's Circulation Fan 40 and Spray Pump as add-ons"
+  ],
+  "bestFor": "Keepers building a custom paludarium or terrarium layout who want a tidy, rimless-looking glass enclosure made for the job.",
+  "watchOut": "It is only the enclosure, so you still need a light, a misting or watering method and airflow.",
+  "specs": {
+   "Included": "Tank, sliding glass top, top glass plate, 40 mm hole cap, drainage piece"
+  },
+  "models": [
+   {
+    "name": "30",
+    "sku": "151-405",
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 45
+   },
+   {
+    "name": "60",
+    "sku": "151-406",
+    "lengthCm": 60,
+    "widthCm": 30,
+    "heightCm": 45
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-paluda_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-paluda_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-paluda_2.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/04/neo-glass-paluda/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-glass-paluda",
+  "brand": "DOOA",
+  "name": "Glass Paluda",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A tall all-glass display piece: a 60 x 30 x 40 cm case sits on top of a glass frame with two glass shelves underneath, the whole thing standing a metre high. It is designed for hanging epiphytes, air plants and mounted wood rather than a water feature.",
+  "highlights": [
+   "Overall 60 x 40 x 100 cm, display case 60 x 30 x 40 cm",
+   "Glass lid plus hooks for hanging mounted plants or wood inside",
+   "Two glass shelves below for pots or equipment",
+   "Maximum load capacity of 10 kg"
+  ],
+  "bestFor": "Showing off mounted epiphytes, orchids or a driftwood branch as furniture in a room, where a normal tank on a cabinet would feel too heavy.",
+  "watchOut": "The 10 kg load limit means it suits light mounted displays, not heavy soil and stone builds.",
+  "specs": {
+   "Included": "Glass lid, two lid pads, two Glass Paluda hooks, non-slip stickers, high-absorption sponge"
+  },
+  "models": [
+   {
+    "name": "Glass Paluda",
+    "sku": "151-801",
+    "lengthCm": 60,
+    "widthCm": 40,
+    "heightCm": 100,
+    "extra": {
+     "Display case": "60 x 30 x 40 cm",
+     "Max load": "10 kg"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-paluda_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-paluda_4.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-paluda_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-paluda_3.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/07/glass-paluda/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-neo-glass-air",
+  "brand": "DOOA",
+  "name": "Neo Glass Air",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "Small open-top glass cubes and columns for terrariums, moss towers and wabi-kusa displays. There are eight sizes, from a 9 cm tall tray to a 45 cm tall column, so it is easy to match one to a desk, shelf or light stand.",
+  "highlights": [
+   "Eight sizes from 15 x 15 x 25 cm up to 30 x 30 x 45 cm",
+   "Low trays (9 and 12 cm tall) for wabi-kusa balls or moss landscapes",
+   "Tall columns pair with DOOA's Terra Base moss pillars",
+   "Frameless clear glass"
+  ],
+  "bestFor": "Desk or shelf terrariums, moss towers and small emersed plant displays where you want a clean glass box in an exact size.",
+  "watchOut": "These are open boxes; a lid is sold separately (Neo Glass Cover), and without one humidity-loving plants will dry out quickly.",
+  "specs": {
+   "Lid": "Sold separately (Neo Glass Cover)"
+  },
+  "models": [
+   {
+    "name": "W15 x D15 x H25",
+    "sku": "151-201",
+    "lengthCm": 15,
+    "widthCm": 15,
+    "heightCm": 25
+   },
+   {
+    "name": "W15 x D15 x H30",
+    "sku": "151-202",
+    "lengthCm": 15,
+    "widthCm": 15,
+    "heightCm": 30
+   },
+   {
+    "name": "W20 x D20 x H9",
+    "sku": "151-209",
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 9
+   },
+   {
+    "name": "W20 x D20 x H20",
+    "sku": "151-204",
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 20
+   },
+   {
+    "name": "W30 x D18 x H12",
+    "sku": "151-205",
+    "lengthCm": 30,
+    "widthCm": 18,
+    "heightCm": 12
+   },
+   {
+    "name": "W20 x D20 x H30",
+    "sku": "151-207",
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 30,
+    "glassMm": 5
+   },
+   {
+    "name": "W20 x D20 x H35",
+    "sku": "151-206",
+    "lengthCm": 20,
+    "widthCm": 20,
+    "heightCm": 35
+   },
+   {
+    "name": "W30 x D30 x H45",
+    "sku": "151-208",
+    "lengthCm": 30,
+    "widthCm": 30,
+    "heightCm": 45,
+    "glassMm": 6
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-air_5.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-air_7.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-air_6.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-air_4.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/04/neo-glass-air/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-neo-glass-terra-h36",
+  "brand": "DOOA",
+  "name": "Neo Glass Terra H36",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A 60 cm glass tank with a stepped profile: 16 cm tall at the front and 36 cm at the back. The low front makes planting and trimming easy, while the tall back wall gives room for an emersed or mist-wall section above the waterline.",
+  "highlights": [
+   "60 x 30 cm footprint, 16 cm front height, 36 cm back height",
+   "Built for aquaterrarium layouts with water in front and plants climbing the back",
+   "Pairs with DOOA's Mizukusa Mist Wall and Wabi-Kusa Wall 60",
+   "Frameless glass that sits happily on a standard 60 cm stand"
+  ],
+  "bestFor": "Riparium and aquaterrarium builds on a 60 cm stand, where you want shallow water, emersed plants and a planted back wall in one tank.",
+  "watchOut": "With only 16 cm at the front, water depth is shallow, so it is not a swap for a normal 60 cm fish tank.",
+  "specs": {
+   "Shape": "Stepped: low front, tall back"
+  },
+  "models": [
+   {
+    "name": "H36",
+    "sku": "151-102",
+    "lengthCm": 60,
+    "widthCm": 30,
+    "heightCm": 36,
+    "extra": {
+     "Front height": "16 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-terra-h36_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-terra-h36_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-terra-h36_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-neo-glass-terra-h36_4.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/03/neo-glass-terra-h36/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-mizukusa-mist-wall",
+  "brand": "DOOA",
+  "name": "Mizukusa Mist Wall",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A planted wall system that sits above the water of a normal aquarium. A small filter pumps tank water up to the top of a black wabi-kusa panel, which stays wet so you can grow emersed plants and moss above a submerged layout.",
+  "highlights": [
+   "600 fits inside ADA Cube Garden 60 cm tanks (25, 36 or 45 cm tall, or 60 x 45 x 36 cm)",
+   "900 and 1200 sit behind 90 cm and 120 cm Cube Gardens",
+   "Driven by an ADA Super Jet filter (ES-150 for the 600, ES-600 for the 900, ES-1200 for the 1200)",
+   "Comes with inflow and outflow pipes, suction clips and 12, 27 or 48 wabi-kusa mats"
+  ],
+  "bestFor": "Keepers who want an aquarium and an emersed planted wall in the same display, and already run or plan to run ADA filtration.",
+  "watchOut": "The 900 and 1200 are made to order with roughly a two month wait, and each size is tied to a specific ADA filter and tank.",
+  "specs": {
+   "Glass thickness (600)": "Up to 6 mm",
+   "Lead time": "900 and 1200 are made to order (about 2 months)"
+  },
+  "models": [
+   {
+    "name": "600",
+    "sku": "152-701",
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60,
+    "extra": {
+     "Compatible filter": "Super Jet Filter ES-150 Ver.2",
+     "Wabi-kusa mats": "12",
+     "Install": "Inside the tank"
+    }
+   },
+   {
+    "name": "900",
+    "sku": "152-702",
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90,
+    "extra": {
+     "Compatible filter": "Super Jet Filter ES-600",
+     "Wabi-kusa mats": "27",
+     "Compatible tank": "Cube Garden 90 x 45 x 45 cm",
+     "Install": "Not inside the tank"
+    }
+   },
+   {
+    "name": "1200",
+    "sku": "152-703",
+    "fitsLengthMinCm": 120,
+    "fitsLengthMaxCm": 120,
+    "extra": {
+     "Compatible filter": "Super Jet Filter ES-1200",
+     "Wabi-kusa mats": "48",
+     "Compatible tank": "Cube Garden 120 x 50 x 50 cm",
+     "Install": "Not inside the tank"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mizukusa-mist-wall-600_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mizukusa-mist-wall-600_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mizukusa-mist-wall-600_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mizukusa-mist-wall-600_4.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/04/mizukusa-mist-wall-60/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-terra-base",
+  "brand": "DOOA",
+  "name": "Terra Base",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A porous, dark clay-look pillar that wicks water upwards, so moss and small epiphytes can grow all over it. Stood in a tall Neo Glass Air with a little water in the base, it becomes a living moss tower.",
+  "highlights": [
+   "Two heights: 16 cm and 23 cm, both 10 cm across",
+   "Sized for the Neo Glass Air 20 x 20 x 30 cm and 20 x 20 x 35 cm",
+   "Wicks water up from the base to keep moss damp",
+   "Takes moss, small ferns and miniature epiphytes"
+  ],
+  "bestFor": "A low-effort moss tower on a desk or shelf, especially if you already like the look of wabi-kusa.",
+  "watchOut": "It needs a humid enclosure and regular top-ups; in open room air the top dries out and moss browns.",
+  "specs": {
+   "Material": "Porous water-wicking pillar"
+  },
+  "models": [
+   {
+    "name": "H16",
+    "sku": "152-600",
+    "heightCm": 16,
+    "extra": {
+     "Diameter": "10 cm",
+     "Matching tank": "Neo Glass Air 20 x 20 x 30 cm"
+    }
+   },
+   {
+    "name": "H23",
+    "sku": "152-601",
+    "heightCm": 23,
+    "extra": {
+     "Diameter": "10 cm",
+     "Matching tank": "Neo Glass Air 20 x 20 x 35 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-terra-base_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-terra-base_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-terra-base_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-terra-base_5.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/03/terra-base/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-glass-pot-maru",
+  "brand": "DOOA",
+  "name": "Glass Pot Maru",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A round, handmade glass jar with a lid, made for small closed plantings like jewel orchids, moss and mini ferns. The lid holds humidity in, so it works well as a tabletop terrarium.",
+  "highlights": [
+   "Two sizes: 9.5 cm across by 14.6 cm tall, and 13 cm by 20 cm",
+   "Lidded, so humidity stays high with little misting",
+   "Handmade glass, so exact sizes vary a little"
+  ],
+  "bestFor": "A first closed terrarium or a small moss display on a desk, with no equipment needed beyond some light.",
+  "watchOut": "Small volume means condensation and mould can build up if it sits in direct sun or never gets aired.",
+  "specs": {
+   "Construction": "Handmade glass with lid"
+  },
+  "models": [
+   {
+    "name": "95",
+    "sku": "151-303",
+    "heightCm": 14.6,
+    "extra": {
+     "Diameter": "9.5 cm"
+    }
+   },
+   {
+    "name": "130",
+    "sku": "151-306",
+    "heightCm": 20,
+    "extra": {
+     "Diameter": "13 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-pot-maru-95_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-pot-maru-95_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-pot-maru-95_3.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/01/glass-pot-maru/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-glass-pot-shizuku",
+  "brand": "DOOA",
+  "name": "Glass Pot Shizuku",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A handmade teardrop-shaped glass pot with a small lid, meant for a closed planting of moss, jewel orchids or small ferns. The narrow opening keeps humidity up and the shape looks good from any side.",
+  "highlights": [
+   "Up to 17 cm across and 20 cm tall",
+   "Small 10.3 cm lid keeps moisture in",
+   "Matches DOOA's Wood Base Shizuku and Magnet Light G Slim for a lit display"
+  ],
+  "bestFor": "A single decorative terrarium piece on a desk or shelf, especially with a small clip-on or magnet light above it.",
+  "watchOut": "The narrow neck makes planting and trimming fiddly, so long tweezers help.",
+  "specs": {
+   "Construction": "Handmade glass with lid",
+   "Lid": "Up to 10.3 cm diameter, 2 cm tall"
+  },
+  "models": [
+   {
+    "name": "Shizuku",
+    "sku": "151-302",
+    "heightCm": 20,
+    "extra": {
+     "Diameter": "17 cm (max)"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-glass-pot-shizuku_3.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/01/glass-pot-shizuku/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-cell",
+  "brand": "DOOA",
+  "name": "Cell",
+  "category": "paludarium",
+  "subtype": "enclosure",
+  "summary": "A tall glass cloche that sits over a coloured glass dish, making a small closed terrarium for a single plant or a clump of moss. Lifting the dome off gives full access for planting and trimming.",
+  "highlights": [
+   "17 cm across and 30 cm tall",
+   "Removable glass dome over a planting dish",
+   "Base comes in green, amber or clear glass",
+   "Handmade, so sizes vary slightly"
+  ],
+  "bestFor": "Showing off one special plant (a jewel orchid, begonia or small aroid) as a decorative piece.",
+  "watchOut": "It holds only a thin layer of substrate, so pick slow, compact plants.",
+  "specs": {
+   "Colours": "Green, amber, clear"
+  },
+  "models": [
+   {
+    "name": "Cell",
+    "sku": "151-320",
+    "heightCm": 30,
+    "extra": {
+     "Diameter": "17 cm",
+     "Colour SKUs": "151-320, 151-321, 151-322"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-cell_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-cell_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-cell_6.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-cell_7.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2024/03/cell/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-mistflow",
+  "brand": "DOOA",
+  "name": "Mistflow",
+  "category": "paludarium",
+  "subtype": "misting",
+  "summary": "A small ultrasonic fogger that sits in water and sends a low layer of mist rolling across a paludarium or terrarium. It is mostly about raising humidity and giving that cloud-forest look.",
+  "highlights": [
+   "Ultrasonic fogger that works submerged in shallow water",
+   "Included with the System Paluda, also sold on its own",
+   "Used in DOOA's Mizukusa Mist Wall and System Terra layouts"
+  ],
+  "bestFor": "Adding visible mist and a humidity boost to a paludarium or wabi-kusa display.",
+  "watchOut": "Fog does not wet leaves as much as a spray system, and hard water leaves white scale on the disc and glass, so softened water helps.",
+  "specs": {
+   "Type": "Ultrasonic fogger"
+  },
+  "models": [
+   {
+    "name": "Mistflow",
+    "sku": "152-501"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mistflow_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mistflow_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mistflow_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-mistflow_4.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2018/10/mistflow/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-spray-pump",
+  "brand": "DOOA",
+  "name": "Spray Pump",
+  "category": "paludarium",
+  "subtype": "misting",
+  "summary": "A high-pressure misting pump with a plumbing kit for up to four spray points and six nozzles. Run on a timer, it gives plants in a paludarium a proper fine-mist watering rather than just fog.",
+  "highlights": [
+   "Up to 70 psi for a fine, even mist",
+   "About 0.85 L per minute, so short timed bursts are enough",
+   "Up to four spray points and six nozzles, single and double heads included",
+   "Fits the Paludarium series and can go in a Neo Glass Paluda with an optional suction cup"
+  ],
+  "bestFor": "Larger paludariums and aquaterrariums with a lot of land planting that need regular, reliable misting.",
+  "watchOut": "It needs its own water container, and tap water will spot the glass with calcium unless you soften it.",
+  "specs": {
+   "Included": "Single and double spray nozzles, T and L joints, pressure-resistant tube",
+   "Water supply": "Separate container required"
+  },
+  "models": [
+   {
+    "name": "Spray Pump",
+    "sku": "151-502",
+    "extra": {
+     "Max pressure": "70 psi",
+     "Flow": "About 0.85 L/min",
+     "Spray points": "Up to 4 (6 nozzles)"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-spray-pump_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-spray-pump_2.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2026/06/spray-pump/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-circulation-fan-40",
+  "brand": "DOOA",
+  "name": "Circulation Fan 40",
+  "category": "paludarium",
+  "subtype": "fan",
+  "summary": "A compact 40 mm USB fan that mounts in the hole on DOOA's Paluda tanks and keeps air moving inside. Gentle airflow stops stagnant, mouldy corners and helps leaves dry between mistings.",
+  "highlights": [
+   "Fits the 40 mm port on System Paluda and Neo Glass Paluda 30 and 60",
+   "USB powered (5 V, 1 A) with an inline controller",
+   "Included with the System Paluda"
+  ],
+  "bestFor": "Anyone running a closed Paluda enclosure who is fighting condensation, mould or rot.",
+  "watchOut": "It only works with DOOA's Paluda tanks and does not come with a USB adapter.",
+  "specs": {
+   "Power": "USB 5 V 1 A (adapter not included)",
+   "Compatible with": "System Paluda 30/60, Neo Glass Paluda 30/60"
+  },
+  "models": [
+   {
+    "name": "40",
+    "sku": "152-507"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-circulation-fan-40_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-circulation-fan-40_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-circulation-fan-40_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-circulation-fan-40_11.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2020/05/circulation-fan-40/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-paluda-light-ii",
+  "brand": "DOOA",
+  "name": "Paluda Light II",
+  "category": "lights",
+  "subtype": "paludarium",
+  "summary": "A slim, dark LED bar that sits on top of DOOA's Paluda enclosures. It gives strong light close up for the moss and small plants growing on a paludarium wall, with a very cool, bright white tone.",
+  "highlights": [
+   "Two lengths with 21 or 50 LEDs",
+   "Around 15,000 lux at 10 cm",
+   "12 W and 25 W power draw",
+   "Rated for over 30,000 hours"
+  ],
+  "bestFor": "Lighting a System Paluda or Neo Glass Paluda where plants grow close to the light.",
+  "watchOut": "The quoted colour temperature is very cool (around 19,000 to 23,000 K), so the look is bluish white rather than warm.",
+  "specs": {
+   "Input": "AC 100 to 240 V",
+   "Colour temperature": "19,000 to 23,000 K",
+   "Illuminance": "About 15,000 lux at 10 cm",
+   "LED life": "Over 30,000 hours",
+   "Operating temperature": "0 to 35 °C"
+  },
+  "models": [
+   {
+    "name": "30",
+    "sku": "153-109",
+    "powerW": 12,
+    "extra": {
+     "LEDs": "21",
+     "Rated power": "24 W"
+    }
+   },
+   {
+    "name": "60",
+    "sku": "153-111",
+    "powerW": 25,
+    "extra": {
+     "LEDs": "50",
+     "Rated power": "54 W"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-paluda-light-ii_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-paluda-light-ii_4.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-paluda-light-ii_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-paluda-light-ii_2.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/07/paluda-light-ii/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-magnet-light-g-slim",
+  "brand": "DOOA",
+  "name": "Magnet Light G Slim",
+  "category": "lights",
+  "subtype": "paludarium",
+  "summary": "A small, flat round LED that attaches by magnet to DOOA's stands and arms. It is made for lighting glass pots, cloches and small terrariums from just above.",
+  "highlights": [
+   "Compact disc light for small glass pots and terrariums",
+   "Magnetic mount for DOOA light stands and the mounting arm",
+   "Pairs with the Glass Pot Shizuku and Wood Base Shizuku as a set"
+  ],
+  "bestFor": "A single glass pot or small terrarium on a desk that needs its own neat light.",
+  "watchOut": "It needs a DOOA stand or arm to hang from, sold separately.",
+  "specs": {
+   "Mount": "Magnetic (stand or arm sold separately)"
+  },
+  "models": [
+   {
+    "name": "G Slim",
+    "sku": "153-017"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-magnet-light-g-slim_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-magnet-light-g-slim_2.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-magnet-light-g-slim_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-magnet-light-g-slim-wood-base-set_7.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2024/09/magnet-light-g-slim/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-scissors-curve",
+  "brand": "DOOA",
+  "name": "Scissors Curve",
+  "category": "tools",
+  "subtype": "scissors",
+  "summary": "Curved-blade stainless scissors for trimming carpets, moss and stems. The curve lets you cut flat along the substrate without your hand blocking the view.",
+  "highlights": [
+   "Two lengths: 17 cm and 23 cm",
+   "Curved blades for carpet and moss trimming",
+   "Stainless steel"
+  ],
+  "bestFor": "Trimming foreground carpets and moss in small to medium tanks and paludariums.",
+  "watchOut": "The 17 cm version is short for tanks deeper than about 30 cm.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "170",
+    "sku": "156-004",
+    "lengthCm": 17
+   },
+   {
+    "name": "230",
+    "sku": "156-005",
+    "lengthCm": 23
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-scissors-curve_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-scissors-curve_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-scissors-curve_2.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/04/aqua-scissors/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-scissors-105",
+  "brand": "DOOA",
+  "name": "Scissors 105",
+  "category": "tools",
+  "subtype": "scissors",
+  "summary": "Short straight scissors for close, fiddly work in glass pots, terrariums and on wabi-kusa balls. Small enough to snip single leaves precisely.",
+  "highlights": [
+   "Short straight blades for precise snips",
+   "Handy for wabi-kusa, glass pots and emersed plants",
+   "Stainless steel"
+  ],
+  "bestFor": "Trimming wabi-kusa and small terrarium plantings where long aquarium scissors are awkward.",
+  "watchOut": "Too short to reach the bottom of a normal aquarium.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "105",
+    "sku": "156-003"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-scissors-105_1.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/04/scissors-105/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-tweezers",
+  "brand": "DOOA",
+  "name": "Tweezers",
+  "category": "tools",
+  "subtype": "tweezers",
+  "summary": "Straight stainless planting tweezers in three lengths. Use them to push stems and small plants into soil and to place moss or small stones.",
+  "highlights": [
+   "Three lengths: 17.5, 25.5 and 30 cm",
+   "Fine straight tips for planting stems and carpet portions",
+   "Stainless steel"
+  ],
+  "bestFor": "General planting in terrariums, paludariums and aquariums, picking the length to suit tank depth.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "175",
+    "sku": "156-104",
+    "lengthCm": 17.5
+   },
+   {
+    "name": "255",
+    "sku": "156-105",
+    "lengthCm": 25.5
+   },
+   {
+    "name": "300",
+    "sku": "156-106",
+    "lengthCm": 30
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-tweezers_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-tweezers_4.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-tweezers_3.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-tweezers_2.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/03/aqua-pincette/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-tweezers-curve",
+  "brand": "DOOA",
+  "name": "Tweezers Curve",
+  "category": "tools",
+  "subtype": "tweezers",
+  "summary": "Stainless tweezers with an angled tip, which make it easier to plant at the back of a layout or behind hardscape without your hand getting in the way.",
+  "highlights": [
+   "Bent tip for planting behind stones and wood",
+   "Two lengths",
+   "Stainless steel"
+  ],
+  "bestFor": "Planting and tidying in tight spots in terrariums, glass pots and busy aquascapes.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "Short",
+    "sku": "156-107"
+   },
+   {
+    "name": "Long",
+    "sku": "156-108"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-tweezers-curve_1.jpg",
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-tweezers-curve_2.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2025/03/tweezers-curve/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "dooa-soil-scraper-13",
+  "brand": "DOOA",
+  "name": "Soil Scraper 13",
+  "category": "tools",
+  "subtype": "substrate-tool",
+  "summary": "A slim stainless spatula for moving and smoothing soil in glass pots, terrariums and small tanks. The narrow blade gets into tight gaps between stones and roots.",
+  "highlights": [
+   "Narrow flat blade for smoothing and shaping soil",
+   "Useful in glass pots where a trowel will not fit",
+   "Stainless steel"
+  ],
+  "bestFor": "Terrarium and nano-tank builders who need to shape substrate in cramped spaces.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "13",
+    "sku": "156-302"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/dooa 2/images/dooa/dooa-soil-scraper-13_1.jpg"
+  ],
+  "sourceUrl": "https://dooa.jp/en/products/2024/12/soil-scraper-13/",
+  "sourceName": "DOOA",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "ada-aquasky-rgb-ii",
+  "brand": "ADA",
+  "name": "Aquasky RGB II",
+  "category": "lights",
+  "subtype": "stand",
+  "summary": "ADA's slim RGB LED that stands on legs outside the glass of a 60 cm tank. It is controlled over Bluetooth from ADA's phone app, with colour, brightness and timer settings, and a soft fade on and off.",
+  "highlights": [
+   "70 RGB LEDs, up to 40,000 lux at 10 cm",
+   "Draws up to 66 W at full output",
+   "Legs rest outside the glass, so any glass thickness works on a 60 cm wide tank",
+   "Bluetooth app control with presets, colour tuning and a timer",
+   "Flicker-free, which helps when filming or photographing the tank"
+  ],
+  "bestFor": "A 60 cm planted tank where you want strong, tunable light and a clean ADA look without a separate controller.",
+  "watchOut": "It is made for 60 cm tanks only, and full power is a lot of light for a low-tech tank without CO2.",
+  "specs": {
+   "Input": "AC 100 to 240 V",
+   "Rated power": "108 W",
+   "Colour temperature": "About 8,000 to 11,000 K in default mode",
+   "Control": "Bluetooth via ADA Controller app",
+   "Body colour": "Mineral grey",
+   "LED life": "Over 30,000 hours",
+   "Previous version": "Aquasky RGB 60 (silver body)"
+  },
+  "models": [
+   {
+    "name": "60",
+    "powerW": 66,
+    "fitsLengthMinCm": 60,
+    "fitsLengthMaxCm": 60,
+    "extra": {
+     "LEDs": "70 RGB",
+     "Illuminance": "Up to 40,000 lux at 10 cm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/ada-aquasky-rgb-ii-60_7.png",
+   "/Users/mikeelmira/Downloads/ADA-images/aquasky-rgb-60-silver-c-plug_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "manufacturer"
+ },
+ {
+  "id": "ada-pollen-glass-beetle",
+  "brand": "ADA",
+  "name": "Pollen Glass Beetle",
+  "category": "co2",
+  "subtype": "diffuser",
+  "summary": "ADA's glass CO2 diffuser with a flat ceramic disc held between two suction cups. The number is the disc diameter, so bigger discs push out more fine bubbles for larger tanks.",
+  "highlights": [
+   "Three disc sizes: 30, 40 and 50 mm",
+   "Clear glass body that disappears against the back glass",
+   "Low-profile shape sits flat on the glass",
+   "ADA pairs the 40 mm version with 90 cm Cube Gardens"
+  ],
+  "bestFor": "Pressurised CO2 tanks where you want a neat, nearly invisible diffuser and are happy to clean glass now and then.",
+  "watchOut": "Glass is fragile, and the disc clogs over time, so expect occasional soaking in diluted bleach.",
+  "specs": {
+   "Material": "Glass body with ceramic diffuser disc",
+   "Mount": "Two suction cups"
+  },
+  "models": [
+   {
+    "name": "30",
+    "extra": {
+     "Disc diameter": "30 mm"
+    }
+   },
+   {
+    "name": "40",
+    "fitsLengthMinCm": 90,
+    "fitsLengthMaxCm": 90,
+    "extra": {
+     "Disc diameter": "40 mm"
+    }
+   },
+   {
+    "name": "50",
+    "extra": {
+     "Disc diameter": "50 mm"
+    }
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/pollen-glass-beetle-40-co2_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-pollen-glass-type-3",
+  "brand": "ADA",
+  "name": "Pollen Glass Type 3",
+  "category": "co2",
+  "subtype": "diffuser",
+  "summary": "A classic upright glass CO2 diffuser from ADA, with the ceramic disc set into a glass cup and an inlet that curls up beside it.",
+  "highlights": [
+   "All-glass upright diffuser with ceramic disc",
+   "J-shaped inlet keeps the tubing tidy",
+   "Clear glass keeps it low-key in a scape"
+  ],
+  "bestFor": "Small to medium pressurised CO2 tanks where an upright glass diffuser suits the look.",
+  "watchOut": "Like all glass diffusers it is fragile and needs regular cleaning to keep bubbles fine.",
+  "specs": {
+   "Material": "Glass with ceramic diffuser disc"
+  },
+  "models": [
+   {
+    "name": "Type 3"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/pollen-glass-type-3_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-ps-sc-speed-controller",
+  "brand": "ADA",
+  "name": "PS-SC Speed Controller",
+  "category": "co2",
+  "subtype": "regulator",
+  "summary": "A small inline needle valve with push-fit ends for ADA's pressure-resistant CO2 tubing. It lets you fine-tune gas flow on a line, which is handy when one cylinder feeds more than one tank.",
+  "highlights": [
+   "Knurled needle adjuster for fine control",
+   "Push-fit connectors for pressure-resistant tube",
+   "Useful for balancing flow on split CO2 lines"
+  ],
+  "bestFor": "Keepers running pressurised CO2 who want finer adjustment than their regulator gives, or split lines to two tanks.",
+  "watchOut": "It is a flow valve, not a full regulator, so you still need a proper pressure regulator on the cylinder.",
+  "specs": {
+   "Connection": "Push-fit for pressure-resistant CO2 tube"
+  },
+  "models": [
+   {
+    "name": "STD"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/ps-sc-speed-controller-std_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-lily-pipe",
+  "brand": "ADA",
+  "name": "Lily Pipe",
+  "category": "plumbing",
+  "subtype": "lily-pipe",
+  "summary": "ADA's glass inflow and outflow pipes that replace the plastic pipes of a canister filter. The outflow's flared lip spreads water in a gentle wide stream, and the clear glass nearly vanishes in the tank.",
+  "highlights": [
+   "Clear glass for a clean, almost invisible look",
+   "Outflow P-4 has a flared mouth for a soft, wide flow",
+   "Inflow V-5 has a slotted intake and suction cup mount",
+   "Both listed for 13 mm hose"
+  ],
+  "bestFor": "Planted tanks with a canister filter where the plumbing is on show and you want it to disappear.",
+  "watchOut": "Glass breaks easily and shows biofilm quickly, so it needs gentle handling and regular pipe-brush cleaning.",
+  "specs": {
+   "Material": "Glass"
+  },
+  "models": [
+   {
+    "name": "Outflow P-4",
+    "hoseMm": 13
+   },
+   {
+    "name": "Inflow V-5",
+    "hoseMm": 13
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/lily-pipe-outflow-p-4-13f-90p_1.png",
+   "/Users/mikeelmira/Downloads/ADA-images/new-lily-pipe-inflow-v-5-13f-90p_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-metal-flow-pipe",
+  "brand": "ADA",
+  "name": "Metal Flow Pipe",
+  "category": "plumbing",
+  "subtype": "lily-pipe",
+  "summary": "Stainless steel versions of ADA's inflow and outflow pipes. They keep the slim lily-pipe shape but will not snap if knocked, and the outflow nozzle swivels to aim the flow.",
+  "highlights": [
+   "Stainless steel, far tougher than glass",
+   "Outflow P-1 has a rotating nozzle to direct flow",
+   "Inflow V-1 has a slotted intake and removable end cap",
+   "Brushed finish blends in better than shiny plastic"
+  ],
+  "bestFor": "Keepers who like the lily-pipe look but have broken glass pipes before, or have kids and pets around the tank.",
+  "watchOut": "They are not see-through, so they are more visible than glass in a bright tank.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "Outflow P-1"
+   },
+   {
+    "name": "Inflow V-1"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/ada-metal-flow-pipe-p-1_1.png",
+   "/Users/mikeelmira/Downloads/ADA-images/ada-metal-flow-pipe-p-1_2.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-pro-pinsettes",
+  "brand": "ADA",
+  "name": "Pro Pinsettes",
+  "category": "tools",
+  "subtype": "tweezers",
+  "summary": "ADA's long, fine-tipped stainless planting tweezers, sold in several lengths. The slim tips grip single stems and small portions of carpet plants without crushing them.",
+  "highlights": [
+   "Several lengths to suit tank depth",
+   "Fine straight tips for stems and carpet portions",
+   "Stainless steel"
+  ],
+  "bestFor": "Planting stem plants and carpets in medium to deep aquascapes.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "Pro Pinsettes"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/ada-pro-pinsettes_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-pinsettes-series-m",
+  "brand": "ADA",
+  "name": "Pinsettes Series M",
+  "category": "tools",
+  "subtype": "tweezers",
+  "summary": "Straight stainless tweezers with wider, flat grip sections, easier to hold steady for long planting sessions than very thin tweezers.",
+  "highlights": [
+   "Wide flat handle for a steady grip",
+   "Fine straight tips",
+   "Stainless steel"
+  ],
+  "bestFor": "Everyday planting and moving small items in the tank.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "Series M"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/pinsettes-series-m_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-pro-scissors-wave",
+  "brand": "ADA",
+  "name": "Pro Scissors Wave",
+  "category": "tools",
+  "subtype": "scissors",
+  "summary": "Long stainless scissors with an S-shaped wave that keeps your hand above the water while the blades sit flat against a carpet. The go-to shape for trimming foreground plants.",
+  "highlights": [
+   "Wave-shaped shank for trimming carpets flat",
+   "Long reach for standard aquascape depths",
+   "Stainless steel"
+  ],
+  "bestFor": "Trimming carpets and low plants in medium to large aquascapes.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "Wave"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/pro-scissors-wave_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-adapro-scissors-spring",
+  "brand": "ADA",
+  "name": "Adapro Scissors Spring",
+  "category": "tools",
+  "subtype": "scissors",
+  "summary": "Spring-action scissors that open by themselves after each cut, operated with a squeeze rather than finger loops. That makes lots of small trims less tiring and gives good control in tight spots.",
+  "highlights": [
+   "Spring-loaded, squeeze to cut",
+   "Precise for trimming moss and stems in tight spaces",
+   "Stainless steel"
+  ],
+  "bestFor": "Detailed trimming of moss, stems and small plants, especially if loop scissors make your hand ache.",
+  "specs": {
+   "Material": "Stainless steel",
+   "Action": "Spring"
+  },
+  "models": [
+   {
+    "name": "Spring"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/adapro-scissors-spring_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-pro-razor",
+  "brand": "ADA",
+  "name": "Pro Razor",
+  "category": "tools",
+  "subtype": "scraper",
+  "summary": "A long-handled stainless glass scraper with a replaceable razor blade, for taking algae film and spots off the glass. The Mini version is shorter for small tanks.",
+  "highlights": [
+   "Replaceable razor blade holder on a long stainless shaft",
+   "Two sizes: Pro Razor and Pro Razor Mini",
+   "Slim shaft reaches behind plants and hardscape"
+  ],
+  "bestFor": "Keeping the front glass of a glass (not acrylic) planted tank spotless.",
+  "watchOut": "Never use on acrylic, and keep the blade away from silicone seams.",
+  "specs": {
+   "Material": "Stainless steel",
+   "Blade": "Replaceable razor blade"
+  },
+  "models": [
+   {
+    "name": "Pro Razor"
+   },
+   {
+    "name": "Pro Razor Mini"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/pro-razor_1.png",
+   "/Users/mikeelmira/Downloads/ADA-images/pro-razor-mini_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-sand-flattener",
+  "brand": "ADA",
+  "name": "Sand Flattener",
+  "category": "tools",
+  "subtype": "substrate-tool",
+  "summary": "A long stainless tool with a flat triangular plate for smoothing and levelling sand or soil, even after the tank is filled. Great for tidying a cosmetic sand path along the front glass.",
+  "highlights": [
+   "Flat triangular plate for levelling sand and soil",
+   "Long shaft works in a filled tank",
+   "Stainless steel"
+  ],
+  "bestFor": "Aquascapes with a sand foreground or path that needs regular smoothing.",
+  "specs": {
+   "Material": "Stainless steel"
+  },
+  "models": [
+   {
+    "name": "Sand Flattener"
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/sand-flattener_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-la-plata-sand",
+  "brand": "ADA",
+  "name": "La Plata Sand",
+  "category": "hardscape",
+  "subtype": "sand-gravel",
+  "summary": "A fine, pale natural sand used for paths, foreground patches and beach areas in nature aquariums. Its light colour brightens the front of a layout and contrasts well with dark aqua soil.",
+  "highlights": [
+   "Fine, pale natural sand",
+   "Classic choice for sand paths and open foreground areas",
+   "Sold in 2 kg bags"
+  ],
+  "bestFor": "Iwagumi and nature aquarium layouts that need a clean, bright foreground or path.",
+  "watchOut": "Keep it separated from soil with stones or a divider, or the two will mix over time.",
+  "specs": {
+   "Effect on water": "Inert",
+   "Colour": "Pale off-white",
+   "Texture": "Fine sand",
+   "Prep": "Rinse before use"
+  },
+  "models": [
+   {
+    "name": "2 kg",
+    "weightKg": 2
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/la-plata-sand-2kg_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-colorado-sand",
+  "brand": "ADA",
+  "name": "Colorado Sand",
+  "category": "hardscape",
+  "subtype": "sand-gravel",
+  "summary": "A natural sand with a light sandy-beige tone, a touch warmer than La Plata Sand. It suits paths and foregrounds where you want a more natural, riverbed feel.",
+  "highlights": [
+   "Warm beige natural sand",
+   "Good for paths, beaches and open foreground areas",
+   "Sold in 2 kg bags"
+  ],
+  "bestFor": "Nature-style and riverbank layouts that want a softer, warmer foreground than white sand.",
+  "watchOut": "Like any cosmetic sand, it will mix into soil unless the two are kept apart.",
+  "specs": {
+   "Effect on water": "Inert",
+   "Colour": "Light beige",
+   "Texture": "Fine sand",
+   "Prep": "Rinse before use"
+  },
+  "models": [
+   {
+    "name": "2 kg",
+    "weightKg": 2
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/colorado-sand-2kg_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ },
+ {
+  "id": "ada-aqua-gravel",
+  "brand": "ADA",
+  "name": "Aqua Gravel",
+  "category": "hardscape",
+  "subtype": "sand-gravel",
+  "summary": "A natural mixed-colour gravel in browns, greys and tans. It works for streambed details, filling gaps around stones or as a coarser foreground accent.",
+  "highlights": [
+   "Natural rounded gravel in mixed earthy colours",
+   "Useful for streambeds and detailing around rock",
+   "Sold in 2 kg bags"
+  ],
+  "bestFor": "Adding texture and a natural riverbed look to the foreground of a planted tank.",
+  "watchOut": "Too coarse for carpet plants to root in, so use it as an accent rather than a planting substrate.",
+  "specs": {
+   "Effect on water": "Inert",
+   "Colour": "Mixed brown, grey and tan",
+   "Texture": "Small rounded gravel",
+   "Prep": "Rinse before use"
+  },
+  "models": [
+   {
+    "name": "2 kg",
+    "weightKg": 2
+   }
+  ],
+  "images": [
+   "/Users/mikeelmira/Downloads/ADA-images/aqua-gravel-2kg_2.png",
+   "/Users/mikeelmira/Downloads/ADA-images/aqua-gravel-2kg_1.png"
+  ],
+  "sourceUrl": null,
+  "sourceName": "ADA (supplier files)",
+  "specSource": "knowledge"
+ }
+]

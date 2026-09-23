@@ -10,6 +10,7 @@ import {
   Filter,
   Container,
   Calculator,
+  Wrench,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -32,6 +33,12 @@ const ITEMS: ReadonlyArray<ToolItem> = [
     href: "/planner",
     description: "Plan a tank from tank size, water, and inhabitants.",
     Icon: Wand2,
+  },
+  {
+    label: "Gear catalogue",
+    href: "/gear",
+    description: "Filters, lights, CO2, tanks and hardscape matched to your tank and compared.",
+    Icon: Wrench,
   },
   {
     label: "Compare",

@@ -16,11 +16,19 @@ import {
   tankTldr,
   tankFaqs,
 } from "@/lib/catalogue/tank-picks";
-import { tankGuidePageJsonLd } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, tankGuidePageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
+import { GearCard } from "@/components/gear/gear-card";
+import { gearMatches, toCard } from "@/lib/gear";
+import {
+  gearHref,
+  recommendedFlow,
+  recommendedHeaterW,
+  typicalLengthForLitres,
+} from "@/lib/gear/match";
 
 interface RouteParams {
   params: Promise<{ size: string }>;
@@ -53,8 +61,9 @@ export async function generateMetadata({
       description,
       locale: "en",
       authors: [`${site.url}/about`],
+      images: [DEFAULT_OG_IMAGE],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [DEFAULT_OG_IMAGE] },
     keywords: [
       `best fish for a ${std.litres} litre tank`,
       `${std.litres} litre tank stocking`,
@@ -78,6 +87,29 @@ export default async function TankSizePage({ params }: RouteParams) {
   const faqs = tankFaqs(std, picks);
 
   const others = generatedTanks().filter((t) => t.litres !== std.litres);
+  const lengthCm = typicalLengthForLitres(std.litres);
+  const flow = recommendedFlow(std.litres);
+  const heat = recommendedHeaterW(std.litres);
+  const kit = [
+    {
+      title: "Filters",
+      note: `Rated about ${flow.min}–${flow.max} L/h`,
+      href: gearHref("filters", { tankL: std.litres }),
+      items: gearMatches("filters", { tankL: std.litres }, 3),
+    },
+    {
+      title: "Lights",
+      note: `Made for a ~${lengthCm} cm tank`,
+      href: gearHref("lights", { lengthCm }),
+      items: gearMatches("lights", { lengthCm }, 3),
+    },
+    {
+      title: "Heaters",
+      note: `About ${heat.min}–${heat.max} W`,
+      href: gearHref("heaters", { tankL: std.litres }),
+      items: gearMatches("heaters", { tankL: std.litres }, 3),
+    },
+  ].filter((k) => k.items.length > 0);
 
   return (
     <>
@@ -144,6 +176,40 @@ export default async function TankSizePage({ params }: RouteParams) {
             }
           />
         </div>
+
+        {kit.length > 0 && (
+          <section className="mt-14 flex flex-col gap-8">
+            <header className="flex flex-col gap-2">
+              <h2 className="text-display-tight text-2xl sm:text-3xl">
+                Equipment for a {std.litres} litre tank
+              </h2>
+              <p className="text-sm text-muted-foreground sm:text-base">
+                A few that fit from our gear catalogue. Each link opens the full list,
+                already filtered to this tank size.
+              </p>
+            </header>
+            {kit.map((k) => (
+              <div key={k.title} className="flex flex-col gap-3">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-lg font-semibold">
+                    {k.title}{" "}
+                    <span className="text-sm font-normal text-muted-foreground">{k.note}</span>
+                  </h3>
+                  <Link href={k.href} className="text-sm font-medium text-[var(--brand)] hover:underline">
+                    See all that fit
+                  </Link>
+                </div>
+                <ul className="grid gap-4 sm:grid-cols-3">
+                  {k.items.map(({ product, fit, models }) => (
+                    <li key={product.id}>
+                      <GearCard card={toCard(product)} fit={fit} fitModels={models} showCompare={false} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </section>
+        )}
 
         <section className="mt-12 flex flex-wrap gap-3">
           <Link

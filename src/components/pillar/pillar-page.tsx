@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { SectionShell } from "@/components/sections/section-shell";
+import { GEAR_CATEGORIES } from "@/lib/gear/categories";
+import { gearCount } from "@/lib/gear";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
@@ -186,6 +188,52 @@ export function PillarPage({ pillar }: PillarPageProps) {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+        </SectionShell>
+      )}
+
+      {/* Gear catalogue, for the equipment and hardscape pillars */}
+      {(pillar.slug === "aquarium-equipment-guide" ||
+        pillar.slug === "aquarium-hardscape-guide") && (
+        <SectionShell className="!pt-0">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-display-tight text-2xl sm:text-3xl">
+              {pillar.slug === "aquarium-hardscape-guide"
+                ? "Real hardscape, from suppliers"
+                : "The gear catalogue"}
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground sm:text-base">
+              Real products with specs for every model, matched to your tank size and
+              comparable side by side.
+            </p>
+            <ul className="mt-8 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {(pillar.slug === "aquarium-hardscape-guide"
+                ? (["hardscape"] as const)
+                : (["filters", "lights", "co2", "heaters", "aquariums", "pumps", "plumbing", "stands"] as const)
+              ).map((c) => (
+                <li key={c}>
+                  <Link
+                    href={`/gear/${c}`}
+                    className="press group flex items-center justify-between rounded-xl border border-border/60 bg-background/60 px-4 py-3 text-sm transition-colors hover:border-[var(--brand)]/50 hover:bg-background"
+                  >
+                    <span className="font-medium text-foreground">
+                      {GEAR_CATEGORIES[c].label}{" "}
+                      <span className="font-normal text-muted-foreground">({gearCount(c)})</span>
+                    </span>
+                    <ArrowRight className="size-4 text-muted-foreground" aria-hidden />
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/gear"
+                  className="press group flex items-center justify-between rounded-xl border border-[var(--brand)]/40 bg-[var(--brand)]/5 px-4 py-3 text-sm font-medium transition-colors hover:border-[var(--brand)]/60"
+                >
+                  Kit finder: what fits my tank?
+                  <ArrowRight className="size-4 text-[var(--brand)]" aria-hidden />
+                </Link>
+              </li>
             </ul>
           </div>
         </SectionShell>

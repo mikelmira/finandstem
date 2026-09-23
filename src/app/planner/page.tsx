@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionShell } from "@/components/sections/section-shell";
 import { PlannerClient } from "@/components/planner/planner-client";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Tank Planner",
+  title: "Aquarium tank planner: stocking, water and gear",
   description:
-    "Build your tank species by species. Add fish, plants, shrimp, and mosses, we cross-reference parameters and flag every compatibility issue.",
+    "Build your tank species by species. Add fish, plants, shrimp and mosses, we cross-reference parameters, flag conflicts and match filters, lights and heaters.",
+  alternates: { canonical: `${site.url}/planner` },
 };
 
 // Fully static: the whole analysis runs client-side from the URL (see

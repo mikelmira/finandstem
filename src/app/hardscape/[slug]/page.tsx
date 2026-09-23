@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { site } from "@/lib/site";
 import { HARDSCAPE, getHardscape } from "@/data/hardscape";
-import { hardscapePageJsonLd } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, hardscapePageJsonLd, longDescription } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
@@ -13,6 +13,8 @@ import { Faq } from "@/components/seo/faq";
 import { EffectBadges } from "@/components/hardscape/effect-badges";
 import { HardscapeVisual } from "@/components/hardscape/hardscape-visual";
 import { HARDSCAPE_IMAGES } from "@/data/hardscape-images";
+import { GearCard } from "@/components/gear/gear-card";
+import { hardscapeProductsFor, toCard } from "@/lib/gear";
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
@@ -31,7 +33,9 @@ export async function generateMetadata({
   const item = getHardscape(slug);
   if (!item) return {};
   const title = `${item.name}: Uses, and Its Effect on pH & Hardness`;
-  const description = item.spot;
+  const description = longDescription(item.spot, item.tldr);
+  const piece = hardscapeProductsFor(item.slug)[0]?.images[0];
+  const ogImage = piece ? `${site.url}${piece.src}` : DEFAULT_OG_IMAGE;
   const canonical = `${site.url}/hardscape/${slug}`;
   return {
     title,
@@ -45,8 +49,9 @@ export async function generateMetadata({
       description,
       locale: "en",
       authors: [`${site.url}/about`],
+      images: [ogImage],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     keywords: [
       item.name,
       ...item.aliases,
@@ -66,6 +71,7 @@ export default async function HardscapePage({ params }: RouteParams) {
   const others = HARDSCAPE.filter(
     (h) => h.slug !== item.slug && h.category === item.category,
   );
+  const pieces = hardscapeProductsFor(item.slug);
 
   return (
     <>
@@ -170,6 +176,32 @@ export default async function HardscapePage({ params }: RouteParams) {
             {item.scaping}
           </p>
         </Section>
+
+        {pieces.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-display-tight text-2xl sm:text-3xl">
+              {item.name} you can actually buy
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Supplier photos of real pieces, with the sizes they come in, so you can
+              see the colour and texture before you order.
+            </p>
+            <ul className="mt-5 grid gap-4 sm:grid-cols-2">
+              {pieces.slice(0, 6).map((p) => (
+                <li key={p.id}>
+                  <GearCard card={toCard(p)} showCompare={false} />
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/gear/hardscape"
+              className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--brand)] hover:underline"
+            >
+              Browse all hardscape
+              <ArrowRight className="size-4" aria-hidden />
+            </Link>
+          </section>
+        )}
 
         <section className="mt-12">
           <Faq items={item.faqs} />
