@@ -16,8 +16,8 @@ import {
   type Fit,
   type GearQuery,
 } from "@/lib/gear/match";
-import { fieldRange } from "@/lib/gear/fields";
 import { GearCard } from "@/components/gear/gear-card";
+import { SORT_FIELDS, sortKey } from "@/lib/gear/sorts";
 import { ChipToggle } from "@/components/filters/filter-primitives";
 import { cn } from "@/lib/utils";
 import { METRIC, TECH_HELP, TECH_LABEL } from "@/lib/gear/ratings";
@@ -25,7 +25,8 @@ import { METRIC, TECH_HELP, TECH_LABEL } from "@/lib/gear/ratings";
 const TANK_PRESETS = [20, 30, 45, 60, 90, 120, 180, 240, 350];
 const LENGTH_PRESETS = [30, 36, 45, 60, 75, 90, 120, 150];
 
-type Sort = "fit" | "name" | "low" | "high" | "price-low" | "price-high" | "metric";
+/** "fit" | "name" | "price-low" | "price-high" | "metric" | "<field>-asc" | "<field>-desc" */
+type Sort = string;
 
 function explain(category: GearCategory, q: GearQuery): string | null {
   if (!hasQuery(q)) return null;
@@ -64,23 +65,6 @@ function explain(category: GearCategory, q: GearQuery): string | null {
     parts.push(`Products the maker rates for a ${q.tankL} L tank.`);
   }
   return parts.join(" ") || null;
-}
-
-function sortValue(card: GearCardData, category: GearCategory): number | null {
-  const field =
-    category === "filters" || category === "pumps"
-      ? "flowLph"
-      : category === "heaters"
-        ? "heaterW"
-        : category === "lights"
-          ? "powerW"
-          : category === "aquariums"
-            ? "volumeL"
-            : category === "air-pumps"
-              ? "airLpm"
-              : "tankMaxL";
-  const r = fieldRange(card.models, field);
-  return r ? r.min : null;
 }
 
 export function GearIndexClient({
@@ -158,10 +142,16 @@ export function GearIndexClient({
       return sort === "price-low" ? av - bv : bv - av;
     }
     if (sort === "metric") return (b.card.ratings?.metric ?? 0) - (a.card.ratings?.metric ?? 0);
-    if (sort === "low" || sort === "high") {
-      const av = sortValue(a.card, category) ?? (sort === "low" ? Infinity : -Infinity);
-      const bv = sortValue(b.card, category) ?? (sort === "low" ? Infinity : -Infinity);
-      return sort === "low" ? av - bv : bv - av;
+    const m = /^([A-Za-z]+)-(asc|desc)$/.exec(sort);
+    const sf = m ? SORT_FIELDS[category].find((f) => f.field === m[1]) : undefined;
+    if (sf && m) {
+      const dir = m[2] as "asc" | "desc";
+      const av = sortKey(a.card, sf, dir);
+      const bv = sortKey(b.card, sf, dir);
+      if (av === null && bv === null) return 0;
+      if (av === null) return 1; // missing figures always last
+      if (bv === null) return -1;
+      return dir === "asc" ? av - bv : bv - av;
     }
     return rank(a.fit) - rank(b.fit) || `${a.card.brand} ${a.card.name}`.localeCompare(`${b.card.brand} ${b.card.name}`);
   });
@@ -233,12 +223,16 @@ export function GearIndexClient({
               className="rounded-lg border border-border bg-background/70 px-2 py-1.5 text-sm text-foreground"
             >
               <option value="fit">Best match</option>
-              <option value="name">Name</option>
-              <option value="low">Smallest first</option>
-              <option value="high">Largest first</option>
+              <option value="name">Name (A to Z)</option>
               <option value="price-low">Price: budget first</option>
               <option value="price-high">Price: premium first</option>
               <option value="metric">{METRIC[category].label}: best first</option>
+              {SORT_FIELDS[category].map((f) => (
+                <optgroup key={f.field} label={f.label}>
+                  <option value={`${f.field}-asc`}>{f.words[0]}</option>
+                  <option value={`${f.field}-desc`}>{f.words[1]}</option>
+                </optgroup>
+              ))}
             </select>
           </label>
         </div>
