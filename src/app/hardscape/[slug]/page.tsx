@@ -11,7 +11,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { Tldr } from "@/components/seo/tldr";
 import { Faq } from "@/components/seo/faq";
 import { EffectBadges } from "@/components/hardscape/effect-badges";
-import { HardscapeVisual } from "@/components/hardscape/hardscape-visual";
+import { HardscapeVisual, SHOW_HARDSCAPE_PHOTOS } from "@/components/hardscape/hardscape-visual";
 import { HARDSCAPE_IMAGES } from "@/data/hardscape-images";
 import { GearCard } from "@/components/gear/gear-card";
 import { hardscapeProductsFor, toCard } from "@/lib/gear";
@@ -114,7 +114,7 @@ export default async function HardscapePage({ params }: RouteParams) {
 
         <figure className="mb-10">
           <HardscapeVisual item={item} size="hero" />
-          {HARDSCAPE_IMAGES[item.slug] && (
+          {SHOW_HARDSCAPE_PHOTOS && HARDSCAPE_IMAGES[item.slug] && (
             <figcaption className="mt-2 text-xs text-muted-foreground">
               Photo: {HARDSCAPE_IMAGES[item.slug].author}
               {HARDSCAPE_IMAGES[item.slug].license && (

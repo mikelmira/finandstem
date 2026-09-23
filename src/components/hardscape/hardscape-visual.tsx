@@ -36,7 +36,15 @@ function loadPhotoSet(): { slugs: ReadonlySet<string>; ext: Record<string, strin
   }
 }
 
-const PHOTOS = loadPhotoSet();
+/**
+ * Photos are hidden for now: the ones we had showed the wrong material.
+ * Flip back to true once correctly identified, licensed photos are in place.
+ */
+export const SHOW_HARDSCAPE_PHOTOS = false;
+
+const PHOTOS = SHOW_HARDSCAPE_PHOTOS
+  ? loadPhotoSet()
+  : { slugs: new Set<string>() as ReadonlySet<string>, ext: {} as Record<string, string> };
 
 interface VisualTone {
   bg: string;
