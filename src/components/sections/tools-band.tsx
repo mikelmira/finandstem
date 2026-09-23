@@ -6,6 +6,7 @@ import Image from "next/image";
 import {
   Wand2,
   Layers,
+  Wrench,
   GitCompareArrows,
   ArrowUpRight,
 } from "lucide-react";
@@ -24,12 +25,12 @@ interface Tool {
   image: AtmosphereImage;
 }
 
-const TOOLS: ReadonlyArray<Tool> = [
+const tools = (gearCount: number, brandCount: number): ReadonlyArray<Tool> => [
   {
     href: "/planner",
     eyebrow: "Tank Planner",
     title: "Build your tank, check the fit.",
-    body: "Add the fish, plants, shrimp, mosses, and snails you're considering. We surface the temperature, pH, hardness, light, and CO₂ the combined tank needs, and flag every predator-prey or parameter conflict before you commit.",
+    body: "Add the fish, plants, mosses, shrimp and snails you're considering, then pick a filter, light, heater and CO₂. We work out the temperature, pH, hardness, light and CO₂ the tank needs, flag predator-prey and parameter conflicts, and tell you whether the gear is up to the job.",
     icon: Wand2,
     ctaLabel: "Open the planner",
     image: atmosphere.schoolDriftwood,
@@ -47,10 +48,19 @@ const TOOLS: ReadonlyArray<Tool> = [
     href: "/compare",
     eyebrow: "Compare",
     title: "Line up to four species, side by side.",
-    body: "Direct parameter table. Temperature, pH, hardness, tank size, light, CO₂, and tank-mate safety in one row each. Spot the conflicts at a glance.",
+    body: "Temperature, pH, hardness, tank size, light, CO₂ and tank-mate safety in one table, with every range stacked on the same axis so the overlap shows. Switch to substrate mode to compare aquasoils and sands the same way.",
     icon: GitCompareArrows,
     ctaLabel: "Start a comparison",
     image: atmosphere.twoTetras,
+  },
+  {
+    href: "/gear",
+    eyebrow: "Gear catalogue",
+    title: "Kit that actually fits your tank.",
+    body: `${gearCount} filters, lights, CO₂ kits, heaters, fertilisers and hardscape from ${brandCount} brands. Enter your tank size and we show the models that fit, with verified specs, price and quality ratings, and a side-by-side compare.`,
+    icon: Wrench,
+    ctaLabel: "Browse the gear",
+    image: atmosphere.nanoTank,
   },
 ];
 
@@ -75,7 +85,8 @@ const TOOLS: ReadonlyArray<Tool> = [
  * Reduced-motion users skip the animation and see the cards laid out
  * in a static column, same content, same order.
  */
-export function ToolsBand() {
+export function ToolsBand({ gearCount, brandCount }: { gearCount: number; brandCount: number }) {
+  const TOOLS = tools(gearCount, brandCount);
   const sectionRef = React.useRef<HTMLElement>(null);
   const paneRef = React.useRef<HTMLDivElement>(null);
   const [progress, setProgress] = React.useState(0);

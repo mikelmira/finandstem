@@ -4,7 +4,7 @@ export const site = {
   wordmark: ["Fin", "&", "Stem"],
   tagline: "Helping aquascapers everywhere build the planted tank they imagined.",
   description:
-    "A planted-aquarium reference for aquascapers worldwide. 100+ profiled fish, plants, shrimp, and mosses, cross-referenced for compatibility.",
+    "A planted-aquarium reference: 200+ fish, plants, shrimp, mosses and snails cross-referenced for compatibility, plus aquarium gear matched to your tank.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://finandstem.com",
   owner: {

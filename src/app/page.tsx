@@ -10,10 +10,14 @@ import { Faq } from "@/components/sections/faq";
 import { ToolsBand } from "@/components/sections/tools-band";
 import { JsonLd } from "@/components/seo/json-ld";
 import { homePageJsonLd } from "@/lib/seo";
+import { GEAR } from "@/lib/gear";
+import { GEAR_BRANDS } from "@/data/suppliers";
+import { NAV_GROUPS } from "@/lib/nav";
 
 export default function Page() {
   const total =
     fish.length + plants.length + shrimp.length + mosses.length + snails.length;
+  const toolCount = NAV_GROUPS.find((g) => g.id === "tools")?.items.length ?? 0;
   return (
     <>
       <JsonLd data={homePageJsonLd()} id="home-jsonld" />
@@ -29,8 +33,12 @@ export default function Page() {
             label: "Species profiled across five pillars",
           },
           {
-            value: "3",
-            label: "Planning tools, Planner · Compare · Compatibility",
+            value: GEAR.length.toString(),
+            label: `Gear products from ${GEAR_BRANDS.length} brands, matched to your tank`,
+          },
+          {
+            value: toolCount.toString(),
+            label: "Planning tools, from the tank planner to dosing calculators",
           },
         ]}
       />
@@ -39,7 +47,7 @@ export default function Page() {
         text={home.hero.subtitle}
       />
       <Pillars {...home.pillars} />
-      <ToolsBand />
+      <ToolsBand gearCount={GEAR.length} brandCount={GEAR_BRANDS.length} />
       <FeaturedEntries />
       <Ethos {...home.ethos} />
       <Faq {...home.faq} />
