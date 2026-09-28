@@ -11,7 +11,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { DetailSection } from "@/data/species-detail";
 import type { CatalogueEntry } from "@/types/catalogue";
-import { OriginMap } from "@/components/charts/origin-map";
 import { regionsFromOrigin } from "@/lib/catalogue/origin-regions";
 
 interface WildSplitProps {
@@ -57,21 +56,20 @@ export function WildSplit({ entry, sections, className }: WildSplitProps) {
         </p>
       </header>
 
-      {/* World map, only shown when we can geo-locate the origin */}
+      {/* The world map lives on its own page; inlining it here added about
+          450 KB to every species page. */}
       {mappableRegions.length > 0 && (
-        <div className="animate-fade-up">
-          <OriginMap origin={entry.origin} />
-          <p className="mt-2 text-xs text-muted-foreground">
-            See where every species comes from on the{" "}
-            <Link
-              href="/species-map"
-              className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
-            >
-              interactive world map
-            </Link>
-            .
-          </p>
-        </div>
+        <p className="text-sm text-muted-foreground">
+          <MapPin className="mr-1.5 inline size-4 align-[-3px] text-[var(--brand)]" aria-hidden />
+          See where the {entry.commonName} and every other species comes from on the{" "}
+          <Link
+            href="/species-map"
+            className="font-medium text-foreground underline decoration-[var(--brand)]/40 underline-offset-4 transition-colors hover:text-[var(--brand)]"
+          >
+            species world map
+          </Link>
+          .
+        </p>
       )}
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.45fr_1fr] lg:gap-6">
